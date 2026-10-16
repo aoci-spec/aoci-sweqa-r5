@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-conan-k1
+manifest: harness=None created=2026-10-15T18:23:09Z repo=conan commit=52f43d98fe44 index_entries=0
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   1 |   72.9  16.1   74.6   74.5   69.9   72.4 |   6.9   7.0   3.0   0.0 |    87298    14992    1455    1028    n/a   72.9 |   0.41   0.00   0.03
+dims: oh=14.6/11.8/17.4/15.7/13.4
+judge vote SD (mean over questions): oh=1.2
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=4,190,297 out=69,838
+
+wrote runs/sweqa-r5p-glm46-conan-k1/analysis.json

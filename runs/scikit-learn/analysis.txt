@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-scikit-learn-k10
+manifest: harness=None created=2026-10-15T22:22:08Z repo=scikit-learn commit=adb1ae76d798 index_entries=1004
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   80.5  13.4   74.0   84.5   82.1   81.2 |   4.0   5.5   1.8   0.0 |    45581    10826     886    1222    n/a    7.8 |   0.76   0.00   0.29
+oh-10           48   0   0 |   79.1  12.9   73.4   84.2   81.7   77.2 |   4.0   5.5   1.6   0.0 |    45728    11069     895    1190    n/a    8.7 |   0.72   0.00   0.23
+oh-2            48   0   0 |   78.9  13.2   75.6   82.7   80.1   77.2 |   4.1   5.5   1.7   0.0 |    46083    10999     884    1266    n/a    8.2 |   0.77   0.00   0.34
+oh-3            48   0   0 |   79.8  12.6   74.2   84.0   82.2   78.8 |   4.2   5.7   1.8   0.0 |    48473    11195     911    1225    n/a    8.6 |   0.79   0.00   0.29
+oh-4            48   0   0 |   80.9  12.8   73.2   84.1   83.8   82.4 |   4.0   5.3   1.6   0.0 |    44298    10691     840    1172    n/a    7.8 |   0.75   0.00   0.32
+oh-5            48   0   0 |   79.3  13.0   74.1   83.0   79.1   81.2 |   4.2   5.8   1.7   0.0 |    46236    10740     898    1179    n/a    8.5 |   0.70   0.00   0.32
+oh-6            48   0   0 |   80.2  12.2   75.7   84.1   79.9   81.0 |   4.1   5.5   1.9   0.0 |    45938    10911     866    1145    n/a    8.3 |   0.78   0.00   0.28
+oh-7            48   0   0 |   80.3  13.4   74.9   84.8   81.0   80.3 |   4.1   5.6   1.6   0.0 |    45627    11006     904    1174    n/a    8.1 |   0.74   0.00   0.28
+oh-8            48   0   0 |   79.3  13.5   74.3   81.3   80.9   80.7 |   4.2   5.6   1.6   0.0 |    47448    10937     886    1208    n/a    8.7 |   0.76   0.00   0.26
+oh-9            48   0   0 |   79.1  13.1   74.4   82.1   81.2   78.5 |   4.1   5.6   1.8   0.0 |    46245    11016     889    1201    n/a    8.1 |   0.78   0.00   0.26
+oh-aoci-1       48   0   0 |   82.2  15.5   81.8   84.2   87.8   74.8 |   5.1   5.6   1.8   6.5 |  1232583   120081    2851    1960    n/a   30.4 |   0.71   0.39   0.45
+oh-aoci-10      48   0   0 |   82.5  15.3   75.1   87.5   85.8   81.8 |   4.5   5.4   1.8   7.2 |  1175201   120716    3100    1927    n/a   31.3 |   0.75   0.34   0.41
+oh-aoci-2       48   0   0 |   83.5  12.6   77.2   86.8   86.1   84.0 |   4.9   5.4   1.7   7.9 |  1203319   120173    2930    1838    n/a   32.1 |   0.75   0.42   0.40
+oh-aoci-3       48   0   0 |   82.0  16.1   71.8   88.0   87.6   80.8 |   4.6   5.1   1.6   5.7 |  1176624   119808    2779    1865    n/a   30.0 |   0.74   0.37   0.47
+oh-aoci-4       48   0   0 |   80.9  17.5   75.2   84.1   85.7   78.8 |   4.5   5.0   1.5   7.2 |  1159204   119586    2748    1827    n/a   32.7 |   0.71   0.45   0.39
+oh-aoci-5       48   0   0 |   82.6  14.4   78.7   88.2   85.0   78.5 |   4.5   5.1   1.6   6.5 |  1167172   119732    2743    1787    n/a   31.1 |   0.73   0.32   0.39
+oh-aoci-6       48   0   1 |   82.2  15.4   78.3   77.9   86.6   86.1 |   4.8   5.5   1.7   7.3 |  1205262   120152    2957    1861    n/a   32.3 |   0.76   0.35   0.34
+oh-aoci-7       48   0   0 |   82.4  15.1   76.8   88.5   85.8   78.6 |   5.0   5.4   1.8   7.1 |  1232719   120405    3040    1909    n/a   33.9 |   0.70   0.36   0.42
+oh-aoci-8       48   0   0 |   82.1  13.8   70.8   85.9   87.2   84.8 |   4.5   4.8   1.4   6.5 |  1161890   119216    2725    1879    n/a   30.5 |   0.70   0.43   0.45
+oh-aoci-9       48   0   0 |   80.5  17.9   75.0   83.5   81.2   82.4 |   4.5   4.9   1.5   6.2 |  1156994   119835    2748    1868    n/a   33.1 |   0.68   0.36   0.42
+oh-cg-1         48   0   0 |   82.2  14.0   77.6   84.6   82.9   83.9 |   3.0   3.7   1.0  16.9 |    52235    15487     715    1429    n/a    6.7 |   0.38   0.75   0.38
+oh-cg-10        48   0   0 |   80.0  13.8   74.8   83.8   81.4   80.2 |   3.0   3.7   1.0  15.9 |    51335    15298     710    1357    n/a    7.0 |   0.41   0.73   0.33
+oh-cg-2         48   0   0 |   81.3  13.2   78.2   81.9   82.3   82.8 |   2.6   3.2   0.8  16.4 |    43924    15152     653    1379    n/a    6.3 |   0.36   0.74   0.36
+oh-cg-3         48   0   0 |   81.2  13.9   77.1   83.4   81.8   82.5 |   2.9   3.6   1.0  15.9 |    49560    15401     714    1403    n/a    6.8 |   0.40   0.73   0.37
+oh-cg-4         48   0   0 |   82.4  12.1   76.7   84.5   82.2   86.3 |   2.8   3.4   1.0  15.4 |    46450    14905     668    1318    n/a    6.7 |   0.40   0.73   0.37
+oh-cg-5         48   0   0 |   80.9  14.5   75.6   83.2   81.7   83.2 |   3.1   3.9   1.0  16.9 |    54907    15732     736    1420    n/a    7.2 |   0.38   0.75   0.35
+oh-cg-6         48   0   0 |   81.9  14.4   80.0   82.0   82.3   83.3 |   2.8   3.5   1.0  15.9 |    49376    15626     704    1476    n/a    6.8 |   0.40   0.74   0.35
+oh-cg-7         48   0   0 |   81.2  13.1   76.7   82.9   82.5   82.6 |   3.0   3.7   1.0  16.2 |    49373    15237     696    1257    n/a    6.7 |   0.39   0.74   0.37
+oh-cg-8         48   0   0 |   82.0  12.4   76.4   84.3   84.5   82.8 |   2.9   3.6   1.0  15.9 |    48685    15223     681    1290    n/a    6.5 |   0.43   0.74   0.38
+oh-cg-9         48   0   0 |   81.1  13.9   73.3   84.9   83.4   82.9 |   2.7   3.4   0.8  16.2 |    46594    15322     655    1367    n/a    6.7 |   0.33   0.78   0.34
+dims: oh-1=16.0/14.0/18.5/16.5/15.5  oh-10=15.7/13.7/18.2/16.3/15.2  oh-2=15.6/13.7/18.1/16.4/15.1  oh-3=15.8/13.9/18.4/16.5/15.3  oh-4=16.1/14.1/18.4/16.7/15.6  oh-5=15.8/13.8/18.3/16.4/15.1  oh-6=15.8/13.9/18.4/16.5/15.6  oh-7=16.0/14.0/18.4/16.5/15.4  oh-8=15.7/13.7/18.3/16.5/15.1  oh-9=15.8/13.7/18.2/16.2/15.3  oh-aoci-1=16.1/15.1/18.1/16.7/16.1  oh-aoci-10=16.3/15.2/18.2/16.7/16.2  oh-aoci-2=16.6/15.4/18.4/16.8/16.4  oh-aoci-3=16.2/15.1/18.1/16.6/16.0  oh-aoci-4=16.0/14.9/17.9/16.3/15.8  oh-aoci-5=16.4/15.1/18.3/16.6/16.2  oh-aoci-6=16.3/15.1/18.1/16.6/16.2  oh-aoci-7=16.3/15.1/18.1/16.6/16.2  oh-aoci-8=16.2/15.1/18.1/16.6/16.1  oh-aoci-9=15.8/14.6/17.9/16.5/15.7  oh-cg-1=16.5/14.6/18.2/16.9/16.0  oh-cg-10=15.9/14.2/18.1/16.5/15.3  oh-cg-2=16.2/14.4/18.3/16.7/15.7  oh-cg-3=16.1/14.4/18.2/16.8/15.7  oh-cg-4=16.4/14.6/18.6/16.9/16.0  oh-cg-5=16.1/14.4/18.1/16.7/15.6  oh-cg-6=16.4/14.7/18.2/16.7/15.9  oh-cg-7=16.1/14.4/18.4/16.6/15.7  oh-cg-8=16.3/14.4/18.6/16.9/15.8  oh-cg-9=16.1/14.4/18.3/16.8/15.7
+judge vote SD (mean over questions): oh-1=0.9  oh-10=1.1  oh-2=0.9  oh-3=1.0  oh-4=1.0  oh-5=0.8  oh-6=0.9  oh-7=0.9  oh-8=1.1  oh-9=1.0  oh-aoci-1=1.2  oh-aoci-10=0.8  oh-aoci-2=1.0  oh-aoci-3=1.1  oh-aoci-4=0.9  oh-aoci-5=1.1  oh-aoci-6=1.0  oh-aoci-7=0.7  oh-aoci-8=0.8  oh-aoci-9=1.1  oh-cg-1=1.1  oh-cg-10=0.8  oh-cg-2=1.0  oh-cg-3=0.9  oh-cg-4=1.1  oh-cg-5=0.8  oh-cg-6=0.9  oh-cg-7=0.9  oh-cg-8=0.8  oh-cg-9=1.1
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=0.9 calls/1477ch (used on 65% of questions)  oh-aoci-10=1.0 calls/1675ch (used on 71% of questions)  oh-aoci-2=1.0 calls/1750ch (used on 73% of questions)  oh-aoci-3=1.0 calls/1235ch (used on 69% of questions)  oh-aoci-4=1.1 calls/1633ch (used on 77% of questions)  oh-aoci-5=0.9 calls/1499ch (used on 65% of questions)  oh-aoci-6=1.0 calls/1636ch (used on 71% of questions)  oh-aoci-7=1.0 calls/1637ch (used on 73% of questions)  oh-aoci-8=0.9 calls/1420ch (used on 73% of questions)  oh-aoci-9=0.8 calls/1347ch (used on 62% of questions)  oh-cg-1=1.2 calls/24940ch (used on 100% of questions)  oh-cg-10=1.1 calls/24189ch (used on 100% of questions)  oh-cg-2=1.2 calls/25128ch (used on 100% of questions)  oh-cg-3=1.2 calls/24745ch (used on 100% of questions)  oh-cg-4=1.1 calls/23474ch (used on 100% of questions)  oh-cg-5=1.2 calls/25375ch (used on 100% of questions)  oh-cg-6=1.1 calls/25028ch (used on 100% of questions)  oh-cg-7=1.1 calls/23879ch (used on 100% of questions)  oh-cg-8=1.1 calls/24626ch (used on 100% of questions)  oh-cg-9=1.2 calls/25437ch (used on 100% of questions)
+totals: oh-1: in=2,187,883 out=42,504  oh-10: in=2,194,926 out=42,968  oh-2: in=2,211,970 out=42,419  oh-3: in=2,326,682 out=43,718  oh-4: in=2,126,311 out=40,342  oh-5: in=2,219,349 out=43,106  oh-6: in=2,205,022 out=41,560  oh-7: in=2,190,075 out=43,392  oh-8: in=2,277,502 out=42,528  oh-9: in=2,219,748 out=42,679  oh-aoci-1: in=59,163,967 out=136,867  oh-aoci-10: in=56,409,644 out=148,818  oh-aoci-2: in=57,759,329 out=140,619  oh-aoci-3: in=56,477,936 out=133,381  oh-aoci-4: in=55,641,774 out=131,902  oh-aoci-5: in=56,024,249 out=131,667  oh-aoci-6: in=57,852,573 out=141,929  oh-aoci-7: in=59,170,530 out=145,936  oh-aoci-8: in=55,770,708 out=130,806  oh-aoci-9: in=55,535,700 out=131,911  oh-cg-1: in=2,507,278 out=34,319  oh-cg-10: in=2,464,088 out=34,103  oh-cg-2: in=2,108,360 out=31,341  oh-cg-3: in=2,378,896 out=34,286  oh-cg-4: in=2,229,617 out=32,082  oh-cg-5: in=2,635,518 out=35,320  oh-cg-6: in=2,370,027 out=33,780  oh-cg-7: in=2,369,882 out=33,414  oh-cg-8: in=2,336,890 out=32,704  oh-cg-9: in=2,236,525 out=31,459
+
+== oh-10 - oh-1: n=48 Δ=-1.4 95%CI=[-3.2,+0.4] median=+0.0 win/tie/loss=14/11/23 sign-test p=0.188 | n for 80% power at this Δ ≈ 181
+   by category: what: -0.6 [-3.0,+1.8] (n=12)  how: -0.3 [-4.2,+3.7] (n=12)  why: -0.4 [-3.6,+2.5] (n=12)  where: -4.1 [-8.9,-0.2] (n=12)
+   paired efficiency (b−a): input_tokens: +147 [-5998,+5954] (1.00x)  peak_input_tokens: +243 [-257,+755] (1.02x)  output_tokens: +10 [-67,+81] (1.01x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +1 [+0,+2] (1.12x)  answer_chars: -33 [-168,+114] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/25/11; hit cap: {'oh-1': 3, 'oh-10': 2}
+   -25  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-10          read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+   -14  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-10          read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+   -13  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-10          read=['sklearn/preprocessing/_polynomial.py'] steps=4 retried=None
+   +15  How does the `pos_label` parameter resolution process handle the case where a user provides an explicit `pos_label` valu
+         oh-1           read=['sklearn/metrics/_classification.py', 'sklearn/metrics/_plot/base.py', 'sklearn/metrics/_ranking.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py', 'sklearn/utils/validation.py'] steps=10 retried=None
+         oh-10          read=['sklearn/utils/_response.py', 'sklearn/utils/multiclass.py', 'sklearn/utils/validation.py'] steps=3 retried=None
+   +9  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-10          read=['sklearn/utils/_set_output.py'] steps=4 retried=None
+   +9  What is the semantic significance of SelectFromModel's partial_fit method enforcing max_features validation constraints 
+         oh-1           read=['sklearn/feature_selection/_from_model.py'] steps=3 retried=None
+         oh-10          read=['sklearn/feature_selection/_from_model.py'] steps=2 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-1.6 95%CI=[-3.4,+0.3] median=-1.0 win/tie/loss=16/6/26 sign-test p=0.164 | n for 80% power at this Δ ≈ 144
+   by category: what: +1.6 [-1.1,+4.2] (n=12)  how: -1.8 [-4.2,+0.5] (n=12)  why: -2.0 [-6.2,+2.1] (n=12)  where: -4.0 [-8.8,+1.0] (n=12)
+   paired efficiency (b−a): input_tokens: +502 [-4822,+5291] (1.01x)  peak_input_tokens: +173 [-201,+548] (1.02x)  output_tokens: -2 [-74,+67] (1.00x)  tool_calls: -0 [-1,+0] (1.00x)  wall_s: +0 [-0,+1] (1.05x)  answer_chars: +44 [-97,+194] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/24/14; hit cap: {'oh-1': 3, 'oh-2': 2}
+   -21  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-2           read=['sklearn/feature_extraction/text.py'] steps=3 retried=None
+   -15  Why does the Version class defer the extraction of numeric components from pre, post, and dev tuples until property acce
+         oh-1           read=['sklearn/externals/_packaging/version.py'] steps=3 retried=None
+         oh-2           read=['sklearn/externals/_packaging/version.py'] steps=3 retried=None
+   -13  Why does the Pipeline class explicitly reject the sample_weight parameter during fit when the underlying estimator does 
+         oh-1           read=['sklearn/pipeline.py', 'sklearn/utils/_metadata_requests.py'] steps=10 retried=None
+         oh-2           read=['sklearn/pipeline.py', 'sklearn/utils/_metadata_requests.py', 'sklearn/utils/metadata_routing.py'] steps=10 retried=None
+   +16  Where does the InfinityType class control the flow of comparison operations to ensure that its ordering semantics are pr
+         oh-1           read=['sklearn/externals/_packaging/_structures.py'] steps=2 retried=None
+         oh-2           read=['sklearn/externals/_packaging/_structures.py'] steps=2 retried=None
+   +11  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-2           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=5 retried=None
+   +9  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-2           read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+
+== oh-3 - oh-1: n=48 Δ=-0.6 95%CI=[-2.2,+0.9] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 597
+   by category: what: +0.2 [-2.7,+2.6] (n=12)  how: -0.5 [-2.5,+1.3] (n=12)  why: +0.2 [-3.9,+4.6] (n=12)  where: -2.4 [-5.9,+0.5] (n=12)
+   paired efficiency (b−a): input_tokens: +2892 [+73,+5937] (1.06x)  peak_input_tokens: +369 [+17,+731] (1.03x)  output_tokens: +25 [-35,+85] (1.03x)  tool_calls: +0 [-0,+1] (1.05x)  wall_s: +1 [+0,+1] (1.10x)  answer_chars: +3 [-129,+132] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 5/32/11; hit cap: {'oh-1': 3, 'oh-3': 3}
+   -17  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-3           read=['sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=4 retried=None
+   -11  What is the dependency resolution mechanism in _parallel_predict_regression that handles the estimator.predict method ac
+         oh-1           read=['sklearn/ensemble/_bagging.py'] steps=3 retried=None
+         oh-3           read=['sklearn/ensemble/_bagging.py'] steps=3 retried=None
+   -10  Why does the Version class defer the extraction of numeric components from pre, post, and dev tuples until property acce
+         oh-1           read=['sklearn/externals/_packaging/version.py'] steps=3 retried=None
+         oh-3           read=['sklearn/externals/_packaging/version.py'] steps=3 retried=None
+   +17  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-3           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+   +10  Why does DummyTransformer's fit_counter mechanism enable detection of redundant fit invocations in scikit-learn's pipeli
+         oh-1           read=['sklearn/compose/_target.py', 'sklearn/compose/tests/test_target.py', 'sklearn/tests/test_pipeline.py'] steps=5 retried=None
+         oh-3           read=['sklearn/compose/_target.py', 'sklearn/compose/tests/test_target.py', 'sklearn/tests/test_pipeline.py'] steps=5 retried=None
+   +7  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-3           read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+0.4 95%CI=[-1.2,+1.9] median=+0.0 win/tie/loss=20/12/16 sign-test p=0.618 | n for 80% power at this Δ ≈ 1232
+   by category: what: -0.8 [-5.0,+2.8] (n=12)  how: -0.4 [-3.5,+2.5] (n=12)  why: +1.8 [-1.2,+4.6] (n=12)  where: +1.2 [-0.8,+3.2] (n=12)
+   paired efficiency (b−a): input_tokens: -1283 [-6985,+3803] (0.97x)  peak_input_tokens: -135 [-559,+268] (0.99x)  output_tokens: -45 [-130,+28] (0.95x)  tool_calls: -0 [-1,+0] (0.97x)  wall_s: +0 [-1,+1] (1.00x)  answer_chars: -51 [-190,+79] (0.96x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/24/14; hit cap: {'oh-1': 3, 'oh-4': 1}
+   -19  What is the integration mechanism between the PositiveSpectrumWarning class and the _check_psd_eigenvalues function that
+         oh-1           read=['sklearn/decomposition/_kernel_pca.py', 'sklearn/decomposition/tests/test_kernel_pca.py', 'sklearn/exceptions.py', 'sklearn/utils/validation.py'] steps=4 retried=None
+         oh-4           read=['sklearn/decomposition/_kernel_pca.py', 'sklearn/exceptions.py', 'sklearn/utils/validation.py'] steps=3 retried=None
+   -12  How does the test_check_n_classes function construct allowed_dtypes by combining both int32 and int64 with their byte-or
+         oh-1           read=['sklearn/tree/tests/test_tree.py'] steps=2 retried=None
+         oh-4           read=['sklearn/tree/tests/test_tree.py'] steps=2 retried=None
+   -10  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-4           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+   +13  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-4           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=5 retried=None
+   +12  How does _get_visual_block implement the extraction and validation of parallel estimator metadata from a FeatureUnion's 
+         oh-1           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=5 retried=None
+         oh-4           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py', 'sklearn/utils/_repr_html/tests/test_estimator.py'] steps=8 retried=None
+   +11  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-4           read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-1.1 95%CI=[-2.9,+0.6] median=-0.5 win/tie/loss=17/7/24 sign-test p=0.349 | n for 80% power at this Δ ≈ 236
+   by category: what: +0.1 [-3.3,+3.2] (n=12)  how: -1.5 [-4.4,+1.6] (n=12)  why: -3.0 [-6.2,+0.1] (n=12)  where: -0.1 [-4.2,+4.0] (n=12)
+   paired efficiency (b−a): input_tokens: +656 [-6154,+6998] (1.01x)  peak_input_tokens: -86 [-669,+456] (0.99x)  output_tokens: +13 [-89,+111] (1.01x)  tool_calls: +0 [-0,+1] (1.06x)  wall_s: +1 [-0,+2] (1.10x)  answer_chars: -44 [-197,+110] (0.96x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/24/15; hit cap: {'oh-1': 3, 'oh-5': 2}
+   -16  Where in the codebase are the probability calibration mechanisms that enable SVC and NuSVC to produce consistent probabi
+         oh-1           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=3 retried=None
+         oh-5           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=2 retried=None
+   -14  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-5           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+   -12  What is the impact of the dependency on StandardScaler within the _fit method on the correctness of PowerTransformer's s
+         oh-1           read=['sklearn/preprocessing/_data.py'] steps=2 retried=None
+         oh-5           read=['sklearn/preprocessing/_data.py'] steps=8 retried=None
+   +15  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-5           read=['sklearn/feature_extraction/text.py'] steps=5 retried=None
+   +10  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-5           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+   +10  How does _get_visual_block implement the extraction and validation of parallel estimator metadata from a FeatureUnion's 
+         oh-1           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=5 retried=None
+         oh-5           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py', 'sklearn/utils/_repr_html/tests/test_estimator.py'] steps=7 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-0.3 95%CI=[-1.8,+1.3] median=+0.0 win/tie/loss=16/12/20 sign-test p=0.618 | n for 80% power at this Δ ≈ 2803
+   by category: what: +1.7 [-1.1,+4.8] (n=12)  how: -0.4 [-3.4,+1.9] (n=12)  why: -2.2 [-4.8,+0.2] (n=12)  where: -0.2 [-3.7,+3.4] (n=12)
+   paired efficiency (b−a): input_tokens: +357 [-4780,+6232] (1.01x)  peak_input_tokens: +84 [-390,+607] (1.01x)  output_tokens: -20 [-96,+66] (0.98x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +1 [-0,+1] (1.07x)  answer_chars: -77 [-191,+32] (0.94x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/27/12; hit cap: {'oh-1': 3, 'oh-6': 3}
+   -14  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-6           read=['calibration.py', 'sklearn/calibration.py', 'sklearn/utils/_plotting.py'] steps=5 retried=None
+   -13  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-6           read=['sklearn/preprocessing/_polynomial.py'] steps=4 retried=None
+   -8  Where in the codebase are the probability calibration mechanisms that enable SVC and NuSVC to produce consistent probabi
+         oh-1           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=3 retried=None
+         oh-6           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=2 retried=None
+   +15  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-6           read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=5 retried=None
+   +14  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-6           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+   +8  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-6           read=['sklearn/utils/_set_output.py', 'sklearn/utils/tests/test_set_output.py'] steps=3 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-0.2 95%CI=[-1.8,+1.3] median=+0.0 win/tie/loss=17/9/22 sign-test p=0.522 | n for 80% power at this Δ ≈ 6929
+   by category: what: +0.9 [-1.8,+3.8] (n=12)  how: +0.3 [-1.8,+2.8] (n=12)  why: -1.1 [-4.2,+1.9] (n=12)  where: -0.9 [-5.2,+2.9] (n=12)
+   paired efficiency (b−a): input_tokens: +46 [-4990,+5125] (1.00x)  peak_input_tokens: +180 [-221,+576] (1.02x)  output_tokens: +18 [-57,+100] (1.02x)  tool_calls: +0 [-0,+1] (1.02x)  wall_s: +0 [-0,+1] (1.05x)  answer_chars: -48 [-169,+72] (0.96x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/26/12; hit cap: {'oh-1': 3, 'oh-7': 2}
+   -18  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-7           read=['sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+   -12  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-7           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+   -7  How does SpectralEmbedding's _get_affinity_matrix method implement a fallback strategy when sparse input is detected for
+         oh-1           read=['sklearn/manifold/_spectral_embedding.py'] steps=2 retried=None
+         oh-7           read=['sklearn/manifold/_spectral_embedding.py'] steps=2 retried=None
+   +11  How does _get_visual_block implement the extraction and validation of parallel estimator metadata from a FeatureUnion's 
+         oh-1           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=5 retried=None
+         oh-7           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=7 retried=None
+   +10  Where in the codebase are the probability calibration mechanisms that enable SVC and NuSVC to produce consistent probabi
+         oh-1           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=3 retried=None
+         oh-7           read=['sklearn/svm/_base.py'] steps=3 retried=None
+   +10  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-7           read=['sklearn/tests/test_pipeline.py'] steps=3 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-1.1 95%CI=[-2.8,+0.5] median=+0.0 win/tie/loss=18/7/23 sign-test p=0.533 | n for 80% power at this Δ ≈ 199
+   by category: what: +0.3 [-2.8,+3.1] (n=12)  how: -3.2 [-5.8,-0.8] (n=12)  why: -1.2 [-4.2,+1.8] (n=12)  where: -0.6 [-4.6,+3.5] (n=12)
+   paired efficiency (b−a): input_tokens: +1867 [-2052,+5664] (1.04x)  peak_input_tokens: +111 [-263,+493] (1.01x)  output_tokens: +0 [-69,+69] (1.00x)  tool_calls: +0 [-0,+1] (1.02x)  wall_s: +1 [+0,+2] (1.12x)  answer_chars: -15 [-158,+128] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 6/27/15; hit cap: {'oh-1': 3, 'oh-8': 3}
+   -17  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-8           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+   -14  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-8           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py'] steps=6 retried=None
+   -14  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-8           read=['sklearn/preprocessing/_polynomial.py'] steps=5 retried=None
+   +16  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-8           read=['sklearn/linear_model/_ridge.py'] steps=6 retried=None
+   +8  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-8           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+   +7  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-8           read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-1.4 95%CI=[-3.4,+0.5] median=-1.0 win/tie/loss=17/6/25 sign-test p=0.280 | n for 80% power at this Δ ≈ 185
+   by category: what: +0.4 [-3.5,+4.4] (n=12)  how: -2.4 [-5.8,+0.3] (n=12)  why: -0.8 [-4.4,+2.5] (n=12)  where: -2.8 [-7.3,+1.4] (n=12)
+   paired efficiency (b−a): input_tokens: +664 [-5566,+7420] (1.01x)  peak_input_tokens: +190 [-243,+712] (1.02x)  output_tokens: +4 [-81,+93] (1.00x)  tool_calls: +0 [-1,+1] (1.02x)  wall_s: +0 [-0,+1] (1.05x)  answer_chars: -22 [-162,+119] (0.98x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/29/11; hit cap: {'oh-1': 3, 'oh-9': 3}
+   -21  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-9           read=['sklearn/feature_extraction/text.py'] steps=3 retried=None
+   -19  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-9           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+   -14  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-9           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+   +15  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-9           read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+   +12  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-9           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+   +11  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-9           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=5 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+1.7 95%CI=[-2.5,+5.4] median=+4.0 win/tie/loss=32/3/13 sign-test p=0.007 | n for 80% power at this Δ ≈ 532
+   by category: what: +7.8 [+4.6,+12.2] (n=12)  how: -0.2 [-5.2,+3.7] (n=12)  why: +5.8 [+0.8,+12.2] (n=12)  where: -6.5 [-19.7,+4.6] (n=12)
+   paired efficiency (b−a): input_tokens: +1187002 [+1084543,+1286427] (27.04x)  peak_input_tokens: +109255 [+108486,+110003] (11.09x)  output_tokens: +1966 [+1803,+2119] (3.22x)  tool_calls: +0 [-1,+1] (1.02x)  wall_s: +23 [+21,+24] (3.91x)  answer_chars: +737 [+499,+979] (1.60x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_get_entries': 12, 'terminal': 13, 'aoci_search': 19, '(none)': 4}}
+   steps (b−a): fewer/same/more = 10/13/25; hit cap: {'oh-1': 3, 'oh-aoci-1': 7}
+   -48  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-aoci-1      read=['sklearn/metrics/_base.py', 'sklearn/metrics/_classification.py', 'sklearn/metrics/_ranking.py'] steps=10 retried=None
+   -45  Where in the codebase are the probability calibration mechanisms that enable SVC and NuSVC to produce consistent probabi
+         oh-1           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=3 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -29  Where in the scikit-learn repository are the manifold learning classes and dimensionality reduction algorithms imported 
+         oh-1           read=['examples/manifold/plot_lle_digits.py'] steps=2 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +37  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-aoci-1      read=['sklearn/datasets/_openml.py'] steps=7 retried=None
+   +28  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +14  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-aoci-1      read=['sklearn/utils/_set_output.py', 'sklearn/utils/tests/test_set_output.py'] steps=5 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+2.1 95%CI=[-1.3,+5.0] median=+3.0 win/tie/loss=32/5/11 sign-test p=0.002 | n for 80% power at this Δ ≈ 222
+   by category: what: +1.1 [-8.2,+8.6] (n=12)  how: +3.0 [+1.4,+4.8] (n=12)  why: +3.7 [-0.4,+7.6] (n=12)  where: +0.5 [-8.0,+7.6] (n=12)
+   paired efficiency (b−a): input_tokens: +1129620 [+1047370,+1212770] (25.78x)  peak_input_tokens: +109889 [+108607,+111384] (11.15x)  output_tokens: +2215 [+1781,+2912] (3.50x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +24 [+22,+26] (4.03x)  answer_chars: +705 [+452,+966] (1.58x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_get_entries': 13, 'terminal': 10, 'aoci_search': 21, '(none)': 4}}
+   steps (b−a): fewer/same/more = 12/10/26; hit cap: {'oh-1': 3, 'oh-aoci-10': 2}
+   -40  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -37  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-aoci-10     read=['sklearn/metrics/_base.py', 'sklearn/metrics/tests/test_common.py', 'sklearn/model_selection/_validation.py'] steps=8 retried=None
+   -13  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +22  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +20  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-aoci-10     read=['sklearn/feature_extraction/text.py'] steps=6 retried=None
+   +19  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-10     read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=10 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=+3.1 95%CI=[+0.0,+5.9] median=+3.0 win/tie/loss=35/0/13 sign-test p=0.002 | n for 80% power at this Δ ≈ 90
+   by category: what: +3.2 [-7.3,+12.5] (n=12)  how: +2.2 [+0.1,+4.3] (n=12)  why: +4.0 [+0.0,+7.8] (n=12)  where: +2.8 [-1.5,+7.2] (n=12)
+   paired efficiency (b−a): input_tokens: +1157738 [+1071783,+1245973] (26.40x)  peak_input_tokens: +109347 [+108486,+110173] (11.10x)  output_tokens: +2044 [+1762,+2467] (3.31x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +24 [+23,+26] (4.13x)  answer_chars: +616 [+392,+853] (1.50x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'aoci_get_entries': 17, 'terminal': 10, 'aoci_search': 18, '(none)': 3}}
+   steps (b−a): fewer/same/more = 8/17/23; hit cap: {'oh-1': 3, 'oh-aoci-2': 4}
+   -42  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -10  Where does the control flow in _NotAnArray.__array_function__ determine whether a TypeError is raised versus a boolean v
+         oh-1           read=['sklearn/utils/estimator_checks.py'] steps=2 retried=None
+         oh-aoci-2      read=['sklearn/utils/estimator_checks.py'] steps=2 retried=None
+   -9  What is the architectural responsibility of the _local_reachability_density() method within LocalOutlierFactor's computa
+         oh-1           read=['sklearn/neighbors/_lof.py'] steps=2 retried=None
+         oh-aoci-2      read=[] steps=3 retried=None
+   +37  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +18  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-2      read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=10 retried=None
+   +17  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-aoci-2      read=['sklearn/feature_extraction/text.py'] steps=5 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+1.6 95%CI=[-2.1,+4.7] median=+2.0 win/tie/loss=32/4/12 sign-test p=0.004 | n for 80% power at this Δ ≈ 449
+   by category: what: -2.2 [-12.3,+5.8] (n=12)  how: +3.5 [+1.4,+5.5] (n=12)  why: +5.5 [+2.1,+9.3] (n=12)  where: -0.4 [-10.0,+6.7] (n=12)
+   paired efficiency (b−a): input_tokens: +1131043 [+1041637,+1221874] (25.81x)  peak_input_tokens: +108982 [+108091,+109839] (11.07x)  output_tokens: +1893 [+1730,+2045] (3.14x)  tool_calls: -0 [-2,+1] (0.94x)  wall_s: +22 [+21,+24] (3.86x)  answer_chars: +642 [+405,+873] (1.53x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_get_entries': 16, 'aoci_search': 17, '(none)': 5, 'terminal': 10}}
+   steps (b−a): fewer/same/more = 11/14/23; hit cap: {'oh-1': 3, 'oh-aoci-3': 4}
+   -46  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -45  Where in the codebase are the probability calibration mechanisms that enable SVC and NuSVC to produce consistent probabi
+         oh-1           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=3 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -15  What is the architectural responsibility of the _local_reachability_density() method within LocalOutlierFactor's computa
+         oh-1           read=['sklearn/neighbors/_lof.py'] steps=2 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   +21  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-3      read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=10 retried=None
+   +21  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-aoci-3      read=['sklearn/feature_extraction/text.py'] steps=5 retried=None
+   +18  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+0.5 95%CI=[-4.3,+4.3] median=+3.0 win/tie/loss=30/6/12 sign-test p=0.008 | n for 80% power at this Δ ≈ 8562
+   by category: what: +1.2 [-10.7,+10.0] (n=12)  how: -0.4 [-6.9,+4.2] (n=12)  why: +3.6 [-0.4,+7.3] (n=12)  where: -2.5 [-15.9,+6.0] (n=12)
+   paired efficiency (b−a): input_tokens: +1113623 [+1021787,+1206577] (25.43x)  peak_input_tokens: +108760 [+107634,+109771] (11.05x)  output_tokens: +1862 [+1679,+2044] (3.10x)  tool_calls: -0 [-2,+1] (0.91x)  wall_s: +25 [+23,+27] (4.21x)  answer_chars: +605 [+354,+857] (1.49x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_get_entries': 18, '(none)': 5, 'aoci_search': 19, 'terminal': 6}}
+   steps (b−a): fewer/same/more = 9/15/24; hit cap: {'oh-1': 3, 'oh-aoci-4': 3}
+   -66  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-aoci-4      read=['sklearn/metrics/_ranking.py', 'sklearn/model_selection/_validation.py'] steps=6 retried=None
+   -52  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -32  How does the Splitter API handle the interaction between categorical feature splitting and missing value routing when th
+         oh-1           read=['sklearn/ensemble/_hist_gradient_boosting/splitting.pyx'] steps=8 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +23  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +18  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-4      read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=9 retried=None
+   +17  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-aoci-4      read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+2.1 95%CI=[-1.6,+5.2] median=+2.5 win/tie/loss=33/6/9 sign-test p=0.000 | n for 80% power at this Δ ≈ 256
+   by category: what: +4.7 [-3.5,+11.1] (n=12)  how: +3.7 [+1.1,+6.7] (n=12)  why: +2.9 [-0.5,+6.1] (n=12)  where: -2.8 [-14.8,+5.8] (n=12)
+   paired efficiency (b−a): input_tokens: +1121591 [+1031920,+1214153] (25.61x)  peak_input_tokens: +108906 [+107936,+109835] (11.06x)  output_tokens: +1858 [+1710,+1992] (3.10x)  tool_calls: -0 [-2,+1] (0.92x)  wall_s: +23 [+21,+26] (4.00x)  answer_chars: +564 [+368,+758] (1.46x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_get_entries': 15, 'terminal': 13, 'aoci_search': 16, '(none)': 4}}
+   steps (b−a): fewer/same/more = 14/12/22; hit cap: {'oh-1': 3, 'oh-aoci-5': 6}
+   -58  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-aoci-5      read=['sklearn/model_selection/_validation.py'] steps=3 retried=None
+   -29  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -12  Where in the scikit-learn repository are the manifold learning classes and dimensionality reduction algorithms imported 
+         oh-1           read=['examples/manifold/plot_lle_digits.py'] steps=2 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   +19  What is the semantic mismatch created by the conditional logic in the fit method's type checking mechanism between the d
+         oh-1           read=['sklearn/utils/estimator_checks.py', 'sklearn/utils/tests/test_estimator_checks.py', 'sklearn/utils/tests/test_validation.py', 'sklearn/utils/validation.py'] steps=5 retried=None
+         oh-aoci-5      read=['sklearn/utils/fixes.py', 'sklearn/utils/validation.py'] steps=10 retried=None
+   +19  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   +17  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-aoci-5      read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+1.8 95%CI=[-2.1,+5.2] median=+1.0 win/tie/loss=25/8/15 sign-test p=0.154 | n for 80% power at this Δ ≈ 426
+   by category: what: +4.3 [-4.2,+11.5] (n=12)  how: -6.6 [-17.1,+0.8] (n=12)  why: +4.5 [+0.7,+8.5] (n=12)  where: +4.8 [+0.0,+9.4] (n=12)
+   paired efficiency (b−a): input_tokens: +1159681 [+1065541,+1255621] (26.44x)  peak_input_tokens: +109326 [+108551,+110090] (11.10x)  output_tokens: +2071 [+1842,+2378] (3.34x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: +25 [+23,+26] (4.16x)  answer_chars: +638 [+401,+869] (1.52x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_get_entries': 14, 'terminal': 11, 'aoci_search': 20, '(none)': 3}}
+   steps (b−a): fewer/same/more = 11/13/24; hit cap: {'oh-1': 3, 'oh-aoci-6': 4}
+   -57  How does the convergence detection mechanism in the `fit` method handle the trade-off between numerical precision and co
+         oh-1           read=['sklearn/semi_supervised/_label_propagation.py'] steps=4 retried=None
+         oh-aoci-6      read=['sklearn/cluster/_kmeans.py'] steps=5 retried=None
+   -32  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -22  How does _get_visual_block implement the extraction and validation of parallel estimator metadata from a FeatureUnion's 
+         oh-1           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=5 retried=None
+         oh-aoci-6      read=['sklearn/utils/_repr_html/estimator.py'] steps=1 retried=None
+   +26  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   +19  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-6      read=['sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=10 retried=None
+   +17  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-aoci-6      read=['sklearn/utils/_set_output.py', 'sklearn/utils/tests/test_set_output.py'] steps=4 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+2.0 95%CI=[-1.9,+5.1] median=+3.0 win/tie/loss=30/4/14 sign-test p=0.023 | n for 80% power at this Δ ≈ 316
+   by category: what: +2.8 [-4.9,+9.2] (n=12)  how: +4.0 [+1.3,+6.9] (n=12)  why: +3.8 [+0.6,+6.9] (n=12)  where: -2.7 [-15.6,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: +1187138 [+1089256,+1291626] (27.04x)  peak_input_tokens: +109578 [+108327,+111082] (11.12x)  output_tokens: +2155 [+1803,+2702] (3.43x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +26 [+24,+28] (4.36x)  answer_chars: +687 [+451,+923] (1.56x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'aoci_get_entries': 15, 'terminal': 9, 'aoci_search': 20, '(none)': 4}}
+   steps (b−a): fewer/same/more = 10/13/25; hit cap: {'oh-1': 3, 'oh-aoci-7': 7}
+   -59  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-aoci-7      read=['sklearn/model_selection/_validation.py', 'sklearn/model_selection/tests/test_validation.py', 'sklearn/utils/_indexing.py', 'sklearn/utils/metaestimators.py'] steps=9 retried=None
+   -29  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -21  Where in the scikit-learn repository are the manifold learning classes and dimensionality reduction algorithms imported 
+         oh-1           read=['examples/manifold/plot_lle_digits.py'] steps=2 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +24  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +17  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-aoci-7      read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=4 retried=None
+   +14  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-7      read=['sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/tests/test_feature_select.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=10 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+1.7 95%CI=[-1.3,+4.4] median=+3.0 win/tie/loss=32/2/14 sign-test p=0.011 | n for 80% power at this Δ ≈ 279
+   by category: what: -3.2 [-13.2,+5.5] (n=12)  how: +1.4 [-0.7,+3.7] (n=12)  why: +5.1 [+2.8,+7.2] (n=12)  where: +3.5 [-1.6,+8.4] (n=12)
+   paired efficiency (b−a): input_tokens: +1116309 [+1036010,+1193832] (25.49x)  peak_input_tokens: +108390 [+107380,+109266] (11.01x)  output_tokens: +1840 [+1674,+1994] (3.08x)  tool_calls: -1 [-2,+0] (0.87x)  wall_s: +23 [+21,+24] (3.93x)  answer_chars: +657 [+384,+934] (1.54x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_get_entries': 17, 'terminal': 8, 'aoci_search': 18, '(none)': 5}}
+   steps (b−a): fewer/same/more = 11/8/29; hit cap: {'oh-1': 3, 'oh-aoci-8': 1}
+   -32  What are the consequences of dtype incompatibility at each transformation stage in the dataflow dependency chain from fe
+         oh-1           read=['sklearn/datasets/_twenty_newsgroups.py', 'sklearn/feature_extraction/tests/test_text.py', 'sklearn/feature_extraction/text.py', 'sklearn/model_selection/_split.py', 'sklearn/utils/_indexing.py'] steps=10 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -28  What is the layered validation architecture implemented by the test_docstring_parameters function that separates concern
+         oh-1           read=['sklearn/tests/test_docstring_parameters.py'] steps=2 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -25  What is the dependency resolution mechanism in _parallel_predict_regression that handles the estimator.predict method ac
+         oh-1           read=['sklearn/ensemble/_bagging.py'] steps=3 retried=None
+         oh-aoci-8      read=['sklearn/ensemble/_bagging.py'] steps=6 retried=None
+   +18  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-aoci-8      read=['sklearn/feature_extraction/text.py'] steps=5 retried=None
+   +16  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-aoci-8      read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=5 retried=None
+   +16  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+0.1 95%CI=[-4.8,+4.2] median=+3.0 win/tie/loss=30/5/13 sign-test p=0.014 | n for 80% power at this Δ ≈ 511160
+   by category: what: +1.0 [-7.2,+8.2] (n=12)  how: -1.0 [-10.3,+6.6] (n=12)  why: -0.9 [-9.4,+6.0] (n=12)  where: +1.2 [-12.5,+10.2] (n=12)
+   paired efficiency (b−a): input_tokens: +1111413 [+1027509,+1200987] (25.38x)  peak_input_tokens: +109009 [+108150,+109839] (11.07x)  output_tokens: +1863 [+1710,+2013] (3.10x)  tool_calls: -1 [-2,+0] (0.89x)  wall_s: +25 [+24,+27] (4.25x)  answer_chars: +646 [+422,+893] (1.53x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'(none)': 5, 'aoci_get_entries': 12, 'terminal': 13, 'aoci_search': 18}}
+   steps (b−a): fewer/same/more = 12/13/23; hit cap: {'oh-1': 3, 'oh-aoci-9': 3}
+   -62  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-aoci-9      read=['sklearn/model_selection/_validation.py'] steps=4 retried=None
+   -39  Why does the SplineTransformer use a diagonal coefficient matrix during fit, and how does this design choice enable the 
+         oh-1           read=['sklearn/preprocessing/_polynomial.py'] steps=3 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -34  How does AdditiveChi2Sampler's design decouple the mathematical transformation logic from input validation and sparse/de
+         oh-1           read=['sklearn/kernel_approximation.py'] steps=3 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +20  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +19  How does the `pos_label` parameter resolution process handle the case where a user provides an explicit `pos_label` valu
+         oh-1           read=['sklearn/metrics/_classification.py', 'sklearn/metrics/_plot/base.py', 'sklearn/metrics/_ranking.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py', 'sklearn/utils/validation.py'] steps=10 retried=None
+         oh-aoci-9      read=['sklearn/utils/_response.py'] steps=3 retried=None
+   +16  Why does the repeated instantiation of SelectKBest and GenericUnivariateSelect objects in test_mutual_info_regression im
+         oh-1           read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py'] steps=7 retried=None
+         oh-aoci-9      read=['sklearn/feature_selection/_base.py', 'sklearn/feature_selection/_mutual_info.py', 'sklearn/feature_selection/_univariate_selection.py', 'sklearn/feature_selection/tests/test_feature_select.py', 'sklearn/feature_selection/tests/test_mutual_info.py'] steps=9 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+1.8 95%CI=[-0.1,+3.6] median=+1.0 win/tie/loss=25/7/16 sign-test p=0.211 | n for 80% power at this Δ ≈ 104
+   by category: what: +3.6 [-0.2,+7.2] (n=12)  how: +0.1 [-2.9,+4.3] (n=12)  why: +0.8 [-2.6,+4.1] (n=12)  where: +2.7 [-1.0,+6.5] (n=12)
+   paired efficiency (b−a): input_tokens: +6654 [-1888,+15445] (1.15x)  peak_input_tokens: +4661 [+3784,+5496] (1.43x)  output_tokens: -171 [-259,-83] (0.81x)  tool_calls: -2 [-3,-1] (0.67x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +207 [+30,+385] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 36/4/8; hit cap: {'oh-1': 3, 'oh-cg-1': 1}
+   -13  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   -11  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-cg-1        read=[] steps=5 retried=None
+   -9  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-1        read=['sklearn/tests/test_public_functions.py', 'sklearn/utils/_param_validation.py', 'sklearn/utils/tests/test_param_validation.py'] steps=6 retried=None
+   +19  How does the `pos_label` parameter resolution process handle the case where a user provides an explicit `pos_label` valu
+         oh-1           read=['sklearn/metrics/_classification.py', 'sklearn/metrics/_plot/base.py', 'sklearn/metrics/_ranking.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py', 'sklearn/utils/validation.py'] steps=10 retried=None
+         oh-cg-1        read=['sklearn/metrics/_ranking.py', 'sklearn/utils/_response.py', 'sklearn/utils/multiclass.py'] steps=4 retried=None
+   +16  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-cg-1        read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=7 retried=None
+   +15  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-cg-1        read=['sklearn/feature_extraction/text.py'] steps=4 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=-0.4 95%CI=[-2.3,+1.3] median=+0.0 win/tie/loss=23/4/21 sign-test p=0.880 | n for 80% power at this Δ ≈ 1934
+   by category: what: +0.8 [-2.3,+3.8] (n=12)  how: -0.7 [-2.5,+1.2] (n=12)  why: -0.7 [-3.6,+1.7] (n=12)  where: -1.1 [-7.2,+4.3] (n=12)
+   paired efficiency (b−a): input_tokens: +5754 [-1644,+13898] (1.13x)  peak_input_tokens: +4472 [+3747,+5232] (1.41x)  output_tokens: -175 [-265,-84] (0.80x)  tool_calls: -2 [-3,-1] (0.67x)  wall_s: -1 [-2,-0] (0.90x)  answer_chars: +135 [-49,+321] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 33/7/8; hit cap: {'oh-1': 3, 'oh-cg-10': 1}
+   -20  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-10       read=['sklearn/utils/_param_validation.py'] steps=4 retried=None
+   -17  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-cg-10       read=['sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+   -14  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   +12  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   +11  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-cg-10       read=['sklearn/linear_model/_ridge.py'] steps=6 retried=None
+   +11  What is the mechanism in the test_mean_shift function that ensures dtype consistency across both the MeanShift class ins
+         oh-1           read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+         oh-cg-10       read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.9 95%CI=[-1.6,+3.3] median=+0.5 win/tie/loss=24/4/20 sign-test p=0.652 | n for 80% power at this Δ ≈ 828
+   by category: what: +4.2 [-0.4,+9.6] (n=12)  how: -2.6 [-8.2,+1.0] (n=12)  why: +0.2 [-3.2,+3.6] (n=12)  where: +1.5 [-4.0,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: -1657 [-10224,+6579] (0.96x)  peak_input_tokens: +4325 [+3359,+5220] (1.40x)  output_tokens: -233 [-331,-136] (0.74x)  tool_calls: -2 [-3,-1] (0.59x)  wall_s: -1 [-2,-1] (0.82x)  answer_chars: +157 [+7,+305] (1.13x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 37/5/6; hit cap: {'oh-1': 3, 'oh-cg-2': 0}
+   -30  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   -17  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-2        read=['sklearn/utils/_param_validation.py'] steps=5 retried=None
+   -12  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   +26  What is the mechanism in the test_mean_shift function that ensures dtype consistency across both the MeanShift class ins
+         oh-1           read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+         oh-cg-2        read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+   +17  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-cg-2        read=['sklearn/feature_extraction/text.py'] steps=4 retried=None
+   +17  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-cg-2        read=['sklearn/tests/test_pipeline.py'] steps=5 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+0.8 95%CI=[-1.5,+2.8] median=+2.0 win/tie/loss=29/3/16 sign-test p=0.072 | n for 80% power at this Δ ≈ 780
+   by category: what: +3.1 [+1.0,+5.2] (n=12)  how: -1.1 [-4.4,+1.8] (n=12)  why: -0.2 [-3.4,+2.5] (n=12)  where: +1.2 [-6.0,+7.5] (n=12)
+   paired efficiency (b−a): input_tokens: +3979 [-3769,+11641] (1.09x)  peak_input_tokens: +4575 [+3810,+5329] (1.42x)  output_tokens: -171 [-259,-91] (0.81x)  tool_calls: -2 [-3,-1] (0.66x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +181 [+29,+327] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 34/8/6; hit cap: {'oh-1': 3, 'oh-cg-3': 1}
+   -22  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-3        read=['sklearn/utils/_param_validation.py', 'sklearn/utils/tests/test_param_validation.py'] steps=4 retried=None
+   -18  Where does the permutation loop control the data transformation flow between y_true and y_score, and what specific inver
+         oh-1           read=['sklearn/metrics/_ranking.py', 'sklearn/metrics/tests/test_classification.py', 'sklearn/metrics/tests/test_common.py'] steps=3 retried=None
+         oh-cg-3        read=['sklearn/metrics/tests/test_common.py'] steps=2 retried=None
+   -14  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   +18  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-cg-3        read=['sklearn/feature_extraction/text.py'] steps=4 retried=None
+   +14  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   +13  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+2.0 95%CI=[+0.1,+4.0] median=+2.0 win/tie/loss=28/5/15 sign-test p=0.066 | n for 80% power at this Δ ≈ 94
+   by category: what: +2.7 [-1.8,+7.6] (n=12)  how: +0.0 [-3.6,+3.2] (n=12)  why: +0.2 [-1.8,+2.2] (n=12)  where: +5.1 [+0.9,+8.9] (n=12)
+   paired efficiency (b−a): input_tokens: +869 [-7220,+8631] (1.02x)  peak_input_tokens: +4079 [+3210,+4900] (1.38x)  output_tokens: -217 [-320,-124] (0.75x)  tool_calls: -2 [-3,-1] (0.62x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +95 [-78,+260] (1.08x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 33/9/6; hit cap: {'oh-1': 3, 'oh-cg-4': 1}
+   -14  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   -9  What is the architectural responsibility of the _local_reachability_density() method within LocalOutlierFactor's computa
+         oh-1           read=['sklearn/neighbors/_lof.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   -9  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-4        read=['sklearn/utils/_param_validation.py'] steps=5 retried=None
+   +23  What is the mechanism in the test_mean_shift function that ensures dtype consistency across both the MeanShift class ins
+         oh-1           read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+         oh-cg-4        read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+   +17  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-cg-4        read=['sklearn/feature_extraction/text.py'] steps=4 retried=None
+   +13  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+0.5 95%CI=[-2.0,+2.7] median=+1.0 win/tie/loss=27/4/17 sign-test p=0.174 | n for 80% power at this Δ ≈ 2598
+   by category: what: +1.6 [-2.7,+5.9] (n=12)  how: -1.3 [-3.6,+0.8] (n=12)  why: -0.4 [-3.9,+2.6] (n=12)  where: +2.0 [-5.9,+8.3] (n=12)
+   paired efficiency (b−a): input_tokens: +9326 [+1295,+17574] (1.20x)  peak_input_tokens: +4906 [+4042,+5764] (1.45x)  output_tokens: -150 [-249,-52] (0.83x)  tool_calls: -2 [-2,-1] (0.70x)  wall_s: -1 [-1,+0] (0.92x)  answer_chars: +198 [+2,+389] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 34/6/8; hit cap: {'oh-1': 3, 'oh-cg-5': 1}
+   -32  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-5        read=['sklearn/tests/test_public_functions.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+   -15  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   -11  What is the architectural pattern established by the DictionaryLearningBenchmark class that integrates the Transformer, 
+         oh-1           read=['sklearn/base.py'] steps=5 retried=None
+         oh-cg-5        read=[] steps=4 retried=None
+   +18  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +18  What is the mechanism in the test_mean_shift function that ensures dtype consistency across both the MeanShift class ins
+         oh-1           read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+         oh-cg-5        read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+   +16  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-cg-5        read=['sklearn/linear_model/_ridge.py'] steps=6 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+1.5 95%CI=[-1.4,+4.2] median=+1.0 win/tie/loss=27/3/18 sign-test p=0.233 | n for 80% power at this Δ ≈ 356
+   by category: what: +6.0 [+1.5,+11.1] (n=12)  how: -2.5 [-10.0,+3.2] (n=12)  why: +0.2 [-3.3,+3.3] (n=12)  where: +2.1 [-3.8,+7.7] (n=12)
+   paired efficiency (b−a): input_tokens: +3795 [-3045,+10647] (1.08x)  peak_input_tokens: +4800 [+4025,+5589] (1.44x)  output_tokens: -182 [-282,-94] (0.79x)  tool_calls: -2 [-3,-1] (0.64x)  wall_s: -1 [-2,-0] (0.88x)  answer_chars: +254 [+42,+451] (1.21x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 36/8/4; hit cap: {'oh-1': 3, 'oh-cg-6': 1}
+   -37  How does the delegation of the actual curve computation to `from_predictions` after response value extraction enable cod
+         oh-1           read=['sklearn/calibration.py', 'sklearn/utils/_plotting.py', 'sklearn/utils/_response.py'] steps=6 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   -15  Where does the `set_params` method in `_BaseHeterogeneousEnsemble` delegate parameter setting to its parent class, and w
+         oh-1           read=['sklearn/ensemble/_base.py', 'sklearn/utils/metaestimators.py'] steps=5 retried=None
+         oh-cg-6        read=[] steps=3 retried=None
+   -15  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   +27  What is the mechanism in the test_mean_shift function that ensures dtype consistency across both the MeanShift class ins
+         oh-1           read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+         oh-cg-6        read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+   +18  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-cg-6        read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+   +18  How does _get_visual_block implement the extraction and validation of parallel estimator metadata from a FeatureUnion's 
+         oh-1           read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=5 retried=None
+         oh-cg-6        read=['sklearn/pipeline.py', 'sklearn/utils/_repr_html/estimator.py'] steps=3 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+0.7 95%CI=[-1.3,+2.7] median=+0.0 win/tie/loss=21/6/21 sign-test p=1.000 | n for 80% power at this Δ ≈ 794
+   by category: what: +2.7 [-3.0,+7.9] (n=12)  how: -1.6 [-3.6,+0.0] (n=12)  why: +0.4 [-1.2,+1.9] (n=12)  where: +1.3 [-3.8,+6.3] (n=12)
+   paired efficiency (b−a): input_tokens: +3792 [-3054,+10655] (1.08x)  peak_input_tokens: +4411 [+3695,+5125] (1.41x)  output_tokens: -189 [-279,-102] (0.79x)  tool_calls: -2 [-2,-1] (0.68x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +34 [-122,+193] (1.03x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 35/8/5; hit cap: {'oh-1': 3, 'oh-cg-7': 0}
+   -20  What is the dependency resolution mechanism in _parallel_predict_regression that handles the estimator.predict method ac
+         oh-1           read=['sklearn/ensemble/_bagging.py'] steps=3 retried=None
+         oh-cg-7        read=['sklearn/ensemble/_bagging.py'] steps=2 retried=None
+   -17  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-7        read=['sklearn/utils/_param_validation.py', 'sklearn/utils/tests/test_param_validation.py'] steps=4 retried=None
+   -10  How does the NearestCentroid class leverage the available_if decorator pattern to conditionally expose decision_function
+         oh-1           read=['sklearn/discriminant_analysis.py', 'sklearn/neighbors/_nearest_centroid.py', 'sklearn/utils/_available_if.py'] steps=5 retried=None
+         oh-cg-7        read=['sklearn/neighbors/_nearest_centroid.py', 'sklearn/utils/_available_if.py'] steps=3 retried=None
+   +20  What is the mechanism in the test_mean_shift function that ensures dtype consistency across both the MeanShift class ins
+         oh-1           read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+         oh-cg-7        read=['sklearn/cluster/tests/test_mean_shift.py'] steps=2 retried=None
+   +17  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-cg-7        read=['sklearn/pipeline.py', 'sklearn/tests/test_pipeline.py'] steps=6 retried=None
+   +15  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-cg-7        read=[] steps=1 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+1.6 95%CI=[-0.2,+3.3] median=+1.0 win/tie/loss=25/8/15 sign-test p=0.154 | n for 80% power at this Δ ≈ 123
+   by category: what: +2.4 [-0.8,+5.8] (n=12)  how: -0.2 [-2.2,+1.8] (n=12)  why: +2.4 [-0.9,+5.5] (n=12)  where: +1.6 [-3.2,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: +3104 [-5118,+10820] (1.07x)  peak_input_tokens: +4397 [+3509,+5251] (1.41x)  output_tokens: -204 [-291,-121] (0.77x)  tool_calls: -2 [-3,-1] (0.65x)  wall_s: -1 [-2,-1] (0.83x)  answer_chars: +68 [-95,+226] (1.06x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/12/6; hit cap: {'oh-1': 3, 'oh-cg-8': 1}
+   -17  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-8        read=['sklearn/utils/_param_validation.py', 'sklearn/utils/tests/test_param_validation.py'] steps=5 retried=None
+   -8  How does AdditiveChi2Sampler's design decouple the mathematical transformation logic from input validation and sparse/de
+         oh-1           read=['sklearn/kernel_approximation.py'] steps=3 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   -8  What is the dependency resolution mechanism in _parallel_predict_regression that handles the estimator.predict method ac
+         oh-1           read=['sklearn/ensemble/_bagging.py'] steps=3 retried=None
+         oh-cg-8        read=['sklearn/ensemble/_bagging.py'] steps=3 retried=None
+   +17  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-cg-8        read=['sklearn/tests/test_pipeline.py'] steps=4 retried=None
+   +16  Where in the CountVectorizer class initialization is the token_pattern parameter processed and how does its assignment r
+         oh-1           read=['sklearn/feature_extraction/text.py'] steps=2 retried=None
+         oh-cg-8        read=['sklearn/feature_extraction/text.py'] steps=3 retried=None
+   +11  Why does the exception handling mechanism in OpenMLError impact the performance of HTTP error recovery operations when p
+         oh-1           read=['sklearn/datasets/_openml.py'] steps=4 retried=None
+         oh-cg-8        read=['sklearn/datasets/_openml.py'] steps=2 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+0.7 95%CI=[-1.2,+2.4] median=+0.0 win/tie/loss=23/9/16 sign-test p=0.337 | n for 80% power at this Δ ≈ 677
+   by category: what: -0.7 [-5.0,+2.4] (n=12)  how: +0.4 [-1.2,+2.2] (n=12)  why: +1.3 [-0.4,+3.4] (n=12)  where: +1.7 [-3.9,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: +1013 [-6002,+8106] (1.02x)  peak_input_tokens: +4496 [+3696,+5317] (1.42x)  output_tokens: -230 [-312,-154] (0.74x)  tool_calls: -2 [-3,-2] (0.62x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +145 [-1,+282] (1.12x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 36/8/4; hit cap: {'oh-1': 3, 'oh-cg-9': 1}
+   -22  What is the semantic contract of the Transf class's transform and inverse_transform methods when it inherits from NoInvT
+         oh-1           read=['sklearn/tests/test_pipeline.py'] steps=2 retried=None
+         oh-cg-9        read=['sklearn/tests/test_pipeline.py'] steps=3 retried=None
+   -18  Where in the codebase do functions conditionally invoke the _CVObjects constraint validation logic, and how does the con
+         oh-1           read=['sklearn/model_selection/_split.py', 'sklearn/utils/_param_validation.py'] steps=5 retried=None
+         oh-cg-9        read=[] steps=6 retried=None
+   -11  Where in the scikit-learn repository are the manifold learning classes and dimensionality reduction algorithms imported 
+         oh-1           read=['examples/manifold/plot_lle_digits.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   +17  Where does the solver selection logic in _BaseRidge.fit() determine which lower-level helper functions to invoke based o
+         oh-1           read=['sklearn/linear_model/_ridge.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=2 retried=None
+   +13  Where in the codebase are the lower-level helper functions that _SetOutputMixin delegates to in order to wrap the tuple 
+         oh-1           read=['sklearn/utils/_set_output.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   +9  Where in the codebase are the probability calibration mechanisms that enable SVC and NuSVC to produce consistent probabi
+         oh-1           read=['sklearn/calibration.py', 'sklearn/svm/_base.py'] steps=3 retried=None
+         oh-cg-9        read=['sklearn/svm/_base.py'] steps=2 retried=None
+
+wrote runs/sweqa-r5-scikit-learn-k10/analysis.json

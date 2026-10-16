@@ -1,0 +1,14 @@
+loaded 268 authored entries from /root/aoci-eval/repos-deepswe/pytest-r5/aoci.code.txt
+batch 1: submitted 26 entries, status=applied remaining=225 applied_total=26 4s
+batch 2: submitted 27 entries, status=applied remaining=198 applied_total=53 4s
+batch 3: submitted 27 entries, status=applied remaining=171 applied_total=80 5s
+batch 4: submitted 28 entries, status=applied remaining=143 applied_total=108 6s
+batch 5: submitted 22 entries, status=applied remaining=121 applied_total=130 6s
+batch 6: submitted 19 entries, status=applied remaining=102 applied_total=149 7s
+batch 7: submitted 20 entries, status=applied remaining=82 applied_total=169 7s
+batch 8: submitted 24 entries, status=applied remaining=58 applied_total=193 8s
+batch 9: submitted 27 entries, status=applied remaining=31 applied_total=220 8s
+batch 10: submitted 27 entries, status=applied remaining=4 applied_total=247 9s
+batch 11: submitted 4 entries, status=applied remaining=0 applied_total=251 10s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=251 findings=[('code_skipped', 'doc/en/example/nonpython/__init__.py'), ('code_skipped', 'src/_pytest/_py/__init__.py'), ('code_skipped', 'testing/example_scripts/__init__.py'), ('code_skipped', 'testing/example_scripts/collect/package_infinite_recursion/__init__.pyi'), ('code_skipped', 'testing/example_scripts/collect/package_infinite_recursion/tests/__init__.py')]

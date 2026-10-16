@@ -1,0 +1,176 @@
+=== run.py specs/sweqa-r5p-glm46-sympy-k1.json at 2026-10-15T19:03:10Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name sympy --questions benchmarks/swe-qa/sympy.jsonl --condition oh --out runs/sweqa-r5p-glm46-sympy-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/sympy --profile openrouter-glm46-novita --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=openrouter-glm46-novita model=z-ai/glm-4.6 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=3c817ed8ab55
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[1/48] 29.2s steps=2 calls=2 files=1+0m map=0/0c in=23857 out=576 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[2/48] 40.1s steps=4 calls=4 files=1+0m map=0/0c in=56002 out=605 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[3/48] 44.5s steps=4 calls=4 files=1+0m map=0/0c in=35791 out=689 status=finished   
+[4/48] 50.1s steps=5 calls=5 files=1+0m map=0/0c in=43203 out=801 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[10/16/26 03:04:17] ERROR    Tool 'find                             agent.py:380
+                             /root/.cache/eval-workspaces/sympy-oh-             
+                             3/repo -path "*/pyglet/*" -name "*.py"             
+                             | head -30</arg_value>' not found.                 
+                             Available: ['terminal', 'file_editor',             
+                             'task_tracker', 'finish', 'think']                 
+[5/48] 52.8s steps=4 calls=4 files=2+0m map=0/0c in=50392 out=1275 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[6/48] 57.5s steps=5 calls=5 files=2+0m map=0/0c in=73269 out=1253 status=finished   
+[7/48] 58.1s steps=7 calls=7 files=2+0m map=0/0c in=65405 out=878 status=finished   
+[8/48] 67.3s steps=4 calls=4 files=2+0m map=0/0c in=49877 out=1488 status=finished retried=too_short  
+[9/48] 69.3s steps=8 calls=8 files=1+0m map=0/0c in=68184 out=1215 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[10/48] 76.7s steps=8 calls=8 files=1+0m map=0/0c in=77797 out=1306 status=finished   
+[11/48] 47.5s steps=4 calls=4 files=1+0m map=0/0c in=35811 out=888 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[12/48] 96.4s steps=10 calls=10 files=3+0m map=0/0c in=104776 out=1867 status=finished forced   
+[13/48] 30.3s steps=3 calls=3 files=1+0m map=0/0c in=26754 out=463 status=finished   
+[14/48] 100.4s steps=10 calls=10 files=2+0m map=0/0c in=154956 out=1927 status=finished forced   
+[15/48] 101.5s steps=10 calls=10 files=0+0m map=0/0c in=80445 out=2062 status=finished forced   
+[16/48] 63.6s steps=4 calls=4 files=1+0m map=0/0c in=50289 out=1392 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[17/48] 39.4s steps=3 calls=3 files=1+0m map=0/0c in=38340 out=831 status=finished   
+[18/48] 50.5s steps=3 calls=3 files=1+0m map=0/0c in=30051 out=1180 status=finished   
+[19/48] 117.3s steps=10 calls=10 files=1+0m map=0/0c in=115293 out=2972 status=finished forced   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[20/48] 103.1s steps=10 calls=10 files=1+0m map=0/0c in=123670 out=2029 status=finished forced   
+[21/48] 84.9s steps=9 calls=9 files=2+0m map=0/0c in=110007 out=1331 status=finished   
+[22/48] 36.1s steps=3 calls=3 files=2+0m map=0/0c in=29640 out=727 status=finished   
+[23/48] 43.8s steps=4 calls=4 files=2+0m map=0/0c in=50519 out=922 status=finished   
+[24/48] 44.5s steps=4 calls=4 files=1+0m map=0/0c in=36538 out=739 status=finished   
+[25/48] 56.7s steps=7 calls=7 files=3+0m map=0/0c in=55255 out=868 status=finished   
+[26/48] 102.4s steps=10 calls=10 files=1+0m map=0/0c in=125346 out=1872 status=finished forced   
+[27/48] 110.9s steps=10 calls=10 files=3+0m map=0/0c in=161742 out=2225 status=finished forced   
+[28/48] 46.5s steps=3 calls=3 files=1+0m map=0/0c in=31700 out=1116 status=finished   
+[29/48] 105.0s steps=10 calls=10 files=3+0m map=0/0c in=144589 out=1947 status=finished forced   
+[30/48] 32.5s steps=3 calls=3 files=1+0m map=0/0c in=27061 out=462 status=finished   
+[10/16/26 03:06:18] ERROR    Tool 'find                             agent.py:380
+                             /root/.cache/eval-workspaces/sympy-oh-             
+                             14/repo -type f -name "*.py" | xargs               
+                             grep -l "class Kane"                               
+                             2>/dev/null</arg_value>' not found.                
+                             Available: ['terminal', 'file_editor',             
+                             'task_tracker', 'finish', 'think']                 
+[31/48] 32.3s steps=3 calls=3 files=1+0m map=0/0c in=28580 out=453 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[32/48] 185.9s steps=10 calls=10 files=3+0m map=0/0c in=154953 out=4771 status=finished forced   
+[33/48] 91.4s steps=10 calls=10 files=4+0m map=0/0c in=128712 out=1850 status=finished forced   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[34/48] 32.0s steps=3 calls=3 files=1+0m map=0/0c in=29931 out=502 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[35/48] 206.7s steps=10 calls=10 files=2+0m map=0/0c in=124438 out=6188 status=finished forced   
+[36/48] 106.9s steps=10 calls=10 files=4+0m map=0/0c in=105617 out=1969 status=finished forced   
+[37/48] 58.9s steps=4 calls=4 files=1+0m map=0/0c in=51762 out=1345 status=finished   
+[38/48] 48.2s steps=5 calls=5 files=1+0m map=0/0c in=49301 out=852 status=finished   
+[39/48] 53.4s steps=5 calls=5 files=1+0m map=0/0c in=46051 out=1082 status=finished   
+[40/48] 102.8s steps=10 calls=10 files=2+0m map=0/0c in=120476 out=1901 status=finished forced   
+[41/48] 90.8s steps=10 calls=10 files=1+0m map=0/0c in=86564 out=1332 status=finished forced   
+[42/48] 60.6s steps=5 calls=5 files=1+0m map=0/0c in=65353 out=1179 status=finished   
+[43/48] 92.1s steps=10 calls=10 files=3+0m map=0/0c in=84289 out=1799 status=finished forced  CONTAM=1 
+[44/48] 121.6s steps=10 calls=10 files=2+0m map=0/0c in=89495 out=2615 status=finished forced  DIRTY CONTAM=1 
+[45/48] 104.8s steps=10 calls=10 files=4+0m map=0/0c in=127463 out=2099 status=finished forced   
+[46/48] 103.0s steps=9 calls=9 files=3+0m map=0/0c in=125957 out=2089 status=finished   
+[47/48] 77.3s steps=7 calls=7 files=2+0m map=0/0c in=75560 out=1519 status=finished   
+[48/48] 91.3s steps=10 calls=10 files=2+0m map=0/0c in=89846 out=1528 status=finished forced   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-glm46-sympy-k1 --json runs/sweqa-r5p-glm46-sympy-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-glm46-sympy-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   1    0       —     0     1     18     1     1     0    1
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 1 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 1 probes (jail: ENOENT) · 1 __pycache__-only workspaces · 18 forced answers · 1 refusal/garble re-runs · 1 degenerate · 0 garbled-final · 1 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-glm46-sympy-k1/answers-oh.jsonl --out runs/sweqa-r5p-glm46-sympy-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['z-ai/glm-4.6']
+[1/48] total=53 votes=5 
+[2/48] total=80 votes=5 
+[3/48] total=71 votes=5 
+[4/48] total=31 votes=5 
+[5/48] total=70 votes=5 
+[6/48] total=72 votes=5 
+[7/48] total=75 votes=5 
+[8/48] total=53 votes=5 
+[9/48] total=85 votes=5 
+[10/48] total=52 votes=5 
+[11/48] total=45 votes=5 
+[12/48] total=72 votes=5 
+[13/48] total=81 votes=5 
+[14/48] total=59 votes=5 
+[15/48] total=69 votes=5 
+[16/48] total=87 votes=5 
+[17/48] total=81 votes=5 
+[18/48] total=75 votes=5 
+[19/48] total=84 votes=5 
+[20/48] total=72 votes=5 
+[21/48] total=95 votes=5 
+[22/48] total=75 votes=5 
+[23/48] total=85 votes=5 
+[24/48] total=87 votes=5 
+[25/48] total=90 votes=5 
+[26/48] total=89 votes=5 
+[27/48] total=50 votes=5 
+[28/48] total=87 votes=5 
+[29/48] total=85 votes=5 
+[30/48] total=63 votes=5 
+[31/48] total=15 votes=5 
+[32/48] total=82 votes=5 
+[33/48] total=55 votes=5 
+[34/48] total=19 votes=5 
+[35/48] total=72 votes=5 
+[36/48] total=92 votes=5 
+[37/48] total=78 votes=5 
+[38/48] total=66 votes=5 
+[39/48] total=82 votes=5 
+[40/48] total=84 votes=5 
+[41/48] total=88 votes=5 
+[42/48] total=90 votes=5 
+[43/48] total=81 votes=5 
+[44/48] total=68 votes=5 
+[45/48] total=91 votes=5 
+[46/48] total=75 votes=5 
+[47/48] total=83 votes=5 
+[48/48] total=88 votes=5 
+run: runs/sweqa-r5p-glm46-sympy-k1
+manifest: harness=None created=2026-10-15T19:03:17Z repo=sympy commit=3c817ed8ab55 index_entries=1503
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   1 |   72.5  18.0   59.5   83.1   76.1   71.5 |   6.7   6.7   1.7   0.0 |    76269    13334    1520     864    n/a   75.4 |   0.74   0.00   0.20
+dims: oh=14.2/11.9/17.3/16.0/13.2
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,660,907 out=72,979
+
+wrote runs/sweqa-r5p-glm46-sympy-k1/analysis.json
+

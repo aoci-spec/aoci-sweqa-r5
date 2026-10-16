@@ -1,0 +1,2235 @@
+{
+ "created": "2026-10-15T20:44:05Z",
+ "harness_sha": null,
+ "updated": "2026-10-16T02:10:02Z",
+ "provenance": [
+  {
+   "sha": null,
+   "at": "2026-10-15T20:44:05Z"
+  }
+ ],
+ "spec_file": "specs/sweqa-r5-sqlfluff-k10.json",
+ "spec": {
+  "run": "sweqa-r5-sqlfluff-k10",
+  "repo": "sqlfluff",
+  "repo_root": "repos-r5/sqlfluff",
+  "questions": "benchmarks/swe-qa/sqlfluff.jsonl",
+  "draws": 10,
+  "limit": 0,
+  "workers": 48,
+  "concurrent_passes": 2,
+  "arms": [
+   {
+    "name": "oh",
+    "kind": "oh",
+    "profile": "official-dsflash",
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288
+   },
+   {
+    "name": "oh-aoci",
+    "kind": "oh-aoci",
+    "profile": "official-dsflash",
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288
+   },
+   {
+    "name": "oh-cg",
+    "kind": "oh-cg",
+    "profile": "official-dsflash",
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288
+   }
+  ],
+  "judge": {
+   "profile": "gptnb-judge",
+   "votes": 5,
+   "workers": 48
+  },
+  "require_complete_index": true,
+  "_comment": "R5 — SWE-QA ALL 15 REPOS (2026-10-16; published as a reproduction package). Host: OpenHands 1.1.0 default agent (terminal + file_editor + task_tracker), max 10 reasoning-action iterations, temperature 0 — the paper's protocol. Three arms, k=10 interleaved: oh (bare) / oh-aoci (AOCI served by aoci-code 0.1.0-rc20 MCP, nine tools; every question first runs a COGNITION TURN with its own budget (<=30 iterations): aoci_rules -> aoci_overview through every next_cursor to completed=true (chunk_tokens=24000) -> attestation, then the paper's 10-iteration question turn) / oh-cg (CodeGraph 1.5.0 served as an MCP tool from a read-only mirror). No mixed arm. Index scope (all 15 repos, uniform): Managed Scope full profile + observe ** (order 0) + index **/*.py, **/*.pyx, **/*.pxd, **/*.pyi (order 10-13) + exclude AGENTS.md: Python/Cython sources INCLUDING tests get Entries (173/720 questions reference test files), non-code files are observed; this keeps every whole index under the rc20 cognition budget (whole_index.max_tokens 400k; django 2,845 entries is the largest). Entries authored by Claude Sonnet 5.5 (CloseAI) with s3_author under the rc20 quota profile and written through the governed path (aoci_maintain -> aoci_update_entry) until verify reports aligned; the four r4 repos are re-indexed under this scope and re-run (r4 used the full profile, so r4 numbers are not mixed in). Answer model DeepSeek-V4.1-Flash (official deepseek-flash, thinking disabled, 1M context). Judge: claude-sonnet-4-5 x5 votes per answer, per-dimension majority (median if no majority), five dimensions 1-20 = 100, rubric sha 750916e2 (the benchmark's); only rows with 5 valid votes count. PREREGISTERED (frozen before the first answer): H1 oh-aoci - oh > 0; H2 oh-aoci - oh-cg (two-sided); H3 oh-cg - oh (two-sided). Per repo: run-level exact permutation 10 v 10 (184,756 splits, two-sided). Merged: 15-repo stratified permutation (MC 1e5, equal repo weights). Exploratory: question category by first word; effect vs index size (<=2 / 3-5 / >=8 overview chunks); the 173 test-referencing questions. Absolute scores are not comparable with r4 or batch one. Acceptance gate before judging: 0 leaks, 0 network successes, delivery sha asserted per record, workspace-modified records discarded and re-answered (audited in discards.jsonl)."
+ },
+ "repo": "sqlfluff",
+ "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+ "index": {
+  "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+  "entries": 392,
+  "volumes": {
+   "aoci.txt": {
+    "sha256": "afef0b7c3b12a74f",
+    "bytes": 297
+   },
+   "aoci.meta.txt": {
+    "sha256": "ebafbe54981dfb23",
+    "bytes": 2307
+   },
+   "aoci.code.txt": {
+    "sha256": "e697972d487cbf3c",
+    "bytes": 153209
+   }
+  }
+ },
+ "index_artifact": null,
+ "draws": 10,
+ "arm_passes": [
+  {
+   "name": "oh-1",
+   "base": "oh",
+   "draw": 1,
+   "kind": "oh",
+   "order": 0
+  },
+  {
+   "name": "oh-aoci-1",
+   "base": "oh-aoci",
+   "draw": 1,
+   "kind": "oh-aoci",
+   "order": 1
+  },
+  {
+   "name": "oh-cg-1",
+   "base": "oh-cg",
+   "draw": 1,
+   "kind": "oh-cg",
+   "order": 2
+  },
+  {
+   "name": "oh-2",
+   "base": "oh",
+   "draw": 2,
+   "kind": "oh",
+   "order": 3
+  },
+  {
+   "name": "oh-aoci-2",
+   "base": "oh-aoci",
+   "draw": 2,
+   "kind": "oh-aoci",
+   "order": 4
+  },
+  {
+   "name": "oh-cg-2",
+   "base": "oh-cg",
+   "draw": 2,
+   "kind": "oh-cg",
+   "order": 5
+  },
+  {
+   "name": "oh-3",
+   "base": "oh",
+   "draw": 3,
+   "kind": "oh",
+   "order": 6
+  },
+  {
+   "name": "oh-aoci-3",
+   "base": "oh-aoci",
+   "draw": 3,
+   "kind": "oh-aoci",
+   "order": 7
+  },
+  {
+   "name": "oh-cg-3",
+   "base": "oh-cg",
+   "draw": 3,
+   "kind": "oh-cg",
+   "order": 8
+  },
+  {
+   "name": "oh-4",
+   "base": "oh",
+   "draw": 4,
+   "kind": "oh",
+   "order": 9
+  },
+  {
+   "name": "oh-aoci-4",
+   "base": "oh-aoci",
+   "draw": 4,
+   "kind": "oh-aoci",
+   "order": 10
+  },
+  {
+   "name": "oh-cg-4",
+   "base": "oh-cg",
+   "draw": 4,
+   "kind": "oh-cg",
+   "order": 11
+  },
+  {
+   "name": "oh-5",
+   "base": "oh",
+   "draw": 5,
+   "kind": "oh",
+   "order": 12
+  },
+  {
+   "name": "oh-aoci-5",
+   "base": "oh-aoci",
+   "draw": 5,
+   "kind": "oh-aoci",
+   "order": 13
+  },
+  {
+   "name": "oh-cg-5",
+   "base": "oh-cg",
+   "draw": 5,
+   "kind": "oh-cg",
+   "order": 14
+  },
+  {
+   "name": "oh-6",
+   "base": "oh",
+   "draw": 6,
+   "kind": "oh",
+   "order": 15
+  },
+  {
+   "name": "oh-aoci-6",
+   "base": "oh-aoci",
+   "draw": 6,
+   "kind": "oh-aoci",
+   "order": 16
+  },
+  {
+   "name": "oh-cg-6",
+   "base": "oh-cg",
+   "draw": 6,
+   "kind": "oh-cg",
+   "order": 17
+  },
+  {
+   "name": "oh-7",
+   "base": "oh",
+   "draw": 7,
+   "kind": "oh",
+   "order": 18
+  },
+  {
+   "name": "oh-aoci-7",
+   "base": "oh-aoci",
+   "draw": 7,
+   "kind": "oh-aoci",
+   "order": 19
+  },
+  {
+   "name": "oh-cg-7",
+   "base": "oh-cg",
+   "draw": 7,
+   "kind": "oh-cg",
+   "order": 20
+  },
+  {
+   "name": "oh-8",
+   "base": "oh",
+   "draw": 8,
+   "kind": "oh",
+   "order": 21
+  },
+  {
+   "name": "oh-aoci-8",
+   "base": "oh-aoci",
+   "draw": 8,
+   "kind": "oh-aoci",
+   "order": 22
+  },
+  {
+   "name": "oh-cg-8",
+   "base": "oh-cg",
+   "draw": 8,
+   "kind": "oh-cg",
+   "order": 23
+  },
+  {
+   "name": "oh-9",
+   "base": "oh",
+   "draw": 9,
+   "kind": "oh",
+   "order": 24
+  },
+  {
+   "name": "oh-aoci-9",
+   "base": "oh-aoci",
+   "draw": 9,
+   "kind": "oh-aoci",
+   "order": 25
+  },
+  {
+   "name": "oh-cg-9",
+   "base": "oh-cg",
+   "draw": 9,
+   "kind": "oh-cg",
+   "order": 26
+  },
+  {
+   "name": "oh-10",
+   "base": "oh",
+   "draw": 10,
+   "kind": "oh",
+   "order": 27
+  },
+  {
+   "name": "oh-aoci-10",
+   "base": "oh-aoci",
+   "draw": 10,
+   "kind": "oh-aoci",
+   "order": 28
+  },
+  {
+   "name": "oh-cg-10",
+   "base": "oh-cg",
+   "draw": 10,
+   "kind": "oh-cg",
+   "order": 29
+  }
+ ],
+ "questions_sha256": "d68d09bb18d6d7be",
+ "aoci_bin": "/root/aoci-eval/bin/aoci-rc20",
+ "arms": {
+  "oh-1": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-1": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-1": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     3.0
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-2": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-2": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-2": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.9
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-3": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-3": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-3": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.5
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-4": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-4": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-4": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.7
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-5": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-5": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-5": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.1
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-6": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-6": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-6": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     3.4
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-7": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-7": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-7": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.5
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-8": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-8": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-8": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.5
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-9": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-9": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-9": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.2
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  },
+  "oh-10": {
+   "kind": "oh",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "e4bcf5ba08313c6e",
+   "hint_chars": 200,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": null,
+   "index": null
+  },
+  "oh-aoci-10": {
+   "kind": "oh-aoci",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:aoci"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": {
+     "arms": [
+      "oh-aoci",
+      "oh-aoci-cg"
+     ],
+     "iters": 30,
+     "enabled": true
+    },
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "5259dbe2808f703f",
+   "hint_chars": 275,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": {
+    "repo_commit": "db9801b7eb7fd014e765117f63ee1b0675fa9f87",
+    "entries": 392,
+    "volumes": {
+     "aoci.txt": {
+      "sha256": "afef0b7c3b12a74f",
+      "bytes": 297
+     },
+     "aoci.meta.txt": {
+      "sha256": "ebafbe54981dfb23",
+      "bytes": 2307
+     },
+     "aoci.code.txt": {
+      "sha256": "e697972d487cbf3c",
+      "bytes": 153209
+     }
+    }
+   },
+   "map_state": {
+    "governance_aligned": true,
+    "result": "aligned",
+    "entries": 392,
+    "findings": []
+   }
+  },
+  "oh-cg-10": {
+   "kind": "oh-cg",
+   "host": "openhands",
+   "profile": "official-dsflash",
+   "model": "deepseek-flash",
+   "protocol": "openai",
+   "params": {
+    "max_iterations": 10,
+    "temperature": 0.0,
+    "max_output_tokens": 12288,
+    "sdk": "1.1.0",
+    "workspace": "plain export of the pinned commit (no VCS metadata)",
+    "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+    "file_editor": "file_editor confined to the workspace",
+    "tools": [
+     "terminal",
+     "file_editor",
+     "task_tracker",
+     "finish",
+     "think",
+     "mcp:codegraph"
+    ],
+    "sdk_text_limit": 400000,
+    "cognition_turn": null,
+    "sdk_patch": "backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)",
+    "codegraph_version": "1.5.0"
+   },
+   "workers": 48,
+   "questions_sha256": "d68d09bb18d6d7be",
+   "prompt_sha256": "70738c38162b0c44",
+   "hint_chars": 209,
+   "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+   "index_chars": 0,
+   "index_parts": 0,
+   "text_part_limit": 45000,
+   "sdk_text_content_limit": 50000,
+   "workspace_extras": [],
+   "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+   "map_served_from": "mirror worktree",
+   "index": null,
+   "map_build": {
+    "seconds": [
+     2.5
+    ],
+    "graph": {
+     "files": 2567,
+     "nodes": 6583,
+     "edges": 42407,
+     "db_bytes": 30101504,
+     "up_to_date": true
+    }
+   }
+  }
+ },
+ "judge": {
+  "oh-1": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-1": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-1": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-2": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-2": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-2": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-3": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-3": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-3": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-4": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-4": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-4": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-5": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-5": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-5": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-6": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-6": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-6": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-7": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-7": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-7": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-8": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-8": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-8": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-9": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-9": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-9": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-10": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-aoci-10": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  },
+  "oh-cg-10": {
+   "profile": "gptnb-judge",
+   "model": "claude-sonnet-4-5",
+   "votes": 5,
+   "max_tokens": 2048,
+   "workers": 48,
+   "rubric_sha256": "750916e297e28a10",
+   "answer_models": [
+    "deepseek-flash"
+   ]
+  }
+ }
+}

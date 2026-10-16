@@ -1,0 +1,17 @@
+  baseline roles: 83 index of 237 files (observe/exclude skipped)
+s3 · flask-r5 · files=83 full=83 excerpt=0 binary=0 · full-text 557KB ≈ 178k tok · old entries 0 · model=closeai-sonnet55 workers=12
+  batches=8
+  pretag: 83/83 files tagged
+[batch 1/8] ok=2
+[batch 2/8] ok=14
+[batch 3/8] ok=26
+[batch 4/8] ok=38
+[batch 5/8] ok=50
+[batch 6/8] ok=59
+[batch 7/8] ok=71
+[batch 8/8] ok=83
+  extend round: 2 entries
+  shorten round: 44 entries
+  F shorten round: 4 entries
+
+s3 done · flask-r5 · entries 83/83 · verify missing=0 (untracked-in-clone 1) · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.88 · fallback 0 · tokens in=268925 out=31087 · est $2.12

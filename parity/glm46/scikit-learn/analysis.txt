@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-scikit-learn-k1
+manifest: harness=None created=2026-10-15T18:50:59Z repo=scikit-learn commit=adb1ae76d798 index_entries=1004
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   83.8  15.4   77.7   84.1   84.3   89.1 |   6.8   7.2   2.0   0.0 |    84280    14783    1754    1845    n/a   78.1 |   0.77   0.00   0.26
+dims: oh=16.4/15.1/18.2/17.7/16.5
+judge vote SD (mean over questions): oh=0.8
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=4,045,449 out=84,181
+
+wrote runs/sweqa-r5p-glm46-scikit-learn-k1/analysis.json

@@ -1,0 +1,82 @@
+  baseline roles: 746 index of 2008 files (observe/exclude skipped)
+s3 · sphinx-r5 · files=746 full=746 excerpt=0 binary=0 · full-text 4602KB ≈ 1472k tok · old entries 0 · model=closeai-sonnet55 workers=12
+  batches=71
+  pretag chunk: unparseable output (25475 chars)
+  pretag: 496/746 files tagged
+[batch 1/71] ok=1
+[batch 2/71] ok=3
+[batch 3/71] ok=6
+[batch 4/71] ok=10
+[batch 5/71] ok=14
+[batch 6/71] ok=25
+[batch 7/71] ok=37
+[batch 8/71] ok=48
+[batch 9/71] ok=60
+[batch 10/71] ok=72
+[batch 11/71] ok=72
+[batch 12/71] ok=83
+[batch 13/71] ok=95
+[batch 14/71] ok=101
+[batch 15/71] ok=113
+[batch 16/71] ok=125
+[batch 17/71] ok=137
+[batch 18/71] ok=149
+[batch 19/71] ok=161
+[batch 20/71] ok=173
+[batch 21/71] ok=185
+[batch 22/71] ok=187
+[batch 23/71] ok=199
+[batch 24/71] ok=206
+[batch 25/71] ok=218
+[batch 26/71] ok=230
+[batch 27/71] ok=242
+[batch 28/71] ok=254
+[batch 29/71] ok=266
+[batch 30/71] ok=278
+[batch 31/71] ok=290
+[batch 32/71] ok=302
+[batch 33/71] ok=314
+[batch 34/71] ok=326
+[batch 35/71] ok=338
+[batch 36/71] ok=350
+[batch 37/71] ok=362
+[batch 38/71] ok=374
+[batch 39/71] ok=386
+[batch 40/71] ok=398
+[batch 41/71] ok=410
+[batch 42/71] ok=422
+[batch 43/71] ok=434
+[batch 44/71] ok=446
+[batch 45/71] ok=458
+[batch 46/71] ok=470
+[batch 47/71] ok=482
+[batch 48/71] ok=494
+[batch 49/71] ok=506
+[batch 50/71] ok=518
+[batch 51/71] ok=530
+[batch 52/71] ok=542
+[batch 53/71] ok=554
+[batch 54/71] ok=566
+[batch 55/71] ok=567
+[batch 56/71] ok=578
+[batch 57/71] ok=588
+[batch 58/71] ok=595
+[batch 59/71] ok=601
+[batch 60/71] ok=612
+[batch 61/71] ok=621
+[batch 62/71] ok=633
+[batch 63/71] ok=645
+[batch 64/71] ok=657
+[batch 65/71] ok=661
+[batch 66/71] ok=673
+[batch 67/71] ok=685
+[batch 68/71] ok=697
+[batch 69/71] ok=709
+[batch 70/71] ok=709
+[batch 71/71] ok=721
+  coverage retry 1: 25 files
+  extend round: 4 entries
+  shorten round: 409 entries
+  F shorten round: 13 entries
+
+s3 done · sphinx-r5 · entries 746/746 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.91 · fallback 0 · tokens in=2579609 out=280245 · est $19.90

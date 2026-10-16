@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-pytest-k1
+manifest: harness=None created=2026-10-15T17:52:03Z repo=pytest commit=5989efe3efec index_entries=0
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   1 |   83.5  10.5   83.6   84.9   82.7   82.9 |   6.6   6.9   2.0   0.0 |    79344    12926    1535    1453    n/a   74.0 |   0.74   0.00   0.17
+dims: oh=16.5/14.8/18.7/17.4/16.1
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,808,502 out=73,698
+
+wrote runs/sweqa-r5p-glm46-pytest-k1/analysis.json

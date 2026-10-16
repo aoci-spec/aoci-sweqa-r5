@@ -1,0 +1,55 @@
+  baseline roles: 233 index of 429 files (observe/exclude skipped)
+s3 · xarray-r5 · files=233 full=233 excerpt=0 binary=0 · full-text 6370KB ≈ 2038k tok · old entries 0 · model=closeai-sonnet55 workers=12
+  batches=46
+  pretag: 233/233 files tagged
+[batch 1/46] ok=2
+[batch 2/46] ok=3
+[batch 3/46] ok=7
+[batch 4/46] ok=19
+[batch 5/46] ok=31
+[batch 6/46] ok=32
+[batch 7/46] ok=44
+[batch 8/46] ok=48
+[batch 9/46] ok=49
+[batch 10/46] ok=57
+[batch 11/46] ok=67
+[batch 12/46] ok=70
+[batch 13/46] ok=81
+[batch 14/46] ok=93
+[batch 15/46] ok=96
+[batch 16/46] ok=97
+[batch 17/46] ok=99
+[batch 18/46] ok=103
+[batch 19/46] ok=107
+[batch 20/46] ok=110
+[batch 21/46] ok=112
+[batch 22/46] ok=113
+[batch 23/46] ok=120
+[batch 24/46] ok=121
+[batch 25/46] ok=125
+[batch 26/46] ok=135
+[batch 27/46] ok=143
+[batch 28/46] ok=145
+[batch 29/46] ok=146
+[batch 30/46] ok=147
+[batch 31/46] ok=158
+[batch 32/46] ok=159
+[batch 33/46] ok=164
+[batch 34/46] ok=173
+[batch 35/46] ok=179
+[batch 36/46] ok=180
+[batch 37/46] ok=185
+[batch 38/46] ok=191
+[batch 39/46] ok=192
+[batch 40/46] ok=202
+[batch 41/46] ok=208
+[batch 42/46] ok=209
+[batch 43/46] ok=215
+[batch 44/46] ok=219
+[batch 45/46] ok=223
+[batch 46/46] ok=233
+  extend round: 4 entries
+  shorten round: 140 entries
+  F shorten round: 20 entries
+
+s3 done · xarray-r5 · entries 233/233 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.91 · fallback 0 · tokens in=3277385 out=105449 · est $19.02

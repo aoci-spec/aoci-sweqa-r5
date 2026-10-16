@@ -1,0 +1,42 @@
+loaded 1076 authored entries from /root/aoci-eval/repos-deepswe/conan-r5/aoci.code.txt
+batch 1: submitted 27 entries, status=applied remaining=891 applied_total=27 1s
+batch 2: submitted 27 entries, status=applied remaining=864 applied_total=54 3s
+batch 3: submitted 26 entries, status=applied remaining=838 applied_total=80 4s
+batch 4: submitted 25 entries, status=applied remaining=813 applied_total=105 6s
+batch 5: submitted 25 entries, status=applied remaining=788 applied_total=130 7s
+batch 6: submitted 25 entries, status=applied remaining=763 applied_total=155 8s
+batch 7: submitted 25 entries, status=applied remaining=738 applied_total=180 10s
+batch 8: submitted 26 entries, status=applied remaining=712 applied_total=206 12s
+batch 9: submitted 25 entries, status=applied remaining=687 applied_total=231 14s
+batch 10: submitted 25 entries, status=applied remaining=662 applied_total=256 16s
+batch 11: submitted 26 entries, status=applied remaining=636 applied_total=282 17s
+batch 12: submitted 26 entries, status=applied remaining=610 applied_total=308 18s
+batch 13: submitted 26 entries, status=applied remaining=584 applied_total=334 20s
+batch 14: submitted 25 entries, status=applied remaining=559 applied_total=359 21s
+batch 15: submitted 23 entries, status=applied remaining=536 applied_total=382 22s
+batch 16: submitted 20 entries, status=applied remaining=516 applied_total=402 24s
+batch 17: submitted 21 entries, status=applied remaining=495 applied_total=423 26s
+batch 18: submitted 22 entries, status=applied remaining=473 applied_total=445 29s
+batch 19: submitted 22 entries, status=applied remaining=451 applied_total=467 31s
+batch 20: submitted 23 entries, status=applied remaining=428 applied_total=490 33s
+batch 21: submitted 23 entries, status=applied remaining=405 applied_total=513 36s
+batch 22: submitted 23 entries, status=applied remaining=382 applied_total=536 38s
+batch 23: submitted 23 entries, status=applied remaining=359 applied_total=559 40s
+batch 24: submitted 23 entries, status=applied remaining=336 applied_total=582 42s
+batch 25: submitted 23 entries, status=applied remaining=313 applied_total=605 43s
+batch 26: submitted 23 entries, status=applied remaining=290 applied_total=628 45s
+batch 27: submitted 23 entries, status=applied remaining=267 applied_total=651 47s
+batch 28: submitted 23 entries, status=applied remaining=244 applied_total=674 48s
+batch 29: submitted 23 entries, status=applied remaining=221 applied_total=697 50s
+batch 30: submitted 23 entries, status=applied remaining=198 applied_total=720 52s
+batch 31: submitted 23 entries, status=applied remaining=175 applied_total=743 53s
+batch 32: submitted 23 entries, status=applied remaining=152 applied_total=766 54s
+batch 33: submitted 22 entries, status=applied remaining=130 applied_total=788 56s
+batch 34: submitted 23 entries, status=applied remaining=107 applied_total=811 58s
+batch 35: submitted 23 entries, status=applied remaining=84 applied_total=834 60s
+batch 36: submitted 24 entries, status=applied remaining=60 applied_total=858 62s
+batch 37: submitted 24 entries, status=applied remaining=36 applied_total=882 64s
+batch 38: submitted 24 entries, status=applied remaining=12 applied_total=906 65s
+batch 39: submitted 12 entries, status=applied remaining=0 applied_total=918 66s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=918 findings=[('code_skipped', '.ci/__init__.py'), ('code_skipped', 'conan/api/__init__.py'), ('code_skipped', 'conan/api/subapi/__init__.py'), ('code_skipped', 'conan/cli/commands/__init__.py'), ('code_skipped', 'conan/cli/formatters/audit/__init__.py')]

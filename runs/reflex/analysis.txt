@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-reflex-k10
+manifest: harness=None created=2026-10-15T20:15:06Z repo=reflex commit=fe0f946dc0c2 index_entries=376
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   80.1  11.6   74.0   82.8   82.2   80.1 |   6.8  10.5   2.7   0.0 |    79749    13350    1363     776    n/a   11.7 |   0.61   0.00   0.58
+oh-10           48   0   0 |   79.0  12.7   71.3   80.8   80.0   82.1 |   6.5  10.1   2.6   0.0 |    74062    12880    1488    1658    n/a   11.8 |   0.65   0.00   0.64
+oh-2            48   0   0 |   79.7  11.9   75.2   84.2   80.1   78.0 |   6.8  10.4   2.7   0.0 |    77829    12856    1392     691    n/a   12.1 |   0.65   0.00   0.62
+oh-3            48   0   0 |   78.5  11.0   77.4   77.6   79.8   78.8 |   6.3  10.0   2.4   0.0 |    72706    12738    1307     677    n/a   11.3 |   0.60   0.00   0.58
+oh-4            48   0   0 |   79.4  11.3   77.3   80.5   77.3   81.4 |   6.4  10.5   2.7   0.0 |    74735    12778    1356     823    n/a   11.9 |   0.68   0.00   0.62
+oh-5            48   0   0 |   80.7  12.2   75.2   80.2   82.9   83.2 |   7.0  10.8   2.6   0.0 |    78858    12869    1408     770    n/a   11.8 |   0.63   0.00   0.68
+oh-6            48   0   0 |   77.1  13.8   74.1   78.8   79.2   75.0 |   6.7  10.4   2.7   0.0 |    77244    12775    1348     641    n/a   11.7 |   0.57   0.00   0.54
+oh-7            48   0   0 |   77.7  12.5   73.5   77.6   79.7   79.4 |   6.9  10.4   2.6   0.0 |    78773    13066    1363     651    n/a   12.4 |   0.68   0.00   0.62
+oh-8            48   0   0 |   78.6  12.5   72.9   81.8   80.2   77.7 |   6.9  10.4   2.7   0.0 |    79948    12836    1342     680    n/a   11.6 |   0.58   0.00   0.60
+oh-9            48   0   0 |   79.5  12.4   74.6   82.4   80.7   79.2 |   6.9  10.6   2.7   0.0 |    78509    12969    1363     746    n/a   12.2 |   0.62   0.00   0.62
+oh-aoci-1       48   0   0 |   80.2  13.7   74.9   83.9   79.4   81.3 |   5.1   6.5   2.0   9.8 |   542696    62496    2191     908    n/a   20.3 |   0.42   0.35   0.67
+oh-aoci-10      48   0   0 |   76.9  17.0   75.4   75.9   79.3   75.5 |   5.1   6.1   1.8   9.5 |   540086    62231    2143     868    n/a   21.4 |   0.35   0.33   0.52
+oh-aoci-2       48   0   0 |   78.7  12.7   73.9   79.3   79.4   83.9 |   4.9   5.9   1.9   9.9 |   527212    62038    2122     899    n/a   20.2 |   0.55   0.54   0.67
+oh-aoci-3       48   0   1 |   77.3  16.3   71.7   77.8   81.0   77.2 |   4.8   5.9   1.8  12.6 |   526422    62323    2123     863    n/a   19.7 |   0.49   0.35   0.67
+oh-aoci-4       48   0   0 |   78.9  14.4   76.2   81.1   80.9   76.1 |   5.0   6.3   1.9  10.3 |   538030    62256    2166     893    n/a   20.6 |   0.44   0.48   0.56
+oh-aoci-5       48   0   1 |   79.5  13.7   75.5   82.7   80.3   79.8 |   5.2   6.7   1.9  14.3 |   551438    62788    2226     945    n/a   20.7 |   0.41   0.50   0.58
+oh-aoci-6       48   0   1 |   78.3  15.1   75.5   78.2   81.5   76.8 |   5.2   6.2   1.9  10.8 |   556610    62325    2248     967    n/a   21.1 |   0.43   0.38   0.59
+oh-aoci-7       48   0   0 |   80.2  13.5   72.7   82.2   80.5   84.2 |   5.2   6.6   2.0  10.6 |   545308    62350    2205     874    n/a   20.7 |   0.61   0.36   0.73
+oh-aoci-8       48   0   1 |   76.3  16.5   70.9   77.6   77.0   78.0 |   4.5   5.4   1.7  10.0 |   504459    61613    2055     867    n/a   19.3 |   0.51   0.42   0.57
+oh-aoci-9       48   0   1 |   79.6  14.4   73.2   78.4   81.9   83.6 |   4.7   6.2   2.0  11.0 |   521805    62327    2127     923    n/a   20.0 |   0.62   0.39   0.62
+oh-cg-1         48   0   0 |   79.2  13.0   79.5   79.8   80.8   75.7 |   5.9   8.2   2.1  14.3 |   101814    18689    1166     964    n/a   11.3 |   0.52   0.65   0.54
+oh-cg-10        48   0   0 |   78.0  11.7   74.6   80.8   76.9   78.2 |   6.2   8.5   2.0  15.2 |   111209    19138    1179     852    n/a   11.4 |   0.49   0.62   0.72
+oh-cg-2         48   0   0 |   81.0  11.2   78.3   84.2   82.0   78.5 |   6.3   9.1   2.2  13.9 |   111669    19055    1299     888    n/a   11.5 |   0.49   0.64   0.70
+oh-cg-3         48   0   0 |   79.2  12.7   76.0   83.1   76.3   79.9 |   6.0   8.4   2.3  13.5 |   105021    18656    1170     957    n/a   10.9 |   0.55   0.62   0.65
+oh-cg-4         48   0   0 |   81.1  11.2   78.2   84.2   79.7   81.3 |   5.8   8.3   1.9  14.6 |   103143    18873    1151     896    n/a   11.8 |   0.54   0.59   0.60
+oh-cg-5         48   0   0 |   78.6  12.1   73.5   81.8   80.1   78.1 |   5.7   8.2   2.0  14.4 |   101993    19048    1159     900    n/a   10.7 |   0.49   0.64   0.54
+oh-cg-6         48   0   0 |   78.6  13.4   77.4   81.0   80.6   74.4 |   5.6   7.8   1.8  14.5 |    94384    18521    1077     803    n/a   10.0 |   0.42   0.64   0.62
+oh-cg-7         48   0   1 |   79.7  12.0   76.5   82.2   78.2   80.7 |   5.9   8.1   2.1  14.5 |   102964    19270    1146     900    n/a   10.8 |   0.45   0.62   0.68
+oh-cg-8         48   0   0 |   79.9  12.4   73.6   81.9   80.8   81.7 |   6.1   8.8   2.1  13.9 |   106121    18974    1222     833    n/a   11.0 |   0.45   0.64   0.60
+oh-cg-9         48   0   0 |   78.8  13.4   75.9   82.0   78.8   77.1 |   5.8   8.0   2.1  13.5 |    97611    18048    1132     895    n/a   10.4 |   0.47   0.64   0.57
+dims: oh-1=15.5/14.3/18.5/16.5/15.3  oh-10=15.3/14.1/18.2/16.4/15.1  oh-2=15.3/14.1/18.4/16.7/15.2  oh-3=15.1/13.9/18.3/16.3/14.9  oh-4=15.4/14.1/18.3/16.5/15.1  oh-5=15.7/14.4/18.4/16.6/15.6  oh-6=14.8/13.5/17.9/16.3/14.5  oh-7=15.1/13.7/18.2/16.0/14.7  oh-8=15.2/13.8/18.2/16.4/15.0  oh-9=15.4/14.1/18.3/16.5/15.2  oh-aoci-1=15.6/14.7/18.1/16.3/15.5  oh-aoci-10=14.6/14.0/17.5/16.1/14.7  oh-aoci-2=15.3/14.5/17.9/15.9/15.2  oh-aoci-3=14.8/14.0/17.7/16.1/14.7  oh-aoci-4=15.1/14.3/18.1/16.3/15.1  oh-aoci-5=15.5/14.5/18.1/16.1/15.3  oh-aoci-6=14.9/14.3/17.9/16.1/15.1  oh-aoci-7=15.6/14.5/18.4/16.3/15.4  oh-aoci-8=14.6/13.9/17.4/15.8/14.6  oh-aoci-9=15.4/14.6/17.9/16.3/15.4  oh-cg-1=15.4/14.2/18.1/16.4/15.2  oh-cg-10=14.8/13.9/18.2/16.1/14.9  oh-cg-2=15.8/14.5/18.5/16.7/15.6  oh-cg-3=15.3/14.1/18.1/16.4/15.2  oh-cg-4=15.9/14.8/18.4/16.4/15.6  oh-cg-5=15.3/13.9/18.1/16.4/15.0  oh-cg-6=15.2/14.1/18.1/16.2/15.0  oh-cg-7=15.5/14.3/18.1/16.3/15.4  oh-cg-8=15.5/14.4/18.2/16.4/15.3  oh-cg-9=15.2/14.2/18.0/16.3/15.0
+judge vote SD (mean over questions): oh-1=0.8  oh-10=1.1  oh-2=1.1  oh-3=1.0  oh-4=1.1  oh-5=1.0  oh-6=0.6  oh-7=0.9  oh-8=0.7  oh-9=0.9  oh-aoci-1=1.0  oh-aoci-10=0.9  oh-aoci-2=1.0  oh-aoci-3=1.1  oh-aoci-4=1.0  oh-aoci-5=0.8  oh-aoci-6=1.0  oh-aoci-7=0.8  oh-aoci-8=1.1  oh-aoci-9=0.8  oh-cg-1=0.8  oh-cg-10=0.6  oh-cg-2=1.2  oh-cg-3=0.8  oh-cg-4=0.7  oh-cg-5=1.0  oh-cg-6=0.7  oh-cg-7=1.0  oh-cg-8=1.0  oh-cg-9=0.8
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.2 calls/2115ch (used on 77% of questions)  oh-aoci-10=1.3 calls/2042ch (used on 75% of questions)  oh-aoci-2=1.4 calls/2139ch (used on 79% of questions)  oh-aoci-3=1.4 calls/2928ch (used on 77% of questions)  oh-aoci-4=1.3 calls/2206ch (used on 79% of questions)  oh-aoci-5=1.5 calls/3126ch (used on 85% of questions)  oh-aoci-6=1.5 calls/2414ch (used on 79% of questions)  oh-aoci-7=1.5 calls/2313ch (used on 83% of questions)  oh-aoci-8=1.2 calls/2198ch (used on 69% of questions)  oh-aoci-9=1.3 calls/2317ch (used on 79% of questions)  oh-cg-1=1.5 calls/28458ch (used on 100% of questions)  oh-cg-10=1.5 calls/30185ch (used on 100% of questions)  oh-cg-2=1.4 calls/25954ch (used on 100% of questions)  oh-cg-3=1.4 calls/26941ch (used on 100% of questions)  oh-cg-4=1.5 calls/29145ch (used on 100% of questions)  oh-cg-5=1.5 calls/28898ch (used on 100% of questions)  oh-cg-6=1.5 calls/28782ch (used on 100% of questions)  oh-cg-7=1.5 calls/29413ch (used on 100% of questions)  oh-cg-8=1.4 calls/27534ch (used on 100% of questions)  oh-cg-9=1.4 calls/26200ch (used on 100% of questions)
+totals: oh-1: in=3,827,964 out=65,416  oh-10: in=3,554,960 out=71,434  oh-2: in=3,735,790 out=66,813  oh-3: in=3,489,883 out=62,714  oh-4: in=3,587,278 out=65,107  oh-5: in=3,785,190 out=67,584  oh-6: in=3,707,690 out=64,703  oh-7: in=3,781,126 out=65,437  oh-8: in=3,837,514 out=64,429  oh-9: in=3,768,442 out=65,415  oh-aoci-1: in=26,049,390 out=105,174  oh-aoci-10: in=25,924,117 out=102,855  oh-aoci-2: in=25,306,167 out=101,840  oh-aoci-3: in=25,268,243 out=101,903  oh-aoci-4: in=25,825,426 out=103,957  oh-aoci-5: in=26,469,023 out=106,846  oh-aoci-6: in=26,717,257 out=107,889  oh-aoci-7: in=26,174,764 out=105,849  oh-aoci-8: in=24,214,011 out=98,653  oh-aoci-9: in=25,046,662 out=102,093  oh-cg-1: in=4,887,088 out=55,972  oh-cg-10: in=5,338,053 out=56,615  oh-cg-2: in=5,360,106 out=62,352  oh-cg-3: in=5,040,990 out=56,170  oh-cg-4: in=4,950,870 out=55,227  oh-cg-5: in=4,895,687 out=55,644  oh-cg-6: in=4,530,434 out=51,698  oh-cg-7: in=4,942,261 out=55,011  oh-cg-8: in=5,093,801 out=58,659  oh-cg-9: in=4,685,342 out=54,339
+
+== oh-10 - oh-1: n=48 Δ=-1.1 95%CI=[-3.8,+1.6] median=+0.0 win/tie/loss=22/8/18 sign-test p=0.636 | n for 80% power at this Δ ≈ 572
+   by category: what: -2.7 [-7.8,+2.1] (n=11)  how: -2.0 [-7.7,+2.0] (n=12)  why: -2.2 [-7.2,+2.4] (n=12)  where: +2.0 [-3.8,+9.2] (n=12)
+   paired efficiency (b−a): input_tokens: -5688 [-12768,+825] (0.93x)  peak_input_tokens: -469 [-1108,+105] (0.96x)  output_tokens: +125 [-123,+531] (1.09x)  tool_calls: -0 [-1,+0] (0.96x)  wall_s: +0 [-1,+2] (1.01x)  answer_chars: +882 [-97,+2757] (2.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/22/12; hit cap: {'oh-1': 19, 'oh-10': 13}
+   -26  How does a function marked with the event handler decorator receive arguments from the text input component to update st
+         oh-1           read=['reflex/constants/event.py', 'reflex/event.py', 'reflex/state.py'] steps=10 retried=None
+         oh-10          read=['reflex/components/el/elements/forms.py', 'reflex/event.py'] steps=7 retried=None
+   -22  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-10          read=['reflex/testing.py', 'reflex/utils/processes.py'] steps=10 retried=None
+   -20  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-10          read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=9 retried=None
+   +35  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-10          read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=6 retried=None
+   +11  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-10          read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py', 'tests/units/test_app.py'] steps=4 retried=None
+   +10  Why does the rendering function that converts iterable components into JavaScript map expressions translate component it
+         oh-1           read=['reflex/compiler/templates.py', 'reflex/components/core/foreach.py'] steps=2 retried=None
+         oh-10          read=['reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/components/core/foreach.py', 'reflex/components/tags/iter_tag.py'] steps=6 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-0.4 95%CI=[-3.2,+2.5] median=+0.0 win/tie/loss=20/8/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 4943
+   by category: what: +1.2 [-3.9,+6.5] (n=11)  how: +1.4 [-1.1,+4.2] (n=12)  why: -2.1 [-7.6,+2.6] (n=12)  where: -2.1 [-9.4,+6.9] (n=12)
+   paired efficiency (b−a): input_tokens: -1920 [-8907,+4972] (0.98x)  peak_input_tokens: -494 [-1201,+137] (0.96x)  output_tokens: +29 [-101,+177] (1.02x)  tool_calls: -0 [-1,+1] (1.00x)  wall_s: +0 [-1,+2] (1.04x)  answer_chars: -85 [-187,+10] (0.89x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/26/11; hit cap: {'oh-1': 19, 'oh-2': 18}
+   -24  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-2           read=['reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_large_state.py'] steps=10 retried=None
+   -21  Where does a component variable propagate its value through conditional component branches such as conditional rendering
+         oh-1           read=['reflex/components/component.py', 'reflex/components/core/cond.py', 'reflex/components/tags/cond_tag.py', 'reflex/vars/number.py'] steps=10 retried=None
+         oh-2           read=['reflex/components/component.py', 'reflex/components/core/cond.py', 'reflex/components/tags/cond_tag.py'] steps=10 retried=None
+   -17  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-2           read=['reflex/components/component.py', 'reflex/components/radix/themes/components/progress.py'] steps=5 retried=None
+   +39  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-2           read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=7 retried=None
+   +18  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-2           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py', 'tests/units/components/core/test_match.py', 'tests/units/test_app.py'] steps=5 retried=None
+   +11  What is the role of the computation function returned by the derived state variable class's computation function accesso
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=5 retried=None
+         oh-2           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=5 retried=None
+
+== oh-3 - oh-1: n=48 Δ=-1.5 95%CI=[-4.2,+1.4] median=-0.5 win/tie/loss=18/6/24 sign-test p=0.441 | n for 80% power at this Δ ≈ 317
+   by category: what: +3.4 [-0.4,+7.5] (n=11)  how: -5.2 [-9.2,-1.2] (n=12)  why: -2.3 [-7.8,+2.2] (n=12)  where: -1.2 [-7.4,+7.2] (n=12)
+   paired efficiency (b−a): input_tokens: -7043 [-13911,-654] (0.91x)  peak_input_tokens: -611 [-1205,-19] (0.95x)  output_tokens: -56 [-154,+43] (0.96x)  tool_calls: -0 [-1,+0] (0.95x)  wall_s: -0 [-1,+0] (0.97x)  answer_chars: -100 [-217,-1] (0.87x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 15/22/11; hit cap: {'oh-1': 19, 'oh-3': 16}
+   -25  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-3           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py'] steps=9 retried=None
+   -16  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-3           read=['reflex/vars/base.py'] steps=10 retried=None
+   -15  Where is the code that merges variable metadata when two style dictionary objects are combined?
+         oh-1           read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+         oh-3           read=['reflex/style.py'] steps=2 retried=None
+   +39  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-3           read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=10 retried=None
+   +16  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-3           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=4 retried=None
+   +12  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-3           read=['reflex/app.py', 'reflex/compiler/compiler.py'] steps=3 retried=None
+
+== oh-4 - oh-1: n=48 Δ=-0.7 95%CI=[-3.6,+2.5] median=-1.0 win/tie/loss=20/4/24 sign-test p=0.652 | n for 80% power at this Δ ≈ 1921
+   by category: what: +3.3 [-4.2,+10.7] (n=11)  how: -2.3 [-5.8,+0.6] (n=12)  why: -4.8 [-9.4,-0.2] (n=12)  where: +1.3 [-5.2,+10.1] (n=12)
+   paired efficiency (b−a): input_tokens: -5014 [-11104,+853] (0.94x)  peak_input_tokens: -571 [-1154,+28] (0.96x)  output_tokens: -6 [-102,+94] (1.00x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: +0 [-1,+2] (1.02x)  answer_chars: +46 [-104,+204] (1.06x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/25/10; hit cap: {'oh-1': 19, 'oh-4': 15}
+   -16  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-4           read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=10 retried=None
+   -16  Why does the dynamic resolution of the icon identifier parameter in the component creation method of the icon rendering 
+         oh-1           read=['reflex/components/lucide/__init__.py', 'reflex/components/lucide/icon.py', 'reflex/vars/base.py', 'tests/units/components/lucide/test_icon.py'] steps=8 retried=None
+         oh-4           read=['reflex/components/lucide/__init__.py', 'reflex/components/lucide/icon.py', 'reflex/vars/base.py', 'tests/units/components/lucide/test_icon.py'] steps=9 retried=None
+   -15  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-4           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py', 'reflex/vars/object.py'] steps=10 retried=None
+   +41  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-4           read=['reflex/components/component.py', 'reflex/components/core/foreach.py', 'reflex/components/radix/themes/layout/list.py'] steps=5 retried=None
+   +23  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-4           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/state.py', 'tests/units/compiler/test_compiler.py'] steps=8 retried=None
+   +16  What is the role of the computation function returned by the derived state variable class's computation function accesso
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=5 retried=None
+         oh-4           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=7 retried=None
+
+== oh-5 - oh-1: n=48 Δ=+0.6 95%CI=[-2.0,+3.3] median=+0.0 win/tie/loss=18/8/22 sign-test p=0.636 | n for 80% power at this Δ ≈ 2071
+   by category: what: +1.2 [-4.9,+7.0] (n=11)  how: -2.6 [-6.0,+0.7] (n=12)  why: +0.8 [-3.8,+5.4] (n=12)  where: +3.1 [-2.4,+10.8] (n=12)
+   paired efficiency (b−a): input_tokens: -891 [-6409,+4523] (0.99x)  peak_input_tokens: -480 [-1123,+120] (0.96x)  output_tokens: +45 [-45,+139] (1.03x)  tool_calls: +0 [-0,+1] (1.03x)  wall_s: +0 [-1,+1] (1.01x)  answer_chars: -7 [-122,+109] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/24/13; hit cap: {'oh-1': 19, 'oh-5': 18}
+   -17  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-5           read=['reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/istate/manager/redis.py', 'reflex/state.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+   -15  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-5           read=['reflex/event.py', 'reflex/utils/types.py'] steps=10 retried=None
+   -14  What is the role of the string representation method in the base component class in supporting the architectural separat
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=5 retried=None
+         oh-5           read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   +39  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-5           read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=9 retried=None
+   +16  Where is the logic that registers dependencies for computed state properties defined?
+         oh-1           read=['reflex/state.py'] steps=2 retried=None
+         oh-5           read=['reflex/state.py', 'reflex/vars/base.py'] steps=4 retried=None
+   +16  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-5           read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=10 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-3.0 95%CI=[-5.0,-0.9] median=-1.5 win/tie/loss=12/10/26 sign-test p=0.034 | n for 80% power at this Δ ≈ 48
+   by category: what: +0.1 [-4.3,+4.5] (n=11)  how: -4.0 [-8.5,+0.3] (n=12)  why: -2.9 [-7.3,+1.0] (n=12)  where: -5.1 [-8.9,-1.7] (n=12)
+   paired efficiency (b−a): input_tokens: -2506 [-8587,+3436] (0.97x)  peak_input_tokens: -575 [-1169,-22] (0.96x)  output_tokens: -15 [-115,+93] (0.99x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +0 [-1,+1] (1.01x)  answer_chars: -136 [-222,-63] (0.83x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/28/11; hit cap: {'oh-1': 19, 'oh-6': 19}
+   -21  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-6           read=['reflex/components/component.py', 'reflex/components/core/foreach.py'] steps=10 retried=None
+   -17  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-6           read=['reflex/event.py', 'reflex/utils/pyi_generator.py', 'reflex/utils/types.py'] steps=10 retried=None
+   -16  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-6           read=['reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+   +11  What is the role of the computation function returned by the derived state variable class's computation function accesso
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=5 retried=None
+         oh-6           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=6 retried=None
+   +11  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-6           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=4 retried=None
+   +9  How does the placeholder element component integrate with Reflex's rendering engine to ensure correct placeholder projec
+         oh-1           read=['reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+         oh-6           read=['reflex/components/__init__.py', 'reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-2.4 95%CI=[-5.3,+0.8] median=-2.0 win/tie/loss=11/8/29 sign-test p=0.006 | n for 80% power at this Δ ≈ 163
+   by category: what: -0.5 [-5.7,+5.5] (n=11)  how: -5.2 [-12.4,+1.6] (n=12)  why: -2.5 [-7.2,+2.2] (n=12)  where: -0.7 [-5.9,+7.1] (n=12)
+   paired efficiency (b−a): input_tokens: -976 [-6364,+4528] (0.99x)  peak_input_tokens: -284 [-885,+312] (0.98x)  output_tokens: +0 [-75,+77] (1.00x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +1 [-1,+3] (1.07x)  answer_chars: -125 [-233,-24] (0.84x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/25/12; hit cap: {'oh-1': 19, 'oh-7': 18}
+   -34  How does setting the child element substitution flag to True affect the rendering behavior of a dropdown menu trigger co
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/dialog.py', 'reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'tests/units/components/test_component.py'] steps=10 retried=None
+         oh-7           read=['reflex/components/component.py', 'reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dropdown_menu.py'] steps=10 retried=None
+   -21  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-7           read=['reflex/event.py', 'reflex/state.py', 'reflex/utils/types.py'] steps=10 retried=None
+   -15  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-7           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py', 'reflex/vars/object.py'] steps=10 retried=None
+   +37  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-7           read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py', 'reflex/components/radix/themes/layouts/list.py'] steps=10 retried=None
+   +18  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-7           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'tests/units/test_app.py'] steps=10 retried=None
+   +18  How does the placeholder element component integrate with Reflex's rendering engine to ensure correct placeholder projec
+         oh-1           read=['reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+         oh-7           read=['reflex/components/component.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-1.5 95%CI=[-3.8,+0.7] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 205
+   by category: what: -1.1 [-6.1,+4.1] (n=11)  how: -1.0 [-4.8,+2.2] (n=12)  why: -1.9 [-7.7,+3.1] (n=12)  where: -2.4 [-6.3,+1.7] (n=12)
+   paired efficiency (b−a): input_tokens: +199 [-5599,+6053] (1.00x)  peak_input_tokens: -514 [-1026,+53] (0.96x)  output_tokens: -21 [-106,+67] (0.98x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-1,+1] (1.00x)  answer_chars: -97 [-213,+18] (0.88x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/25/12; hit cap: {'oh-1': 19, 'oh-8': 21}
+   -24  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-8           read=['reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+   -16  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-8           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+   -14  Where is the code that merges variable metadata when two style dictionary objects are combined?
+         oh-1           read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+         oh-8           read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+   +13  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-8           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py', 'tests/units/components/core/test_match.py'] steps=6 retried=None
+   +10  Why does the base state management class implement a method that creates setter functions for state variables and regist
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py'] steps=5 retried=None
+         oh-8           read=['reflex/state.py', 'reflex/vars/base.py'] steps=5 retried=None
+   +10  Where does a component variable propagate its value through conditional component branches such as conditional rendering
+         oh-1           read=['reflex/components/component.py', 'reflex/components/core/cond.py', 'reflex/components/tags/cond_tag.py', 'reflex/vars/number.py'] steps=10 retried=None
+         oh-8           read=['reflex/components/core/cond.py'] steps=10 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-0.5 95%CI=[-3.5,+2.4] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 2933
+   by category: what: +0.6 [-7.4,+7.8] (n=11)  how: -0.4 [-4.2,+3.0] (n=12)  why: -1.5 [-7.5,+4.0] (n=12)  where: -0.9 [-6.7,+6.7] (n=12)
+   paired efficiency (b−a): input_tokens: -1240 [-7054,+4547] (0.98x)  peak_input_tokens: -381 [-969,+169] (0.97x)  output_tokens: -0 [-111,+112] (1.00x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +1 [-1,+2] (1.05x)  answer_chars: -30 [-141,+83] (0.96x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/24/14; hit cap: {'oh-1': 19, 'oh-9': 16}
+   -29  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-9           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/disk.py', 'reflex/testing.py', 'tests/units/conftest.py', 'tests/units/test_app.py'] steps=10 retried=None
+   -21  Why was the component that wraps controls for closing the popover implemented as a distinct instance of the base class f
+         oh-1           read=['reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/components/radix/themes/components/popover.py'] steps=8 retried=None
+         oh-9           read=['reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/popover.py'] steps=5 retried=None
+   -17  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-9           read=['reflex/components/component.py', 'reflex/event.py', 'reflex/utils/types.py'] steps=10 retried=None
+   +34  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-9           read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=6 retried=None
+   +18  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-9           read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=6 retried=None
+   +13  Why does the base state management class implement a method that creates setter functions for state variables and regist
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py'] steps=5 retried=None
+         oh-9           read=['reflex/state.py', 'reflex/vars/base.py'] steps=6 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+0.1 95%CI=[-3.7,+3.9] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 128377
+   by category: what: +0.9 [-8.3,+10.5] (n=11)  how: +1.1 [-10.4,+10.2] (n=12)  why: -2.8 [-8.6,+2.7] (n=12)  where: +1.2 [-2.8,+5.6] (n=12)
+   paired efficiency (b−a): input_tokens: +462946 [+404378,+522271] (6.81x)  peak_input_tokens: +49147 [+47864,+50347] (4.68x)  output_tokens: +828 [+630,+1014] (1.61x)  tool_calls: -4 [-6,-2] (0.62x)  wall_s: +9 [+7,+10] (1.74x)  answer_chars: +132 [-44,+322] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_search': 29, '(none)': 7, 'aoci_get_entries': 8, 'finish': 1, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 24/16/8; hit cap: {'oh-1': 19, 'oh-aoci-1': 10}
+   -45  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -31  What is the influence of setting the component's render caching configuration attribute to a render caching configuratio
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/base.py', 'reflex/components/radix/primitives/dialog.py', 'reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/constants/compiler.py'] steps=10 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -23  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-aoci-1      read=['reflex/vars/base.py'] steps=10 retried=None
+   +35  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-aoci-1      read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py'] steps=10 retried=None
+   +23  How does the routing state data structure in a test function that validates current page path updates demonstrate the St
+         oh-1           read=['reflex/istate/data.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-1      read=['reflex/app.py', 'reflex/istate/data.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/memory.py', 'reflex/istate/manager/redis.py', 'reflex/state.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+   +19  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=-3.2 95%CI=[-7.5,+0.8] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 164
+   by category: what: +1.4 [-4.7,+6.4] (n=11)  how: -6.9 [-19.1,+4.3] (n=12)  why: -2.8 [-7.4,+1.3] (n=12)  where: -4.6 [-13.8,+3.9] (n=12)
+   paired efficiency (b−a): input_tokens: +460337 [+402525,+519898] (6.77x)  peak_input_tokens: +48882 [+47843,+49872] (4.66x)  output_tokens: +780 [+583,+968] (1.57x)  tool_calls: -4 [-6,-3] (0.58x)  wall_s: +10 [+8,+12] (1.84x)  answer_chars: +92 [-82,+284] (1.12x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_search': 29, '(none)': 10, 'aoci_get_entries': 7, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 23/15/10; hit cap: {'oh-1': 19, 'oh-aoci-10': 10}
+   -49  How does the placeholder element component integrate with Reflex's rendering engine to ensure correct placeholder projec
+         oh-1           read=['reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -45  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -38  Where are the event handler type annotations for the value change, focus gain, and focus loss events of the numeric inpu
+         oh-1           read=['reflex/components/el/elements/forms.py'] steps=5 retried=None
+         oh-aoci-10     read=['reflex/components/radix/themes/components/text_field.py'] steps=5 retried=None
+   +22  How does the routing state data structure in a test function that validates current page path updates demonstrate the St
+         oh-1           read=['reflex/istate/data.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-10     read=['reflex/istate/data.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_state.py'] steps=8 retried=None
+   +21  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +14  Where is the function that parses argument specifications called to build the argument list for an event handler in the 
+         oh-1           read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+         oh-aoci-10     read=['reflex/event.py'] steps=3 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=-1.4 95%CI=[-5.3,+2.3] median=+0.0 win/tie/loss=23/4/21 sign-test p=0.880 | n for 80% power at this Δ ≈ 711
+   by category: what: -0.1 [-7.3,+6.5] (n=11)  how: -3.5 [-12.2,+3.3] (n=12)  why: -2.8 [-7.5,+2.1] (n=12)  where: +3.8 [-2.8,+11.8] (n=12)
+   paired efficiency (b−a): input_tokens: +447463 [+390169,+506434] (6.61x)  peak_input_tokens: +48688 [+47452,+49879] (4.65x)  output_tokens: +759 [+559,+948] (1.56x)  tool_calls: -5 [-6,-3] (0.57x)  wall_s: +8 [+7,+10] (1.73x)  answer_chars: +123 [-74,+336] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'aoci_search': 32, '(none)': 9, 'aoci_get_entries': 6, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 27/16/5; hit cap: {'oh-1': 19, 'oh-aoci-2': 11}
+   -42  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -37  In the framework architecture, what is the mechanism by which the bytecode-based dependency analyzer instantiated in the
+         oh-1           read=['reflex/vars/dep_tracking.py', 'tests/units/vars/test_dep_tracking.py', 'tests/units/vars/test_dep_tracking_integration.py'] steps=4 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -27  What is the influence of setting the component's render caching configuration attribute to a render caching configuratio
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/base.py', 'reflex/components/radix/primitives/dialog.py', 'reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/constants/compiler.py'] steps=10 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +37  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-2      read=['reflex/components/radix/themes/layout/list.py'] steps=3 retried=None
+   +18  Where is the function that parses argument specifications called to build the argument list for an event handler in the 
+         oh-1           read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+         oh-aoci-2      read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+   +17  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-aoci-2      read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py'] steps=10 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=-2.8 95%CI=[-7.1,+1.0] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 204
+   by category: what: -2.3 [-10.9,+5.4] (n=11)  how: -5.0 [-16.8,+5.5] (n=12)  why: -1.2 [-3.6,+1.9] (n=12)  where: -2.9 [-11.7,+3.9] (n=12)
+   paired efficiency (b−a): input_tokens: +446672 [+389020,+507122] (6.60x)  peak_input_tokens: +48974 [+47615,+50377] (4.67x)  output_tokens: +760 [+541,+981] (1.56x)  tool_calls: -5 [-6,-3] (0.56x)  wall_s: +8 [+6,+10] (1.69x)  answer_chars: +87 [-121,+318] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_search': 30, '(none)': 8, 'aoci_get_entries': 7, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 25/15/8; hit cap: {'oh-1': 19, 'oh-aoci-3': 10}
+   -52  How does the placeholder element component integrate with Reflex's rendering engine to ensure correct placeholder projec
+         oh-1           read=['reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -43  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -41  Where are the event handler type annotations for the value change, focus gain, and focus loss events of the numeric inpu
+         oh-1           read=['reflex/components/el/elements/forms.py'] steps=5 retried=None
+         oh-aoci-3      read=['reflex/components/radix/themes/components/text_field.py'] steps=4 retried=None
+   +21  How does the routing state data structure in a test function that validates current page path updates demonstrate the St
+         oh-1           read=['reflex/istate/data.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-3      read=['reflex/istate/data.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/memory.py', 'reflex/istate/manager/redis.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=8 retried=None
+   +16  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-aoci-3      read=['reflex/compiler/compiler.py', 'reflex/compiler/utils.py'] steps=3 retried=None
+   +14  Where is the function that parses argument specifications called to build the argument list for an event handler in the 
+         oh-1           read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+         oh-aoci-3      read=['reflex/event.py'] steps=3 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=-1.2 95%CI=[-5.0,+2.6] median=+0.0 win/tie/loss=23/3/22 sign-test p=1.000 | n for 80% power at this Δ ≈ 993
+   by category: what: +2.2 [-7.5,+12.2] (n=11)  how: -1.8 [-11.4,+5.7] (n=12)  why: -1.2 [-6.4,+3.4] (n=12)  where: -4.0 [-11.1,+2.5] (n=12)
+   paired efficiency (b−a): input_tokens: +458280 [+399877,+518696] (6.75x)  peak_input_tokens: +48907 [+47639,+50143] (4.66x)  output_tokens: +803 [+585,+1010] (1.59x)  tool_calls: -4 [-6,-2] (0.60x)  wall_s: +9 [+7,+11] (1.77x)  answer_chars: +117 [-60,+304] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_search': 31, '(none)': 8, 'aoci_get_entries': 7, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 23/18/7; hit cap: {'oh-1': 19, 'oh-aoci-4': 11}
+   -45  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -32  Where are the event handler type annotations for the value change, focus gain, and focus loss events of the numeric inpu
+         oh-1           read=['reflex/components/el/elements/forms.py'] steps=5 retried=None
+         oh-aoci-4      read=['reflex/components/radix/themes/components/text_field.py'] steps=3 retried=None
+   -26  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +34  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-aoci-4      read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py', 'tests/units/compiler/test_compiler.py'] steps=10 retried=None
+   +18  Where is the function that parses argument specifications called to build the argument list for an event handler in the 
+         oh-1           read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+         oh-aoci-4      read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+   +18  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-aoci-4      read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=10 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=-0.6 95%CI=[-4.1,+2.8] median=+0.0 win/tie/loss=23/4/21 sign-test p=0.880 | n for 80% power at this Δ ≈ 3711
+   by category: what: +1.5 [-7.2,+9.5] (n=11)  how: -0.2 [-9.7,+6.7] (n=12)  why: -1.8 [-6.2,+2.5] (n=12)  where: -0.3 [-6.7,+6.0] (n=12)
+   paired efficiency (b−a): input_tokens: +471689 [+411331,+534151] (6.91x)  peak_input_tokens: +49438 [+48113,+50777] (4.70x)  output_tokens: +863 [+664,+1069] (1.63x)  tool_calls: -4 [-5,-2] (0.64x)  wall_s: +9 [+7,+11] (1.77x)  answer_chars: +169 [-7,+379] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_search': 33, 'aoci_get_entries': 8, '(none)': 7}}
+   steps (b−a): fewer/same/more = 26/14/8; hit cap: {'oh-1': 19, 'oh-aoci-5': 11}
+   -45  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-aoci-5      read=['reflex/state.py', 'reflex/vars/base.py'] steps=10 retried=None
+   -26  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -23  Where is the code that merges variable metadata when two style dictionary objects are combined?
+         oh-1           read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   +21  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   +21  What is the role of the string representation method in the base component class in supporting the architectural separat
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=5 retried=None
+         oh-aoci-5      read=['reflex/components/component.py'] steps=3 retried=None
+   +18  How does the descriptor accessor method of a computed field descriptor return a sequence variable representation that re
+         oh-1           read=['reflex/vars/base.py'] steps=10 retried=None
+         oh-aoci-5      read=['reflex/vars/base.py', 'reflex/vars/sequence.py'] steps=10 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=-1.8 95%CI=[-5.9,+2.2] median=-0.5 win/tie/loss=22/2/24 sign-test p=0.883 | n for 80% power at this Δ ≈ 522
+   by category: what: +1.5 [-10.6,+11.9] (n=11)  how: -4.6 [-16.2,+5.1] (n=12)  why: -0.7 [-5.9,+4.2] (n=12)  where: -3.2 [-7.1,+0.7] (n=12)
+   paired efficiency (b−a): input_tokens: +476860 [+416451,+538919] (6.98x)  peak_input_tokens: +48975 [+47807,+50112] (4.67x)  output_tokens: +885 [+645,+1170] (1.65x)  tool_calls: -4 [-6,-3] (0.59x)  wall_s: +9 [+8,+11] (1.81x)  answer_chars: +191 [+9,+387] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_search': 31, '(none)': 9, 'aoci_get_entries': 7, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 23/17/8; hit cap: {'oh-1': 19, 'oh-aoci-6': 12}
+   -47  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-6      read=['reflex/testing.py'] steps=4 retried=None
+   -44  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -36  How does the function that checks whether rendered JavaScript code attempts to access state context objects influence th
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py', 'reflex/state.py'] steps=6 retried=None
+         oh-aoci-6      read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/state.py'] steps=10 retried=None
+   +34  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-aoci-6      read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py', 'tests/units/test_app.py'] steps=6 retried=None
+   +21  How does the routing state data structure in a test function that validates current page path updates demonstrate the St
+         oh-1           read=['reflex/istate/data.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-6      read=['reflex/istate/data.py', 'reflex/istate/manager/memory.py', 'reflex/istate/proxy.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_state.py'] steps=10 retried=None
+   +16  What is the role of the computation function returned by the derived state variable class's computation function accesso
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=5 retried=None
+         oh-aoci-6      read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=8 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+0.2 95%CI=[-3.1,+3.5] median=+0.0 win/tie/loss=23/8/17 sign-test p=0.430 | n for 80% power at this Δ ≈ 39670
+   by category: what: -1.3 [-11.5,+8.2] (n=11)  how: -0.7 [-5.6,+3.5] (n=12)  why: -1.7 [-6.3,+2.8] (n=12)  where: +4.1 [-2.3,+11.8] (n=12)
+   paired efficiency (b−a): input_tokens: +465558 [+410422,+523013] (6.84x)  peak_input_tokens: +49001 [+47746,+50147] (4.67x)  output_tokens: +842 [+644,+1029] (1.62x)  tool_calls: -4 [-5,-2] (0.63x)  wall_s: +9 [+8,+11] (1.77x)  answer_chars: +98 [-76,+300] (1.13x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'aoci_search': 33, 'aoci_get_entries': 7, '(none)': 5, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 26/15/7; hit cap: {'oh-1': 19, 'oh-aoci-7': 9}
+   -30  What is the influence of setting the component's render caching configuration attribute to a render caching configuratio
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/base.py', 'reflex/components/radix/primitives/dialog.py', 'reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/constants/compiler.py'] steps=10 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -25  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -23  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-aoci-7      read=['reflex/vars/base.py'] steps=10 retried=None
+   +39  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-7      read=['reflex/components/radix/themes/layout/list.py'] steps=3 retried=None
+   +18  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-aoci-7      read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=4 retried=None
+   +17  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-aoci-7      read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py'] steps=7 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=-3.8 95%CI=[-8.0,+0.4] median=+0.0 win/tie/loss=22/3/23 sign-test p=1.000 | n for 80% power at this Δ ≈ 122
+   by category: what: -3.1 [-13.0,+5.8] (n=11)  how: -5.2 [-13.9,+2.1] (n=12)  why: -5.2 [-11.4,+0.5] (n=12)  where: -2.1 [-12.3,+8.3] (n=12)
+   paired efficiency (b−a): input_tokens: +424709 [+366767,+483417] (6.33x)  peak_input_tokens: +48264 [+47007,+49482] (4.62x)  output_tokens: +692 [+498,+888] (1.51x)  tool_calls: -5 [-7,-3] (0.52x)  wall_s: +8 [+6,+9] (1.65x)  answer_chars: +90 [-97,+310] (1.12x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_search': 27, '(none)': 12, 'aoci_get_entries': 6, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 27/15/6; hit cap: {'oh-1': 19, 'oh-aoci-8': 8}
+   -40  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -40  Where are the event handler type annotations for the value change, focus gain, and focus loss events of the numeric inpu
+         oh-1           read=['reflex/components/el/elements/forms.py'] steps=5 retried=None
+         oh-aoci-8      read=['reflex/components/radix/themes/components/text_field.py'] steps=3 retried=None
+   -35  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +39  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-8      read=['reflex/components/radix/themes/layout/list.py'] steps=3 retried=None
+   +21  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-aoci-8      read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=7 retried=None
+   +16  Where is the function that parses argument specifications called to build the argument list for an event handler in the 
+         oh-1           read=['reflex/components/component.py', 'reflex/event.py'] steps=3 retried=None
+         oh-aoci-8      read=['reflex/event.py'] steps=3 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=-0.5 95%CI=[-4.5,+3.6] median=+0.0 win/tie/loss=23/4/21 sign-test p=0.880 | n for 80% power at this Δ ≈ 7175
+   by category: what: -0.8 [-9.7,+7.9] (n=11)  how: -4.4 [-15.8,+5.5] (n=12)  why: -0.2 [-5.0,+4.3] (n=12)  where: +3.5 [-3.7,+12.0] (n=12)
+   paired efficiency (b−a): input_tokens: +442056 [+384217,+501030] (6.54x)  peak_input_tokens: +48977 [+47488,+50430] (4.67x)  output_tokens: +764 [+552,+963] (1.56x)  tool_calls: -4 [-6,-3] (0.59x)  wall_s: +8 [+7,+10] (1.72x)  answer_chars: +147 [-65,+353] (1.19x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'aoci_search': 30, '(none)': 8, 'aoci_get_entries': 8, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 24/14/10; hit cap: {'oh-1': 19, 'oh-aoci-9': 9}
+   -42  How does the function that checks whether rendered JavaScript code attempts to access state context objects influence th
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py', 'reflex/state.py'] steps=6 retried=None
+         oh-aoci-9      read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py'] steps=10 retried=None
+   -35  How can the import handling and rendering pipeline for a component class that prevents server-side rendering be designed
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/utils/imports.py'] steps=8 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -26  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +37  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-aoci-9      read=['reflex/components/radix/themes/layout/list.py'] steps=3 retried=None
+   +25  Where does a component variable propagate its value through conditional component branches such as conditional rendering
+         oh-1           read=['reflex/components/component.py', 'reflex/components/core/cond.py', 'reflex/components/tags/cond_tag.py', 'reflex/vars/number.py'] steps=10 retried=None
+         oh-aoci-9      read=['reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/components/component.py', 'reflex/components/tags/cond_tag.py'] steps=10 retried=None
+   +22  How does the routing state data structure in a test function that validates current page path updates demonstrate the St
+         oh-1           read=['reflex/istate/data.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-aoci-9      read=['reflex/app.py', 'reflex/istate/data.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/test_state.py'] steps=10 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=-0.9 95%CI=[-3.9,+2.2] median=+0.0 win/tie/loss=16/9/23 sign-test p=0.337 | n for 80% power at this Δ ≈ 1100
+   by category: what: +5.5 [-0.5,+11.7] (n=11)  how: -3.0 [-7.6,+0.9] (n=12)  why: -1.3 [-7.5,+4.4] (n=12)  where: -4.4 [-10.9,+3.0] (n=12)
+   paired efficiency (b−a): input_tokens: +22065 [+10998,+33092] (1.28x)  peak_input_tokens: +5339 [+4412,+6300] (1.40x)  output_tokens: -197 [-342,-54] (0.86x)  tool_calls: -2 [-3,-1] (0.79x)  wall_s: -0 [-2,+1] (0.97x)  answer_chars: +188 [-1,+415] (1.24x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 21/14/13; hit cap: {'oh-1': 19, 'oh-cg-1': 8}
+   -26  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-1        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   -22  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-cg-1        read=['reflex/event.py', 'reflex/utils/types.py'] steps=7 retried=None
+   -16  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-cg-1        read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+   +28  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   +21  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-cg-1        read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=5 retried=None
+   +17  What is the propagation of a log display wrapper function's reliance on a log streaming generator to other components co
+         oh-1           read=['reflex/utils/console.py', 'reflex/utils/js_runtimes.py', 'reflex/utils/processes.py'] steps=8 retried=None
+         oh-cg-1        read=['reflex/utils/js_runtimes.py', 'reflex/utils/processes.py'] steps=8 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=-2.1 95%CI=[-4.9,+0.7] median=+0.0 win/tie/loss=18/7/23 sign-test p=0.533 | n for 80% power at this Δ ≈ 176
+   by category: what: +0.6 [-1.6,+3.1] (n=11)  how: -2.1 [-5.8,+1.5] (n=12)  why: -5.2 [-12.6,+0.3] (n=12)  where: -1.8 [-8.4,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: +31460 [+16522,+47239] (1.39x)  peak_input_tokens: +5788 [+4419,+7270] (1.43x)  output_tokens: -183 [-338,-27] (0.87x)  tool_calls: -2 [-3,-1] (0.81x)  wall_s: -0 [-1,+1] (0.98x)  answer_chars: +76 [-68,+235] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 21/14/13; hit cap: {'oh-1': 19, 'oh-cg-10': 15}
+   -38  Why was the component that wraps controls for closing the popover implemented as a distinct instance of the base class f
+         oh-1           read=['reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/components/radix/themes/components/popover.py'] steps=8 retried=None
+         oh-cg-10       read=[] steps=3 retried=None
+   -18  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-cg-10       read=['reflex/components/component.py', 'reflex/event.py', 'reflex/utils/types.py'] steps=10 retried=None
+   -17  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-10       read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   +34  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   +16  Where is the logic that registers dependencies for computed state properties defined?
+         oh-1           read=['reflex/state.py'] steps=2 retried=None
+         oh-cg-10       read=['reflex/vars/base.py'] steps=3 retried=None
+   +9  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-cg-10       read=['reflex/app.py'] steps=7 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.9 95%CI=[-2.2,+4.1] median=-0.5 win/tie/loss=17/7/24 sign-test p=0.349 | n for 80% power at this Δ ≈ 1123
+   by category: what: +4.3 [-2.3,+11.0] (n=11)  how: +1.3 [-3.2,+5.9] (n=12)  why: -0.2 [-2.8,+2.7] (n=12)  where: -1.6 [-10.6,+8.5] (n=12)
+   paired efficiency (b−a): input_tokens: +31920 [+19183,+44867] (1.40x)  peak_input_tokens: +5705 [+4640,+6774] (1.43x)  output_tokens: -64 [-201,+64] (0.95x)  tool_calls: -1 [-3,-0] (0.86x)  wall_s: -0 [-1,+1] (0.99x)  answer_chars: +111 [-23,+257] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 19/18/11; hit cap: {'oh-1': 19, 'oh-cg-2': 13}
+   -29  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-2        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   -16  What is the role of the string representation method in the base component class in supporting the architectural separat
+         oh-1           read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=5 retried=None
+         oh-cg-2        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=5 retried=None
+   -16  Where is the code that merges variable metadata when two style dictionary objects are combined?
+         oh-1           read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+         oh-cg-2        read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+   +37  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   +23  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-cg-2        read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=10 retried=None
+   +20  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-cg-2        read=['reflex/app.py', 'reflex/compiler/compiler.py'] steps=8 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=-0.9 95%CI=[-3.9,+2.0] median=+0.0 win/tie/loss=23/3/22 sign-test p=1.000 | n for 80% power at this Δ ≈ 1054
+   by category: what: +2.0 [-4.6,+8.1] (n=11)  how: +0.2 [-4.5,+5.2] (n=12)  why: -5.8 [-12.4,+0.1] (n=12)  where: -0.2 [-5.8,+6.5] (n=12)
+   paired efficiency (b−a): input_tokens: +25271 [+11647,+39679] (1.32x)  peak_input_tokens: +5307 [+4122,+6577] (1.40x)  output_tokens: -193 [-336,-58] (0.86x)  tool_calls: -2 [-3,-1] (0.80x)  wall_s: -1 [-2,+0] (0.94x)  answer_chars: +181 [+18,+356] (1.23x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 22/15/11; hit cap: {'oh-1': 19, 'oh-cg-3': 12}
+   -30  Why was the component that wraps controls for closing the popover implemented as a distinct instance of the base class f
+         oh-1           read=['reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/components/radix/themes/components/popover.py'] steps=8 retried=None
+         oh-cg-3        read=[] steps=3 retried=None
+   -21  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-cg-3        read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/memory.py', 'tests/units/conftest.py', 'tests/units/test_state.py'] steps=10 retried=None
+   -18  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-cg-3        read=['reflex/event.py', 'reflex/utils/types.py'] steps=7 retried=None
+   +28  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   +20  How does the placeholder element component integrate with Reflex's rendering engine to ensure correct placeholder projec
+         oh-1           read=['reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=10 retried=None
+         oh-cg-3        read=['reflex/components/component.py', 'reflex/components/el/elements/base.py', 'reflex/components/el/elements/other.py'] steps=8 retried=None
+   +16  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-cg-3        read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=8 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+1.0 95%CI=[-1.8,+3.9] median=+0.0 win/tie/loss=21/5/22 sign-test p=1.000 | n for 80% power at this Δ ≈ 749
+   by category: what: +4.2 [-1.5,+10.3] (n=11)  how: +1.3 [-1.4,+3.8] (n=12)  why: -2.5 [-7.2,+2.7] (n=12)  where: +1.2 [-6.0,+9.6] (n=12)
+   paired efficiency (b−a): input_tokens: +23394 [+9020,+38503] (1.29x)  peak_input_tokens: +5523 [+4193,+6979] (1.41x)  output_tokens: -212 [-365,-58] (0.84x)  tool_calls: -2 [-3,-1] (0.80x)  wall_s: +0 [-2,+3] (1.01x)  answer_chars: +120 [-12,+256] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 21/16/11; hit cap: {'oh-1': 19, 'oh-cg-4': 13}
+   -17  Where is the subsequent control branch determined when a state validation error is raised?
+         oh-1           read=['reflex/app.py', 'reflex/state.py'] steps=10 retried=None
+         oh-cg-4        read=[] steps=10 retried=None
+   -17  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-cg-4        read=['reflex/event.py', 'reflex/utils/types.py', 'reflex/vars/base.py'] steps=10 retried=None
+   -15  Where is the code that merges variable metadata when two style dictionary objects are combined?
+         oh-1           read=['reflex/style.py', 'reflex/vars/base.py'] steps=3 retried=None
+         oh-cg-4        read=['reflex/style.py'] steps=3 retried=None
+   +34  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-4        read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=4 retried=None
+   +21  What is the effect of setting the boundary collision prevention setting to true with a non-zero collision detection buff
+         oh-1           read=['dropdown_menu.py', 'reflex/components/radix/themes/components/dropdown_menu.py', 'reflex/components/radix/themes/components/tooltip.py'] steps=7 retried=None
+         oh-cg-4        read=['reflex/components/radix/themes/components/dropdown_menu.py'] steps=10 retried=None
+   +20  Where is the logic that registers dependencies for computed state properties defined?
+         oh-1           read=['reflex/state.py'] steps=2 retried=None
+         oh-cg-4        read=['reflex/vars/base.py'] steps=3 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=-1.5 95%CI=[-4.5,+1.4] median=+0.0 win/tie/loss=19/6/23 sign-test p=0.644 | n for 80% power at this Δ ≈ 386
+   by category: what: -0.5 [-6.8,+5.5] (n=11)  how: -1.0 [-5.1,+2.6] (n=12)  why: -2.1 [-8.1,+3.9] (n=12)  where: -2.0 [-8.7,+5.9] (n=12)
+   paired efficiency (b−a): input_tokens: +22244 [+7249,+37001] (1.28x)  peak_input_tokens: +5698 [+4368,+7027] (1.43x)  output_tokens: -204 [-373,-40] (0.85x)  tool_calls: -2 [-4,-1] (0.78x)  wall_s: -1 [-2,+0] (0.92x)  answer_chars: +123 [-30,+297] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 22/16/10; hit cap: {'oh-1': 19, 'oh-cg-5': 10}
+   -21  What is the role of the top-level state class as a subclass of the foundational state class in coordinating sub-state re
+         oh-1           read=['reflex/istate/manager/__init__.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/istate/manager/redis.py', 'reflex/state.py'] steps=10 retried=None
+         oh-cg-5        read=['reflex/state.py'] steps=3 retried=None
+   -20  Why does the use of a callable protocol for event argument specifications with a variadic callable signature returning a
+         oh-1           read=['reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=10 retried=None
+         oh-cg-5        read=['reflex/components/component.py', 'reflex/event.py', 'reflex/utils/format.py', 'reflex/utils/types.py'] steps=9 retried=None
+   -19  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-5        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   +28  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +17  Why is the application instance and its module encapsulated in a structured container within the framework?
+         oh-1           read=['reflex/utils/prerequisites.py'] steps=5 retried=None
+         oh-cg-5        read=['reflex/app.py'] steps=6 retried=None
+   +16  Where is the logic that registers dependencies for computed state properties defined?
+         oh-1           read=['reflex/state.py'] steps=2 retried=None
+         oh-cg-5        read=['reflex/state.py', 'reflex/vars/base.py'] steps=3 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=-1.4 95%CI=[-4.6,+1.7] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 478
+   by category: what: +3.4 [-2.9,+9.6] (n=11)  how: -1.8 [-7.4,+3.3] (n=12)  why: -1.6 [-5.8,+2.1] (n=12)  where: -5.7 [-13.4,+3.1] (n=12)
+   paired efficiency (b−a): input_tokens: +14635 [+2839,+26970] (1.18x)  peak_input_tokens: +5171 [+4000,+6498] (1.39x)  output_tokens: -286 [-427,-151] (0.79x)  tool_calls: -3 [-4,-2] (0.75x)  wall_s: -2 [-3,-1] (0.86x)  answer_chars: +26 [-97,+164] (1.03x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 25/14/9; hit cap: {'oh-1': 19, 'oh-cg-6': 10}
+   -29  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-6        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   -23  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-cg-6        read=['reflex/state.py', 'reflex/vars/base.py'] steps=10 retried=None
+   -22  Where does a component variable propagate its value through conditional component branches such as conditional rendering
+         oh-1           read=['reflex/components/component.py', 'reflex/components/core/cond.py', 'reflex/components/tags/cond_tag.py', 'reflex/vars/number.py'] steps=10 retried=None
+         oh-cg-6        read=['reflex/compiler/compiler.py', 'reflex/components/component.py', 'reflex/components/tags/cond_tag.py', 'reflex/state.py'] steps=10 retried=None
+   +28  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   +20  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-cg-6        read=['reflex/app.py'] steps=6 retried=None
+   +15  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-cg-6        read=[] steps=3 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=-0.4 95%CI=[-3.4,+2.6] median=+0.5 win/tie/loss=24/2/22 sign-test p=0.883 | n for 80% power at this Δ ≈ 5558
+   by category: what: +2.5 [-3.2,+8.2] (n=11)  how: -0.7 [-5.4,+3.9] (n=12)  why: -4.0 [-10.2,+2.3] (n=12)  where: +0.6 [-6.1,+7.8] (n=12)
+   paired efficiency (b−a): input_tokens: +23215 [+10090,+37217] (1.29x)  peak_input_tokens: +5920 [+4751,+7149] (1.44x)  output_tokens: -217 [-374,-62] (0.84x)  tool_calls: -2 [-4,-1] (0.78x)  wall_s: -1 [-2,+0] (0.92x)  answer_chars: +123 [-10,+258] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 24/11/13; hit cap: {'oh-1': 19, 'oh-cg-7': 8}
+   -26  Why is the application instance and its module encapsulated in a structured container within the framework?
+         oh-1           read=['reflex/utils/prerequisites.py'] steps=5 retried=None
+         oh-cg-7        read=['reflex/app.py', 'reflex/testing.py'] steps=5 retried=None
+   -22  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-7        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   -18  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-cg-7        read=['.github/workflows/integration_app_harness.yml', 'reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py'] steps=10 retried=None
+   +28  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-7        read=[] steps=1 retried=None
+   +16  Why does the dynamic resolution of the icon identifier parameter in the component creation method of the icon rendering 
+         oh-1           read=['reflex/components/lucide/__init__.py', 'reflex/components/lucide/icon.py', 'reflex/vars/base.py', 'tests/units/components/lucide/test_icon.py'] steps=8 retried=None
+         oh-cg-7        read=['reflex/components/lucide/icon.py'] steps=2 retried=None
+   +16  Where is the logic that registers dependencies for computed state properties defined?
+         oh-1           read=['reflex/state.py'] steps=2 retried=None
+         oh-cg-7        read=['reflex/vars/base.py'] steps=4 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=-0.2 95%CI=[-3.7,+3.2] median=+0.5 win/tie/loss=24/3/21 sign-test p=0.766 | n for 80% power at this Δ ≈ 32630
+   by category: what: -0.4 [-6.7,+6.2] (n=11)  how: -0.9 [-4.8,+2.5] (n=12)  why: -1.3 [-9.2,+3.8] (n=12)  where: +1.6 [-8.0,+11.6] (n=12)
+   paired efficiency (b−a): input_tokens: +26372 [+11843,+41124] (1.33x)  peak_input_tokens: +5625 [+4536,+6769] (1.42x)  output_tokens: -141 [-305,+23] (0.90x)  tool_calls: -2 [-3,-1] (0.84x)  wall_s: -1 [-2,+1] (0.95x)  answer_chars: +57 [-100,+209] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 20/17/11; hit cap: {'oh-1': 19, 'oh-cg-8': 12}
+   -38  Why does increasing the backend worker process count in the production testing harness affect response latency when serv
+         oh-1           read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_exception_handlers.py'] steps=10 retried=None
+         oh-cg-8        read=['reflex/app.py', 'reflex/testing.py', 'reflex/utils/processes.py', 'tests/integration/test_media.py'] steps=10 retried=None
+   -29  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-8        read=['reflex/compiler/compiler.py', 'reflex/components/component.py'] steps=4 retried=None
+   -20  What is the effect of assigning a custom client state persistence manager to the test application fixture on the framewo
+         oh-1           read=['conftest.py', 'reflex/app.py', 'reflex/istate/manager/__init__.py', 'reflex/istate/manager/base.py', 'reflex/istate/manager/disk.py', 'reflex/istate/manager/memory.py', 'reflex/state.py', 'tests/units/conftest.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+         oh-cg-8        read=['conftest.py', 'reflex/app.py', 'reflex/testing.py', 'tests/units/test_app.py', 'tests/units/test_state.py'] steps=10 retried=None
+   +40  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   +17  Where is the logic that registers dependencies for computed state properties defined?
+         oh-1           read=['reflex/state.py'] steps=2 retried=None
+         oh-cg-8        read=['reflex/vars/base.py'] steps=3 retried=None
+   +16  What is the role of the computation function returned by the derived state variable class's computation function accesso
+         oh-1           read=['reflex/state.py', 'reflex/vars/base.py', 'reflex/vars/dep_tracking.py'] steps=5 retried=None
+         oh-cg-8        read=['reflex/state.py', 'reflex/vars/base.py'] steps=6 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=-1.3 95%CI=[-5.2,+2.5] median=+0.0 win/tie/loss=23/3/22 sign-test p=1.000 | n for 80% power at this Δ ≈ 828
+   by category: what: +1.9 [-3.6,+8.1] (n=11)  how: -0.8 [-5.4,+3.5] (n=12)  why: -3.4 [-13.2,+4.1] (n=12)  where: -3.0 [-13.0,+7.4] (n=12)
+   paired efficiency (b−a): input_tokens: +17862 [+7511,+28757] (1.22x)  peak_input_tokens: +4699 [+3741,+5786] (1.35x)  output_tokens: -231 [-368,-90] (0.83x)  tool_calls: -2 [-4,-1] (0.77x)  wall_s: -1 [-2,-0] (0.89x)  answer_chars: +118 [-34,+281] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 23/14/11; hit cap: {'oh-1': 19, 'oh-cg-9': 10}
+   -49  Why was the component that wraps controls for closing the popover implemented as a distinct instance of the base class f
+         oh-1           read=['reflex/components/radix/themes/base.py', 'reflex/components/radix/themes/components/dialog.py', 'reflex/components/radix/themes/components/popover.py'] steps=8 retried=None
+         oh-cg-9        read=['reflex/components/component.py', 'reflex/constants/compiler.py'] steps=4 retried=None
+   -38  Where in the Reflex codebase is the style dictionary returned by a progress indicator root component's styling method ul
+         oh-1           read=['reflex/components/component.py', 'reflex/components/radix/primitives/progress.py', 'reflex/components/radix/themes/components/progress.py'] steps=7 retried=None
+         oh-cg-9        read=[] steps=4 retried=None
+   -16  How can the method that creates a copy without metadata be redesigned to produce a thread-safe variable representation c
+         oh-1           read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+         oh-cg-9        read=['reflex/components/plotly/plotly.py', 'reflex/vars/base.py'] steps=10 retried=None
+   +41  Where does invoking a component namespace class as a callable redirect execution to the factory method for creating list
+         oh-1           read=['reflex/components/component.py'] steps=10 retried=None
+         oh-cg-9        read=['reflex/components/component.py', 'reflex/components/radix/themes/layout/list.py'] steps=5 retried=None
+   +23  What modules or components in the compiler rely on the string output of the function that generates the document root co
+         oh-1           read=['reflex/app.py', 'reflex/compiler/compiler.py', 'reflex/compiler/templates.py', 'reflex/plugins/base.py'] steps=10 retried=None
+         oh-cg-9        read=['reflex/app.py', 'reflex/compiler/templates.py', 'reflex/compiler/utils.py'] steps=8 retried=None
+   +14  What effect would altering the base classes of the exception class raised when match cases have inconsistent return type
+         oh-1           read=['reflex/components/core/match.py', 'reflex/utils/exceptions.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=2 retried=None
+
+wrote runs/sweqa-r5-reflex-k10/analysis.json

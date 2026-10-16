@@ -1,0 +1,291 @@
+===== astropy (runs/sweqa-r5-astropy-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 0a041d38fbd0 == official pin 0a041d38fb
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  discard oh-7#38 re-answered cleanly
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '2395142df5074e8d', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': 'dffae335bb2a57e0'}
+PASS  oh mean 76.15 == runlevel_stats 76.15208333333334
+PASS  oh-aoci mean 77.35 == runlevel_stats 77.35
+PASS  oh-cg mean 76.61 == runlevel_stats 76.60625
+      H1 oh-aoci − oh = +1.20  exact p=0.0923
+      H2 oh-aoci − oh-cg = +0.74  exact p=0.2595
+      H3 oh-cg − oh = +0.45  exact p=0.3252
+===== conan (runs/sweqa-r5-conan-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 52f43d98fe44 == official pin 52f43d98fe
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  discard oh-cg-10#33 re-answered cleanly
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'd8a6436903a84ae6', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '23c41accd028c3a5'}
+PASS  oh mean 69.21 == runlevel_stats 69.21041666666666
+PASS  oh-aoci mean 70.76 == runlevel_stats 70.76458333333333
+PASS  oh-cg mean 70.08 == runlevel_stats 70.08125
+      H1 oh-aoci − oh = +1.55  exact p=0.0079
+      H2 oh-aoci − oh-cg = +0.68  exact p=0.2456
+      H3 oh-cg − oh = +0.87  exact p=0.0466
+===== django (runs/sweqa-r5-django-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 14fc2e97036f == official pin 14fc2e9703
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+      superseded passes kept aside (not in live files): 1 files, 3 records
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '93054b3e13d4014c', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '2760ca4bcdcdcb5f'}
+PASS  oh mean 77.69 == runlevel_stats 77.6875
+PASS  oh-aoci mean 80.69 == runlevel_stats 80.69375
+PASS  oh-cg mean 78.29 == runlevel_stats 78.28541666666666
+      H1 oh-aoci − oh = +3.01  exact p=0.0000
+      H2 oh-aoci − oh-cg = +2.41  exact p=0.0001
+      H3 oh-cg − oh = +0.60  exact p=0.1299
+===== flask (runs/sweqa-r5-flask-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 85c5d93cbd04 == official pin 85c5d93cbd
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '98c57b1696d000d3', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '30a0971348b2a80b'}
+PASS  oh mean 74.70 == runlevel_stats 74.7
+PASS  oh-aoci mean 75.66 == runlevel_stats 75.65625
+PASS  oh-cg mean 76.24 == runlevel_stats 76.2375
+      H1 oh-aoci − oh = +0.96  exact p=0.0575
+      H2 oh-aoci − oh-cg = -0.58  exact p=0.2885
+      H3 oh-cg − oh = +1.54  exact p=0.0007
+===== matplotlib (runs/sweqa-r5-matplotlib-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit a5e1f6086e92 == official pin a5e1f6086e
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+FAIL  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 479/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '7b0743876c8c82dc', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '937657a2117c90b9'}
+PASS  oh mean 81.25 == runlevel_stats 81.25
+PASS  oh-aoci mean 83.72 == runlevel_stats 83.72083333333333
+PASS  oh-cg mean 81.92 == runlevel_stats 81.91875
+      H1 oh-aoci − oh = +2.47  exact p=0.0001
+      H2 oh-aoci − oh-cg = +1.80  exact p=0.0002
+      H3 oh-cg − oh = +0.67  exact p=0.0077
+===== pylint (runs/sweqa-r5-pylint-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 44740e5e5cdd == official pin 44740e5e5c
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'e6bb598bcb890364', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '5e05bdba95b50bd7'}
+PASS  oh mean 67.59 == runlevel_stats 67.58541666666667
+PASS  oh-aoci mean 65.46 == runlevel_stats 65.46041666666667
+PASS  oh-cg mean 69.38 == runlevel_stats 69.37916666666666
+      H1 oh-aoci − oh = -2.12  exact p=0.0095
+      H2 oh-aoci − oh-cg = -3.92  exact p=0.0000
+      H3 oh-cg − oh = +1.79  exact p=0.0141
+===== pytest (runs/sweqa-r5-pytest-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 5989efe3efec == official pin 5989efe3ef
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'e9d5e380a0603846', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': 'c9e12c6267f2d165'}
+PASS  oh mean 76.83 == runlevel_stats 76.82708333333333
+PASS  oh-aoci mean 81.32 == runlevel_stats 81.31875
+PASS  oh-cg mean 79.26 == runlevel_stats 79.25625
+      H1 oh-aoci − oh = +4.49  exact p=0.0000
+      H2 oh-aoci − oh-cg = +2.06  exact p=0.0000
+      H3 oh-cg − oh = +2.43  exact p=0.0000
+===== reflex (runs/sweqa-r5-reflex-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit fe0f946dc0c2 == official pin fe0f946dc0
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'a714846964b0101b', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '3b8fad065a854bdb'}
+PASS  oh mean 79.03 == runlevel_stats 79.02708333333334
+PASS  oh-aoci mean 78.59 == runlevel_stats 78.58958333333334
+PASS  oh-cg mean 79.41 == runlevel_stats 79.40625
+      H1 oh-aoci − oh = -0.44  exact p=0.4404
+      H2 oh-aoci − oh-cg = -0.82  exact p=0.1537
+      H3 oh-cg − oh = +0.38  exact p=0.4335
+===== requests (runs/sweqa-r5-requests-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 46e939b5525d == official pin 46e939b552
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '54f53d605273c747', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': 'bf8fd9592664f230'}
+PASS  oh mean 81.87 == runlevel_stats 81.86666666666667
+PASS  oh-aoci mean 79.97 == runlevel_stats 79.96666666666667
+PASS  oh-cg mean 83.03 == runlevel_stats 83.03125
+      H1 oh-aoci − oh = -1.90  exact p=0.0002
+      H2 oh-aoci − oh-cg = -3.06  exact p=0.0000
+      H3 oh-cg − oh = +1.16  exact p=0.0009
+===== scikit-learn (runs/sweqa-r5-scikit-learn-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit adb1ae76d798 == official pin adb1ae76d7
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+FAIL  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 478/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '97f657e328bdfdd5', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '928b9f482288b30d'}
+PASS  oh mean 79.73 == runlevel_stats 79.73333333333333
+PASS  oh-aoci mean 82.11 == runlevel_stats 82.10625
+PASS  oh-cg mean 81.44 == runlevel_stats 81.44166666666666
+      H1 oh-aoci − oh = +2.37  exact p=0.0000
+      H2 oh-aoci − oh-cg = +0.66  exact p=0.0765
+      H3 oh-cg − oh = +1.71  exact p=0.0001
+===== sphinx (runs/sweqa-r5-sphinx-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 6c9e3209c4eb == official pin 6c9e3209c4
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '0c06ce87bcfc7053', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '3e3f13b3174b64e3'}
+PASS  oh mean 72.81 == runlevel_stats 72.8125
+PASS  oh-aoci mean 76.99 == runlevel_stats 76.98958333333333
+PASS  oh-cg mean 74.77 == runlevel_stats 74.76666666666667
+      H1 oh-aoci − oh = +4.18  exact p=0.0000
+      H2 oh-aoci − oh-cg = +2.22  exact p=0.0003
+      H3 oh-cg − oh = +1.95  exact p=0.0002
+===== sqlfluff (runs/sweqa-r5-sqlfluff-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit db9801b7eb7f == official pin db9801b7eb
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'afef0b7c3b12a74f', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': 'e697972d487cbf3c'}
+PASS  oh mean 74.39 == runlevel_stats 74.38958333333333
+PASS  oh-aoci mean 76.92 == runlevel_stats 76.92291666666667
+PASS  oh-cg mean 75.13 == runlevel_stats 75.12916666666666
+      H1 oh-aoci − oh = +2.53  exact p=0.0004
+      H2 oh-aoci − oh-cg = +1.79  exact p=0.0028
+      H3 oh-cg − oh = +0.74  exact p=0.2228
+===== streamlink (runs/sweqa-r5-streamlink-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit ab1f36560005 == official pin ab1f365600
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'a60a2c9f04c81969', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': '7a9e93c07b690dc7'}
+PASS  oh mean 74.78 == runlevel_stats 74.78125
+PASS  oh-aoci mean 74.28 == runlevel_stats 74.28125
+PASS  oh-cg mean 75.34 == runlevel_stats 75.33541666666667
+      H1 oh-aoci − oh = -0.50  exact p=0.5053
+      H2 oh-aoci − oh-cg = -1.05  exact p=0.1587
+      H3 oh-cg − oh = +0.55  exact p=0.3622
+===== sympy (runs/sweqa-r5-sympy-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 3c817ed8ab55 == official pin 3c817ed8ab
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+FAIL  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 479/480
+PASS  acceptance gate (last run): hard failures []
+      superseded passes kept aside (not in live files): 6 files, 288 records
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': 'a7ace56f29eddc3a', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': 'ceacc4cc124442af'}
+PASS  oh mean 69.64 == runlevel_stats 69.64375
+PASS  oh-aoci mean 70.41 == runlevel_stats 70.40625
+PASS  oh-cg mean 71.22 == runlevel_stats 71.22291666666666
+      H1 oh-aoci − oh = +0.76  exact p=0.4481
+      H2 oh-aoci − oh-cg = -0.82  exact p=0.4399
+      H3 oh-cg − oh = +1.58  exact p=0.0221
+===== xarray (runs/sweqa-r5-xarray-k10)
+PASS  question bank: 48 rows, 48 distinct
+PASS  workspace commit 40119bf35c53 == official pin 40119bf35c
+PASS  3 arms × 10 draws: {'oh': 10, 'oh-aoci': 10, 'oh-cg': 10}
+PASS  error records among last-per-question: 0
+PASS  empty final answers: 0
+PASS  answer models: ['deepseek-flash']
+PASS  cognition turn complete (rules, overview to completed, attestation) on every oh-aoci record: 480/480
+PASS  acceptance gate (last run): hard failures []
+PASS  judge model ['claude-sonnet-4-5'] votes_requested [5]
+PASS  one rubric across passes: {'750916e297e28a10'}
+PASS  judged rows with 5 votes: 1440/1440 (incomplete 0)
+PASS  run_dir volumes == manifest index volumes {'aoci.txt': '88f3a9e4a1050b1f', 'aoci.meta.txt': 'ebafbe54981dfb23', 'aoci.code.txt': 'db61a2f2709a757f'}
+PASS  oh mean 83.38 == runlevel_stats 83.38125000000001
+PASS  oh-aoci mean 85.28 == runlevel_stats 85.27708333333334
+PASS  oh-cg mean 84.07 == runlevel_stats 84.06666666666666
+      H1 oh-aoci − oh = +1.90  exact p=0.0003
+      H2 oh-aoci − oh-cg = +1.21  exact p=0.0055
+      H3 oh-cg − oh = +0.69  exact p=0.0160
+
+3 FAIL(S)

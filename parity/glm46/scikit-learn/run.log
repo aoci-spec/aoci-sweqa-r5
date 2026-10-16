@@ -1,0 +1,159 @@
+=== run.py specs/sweqa-r5p-glm46-scikit-learn-k1.json at 2026-10-15T18:50:53Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name scikit-learn --questions benchmarks/swe-qa/scikit-learn.jsonl --condition oh --out runs/sweqa-r5p-glm46-scikit-learn-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/scikit-learn --profile openrouter-glm46-novita --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=openrouter-glm46-novita model=z-ai/glm-4.6 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=adb1ae76d798
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[1/48] 30.5s steps=2 calls=2 files=1+0m map=0/0c in=21349 out=726 status=finished   
+[2/48] 35.7s steps=2 calls=2 files=1+0m map=0/0c in=23825 out=958 status=finished   
+[3/48] 40.1s steps=2 calls=2 files=1+0m map=0/0c in=22954 out=1153 status=finished   
+[4/48] 49.4s steps=3 calls=3 files=1+0m map=0/0c in=37312 out=1412 status=finished   
+[10/16/26 02:52:04] ERROR    Tool 'find                             agent.py:380
+                             /root/.cache/eval-workspaces/scikit-le             
+                             arn-oh-2/repo -path                                
+                             "*/neighbors/_nearest_centroid.py" -o              
+                             -path                                              
+                             "*/neighbors/nearest_centroid.py"                  
+                             2>/dev/null</arg_value>' not found.                
+                             Available: ['terminal', 'file_editor',             
+                             'task_tracker', 'finish', 'think']                 
+[5/48] 68.0s steps=7 calls=7 files=2+0m map=0/0c in=78495 out=1290 status=finished   
+[6/48] 72.9s steps=10 calls=11 files=3+0m map=0/0c in=85868 out=1287 status=finished forced   
+[7/48] 76.3s steps=10 calls=10 files=1+0m map=0/0c in=104410 out=1142 status=finished forced   
+[8/48] 53.6s steps=5 calls=5 files=2+0m map=0/0c in=41175 out=1035 status=finished   
+[10/16/26 02:52:31] ERROR    PTY reader thread error: subprocess_terminal.py:227
+                             [Errno 9] Bad file                                 
+                             descriptor                                         
+                             ╭─ Traceback (most rec─╮                           
+                             │ /root/aoci-eval/.ven │                           
+                             │ v-oh/lib/python3.14/ │                           
+                             │ site-packages/openha │                           
+                             │ nds/tools/terminal/t │                           
+                             │ erminal/subprocess_t │                           
+                             │ erminal.py:207 in    │                           
+                             │ _read_output_continu │                           
+                             │ ously_pty            │                           
+                             │                      │                           
+                             │   204 │   │   │   │  │                           
+                             │   205 │   │   │   │  │                           
+                             │   206 │   │   │   │  │                           
+                             │ ❱ 207 │   │   │   │  │                           
+                             │   208 │   │   │   │  │                           
+                             │   209 │   │   │   │  │                           
+                             │   210                │                           
+                             ╰──────────────────────╯                           
+                             OSError: [Errno 9] Bad                             
+                             file descriptor                                    
+[9/48] 85.3s steps=10 calls=10 files=2+0m map=0/0c in=86297 out=1799 status=finished forced   
+[10/48] 90.4s steps=6 calls=6 files=2+0m map=0/0c in=76221 out=2290 status=finished   
+[11/48] 96.0s steps=10 calls=10 files=2+0m map=0/0c in=118255 out=1880 status=finished forced   
+[12/48] 99.9s steps=10 calls=10 files=3+0m map=0/0c in=99627 out=2192 status=finished forced   
+[13/48] 62.9s steps=5 calls=5 files=1+0m map=0/0c in=65774 out=1371 status=finished   
+[14/48] 104.3s steps=10 calls=10 files=4+0m map=0/0c in=167639 out=1859 status=finished forced   
+[15/48] 110.8s steps=10 calls=13 files=3+0m map=0/0c in=197551 out=2256 status=finished forced   
+[16/48] 64.2s steps=5 calls=5 files=2+0m map=0/0c in=51765 out=1544 status=finished   
+[17/48] 115.2s steps=10 calls=10 files=2+0m map=0/0c in=161596 out=2661 status=finished forced   
+[18/48] 119.4s steps=5 calls=5 files=1+0m map=0/0c in=63729 out=3791 status=finished   
+[19/48] 36.6s steps=2 calls=2 files=1+0m map=0/0c in=24404 out=825 status=finished   
+[20/48] 49.8s steps=4 calls=6 files=3+0m map=0/0c in=61711 out=1048 status=finished   
+[21/48] 93.1s steps=10 calls=10 files=3+0m map=0/0c in=129547 out=1749 status=finished forced   
+[22/48] 139.3s steps=7 calls=7 files=1+0m map=0/0c in=75185 out=4308 status=finished   
+[23/48] 64.6s steps=6 calls=6 files=3+0m map=0/0c in=72622 out=1312 status=finished   
+[24/48] 29.6s steps=2 calls=2 files=1+0m map=0/0c in=19605 out=588 status=finished   
+[25/48] 75.5s steps=6 calls=6 files=1+0m map=0/0c in=77421 out=1905 status=finished   
+[26/48] 69.4s steps=5 calls=5 files=1+0m map=0/0c in=64999 out=1604 status=finished   
+[27/48] 27.1s steps=2 calls=2 files=1+0m map=0/0c in=23450 out=616 status=finished   
+[28/48] 111.5s steps=10 calls=10 files=5+0m map=0/0c in=144755 out=2304 status=finished forced   
+[29/48] 84.3s steps=10 calls=10 files=3+0m map=0/0c in=90717 out=1381 status=finished forced   
+[30/48] 77.2s steps=6 calls=6 files=1+0m map=0/0c in=87235 out=1897 status=finished   
+[31/48] 72.7s steps=8 calls=8 files=3+0m map=0/0c in=69486 out=1303 status=finished   
+[32/48] 104.2s steps=10 calls=10 files=1+0m map=0/0c in=103032 out=2158 status=finished forced   
+[33/48] 118.8s steps=10 calls=10 files=2+0m map=0/0c in=192142 out=2699 status=finished forced   
+[34/48] 80.7s steps=10 calls=10 files=2+0m map=0/0c in=98552 out=1339 status=finished forced   
+[35/48] 87.5s steps=10 calls=10 files=3+0m map=0/0c in=101565 out=1629 status=finished forced   
+[36/48] 50.9s steps=5 calls=5 files=1+0m map=0/0c in=47721 out=1045 status=finished   
+[37/48] 96.8s steps=6 calls=6 files=1+0m map=0/0c in=89991 out=2616 status=finished   
+[38/48] 42.3s steps=4 calls=4 files=2+0m map=0/0c in=32888 out=765 status=finished   
+[39/48] 114.1s steps=10 calls=10 files=3+0m map=0/0c in=148234 out=2466 status=finished forced   
+[40/48] 97.1s steps=5 calls=5 files=3+0m map=0/0c in=68575 out=3034 status=finished   
+[41/48] 33.1s steps=2 calls=2 files=1+0m map=0/0c in=20638 out=827 status=finished   
+[42/48] 52.2s steps=4 calls=4 files=2+0m map=0/0c in=43754 out=1258 status=finished   
+[43/48] 106.6s steps=9 calls=9 files=4+0m map=0/0c in=118390 out=2286 status=finished   
+[44/48] 63.6s steps=7 calls=7 files=1+0m map=0/0c in=76167 out=1278 status=finished   
+[45/48] 96.7s steps=10 calls=10 files=2+0m map=0/0c in=110189 out=2025 status=finished forced   
+[46/48] 84.3s steps=7 calls=7 files=1+0m map=0/0c in=83711 out=1974 status=finished   
+[47/48] 99.3s steps=9 calls=18 files=4+0m map=0/0c in=122143 out=2353 status=finished   
+[48/48] 114.7s steps=10 calls=12 files=2+0m map=0/0c in=142778 out=2943 status=finished forced   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-glm46-scikit-learn-k1 --json runs/sweqa-r5p-glm46-scikit-learn-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-glm46-scikit-learn-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     0     18     0     0     0    0
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 0 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 18 forced answers · 0 refusal/garble re-runs · 0 degenerate · 0 garbled-final · 0 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-glm46-scikit-learn-k1/answers-oh.jsonl --out runs/sweqa-r5p-glm46-scikit-learn-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['z-ai/glm-4.6']
+[1/48] total=87 votes=5 
+[2/48] total=95 votes=5 
+[3/48] total=88 votes=5 
+[4/48] total=90 votes=5 
+[5/48] total=91 votes=5 
+[6/48] total=73 votes=5 
+[7/48] total=90 votes=5 
+[8/48] total=87 votes=5 
+[9/48] total=90 votes=5 
+[10/48] total=91 votes=5 
+[11/48] total=87 votes=5 
+[12/48] total=71 votes=5 
+[13/48] total=95 votes=5 
+[14/48] total=85 votes=5 
+[15/48] total=89 votes=5 
+[16/48] total=83 votes=5 
+[17/48] total=81 votes=5 
+[18/48] total=75 votes=5 
+[19/48] total=47 votes=5 
+[20/48] total=95 votes=5 
+[21/48] total=95 votes=5 
+[22/48] total=84 votes=5 
+[23/48] total=90 votes=5 
+[24/48] total=24 votes=5 
+[25/48] total=92 votes=5 
+[26/48] total=80 votes=5 
+[27/48] total=86 votes=5 
+[28/48] total=92 votes=5 
+[29/48] total=37 votes=5 
+[30/48] total=91 votes=5 
+[31/48] total=95 votes=5 
+[32/48] total=92 votes=5 
+[33/48] total=89 votes=5 
+[34/48] total=85 votes=5 
+[35/48] total=90 votes=5 
+[36/48] total=95 votes=5 
+[37/48] total=95 votes=5 
+[38/48] total=90 votes=5 
+[39/48] total=49 votes=5 
+[40/48] total=95 votes=5 
+[41/48] total=80 votes=5 
+[42/48] total=92 votes=5 
+[43/48] total=91 votes=5 
+[44/48] total=95 votes=5 
+[45/48] total=84 votes=5 
+[46/48] total=60 votes=5 
+[47/48] total=89 votes=5 
+[48/48] total=95 votes=5 
+run: runs/sweqa-r5p-glm46-scikit-learn-k1
+manifest: harness=None created=2026-10-15T18:50:59Z repo=scikit-learn commit=adb1ae76d798 index_entries=1004
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   83.8  15.4   77.7   84.1   84.3   89.1 |   6.8   7.2   2.0   0.0 |    84280    14783    1754    1845    n/a   78.1 |   0.77   0.00   0.26
+dims: oh=16.4/15.1/18.2/17.7/16.5
+judge vote SD (mean over questions): oh=0.8
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=4,045,449 out=84,181
+
+wrote runs/sweqa-r5p-glm46-scikit-learn-k1/analysis.json
+

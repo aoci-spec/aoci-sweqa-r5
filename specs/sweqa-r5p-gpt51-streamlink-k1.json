@@ -1,0 +1,27 @@
+{
+ "run": "sweqa-r5p-gpt51-streamlink-k1",
+ "repo": "streamlink",
+ "repo_root": "repos-r5/streamlink",
+ "questions": "benchmarks/swe-qa/streamlink.jsonl",
+ "draws": 1,
+ "limit": 0,
+ "workers": 16,
+ "concurrent_passes": 1,
+ "arms": [
+  {
+   "name": "oh",
+   "kind": "oh",
+   "profile": "closeai-gpt51",
+   "max_iterations": 10,
+   "temperature": 0.0,
+   "max_output_tokens": 12288
+  }
+ ],
+ "judge": {
+  "profile": "gptnb-judge",
+  "votes": 5,
+  "workers": 48
+ },
+ "require_complete_index": false,
+ "_comment": "R5 PARITY CHECK (2026-10-16): bare OpenHands 1.1.0 default agent, 10 iterations, temperature 0, ONE run per question (the paper's protocol), same judge as the main batch (claude-sonnet-4-5 x5 majority, 1-20 x5 = 100). Purpose: show this pipeline reproduces the published Table 3 OpenHands row for a paper model before AOCI is added. Acceptance band: merged 15-repo mean within 3 points of the paper's number and all five dimensions in the same direction; outside the band -> investigate (iteration cap, SDK version, reasoning parameters, provider precision) before any main-batch claim. No AOCI, no CodeGraph in this run. Model: GPT-5.1 (gpt-5.1-2025-11-13 via the CloseAI relay, reasoning_effort none); paper Table 3 OpenHands 70.79."
+}

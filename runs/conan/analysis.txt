@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-conan-k10
+manifest: harness=None created=2026-10-15T20:47:05Z repo=conan commit=52f43d98fe44 index_entries=918
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   68.6  17.1   70.8   72.6   67.2   64.0 |   5.5   7.5   2.7   0.0 |    62416    12313    1010     703    n/a    9.4 |   0.45   0.00   0.04
+oh-10           48   0   0 |   69.6  13.5   68.8   72.9   71.0   65.7 |   5.3   7.5   2.8   0.0 |    61565    12349    1006     725    n/a   10.2 |   0.50   0.00   0.08
+oh-2            48   0   0 |   69.7  15.8   70.8   72.9   71.9   63.2 |   5.1   7.5   2.7   0.0 |    60546    12467    1015     767    n/a    9.2 |   0.46   0.00   0.12
+oh-3            48   0   0 |   70.1  15.0   70.3   77.2   68.2   64.6 |   5.4   7.5   2.5   0.0 |    59854    12035    1013     803    n/a    9.6 |   0.43   0.00   0.07
+oh-4            48   0   0 |   69.0  15.7   70.6   71.3   72.4   61.5 |   5.7   8.0   2.9   0.0 |    67403    12736    1104     761    n/a    9.8 |   0.47   0.00   0.12
+oh-5            48   0   1 |   67.7  16.0   70.4   70.1   66.4   64.0 |   5.4   7.3   2.6   0.0 |    60604    12075     995     699    n/a    9.2 |   0.44   0.00   0.06
+oh-6            48   0   0 |   69.6  17.6   75.0   71.8   68.8   62.7 |   5.5   7.5   2.6   0.0 |    62350    12242    1042     733    n/a    9.3 |   0.44   0.00   0.08
+oh-7            48   0   0 |   68.7  16.0   69.1   70.7   71.0   64.0 |   5.7   7.9   2.6   0.0 |    66270    12785    1057     784    n/a    9.4 |   0.43   0.00   0.09
+oh-8            48   0   0 |   69.9  17.2   74.0   73.1   67.2   65.2 |   5.5   7.6   2.6   0.0 |    62616    12256    1053     776    n/a    9.6 |   0.44   0.00   0.07
+oh-9            48   0   0 |   69.2  15.4   70.9   73.8   70.6   61.7 |   5.3   7.6   2.7   0.0 |    61703    12356    1021     771    n/a   11.2 |   0.44   0.00   0.09
+oh-aoci-1       48   0   0 |   71.0  17.6   72.4   74.5   66.2   71.0 |   4.0   4.6   1.7  17.7 |  1025632   109048    2436    1010    n/a   25.3 |   0.36   0.37   0.23
+oh-aoci-10      48   0   0 |   69.3  19.2   62.5   78.2   69.0   67.4 |   4.0   4.8   1.8  18.0 |  1023107   109078    2502     999    n/a   26.3 |   0.33   0.33   0.20
+oh-aoci-2       48   0   1 |   68.6  19.0   64.0   76.7   69.3   64.4 |   3.8   4.5   1.6  24.0 |  1018820   109826    2457    1005    n/a   25.4 |   0.35   0.39   0.16
+oh-aoci-3       48   0   1 |   69.9  16.0   66.8   70.4   70.2   72.2 |   4.3   5.2   1.8  16.2 |  1070047   109273    2538    1028    n/a   25.7 |   0.39   0.36   0.17
+oh-aoci-4       48   0   0 |   72.8  15.9   69.2   75.8   74.9   71.0 |   4.4   5.1   2.0  18.9 |  1079584   109538    2518    1041    n/a   25.2 |   0.40   0.34   0.17
+oh-aoci-5       48   0   0 |   72.3  18.0   69.5   71.3   72.7   75.8 |   4.2   5.1   2.0  20.5 |  1059914   109415    2561    1064    n/a   25.6 |   0.41   0.40   0.17
+oh-aoci-6       48   0   0 |   72.5  17.3   62.6   77.7   78.9   70.8 |   4.0   5.0   1.9  16.5 |  1030183   109499    2617    1210    n/a   25.6 |   0.35   0.32   0.22
+oh-aoci-7       48   0   0 |   69.3  17.3   62.8   73.9   68.0   72.4 |   3.8   4.6   1.7  18.9 |  1010445   109437    2471     999    n/a   24.9 |   0.33   0.33   0.15
+oh-aoci-8       48   0   0 |   71.1  17.3   67.3   73.8   71.1   72.2 |   3.8   4.6   1.8  14.7 |  1006240   108748    2480    1084    n/a   28.4 |   0.34   0.36   0.18
+oh-aoci-9       48   0   0 |   70.9  18.3   69.9   74.2   71.8   67.7 |   3.8   4.8   1.9  18.2 |  1011690   109458    2449     993    n/a   26.6 |   0.36   0.35   0.17
+oh-cg-1         48   0   0 |   71.4  15.3   72.9   74.8   66.8   71.2 |   4.2   5.5   1.4  15.2 |    77190    18570     854    1021    n/a    8.3 |   0.21   0.38   0.16
+oh-cg-10        48   0   0 |   70.9  13.4   69.7   69.6   74.2   70.2 |   4.4   5.9   1.4  15.3 |    75469    18062     855     838    n/a    8.4 |   0.24   0.42   0.15
+oh-cg-2         48   0   0 |   69.3  16.2   73.2   67.3   67.1   69.6 |   4.4   5.8   1.2  15.2 |    79224    18583     899     899    n/a    8.4 |   0.19   0.38   0.13
+oh-cg-3         48   0   0 |   71.0  13.9   70.8   72.6   68.2   72.5 |   4.3   5.9   1.6  16.2 |    77511    18693     842     877    n/a    8.0 |   0.25   0.39   0.10
+oh-cg-4         48   0   0 |   69.7  15.4   69.3   69.6   67.3   72.4 |   4.1   5.7   1.4  14.9 |    75266    18558     852     858    n/a    8.1 |   0.21   0.38   0.15
+oh-cg-5         48   0   0 |   69.9  16.4   72.0   71.0   67.2   69.3 |   4.5   6.1   1.5  15.0 |    82337    18565     889     902    n/a    8.6 |   0.22   0.37   0.12
+oh-cg-6         48   0   0 |   69.0  15.9   69.7   63.5   75.4   67.2 |   4.4   5.4   1.4  15.4 |    75179    17871     814     815    n/a    7.8 |   0.24   0.39   0.15
+oh-cg-7         48   0   0 |   69.2  17.0   71.2   67.6   66.7   71.3 |   4.3   5.7   1.4  15.6 |    78007    18773     868     910    n/a    8.4 |   0.24   0.40   0.10
+oh-cg-8         48   0   1 |   68.8  15.0   69.4   69.7   65.8   70.3 |   4.2   5.8   1.3  16.2 |    75372    18270     861     962    n/a    8.1 |   0.18   0.41   0.15
+oh-cg-9         48   0   0 |   71.6  16.6   77.1   71.1   69.0   69.4 |   4.3   5.8   1.4  14.8 |    76166    18538     892    1012    n/a    8.7 |   0.23   0.35   0.14
+dims: oh-1=13.8/10.5/17.0/15.1/12.2  oh-10=14.2/10.5/17.3/15.1/12.3  oh-2=14.2/10.7/17.4/15.1/12.4  oh-3=14.4/10.7/17.5/15.2/12.4  oh-4=13.9/10.6/17.2/15.1/12.1  oh-5=13.5/10.3/16.9/15.1/11.9  oh-6=14.2/10.8/17.2/14.7/12.6  oh-7=13.9/10.6/17.1/14.8/12.3  oh-8=14.2/10.9/17.1/15.1/12.6  oh-9=14.1/10.8/17.2/14.9/12.2  oh-aoci-1=14.3/11.4/17.3/15.1/12.9  oh-aoci-10=14.0/11.0/16.8/14.9/12.6  oh-aoci-2=13.7/11.0/16.5/15.0/12.4  oh-aoci-3=13.9/11.3/17.1/14.9/12.6  oh-aoci-4=14.9/11.9/17.6/15.1/13.2  oh-aoci-5=14.6/12.0/17.2/15.4/13.2  oh-aoci-6=14.6/12.0/17.2/15.2/13.5  oh-aoci-7=13.8/11.0/16.9/15.0/12.6  oh-aoci-8=14.5/11.5/17.1/15.0/13.1  oh-aoci-9=14.4/11.6/16.9/15.0/12.9  oh-cg-1=14.6/11.4/17.5/14.9/13.0  oh-cg-10=14.3/11.0/17.8/15.2/12.6  oh-cg-2=14.0/10.8/16.9/15.0/12.6  oh-cg-3=14.4/11.1/17.4/15.2/12.9  oh-cg-4=14.1/10.8/17.3/14.9/12.6  oh-cg-5=14.2/11.1/17.1/14.8/12.7  oh-cg-6=13.9/10.4/17.3/15.0/12.3  oh-cg-7=14.1/10.8/17.0/14.9/12.4  oh-cg-8=13.9/10.7/17.2/14.6/12.3  oh-cg-9=14.6/11.4/17.3/15.2/13.2
+judge vote SD (mean over questions): oh-1=1.0  oh-10=1.0  oh-2=0.9  oh-3=1.3  oh-4=1.4  oh-5=1.1  oh-6=1.1  oh-7=1.2  oh-8=1.1  oh-9=1.3  oh-aoci-1=0.9  oh-aoci-10=1.4  oh-aoci-2=1.1  oh-aoci-3=1.5  oh-aoci-4=1.3  oh-aoci-5=1.3  oh-aoci-6=1.3  oh-aoci-7=1.5  oh-aoci-8=0.9  oh-aoci-9=1.2  oh-cg-1=1.4  oh-cg-10=1.1  oh-cg-2=1.3  oh-cg-3=1.3  oh-cg-4=1.3  oh-cg-5=1.1  oh-cg-6=1.3  oh-cg-7=1.5  oh-cg-8=1.4  oh-cg-9=1.3
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.5 calls/4048ch (used on 79% of questions)  oh-aoci-10=1.5 calls/4025ch (used on 77% of questions)  oh-aoci-2=1.4 calls/5362ch (used on 79% of questions)  oh-aoci-3=1.4 calls/3548ch (used on 81% of questions)  oh-aoci-4=1.6 calls/4244ch (used on 81% of questions)  oh-aoci-5=1.6 calls/4717ch (used on 83% of questions)  oh-aoci-6=1.4 calls/3598ch (used on 77% of questions)  oh-aoci-7=1.4 calls/4151ch (used on 75% of questions)  oh-aoci-8=1.3 calls/3068ch (used on 77% of questions)  oh-aoci-9=1.4 calls/4202ch (used on 81% of questions)  oh-cg-1=1.6 calls/33157ch (used on 100% of questions)  oh-cg-10=1.5 calls/30269ch (used on 100% of questions)  oh-cg-2=1.5 calls/32576ch (used on 100% of questions)  oh-cg-3=1.6 calls/32607ch (used on 100% of questions)  oh-cg-4=1.5 calls/32102ch (used on 100% of questions)  oh-cg-5=1.5 calls/31562ch (used on 100% of questions)  oh-cg-6=1.5 calls/31097ch (used on 100% of questions)  oh-cg-7=1.6 calls/32770ch (used on 100% of questions)  oh-cg-8=1.5 calls/31241ch (used on 100% of questions)  oh-cg-9=1.5 calls/32178ch (used on 100% of questions)
+totals: oh-1: in=2,995,989 out=48,485  oh-10: in=2,955,128 out=48,293  oh-2: in=2,906,211 out=48,728  oh-3: in=2,872,985 out=48,641  oh-4: in=3,235,366 out=53,004  oh-5: in=2,908,982 out=47,768  oh-6: in=2,992,797 out=50,021  oh-7: in=3,180,965 out=50,731  oh-8: in=3,005,566 out=50,535  oh-9: in=2,961,740 out=48,985  oh-aoci-1: in=49,230,328 out=116,909  oh-aoci-10: in=49,109,122 out=120,073  oh-aoci-2: in=48,903,360 out=117,956  oh-aoci-3: in=51,362,267 out=121,830  oh-aoci-4: in=51,820,052 out=120,849  oh-aoci-5: in=50,875,862 out=122,940  oh-aoci-6: in=49,448,783 out=125,612  oh-aoci-7: in=48,501,377 out=118,613  oh-aoci-8: in=48,299,514 out=119,049  oh-aoci-9: in=48,561,118 out=117,575  oh-cg-1: in=3,705,102 out=40,990  oh-cg-10: in=3,622,502 out=41,022  oh-cg-2: in=3,802,758 out=43,155  oh-cg-3: in=3,720,530 out=40,426  oh-cg-4: in=3,612,772 out=40,914  oh-cg-5: in=3,952,163 out=42,662  oh-cg-6: in=3,608,611 out=39,064  oh-cg-7: in=3,744,356 out=41,645  oh-cg-8: in=3,617,863 out=41,316  oh-cg-9: in=3,655,967 out=42,837
+
+== oh-10 - oh-1: n=48 Δ=+0.9 95%CI=[-1.6,+3.5] median=+0.0 win/tie/loss=19/9/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 710
+   by category: what: -2.0 [-7.2,+2.9] (n=12)  how: +0.3 [-4.3,+5.2] (n=12)  why: +3.8 [-1.2,+9.3] (n=12)  where: +1.7 [-2.9,+5.9] (n=12)
+   paired efficiency (b−a): input_tokens: -851 [-7542,+5722] (0.99x)  peak_input_tokens: +35 [-822,+950] (1.00x)  output_tokens: -4 [-85,+78] (1.00x)  tool_calls: -0 [-1,+1] (1.00x)  wall_s: +1 [+0,+1] (1.09x)  answer_chars: +22 [-122,+162] (1.03x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/26/9; hit cap: {'oh-1': 11, 'oh-10': 11}
+   -21  What is the integration mechanism between the Basic authentication credential processor and the authorization header pro
+         oh-1           read=['conans/server/rest/bottle_plugins/http_basic_authentication.py'] steps=3 retried=None
+         oh-10          read=['conans/server/rest/bottle_plugins/authorization_header.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py'] steps=3 retried=None
+   -16  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-10          read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+   -15  What architectural mechanism does the local development operations interface use to integrate editable package registrat
+         oh-1           read=['conan/api/subapi/local.py', 'conan/api/subapi/profiles.py', 'conan/cli/commands/editable.py', 'conan/internal/api/local/editable.py', 'conan/internal/graph/profile_node_definer.py'] steps=5 retried=None
+         oh-10          read=['conan/api/conan_api.py', 'conan/api/subapi/local.py', 'conan/cli/commands/editable.py', 'conan/cli/commands/source.py', 'conan/internal/api/local/editable.py', 'conan/internal/conan_app.py'] steps=5 retried=None
+   +21  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-10          read=['conan/internal/model/dependencies.py', 'conan/tools/gnu/pkgconfigdeps.py', 'conan/tools/microsoft/msbuilddeps.py'] steps=8 retried=None
+   +20  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-10          read=['conans/server/conf/__init__.py', 'conans/server/service/authorize.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=4 retried=None
+   +17  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-10          read=['conan/internal/graph/graph_builder.py', 'conan/internal/graph/range_resolver.py', 'test/integration/graph/conflict_diamond_test.py', 'test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+
+== oh-2 - oh-1: n=48 Δ=+1.1 95%CI=[-2.0,+4.1] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 775
+   by category: what: +0.1 [-6.0,+4.3] (n=12)  how: +0.3 [-4.3,+5.6] (n=12)  why: +4.7 [-2.1,+12.7] (n=12)  where: -0.8 [-7.2,+3.6] (n=12)
+   paired efficiency (b−a): input_tokens: -1870 [-8298,+4671] (0.97x)  peak_input_tokens: +154 [-617,+979] (1.01x)  output_tokens: +5 [-87,+101] (1.01x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-1,+1] (0.98x)  answer_chars: +64 [-30,+150] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/28/6; hit cap: {'oh-1': 11, 'oh-2': 9}
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-2           read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/autotoolstoolchain.py', 'conan/tools/gnu/gnutoolchain.py'] steps=6 retried=None
+   -27  What is the compatibility result produced by the generated CMake configuration version script when using the major-versi
+         oh-1           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=5 retried=None
+         oh-2           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/integration/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=7 retried=None
+   -17  Why does using a shared library versus a static library in a test function that verifies local build functionality for a
+         oh-1           read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/utils.py'] steps=10 retried=None
+         oh-2           read=['test/README.md', 'test/functional/command/runner_test.py', 'test/functional/toolchains/cmake/test_ninja.py'] steps=9 retried=None
+   +40  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-2           read=['conan/internal/api/install/generators.py', 'conan/tools/gnu/pkgconfigdeps.py'] steps=10 retried=None
+   +21  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-2           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/build_mode.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=10 retried=None
+   +19  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-2           read=['conans/server/conf/__init__.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+1.4 95%CI=[-1.3,+3.9] median=+0.5 win/tie/loss=24/10/14 sign-test p=0.143 | n for 80% power at this Δ ≈ 305
+   by category: what: -0.4 [-6.7,+4.9] (n=12)  how: +4.7 [+1.6,+8.2] (n=12)  why: +0.9 [-3.3,+5.1] (n=12)  where: +0.6 [-6.3,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: -2563 [-9243,+3838] (0.96x)  peak_input_tokens: -278 [-1056,+481] (0.98x)  output_tokens: +3 [-96,+106] (1.00x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +0 [-1,+1] (1.02x)  answer_chars: +100 [-17,+217] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/23/12; hit cap: {'oh-1': 11, 'oh-3': 10}
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-3           read=['conan/tools/gnu/autotoolstoolchain.py'] steps=4 retried=None
+   -27  What is the compatibility result produced by the generated CMake configuration version script when using the major-versi
+         oh-1           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=5 retried=None
+         oh-3           read=['conan/internal/graph/compatibility.py', 'conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=10 retried=None
+   -13  Why does the method that checks if a repository has uncommitted changes implement its own exclusion filtering instead of
+         oh-1           read=['conan/internal/model/conf.py', 'conan/tools/scm/git.py', 'test/functional/tools/scm/test_git.py'] steps=7 retried=None
+         oh-3           read=['conan/tools/scm/git.py'] steps=6 retried=None
+   +18  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-3           read=['conan/api/subapi/graph.py', 'conan/cli/command.py', 'conan/cli/commands/test.py', 'conans/client/command.py'] steps=10 retried=None
+   +16  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-3           read=['conan/internal/model/version_range.py'] steps=3 retried=None
+   +15  What determines the inclusion of package metadata files in the collection of files prepared for upload within the functi
+         oh-1           read=['conan/internal/api/uploader.py'] steps=3 retried=None
+         oh-3           read=['conan/internal/api/uploader.py'] steps=2 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+0.3 95%CI=[-3.5,+3.9] median=+0.0 win/tie/loss=21/11/16 sign-test p=0.511 | n for 80% power at this Δ ≈ 13387
+   by category: what: -0.2 [-5.0,+4.1] (n=12)  how: -1.2 [-8.3,+4.5] (n=12)  why: +5.2 [-1.5,+12.8] (n=12)  where: -2.5 [-12.7,+6.5] (n=12)
+   paired efficiency (b−a): input_tokens: +4987 [-1512,+13038] (1.08x)  peak_input_tokens: +422 [-302,+1251] (1.03x)  output_tokens: +94 [-4,+224] (1.09x)  tool_calls: +0 [-0,+1] (1.06x)  wall_s: +0 [-0,+1] (1.05x)  answer_chars: +58 [-58,+168] (1.08x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/28/10; hit cap: {'oh-1': 11, 'oh-4': 14}
+   -45  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-4           read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/gnutoolchain.py'] steps=8 retried=None
+   -33  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-4           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py'] steps=5 retried=None
+   -22  Where is the value of the attribute that controls whether RPATH skipping is enabled in the block class responsible for c
+         oh-1           read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/cmake/toolchain/toolchain.py'] steps=10 retried=None
+         oh-4           read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/cmake/toolchain/toolchain.py'] steps=10 retried=None
+   +36  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-4           read=['conan/api/subapi/list.py', 'conan/internal/api/list/query_parse.py', 'conan/internal/model/dependencies.py', 'conan/tools/gnu/pkgconfigdeps.py', 'conan/tools/microsoft/msbuilddeps.py'] steps=10 retried=None
+   +26  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-4           read=['conan/internal/graph/compatibility.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=5 retried=None
+   +20  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-4           read=['conan/internal/api/remotes/encrypt.py', 'conan/internal/rest/rest_client_v2.py', 'conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'conans/server/service/authorize.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=10 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-0.9 95%CI=[-4.1,+1.9] median=+0.0 win/tie/loss=17/13/18 sign-test p=1.000 | n for 80% power at this Δ ≈ 1034
+   by category: what: -0.3 [-4.2,+3.0] (n=12)  how: -2.5 [-6.7,+1.2] (n=12)  why: -0.8 [-6.9,+4.3] (n=12)  where: +0.0 [-10.1,+7.8] (n=12)
+   paired efficiency (b−a): input_tokens: -1813 [-8383,+4754] (0.97x)  peak_input_tokens: -239 [-877,+386] (0.98x)  output_tokens: -15 [-105,+79] (0.99x)  tool_calls: -0 [-1,+1] (0.97x)  wall_s: -0 [-1,+1] (0.98x)  answer_chars: -4 [-95,+78] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/28/9; hit cap: {'oh-1': 11, 'oh-5': 10}
+   -45  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-5           read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/autotoolstoolchain.py', 'conan/tools/gnu/gnutoolchain.py'] steps=8 retried=None
+   -28  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-5           read=['test/integration/graph/conflict_diamond_test.py', 'test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+   -18  How does setting the transitive linkage propagation parameter to False on a requirement in a test class for linear depen
+         oh-1           read=['conan/internal/model/requires.py', 'test/integration/graph/core/graph_manager_test.py'] steps=4 retried=None
+         oh-5           read=['conan/internal/model/requires.py', 'test/integration/graph/core/graph_manager_test.py'] steps=9 retried=None
+   +20  Where does the test suite for platform-provided dependency resolution resolve platform-provided dependencies when a reci
+         oh-1           read=['conan/internal/graph/graph_builder.py', 'test/integration/graph/test_platform_requires.py', 'test/integration/graph/test_system_tools.py'] steps=10 retried=None
+         oh-5           read=['test/integration/graph/test_platform_requires.py'] steps=4 retried=None
+   +12  Why does using a shared library versus a static library in a test function that verifies local build functionality for a
+         oh-1           read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/utils.py'] steps=10 retried=None
+         oh-5           read=['conan/test/assets/cmake.py', 'conan/test/assets/sources.py', 'test/functional/layout/test_local_commands.py', 'test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/toolchains/test_basic.py'] steps=10 retried=None
+   +12  Where in the control flow does the interaction between the timestamp separation delay, the targeted remote upload operat
+         oh-1           read=['conan/internal/api/uploader.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/proxy.py', 'conan/internal/util/dates.py', 'conan/test/utils/tools.py', 'test/integration/command/install/install_update_test.py'] steps=10 retried=None
+         oh-5           read=['conan/api/subapi/remotes.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/proxy.py', 'conan/test/utils/server_launcher.py', 'conan/test/utils/tools.py', 'test/integration/command/install/install_update_test.py'] steps=10 retried=None
+
+== oh-6 - oh-1: n=48 Δ=+0.9 95%CI=[-1.8,+3.7] median=+0.0 win/tie/loss=22/9/17 sign-test p=0.522 | n for 80% power at this Δ ≈ 845
+   by category: what: +4.2 [-1.5,+11.2] (n=12)  how: -0.8 [-3.5,+1.8] (n=12)  why: +1.5 [-2.4,+5.4] (n=12)  where: -1.3 [-8.2,+5.5] (n=12)
+   paired efficiency (b−a): input_tokens: -66 [-6641,+7461] (1.00x)  peak_input_tokens: -71 [-845,+749] (0.99x)  output_tokens: +32 [-83,+181] (1.03x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-1,+1] (0.99x)  answer_chars: +30 [-87,+142] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/28/9; hit cap: {'oh-1': 11, 'oh-6': 13}
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-6           read=['conan/tools/android/utils.py', 'conan/tools/gnu/gnutoolchain.py'] steps=5 retried=None
+   -14  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-6           read=['conan/internal/graph/profile_node_definer.py', 'conan/internal/model/conf.py', 'conan/internal/model/recipe_ref.py'] steps=10 retried=None
+   -12  Where does the test suite for platform-provided dependency resolution resolve platform-provided dependencies when a reci
+         oh-1           read=['conan/internal/graph/graph_builder.py', 'test/integration/graph/test_platform_requires.py', 'test/integration/graph/test_system_tools.py'] steps=10 retried=None
+         oh-6           read=['conan/internal/graph/graph_builder.py', 'test/integration/graph/test_platform_requires.py'] steps=10 retried=None
+   +34  What is the influence of the architecture string returned by the function that converts architecture names to Apple-spec
+         oh-1           read=['conan/tools/apple/apple.py', 'conan/tools/apple/xcodebuild.py', 'test/unittests/client/tools/apple/test_xcodebuild.py'] steps=4 retried=None
+         oh-6           read=['conan/tools/apple/apple.py', 'conan/tools/apple/xcodetoolchain.py', 'conan/tools/build/flags.py', 'conan/tools/cmake/toolchain/blocks.py', 'test/unittests/tools/apple/test_apple_tools.py'] steps=10 retried=None
+   +25  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-6           read=['test/integration/package_id/test_cache_compatibles.py'] steps=7 retried=None
+   +16  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-6           read=['conans/server/conf/__init__.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=4 retried=None
+
+== oh-7 - oh-1: n=48 Δ=+0.0 95%CI=[-2.6,+2.4] median=+0.0 win/tie/loss=21/12/15 sign-test p=0.405 | n for 80% power at this Δ ≈ 347712
+   by category: what: -1.7 [-5.2,+1.3] (n=12)  how: -1.9 [-6.8,+2.2] (n=12)  why: +3.8 [-0.2,+7.3] (n=12)  where: +0.0 [-7.3,+6.3] (n=12)
+   paired efficiency (b−a): input_tokens: +3854 [-877,+8803] (1.06x)  peak_input_tokens: +472 [-230,+1237] (1.04x)  output_tokens: +47 [-28,+126] (1.05x)  tool_calls: +0 [-0,+1] (1.05x)  wall_s: -0 [-1,+1] (1.00x)  answer_chars: +80 [-58,+208] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 7/28/13; hit cap: {'oh-1': 11, 'oh-7': 13}
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-7           read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/gnutoolchain.py'] steps=8 retried=None
+   -23  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-7           read=['conan/internal/subsystems.py'] steps=4 retried=None
+   -15  What is the integration mechanism between the Basic authentication credential processor and the authorization header pro
+         oh-1           read=['conans/server/rest/bottle_plugins/http_basic_authentication.py'] steps=3 retried=None
+         oh-7           read=['conans/server/rest/bottle_plugins/http_basic_authentication.py'] steps=3 retried=None
+   +16  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-7           read=['conan/internal/model/version_range.py'] steps=3 retried=None
+   +12  Where in the control flow does the interaction between the timestamp separation delay, the targeted remote upload operat
+         oh-1           read=['conan/internal/api/uploader.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/proxy.py', 'conan/internal/util/dates.py', 'conan/test/utils/tools.py', 'test/integration/command/install/install_update_test.py'] steps=10 retried=None
+         oh-7           read=['conan/internal/graph/graph_binaries.py', 'conan/internal/graph/proxy.py', 'test/integration/command/install/install_update_test.py'] steps=10 retried=None
+   +12  How should the component that determines whether artifacts need to be uploaded by checking remote server existence be ar
+         oh-1           read=['conan/api/model.py', 'conan/api/model/list.py', 'conan/api/subapi/upload.py', 'conan/cli/commands/upload.py', 'conan/internal/api/uploader.py', 'conan/internal/rest/remote_manager.py', 'conans/client/cmd/uploader.py'] steps=8 retried=None
+         oh-7           read=['conan/api/model/list.py', 'conan/api/subapi/upload.py', 'conan/cli/commands/upload.py', 'conan/internal/api/uploader.py', 'conan/internal/rest/remote_manager.py', 'conans/client/uploader.py'] steps=10 retried=None
+
+== oh-8 - oh-1: n=48 Δ=+1.2 95%CI=[-1.6,+4.2] median=+0.0 win/tie/loss=22/12/14 sign-test p=0.243 | n for 80% power at this Δ ≈ 493
+   by category: what: +3.2 [-1.5,+8.4] (n=12)  how: +0.5 [-4.3,+6.8] (n=12)  why: +0.0 [-1.6,+2.0] (n=12)  where: +1.2 [-6.6,+9.5] (n=12)
+   paired efficiency (b−a): input_tokens: +200 [-5309,+5797] (1.00x)  peak_input_tokens: -57 [-787,+723] (1.00x)  output_tokens: +43 [-33,+133] (1.04x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +0 [-0,+1] (1.02x)  answer_chars: +73 [-35,+182] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/30/8; hit cap: {'oh-1': 11, 'oh-8': 10}
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-8           read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/gnutoolchain.py'] steps=6 retried=None
+   -12  How does the preset file writing function use its parameters to invoke the main preset configuration generator method?
+         oh-1           read=['conan/tools/cmake/presets.py'] steps=3 retried=None
+         oh-8           read=['conan/tools/cmake/presets.py'] steps=3 retried=None
+   -11  What is the compatibility result produced by the generated CMake configuration version script when using the major-versi
+         oh-1           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=5 retried=None
+         oh-8           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/integration/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=7 retried=None
+   +34  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-8           read=['conan/internal/graph/compatibility.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=5 retried=None
+   +27  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-8           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/install_graph.py', 'conan/internal/loader.py', 'conans/client/command.py'] steps=10 retried=None
+   +24  What determines the inclusion of package metadata files in the collection of files prepared for upload within the functi
+         oh-1           read=['conan/internal/api/uploader.py'] steps=3 retried=None
+         oh-8           read=['conan/internal/api/uploader.py'] steps=3 retried=None
+
+== oh-9 - oh-1: n=48 Δ=+0.6 95%CI=[-2.5,+3.1] median=+0.0 win/tie/loss=23/9/16 sign-test p=0.337 | n for 80% power at this Δ ≈ 2157
+   by category: what: +0.2 [-3.6,+3.4] (n=12)  how: +1.2 [-3.1,+6.0] (n=12)  why: +3.3 [+0.2,+7.3] (n=12)  where: -2.3 [-12.3,+3.9] (n=12)
+   paired efficiency (b−a): input_tokens: -714 [-6645,+5505] (0.99x)  peak_input_tokens: +43 [-594,+720] (1.00x)  output_tokens: +10 [-82,+110] (1.01x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: +2 [+1,+3] (1.19x)  answer_chars: +68 [-28,+156] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/29/8; hit cap: {'oh-1': 11, 'oh-9': 11}
+   -52  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-9           read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py'] steps=5 retried=None
+   -13  What is the compatibility result produced by the generated CMake configuration version script when using the major-versi
+         oh-1           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=5 retried=None
+         oh-9           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py'] steps=2 retried=None
+   -11  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-9           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+   +20  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-9           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+   +18  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-9           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/loader.py', 'conans/client/command.py'] steps=10 retried=None
+   +13  How should the component that determines whether artifacts need to be uploaded by checking remote server existence be ar
+         oh-1           read=['conan/api/model.py', 'conan/api/model/list.py', 'conan/api/subapi/upload.py', 'conan/cli/commands/upload.py', 'conan/internal/api/uploader.py', 'conan/internal/rest/remote_manager.py', 'conans/client/cmd/uploader.py'] steps=8 retried=None
+         oh-9           read=['conan/api/model/list.py', 'conan/api/subapi/upload.py', 'conan/internal/api/uploader.py', 'conans/client/cmd/uploader.py', 'test/integration/command/upload/test_upload_parallel.py'] steps=7 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+2.4 95%CI=[-2.6,+7.1] median=+3.5 win/tie/loss=29/5/14 sign-test p=0.032 | n for 80% power at this Δ ≈ 409
+   by category: what: +1.7 [-5.6,+8.5] (n=12)  how: +1.9 [-3.8,+6.6] (n=12)  why: -1.1 [-9.2,+6.9] (n=12)  where: +7.0 [-8.8,+21.2] (n=12)
+   paired efficiency (b−a): input_tokens: +963215 [+863855,+1070510] (16.43x)  peak_input_tokens: +96735 [+95689,+97744] (8.86x)  output_tokens: +1426 [+1241,+1600] (2.41x)  tool_calls: -3 [-4,-2] (0.60x)  wall_s: +16 [+14,+17] (2.69x)  answer_chars: +307 [+103,+526] (1.44x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_get_entries': 13, '(none)': 9, 'aoci_search': 25, 'finish': 1}}
+   steps (b−a): fewer/same/more = 27/12/9; hit cap: {'oh-1': 11, 'oh-aoci-1': 9}
+   -50  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -27  Where does the version migration handler class filter migration files by version and dynamically load each script?
+         oh-1           read=['conan/internal/api/migrations.py', 'conans/migrations.py'] steps=3 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -26  Why was a custom HTTP requester that selectively returns failure responses for file downloads used in the test suite tha
+         oh-1           read=['conan/internal/rest/file_downloader.py', 'conan/test/utils/tools.py', 'test/integration/remote/download_retries_test.py', 'test/integration/remote/retry_test.py'] steps=4 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +51  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-1      read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=3 retried=None
+   +39  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-1      read=['test/integration/package_id/test_cache_compatibles.py'] steps=3 retried=None
+   +25  Where in the data flow does the toolchain block responsible for configuring Visual Studio runtime library settings compu
+         oh-1           read=['conan/tools/cmake/toolchain/blocks.py'] steps=2 retried=None
+         oh-aoci-1      read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/microsoft/visual.py'] steps=2 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+0.6 95%CI=[-4.1,+5.5] median=+1.5 win/tie/loss=26/3/19 sign-test p=0.371 | n for 80% power at this Δ ≈ 5730
+   by category: what: -8.2 [-15.9,-0.6] (n=12)  how: +5.6 [-1.4,+13.4] (n=12)  why: +1.8 [-5.9,+9.2] (n=12)  where: +3.4 [-9.4,+16.2] (n=12)
+   paired efficiency (b−a): input_tokens: +960690 [+863223,+1060818] (16.39x)  peak_input_tokens: +96765 [+95558,+97910] (8.86x)  output_tokens: +1491 [+1320,+1668] (2.48x)  tool_calls: -3 [-4,-2] (0.63x)  wall_s: +17 [+15,+18] (2.80x)  answer_chars: +296 [+138,+463] (1.42x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'(none)': 9, 'aoci_search': 26, 'aoci_get_entries': 11, 'terminal': 1, 'finish': 1}}
+   steps (b−a): fewer/same/more = 26/11/11; hit cap: {'oh-1': 11, 'oh-aoci-10': 6}
+   -48  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-aoci-10     read=['conan/tools/cmake/toolchain/blocks.py'] steps=3 retried=None
+   -35  What is the effect of the transitive component requirements specified in the test that verifies transitive component dep
+         oh-1           read=['test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_transitivity.py', 'test/functional/toolchains/cmake/cmakedeps2/test_cmakeconfigdeps_new.py', 'test/integration/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/integration/toolchains/cmake/cmakedeps2/test_cmakedeps.py'] steps=10 retried=None
+         oh-aoci-10     read=['test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components_names.py'] steps=10 retried=None
+   -22  Why does using a shared library versus a static library in a test function that verifies local build functionality for a
+         oh-1           read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/utils.py'] steps=10 retried=None
+         oh-aoci-10     read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/test_basic.py'] steps=10 retried=None
+   +53  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-10     read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=4 retried=None
+   +35  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-10     read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py'] steps=9 retried=None
+   +30  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-aoci-10     read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/lockfile.py', 'conan/internal/model/version_range.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=-0.0 95%CI=[-4.1,+4.0] median=+1.0 win/tie/loss=27/3/18 sign-test p=0.233 | n for 80% power at this Δ ≈ 898268
+   by category: what: -6.8 [-13.6,-0.2] (n=12)  how: +4.1 [-3.5,+11.9] (n=12)  why: +2.1 [-7.0,+11.2] (n=12)  where: +0.4 [-5.8,+7.0] (n=12)
+   paired efficiency (b−a): input_tokens: +956404 [+860372,+1054972] (16.32x)  peak_input_tokens: +97512 [+96357,+98687] (8.92x)  output_tokens: +1447 [+1289,+1593] (2.43x)  tool_calls: -3 [-4,-2] (0.59x)  wall_s: +16 [+15,+17] (2.70x)  answer_chars: +302 [+122,+488] (1.43x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'(none)': 10, 'aoci_search': 30, 'aoci_get_entries': 8}}
+   steps (b−a): fewer/same/more = 27/13/8; hit cap: {'oh-1': 11, 'oh-aoci-2': 6}
+   -27  What is the effect of the transitive component requirements specified in the test that verifies transitive component dep
+         oh-1           read=['test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_transitivity.py', 'test/functional/toolchains/cmake/cmakedeps2/test_cmakeconfigdeps_new.py', 'test/integration/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/integration/toolchains/cmake/cmakedeps2/test_cmakedeps.py'] steps=10 retried=None
+         oh-aoci-2      read=['test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components_names.py'] steps=10 retried=None
+   -25  Why was a custom HTTP requester that selectively returns failure responses for file downloads used in the test suite tha
+         oh-1           read=['conan/internal/rest/file_downloader.py', 'conan/test/utils/tools.py', 'test/integration/remote/download_retries_test.py', 'test/integration/remote/retry_test.py'] steps=4 retried=None
+         oh-aoci-2      read=['test/integration/remote/broken_download_test.py'] steps=2 retried=None
+   -24  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-aoci-2      read=['conan/internal/subsystems.py'] steps=3 retried=None
+   +36  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-2      read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/install_graph.py'] steps=9 retried=None
+   +30  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-aoci-2      read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/range_resolver.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+   +25  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-2      read=['test/integration/package_id/test_cache_compatibles.py'] steps=3 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+1.2 95%CI=[-2.8,+5.4] median=+1.5 win/tie/loss=25/4/19 sign-test p=0.451 | n for 80% power at this Δ ≈ 1081
+   by category: what: -3.9 [-10.2,+2.2] (n=12)  how: -2.2 [-9.7,+6.2] (n=12)  why: +2.9 [-3.2,+9.0] (n=12)  where: +8.2 [-1.3,+19.4] (n=12)
+   paired efficiency (b−a): input_tokens: +1007631 [+901859,+1118395] (17.14x)  peak_input_tokens: +96959 [+95863,+97999] (8.87x)  output_tokens: +1528 [+1379,+1677] (2.51x)  tool_calls: -2 [-4,-1] (0.69x)  wall_s: +16 [+15,+18] (2.74x)  answer_chars: +325 [+131,+526] (1.46x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'(none)': 8, 'aoci_search': 26, 'aoci_get_entries': 13, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 25/14/9; hit cap: {'oh-1': 11, 'oh-aoci-3': 12}
+   -28  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-aoci-3      read=['conan/internal/subsystems.py'] steps=3 retried=None
+   -19  What architectural responsibility does the method that collects, validates, and filters dependencies from multiple build
+         oh-1           read=['conan/tools/gnu/pkgconfigdeps.py'] steps=3 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -19  What is the compatibility result produced by the generated CMake configuration version script when using the major-versi
+         oh-1           read=['conan/tools/cmake/cmakedeps/templates/config_version.py', 'conan/tools/cmake/cmakedeps2/config_version.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py'] steps=5 retried=None
+         oh-aoci-3      read=['conan/tools/cmake/cmakedeps/templates/config_version.py'] steps=1 retried=None
+   +52  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-3      read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=3 retried=None
+   +37  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-3      read=['test/integration/package_id/test_cache_compatibles.py'] steps=3 retried=None
+   +28  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-3      read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_builder.py', 'conan/test/assets/genconanfile.py'] steps=10 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+4.1 95%CI=[-0.5,+8.6] median=+2.5 win/tie/loss=28/4/16 sign-test p=0.096 | n for 80% power at this Δ ≈ 123
+   by category: what: -1.5 [-9.0,+5.2] (n=12)  how: +3.2 [-6.0,+12.5] (n=12)  why: +7.7 [+1.2,+14.0] (n=12)  where: +7.0 [-4.0,+19.7] (n=12)
+   paired efficiency (b−a): input_tokens: +1017168 [+928378,+1109503] (17.30x)  peak_input_tokens: +97224 [+96203,+98267] (8.90x)  output_tokens: +1508 [+1368,+1642] (2.49x)  tool_calls: -2 [-4,-1] (0.67x)  wall_s: +16 [+15,+17] (2.68x)  answer_chars: +338 [+169,+510] (1.48x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'(none)': 6, 'aoci_search': 27, 'aoci_get_entries': 12, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 22/14/12; hit cap: {'oh-1': 11, 'oh-aoci-4': 8}
+   -33  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-aoci-4      read=['conan/internal/subsystems.py'] steps=2 retried=None
+   -23  What architectural responsibility does the method that collects, validates, and filters dependencies from multiple build
+         oh-1           read=['conan/tools/gnu/pkgconfigdeps.py'] steps=3 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -19  Where is the value of the attribute that controls whether RPATH skipping is enabled in the block class responsible for c
+         oh-1           read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/cmake/toolchain/toolchain.py'] steps=10 retried=None
+         oh-aoci-4      read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/cmake/toolchain/toolchain.py'] steps=10 retried=None
+   +57  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-4      read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=4 retried=None
+   +36  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-4      read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py'] steps=9 retried=None
+   +33  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-4      read=['test/integration/package_id/test_cache_compatibles.py'] steps=3 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+3.7 95%CI=[-1.1,+8.5] median=+4.0 win/tie/loss=32/1/15 sign-test p=0.019 | n for 80% power at this Δ ≈ 165
+   by category: what: -1.2 [-7.2,+4.3] (n=12)  how: -1.2 [-13.0,+8.1] (n=12)  why: +5.4 [-3.2,+12.8] (n=12)  where: +11.8 [+1.7,+23.7] (n=12)
+   paired efficiency (b−a): input_tokens: +997497 [+903918,+1096591] (16.98x)  peak_input_tokens: +97102 [+96080,+98139] (8.89x)  output_tokens: +1551 [+1389,+1718] (2.54x)  tool_calls: -2 [-4,-1] (0.68x)  wall_s: +16 [+15,+17] (2.72x)  answer_chars: +361 [+149,+569] (1.51x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'(none)': 6, 'aoci_search': 29, 'aoci_get_entries': 11, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 26/10/12; hit cap: {'oh-1': 11, 'oh-aoci-5': 8}
+   -41  How can a revision tracking data structure that maintains a chronological list of version identifiers with timestamps be
+         oh-1           read=['conans/server/revision_list.py', 'conans/server/store/disk_adapter.py', 'conans/server/store/server_store.py'] steps=7 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -40  How does the workspace management interface ensure consistency when merging dependency graphs for locally developed pack
+         oh-1           read=['conan/api/subapi/workspace.py', 'conan/internal/model/requires.py'] steps=7 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -23  Why does using a shared library versus a static library in a test function that verifies local build functionality for a
+         oh-1           read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/utils.py'] steps=10 retried=None
+         oh-aoci-5      read=[] steps=5 retried=None
+   +57  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-5      read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=4 retried=None
+   +38  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-5      read=['conan/internal/api/migrations.py', 'conan/internal/default_settings.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=4 retried=None
+   +30  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-aoci-5      read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/range_resolver.py', 'conan/test/integration/graph/version_ranges/version_range_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+3.8 95%CI=[-0.8,+8.5] median=+3.0 win/tie/loss=30/1/17 sign-test p=0.079 | n for 80% power at this Δ ≈ 142
+   by category: what: -8.2 [-14.9,-1.7] (n=12)  how: +5.1 [-2.3,+13.3] (n=12)  why: +11.7 [+1.8,+22.2] (n=12)  where: +6.8 [-1.1,+14.2] (n=12)
+   paired efficiency (b−a): input_tokens: +967767 [+871735,+1063415] (16.50x)  peak_input_tokens: +97186 [+96203,+98158] (8.89x)  output_tokens: +1607 [+1453,+1766] (2.59x)  tool_calls: -3 [-4,-2] (0.67x)  wall_s: +16 [+15,+18] (2.73x)  answer_chars: +507 [+308,+718] (1.72x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_get_entries': 8, 'aoci_search': 29, '(none)': 10, 'finish': 1}}
+   steps (b−a): fewer/same/more = 29/11/8; hit cap: {'oh-1': 11, 'oh-aoci-6': 7}
+   -32  What is the reliance of the system-specific environment variable manager on execution environment identification to dete
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/env/environment.py'] steps=5 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -24  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -21  Why does a test function that validates custom cache storage path configuration verify the effect of setting the cache s
+         oh-1           read=['conan/internal/cache/cache.py', 'test/integration/cache/storage_path_test.py', 'test/integration/configuration/conf/test_conf.py'] steps=3 retried=None
+         oh-aoci-6      read=[] steps=1 retried=None
+   +54  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-aoci-6      read=['conan/tools/gnu/makedeps.py', 'conan/tools/gnu/pkgconfigdeps.py'] steps=10 retried=None
+   +37  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-6      read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py'] steps=8 retried=None
+   +32  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-6      read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=5 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+0.6 95%CI=[-4.1,+5.5] median=+0.5 win/tie/loss=24/5/19 sign-test p=0.542 | n for 80% power at this Δ ≈ 5436
+   by category: what: -7.9 [-14.1,-1.8] (n=12)  how: +1.3 [-8.8,+10.6] (n=12)  why: +0.8 [-5.7,+7.8] (n=12)  where: +8.4 [-3.7,+21.2] (n=12)
+   paired efficiency (b−a): input_tokens: +948029 [+851565,+1048733] (16.19x)  peak_input_tokens: +97123 [+96079,+98230] (8.89x)  output_tokens: +1461 [+1314,+1603] (2.45x)  tool_calls: -3 [-4,-2] (0.61x)  wall_s: +15 [+14,+17] (2.65x)  answer_chars: +296 [+135,+467] (1.42x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'(none)': 11, 'aoci_search': 27, 'aoci_get_entries': 9, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 31/11/6; hit cap: {'oh-1': 11, 'oh-aoci-7': 6}
+   -35  How can a revision tracking data structure that maintains a chronological list of version identifiers with timestamps be
+         oh-1           read=['conans/server/revision_list.py', 'conans/server/store/disk_adapter.py', 'conans/server/store/server_store.py'] steps=7 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -33  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-aoci-7      read=[] steps=2 retried=None
+   -28  What is the effect of setting preprocessor definitions on a component metadata container instance on the transitive prop
+         oh-1           read=['conan/internal/model/cpp_info.py', 'conans/model/build_info.py'] steps=10 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +57  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-7      read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=3 retried=None
+   +35  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-7      read=['conan/internal/api/migrations.py', 'conan/internal/default_settings.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=5 retried=None
+   +28  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-7      read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py'] steps=9 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+2.5 95%CI=[-1.9,+6.7] median=+3.0 win/tie/loss=30/4/14 sign-test p=0.023 | n for 80% power at this Δ ≈ 296
+   by category: what: -3.4 [-10.6,+2.2] (n=12)  how: +1.2 [-5.7,+6.7] (n=12)  why: +3.8 [-1.9,+10.1] (n=12)  where: +8.2 [-4.6,+20.3] (n=12)
+   paired efficiency (b−a): input_tokens: +943823 [+850262,+1049552] (16.12x)  peak_input_tokens: +96435 [+95134,+97633] (8.83x)  output_tokens: +1470 [+1294,+1641] (2.46x)  tool_calls: -3 [-4,-2] (0.61x)  wall_s: +19 [+17,+21] (3.03x)  answer_chars: +381 [+185,+584] (1.54x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_get_entries': 14, 'aoci_search': 23, '(none)': 10, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 28/10/10; hit cap: {'oh-1': 11, 'oh-aoci-8': 9}
+   -45  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -32  What is the effect of the transitive component requirements specified in the test that verifies transitive component dep
+         oh-1           read=['test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_transitivity.py', 'test/functional/toolchains/cmake/cmakedeps2/test_cmakeconfigdeps_new.py', 'test/integration/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/integration/toolchains/cmake/cmakedeps2/test_cmakedeps.py'] steps=10 retried=None
+         oh-aoci-8      read=['conan/tools/cmake/cmakedeps/templates/target_configuration.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_components.py', 'test/functional/toolchains/cmake/cmakedeps/test_cmakedeps_transitivity.py', 'test/functional/toolchains/cmake/cmakedeps2/test_cmakeconfigdeps_new.py', 'test/integration/test_components.py'] steps=10 retried=None
+   -29  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +52  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-aoci-8      read=['conan/internal/model/version.py', 'conan/internal/model/version_range.py'] steps=4 retried=None
+   +33  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-8      read=['test/integration/package_id/test_cache_compatibles.py'] steps=4 retried=None
+   +25  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-aoci-8      read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/range_resolver.py', 'conan/internal/model/requires.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+2.2 95%CI=[-1.7,+6.0] median=+3.0 win/tie/loss=28/5/15 sign-test p=0.066 | n for 80% power at this Δ ≈ 291
+   by category: what: -0.8 [-7.8,+5.6] (n=12)  how: +1.6 [-6.7,+9.6] (n=12)  why: +4.5 [-2.2,+11.1] (n=12)  where: +3.7 [-4.6,+12.2] (n=12)
+   paired efficiency (b−a): input_tokens: +949274 [+857228,+1048616] (16.21x)  peak_input_tokens: +97144 [+95997,+98246] (8.89x)  output_tokens: +1439 [+1301,+1572] (2.42x)  tool_calls: -3 [-4,-2] (0.63x)  wall_s: +17 [+16,+19] (2.84x)  answer_chars: +289 [+121,+470] (1.41x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'(none)': 8, 'aoci_search': 29, 'aoci_get_entries': 10, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 30/11/7; hit cap: {'oh-1': 11, 'oh-aoci-9': 7}
+   -33  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-aoci-9      read=['conan/internal/subsystems.py'] steps=2 retried=None
+   -24  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-aoci-9      read=[] steps=2 retried=None
+   -19  Why does a test function that validates custom cache storage path configuration verify the effect of setting the cache s
+         oh-1           read=['conan/internal/cache/cache.py', 'test/integration/cache/storage_path_test.py', 'test/integration/configuration/conf/test_conf.py'] steps=3 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +34  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-aoci-9      read=['test/integration/package_id/test_cache_compatibles.py'] steps=3 retried=None
+   +31  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-aoci-9      read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/install_graph.py'] steps=8 retried=None
+   +27  Why does the runtime complexity of resolving dependency version range overrides in the test method that validates overri
+         oh-1           read=['test/integration/graph/core/graph_manager_test.py', 'test/integration/graph/core/test_version_ranges.py', 'test/integration/graph/require_override_test.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=10 retried=None
+         oh-aoci-9      read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/graph/range_resolver.py', 'conan/internal/model/version_range.py', 'test/integration/graph/version_ranges/version_range_override_test.py'] steps=7 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+2.8 95%CI=[-1.0,+6.2] median=+3.5 win/tie/loss=29/4/15 sign-test p=0.049 | n for 80% power at this Δ ≈ 160
+   by category: what: +2.2 [-1.5,+5.2] (n=12)  how: +2.2 [-8.2,+11.2] (n=12)  why: -0.4 [-7.6,+6.2] (n=12)  where: +7.2 [+1.4,+13.2] (n=12)
+   paired efficiency (b−a): input_tokens: +14773 [+2852,+28510] (1.24x)  peak_input_tokens: +6257 [+5134,+7577] (1.51x)  output_tokens: -156 [-271,-43] (0.85x)  tool_calls: -2 [-3,-1] (0.73x)  wall_s: -1 [-2,-0] (0.88x)  answer_chars: +318 [+158,+491] (1.45x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/13/4; hit cap: {'oh-1': 11, 'oh-cg-1': 6}
+   -45  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-1        read=[] steps=2 retried=None
+   -26  Why was a custom HTTP requester that selectively returns failure responses for file downloads used in the test suite tha
+         oh-1           read=['conan/internal/rest/file_downloader.py', 'conan/test/utils/tools.py', 'test/integration/remote/download_retries_test.py', 'test/integration/remote/retry_test.py'] steps=4 retried=None
+         oh-cg-1        read=['conan/internal/rest/rest_client_v2.py'] steps=4 retried=None
+   -15  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-cg-1        read=['conan/internal/api/install/generators.py', 'conan/internal/model/cpp_info.py', 'conan/tools/cmake/cmakedeps2/cmakedeps.py', 'conan/tools/cmake/cmakedeps2/config.py'] steps=10 retried=None
+   +33  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-cg-1        read=['conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py'] steps=8 retried=None
+   +26  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-1        read=['conan/internal/graph/compatibility.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=7 retried=None
+   +23  Where does the test suite for platform-provided dependency resolution resolve platform-provided dependencies when a reci
+         oh-1           read=['conan/internal/graph/graph_builder.py', 'test/integration/graph/test_platform_requires.py', 'test/integration/graph/test_system_tools.py'] steps=10 retried=None
+         oh-cg-1        read=['test/integration/graph/test_platform_requires.py'] steps=4 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+2.3 95%CI=[-2.3,+6.7] median=+1.5 win/tie/loss=26/8/14 sign-test p=0.081 | n for 80% power at this Δ ≈ 391
+   by category: what: -1.1 [-5.6,+2.8] (n=12)  how: -3.0 [-13.8,+5.7] (n=12)  why: +6.9 [+1.0,+14.4] (n=12)  where: +6.2 [-5.6,+19.2] (n=12)
+   paired efficiency (b−a): input_tokens: +13052 [+1556,+25189] (1.21x)  peak_input_tokens: +5748 [+4698,+6916] (1.47x)  output_tokens: -155 [-274,-39] (0.85x)  tool_calls: -2 [-3,-1] (0.78x)  wall_s: -1 [-2,-0] (0.89x)  answer_chars: +135 [-23,+318] (1.19x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 29/11/8; hit cap: {'oh-1': 11, 'oh-cg-10': 5}
+   -48  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-cg-10       read=['conan/tools/cmake/cmakedeps/cmakedeps.py', 'conan/tools/cmake/cmakedeps2/cmakedeps.py'] steps=10 retried=None
+   -39  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-cg-10       read=['conan/tools/android/utils.py', 'conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/autotoolstoolchain.py'] steps=5 retried=None
+   -27  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-10       read=[] steps=3 retried=None
+   +56  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-10       read=[] steps=3 retried=None
+   +42  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-cg-10       read=['conan/tools/gnu/pkgconfigdeps.py'] steps=5 retried=None
+   +25  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-10       read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=10 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.7 95%CI=[-2.5,+3.7] median=+2.0 win/tie/loss=28/2/18 sign-test p=0.184 | n for 80% power at this Δ ≈ 2066
+   by category: what: +2.5 [-1.5,+5.8] (n=12)  how: -5.2 [-12.0,+0.6] (n=12)  why: -0.2 [-5.2,+4.3] (n=12)  where: +5.6 [-1.5,+13.7] (n=12)
+   paired efficiency (b−a): input_tokens: +16808 [+5109,+29277] (1.27x)  peak_input_tokens: +6270 [+5133,+7474] (1.51x)  output_tokens: -111 [-253,+40] (0.89x)  tool_calls: -2 [-3,-1] (0.77x)  wall_s: -1 [-2,-0] (0.89x)  answer_chars: +196 [+71,+321] (1.28x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/16/5; hit cap: {'oh-1': 11, 'oh-cg-2': 7}
+   -29  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-2        read=[] steps=2 retried=None
+   -24  How does the function that validates file integrity by comparing computed and expected hash signatures handle errors as 
+         oh-1           read=['conan/internal/util/files.py', 'test/unittests/util/file_hashes_test.py'] steps=2 retried=None
+         oh-cg-2        read=['conan/internal/util/files.py', 'conan/tools/files/files.py', 'test/unittests/tools/files/checksums_test.py'] steps=4 retried=None
+   -20  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-cg-2        read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+   +38  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-2        read=['test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+   +18  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-2        read=[] steps=2 retried=None
+   +12  Why does the test class that validates compiler flag generation utilities validate compiler flag generation for multiple
+         oh-1           read=['test/unittests/client/build/compiler_flags_test.py'] steps=2 retried=None
+         oh-cg-2        read=['test/unittests/client/build/compiler_flags_test.py'] steps=3 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+2.4 95%CI=[-1.9,+6.2] median=+2.0 win/tie/loss=30/4/14 sign-test p=0.023 | n for 80% power at this Δ ≈ 289
+   by category: what: +0.0 [-4.1,+3.8] (n=12)  how: +0.0 [-12.3,+9.8] (n=12)  why: +0.9 [-4.4,+5.6] (n=12)  where: +8.5 [-0.2,+17.7] (n=12)
+   paired efficiency (b−a): input_tokens: +15095 [+3493,+27668] (1.24x)  peak_input_tokens: +6379 [+5220,+7607] (1.52x)  output_tokens: -168 [-286,-52] (0.83x)  tool_calls: -2 [-3,-1] (0.79x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +174 [+54,+297] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/13/7; hit cap: {'oh-1': 11, 'oh-cg-3': 7}
+   -52  How does the workspace management interface ensure consistency when merging dependency graphs for locally developed pack
+         oh-1           read=['conan/api/subapi/workspace.py', 'conan/internal/model/requires.py'] steps=7 retried=None
+         oh-cg-3        read=['conan/api/subapi/workspace.py', 'conan/internal/graph/install_graph.py'] steps=3 retried=None
+   -28  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   -22  Why was a custom HTTP requester that selectively returns failure responses for file downloads used in the test suite tha
+         oh-1           read=['conan/internal/rest/file_downloader.py', 'conan/test/utils/tools.py', 'test/integration/remote/download_retries_test.py', 'test/integration/remote/retry_test.py'] steps=4 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   +39  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-3        read=['conans/model/version_range.py'] steps=2 retried=None
+   +32  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-3        read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+   +25  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-cg-3        read=['conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py'] steps=10 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+1.0 95%CI=[-3.1,+4.8] median=+2.0 win/tie/loss=27/7/14 sign-test p=0.060 | n for 80% power at this Δ ≈ 1467
+   by category: what: -1.4 [-7.2,+3.9] (n=12)  how: -3.0 [-13.9,+5.9] (n=12)  why: +0.1 [-5.2,+4.8] (n=12)  where: +8.4 [+0.4,+17.2] (n=12)
+   paired efficiency (b−a): input_tokens: +12850 [-249,+26572] (1.21x)  peak_input_tokens: +6245 [+4907,+7685] (1.51x)  output_tokens: -158 [-289,-20] (0.84x)  tool_calls: -2 [-3,-1] (0.75x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +155 [+38,+274] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 32/9/7; hit cap: {'oh-1': 11, 'oh-cg-4': 6}
+   -47  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-cg-4        read=['conan/tools/cmake/cmakedeps/cmakedeps.py', 'conan/tools/cmake/cmakedeps2/cmakedeps.py', 'conan/tools/gnu/pkgconfigdeps/pkgconfigdeps.py'] steps=10 retried=None
+   -27  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-4        read=['conan/internal/subsystems.py'] steps=2 retried=None
+   -21  Why was a custom HTTP requester that selectively returns failure responses for file downloads used in the test suite tha
+         oh-1           read=['conan/internal/rest/file_downloader.py', 'conan/test/utils/tools.py', 'test/integration/remote/download_retries_test.py', 'test/integration/remote/retry_test.py'] steps=4 retried=None
+         oh-cg-4        read=[] steps=3 retried=None
+   +41  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-4        read=[] steps=4 retried=None
+   +25  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-4        read=['test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=9 retried=None
+   +20  Where does the test suite for platform-provided dependency resolution resolve platform-provided dependencies when a reci
+         oh-1           read=['conan/internal/graph/graph_builder.py', 'test/integration/graph/test_platform_requires.py', 'test/integration/graph/test_system_tools.py'] steps=10 retried=None
+         oh-cg-4        read=['test/integration/graph/test_platform_requires.py'] steps=3 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+1.2 95%CI=[-3.3,+5.6] median=+0.5 win/tie/loss=24/8/16 sign-test p=0.268 | n for 80% power at this Δ ≈ 1237
+   by category: what: +1.2 [-0.8,+3.5] (n=12)  how: -1.6 [-13.7,+8.8] (n=12)  why: +0.0 [-8.5,+7.6] (n=12)  where: +5.3 [-4.5,+17.2] (n=12)
+   paired efficiency (b−a): input_tokens: +19920 [+7331,+34644] (1.32x)  peak_input_tokens: +6252 [+4931,+7778] (1.51x)  output_tokens: -121 [-231,-1] (0.88x)  tool_calls: -1 [-2,-0] (0.80x)  wall_s: -1 [-2,+0] (0.92x)  answer_chars: +199 [+61,+340] (1.28x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/13/7; hit cap: {'oh-1': 11, 'oh-cg-5': 8}
+   -47  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-cg-5        read=['conan/tools/cmake/cmakedeps/cmakedeps.py', 'conan/tools/google/bazeldeps.py'] steps=10 retried=None
+   -36  Why was a custom HTTP requester that selectively returns failure responses for file downloads used in the test suite tha
+         oh-1           read=['conan/internal/rest/file_downloader.py', 'conan/test/utils/tools.py', 'test/integration/remote/download_retries_test.py', 'test/integration/remote/retry_test.py'] steps=4 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   -34  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-5        read=[] steps=2 retried=None
+   +55  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-5        read=['conans/model/version_range.py'] steps=2 retried=None
+   +29  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-cg-5        read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py'] steps=10 retried=None
+   +21  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-cg-5        read=['test/unittests/server/conan_server_config_parser_test.py'] steps=3 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+0.3 95%CI=[-4.7,+4.9] median=+0.5 win/tie/loss=24/9/15 sign-test p=0.200 | n for 80% power at this Δ ≈ 23500
+   by category: what: -1.1 [-6.0,+2.8] (n=12)  how: -9.1 [-22.3,+2.0] (n=12)  why: +8.2 [+3.3,+14.3] (n=12)  where: +3.2 [-7.3,+15.1] (n=12)
+   paired efficiency (b−a): input_tokens: +12763 [+951,+24771] (1.20x)  peak_input_tokens: +5558 [+4527,+6567] (1.45x)  output_tokens: -196 [-323,-71] (0.81x)  tool_calls: -2 [-3,-1] (0.72x)  wall_s: -2 [-3,-1] (0.83x)  answer_chars: +112 [-9,+226] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 29/12/7; hit cap: {'oh-1': 11, 'oh-cg-6': 7}
+   -53  How does the workspace management interface ensure consistency when merging dependency graphs for locally developed pack
+         oh-1           read=['conan/api/subapi/workspace.py', 'conan/internal/model/requires.py'] steps=7 retried=None
+         oh-cg-6        read=['conan/api/subapi/workspace.py'] steps=3 retried=None
+   -49  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-cg-6        read=['conan/tools/cmake/cmakedeps/cmakedeps.py', 'conan/tools/gnu/makedeps.py', 'conan/tools/google/bazeldeps.py'] steps=10 retried=None
+   -27  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-6        read=[] steps=3 retried=None
+   +53  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-6        read=['conan/internal/graph/graph_builder.py', 'conan/internal/graph/range_resolver.py'] steps=4 retried=None
+   +35  Why does the combination of path normalization with string replacement operations and multiple dictionary merge operatio
+         oh-1           read=[] steps=10 retried=None
+         oh-cg-6        read=['conan/api/subapi/list.py', 'conan/internal/api/list/query_parse.py', 'conan/tools/env/environment.py', 'conan/tools/gnu/makedeps.py', 'conan/tools/gnu/pkgconfigdeps.py'] steps=10 retried=None
+   +25  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-6        read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=10 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+0.5 95%CI=[-4.4,+5.1] median=+2.0 win/tie/loss=26/7/15 sign-test p=0.117 | n for 80% power at this Δ ≈ 7396
+   by category: what: +0.4 [-7.1,+7.5] (n=12)  how: -5.0 [-16.7,+4.2] (n=12)  why: -0.6 [-7.8,+6.6] (n=12)  where: +7.3 [-3.1,+18.7] (n=12)
+   paired efficiency (b−a): input_tokens: +15591 [+3125,+29109] (1.25x)  peak_input_tokens: +6459 [+5234,+7732] (1.52x)  output_tokens: -142 [-269,-4] (0.86x)  tool_calls: -2 [-3,-1] (0.76x)  wall_s: -1 [-2,+0] (0.90x)  answer_chars: +207 [+65,+359] (1.29x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/11/7; hit cap: {'oh-1': 11, 'oh-cg-7': 6}
+   -53  How does the workspace management interface ensure consistency when merging dependency graphs for locally developed pack
+         oh-1           read=['conan/api/subapi/workspace.py', 'conan/internal/model/requires.py'] steps=7 retried=None
+         oh-cg-7        read=['conan/api/subapi/workspace.py', 'conan/internal/graph/install_graph.py'] steps=4 retried=None
+   -33  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-7        read=[] steps=2 retried=None
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-cg-7        read=['conan/tools/gnu/gnutoolchain.py'] steps=3 retried=None
+   +52  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-7        read=[] steps=3 retried=None
+   +31  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-7        read=['test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+   +20  Why does the server configuration parser enforce ASCII-only passwords for users in the server configuration?
+         oh-1           read=['conans/server/conf/__init__.py', 'conans/server/rest/bottle_plugins/http_basic_authentication.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=5 retried=None
+         oh-cg-7        read=['conans/server/service/authorize.py', 'test/unittests/server/conan_server_config_parser_test.py'] steps=6 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+0.2 95%CI=[-4.4,+4.6] median=+0.0 win/tie/loss=22/4/22 sign-test p=1.000 | n for 80% power at this Δ ≈ 71081
+   by category: what: -1.3 [-7.2,+2.7] (n=12)  how: -2.9 [-12.7,+6.5] (n=12)  why: -1.4 [-8.4,+5.8] (n=12)  where: +6.3 [-5.0,+18.4] (n=12)
+   paired efficiency (b−a): input_tokens: +12956 [+873,+25090] (1.21x)  peak_input_tokens: +5956 [+4865,+7048] (1.48x)  output_tokens: -149 [-275,-17] (0.85x)  tool_calls: -2 [-3,-1] (0.76x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +259 [+130,+389] (1.37x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/11/6; hit cap: {'oh-1': 11, 'oh-cg-8': 7}
+   -36  How does the package manager compute the final target platform and build platform dependency sets when a package is decl
+         oh-1           read=['conan/internal/graph/graph.py', 'conan/internal/graph/graph_builder.py', 'conan/internal/model/requires.py', 'conans/client/graph/graph_manager.py'] steps=10 retried=None
+         oh-cg-8        read=['conan/tools/cmake/cmakedeps/cmakedeps.py', 'conan/tools/google/bazeldeps.py'] steps=10 retried=None
+   -30  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-cg-8        read=['conan/tools/gnu/gnutoolchain.py'] steps=3 retried=None
+   -27  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-8        read=[] steps=3 retried=None
+   +53  Where does the source version information flow into the range membership validation method when the range validation met
+         oh-1           read=['conan/__init__.py', 'conan/internal/model/version_range.py'] steps=5 retried=None
+         oh-cg-8        read=[] steps=2 retried=None
+   +29  How does the internal Conan logic resolve the package reference for a "test" command to prevent rebuilding when only tes
+         oh-1           read=['conan/api/subapi/graph.py', 'conan/cli/commands/create.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py', 'conan/internal/graph/graph_builder.py', 'conans/client/command.py'] steps=9 retried=None
+         oh-cg-8        read=['conan/api/subapi/graph.py', 'conan/cli/commands/test.py', 'conan/internal/graph/graph_binaries.py'] steps=8 retried=None
+   +25  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-8        read=['conan/internal/graph/compatibility.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=8 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+3.0 95%CI=[-0.5,+6.6] median=+2.5 win/tie/loss=28/4/16 sign-test p=0.096 | n for 80% power at this Δ ≈ 132
+   by category: what: +6.3 [+1.6,+13.4] (n=12)  how: -1.5 [-9.2,+5.8] (n=12)  why: +1.8 [-4.1,+9.0] (n=12)  where: +5.4 [-0.2,+12.4] (n=12)
+   paired efficiency (b−a): input_tokens: +13750 [+3234,+24915] (1.22x)  peak_input_tokens: +6225 [+5118,+7361] (1.51x)  output_tokens: -118 [-234,-2] (0.88x)  tool_calls: -2 [-3,-1] (0.77x)  wall_s: -1 [-2,+0] (0.93x)  answer_chars: +309 [+141,+487] (1.44x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/12/6; hit cap: {'oh-1': 11, 'oh-cg-9': 5}
+   -30  How does the path translation function internally normalize a Windows UNC path to convert it into a Unix-style path for 
+         oh-1           read=['conan/internal/subsystems.py', 'conan/tools/microsoft/subsystems.py', 'test/unittests/util/unix_path_test.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=2 retried=None
+   -21  How does the function that validates file integrity by comparing computed and expected hash signatures handle errors as 
+         oh-1           read=['conan/internal/util/files.py', 'test/unittests/util/file_hashes_test.py'] steps=2 retried=None
+         oh-cg-9        read=['conan/internal/util/files.py', 'conan/tools/files/files.py', 'test/unittests/tools/files/checksums_test.py'] steps=4 retried=None
+   -14  Where does the build system toolchain configuration generator determine the mobile platform native development toolkit c
+         oh-1           read=['conan/tools/android/utils.py', 'conan/tools/meson/toolchain.py'] steps=6 retried=None
+         oh-cg-9        read=['conan/tools/cmake/toolchain/blocks.py', 'conan/tools/gnu/gnutoolchain.py', 'conan/tools/meson/toolchain.py'] steps=5 retried=None
+   +39  What is the influence of the architecture string returned by the function that converts architecture names to Apple-spec
+         oh-1           read=['conan/tools/apple/apple.py', 'conan/tools/apple/xcodebuild.py', 'test/unittests/client/tools/apple/test_xcodebuild.py'] steps=4 retried=None
+         oh-cg-9        read=['conan/tools/apple/apple.py', 'conan/tools/gnu/autotoolstoolchain.py', 'conan/tools/gnu/gnutoolchain.py', 'conan/tools/meson/toolchain.py'] steps=9 retried=None
+   +36  Why does using a shared library versus a static library in a test function that verifies local build functionality for a
+         oh-1           read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/utils.py'] steps=10 retried=None
+         oh-cg-9        read=['test/functional/toolchains/cmake/test_cmake.py', 'test/functional/toolchains/cmake/test_ninja.py', 'test/functional/toolchains/gnu/autotools/test_basic.py'] steps=7 retried=None
+   +35  Where in the test class that verifies default compatibility fallback behavior is the logic that triggers the compatibili
+         oh-1           read=['conan/internal/graph/compatibility.py', 'test/integration/extensions/test_cppstd_compat.py', 'test/integration/package_id/compatible_test.py', 'test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+         oh-cg-9        read=['test/integration/package_id/test_cache_compatibles.py'] steps=6 retried=None
+
+wrote runs/sweqa-r5-conan-k10/analysis.json

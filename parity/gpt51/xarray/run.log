@@ -1,0 +1,125 @@
+=== run.py specs/sweqa-r5p-gpt51-xarray-k1.json at 2026-10-15T17:43:59Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name xarray --questions benchmarks/swe-qa/xarray.jsonl --condition oh --out runs/sweqa-r5p-gpt51-xarray-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/xarray --profile closeai-gpt51 --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=closeai-gpt51 model=gpt-5.1-2025-11-13 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=40119bf35c53
+[1/48] 11.5s steps=2 calls=2 files=1+0m map=0/0c in=18272 out=306 status=finished   
+[2/48] 11.8s steps=3 calls=3 files=1+0m map=0/0c in=24161 out=216 status=finished   
+[3/48] 13.0s steps=3 calls=3 files=1+0m map=0/0c in=25518 out=425 status=finished   
+[4/48] 12.6s steps=3 calls=3 files=1+0m map=0/0c in=24494 out=263 status=finished   
+[5/48] 13.0s steps=3 calls=3 files=1+0m map=0/0c in=25013 out=268 status=finished   
+[6/48] 16.3s steps=3 calls=3 files=1+0m map=0/0c in=28767 out=318 status=finished   
+[7/48] 17.4s steps=4 calls=4 files=2+0m map=0/0c in=38633 out=411 status=finished   
+[8/48] 17.8s steps=4 calls=4 files=2+0m map=0/0c in=38114 out=393 status=finished   
+[9/48] 18.0s steps=5 calls=5 files=1+0m map=0/0c in=38444 out=335 status=finished   
+[10/48] 18.4s steps=5 calls=5 files=2+0m map=0/0c in=40866 out=367 status=finished   
+[11/48] 21.0s steps=4 calls=4 files=2+0m map=0/0c in=44152 out=605 status=finished   
+[12/48] 22.2s steps=6 calls=6 files=2+0m map=0/0c in=51417 out=490 status=finished   
+[13/48] 22.8s steps=6 calls=6 files=3+0m map=0/0c in=48756 out=494 status=finished   
+[14/48] 21.9s steps=5 calls=5 files=1+0m map=0/0c in=41703 out=586 status=finished   
+[15/48] 10.7s steps=2 calls=2 files=1+0m map=0/0c in=22452 out=299 status=finished   
+[16/48] 13.8s steps=3 calls=3 files=1+0m map=0/0c in=29560 out=334 status=finished   
+[17/48] 27.0s steps=7 calls=7 files=1+0m map=0/0c in=64316 out=594 status=finished   
+[18/48] 13.2s steps=3 calls=3 files=1+0m map=0/0c in=24136 out=281 status=finished   
+[19/48] 32.7s steps=9 calls=9 files=2+0m map=0/0c in=79484 out=566 status=finished   
+[20/48] 20.3s steps=5 calls=5 files=1+0m map=0/0c in=56849 out=443 status=finished   
+[21/48] 16.8s steps=4 calls=4 files=1+0m map=0/0c in=33169 out=428 status=finished   
+[22/48] 16.1s steps=3 calls=3 files=1+0m map=0/0c in=29862 out=413 status=finished   
+[23/48] 12.9s steps=3 calls=3 files=1+0m map=0/0c in=25220 out=279 status=finished   
+[24/48] 22.1s steps=5 calls=5 files=1+0m map=0/0c in=45674 out=588 status=finished   
+[25/48] 12.9s steps=3 calls=3 files=1+0m map=0/0c in=29528 out=319 status=finished   
+[26/48] 19.3s steps=4 calls=4 files=2+0m map=0/0c in=40155 out=580 status=finished   
+[27/48] 14.9s steps=4 calls=4 files=1+0m map=0/0c in=32069 out=307 status=finished   
+[28/48] 20.2s steps=5 calls=5 files=1+0m map=0/0c in=56967 out=362 status=finished   
+[29/48] 27.0s steps=5 calls=5 files=2+0m map=0/0c in=51811 out=970 status=finished   
+[30/48] 17.9s steps=4 calls=4 files=1+0m map=0/0c in=32376 out=433 status=finished   
+[31/48] 17.4s steps=3 calls=3 files=1+0m map=0/0c in=29018 out=435 status=finished   
+[32/48] 11.5s steps=2 calls=2 files=1+0m map=0/0c in=18813 out=260 status=finished   
+[33/48] 13.2s steps=3 calls=3 files=1+0m map=0/0c in=24120 out=244 status=finished   
+[34/48] 13.2s steps=3 calls=3 files=1+0m map=0/0c in=25710 out=319 status=finished   
+[35/48] 12.6s steps=3 calls=3 files=1+0m map=0/0c in=36180 out=224 status=finished   
+[36/48] 13.2s steps=3 calls=3 files=1+0m map=0/0c in=24407 out=228 status=finished   
+[37/48] 15.9s steps=4 calls=4 files=1+0m map=0/0c in=35254 out=361 status=finished   
+[38/48] 14.2s steps=3 calls=3 files=1+0m map=0/0c in=25295 out=365 status=finished   
+[39/48] 21.0s steps=5 calls=5 files=2+0m map=0/0c in=46331 out=405 status=finished   
+[40/48] 14.6s steps=3 calls=3 files=1+0m map=0/0c in=26827 out=373 status=finished   
+[41/48] 24.1s steps=6 calls=6 files=2+0m map=0/0c in=64986 out=589 status=finished   
+[42/48] 30.5s steps=6 calls=6 files=2+0m map=0/0c in=60560 out=738 status=finished   
+[43/48] 25.0s steps=7 calls=7 files=2+0m map=0/0c in=65729 out=500 status=finished   
+[44/48] 18.3s steps=4 calls=4 files=2+0m map=0/0c in=47997 out=512 status=finished   
+[45/48] 12.8s steps=3 calls=3 files=1+0m map=0/0c in=24433 out=314 status=finished   
+[46/48] 31.3s steps=7 calls=8 files=3+0m map=0/0c in=79183 out=881 status=finished   
+[47/48] 27.9s steps=9 calls=9 files=2+0m map=0/0c in=80457 out=627 status=finished   
+[48/48] 30.8s steps=9 calls=10 files=2+0m map=0/0c in=96481 out=817 status=finished   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-gpt51-xarray-k1 --json runs/sweqa-r5p-gpt51-xarray-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-gpt51-xarray-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     0      0     0     0     0    0
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 0 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 0 forced answers · 0 refusal/garble re-runs · 0 degenerate · 0 garbled-final · 0 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-gpt51-xarray-k1/answers-oh.jsonl --out runs/sweqa-r5p-gpt51-xarray-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['gpt-5.1-2025-11-13']
+[1/48] total=71 votes=5 
+[2/48] total=80 votes=5 
+[3/48] total=66 votes=5 
+[4/48] total=82 votes=5 
+[5/48] total=81 votes=5 
+[6/48] total=72 votes=5 
+[7/48] total=73 votes=5 
+[8/48] total=84 votes=5 
+[9/48] total=76 votes=5 
+[10/48] total=79 votes=5 
+[11/48] total=81 votes=5 
+[12/48] total=81 votes=5 
+[13/48] total=81 votes=5 
+[14/48] total=80 votes=5 
+[15/48] total=84 votes=5 
+[16/48] total=70 votes=5 
+[17/48] total=49 votes=5 
+[18/48] total=72 votes=5 
+[19/48] total=85 votes=5 
+[20/48] total=59 votes=5 
+[21/48] total=90 votes=5 
+[22/48] total=81 votes=5 
+[23/48] total=69 votes=5 
+[24/48] total=83 votes=5 
+[25/48] total=88 votes=5 
+[26/48] total=90 votes=5 
+[27/48] total=82 votes=5 
+[28/48] total=51 votes=5 
+[29/48] total=80 votes=5 
+[30/48] total=80 votes=5 
+[31/48] total=76 votes=5 
+[32/48] total=85 votes=5 
+[33/48] total=88 votes=5 
+[34/48] total=84 votes=5 
+[35/48] total=86 votes=5 
+[36/48] total=79 votes=5 
+[37/48] total=81 votes=5 
+[38/48] total=57 votes=5 
+[39/48] total=85 votes=5 
+[40/48] total=86 votes=5 
+[41/48] total=86 votes=5 
+[42/48] total=50 votes=5 
+[43/48] total=88 votes=5 
+[44/48] total=70 votes=5 
+[45/48] total=70 votes=5 
+[46/48] total=80 votes=5 
+[47/48] total=45 votes=5 
+[48/48] total=87 votes=5 
+run: runs/sweqa-r5p-gpt51-xarray-k1
+manifest: harness=None created=2026-10-15T17:44:03Z repo=xarray commit=40119bf35c53 index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   76.7  11.2   73.8   83.6   76.9   72.7 |   4.3   4.4   1.4   0.0 |    40702    10206     435     874    n/a   18.4 |   0.72   0.00   0.13
+dims: oh=15.4/12.4/18.4/16.3/14.2
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=1,953,719 out=20,865
+
+wrote runs/sweqa-r5p-gpt51-xarray-k1/analysis.json
+

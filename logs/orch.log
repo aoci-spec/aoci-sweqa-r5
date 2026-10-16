@@ -1,0 +1,31 @@
+01:29:43 START lanes=3 queue=django pylint sympy conan scikit-learn matplotlib astropy sphinx streamlink sqlfluff reflex pytest xarray flask
+01:29:43 pylint start
+01:29:43 sympy start
+01:29:43 django start
+01:29:43 django size-alarm → force-size
+02:04:56 sympy rc=0 s3 done · sympy-r5 · entries 1584/1584 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.86 · fallback 0 · tok
+02:04:56 scikit-learn start
+02:16:56 pylint rc=0 s3 done · pylint-r5 · entries 2309/2309 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.89 · fallback 0 · to
+02:16:56 conan start
+02:17:00 django rc=0 s3 done · django-r5 · entries 2845/2845 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.85 · fallback 0 · to
+02:23:13 scikit-learn rc=0 s3 done · scikit-learn-r5 · entries 1060/1060 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.85 · fallback 0
+02:23:13 matplotlib start
+02:28:27 conan rc=0 s3 done · conan-r5 · entries 1076/1076 · verify missing=0 (untracked-in-clone 1) · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.
+02:28:27 astropy start
+02:33:55 matplotlib rc=0 s3 done · matplotlib-r5 · entries 991/991 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.89 · fallback 0 · 
+02:33:55 sphinx start
+02:44:06 sphinx rc=0 s3 done · sphinx-r5 · entries 746/746 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.91 · fallback 0 · toke
+02:44:06 sqlfluff start
+02:44:52 astropy rc=0 s3 done · astropy-r5 · entries 973/973 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.91 · fallback 0 · tok
+02:44:52 streamlink start
+02:50:15 streamlink rc=0 s3 done · streamlink-r5 · entries 511/511 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.90 · fallback 0 · 
+02:50:15 reflex start
+02:50:24 sqlfluff rc=0 s3 done · sqlfluff-r5 · entries 392/392 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.88 · fallback 0 · to
+02:50:24 pytest start
+02:54:35 reflex rc=0 s3 done · reflex-r5 · entries 384/384 · verify missing=0 (untracked-in-clone 1) · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.8
+02:54:35 xarray start
+02:57:12 xarray rc=0 s3 done · xarray-r5 · entries 233/233 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.91 · fallback 0 · toke
+02:58:17 pytest rc=0 s3 done · pytest-r5 · entries 268/268 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.91 · fallback 0 · toke
+02:58:17 flask start
+02:59:44 flask rc=0 s3 done · flask-r5 · entries 83/83 · verify missing=0 (untracked-in-clone 1) · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.88 �
+02:59:44 ALL-LANES-DONE

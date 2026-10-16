@@ -1,0 +1,157 @@
+=== run.py specs/sweqa-r5p-gpt51-sphinx-k1.json at 2026-10-15T18:04:42Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name sphinx --questions benchmarks/swe-qa/sphinx.jsonl --condition oh --out runs/sweqa-r5p-gpt51-sphinx-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/sphinx --profile closeai-gpt51 --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=closeai-gpt51 model=gpt-5.1-2025-11-13 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=6c9e3209c4eb
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-root/wrongenc.inc' from UTF-8 to latin-1
+error: failed to encode 'tests/roots/test-warnings/wrongenc.inc' from UTF-8 to latin-1
+[1/48] 13.2s steps=3 calls=4 files=2+0m map=0/0c in=30368 out=268 status=finished   
+[2/48] 14.3s steps=3 calls=4 files=2+0m map=0/0c in=36343 out=281 status=finished   
+[3/48] 16.1s steps=4 calls=4 files=2+0m map=0/0c in=54896 out=343 status=finished   
+[4/48] 15.0s steps=4 calls=5 files=3+0m map=0/0c in=33163 out=291 status=finished   
+[5/48] 18.2s steps=5 calls=5 files=3+0m map=0/0c in=46326 out=356 status=finished   
+[6/48] 19.2s steps=6 calls=6 files=1+0m map=0/0c in=45623 out=310 status=finished   
+[7/48] 19.8s steps=4 calls=4 files=2+0m map=0/0c in=60516 out=528 status=finished   
+[8/48] 21.9s steps=6 calls=6 files=2+0m map=0/0c in=52140 out=417 status=finished   
+[9/48] 9.6s steps=2 calls=2 files=1+0m map=0/0c in=23748 out=217 status=finished   
+[10/48] 13.9s steps=3 calls=4 files=1+0m map=0/0c in=25478 out=415 status=finished   
+[11/48] 12.5s steps=2 calls=2 files=1+0m map=0/0c in=22793 out=228 status=finished   
+[12/48] 33.8s steps=9 calls=9 files=2+0m map=0/0c in=75850 out=716 status=finished   
+[13/48] 33.2s steps=10 calls=10 files=2+0m map=0/0c in=95461 out=622 status=finished forced   
+[14/48] 32.9s steps=10 calls=11 files=0+0m map=0/0c in=72736 out=602 status=finished forced   
+[15/48] 35.3s steps=9 calls=9 files=2+0m map=0/0c in=84941 out=595 status=finished   
+[16/48] 36.1s steps=10 calls=10 files=1+0m map=0/0c in=127547 out=716 status=finished forced   
+[17/48] 14.1s steps=3 calls=3 files=1+0m map=0/0c in=28629 out=391 status=finished   
+[18/48] 16.3s steps=4 calls=4 files=1+0m map=0/0c in=35091 out=319 status=finished   
+[19/48] 24.0s steps=7 calls=7 files=3+0m map=0/0c in=59531 out=487 status=finished   
+[20/48] 20.2s steps=5 calls=5 files=1+0m map=0/0c in=47504 out=362 status=finished   
+[21/48] 38.8s steps=10 calls=10 files=1+0m map=0/0c in=74865 out=895 status=finished forced   
+[22/48] 38.9s steps=10 calls=10 files=1+0m map=0/0c in=93569 out=956 status=finished forced   
+[23/48] 9.1s steps=2 calls=2 files=0+0m map=0/0c in=17814 out=219 status=finished   
+[24/48] 27.7s steps=5 calls=5 files=1+0m map=0/0c in=64739 out=763 status=finished   
+[25/48] 48.3s steps=10 calls=10 files=1+0m map=0/0c in=155327 out=620 status=finished forced   
+[26/48] 16.8s steps=5 calls=5 files=0+0m map=0/0c in=37193 out=330 status=finished   
+[27/48] 18.6s steps=4 calls=5 files=1+0m map=0/0c in=34968 out=392 status=finished   
+[28/48] 20.6s steps=6 calls=6 files=1+0m map=0/0c in=44234 out=387 status=finished   
+[29/48] 23.1s steps=4 calls=4 files=1+0m map=0/0c in=31062 out=350 status=finished   
+[30/48] 18.9s steps=5 calls=5 files=1+0m map=0/0c in=42082 out=354 status=finished   
+[31/48] 8.8s steps=2 calls=2 files=1+0m map=0/0c in=22556 out=151 status=finished   
+[32/48] 22.6s steps=6 calls=6 files=1+0m map=0/0c in=77285 out=387 status=finished   
+[33/48] 34.4s steps=10 calls=10 files=3+0m map=0/0c in=85038 out=648 status=finished forced   
+[34/48] 27.0s steps=8 calls=8 files=1+0m map=0/0c in=65340 out=506 status=finished   
+[35/48] 20.8s steps=6 calls=6 files=1+0m map=0/0c in=47015 out=360 status=finished   
+[36/48] 30.7s steps=9 calls=9 files=1+0m map=0/0c in=78499 out=743 status=finished   
+[37/48] 31.0s steps=8 calls=8 files=2+0m map=0/0c in=67377 out=514 status=finished   
+[38/48] 12.9s steps=3 calls=3 files=1+0m map=0/0c in=28609 out=229 status=finished   
+[39/48] 33.5s steps=9 calls=9 files=2+0m map=0/0c in=78037 out=589 status=finished   
+[40/48] 14.0s steps=3 calls=3 files=1+0m map=0/0c in=26468 out=250 status=finished   
+[41/48] 23.5s steps=6 calls=6 files=1+0m map=0/0c in=58265 out=385 status=finished   
+[42/48] 30.2s steps=8 calls=8 files=2+0m map=0/0c in=98587 out=538 status=finished   
+[43/48] 49.8s steps=8 calls=8 files=2+0m map=0/0c in=78185 out=547 status=finished   
+[44/48] 36.3s steps=10 calls=10 files=3+0m map=0/0c in=86584 out=711 status=finished forced   
+[45/48] 68.2s steps=7 calls=7 files=2+0m map=0/0c in=76468 out=546 status=finished  CONTAM=1 
+[46/48] 36.5s steps=10 calls=10 files=3+0m map=0/0c in=105197 out=867 status=finished forced   
+[47/48] 69.0s steps=7 calls=7 files=1+0m map=0/0c in=108530 out=487 status=finished   
+[48/48] 64.9s steps=10 calls=10 files=2+0m map=0/0c in=152533 out=632 status=finished forced   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-gpt51-sphinx-k1 --json runs/sweqa-r5p-gpt51-sphinx-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-gpt51-sphinx-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     1     10     0     0     0    3
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 1 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 10 forced answers · 0 refusal/garble re-runs · 0 degenerate · 0 garbled-final · 3 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-gpt51-sphinx-k1/answers-oh.jsonl --out runs/sweqa-r5p-gpt51-sphinx-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['gpt-5.1-2025-11-13']
+[1/48] total=40 votes=5 
+[2/48] total=70 votes=5 
+[3/48] total=70 votes=5 
+[4/48] total=47 votes=5 
+[5/48] total=71 votes=5 
+[6/48] total=61 votes=5 
+[7/48] total=70 votes=5 
+[8/48] total=72 votes=5 
+[9/48] total=82 votes=5 
+[10/48] total=62 votes=5 
+[11/48] total=59 votes=5 
+[12/48] total=71 votes=5 
+[13/48] total=84 votes=5 
+[14/48] total=74 votes=5 
+[15/48] total=82 votes=5 
+[16/48] total=47 votes=5 
+[17/48] total=86 votes=5 
+[18/48] total=47 votes=5 
+[19/48] total=79 votes=5 
+[20/48] total=69 votes=5 
+[21/48] total=62 votes=5 
+[22/48] total=69 votes=5 
+[23/48] total=89 votes=5 
+[24/48] total=64 votes=5 
+[25/48] total=60 votes=5 
+[26/48] total=59 votes=5 
+[27/48] total=81 votes=5 
+[28/48] total=91 votes=5 
+[29/48] total=60 votes=5 
+[30/48] total=76 votes=5 
+[31/48] total=85 votes=5 
+[32/48] total=69 votes=5 
+[33/48] total=80 votes=5 
+[34/48] total=78 votes=5 
+[35/48] total=74 votes=5 
+[36/48] total=66 votes=5 
+[37/48] total=83 votes=5 
+[38/48] total=72 votes=5 
+[39/48] total=77 votes=5 
+[40/48] total=70 votes=5 
+[41/48] total=60 votes=5 
+[42/48] total=74 votes=5 
+[43/48] total=64 votes=5 
+[44/48] total=51 votes=5 
+[45/48] total=39 votes=5 
+[46/48] total=84 votes=5 
+[47/48] total=52 votes=5 
+[48/48] total=69 votes=5 
+run: runs/sweqa-r5p-gpt51-sphinx-k1
+manifest: harness=None created=2026-10-15T18:04:46Z repo=sphinx commit=6c9e3209c4eb index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   68.8  12.5   64.9   72.5   72.2   64.8 |   6.2   6.4   1.5   0.0 |    62398    12169     475     564    n/a   27.0 |   0.49   0.00   0.09
+dims: oh=13.6/10.4/17.8/15.1/11.9
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=2,995,110 out=22,820
+
+wrote runs/sweqa-r5p-gpt51-sphinx-k1/analysis.json
+

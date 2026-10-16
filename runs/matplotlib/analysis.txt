@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-matplotlib-k10
+manifest: harness=None created=2026-10-15T22:23:07Z repo=matplotlib commit=a5e1f6086e92 index_entries=984
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   80.6  12.5   77.2   86.1   83.6   75.4 |   3.9   5.4   1.8   0.0 |    42240    10516     912    1191    n/a    8.0 |   0.86   0.00   0.30
+oh-10           48   0   0 |   80.3  12.3   77.1   84.3   82.0   77.9 |   4.2   5.8   1.8   0.0 |    47150    10881     991    1313    n/a    8.6 |   0.83   0.00   0.32
+oh-2            48   0   0 |   81.7  11.7   81.3   85.0   81.6   78.9 |   4.4   6.0   1.8   0.0 |    48414    10840     998    1274    n/a    8.9 |   0.78   0.00   0.31
+oh-3            48   0   0 |   81.1  11.1   80.7   83.9   83.2   76.7 |   4.0   5.8   1.8   0.0 |    44375    10712     970    1240    n/a    8.6 |   0.82   0.00   0.33
+oh-4            48   0   0 |   81.0  10.4   78.9   84.2   83.8   76.8 |   4.1   5.9   1.9   0.0 |    47015    10874     987    1278    n/a    9.0 |   0.83   0.00   0.35
+oh-5            48   0   0 |   81.8  10.5   80.3   84.8   83.8   78.3 |   4.6   6.1   1.9   0.0 |    50512    11014     986    1150    n/a   11.1 |   0.81   0.00   0.28
+oh-6            48   0   0 |   81.1  12.3   78.5   86.2   81.9   77.8 |   4.5   6.2   1.8   0.0 |    51633    11233    1027    1233    n/a    9.5 |   0.82   0.00   0.38
+oh-7            48   0   0 |   81.4  10.8   81.2   85.9   81.3   77.2 |   4.2   5.7   1.8   0.0 |    46974    10963     936    1110    n/a    8.3 |   0.82   0.00   0.38
+oh-8            48   0   0 |   81.1  10.5   82.2   82.2   82.7   77.4 |   3.9   5.6   1.8   0.0 |    42933    10539     941    1219    n/a    8.4 |   0.77   0.00   0.33
+oh-9            48   0   0 |   82.4   9.9   83.6   85.2   81.9   78.8 |   4.0   5.7   1.8   0.0 |    45824    11030     983    1259    n/a    8.3 |   0.79   0.00   0.29
+oh-aoci-1       48   0   0 |   85.3   9.1   81.1   88.3   88.8   83.0 |   4.7   5.0   1.6   3.3 |   941254    98732    2799    1730    n/a   34.3 |   0.76   0.10   0.52
+oh-aoci-10      48   0   0 |   83.3  13.3   78.8   87.2   86.6   80.8 |   4.6   4.8   1.6   4.0 |   919819    98514    2617    1807    n/a   37.1 |   0.69   0.06   0.42
+oh-aoci-2       48   0   0 |   84.2  12.1   81.2   88.3   88.8   78.3 |   4.8   5.1   1.6   4.0 |   947135    98618    2607    1702    n/a   34.6 |   0.79   0.21   0.42
+oh-aoci-3       48   0   0 |   81.4  14.7   75.0   86.5   82.6   81.3 |   4.6   4.7   1.6   2.6 |   927232    98694    2750    1572    n/a   33.8 |   0.72   0.10   0.41
+oh-aoci-4       48   0   0 |   83.9  13.3   77.0   89.1   88.6   80.8 |   4.5   4.7   1.5   2.9 |   914130    98286    2589    1707    n/a   35.7 |   0.77   0.08   0.40
+oh-aoci-5       48   0   0 |   83.0  12.2   80.4   85.8   85.4   80.3 |   5.1   5.5   1.7   4.5 |   967481    98811    2675    1763    n/a   36.9 |   0.77   0.13   0.46
+oh-aoci-6       48   0   0 |   84.6  11.2   80.6   87.8   88.3   81.6 |   5.2   5.6   1.9   2.1 |   987489    99119    2878    1793    n/a   34.7 |   0.76   0.05   0.52
+oh-aoci-7       48   0   0 |   84.1  12.3   83.0   87.5   84.1   81.9 |   4.7   5.0   1.8   3.8 |   936147    98606    2623    1772    n/a   37.5 |   0.83   0.13   0.36
+oh-aoci-8       48   0   0 |   84.0  11.0   83.2   85.4   87.3   80.2 |   4.2   4.4   1.6   3.0 |   889601    98209    2550    1762    n/a   35.8 |   0.73   0.08   0.41
+oh-aoci-9       48   0   0 |   83.4  14.7   79.6   87.3   84.8   82.0 |   4.5   4.8   1.5   3.8 |   914094    98564    2616    1840    n/a   32.5 |   0.74   0.13   0.39
+oh-cg-1         48   0   0 |   82.0  10.9   85.2   87.5   81.9   73.3 |   2.9   3.6   0.9  10.6 |    49757    15418     729    1388    n/a    6.8 |   0.50   0.75   0.33
+oh-cg-10        48   0   0 |   81.6   9.4   83.5   84.5   82.2   76.2 |   3.1   3.7   0.9  10.5 |    52263    15805     724    1280    n/a    7.0 |   0.42   0.71   0.32
+oh-cg-2         48   0   0 |   81.6  11.8   82.3   86.9   83.5   73.7 |   2.9   3.5   1.0  10.6 |    49254    15562     863    1756    n/a    7.4 |   0.49   0.71   0.33
+oh-cg-3         48   0   0 |   81.4  11.0   81.8   86.1   84.6   73.2 |   3.0   3.5   1.0  10.9 |    51879    15908     695    1264    n/a    6.9 |   0.44   0.75   0.36
+oh-cg-4         48   0   0 |   82.7  11.5   83.5   84.6   85.2   77.6 |   2.8   3.3   0.8  10.3 |    46229    15528     695    1345    n/a    6.7 |   0.43   0.72   0.35
+oh-cg-5         48   0   0 |   82.0  10.1   82.5   87.9   80.3   77.2 |   2.9   3.3   1.0  11.4 |    48532    15361     666    1202    n/a    6.9 |   0.50   0.78   0.39
+oh-cg-6         48   0   0 |   81.9  11.9   81.8   86.0   82.9   77.0 |   2.9   3.5   0.9   9.5 |    49931    15583     714    1350    n/a    7.0 |   0.43   0.73   0.36
+oh-cg-7         48   0   0 |   82.1  11.9   81.2   86.3   84.0   76.9 |   2.9   3.5   1.0  10.6 |    47927    15354     718    1328    n/a    6.7 |   0.48   0.73   0.38
+oh-cg-8         48   0   0 |   82.1   9.7   83.6   86.2   82.5   75.9 |   3.0   3.5   0.9   9.7 |    51616    15807     729    1407    n/a    6.8 |   0.48   0.70   0.35
+oh-cg-9         48   0   0 |   81.7  10.6   82.4   84.5   81.6   78.3 |   2.8   3.2   0.9  10.4 |    50039    15777     686    1317    n/a    7.4 |   0.42   0.78   0.39
+dims: oh-1=16.1/14.0/18.4/16.6/15.4  oh-10=16.1/14.0/18.5/16.4/15.3  oh-2=16.4/14.2/18.6/16.8/15.6  oh-3=16.4/14.1/18.8/16.5/15.4  oh-4=16.4/14.2/18.6/16.3/15.4  oh-5=16.5/14.1/18.8/16.8/15.6  oh-6=16.2/14.2/18.6/16.6/15.5  oh-7=16.4/14.0/18.9/16.7/15.4  oh-8=16.4/14.1/18.6/16.4/15.5  oh-9=16.6/14.4/18.8/16.8/15.7  oh-aoci-1=17.1/15.5/18.9/17.0/16.8  oh-aoci-10=16.6/15.3/18.2/16.9/16.4  oh-aoci-2=16.8/15.5/18.6/16.9/16.4  oh-aoci-3=16.2/14.6/18.1/16.7/15.7  oh-aoci-4=16.8/15.4/18.5/16.9/16.4  oh-aoci-5=16.5/15.2/18.4/16.7/16.2  oh-aoci-6=16.9/15.5/18.6/17.0/16.5  oh-aoci-7=16.7/15.4/18.6/17.1/16.4  oh-aoci-8=16.7/15.2/18.7/17.0/16.4  oh-aoci-9=16.6/15.3/18.2/17.1/16.3  oh-cg-1=16.5/14.4/18.7/16.7/15.7  oh-cg-10=16.5/14.3/18.7/16.4/15.7  oh-cg-2=16.5/14.5/18.5/16.4/15.7  oh-cg-3=16.3/14.1/18.8/16.7/15.5  oh-cg-4=16.7/14.5/18.7/16.8/16.0  oh-cg-5=16.5/14.2/18.9/16.7/15.7  oh-cg-6=16.5/14.3/18.7/16.8/15.7  oh-cg-7=16.5/14.5/18.7/16.6/15.7  oh-cg-8=16.5/14.4/18.8/16.6/15.7  oh-cg-9=16.4/14.4/18.7/16.7/15.6
+judge vote SD (mean over questions): oh-1=0.8  oh-10=0.9  oh-2=1.0  oh-3=0.9  oh-4=1.0  oh-5=0.9  oh-6=0.9  oh-7=0.8  oh-8=1.0  oh-9=0.9  oh-aoci-1=0.9  oh-aoci-10=1.0  oh-aoci-2=0.8  oh-aoci-3=0.8  oh-aoci-4=0.8  oh-aoci-5=0.7  oh-aoci-6=0.9  oh-aoci-7=0.5  oh-aoci-8=0.9  oh-aoci-9=0.8  oh-cg-1=0.8  oh-cg-10=0.8  oh-cg-2=0.7  oh-cg-3=1.1  oh-cg-4=0.9  oh-cg-5=0.9  oh-cg-6=0.9  oh-cg-7=0.9  oh-cg-8=0.7  oh-cg-9=1.1
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=0.6 calls/717ch (used on 35% of questions)  oh-aoci-10=0.6 calls/945ch (used on 38% of questions)  oh-aoci-2=0.7 calls/902ch (used on 42% of questions)  oh-aoci-3=0.5 calls/611ch (used on 33% of questions)  oh-aoci-4=0.5 calls/614ch (used on 27% of questions)  oh-aoci-5=0.6 calls/964ch (used on 40% of questions)  oh-aoci-6=0.5 calls/464ch (used on 29% of questions)  oh-aoci-7=0.7 calls/779ch (used on 46% of questions)  oh-aoci-8=0.4 calls/595ch (used on 27% of questions)  oh-aoci-9=0.6 calls/815ch (used on 40% of questions)  oh-cg-1=1.1 calls/24310ch (used on 100% of questions)  oh-cg-10=1.1 calls/25738ch (used on 100% of questions)  oh-cg-2=1.1 calls/25106ch (used on 100% of questions)  oh-cg-3=1.2 calls/26565ch (used on 100% of questions)  oh-cg-4=1.2 calls/25460ch (used on 100% of questions)  oh-cg-5=1.1 calls/24535ch (used on 100% of questions)  oh-cg-6=1.1 calls/24759ch (used on 100% of questions)  oh-cg-7=1.1 calls/23905ch (used on 100% of questions)  oh-cg-8=1.2 calls/25554ch (used on 100% of questions)  oh-cg-9=1.2 calls/26221ch (used on 100% of questions)
+totals: oh-1: in=2,027,540 out=43,765  oh-10: in=2,263,189 out=47,589  oh-2: in=2,323,882 out=47,918  oh-3: in=2,129,993 out=46,569  oh-4: in=2,256,740 out=47,358  oh-5: in=2,424,572 out=47,308  oh-6: in=2,478,371 out=49,290  oh-7: in=2,254,762 out=44,905  oh-8: in=2,060,783 out=45,163  oh-9: in=2,199,531 out=47,162  oh-aoci-1: in=45,180,213 out=134,373  oh-aoci-10: in=44,151,304 out=125,604  oh-aoci-2: in=45,462,473 out=125,149  oh-aoci-3: in=44,507,135 out=131,991  oh-aoci-4: in=43,878,261 out=124,287  oh-aoci-5: in=46,439,094 out=128,401  oh-aoci-6: in=47,399,468 out=138,120  oh-aoci-7: in=44,935,060 out=125,908  oh-aoci-8: in=42,700,861 out=122,416  oh-aoci-9: in=43,876,517 out=125,591  oh-cg-1: in=2,388,335 out=35,001  oh-cg-10: in=2,508,602 out=34,735  oh-cg-2: in=2,364,169 out=41,447  oh-cg-3: in=2,490,196 out=33,366  oh-cg-4: in=2,218,977 out=33,337  oh-cg-5: in=2,329,559 out=31,982  oh-cg-6: in=2,396,706 out=34,258  oh-cg-7: in=2,300,502 out=34,458  oh-cg-8: in=2,477,550 out=34,969  oh-cg-9: in=2,401,850 out=32,914
+
+== oh-10 - oh-1: n=48 Δ=-0.2 95%CI=[-2.4,+2.0] median=+0.0 win/tie/loss=21/6/21 sign-test p=1.000 | n for 80% power at this Δ ≈ 8679
+   by category: what: -0.1 [-3.8,+3.2] (n=12)  how: -1.8 [-5.7,+2.2] (n=12)  why: -1.6 [-7.1,+3.8] (n=12)  where: +2.5 [-0.8,+6.5] (n=12)
+   paired efficiency (b−a): input_tokens: +4909 [-2007,+12191] (1.12x)  peak_input_tokens: +365 [-173,+903] (1.03x)  output_tokens: +80 [-21,+180] (1.09x)  tool_calls: +0 [-0,+1] (1.06x)  wall_s: +1 [-0,+1] (1.07x)  answer_chars: +123 [-48,+320] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/25/15; hit cap: {'oh-1': 1, 'oh-10': 2}
+   -17  Why does the exception handling overhead in the get_alpha method's try-except block impact performance when called repea
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/backend_bases.py', 'lib/matplotlib/colorizer.py', 'lib/matplotlib/colors.py'] steps=6 retried=None
+         oh-10          read=['lib/matplotlib/artist.py', 'lib/matplotlib/backend_bases.py', 'lib/matplotlib/colorizer.py'] steps=5 retried=None
+   -15  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-10          read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+   -13  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-10          read=['lib/matplotlib/offsetbox.py'] steps=2 retried=None
+   +20  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-10          read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+   +15  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-10          read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+   +12  How does the TextArea.get_text() method's delegation pattern to self._text.get_text() enable framework-agnostic text ret
+         oh-1           read=['lib/matplotlib/offsetbox.py', 'lib/matplotlib/text.py'] steps=2 retried=None
+         oh-10          read=['lib/matplotlib/offsetbox.py', 'lib/matplotlib/text.py'] steps=2 retried=None
+
+== oh-2 - oh-1: n=48 Δ=+1.1 95%CI=[-0.9,+3.3] median=+0.0 win/tie/loss=23/8/17 sign-test p=0.430 | n for 80% power at this Δ ≈ 326
+   by category: what: +4.2 [-0.2,+8.9] (n=12)  how: -1.1 [-4.6,+1.8] (n=12)  why: -2.0 [-6.2,+2.0] (n=12)  where: +3.5 [+0.2,+7.1] (n=12)
+   paired efficiency (b−a): input_tokens: +6174 [-61,+12737] (1.15x)  peak_input_tokens: +323 [-235,+847] (1.03x)  output_tokens: +87 [-13,+189] (1.09x)  tool_calls: +1 [-0,+1] (1.11x)  wall_s: +1 [+0,+2] (1.11x)  answer_chars: +84 [-47,+215] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/18/18; hit cap: {'oh-1': 1, 'oh-2': 1}
+   -18  Why does the repeated instantiation of CanvasFrame objects within MyApp's OnInit method impact memory allocation and gar
+         oh-1           read=['galleries/examples/user_interfaces/embedding_in_wx2_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx4_sgskip.py', 'galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=7 retried=None
+         oh-2           read=['galleries/examples/user_interfaces/embedding_in_wx2_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx4_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py'] steps=5 retried=None
+   -15  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-2           read=['lib/matplotlib/offsetbox.py'] steps=2 retried=None
+   -13  Why does the _update_glyph_map_defs method scale glyph vertices by 64 before path conversion and then apply a 1/64 scale
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py', 'lib/matplotlib/textpath.py'] steps=8 retried=None
+         oh-2           read=['lib/matplotlib/backends/backend_svg.py'] steps=2 retried=None
+   +24  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-2           read=['lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=8 retried=None
+   +17  Where does the conditional evaluation of tick visibility and orientation in _update_label determine the data flow path f
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=3 retried=None
+         oh-2           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=6 retried=None
+   +13  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-2           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+0.6 95%CI=[-1.5,+3.1] median=-0.5 win/tie/loss=17/7/24 sign-test p=0.349 | n for 80% power at this Δ ≈ 1662
+   by category: what: +3.5 [-2.4,+11.8] (n=12)  how: -2.2 [-4.5,-0.1] (n=12)  why: -0.3 [-3.5,+2.9] (n=12)  where: +1.2 [-1.8,+4.6] (n=12)
+   paired efficiency (b−a): input_tokens: +2134 [-2312,+7092] (1.05x)  peak_input_tokens: +196 [-213,+692] (1.02x)  output_tokens: +58 [-11,+138] (1.06x)  tool_calls: +0 [-0,+1] (1.07x)  wall_s: +1 [+0,+1] (1.07x)  answer_chars: +49 [-61,+162] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/28/10; hit cap: {'oh-1': 1, 'oh-3': 1}
+   -11  How should the `contains` method in `OffsetBox` be refactored to decouple the canvas validation logic from the child del
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+         oh-3           read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+   -10  Why does the _update_glyph_map_defs method scale glyph vertices by 64 before path conversion and then apply a 1/64 scale
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py', 'lib/matplotlib/textpath.py'] steps=8 retried=None
+         oh-3           read=['lib/matplotlib/backends/backend_svg.py', 'lib/matplotlib/textpath.py'] steps=4 retried=None
+   -9  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-3           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+   +43  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-3           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+   +14  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-3           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+   +13  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-3           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+0.4 95%CI=[-1.2,+2.1] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 1686
+   by category: what: +1.8 [-2.9,+6.4] (n=12)  how: -1.8 [-3.9,+0.2] (n=12)  why: +0.2 [-2.0,+2.5] (n=12)  where: +1.4 [-1.4,+4.5] (n=12)
+   paired efficiency (b−a): input_tokens: +4775 [+203,+10245] (1.11x)  peak_input_tokens: +357 [-87,+823] (1.03x)  output_tokens: +75 [-6,+165] (1.08x)  tool_calls: +0 [-0,+1] (1.08x)  wall_s: +1 [+0,+2] (1.12x)  answer_chars: +87 [-83,+283] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 7/26/15; hit cap: {'oh-1': 1, 'oh-4': 2}
+   -16  What is the architectural pattern of StreamMask's trajectory recording and rollback mechanism that decouples the concern
+         oh-1           read=['lib/matplotlib/streamplot.py'] steps=2 retried=None
+         oh-4           read=['lib/matplotlib/streamplot.py'] steps=3 retried=None
+   -9  How does the Legend class implement a multi-layered validation strategy to handle conflicting parameters like title_font
+         oh-1           read=['lib/matplotlib/font_manager.py', 'lib/matplotlib/legend.py'] steps=4 retried=None
+         oh-4           read=['lib/matplotlib/font_manager.py', 'lib/matplotlib/legend.py'] steps=4 retried=None
+   -7  Where does the glyph lookup control flow in DejaVuSerifFonts traverse the fallback chain from the _fontmap dictionary th
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+         oh-4           read=['lib/matplotlib/_mathtext.py'] steps=3 retried=None
+   +22  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-4           read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=8 retried=None
+   +13  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-4           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=3 retried=None
+   +8  Where is the logic that determines how ticklabel offsets are calculated based on vertical and horizontal alignment prope
+         oh-1           read=['lib/matplotlib/axis.py'] steps=5 retried=None
+         oh-4           read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/axis.py'] steps=6 retried=None
+
+== oh-5 - oh-1: n=48 Δ=+1.2 95%CI=[-0.4,+2.9] median=+0.0 win/tie/loss=20/11/17 sign-test p=0.743 | n for 80% power at this Δ ≈ 178
+   by category: what: +3.2 [+0.2,+6.3] (n=12)  how: -1.3 [-3.8,+1.0] (n=12)  why: +0.2 [-3.0,+3.4] (n=12)  where: +2.9 [-0.8,+7.0] (n=12)
+   paired efficiency (b−a): input_tokens: +8272 [+3788,+13123] (1.20x)  peak_input_tokens: +498 [+47,+994] (1.05x)  output_tokens: +74 [-4,+155] (1.08x)  tool_calls: +1 [+0,+1] (1.13x)  wall_s: +3 [+2,+4] (1.39x)  answer_chars: -41 [-150,+73] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 7/16/25; hit cap: {'oh-1': 1, 'oh-5': 5}
+   -10  How does the Legend class implement a multi-layered validation strategy to handle conflicting parameters like title_font
+         oh-1           read=['lib/matplotlib/font_manager.py', 'lib/matplotlib/legend.py'] steps=4 retried=None
+         oh-5           read=['lib/matplotlib/font_manager.py', 'lib/matplotlib/legend.py'] steps=5 retried=None
+   -8  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-5           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+   -8  Why would using a singleton pattern versus repeatedly instantiating the _Unset class throughout matplotlib's codebase im
+         oh-1           read=['lib/matplotlib/_api/__init__.py'] steps=2 retried=None
+         oh-5           read=['lib/matplotlib/_api/__init__.py'] steps=2 retried=None
+   +17  Where is the logic that determines how ticklabel offsets are calculated based on vertical and horizontal alignment prope
+         oh-1           read=['lib/matplotlib/axis.py'] steps=5 retried=None
+         oh-5           read=['axis.py', 'lib/matplotlib/axis.py', 'lib/matplotlib/text.py'] steps=10 retried=None
+   +14  Where does the conditional evaluation of tick visibility and orientation in _update_label determine the data flow path f
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=3 retried=None
+         oh-5           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=4 retried=None
+   +14  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-5           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+
+== oh-6 - oh-1: n=48 Δ=+0.5 95%CI=[-0.8,+1.8] median=+0.0 win/tie/loss=22/9/17 sign-test p=0.522 | n for 80% power at this Δ ≈ 564
+   by category: what: +1.3 [-0.3,+3.1] (n=12)  how: +0.2 [-1.7,+1.9] (n=12)  why: -1.7 [-4.9,+0.7] (n=12)  where: +2.3 [-1.0,+5.4] (n=12)
+   paired efficiency (b−a): input_tokens: +9392 [+4001,+15445] (1.22x)  peak_input_tokens: +717 [+246,+1254] (1.07x)  output_tokens: +115 [+32,+212] (1.13x)  tool_calls: +1 [+0,+1] (1.14x)  wall_s: +2 [+1,+2] (1.19x)  answer_chars: +42 [-67,+180] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 4/25/19; hit cap: {'oh-1': 1, 'oh-6': 5}
+   -17  Why does the exception handling overhead in the get_alpha method's try-except block impact performance when called repea
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/backend_bases.py', 'lib/matplotlib/colorizer.py', 'lib/matplotlib/colors.py'] steps=6 retried=None
+         oh-6           read=['lib/matplotlib/artist.py', 'lib/matplotlib/backend_bases.py', 'lib/matplotlib/colorizer.py'] steps=9 retried=None
+   -8  Where does the FontInfo NamedTuple propagate font metrics and glyph data through the mathematical text rendering pipelin
+         oh-1           read=['lib/matplotlib/_mathtext.py', 'lib/matplotlib/_text_helpers.py', 'lib/matplotlib/backends/backend_ps.py', 'lib/matplotlib/textpath.py'] steps=7 retried=None
+         oh-6           read=['lib/matplotlib/_mathtext.py', 'lib/matplotlib/_text_helpers.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/backends/backend_ps.py', 'lib/matplotlib/textpath.py'] steps=10 retried=None
+   -7  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-6           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+   +10  Where is the bootstrap logic that initializes the matplotlib_inline.backend_inline module located, and how does it deter
+         oh-1           read=['lib/matplotlib/backends/registry.py'] steps=2 retried=None
+         oh-6           read=['lib/matplotlib/backends/registry.py'] steps=2 retried=None
+   +8  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-6           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+   +8  Where does the conditional evaluation of tick visibility and orientation in _update_label determine the data flow path f
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=3 retried=None
+         oh-6           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=6 retried=None
+
+== oh-7 - oh-1: n=48 Δ=+0.9 95%CI=[-0.9,+2.6] median=+0.5 win/tie/loss=24/5/19 sign-test p=0.542 | n for 80% power at this Δ ≈ 394
+   by category: what: +4.0 [-0.2,+8.2] (n=12)  how: -0.2 [-2.0,+1.6] (n=12)  why: -2.2 [-6.0,+0.8] (n=12)  where: +1.8 [-0.9,+4.5] (n=12)
+   paired efficiency (b−a): input_tokens: +4734 [-699,+10502] (1.11x)  peak_input_tokens: +447 [-59,+969] (1.04x)  output_tokens: +24 [-61,+104] (1.03x)  tool_calls: +0 [-0,+1] (1.04x)  wall_s: +0 [-0,+1] (1.03x)  answer_chars: -81 [-189,+28] (0.93x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/25/15; hit cap: {'oh-1': 1, 'oh-7': 3}
+   -19  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-7           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+   -9  What are the cascading effects that would occur in the axis rendering pipeline if modifications to the GridHelperCurveLi
+         oh-1           read=['lib/mpl_toolkits/axisartist/grid_finder.py', 'lib/mpl_toolkits/axisartist/grid_helper_curvelinear.py'] steps=6 retried=None
+         oh-7           read=['lib/mpl_toolkits/axisartist/axis_artist.py', 'lib/mpl_toolkits/axisartist/floating_axes.py', 'lib/mpl_toolkits/axisartist/grid_finder.py', 'lib/mpl_toolkits/axisartist/grid_helper_curvelinear.py'] steps=10 retried=None
+   -8  Where in the AxLine class is the coordinate transformation logic applied to reconcile between data coordinates and displ
+         oh-1           read=['lib/matplotlib/lines.py'] steps=2 retried=None
+         oh-7           read=['lib/matplotlib/lines.py'] steps=2 retried=None
+   +18  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-7           read=['lib/matplotlib/backends/_backend_gtk.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+   +14  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-7           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+   +12  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-7           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=7 retried=None
+
+== oh-8 - oh-1: n=48 Δ=+0.5 95%CI=[-1.7,+3.0] median=-1.0 win/tie/loss=19/4/25 sign-test p=0.451 | n for 80% power at this Δ ≈ 1800
+   by category: what: +5.0 [+0.2,+10.7] (n=12)  how: -3.9 [-8.4,+0.8] (n=12)  why: -0.9 [-4.3,+2.7] (n=12)  where: +2.0 [-1.3,+5.7] (n=12)
+   paired efficiency (b−a): input_tokens: +693 [-4151,+5847] (1.02x)  peak_input_tokens: +23 [-526,+582] (1.00x)  output_tokens: +29 [-64,+120] (1.03x)  tool_calls: +0 [-1,+1] (1.03x)  wall_s: +0 [-0,+1] (1.04x)  answer_chars: +28 [-103,+160] (1.02x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/26/11; hit cap: {'oh-1': 1, 'oh-8': 3}
+   -17  How does TransformWrapper's set() method maintain invalidation state consistency when replacing a child transform, and w
+         oh-1           read=['lib/matplotlib/transforms.py'] steps=5 retried=None
+         oh-8           read=['lib/matplotlib/transforms.py'] steps=5 retried=None
+   -14  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-8           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+   -12  How should the `contains` method in `OffsetBox` be refactored to decouple the canvas validation logic from the child del
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+         oh-8           read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py', 'lib/matplotlib/tests/test_backend_bases.py', 'lib/matplotlib/tests/test_offsetbox.py'] steps=10 retried=None
+   +29  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-8           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/_backend_gtk.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=4 retried=None
+   +15  Where is the logic that determines how ticklabel offsets are calculated based on vertical and horizontal alignment prope
+         oh-1           read=['lib/matplotlib/axis.py'] steps=5 retried=None
+         oh-8           read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/axis.py'] steps=8 retried=None
+   +15  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-8           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+
+== oh-9 - oh-1: n=48 Δ=+1.8 95%CI=[-0.3,+4.1] median=+1.0 win/tie/loss=28/2/18 sign-test p=0.184 | n for 80% power at this Δ ≈ 140
+   by category: what: +6.4 [+2.4,+11.3] (n=12)  how: -0.8 [-4.6,+2.7] (n=12)  why: -1.7 [-6.2,+2.3] (n=12)  where: +3.4 [+0.2,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: +3583 [-1562,+9385] (1.08x)  peak_input_tokens: +514 [-25,+1099] (1.05x)  output_tokens: +71 [-13,+156] (1.08x)  tool_calls: +0 [-0,+1] (1.04x)  wall_s: +0 [-0,+1] (1.04x)  answer_chars: +68 [-70,+210] (1.06x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/26/13; hit cap: {'oh-1': 1, 'oh-9': 3}
+   -20  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-9           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+   -14  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-9           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+   -10  How does the Legend class implement a multi-layered validation strategy to handle conflicting parameters like title_font
+         oh-1           read=['lib/matplotlib/font_manager.py', 'lib/matplotlib/legend.py'] steps=4 retried=None
+         oh-9           read=['lib/matplotlib/legend.py'] steps=2 retried=None
+   +29  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-9           read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/dviread.py', 'lib/matplotlib/tests/test_backend_pdf.py', 'lib/matplotlib/texmanager.py'] steps=10 retried=None
+   +17  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-9           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+   +15  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-9           read=['lib/matplotlib/backends/_backend_gtk.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+4.7 95%CI=[+1.5,+8.0] median=+4.5 win/tie/loss=31/3/14 sign-test p=0.016 | n for 80% power at this Δ ≈ 46
+   by category: what: +3.9 [-5.8,+13.8] (n=12)  how: +2.2 [-1.4,+5.5] (n=12)  why: +5.2 [-0.3,+10.5] (n=12)  where: +7.6 [+2.2,+13.2] (n=12)
+   paired efficiency (b−a): input_tokens: +899014 [+813173,+984902] (22.28x)  peak_input_tokens: +88216 [+87303,+89103] (9.39x)  output_tokens: +1888 [+1615,+2284] (3.07x)  tool_calls: -0 [-1,+0] (0.92x)  wall_s: +26 [+25,+28] (4.28x)  answer_chars: +539 [+350,+728] (1.45x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'terminal': 25, 'aoci_search': 15, '(none)': 6, 'aoci_get_entries': 2}}
+   steps (b−a): fewer/same/more = 12/9/27; hit cap: {'oh-1': 1, 'oh-aoci-1': 6}
+   -27  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -16  What is the architectural separation enforced by the TestLogLocator test suite between the tick locator's core logarithm
+         oh-1           read=['lib/matplotlib/scale.py', 'lib/matplotlib/tests/test_ticker.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -14  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-aoci-1      read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py', 'lib/matplotlib/text.py'] steps=9 retried=None
+   +42  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-1      read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/dviread.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+   +24  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-aoci-1      read=['lib/matplotlib/backends/backend_svg.py'] steps=5 retried=None
+   +24  Where in the codebase are the lower-level helper functions that test_pdflatex delegates to for configuring the PGF backe
+         oh-1           read=['lib/matplotlib/tests/test_backend_pgf.py'] steps=3 retried=None
+         oh-aoci-1      read=['lib/matplotlib/tests/test_backend_pgf.py'] steps=3 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+2.8 95%CI=[-1.1,+6.5] median=+4.5 win/tie/loss=31/0/17 sign-test p=0.059 | n for 80% power at this Δ ≈ 182
+   by category: what: +1.6 [-9.5,+11.9] (n=12)  how: +1.1 [-3.9,+6.2] (n=12)  why: +3.0 [-5.1,+10.4] (n=12)  where: +5.4 [+0.9,+9.8] (n=12)
+   paired efficiency (b−a): input_tokens: +877578 [+789187,+967439] (21.78x)  peak_input_tokens: +87998 [+87064,+88879] (9.37x)  output_tokens: +1705 [+1554,+1846] (2.87x)  tool_calls: -1 [-2,+0] (0.88x)  wall_s: +29 [+27,+31] (4.63x)  answer_chars: +616 [+424,+807] (1.52x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'terminal': 24, 'aoci_get_entries': 4, 'aoci_search': 14, '(none)': 6}}
+   steps (b−a): fewer/same/more = 15/8/25; hit cap: {'oh-1': 1, 'oh-aoci-10': 6}
+   -27  What is the architectural separation enforced by the TestLogLocator test suite between the tick locator's core logarithm
+         oh-1           read=['lib/matplotlib/scale.py', 'lib/matplotlib/tests/test_ticker.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -27  What is the shared axes mechanism in matplotlib that ensures sticky edge settings propagate correctly between leader and
+         oh-1           read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/cbook.py'] steps=3 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -27  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-aoci-10     read=['lib/matplotlib/figure.py', 'lib/matplotlib/tests/test_legend.py', 'lib/matplotlib/text.py'] steps=10 retried=None
+   +30  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-aoci-10     read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=4 retried=None
+   +28  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-aoci-10     read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backend_managers.py', 'lib/matplotlib/backend_tools.py', 'lib/matplotlib/backends/_backend_gtk.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=10 retried=None
+   +26  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-10     read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=+3.6 95%CI=[+0.6,+6.8] median=+4.0 win/tie/loss=34/3/11 sign-test p=0.001 | n for 80% power at this Δ ≈ 72
+   by category: what: +4.1 [-4.6,+13.0] (n=12)  how: +2.2 [-3.2,+7.2] (n=12)  why: +5.2 [-0.6,+10.7] (n=12)  where: +2.9 [-1.2,+7.5] (n=12)
+   paired efficiency (b−a): input_tokens: +904894 [+814973,+992120] (22.42x)  peak_input_tokens: +88102 [+87188,+88931] (9.38x)  output_tokens: +1696 [+1546,+1835] (2.86x)  tool_calls: -0 [-1,+1] (0.95x)  wall_s: +27 [+25,+28] (4.32x)  answer_chars: +511 [+342,+682] (1.43x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'terminal': 22, 'aoci_search': 17, '(none)': 6, 'aoci_get_entries': 3}}
+   steps (b−a): fewer/same/more = 13/8/27; hit cap: {'oh-1': 1, 'oh-aoci-2': 10}
+   -20  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -20  Why would using a singleton pattern versus repeatedly instantiating the _Unset class throughout matplotlib's codebase im
+         oh-1           read=['lib/matplotlib/_api/__init__.py'] steps=2 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -16  How does the matplotlib ticker module enforce architectural separation between formatter and locator responsibilities to
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +39  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-2      read=['lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/dviread.py', 'lib/matplotlib/tests/test_backend_pdf.py', 'lib/matplotlib/texmanager.py'] steps=10 retried=None
+   +26  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-aoci-2      read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=4 retried=None
+   +24  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-aoci-2      read=['lib/matplotlib/backends/backend_svg.py'] steps=5 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+0.8 95%CI=[-3.1,+4.3] median=+3.0 win/tie/loss=28/4/16 sign-test p=0.096 | n for 80% power at this Δ ≈ 2149
+   by category: what: -2.2 [-12.2,+6.4] (n=12)  how: +0.4 [-4.2,+4.4] (n=12)  why: -1.0 [-10.7,+6.1] (n=12)  where: +5.9 [+0.8,+11.4] (n=12)
+   paired efficiency (b−a): input_tokens: +884992 [+796820,+973245] (21.95x)  peak_input_tokens: +88178 [+87206,+89179] (9.38x)  output_tokens: +1838 [+1543,+2284] (3.02x)  tool_calls: -1 [-2,+0] (0.87x)  wall_s: +26 [+24,+28] (4.22x)  answer_chars: +382 [+209,+556] (1.32x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'terminal': 25, 'aoci_get_entries': 4, 'aoci_search': 12, '(none)': 7}}
+   steps (b−a): fewer/same/more = 12/8/28; hit cap: {'oh-1': 1, 'oh-aoci-3': 8}
+   -45  Why does the repeated instantiation of CanvasFrame objects within MyApp's OnInit method impact memory allocation and gar
+         oh-1           read=['galleries/examples/user_interfaces/embedding_in_wx2_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx4_sgskip.py', 'galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=7 retried=None
+         oh-aoci-3      read=['galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=7 retried=None
+   -34  What is the shared axes mechanism in matplotlib that ensures sticky edge settings propagate correctly between leader and
+         oh-1           read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/cbook.py'] steps=3 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -33  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   +23  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-3      read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+   +22  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-aoci-3      read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=8 retried=None
+   +18  Where is the bootstrap logic that initializes the matplotlib_inline.backend_inline module located, and how does it deter
+         oh-1           read=['lib/matplotlib/backends/registry.py'] steps=2 retried=None
+         oh-aoci-3      read=['lib/matplotlib/backends/registry.py', 'lib/matplotlib/tests/test_backend_inline.py'] steps=4 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+3.3 95%CI=[-0.0,+6.5] median=+4.5 win/tie/loss=34/1/13 sign-test p=0.003 | n for 80% power at this Δ ≈ 97
+   by category: what: -0.2 [-9.8,+8.8] (n=12)  how: +3.0 [-2.5,+8.2] (n=12)  why: +5.0 [-0.6,+9.7] (n=12)  where: +5.4 [+1.3,+10.2] (n=12)
+   paired efficiency (b−a): input_tokens: +871890 [+779344,+963694] (21.64x)  peak_input_tokens: +87770 [+86952,+88533] (9.35x)  output_tokens: +1678 [+1530,+1810] (2.84x)  tool_calls: -1 [-2,+0] (0.87x)  wall_s: +28 [+25,+30] (4.45x)  answer_chars: +516 [+324,+713] (1.43x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'terminal': 28, 'aoci_search': 11, '(none)': 7, 'aoci_get_entries': 2}}
+   steps (b−a): fewer/same/more = 14/9/25; hit cap: {'oh-1': 1, 'oh-aoci-4': 7}
+   -31  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -25  What is the shared axes mechanism in matplotlib that ensures sticky edge settings propagate correctly between leader and
+         oh-1           read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/cbook.py'] steps=3 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -19  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-aoci-4      read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/tests/test_legend.py', 'lib/matplotlib/text.py'] steps=10 retried=None
+   +33  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-aoci-4      read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +25  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-aoci-4      read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=7 retried=None
+   +19  How does the TextArea.get_text() method's delegation pattern to self._text.get_text() enable framework-agnostic text ret
+         oh-1           read=['lib/matplotlib/offsetbox.py', 'lib/matplotlib/text.py'] steps=2 retried=None
+         oh-aoci-4      read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+2.4 95%CI=[-0.5,+5.3] median=+3.0 win/tie/loss=30/2/16 sign-test p=0.054 | n for 80% power at this Δ ≈ 138
+   by category: what: +3.2 [-3.4,+9.8] (n=12)  how: -0.2 [-6.9,+5.2] (n=12)  why: +1.8 [-3.8,+7.9] (n=12)  where: +4.9 [+1.2,+8.8] (n=12)
+   paired efficiency (b−a): input_tokens: +925241 [+836864,+1012202] (22.90x)  peak_input_tokens: +88295 [+87461,+89092] (9.40x)  output_tokens: +1763 [+1622,+1905] (2.93x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: +29 [+27,+31] (4.60x)  answer_chars: +572 [+394,+751] (1.48x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'terminal': 25, 'aoci_search': 15, '(none)': 4, 'aoci_get_entries': 4}}
+   steps (b−a): fewer/same/more = 12/8/28; hit cap: {'oh-1': 1, 'oh-aoci-5': 9}
+   -27  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-aoci-5      read=['lib/matplotlib/offsetbox.py'] steps=7 retried=None
+   -18  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -17  Why does the _update_glyph_map_defs method scale glyph vertices by 64 before path conversion and then apply a 1/64 scale
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py', 'lib/matplotlib/textpath.py'] steps=8 retried=None
+         oh-aoci-5      read=['lib/matplotlib/backends/backend_svg.py'] steps=5 retried=None
+   +29  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-aoci-5      read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +20  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-aoci-5      read=['lib/matplotlib/backends/backend_svg.py'] steps=5 retried=None
+   +17  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-aoci-5      read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=8 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+4.0 95%CI=[+1.4,+6.6] median=+5.0 win/tie/loss=32/2/14 sign-test p=0.011 | n for 80% power at this Δ ≈ 41
+   by category: what: +3.4 [-2.8,+9.7] (n=12)  how: +1.8 [-2.9,+6.3] (n=12)  why: +4.8 [-0.6,+9.5] (n=12)  where: +6.2 [+1.8,+10.7] (n=12)
+   paired efficiency (b−a): input_tokens: +945248 [+853308,+1034569] (23.38x)  peak_input_tokens: +88602 [+87729,+89446] (9.43x)  output_tokens: +1966 [+1700,+2342] (3.16x)  tool_calls: +0 [-1,+1] (1.02x)  wall_s: +27 [+25,+28] (4.32x)  answer_chars: +602 [+454,+756] (1.51x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'terminal': 30, 'aoci_search': 11, '(none)': 4, 'aoci_get_entries': 3}}
+   steps (b−a): fewer/same/more = 10/10/28; hit cap: {'oh-1': 1, 'oh-aoci-6': 10}
+   -16  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -15  How does the matplotlib ticker module enforce architectural separation between formatter and locator responsibilities to
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -15  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-aoci-6      read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/offsetbox.py', 'lib/matplotlib/tests/test_legend.py', 'lib/matplotlib/text.py'] steps=8 retried=None
+   +28  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-6      read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+   +22  Where in the matplotlib codebase are the lower-level Colorbar initialization and rendering functions that test_colorbarb
+         oh-1           read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=4 retried=None
+         oh-aoci-6      read=['lib/matplotlib/colorbar.py', 'lib/matplotlib/tests/test_colorbar.py'] steps=10 retried=None
+   +19  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-aoci-6      read=['lib/matplotlib/backends/backend_svg.py', 'lib/matplotlib/transforms.py'] steps=7 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+3.6 95%CI=[+0.1,+6.9] median=+3.5 win/tie/loss=30/3/15 sign-test p=0.036 | n for 80% power at this Δ ≈ 93
+   by category: what: +5.8 [-2.5,+14.2] (n=12)  how: +1.4 [-3.2,+5.2] (n=12)  why: +0.5 [-8.9,+8.2] (n=12)  where: +6.5 [+1.1,+11.9] (n=12)
+   paired efficiency (b−a): input_tokens: +893907 [+808804,+978008] (22.16x)  peak_input_tokens: +88090 [+87219,+88894] (9.38x)  output_tokens: +1711 [+1562,+1852] (2.88x)  tool_calls: -0 [-1,+0] (0.91x)  wall_s: +29 [+23,+40] (4.67x)  answer_chars: +582 [+382,+793] (1.49x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'terminal': 21, 'aoci_search': 19, '(none)': 5, 'aoci_get_entries': 3}}
+   steps (b−a): fewer/same/more = 11/13/24; hit cap: {'oh-1': 1, 'oh-aoci-7': 8}
+   -40  Why does the repeated instantiation of CanvasFrame objects within MyApp's OnInit method impact memory allocation and gar
+         oh-1           read=['galleries/examples/user_interfaces/embedding_in_wx2_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx4_sgskip.py', 'galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=7 retried=None
+         oh-aoci-7      read=['galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=6 retried=None
+   -18  How does the matplotlib ticker module enforce architectural separation between formatter and locator responsibilities to
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -16  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +31  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-aoci-7      read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=5 retried=None
+   +28  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-7      read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/dviread.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+   +24  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-aoci-7      read=['lib/matplotlib/backends/backend_svg.py'] steps=6 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+3.5 95%CI=[+0.7,+6.4] median=+2.0 win/tie/loss=30/4/14 sign-test p=0.023 | n for 80% power at this Δ ≈ 68
+   by category: what: +6.1 [-2.8,+15.0] (n=12)  how: -0.7 [-4.7,+2.2] (n=12)  why: +3.8 [-0.7,+8.6] (n=12)  where: +4.8 [+1.1,+8.7] (n=12)
+   paired efficiency (b−a): input_tokens: +847361 [+762657,+933401] (21.06x)  peak_input_tokens: +87693 [+86751,+88587] (9.34x)  output_tokens: +1639 [+1486,+1783] (2.80x)  tool_calls: -1 [-2,-0] (0.80x)  wall_s: +28 [+22,+38] (4.45x)  answer_chars: +572 [+352,+798] (1.48x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'terminal': 27, '(none)': 8, 'aoci_search': 11, 'aoci_get_entries': 2}}
+   steps (b−a): fewer/same/more = 15/11/22; hit cap: {'oh-1': 1, 'oh-aoci-8': 7}
+   -19  How does the matplotlib ticker module enforce architectural separation between formatter and locator responsibilities to
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -18  What are the cascading side effects that occur when a LayoutEngine subclass fails to properly initialize the _colorbar_g
+         oh-1           read=['lib/matplotlib/figure.py', 'lib/matplotlib/layout_engine.py'] steps=4 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -15  What is the architectural separation enforced by the TestLogLocator test suite between the tick locator's core logarithm
+         oh-1           read=['lib/matplotlib/scale.py', 'lib/matplotlib/tests/test_ticker.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +31  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-aoci-8      read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=4 retried=None
+   +31  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-aoci-8      read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=4 retried=None
+   +27  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-8      read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+2.9 95%CI=[-1.1,+6.6] median=+4.0 win/tie/loss=31/2/15 sign-test p=0.026 | n for 80% power at this Δ ≈ 178
+   by category: what: +2.4 [-7.4,+11.8] (n=12)  how: +1.2 [-3.8,+5.8] (n=12)  why: +1.2 [-9.3,+9.1] (n=12)  where: +6.6 [+1.6,+11.8] (n=12)
+   paired efficiency (b−a): input_tokens: +871854 [+786841,+960069] (21.64x)  peak_input_tokens: +88048 [+87098,+88958] (9.37x)  output_tokens: +1705 [+1547,+1853] (2.87x)  tool_calls: -1 [-2,+0] (0.88x)  wall_s: +24 [+23,+26] (4.05x)  answer_chars: +649 [+423,+870] (1.55x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'terminal': 23, 'aoci_search': 17, '(none)': 6, 'aoci_get_entries': 2}}
+   steps (b−a): fewer/same/more = 13/11/24; hit cap: {'oh-1': 1, 'oh-aoci-9': 8}
+   -47  Why does the repeated instantiation of CanvasFrame objects within MyApp's OnInit method impact memory allocation and gar
+         oh-1           read=['galleries/examples/user_interfaces/embedding_in_wx2_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx4_sgskip.py', 'galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=7 retried=None
+         oh-aoci-9      read=['galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py'] steps=4 retried=None
+   -24  What is the shared axes mechanism in matplotlib that ensures sticky edge settings propagate correctly between leader and
+         oh-1           read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/cbook.py'] steps=3 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -19  What is the architectural separation enforced by the TestLogLocator test suite between the tick locator's core logarithm
+         oh-1           read=['lib/matplotlib/scale.py', 'lib/matplotlib/tests/test_ticker.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +31  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-aoci-9      read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_gtk4.py'] steps=4 retried=None
+   +25  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-aoci-9      read=['lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/dviread.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=10 retried=None
+   +24  Why does the _make_flip_transform method consistently apply a vertical flip transformation, and how does this design cho
+         oh-1           read=['lib/matplotlib/backends/backend_svg.py'] steps=3 retried=None
+         oh-aoci-9      read=['lib/matplotlib/backends/backend_svg.py'] steps=6 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+1.4 95%CI=[-1.0,+4.0] median=+0.0 win/tie/loss=21/5/22 sign-test p=1.000 | n for 80% power at this Δ ≈ 294
+   by category: what: +8.0 [+2.1,+14.8] (n=12)  how: +1.4 [-0.3,+3.4] (n=12)  why: -1.7 [-5.2,+2.3] (n=12)  where: -2.1 [-6.5,+1.6] (n=12)
+   paired efficiency (b−a): input_tokens: +7517 [-1844,+16828] (1.18x)  peak_input_tokens: +4902 [+4115,+5634] (1.47x)  output_tokens: -183 [-302,-66] (0.80x)  tool_calls: -2 [-3,-1] (0.66x)  wall_s: -1 [-2,-0] (0.84x)  answer_chars: +197 [+34,+363] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 29/5/14; hit cap: {'oh-1': 1, 'oh-cg-1': 0}
+   -21  Where in the AxLine class is the coordinate transformation logic applied to reconcile between data coordinates and displ
+         oh-1           read=['lib/matplotlib/lines.py'] steps=2 retried=None
+         oh-cg-1        read=['lib/matplotlib/lines.py'] steps=2 retried=None
+   -13  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-cg-1        read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=4 retried=None
+   -7  Why does the exception handling overhead in the get_alpha method's try-except block impact performance when called repea
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/backend_bases.py', 'lib/matplotlib/colorizer.py', 'lib/matplotlib/colors.py'] steps=6 retried=None
+         oh-cg-1        read=['lib/matplotlib/colorizer.py'] steps=5 retried=None
+   +31  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-1        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +28  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-1        read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=5 retried=None
+   +22  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+1.1 95%CI=[-1.4,+3.7] median=+0.0 win/tie/loss=20/8/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 561
+   by category: what: +6.3 [+0.4,+13.0] (n=12)  how: -1.6 [-5.4,+1.7] (n=12)  why: -1.3 [-5.3,+2.6] (n=12)  where: +0.8 [-3.7,+5.2] (n=12)
+   paired efficiency (b−a): input_tokens: +10022 [+1148,+18590] (1.24x)  peak_input_tokens: +5289 [+4399,+6221] (1.50x)  output_tokens: -188 [-307,-71] (0.79x)  tool_calls: -2 [-3,-1] (0.67x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +89 [-75,+261] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/9/11; hit cap: {'oh-1': 1, 'oh-cg-10': 0}
+   -17  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-cg-10       read=['lib/matplotlib/offsetbox.py'] steps=5 retried=None
+   -16  Where does the glyph lookup control flow in DejaVuSerifFonts traverse the fallback chain from the _fontmap dictionary th
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+         oh-cg-10       read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+   -14  Why does the test_tricontourf_path function validate that the path generation algorithm correctly handles the topologica
+         oh-1           read=['lib/matplotlib/tests/test_contour.py', 'lib/matplotlib/tests/test_path.py', 'lib/matplotlib/tests/test_triangulation.py'] steps=3 retried=None
+         oh-cg-10       read=['lib/matplotlib/tests/test_triangulation.py'] steps=2 retried=None
+   +33  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-10       read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/_backend_pdf_ps.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+   +26  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-10       read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+   +16  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+1.0 95%CI=[-2.4,+3.8] median=+1.0 win/tie/loss=30/2/16 sign-test p=0.054 | n for 80% power at this Δ ≈ 850
+   by category: what: +5.2 [+0.6,+9.9] (n=12)  how: +0.8 [-1.6,+3.3] (n=12)  why: -0.1 [-4.2,+3.8] (n=12)  where: -1.8 [-13.2,+6.1] (n=12)
+   paired efficiency (b−a): input_tokens: +7013 [-1302,+14931] (1.17x)  peak_input_tokens: +5046 [+4188,+5920] (1.48x)  output_tokens: -48 [-285,+347] (0.95x)  tool_calls: -2 [-3,-1] (0.64x)  wall_s: -1 [-2,+1] (0.92x)  answer_chars: +565 [+6,+1561] (1.47x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/9/11; hit cap: {'oh-1': 1, 'oh-cg-2': 0}
+   -56  Where does the glyph lookup control flow in DejaVuSerifFonts traverse the fallback chain from the _fontmap dictionary th
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+         oh-cg-2        read=['lib/matplotlib/_mathtext.py'] steps=3 retried=None
+   -13  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   -13  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-cg-2        read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=4 retried=None
+   +23  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-2        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+   +17  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   +13  Where in the codebase are the lower-level helper functions that test_pdflatex delegates to for configuring the PGF backe
+         oh-1           read=['lib/matplotlib/tests/test_backend_pgf.py'] steps=3 retried=None
+         oh-cg-2        read=['lib/matplotlib/tests/test_backend_pgf.py'] steps=2 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+0.9 95%CI=[-1.8,+3.5] median=+1.0 win/tie/loss=25/3/20 sign-test p=0.551 | n for 80% power at this Δ ≈ 860
+   by category: what: +4.7 [-1.5,+11.5] (n=12)  how: +0.0 [-2.7,+2.5] (n=12)  why: +1.0 [-2.0,+4.2] (n=12)  where: -2.2 [-8.8,+3.7] (n=12)
+   paired efficiency (b−a): input_tokens: +9639 [+616,+19002] (1.23x)  peak_input_tokens: +5391 [+4478,+6284] (1.51x)  output_tokens: -217 [-311,-131] (0.76x)  tool_calls: -2 [-3,-1] (0.64x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +73 [-114,+266] (1.06x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/14/7; hit cap: {'oh-1': 1, 'oh-cg-3': 1}
+   -28  Where does the glyph lookup control flow in DejaVuSerifFonts traverse the fallback chain from the _fontmap dictionary th
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+         oh-cg-3        read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+   -19  Where in the AxLine class is the coordinate transformation logic applied to reconcile between data coordinates and displ
+         oh-1           read=['lib/matplotlib/lines.py'] steps=2 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   -13  What is the architectural separation enforced by the TestLogLocator test suite between the tick locator's core logarithm
+         oh-1           read=['lib/matplotlib/scale.py', 'lib/matplotlib/tests/test_ticker.py', 'lib/matplotlib/ticker.py'] steps=6 retried=None
+         oh-cg-3        read=['lib/matplotlib/tests/test_ticker.py'] steps=3 retried=None
+   +28  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-3        read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=8 retried=None
+   +24  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-3        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+   +15  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+2.1 95%CI=[+0.4,+4.0] median=+2.0 win/tie/loss=28/2/18 sign-test p=0.184 | n for 80% power at this Δ ≈ 72
+   by category: what: +6.3 [+2.8,+10.3] (n=12)  how: -1.5 [-4.3,+0.8] (n=12)  why: +1.6 [-1.2,+4.7] (n=12)  where: +2.2 [-1.4,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: +3988 [-3668,+11800] (1.09x)  peak_input_tokens: +5012 [+4264,+5728] (1.48x)  output_tokens: -217 [-316,-119] (0.76x)  tool_calls: -2 [-3,-2] (0.60x)  wall_s: -1 [-2,-1] (0.83x)  answer_chars: +154 [+10,+302] (1.13x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/10/8; hit cap: {'oh-1': 1, 'oh-cg-4': 0}
+   -14  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-cg-4        read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+   -8  Where in the codebase are the lower-level helper functions that test_pdflatex delegates to for configuring the PGF backe
+         oh-1           read=['lib/matplotlib/tests/test_backend_pgf.py'] steps=3 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   -6  How should the `contains` method in `OffsetBox` be refactored to decouple the canvas validation logic from the child del
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+         oh-cg-4        read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+   +23  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-4        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +17  Where does the conditional evaluation of tick visibility and orientation in _update_label determine the data flow path f
+         oh-1           read=['lib/matplotlib/axis.py', 'lib/mpl_toolkits/axisartist/axis_artist.py'] steps=3 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   +14  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+1.4 95%CI=[-1.0,+4.0] median=+1.0 win/tie/loss=25/3/20 sign-test p=0.551 | n for 80% power at this Δ ≈ 307
+   by category: what: +5.3 [-1.0,+11.8] (n=12)  how: +1.8 [+0.0,+3.8] (n=12)  why: -3.2 [-7.4,+0.9] (n=12)  where: +1.8 [-3.3,+7.1] (n=12)
+   paired efficiency (b−a): input_tokens: +6292 [-2609,+14929] (1.15x)  peak_input_tokens: +4845 [+4073,+5626] (1.46x)  output_tokens: -245 [-353,-138] (0.73x)  tool_calls: -2 [-3,-1] (0.61x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +11 [-149,+178] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/11/10; hit cap: {'oh-1': 1, 'oh-cg-5': 1}
+   -17  Where does the glyph lookup control flow in DejaVuSerifFonts traverse the fallback chain from the _fontmap dictionary th
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+         oh-cg-5        read=['lib/matplotlib/_mathtext.py'] steps=4 retried=None
+   -17  Why does the exception handling overhead in the get_alpha method's try-except block impact performance when called repea
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/backend_bases.py', 'lib/matplotlib/colorizer.py', 'lib/matplotlib/colors.py'] steps=6 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   -15  Why does the test_tricontourf_path function validate that the path generation algorithm correctly handles the topologica
+         oh-1           read=['lib/matplotlib/tests/test_contour.py', 'lib/matplotlib/tests/test_path.py', 'lib/matplotlib/tests/test_triangulation.py'] steps=3 retried=None
+         oh-cg-5        read=['lib/matplotlib/tests/test_triangulation.py'] steps=4 retried=None
+   +28  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-5        read=['lib/matplotlib/tests/test_backend_pdf.py'] steps=2 retried=None
+   +22  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-5        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+   +18  Where is the logic that determines how ticklabel offsets are calculated based on vertical and horizontal alignment prope
+         oh-1           read=['lib/matplotlib/axis.py'] steps=5 retried=None
+         oh-cg-5        read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/axis.py'] steps=5 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+1.4 95%CI=[-1.0,+3.8] median=+1.5 win/tie/loss=25/7/16 sign-test p=0.211 | n for 80% power at this Δ ≈ 309
+   by category: what: +4.7 [-2.0,+11.2] (n=12)  how: -0.1 [-4.8,+3.8] (n=12)  why: -0.7 [-4.0,+2.7] (n=12)  where: +1.6 [-2.6,+5.8] (n=12)
+   paired efficiency (b−a): input_tokens: +7691 [-2431,+18346] (1.18x)  peak_input_tokens: +5066 [+4197,+5974] (1.48x)  output_tokens: -198 [-315,-76] (0.78x)  tool_calls: -2 [-3,-1] (0.64x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +160 [-2,+340] (1.13x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/7/10; hit cap: {'oh-1': 1, 'oh-cg-6': 1}
+   -23  What dependencies does the _Edge_integer class's __init__ method establish with the Locator hierarchy to ensure tick cal
+         oh-1           read=['lib/matplotlib/ticker.py'] steps=2 retried=None
+         oh-cg-6        read=['lib/matplotlib/ticker.py'] steps=2 retried=None
+   -21  How does the draw method orchestrate the sequence of bbox computation, frame updates, offset calculation, and child rend
+         oh-1           read=['lib/matplotlib/offsetbox.py'] steps=3 retried=None
+         oh-cg-6        read=['lib/matplotlib/legend.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+   -13  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-cg-6        read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=4 retried=None
+   +31  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-6        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +14  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-6        read=['lib/matplotlib/tests/test_backend_pdf.py'] steps=2 retried=None
+   +13  Where is the logic that determines how ticklabel offsets are calculated based on vertical and horizontal alignment prope
+         oh-1           read=['lib/matplotlib/axis.py'] steps=5 retried=None
+         oh-cg-6        read=['lib/matplotlib/axes/_base.py', 'lib/matplotlib/axis.py'] steps=8 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+1.6 95%CI=[-0.4,+3.5] median=+1.0 win/tie/loss=25/6/17 sign-test p=0.280 | n for 80% power at this Δ ≈ 159
+   by category: what: +4.1 [+0.3,+8.7] (n=12)  how: +0.2 [-3.4,+3.4] (n=12)  why: +0.4 [-4.7,+5.1] (n=12)  where: +1.5 [-1.2,+4.3] (n=12)
+   paired efficiency (b−a): input_tokens: +5687 [-2099,+13982] (1.13x)  peak_input_tokens: +4837 [+4037,+5642] (1.46x)  output_tokens: -194 [-292,-93] (0.79x)  tool_calls: -2 [-3,-1] (0.65x)  wall_s: -1 [-2,-1] (0.83x)  answer_chars: +138 [-12,+297] (1.12x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/9/8; hit cap: {'oh-1': 1, 'oh-cg-7': 0}
+   -14  How does TransformWrapper's set() method maintain invalidation state consistency when replacing a child transform, and w
+         oh-1           read=['lib/matplotlib/transforms.py'] steps=5 retried=None
+         oh-cg-7        read=[] steps=2 retried=None
+   -14  Why does the test_tricontourf_path function validate that the path generation algorithm correctly handles the topologica
+         oh-1           read=['lib/matplotlib/tests/test_contour.py', 'lib/matplotlib/tests/test_path.py', 'lib/matplotlib/tests/test_triangulation.py'] steps=3 retried=None
+         oh-cg-7        read=['lib/matplotlib/tests/test_triangulation.py'] steps=2 retried=None
+   -13  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-cg-7        read=[] steps=1 retried=None
+   +25  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-7        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+   +12  Why does the repeated instantiation of CanvasFrame objects within MyApp's OnInit method impact memory allocation and gar
+         oh-1           read=['galleries/examples/user_interfaces/embedding_in_wx2_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx3_sgskip.py', 'galleries/examples/user_interfaces/embedding_in_wx4_sgskip.py', 'galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'galleries/examples/user_interfaces/wxcursor_demo_sgskip.py', 'lib/matplotlib/backends/backend_wx.py'] steps=7 retried=None
+         oh-cg-7        read=['galleries/examples/user_interfaces/mathtext_wx_sgskip.py', 'lib/matplotlib/backends/backend_wx.py', 'lib/matplotlib/backends/backend_wxagg.py'] steps=4 retried=None
+   +12  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-7        read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=5 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+1.5 95%CI=[-0.8,+4.0] median=+0.0 win/tie/loss=20/9/19 sign-test p=1.000 | n for 80% power at this Δ ≈ 244
+   by category: what: +6.4 [+0.7,+12.9] (n=12)  how: +0.2 [-3.9,+4.3] (n=12)  why: -1.1 [-4.4,+2.4] (n=12)  where: +0.5 [-2.8,+3.7] (n=12)
+   paired efficiency (b−a): input_tokens: +9375 [+807,+17922] (1.22x)  peak_input_tokens: +5291 [+4516,+6075] (1.50x)  output_tokens: -183 [-292,-74] (0.80x)  tool_calls: -2 [-3,-1] (0.64x)  wall_s: -1 [-2,-0] (0.85x)  answer_chars: +216 [+43,+400] (1.18x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/8/13; hit cap: {'oh-1': 1, 'oh-cg-8': 0}
+   -13  Why does the test_tricontourf_path function validate that the path generation algorithm correctly handles the topologica
+         oh-1           read=['lib/matplotlib/tests/test_contour.py', 'lib/matplotlib/tests/test_path.py', 'lib/matplotlib/tests/test_triangulation.py'] steps=3 retried=None
+         oh-cg-8        read=['lib/matplotlib/tests/test_triangulation.py'] steps=2 retried=None
+   -12  How does the Legend class implement a multi-layered validation strategy to handle conflicting parameters like title_font
+         oh-1           read=['lib/matplotlib/font_manager.py', 'lib/matplotlib/legend.py'] steps=4 retried=None
+         oh-cg-8        read=['lib/matplotlib/legend.py'] steps=2 retried=None
+   -11  How should the `contains` method in `OffsetBox` be refactored to decouple the canvas validation logic from the child del
+         oh-1           read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=6 retried=None
+         oh-cg-8        read=['lib/matplotlib/artist.py', 'lib/matplotlib/offsetbox.py'] steps=8 retried=None
+   +29  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-8        read=['lib/matplotlib/tests/test_backend_pdf.py'] steps=4 retried=None
+   +29  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-8        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +14  What is the separation of concerns maintained by the ToolbarGTK4 class between UI state management and event handling th
+         oh-1           read=['lib/matplotlib/backends/backend_gtk4.py'] steps=2 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+1.1 95%CI=[-1.1,+3.5] median=+0.5 win/tie/loss=24/8/16 sign-test p=0.268 | n for 80% power at this Δ ≈ 401
+   by category: what: +5.2 [+0.0,+11.0] (n=12)  how: -1.6 [-4.5,+1.2] (n=12)  why: -2.0 [-6.9,+2.8] (n=12)  where: +2.9 [-0.3,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: +7798 [-1166,+16977] (1.18x)  peak_input_tokens: +5261 [+4416,+6124] (1.50x)  output_tokens: -226 [-325,-132] (0.75x)  tool_calls: -2 [-3,-2] (0.60x)  wall_s: -1 [-2,+1] (0.92x)  answer_chars: +126 [-1,+253] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/8/10; hit cap: {'oh-1': 1, 'oh-cg-9': 1}
+   -15  Why does the ParserState class use a property decorator for the font attribute instead of direct attribute access, and h
+         oh-1           read=['lib/matplotlib/_mathtext.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   -13  Why does the repeated instantiation of figure and axes objects with different DPI values in test_legend_proper_window_ex
+         oh-1           read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/backends/backend_agg.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=6 retried=None
+         oh-cg-9        read=['lib/matplotlib/backend_bases.py', 'lib/matplotlib/figure.py', 'lib/matplotlib/legend.py', 'lib/matplotlib/tests/test_legend.py'] steps=4 retried=None
+   -12  What is the architectural pattern of StreamMask's trajectory recording and rollback mechanism that decouples the concern
+         oh-1           read=['lib/matplotlib/streamplot.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   +26  What is the semantic contract established by the LaTeX preamble configuration in test_font_bitstream_charter between the
+         oh-1           read=['lib/matplotlib/_type1font.py', 'lib/matplotlib/backends/backend_pdf.py', 'lib/matplotlib/tests/test_backend_pdf.py'] steps=9 retried=None
+         oh-cg-9        read=['lib/matplotlib/tests/test_backend_pdf.py'] steps=2 retried=None
+   +24  What is the coordinate transformation pipeline in get_center_in_pixels that reconciles the semantic difference between d
+         oh-1           read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=2 retried=None
+         oh-cg-9        read=['galleries/examples/text_labels_and_annotations/angle_annotation.py'] steps=3 retried=None
+   +14  Where is the bootstrap logic that initializes the matplotlib_inline.backend_inline module located, and how does it deter
+         oh-1           read=['lib/matplotlib/backends/registry.py'] steps=2 retried=None
+         oh-cg-9        read=['lib/matplotlib/backends/registry.py'] steps=4 retried=None
+
+wrote runs/sweqa-r5-matplotlib-k10/analysis.json

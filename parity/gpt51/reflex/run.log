@@ -1,0 +1,125 @@
+=== run.py specs/sweqa-r5p-gpt51-reflex-k1.json at 2026-10-15T17:45:55Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name reflex --questions benchmarks/swe-qa/reflex.jsonl --condition oh --out runs/sweqa-r5p-gpt51-reflex-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/reflex --profile closeai-gpt51 --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=closeai-gpt51 model=gpt-5.1-2025-11-13 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=fe0f946dc0c2
+[1/48] 8.7s steps=2 calls=2 files=1+0m map=0/0c in=22165 out=195 status=finished   
+[2/48] 12.3s steps=3 calls=3 files=1+0m map=0/0c in=28453 out=229 status=finished   
+[3/48] 18.1s steps=5 calls=5 files=2+0m map=0/0c in=46068 out=346 status=finished   
+[4/48] 19.9s steps=6 calls=6 files=1+0m map=0/0c in=46906 out=365 status=finished   
+[5/48] 25.1s steps=7 calls=7 files=0+0m map=0/0c in=55395 out=444 status=finished   
+[6/48] 18.2s steps=5 calls=5 files=2+0m map=0/0c in=38453 out=362 status=finished   
+[7/48] 29.3s steps=8 calls=8 files=1+0m map=0/0c in=61741 out=554 status=finished   
+[8/48] 29.5s steps=9 calls=9 files=1+0m map=0/0c in=74997 out=552 status=finished   
+[9/48] 18.7s steps=3 calls=3 files=1+0m map=0/0c in=26749 out=260 status=finished   
+[10/48] 32.7s steps=10 calls=10 files=1+0m map=0/0c in=73131 out=569 status=finished forced   
+[11/48] 32.8s steps=10 calls=10 files=2+0m map=0/0c in=74950 out=595 status=finished forced  CONTAM=1 
+[12/48] 33.7s steps=10 calls=10 files=2+0m map=0/0c in=86714 out=554 status=finished forced   
+[13/48] 35.2s steps=9 calls=11 files=3+0m map=0/0c in=105308 out=721 status=finished   
+[14/48] 34.8s steps=10 calls=10 files=2+0m map=0/0c in=82407 out=577 status=finished forced   
+[15/48] 35.0s steps=10 calls=10 files=3+0m map=0/0c in=113712 out=572 status=finished forced   
+[16/48] 37.7s steps=10 calls=10 files=1+0m map=0/0c in=148789 out=848 status=finished forced   
+[17/48] 11.2s steps=3 calls=3 files=1+0m map=0/0c in=24154 out=216 status=finished   
+[18/48] 43.6s steps=10 calls=10 files=1+0m map=0/0c in=80300 out=765 status=finished forced  CONTAM=1 
+[19/48] 13.4s steps=3 calls=3 files=1+0m map=0/0c in=30076 out=318 status=finished   
+[20/48] 20.5s steps=5 calls=5 files=1+0m map=0/0c in=37396 out=350 status=finished   
+[21/48] 12.0s steps=3 calls=3 files=1+0m map=0/0c in=28482 out=275 status=finished   
+[22/48] 39.3s steps=10 calls=10 files=3+0m map=0/0c in=120084 out=592 status=finished forced   
+[23/48] 30.2s steps=9 calls=9 files=1+0m map=0/0c in=79671 out=560 status=finished   
+[24/48] 62.5s steps=10 calls=11 files=2+0m map=0/0c in=92564 out=750 status=finished forced   
+[25/48] 39.2s steps=9 calls=9 files=1+0m map=0/0c in=67965 out=849 status=finished   
+[26/48] 28.9s steps=8 calls=8 files=2+0m map=0/0c in=62575 out=578 status=finished   
+[27/48] 16.3s steps=4 calls=4 files=1+0m map=0/0c in=35208 out=267 status=finished   
+[28/48] 22.3s steps=6 calls=6 files=1+0m map=0/0c in=47778 out=444 status=finished   
+[29/48] 34.4s steps=10 calls=10 files=2+0m map=0/0c in=76253 out=649 status=finished forced   
+[30/48] 49.0s steps=10 calls=10 files=2+0m map=0/0c in=93600 out=833 status=finished forced   
+[31/48] 34.9s steps=10 calls=10 files=3+0m map=0/0c in=98119 out=658 status=finished forced   
+[32/48] 41.0s steps=9 calls=9 files=1+0m map=0/0c in=68776 out=1419 status=finished   
+[33/48] 21.9s steps=6 calls=6 files=3+0m map=0/0c in=61958 out=365 status=finished   
+[34/48] 46.8s steps=7 calls=7 files=1+0m map=0/0c in=54157 out=519 status=finished   
+[35/48] 40.8s steps=10 calls=10 files=3+0m map=0/0c in=118755 out=634 status=finished forced  CONTAM=1 
+[36/48] 33.8s steps=10 calls=10 files=2+0m map=0/0c in=77377 out=556 status=finished forced   
+[37/48] 17.8s steps=5 calls=5 files=1+0m map=0/0c in=53286 out=316 status=finished   
+[38/48] 23.3s steps=7 calls=7 files=2+0m map=0/0c in=54362 out=361 status=finished  CONTAM=1 
+[39/48] 22.7s steps=6 calls=6 files=2+0m map=0/0c in=62097 out=402 status=finished   
+[40/48] 26.2s steps=8 calls=8 files=1+0m map=0/0c in=61021 out=440 status=finished  CONTAM=1 
+[41/48] 30.8s steps=9 calls=9 files=1+0m map=0/0c in=103562 out=523 status=finished   
+[42/48] 36.4s steps=10 calls=10 files=2+0m map=0/0c in=77164 out=718 status=finished forced   
+[43/48] 31.2s steps=10 calls=10 files=2+0m map=0/0c in=75381 out=555 status=finished forced   
+[44/48] 27.9s steps=8 calls=8 files=2+0m map=0/0c in=91448 out=462 status=finished   
+[45/48] 30.3s steps=4 calls=4 files=1+0m map=0/0c in=34984 out=253 status=finished   
+[46/48] 34.5s steps=10 calls=10 files=3+0m map=0/0c in=82136 out=595 status=finished forced   
+[47/48] 38.1s steps=10 calls=10 files=0+0m map=0/0c in=70916 out=490 status=finished forced   
+[48/48] 619.3s steps=5 calls=6 files=1+0m map=0/0c in=39678 out=429 status=finished   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-gpt51-reflex-k1 --json runs/sweqa-r5p-gpt51-reflex-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-gpt51-reflex-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   2    0       —     0     3     18     0     0     0    2
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 2 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 3 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 18 forced answers · 0 refusal/garble re-runs · 0 degenerate · 0 garbled-final · 2 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-gpt51-reflex-k1/answers-oh.jsonl --out runs/sweqa-r5p-gpt51-reflex-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['gpt-5.1-2025-11-13']
+[1/48] total=53 votes=5 
+[2/48] total=64 votes=5 
+[3/48] total=51 votes=5 
+[4/48] total=65 votes=5 
+[5/48] total=74 votes=5 
+[6/48] total=86 votes=5 
+[7/48] total=92 votes=5 
+[8/48] total=40 votes=5 
+[9/48] total=74 votes=5 
+[10/48] total=90 votes=5 
+[11/48] total=44 votes=5 
+[12/48] total=74 votes=5 
+[13/48] total=53 votes=5 
+[14/48] total=66 votes=5 
+[15/48] total=76 votes=5 
+[16/48] total=81 votes=5 
+[17/48] total=88 votes=5 
+[18/48] total=68 votes=5 
+[19/48] total=68 votes=5 
+[20/48] total=84 votes=5 
+[21/48] total=70 votes=5 
+[22/48] total=92 votes=5 
+[23/48] total=51 votes=5 
+[24/48] total=51 votes=5 
+[25/48] total=52 votes=5 
+[26/48] total=77 votes=5 
+[27/48] total=85 votes=5 
+[28/48] total=60 votes=5 
+[29/48] total=87 votes=5 
+[30/48] total=82 votes=5 
+[31/48] total=89 votes=5 
+[32/48] total=81 votes=5 
+[33/48] total=35 votes=5 
+[34/48] total=91 votes=5 
+[35/48] total=80 votes=5 
+[36/48] total=65 votes=5 
+[37/48] total=73 votes=5 
+[38/48] total=71 votes=5 
+[39/48] total=64 votes=5 
+[40/48] total=56 votes=5 
+[41/48] total=70 votes=5 
+[42/48] total=61 votes=5 
+[43/48] total=73 votes=5 
+[44/48] total=85 votes=5 
+[45/48] total=77 votes=5 
+[46/48] total=60 votes=5 
+[47/48] total=60 votes=5 
+[48/48] total=56 votes=5 
+run: runs/sweqa-r5p-gpt51-reflex-k1
+manifest: harness=None created=2026-10-15T17:46:01Z repo=reflex commit=fe0f946dc0c2 index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   69.7  14.5   66.6   71.7   75.8   63.4 |   7.5   7.6   1.6   0.0 |    67650    11481     518     604    n/a   41.7 |   0.28   0.00   0.24
+dims: oh=12.8/11.4/17.1/15.6/12.7
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,247,221 out=24,884
+
+wrote runs/sweqa-r5p-gpt51-reflex-k1/analysis.json
+

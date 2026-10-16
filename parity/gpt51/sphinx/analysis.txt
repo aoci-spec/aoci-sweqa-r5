@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-gpt51-sphinx-k1
+manifest: harness=None created=2026-10-15T18:04:46Z repo=sphinx commit=6c9e3209c4eb index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   68.8  12.5   64.9   72.5   72.2   64.8 |   6.2   6.4   1.5   0.0 |    62398    12169     475     564    n/a   27.0 |   0.49   0.00   0.09
+dims: oh=13.6/10.4/17.8/15.1/11.9
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=2,995,110 out=22,820
+
+wrote runs/sweqa-r5p-gpt51-sphinx-k1/analysis.json

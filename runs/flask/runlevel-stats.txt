@@ -1,0 +1,11 @@
+=== 臂均值(k 轮 run 级均值;括号=轮间 sd) · runs/sweqa-r5-flask-k10 ===
+  oh                    74.70 (0.61)  k=10
+  oh-aoci               75.66 (1.29)  k=10
+  oh-cg                 76.24 (0.93)  k=10
+
+=== run 级精确置换(两侧;k=10v10 -> C(20,10)=184,756) ===
+  H1_aoci-bare             oh-aoci − oh =  +0.96   p=0.0575
+  H2_aoci-cg               oh-aoci − oh-cg =  -0.58   p=0.2885
+  H3_cg-bare               oh-cg − oh =  +1.54   p=0.0007
+
+wrote runs/sweqa-r5-flask-k10/runlevel-stats.json

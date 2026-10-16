@@ -1,0 +1,31 @@
+01:37:59 requests apply start
+01:38:01 requests apply rc=0 verify(aligned entries sources)=True 35 36
+02:05:01 sympy apply start
+02:07:16 sympy apply rc=0 verify(aligned entries sources)=True 1503 1584
+02:17:16 django apply start
+02:24:05 django apply rc=0 verify(aligned entries sources)=True 2246 2845
+02:24:05 pylint apply start
+02:28:28 pylint apply rc=0 verify(aligned entries sources)=True 2215 2309
+02:28:28 scikit-learn apply start
+02:30:00 scikit-learn apply rc=0 verify(aligned entries sources)=True 1004 1060
+02:31:00 conan apply start
+02:32:12 conan apply rc=0 verify(aligned entries sources)=True 918 1076
+02:34:12 matplotlib apply start
+02:36:23 matplotlib apply rc=0 verify(aligned entries sources)=True 984 991
+02:44:23 sphinx apply start
+02:45:32 sphinx apply rc=0 verify(aligned entries sources)=True 666 746
+02:46:32 astropy apply start
+02:48:03 astropy apply rc=0 verify(aligned entries sources)=True 930 973
+02:51:03 sqlfluff apply start
+02:52:55 sqlfluff apply rc=0 verify(aligned entries sources)=True 392 392
+02:52:55 streamlink apply start
+02:53:18 streamlink apply rc=0 verify(aligned entries sources)=True 494 511
+02:55:18 reflex apply start
+02:55:34 reflex apply rc=0 verify(aligned entries sources)=True 376 384
+02:57:34 xarray apply start
+02:57:51 xarray apply rc=0 verify(aligned entries sources)=True 222 233
+02:58:51 pytest apply start
+02:59:05 pytest apply rc=0 verify(aligned entries sources)=True 251 268
+03:00:05 flask apply start
+03:00:07 flask apply rc=0 verify(aligned entries sources)=True 80 83
+03:00:07 APPLY-LOOP-DONE applied=15

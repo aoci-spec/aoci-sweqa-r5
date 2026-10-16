@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-sympy-k1
+manifest: harness=None created=2026-10-15T19:03:17Z repo=sympy commit=3c817ed8ab55 index_entries=1503
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   1 |   72.5  18.0   59.5   83.1   76.1   71.5 |   6.7   6.7   1.7   0.0 |    76269    13334    1520     864    n/a   75.4 |   0.74   0.00   0.20
+dims: oh=14.2/11.9/17.3/16.0/13.2
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,660,907 out=72,979
+
+wrote runs/sweqa-r5p-glm46-sympy-k1/analysis.json

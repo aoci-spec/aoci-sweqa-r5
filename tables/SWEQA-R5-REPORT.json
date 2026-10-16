@@ -1,0 +1,1577 @@
+{
+ "repos": {
+  "astropy": {
+   "oh": {
+    "draws": 10,
+    "mean": 76.15208333333334,
+    "sd": 1.1018076214667525
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 77.35,
+    "sd": 1.7021687555064067
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 76.60625,
+    "sd": 0.7609986357485216
+   },
+   "chunks": 5
+  },
+  "conan": {
+   "oh": {
+    "draws": 10,
+    "mean": 69.21041666666666,
+    "sd": 0.6778009018140925
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 70.76458333333333,
+    "sd": 1.391880285501115
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 70.08125,
+    "sd": 1.01192756451899
+   },
+   "chunks": 5
+  },
+  "django": {
+   "oh": {
+    "draws": 10,
+    "mean": 77.6875,
+    "sd": 0.7224692419442891
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 80.69375,
+    "sd": 1.0756155375979957
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 78.28541666666666,
+    "sd": 0.8655265938850293
+   },
+   "chunks": 10
+  },
+  "flask": {
+   "oh": {
+    "draws": 10,
+    "mean": 74.7,
+    "sd": 0.6142972497994047
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 75.65625,
+    "sd": 1.2876365218880685
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 76.2375,
+    "sd": 0.9337517663228848
+   },
+   "chunks": 1
+  },
+  "matplotlib": {
+   "oh": {
+    "draws": 10,
+    "mean": 81.25,
+    "sd": 0.5744864856741386
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 83.72083333333333,
+    "sd": 1.0041234430531376
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 81.91875,
+    "sd": 0.34034934054748855
+   },
+   "chunks": 4
+  },
+  "pylint": {
+   "oh": {
+    "draws": 10,
+    "mean": 67.58541666666667,
+    "sd": 1.4939824319396955
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 65.46041666666667,
+    "sd": 1.613997205439547
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 69.37916666666666,
+    "sd": 1.3810095944634098
+   },
+   "chunks": 8
+  },
+  "pytest": {
+   "oh": {
+    "draws": 10,
+    "mean": 76.82708333333333,
+    "sd": 0.9222862783142052
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 81.31875,
+    "sd": 0.8266949129918904
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 79.25625,
+    "sd": 0.6926605559964647
+   },
+   "chunks": 2
+  },
+  "reflex": {
+   "oh": {
+    "draws": 10,
+    "mean": 79.02708333333334,
+    "sd": 1.026220902280682
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 78.58958333333334,
+    "sd": 1.316167165273638
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 79.40625,
+    "sd": 0.9760255468252639
+   },
+   "chunks": 2
+  },
+  "requests": {
+   "oh": {
+    "draws": 10,
+    "mean": 81.86666666666667,
+    "sd": 0.6756683933541511
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 79.96666666666667,
+    "sd": 1.0143587191477743
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 83.03125,
+    "sd": 0.56590405179088
+   },
+   "chunks": 1
+  },
+  "scikit-learn": {
+   "oh": {
+    "draws": 10,
+    "mean": 79.73333333333333,
+    "sd": 0.653834841531101
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 82.10625,
+    "sd": 0.8031216223448204
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 81.44166666666666,
+    "sd": 0.6838158865269693
+   },
+   "chunks": 5
+  },
+  "sphinx": {
+   "oh": {
+    "draws": 10,
+    "mean": 72.8125,
+    "sd": 0.7223490807389741
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 76.98958333333333,
+    "sd": 0.9367705495477542
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 74.76666666666667,
+    "sd": 0.9948565642007551
+   },
+   "chunks": 3
+  },
+  "sqlfluff": {
+   "oh": {
+    "draws": 10,
+    "mean": 74.38958333333333,
+    "sd": 1.378437936881212
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 76.92291666666667,
+    "sd": 1.0586142179755555
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 75.12916666666666,
+    "sd": 1.0710764963862804
+   },
+   "chunks": 3
+  },
+  "streamlink": {
+   "oh": {
+    "draws": 10,
+    "mean": 74.78125,
+    "sd": 1.2156834640325687
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 74.28125,
+    "sd": 1.683540880357034
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 75.33541666666667,
+    "sd": 1.3113900730183634
+   },
+   "chunks": 2
+  },
+  "sympy": {
+   "oh": {
+    "draws": 10,
+    "mean": 69.64375,
+    "sd": 1.1823150695187437
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 70.40625,
+    "sd": 2.6907965892505192
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 71.22291666666666,
+    "sd": 1.4783169507735623
+   },
+   "chunks": 8
+  },
+  "xarray": {
+   "oh": {
+    "draws": 10,
+    "mean": 83.38125000000001,
+    "sd": 0.6038828356284581
+   },
+   "oh-aoci": {
+    "draws": 10,
+    "mean": 85.27708333333334,
+    "sd": 1.0041601832432479
+   },
+   "oh-cg": {
+    "draws": 10,
+    "mean": 84.06666666666666,
+    "sd": 0.47414030389513984
+   },
+   "chunks": 2
+  }
+ },
+ "merged": {
+  "H1 AOCI − 裸": {
+   "delta": 1.363749999999998,
+   "p": 9.99990000099999e-06,
+   "same_direction": 11,
+   "n_repos": 15,
+   "per_repo": {
+    "astropy": 1.1979166666666572,
+    "conan": 1.5541666666666742,
+    "django": 3.0062499999999943,
+    "flask": 0.9562499999999972,
+    "matplotlib": 2.4708333333333314,
+    "pylint": -2.125,
+    "pytest": 4.49166666666666,
+    "reflex": -0.4375,
+    "requests": -1.9000000000000057,
+    "scikit-learn": 2.3729166666666686,
+    "sphinx": 4.177083333333329,
+    "sqlfluff": 2.5333333333333314,
+    "streamlink": -0.5,
+    "sympy": 0.7625000000000028,
+    "xarray": 1.8958333333333286
+   }
+  },
+  "H2 AOCI − CodeGraph": {
+   "delta": 0.22263888888889008,
+   "p": 0.2147178528214718,
+   "same_direction": 9,
+   "n_repos": 15,
+   "per_repo": {
+    "astropy": 0.7437499999999915,
+    "conan": 0.6833333333333371,
+    "django": 2.4083333333333314,
+    "flask": -0.5812499999999972,
+    "matplotlib": 1.8020833333333286,
+    "pylint": -3.9187499999999886,
+    "pytest": 2.0625,
+    "reflex": -0.8166666666666629,
+    "requests": -3.0645833333333314,
+    "scikit-learn": 0.66458333333334,
+    "sphinx": 2.222916666666663,
+    "sqlfluff": 1.7937500000000028,
+    "streamlink": -1.0541666666666742,
+    "sympy": -0.8166666666666629,
+    "xarray": 1.2104166666666742
+   }
+  },
+  "H3 CodeGraph − 裸": {
+   "delta": 1.1411111111111079,
+   "p": 9.99990000099999e-06,
+   "same_direction": 15,
+   "n_repos": 15,
+   "per_repo": {
+    "astropy": 0.4541666666666657,
+    "conan": 0.8708333333333371,
+    "django": 0.5979166666666629,
+    "flask": 1.5374999999999943,
+    "matplotlib": 0.6687500000000028,
+    "pylint": 1.7937499999999886,
+    "pytest": 2.42916666666666,
+    "reflex": 0.3791666666666629,
+    "requests": 1.1645833333333258,
+    "scikit-learn": 1.7083333333333286,
+    "sphinx": 1.9541666666666657,
+    "sqlfluff": 0.7395833333333286,
+    "streamlink": 0.5541666666666742,
+    "sympy": 1.5791666666666657,
+    "xarray": 0.6854166666666544
+   }
+  }
+ },
+ "categories": {
+  "what": {
+   "H1 AOCI − 裸": {
+    "delta": -0.39265512265512303,
+    "p": 0.24048797560121993,
+    "n_repos": 15
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": -1.83636863136863,
+    "p": 4.999750012499375e-05,
+    "n_repos": 15
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 1.4437135087135071,
+    "p": 4.999750012499375e-05,
+    "n_repos": 15
+   }
+  },
+  "why": {
+   "H1 AOCI − 裸": {
+    "delta": 3.3833333333333324,
+    "p": 4.999750012499375e-05,
+    "n_repos": 15
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": 1.3340909090909083,
+    "p": 4.999750012499375e-05,
+    "n_repos": 15
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 2.049242424242424,
+    "p": 4.999750012499375e-05,
+    "n_repos": 15
+   }
+  },
+  "where": {
+   "H1 AOCI − 裸": {
+    "delta": 1.6070235690235697,
+    "p": 4.999750012499375e-05,
+    "n_repos": 15
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": 1.3067710437710431,
+    "p": 0.00024998750062496874,
+    "n_repos": 15
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 0.30025252525252644,
+    "p": 0.28138593070346485,
+    "n_repos": 15
+   }
+  },
+  "how": {
+   "H1 AOCI − 裸": {
+    "delta": 0.9057692307692292,
+    "p": 0.0023498825058747065,
+    "n_repos": 15
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": 0.255854700854699,
+    "p": 0.38743062846857657,
+    "n_repos": 15
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 0.6499145299145302,
+    "p": 0.006899655017249137,
+    "n_repos": 15
+   }
+  }
+ },
+ "size": {
+  "≤2 块": {
+   "repos": [
+    "flask",
+    "pytest",
+    "reflex",
+    "requests",
+    "streamlink",
+    "xarray"
+   ],
+   "H1 AOCI − 裸": {
+    "delta": 0.7510416666666634,
+    "p": 0.009249537523123843
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": -0.3739583333333319,
+    "p": 0.1454927253637318
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 1.1249999999999953,
+    "p": 4.999750012499375e-05
+   }
+  },
+  "3–5 块": {
+   "repos": [
+    "astropy",
+    "conan",
+    "matplotlib",
+    "scikit-learn",
+    "sphinx",
+    "sqlfluff"
+   ],
+   "H1 AOCI − 裸": {
+    "delta": 2.3843749999999986,
+    "p": 4.999750012499375e-05
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": 1.3184027777777771,
+    "p": 4.999750012499375e-05
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 1.0659722222222214,
+    "p": 4.999750012499375e-05
+   }
+  },
+  "≥6 块": {
+   "repos": [
+    "django",
+    "pylint",
+    "sympy"
+   ],
+   "H1 AOCI − 裸": {
+    "delta": 0.5479166666666657,
+    "p": 0.2849857507124644
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": -0.77569444444444,
+    "p": 0.16914154292285385
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 1.3236111111111057,
+    "p": 0.00039998000099995
+   }
+  }
+ },
+ "tests": {
+  "指向测试": {
+   "n_questions": 173,
+   "n_repos": 13,
+   "H1 AOCI − 裸": {
+    "delta": 3.313936727914461,
+    "p": 4.999750012499375e-05
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": 2.2475634722901954,
+    "p": 4.999750012499375e-05
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 1.0663732556242658,
+    "p": 0.0002999850007499625
+   }
+  },
+  "其余": {
+   "n_questions": 547,
+   "n_repos": 15,
+   "H1 AOCI − 裸": {
+    "delta": 0.8896222653771039,
+    "p": 4.999750012499375e-05
+   },
+   "H2 AOCI − CodeGraph": {
+    "delta": -0.2525694427021534,
+    "p": 0.24073796310184492
+   },
+   "H3 CodeGraph − 裸": {
+    "delta": 1.1421917080792572,
+    "p": 4.999750012499375e-05
+   }
+  }
+ },
+ "parity": {
+  "gpt51": {
+   "desc": "GPT-5.1 (CloseAI relay, reasoning none)",
+   "per_repo": {
+    "astropy": 68.8125,
+    "conan": 65.25,
+    "django": 71.14583333333333,
+    "flask": 67.29166666666667,
+    "matplotlib": 75.5,
+    "pylint": 61.979166666666664,
+    "pytest": 73.95833333333333,
+    "reflex": 69.6875,
+    "requests": 77.375,
+    "scikit-learn": 75.8125,
+    "sphinx": 68.77083333333333,
+    "sqlfluff": 67.5625,
+    "streamlink": 66.97916666666667,
+    "sympy": 62.479166666666664,
+    "xarray": 76.72916666666667
+   },
+   "merged": 69.95555555555555,
+   "paper": 70.79,
+   "dims": {
+    "correctness": 13.591666666666667,
+    "completeness": 10.954166666666667,
+    "relevance": 17.476388888888888,
+    "clarity": 15.48611111111111,
+    "reasoning": 12.447222222222223
+   }
+  },
+  "glm46": {
+   "desc": "GLM-4.6 (OpenRouter → Novita bf16)",
+   "per_repo": {
+    "astropy": 78.33333333333333,
+    "conan": 72.85416666666667,
+    "django": 82.33333333333333,
+    "flask": 76.8125,
+    "matplotlib": 86.1875,
+    "pylint": 69.91666666666667,
+    "pytest": 83.52083333333333,
+    "reflex": 83.54166666666667,
+    "requests": 86.22916666666667,
+    "scikit-learn": 83.79166666666667,
+    "sphinx": 73.35416666666667,
+    "sqlfluff": 77.16666666666667,
+    "streamlink": 77.125,
+    "sympy": 72.54166666666667,
+    "xarray": 87.27083333333333
+   },
+   "merged": 79.39861111111111,
+   "paper": 70.15,
+   "dims": {
+    "correctness": 15.605555555555556,
+    "completeness": 13.781944444444445,
+    "relevance": 18.03472222222222,
+    "clarity": 16.92222222222222,
+    "reasoning": 15.054166666666667
+   }
+  }
+ },
+ "behaviour": {
+  "astropy": {
+   "oh": {
+    "n": 480,
+    "steps": 5.402083333333334,
+    "tool_calls": 7.7,
+    "files_read": 1.76875,
+    "map_calls": 0,
+    "forced_pct": 15.208333333333334,
+    "zero_source_pct": 2.9166666666666665,
+    "dirty": 3,
+    "contam": 2,
+    "wall_s": 9.93375,
+    "input_tokens": 60392.025,
+    "cache_read": 52987.73333333333,
+    "answer_chars": 804.5666666666667
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 5.10625,
+    "tool_calls": 5.797916666666667,
+    "files_read": 1.5625,
+    "map_calls": 1.3083333333333333,
+    "forced_pct": 16.041666666666668,
+    "zero_source_pct": 16.25,
+    "dirty": 1,
+    "contam": 0,
+    "wall_s": 30.616458333333334,
+    "input_tokens": 1232238.1354166667,
+    "cache_read": 1118394.4,
+    "answer_chars": 1069.1729166666667,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 8,
+     "overview_calls": 6,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 479,
+      "cognition_governed": 1
+     },
+     "verdict": {
+      "fail": 479,
+      "pass": 1
+     },
+     "wall_s": 19.265416666666667
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 4.835416666666666,
+    "tool_calls": 5.783333333333333,
+    "files_read": 1.45625,
+    "map_calls": 1.1625,
+    "forced_pct": 11.25,
+    "zero_source_pct": 14.583333333333334,
+    "dirty": 5,
+    "contam": 1,
+    "wall_s": 9.233958333333334,
+    "input_tokens": 80382.25,
+    "cache_read": 67451.46666666666,
+    "answer_chars": 860.1083333333333
+   }
+  },
+  "conan": {
+   "oh": {
+    "n": 480,
+    "steps": 5.452083333333333,
+    "tool_calls": 7.595833333333333,
+    "files_read": 2.6625,
+    "map_calls": 0,
+    "forced_pct": 23.333333333333332,
+    "zero_source_pct": 0.4166666666666667,
+    "dirty": 0,
+    "contam": 10,
+    "wall_s": 9.674791666666668,
+    "input_tokens": 62532.76875,
+    "cache_read": 54531.46666666667,
+    "answer_chars": 752.2208333333333
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 3.9916666666666667,
+    "tool_calls": 4.814583333333333,
+    "files_read": 1.8333333333333333,
+    "map_calls": 1.45625,
+    "forced_pct": 16.25,
+    "zero_source_pct": 22.916666666666668,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 25.905208333333334,
+    "input_tokens": 1033566.2145833333,
+    "cache_read": 929502.6666666666,
+    "answer_chars": 1043.3333333333333,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 8,
+     "overview_calls": 6,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 477,
+      "partial": 3
+     },
+     "wall_s": 16.695625
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 4.289583333333334,
+    "tool_calls": 5.75625,
+    "files_read": 1.3979166666666667,
+    "map_calls": 1.53125,
+    "forced_pct": 13.333333333333334,
+    "zero_source_pct": 31.041666666666668,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 8.285208333333333,
+    "input_tokens": 77172.13333333333,
+    "cache_read": 62878.13333333333,
+    "answer_chars": 909.3916666666667
+   }
+  },
+  "django": {
+   "oh": {
+    "n": 480,
+    "steps": 4.845833333333333,
+    "tool_calls": 7.358333333333333,
+    "files_read": 2.839583333333333,
+    "map_calls": 0,
+    "forced_pct": 9.791666666666666,
+    "zero_source_pct": 0.0,
+    "dirty": 2,
+    "contam": 12,
+    "wall_s": 10.885,
+    "input_tokens": 52214.18541666667,
+    "cache_read": 45538.666666666664,
+    "answer_chars": 1228.7958333333333
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 5.522916666666666,
+    "tool_calls": 6.96875,
+    "files_read": 2.775,
+    "map_calls": 1.10625,
+    "forced_pct": 27.5,
+    "zero_source_pct": 24.166666666666668,
+    "dirty": 3,
+    "contam": 7,
+    "wall_s": 83.75729166666666,
+    "input_tokens": 2893725.125,
+    "cache_read": 2684964.533333333,
+    "answer_chars": 2196.0583333333334,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 13,
+     "overview_calls": 11,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 480
+     },
+     "wall_s": 66.67229166666667
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 3.464583333333333,
+    "tool_calls": 4.8,
+    "files_read": 1.7208333333333334,
+    "map_calls": 1.3,
+    "forced_pct": 1.4583333333333333,
+    "zero_source_pct": 23.958333333333332,
+    "dirty": 0,
+    "contam": 10,
+    "wall_s": 8.978125,
+    "input_tokens": 58688.28333333333,
+    "cache_read": 46767.2,
+    "answer_chars": 1409.46875
+   }
+  },
+  "flask": {
+   "oh": {
+    "n": 480,
+    "steps": 3.341666666666667,
+    "tool_calls": 4.404166666666667,
+    "files_read": 1.625,
+    "map_calls": 0,
+    "forced_pct": 1.6666666666666667,
+    "zero_source_pct": 1.0416666666666667,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 6.4347916666666665,
+    "input_tokens": 34512.339583333334,
+    "cache_read": 29458.933333333334,
+    "answer_chars": 770.73125
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 2.8833333333333333,
+    "tool_calls": 3.2625,
+    "files_read": 1.3333333333333333,
+    "map_calls": 1.0666666666666667,
+    "forced_pct": 0.625,
+    "zero_source_pct": 13.75,
+    "dirty": 0,
+    "contam": 1,
+    "wall_s": 13.550625,
+    "input_tokens": 183451.23333333334,
+    "cache_read": 159554.13333333333,
+    "answer_chars": 841.4229166666667,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 4.002083333333333,
+     "overview_calls": 2,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 479,
+      "cognition_governed": 1
+     },
+     "verdict": {
+      "fail": 333,
+      "partial": 146,
+      "pass": 1
+     },
+     "wall_s": 7.261875
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 2.279166666666667,
+    "tool_calls": 2.81875,
+    "files_read": 0.7291666666666666,
+    "map_calls": 1.2229166666666667,
+    "forced_pct": 0.0,
+    "zero_source_pct": 50.625,
+    "dirty": 0,
+    "contam": 2,
+    "wall_s": 4.92375,
+    "input_tokens": 34412.50625,
+    "cache_read": 25437.066666666666,
+    "answer_chars": 900.09375
+   }
+  },
+  "matplotlib": {
+   "oh": {
+    "n": 480,
+    "steps": 4.185416666666667,
+    "tool_calls": 5.814583333333333,
+    "files_read": 1.8083333333333333,
+    "map_calls": 0,
+    "forced_pct": 5.416666666666667,
+    "zero_source_pct": 2.2916666666666665,
+    "dirty": 1,
+    "contam": 0,
+    "wall_s": 8.874375,
+    "input_tokens": 46707.00625,
+    "cache_read": 40087.73333333333,
+    "answer_chars": 1226.7145833333334
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.7,
+    "tool_calls": 4.947916666666667,
+    "files_read": 1.6270833333333334,
+    "map_calls": 0.5604166666666667,
+    "forced_pct": 16.458333333333332,
+    "zero_source_pct": 17.083333333333332,
+    "dirty": 2,
+    "contam": 1,
+    "wall_s": 35.308125,
+    "input_tokens": 934438.3041666667,
+    "cache_read": 841008.8,
+    "answer_chars": 1744.89375,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 7.00625,
+     "overview_calls": 4.997916666666667,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 99.79166666666667,
+     "final_state": {
+      "delivery_verified": 477,
+      "cognition_governed": 2,
+      "index_loaded": 1
+     },
+     "verdict": {
+      "fail": 470,
+      "pass": 2,
+      "partial": 7,
+      "unknown": 1
+     },
+     "wall_s": 22.577708333333334
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 2.925,
+    "tool_calls": 3.4583333333333335,
+    "files_read": 0.9145833333333333,
+    "map_calls": 1.15625,
+    "forced_pct": 0.8333333333333334,
+    "zero_source_pct": 37.291666666666664,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 6.946875,
+    "input_tokens": 49742.59583333333,
+    "cache_read": 38150.13333333333,
+    "answer_chars": 1363.725
+   }
+  },
+  "pylint": {
+   "oh": {
+    "n": 480,
+    "steps": 6.447916666666667,
+    "tool_calls": 9.764583333333333,
+    "files_read": 2.9604166666666667,
+    "map_calls": 0,
+    "forced_pct": 36.875,
+    "zero_source_pct": 0.4166666666666667,
+    "dirty": 0,
+    "contam": 6,
+    "wall_s": 13.915208333333334,
+    "input_tokens": 74136.04166666667,
+    "cache_read": 66349.33333333333,
+    "answer_chars": 692.6333333333333
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 3.691666666666667,
+    "tool_calls": 4.345833333333333,
+    "files_read": 1.725,
+    "map_calls": 0.8645833333333334,
+    "forced_pct": 16.875,
+    "zero_source_pct": 37.916666666666664,
+    "dirty": 0,
+    "contam": 3,
+    "wall_s": 40.96520833333334,
+    "input_tokens": 1886573.35,
+    "cache_read": 1714714.4,
+    "answer_chars": 978.23125,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 11,
+     "overview_calls": 9,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 478,
+      "partial": 2
+     },
+     "wall_s": 30.420625
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 5.133333333333334,
+    "tool_calls": 7.291666666666667,
+    "files_read": 2.11875,
+    "map_calls": 1.25,
+    "forced_pct": 18.333333333333332,
+    "zero_source_pct": 20.0,
+    "dirty": 0,
+    "contam": 6,
+    "wall_s": 11.119583333333333,
+    "input_tokens": 87894.73333333334,
+    "cache_read": 74854.93333333333,
+    "answer_chars": 834.84375
+   }
+  },
+  "pytest": {
+   "oh": {
+    "n": 480,
+    "steps": 4.30625,
+    "tool_calls": 6.245833333333334,
+    "files_read": 1.88125,
+    "map_calls": 0,
+    "forced_pct": 9.583333333333334,
+    "zero_source_pct": 0.625,
+    "dirty": 1,
+    "contam": 1,
+    "wall_s": 8.445833333333333,
+    "input_tokens": 48445.96666666667,
+    "cache_read": 42012.53333333333,
+    "answer_chars": 1021.8625
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.379166666666666,
+    "tool_calls": 5.091666666666667,
+    "files_read": 1.8020833333333333,
+    "map_calls": 0.9625,
+    "forced_pct": 13.541666666666666,
+    "zero_source_pct": 7.083333333333333,
+    "dirty": 3,
+    "contam": 5,
+    "wall_s": 19.573541666666667,
+    "input_tokens": 387787.3145833333,
+    "cache_read": 346178.13333333336,
+    "answer_chars": 1428.7729166666666,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 5,
+     "overview_calls": 3,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 439,
+      "partial": 41
+     },
+     "wall_s": 9.836666666666666
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 3.2625,
+    "tool_calls": 4.229166666666667,
+    "files_read": 1.1604166666666667,
+    "map_calls": 1.2604166666666667,
+    "forced_pct": 3.5416666666666665,
+    "zero_source_pct": 25.208333333333332,
+    "dirty": 1,
+    "contam": 3,
+    "wall_s": 7.288541666666667,
+    "input_tokens": 55562.833333333336,
+    "cache_read": 43992.8,
+    "answer_chars": 1204.9041666666667
+   }
+  },
+  "reflex": {
+   "oh": {
+    "n": 480,
+    "steps": 6.71875,
+    "tool_calls": 10.4,
+    "files_read": 2.620833333333333,
+    "map_calls": 0,
+    "forced_pct": 36.041666666666664,
+    "zero_source_pct": 0.625,
+    "dirty": 4,
+    "contam": 1,
+    "wall_s": 11.862916666666667,
+    "input_tokens": 77241.32708333334,
+    "cache_read": 71453.6,
+    "answer_chars": 811.2604166666666
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.9625,
+    "tool_calls": 6.19375,
+    "files_read": 1.8958333333333333,
+    "map_calls": 1.35625,
+    "forced_pct": 21.041666666666668,
+    "zero_source_pct": 18.958333333333332,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 20.403333333333332,
+    "input_tokens": 535406.375,
+    "cache_read": 488294.4,
+    "answer_chars": 900.9375,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 5.002083333333333,
+     "overview_calls": 3,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 479,
+      "cognition_governed": 1
+     },
+     "verdict": {
+      "fail": 475,
+      "partial": 4,
+      "pass": 1
+     },
+     "wall_s": 9.902291666666667
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 5.9125,
+    "tool_calls": 8.34375,
+    "files_read": 2.05,
+    "map_calls": 1.4604166666666667,
+    "forced_pct": 23.125,
+    "zero_source_pct": 10.416666666666666,
+    "dirty": 0,
+    "contam": 2,
+    "wall_s": 10.975416666666666,
+    "input_tokens": 103592.98333333334,
+    "cache_read": 93107.44375,
+    "answer_chars": 888.71875
+   }
+  },
+  "requests": {
+   "oh": {
+    "n": 480,
+    "steps": 3.1729166666666666,
+    "tool_calls": 4.297916666666667,
+    "files_read": 2.28125,
+    "map_calls": 0,
+    "forced_pct": 0.4166666666666667,
+    "zero_source_pct": 0.20833333333333334,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 5.89875,
+    "input_tokens": 32131.614583333332,
+    "cache_read": 27254.933333333334,
+    "answer_chars": 918.5729166666666
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 2.1333333333333333,
+    "tool_calls": 2.308333333333333,
+    "files_read": 1.3291666666666666,
+    "map_calls": 0.4354166666666667,
+    "forced_pct": 0.4166666666666667,
+    "zero_source_pct": 21.875,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 12.138125,
+    "input_tokens": 141760.62916666668,
+    "cache_read": 122658.93333333333,
+    "answer_chars": 1030.3083333333334,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 4.016666666666667,
+     "overview_calls": 2.0166666666666666,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 186,
+      "partial": 294
+     },
+     "wall_s": 6.95375
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 2.05625,
+    "tool_calls": 2.595833333333333,
+    "files_read": 0.9333333333333333,
+    "map_calls": 1.13125,
+    "forced_pct": 0.0,
+    "zero_source_pct": 40.0,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 4.741458333333333,
+    "input_tokens": 31848.141666666666,
+    "cache_read": 23417.333333333332,
+    "answer_chars": 1138.0041666666666
+   }
+  },
+  "scikit-learn": {
+   "oh": {
+    "n": 480,
+    "steps": 4.1,
+    "tool_calls": 5.55625,
+    "files_read": 1.7,
+    "map_calls": 0,
+    "forced_pct": 5.0,
+    "zero_source_pct": 2.2916666666666665,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 8.288958333333333,
+    "input_tokens": 46165.558333333334,
+    "cache_read": 39405.066666666666,
+    "answer_chars": 1198.2375
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.689583333333333,
+    "tool_calls": 5.216666666666667,
+    "files_read": 1.6291666666666667,
+    "map_calls": 0.9708333333333333,
+    "forced_pct": 8.541666666666666,
+    "zero_source_pct": 10.625,
+    "dirty": 1,
+    "contam": 1,
+    "wall_s": 31.732708333333335,
+    "input_tokens": 1187096.6875,
+    "cache_read": 1072483.4666666666,
+    "answer_chars": 1872.1729166666667,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 8.004166666666666,
+     "overview_calls": 5.995833333333334,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 99.58333333333333,
+     "final_state": {
+      "delivery_verified": 476,
+      "cognition_governed": 2,
+      "index_loaded": 2
+     },
+     "verdict": {
+      "fail": 476,
+      "pass": 2,
+      "unknown": 2
+     },
+     "wall_s": 19.402916666666666
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 2.8916666666666666,
+    "tool_calls": 3.56875,
+    "files_read": 0.9541666666666667,
+    "map_calls": 1.1541666666666666,
+    "forced_pct": 1.6666666666666667,
+    "zero_source_pct": 39.791666666666664,
+    "dirty": 0,
+    "contam": 0,
+    "wall_s": 6.7352083333333335,
+    "input_tokens": 49243.91875,
+    "cache_read": 37917.86666666667,
+    "answer_chars": 1369.61875
+   }
+  },
+  "sphinx": {
+   "oh": {
+    "n": 480,
+    "steps": 6.120833333333334,
+    "tool_calls": 8.995833333333334,
+    "files_read": 2.3333333333333335,
+    "map_calls": 0,
+    "forced_pct": 27.083333333333332,
+    "zero_source_pct": 0.625,
+    "dirty": 10,
+    "contam": 7,
+    "wall_s": 11.981458333333332,
+    "input_tokens": 67599.82708333334,
+    "cache_read": 60128.26666666667,
+    "answer_chars": 831.2625
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 5.7125,
+    "tool_calls": 6.933333333333334,
+    "files_read": 2.075,
+    "map_calls": 1.6375,
+    "forced_pct": 25.625,
+    "zero_source_pct": 5.416666666666667,
+    "dirty": 4,
+    "contam": 3,
+    "wall_s": 26.208541666666665,
+    "input_tokens": 799655.9520833333,
+    "cache_read": 723291.2,
+    "answer_chars": 1144.51875,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 6,
+     "overview_calls": 4,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 452,
+      "partial": 28
+     },
+     "wall_s": 13.687708333333333
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 4.522916666666666,
+    "tool_calls": 6.127083333333333,
+    "files_read": 1.53125,
+    "map_calls": 1.3333333333333333,
+    "forced_pct": 14.791666666666666,
+    "zero_source_pct": 30.208333333333332,
+    "dirty": 1,
+    "contam": 3,
+    "wall_s": 10.117708333333333,
+    "input_tokens": 82730.39166666666,
+    "cache_read": 69132.26666666666,
+    "answer_chars": 875.91875
+   }
+  },
+  "sqlfluff": {
+   "oh": {
+    "n": 480,
+    "steps": 4.6875,
+    "tool_calls": 6.995833333333334,
+    "files_read": 2.314583333333333,
+    "map_calls": 0,
+    "forced_pct": 9.375,
+    "zero_source_pct": 0.0,
+    "dirty": 1,
+    "contam": 1,
+    "wall_s": 8.772708333333334,
+    "input_tokens": 52255.916666666664,
+    "cache_read": 47991.447916666664,
+    "answer_chars": 802.7041666666667
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.247916666666667,
+    "tool_calls": 5.0125,
+    "files_read": 1.9958333333333333,
+    "map_calls": 1.1041666666666667,
+    "forced_pct": 11.875,
+    "zero_source_pct": 9.791666666666666,
+    "dirty": 0,
+    "contam": 1,
+    "wall_s": 24.321875,
+    "input_tokens": 592458.7729166667,
+    "cache_read": 539792,
+    "answer_chars": 1060.7291666666667,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 6.00625,
+     "overview_calls": 4,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 474,
+      "cognition_governed": 6
+     },
+     "verdict": {
+      "fail": 474,
+      "pass": 6
+     },
+     "wall_s": 14.809583333333334
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 3.8270833333333334,
+    "tool_calls": 4.829166666666667,
+    "files_read": 1.34375,
+    "map_calls": 1.2520833333333334,
+    "forced_pct": 5.0,
+    "zero_source_pct": 17.916666666666668,
+    "dirty": 0,
+    "contam": 1,
+    "wall_s": 8.74,
+    "input_tokens": 62505.90625,
+    "cache_read": 54399.9625,
+    "answer_chars": 912.21875
+   }
+  },
+  "streamlink": {
+   "oh": {
+    "n": 480,
+    "steps": 5.35,
+    "tool_calls": 7.964583333333334,
+    "files_read": 2.3666666666666667,
+    "map_calls": 0,
+    "forced_pct": 9.166666666666666,
+    "zero_source_pct": 0.0,
+    "dirty": 0,
+    "contam": 5,
+    "wall_s": 9.742083333333333,
+    "input_tokens": 61033.933333333334,
+    "cache_read": 55620.45625,
+    "answer_chars": 886.6708333333333
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 3.6354166666666665,
+    "tool_calls": 4.547916666666667,
+    "files_read": 1.55625,
+    "map_calls": 1.3958333333333333,
+    "forced_pct": 7.291666666666667,
+    "zero_source_pct": 19.375,
+    "dirty": 1,
+    "contam": 0,
+    "wall_s": 18.547708333333333,
+    "input_tokens": 447953.9354166667,
+    "cache_read": 402201.86666666664,
+    "answer_chars": 1120.5666666666666,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 5,
+     "overview_calls": 3,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 480
+     },
+     "wall_s": 9.92625
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 3.8020833333333335,
+    "tool_calls": 5.014583333333333,
+    "files_read": 1.4229166666666666,
+    "map_calls": 1.2645833333333334,
+    "forced_pct": 4.166666666666667,
+    "zero_source_pct": 28.75,
+    "dirty": 0,
+    "contam": 6,
+    "wall_s": 7.594166666666666,
+    "input_tokens": 62704.79583333333,
+    "cache_read": 54067.989583333336,
+    "answer_chars": 1039.2958333333333
+   }
+  },
+  "sympy": {
+   "oh": {
+    "n": 480,
+    "steps": 5.035416666666666,
+    "tool_calls": 7.30625,
+    "files_read": 1.74375,
+    "map_calls": 0,
+    "forced_pct": 20.625,
+    "zero_source_pct": 3.125,
+    "dirty": 13,
+    "contam": 5,
+    "wall_s": 10.239166666666666,
+    "input_tokens": 57312.1875,
+    "cache_read": 50403.73333333333,
+    "answer_chars": 702.8229166666666
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.177083333333333,
+    "tool_calls": 4.597916666666666,
+    "files_read": 1.3125,
+    "map_calls": 1.0291666666666666,
+    "forced_pct": 15.625,
+    "zero_source_pct": 30.625,
+    "dirty": 13,
+    "contam": 1,
+    "wall_s": 42.0025,
+    "input_tokens": 1972890.9708333334,
+    "cache_read": 1809593.8666666667,
+    "answer_chars": 1025.4895833333333,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 11.004166666666666,
+     "overview_calls": 8.997916666666667,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 99.79166666666667,
+     "final_state": {
+      "delivery_verified": 478,
+      "cognition_governed": 1,
+      "index_loaded": 1
+     },
+     "verdict": {
+      "fail": 475,
+      "partial": 3,
+      "pass": 1,
+      "unknown": 1
+     },
+     "wall_s": 31.124375
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 4.791666666666667,
+    "tool_calls": 5.847916666666666,
+    "files_read": 1.36875,
+    "map_calls": 1.2375,
+    "forced_pct": 17.916666666666668,
+    "zero_source_pct": 21.458333333333332,
+    "dirty": 14,
+    "contam": 6,
+    "wall_s": 10.758958333333334,
+    "input_tokens": 82811.69166666667,
+    "cache_read": 69259.46666666666,
+    "answer_chars": 824.2833333333333
+   }
+  },
+  "xarray": {
+   "oh": {
+    "n": 480,
+    "steps": 4.166666666666667,
+    "tool_calls": 5.985416666666667,
+    "files_read": 2.2083333333333335,
+    "map_calls": 0,
+    "forced_pct": 7.5,
+    "zero_source_pct": 0.0,
+    "dirty": 1,
+    "contam": 3,
+    "wall_s": 8.324375,
+    "input_tokens": 47242.645833333336,
+    "cache_read": 43301.777083333334,
+    "answer_chars": 1260.0166666666667
+   },
+   "oh-aoci": {
+    "n": 480,
+    "steps": 4.775,
+    "tool_calls": 5.79375,
+    "files_read": 2.377083333333333,
+    "map_calls": 0.9583333333333334,
+    "forced_pct": 13.125,
+    "zero_source_pct": 2.7083333333333335,
+    "dirty": 8,
+    "contam": 0,
+    "wall_s": 20.471666666666668,
+    "input_tokens": 414655.18333333335,
+    "cache_read": 381154.13333333336,
+    "answer_chars": 1591.40625,
+    "cognition": {
+     "n": 480,
+     "llm_calls": 5,
+     "overview_calls": 3,
+     "completed_pct": 100.0,
+     "attestation_submitted_pct": 100.0,
+     "final_state": {
+      "delivery_verified": 480
+     },
+     "verdict": {
+      "fail": 478,
+      "partial": 2
+     },
+     "wall_s": 9.786041666666666
+    }
+   },
+   "oh-cg": {
+    "n": 480,
+    "steps": 3.3291666666666666,
+    "tool_calls": 4.04375,
+    "files_read": 1.2375,
+    "map_calls": 1.3333333333333333,
+    "forced_pct": 2.5,
+    "zero_source_pct": 23.958333333333332,
+    "dirty": 4,
+    "contam": 1,
+    "wall_s": 7.336666666666667,
+    "input_tokens": 54180.425,
+    "cache_read": 47167.364583333336,
+    "answer_chars": 1370.6333333333334
+   }
+  }
+ },
+ "discards": {
+  "astropy": [
+   {
+    "ts": "20261016-092816",
+    "pass": "oh-7",
+    "reason": "stuck detector ended the run with an empty final answer (no agent decision involved): discarded and re-answered, same rule as error records",
+    "index": 38,
+    "question": "Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion implemented, coordinating between array wrapper objects that track excluded elements and the coordinate grid generation routine from the numerical computing library?",
+    "qid": "82647e863e7c",
+    "workspace_dirty": false,
+    "dirty_paths": [],
+    "error": null,
+    "forced": 1
+   }
+  ],
+  "conan": [
+   {
+    "ts": "20261016-050506",
+    "pass": "oh-cg-10",
+    "reason": "acceptance gate hard check (workspace modified): discarded and re-answered",
+    "index": 33,
+    "question": "Where does the source version information flow into the range membership validation method when the range validation method creates a version range representation instance?",
+    "qid": "61e4712d2e89",
+    "workspace_dirty": null,
+    "dirty_paths": null,
+    "error": "RuntimeError: Prompt not visible after init",
+    "forced": null
+   }
+  ]
+ },
+ "superseded": {
+  "django": [
+   "_superseded-chunk7000: 3 条"
+  ],
+  "sympy": [
+   "_superseded-chunk7000: 288 条"
+  ]
+ },
+ "pending": [],
+ "chunks": {
+  "astropy": 5,
+  "conan": 5,
+  "django": 10,
+  "flask": 1,
+  "matplotlib": 4,
+  "pylint": 8,
+  "pytest": 2,
+  "reflex": 2,
+  "requests": 1,
+  "scikit-learn": 5,
+  "sphinx": 3,
+  "sqlfluff": 3,
+  "streamlink": 2,
+  "sympy": 8,
+  "xarray": 2
+ }
+}

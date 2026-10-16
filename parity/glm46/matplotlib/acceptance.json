@@ -1,0 +1,51 @@
+{
+ "run": "runs/sweqa-r5p-glm46-matplotlib-k1",
+ "passes": [
+  {
+   "pass": "oh",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 19,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 1,
+   "dirty_benign": 0,
+   "models": [
+    "z-ai/glm-4.6"
+   ],
+   "profiles": [
+    "openrouter-glm46-novita"
+   ],
+   "hard_fail": false
+  }
+ ],
+ "totals": {
+  "n": 48,
+  "errors": 0,
+  "missing": 0,
+  "extra": 0,
+  "leaks": 0,
+  "net_attempts": 0,
+  "net_success": 0,
+  "delivery_bad": 0,
+  "dirty": 0,
+  "dirty_benign": 0,
+  "probes": 0,
+  "forced": 19,
+  "retried": 0,
+  "degenerate": 0,
+  "garbled": 0,
+  "zero_source": 1
+ },
+ "ok": true
+}

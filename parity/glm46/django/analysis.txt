@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-django-k1
+manifest: harness=None created=2026-10-15T19:18:21Z repo=django commit=14fc2e97036f index_entries=2246
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              47   0   1 |   82.3  15.8   69.3   88.1   86.5   85.4 |   7.7   8.1   2.8   0.0 |    82063    12282    1718    1794    n/a   86.7 |   0.72   0.00   0.26
+dims: oh=16.3/14.7/18.2/17.2/15.9
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,856,966 out=80,727
+
+wrote runs/sweqa-r5p-glm46-django-k1/analysis.json

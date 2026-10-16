@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-pytest-k10
+manifest: harness=None created=2026-10-15T19:43:04Z repo=pytest commit=5989efe3efec index_entries=251
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   78.4  11.4   75.2   80.6   76.4   81.3 |   4.5   6.4   2.0   0.0 |    51029    10820     982    1114    n/a    9.1 |   0.73   0.00   0.24
+oh-10           48   0   0 |   75.8  12.6   74.4   75.8   73.6   79.2 |   4.2   6.2   1.8   0.0 |    46110    10402     911    1020    n/a    7.8 |   0.69   0.00   0.25
+oh-2            48   0   0 |   76.4  12.5   76.5   78.8   73.9   76.5 |   4.4   6.5   1.9   0.0 |    49361    10761     944     958    n/a    8.8 |   0.72   0.00   0.23
+oh-3            48   0   0 |   75.8  14.0   73.7   76.7   70.9   82.0 |   4.2   6.1   1.9   0.0 |    46027    10562     931    1067    n/a    8.4 |   0.70   0.00   0.21
+oh-4            48   0   0 |   76.5  12.4   76.6   77.2   71.3   80.8 |   4.4   6.3   1.8   0.0 |    49320    10729     952    1022    n/a    8.1 |   0.69   0.00   0.20
+oh-5            48   0   0 |   77.6  11.7   74.8   79.8   76.6   79.2 |   4.6   6.7   2.0   0.0 |    52716    10745     981     994    n/a    9.2 |   0.71   0.00   0.22
+oh-6            48   0   0 |   76.7  11.9   71.5   79.6   73.5   82.2 |   4.3   6.1   1.9   0.0 |    49121    10903    1065     987    n/a    8.9 |   0.72   0.00   0.17
+oh-7            48   0   0 |   75.7  12.4   71.2   78.0   74.0   79.5 |   4.4   6.4   2.0   0.0 |    49742    10734     951     936    n/a    8.4 |   0.74   0.00   0.24
+oh-8            48   0   0 |   78.0   9.5   75.8   79.2   76.8   80.2 |   4.1   6.2   1.8   0.0 |    46455    10701     944    1116    n/a    8.1 |   0.69   0.00   0.26
+oh-9            48   0   0 |   77.5  11.6   73.4   82.8   74.6   79.0 |   4.0   5.7   1.9   0.0 |    44580    10427     864    1004    n/a    7.7 |   0.72   0.00   0.22
+oh-aoci-1       48   0   0 |   80.3  13.4   78.0   81.3   78.2   83.6 |   3.9   4.6   1.8   2.6 |   365766    46387    2162    1400    n/a   18.4 |   0.64   0.24   0.35
+oh-aoci-10      48   0   0 |   82.1   9.0   77.8   82.0   83.3   85.2 |   4.2   5.1   1.8   2.3 |   381480    46499    2184    1380    n/a   19.3 |   0.66   0.23   0.43
+oh-aoci-2       48   0   0 |   81.5  12.9   80.3   81.5   79.1   85.1 |   4.5   5.2   2.0   4.2 |   390819    46915    2206    1371    n/a   19.1 |   0.71   0.31   0.34
+oh-aoci-3       48   0   0 |   83.2   9.3   81.3   86.2   81.2   84.2 |   4.5   5.1   1.8   3.1 |   393073    46504    2216    1438    n/a   19.3 |   0.68   0.27   0.34
+oh-aoci-4       48   0   0 |   81.6  10.6   78.0   82.2   81.8   84.3 |   4.5   5.3   1.9   4.5 |   393771    46798    2221    1364    n/a   19.6 |   0.70   0.32   0.39
+oh-aoci-5       48   0   1 |   81.0  12.4   75.6   80.2   82.8   85.5 |   4.7   5.4   1.8   4.4 |   403279    46764    2269    1540    n/a   20.3 |   0.67   0.30   0.38
+oh-aoci-6       48   0   0 |   80.5  11.2   81.2   82.4   75.7   82.6 |   4.4   5.0   1.8   3.8 |   387229    46681    2195    1336    n/a   19.9 |   0.69   0.30   0.32
+oh-aoci-7       48   0   0 |   80.6  13.1   76.5   78.4   79.9   87.8 |   4.4   5.2   1.8   2.7 |   387188    46525    2246    1483    n/a   20.3 |   0.69   0.22   0.29
+oh-aoci-8       48   0   0 |   81.1  11.9   77.7   83.1   79.3   84.2 |   4.3   5.1   1.8   3.0 |   386089    46647    2213    1464    n/a   19.4 |   0.64   0.26   0.35
+oh-aoci-9       48   0   0 |   81.3  10.4   76.1   84.7   82.9   81.7 |   4.4   5.0   1.8   3.2 |   389178    46596    2209    1512    n/a   19.9 |   0.67   0.28   0.36
+oh-cg-1         48   0   1 |   80.7   9.3   82.5   81.0   79.8   79.4 |   3.4   4.4   1.1  10.9 |    56376    15875     772    1279    n/a    7.7 |   0.47   0.72   0.23
+oh-cg-10        48   0   1 |   79.0  11.5   77.8   81.6   76.0   80.4 |   3.6   4.6   1.3  10.9 |    60078    15847     826    1237    n/a    7.8 |   0.49   0.75   0.27
+oh-cg-2         48   0   1 |   78.4  11.5   77.2   80.2   74.2   81.9 |   3.4   4.4   1.1  11.2 |    59096    16865     942    1241    n/a    8.7 |   0.46   0.71   0.26
+oh-cg-3         48   0   1 |   78.9  11.4   81.0   80.9   73.7   79.8 |   3.0   4.0   1.2  11.1 |    51809    15404     724    1199    n/a    6.6 |   0.47   0.76   0.25
+oh-cg-4         48   0   1 |   79.6  11.5   82.5   79.2   77.0   79.8 |   3.1   4.0   1.2  11.1 |    51978    15382     721    1213    n/a    6.5 |   0.44   0.75   0.24
+oh-cg-5         48   0   0 |   79.1  10.1   77.8   81.8   75.5   81.5 |   3.2   3.9   1.1  10.8 |    54372    15470     704    1166    n/a    6.7 |   0.46   0.73   0.25
+oh-cg-6         48   0   0 |   79.8  11.2   83.6   80.5   75.8   79.5 |   3.2   4.2   1.1  10.2 |    56885    15247     764    1213    n/a    7.1 |   0.44   0.73   0.24
+oh-cg-7         48   0   1 |   78.5  11.5   81.1   80.0   73.8   79.3 |   3.2   4.2   1.2  10.3 |    55103    15250     742    1129    n/a    7.1 |   0.46   0.73   0.28
+oh-cg-8         48   0   1 |   78.7  10.3   76.0   80.6   80.0   78.1 |   3.3   4.4   1.2  10.8 |    56355    15796     763    1216    n/a    7.6 |   0.45   0.74   0.25
+oh-cg-9         48   0   1 |   79.9  10.6   79.6   81.7   76.5   81.8 |   3.2   4.2   1.1  10.1 |    53576    15043     752    1157    n/a    7.0 |   0.44   0.74   0.29
+dims: oh-1=15.8/13.7/18.3/15.9/14.8  oh-10=15.0/12.9/18.1/15.8/13.9  oh-2=15.4/13.0/18.1/15.8/14.2  oh-3=15.0/12.9/17.9/16.0/14.1  oh-4=15.2/13.1/18.1/15.9/14.2  oh-5=15.5/13.3/18.3/16.0/14.4  oh-6=15.1/13.2/18.2/15.9/14.3  oh-7=14.9/12.9/18.0/15.9/14.0  oh-8=15.6/13.5/18.4/15.8/14.6  oh-9=15.4/13.3/18.4/16.1/14.3  oh-aoci-1=16.0/14.4/18.2/16.3/15.4  oh-aoci-10=16.5/14.7/18.7/16.4/15.7  oh-aoci-2=16.2/14.5/18.5/16.7/15.6  oh-aoci-3=16.6/15.1/18.8/16.6/16.1  oh-aoci-4=16.4/14.7/18.4/16.4/15.8  oh-aoci-5=16.2/14.5/18.3/16.5/15.5  oh-aoci-6=16.1/14.4/18.6/16.1/15.3  oh-aoci-7=16.1/14.4/18.2/16.3/15.5  oh-aoci-8=16.3/14.5/18.4/16.3/15.5  oh-aoci-9=16.3/14.7/18.4/16.1/15.7  oh-cg-1=16.3/14.2/18.5/16.4/15.3  oh-cg-10=15.8/13.8/18.4/16.0/14.9  oh-cg-2=15.7/13.6/18.2/16.1/14.8  oh-cg-3=15.8/13.8/18.5/15.9/14.9  oh-cg-4=16.0/13.9/18.3/16.4/15.1  oh-cg-5=15.7/13.8/18.5/16.2/14.9  oh-cg-6=16.0/13.9/18.6/16.4/14.9  oh-cg-7=15.7/13.6/18.4/16.1/14.8  oh-cg-8=15.7/13.9/18.3/15.7/15.0  oh-cg-9=16.0/13.9/18.7/16.2/15.1
+judge vote SD (mean over questions): oh-1=1.1  oh-10=1.2  oh-2=0.9  oh-3=0.8  oh-4=1.1  oh-5=0.8  oh-6=1.0  oh-7=0.7  oh-8=0.9  oh-9=0.8  oh-aoci-1=0.8  oh-aoci-10=0.8  oh-aoci-2=0.9  oh-aoci-3=1.0  oh-aoci-4=0.7  oh-aoci-5=0.9  oh-aoci-6=0.9  oh-aoci-7=1.0  oh-aoci-8=0.9  oh-aoci-9=1.0  oh-cg-1=0.9  oh-cg-10=0.8  oh-cg-2=1.0  oh-cg-3=1.0  oh-cg-4=0.7  oh-cg-5=0.7  oh-cg-6=0.8  oh-cg-7=0.9  oh-cg-8=0.8  oh-cg-9=1.0
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=0.9 calls/574ch (used on 60% of questions)  oh-aoci-10=0.9 calls/515ch (used on 56% of questions)  oh-aoci-2=1.0 calls/923ch (used on 67% of questions)  oh-aoci-3=1.0 calls/653ch (used on 62% of questions)  oh-aoci-4=1.0 calls/990ch (used on 65% of questions)  oh-aoci-5=1.0 calls/987ch (used on 69% of questions)  oh-aoci-6=1.1 calls/929ch (used on 67% of questions)  oh-aoci-7=0.8 calls/623ch (used on 54% of questions)  oh-aoci-8=0.9 calls/666ch (used on 60% of questions)  oh-aoci-9=1.0 calls/630ch (used on 67% of questions)  oh-cg-1=1.3 calls/25399ch (used on 98% of questions)  oh-cg-10=1.2 calls/23836ch (used on 100% of questions)  oh-cg-2=1.5 calls/29531ch (used on 98% of questions)  oh-cg-3=1.2 calls/24448ch (used on 98% of questions)  oh-cg-4=1.2 calls/24043ch (used on 100% of questions)  oh-cg-5=1.2 calls/24657ch (used on 98% of questions)  oh-cg-6=1.2 calls/23077ch (used on 98% of questions)  oh-cg-7=1.2 calls/23041ch (used on 98% of questions)  oh-cg-8=1.3 calls/25653ch (used on 98% of questions)  oh-cg-9=1.2 calls/22536ch (used on 98% of questions)
+totals: oh-1: in=2,449,370 out=47,117  oh-10: in=2,213,287 out=43,732  oh-2: in=2,369,317 out=45,334  oh-3: in=2,209,287 out=44,683  oh-4: in=2,367,360 out=45,716  oh-5: in=2,530,353 out=47,072  oh-6: in=2,357,798 out=51,139  oh-7: in=2,387,616 out=45,667  oh-8: in=2,229,844 out=45,321  oh-9: in=2,139,832 out=41,482  oh-aoci-1: in=17,556,789 out=103,777  oh-aoci-10: in=18,311,026 out=104,822  oh-aoci-2: in=18,759,306 out=105,893  oh-aoci-3: in=18,867,495 out=106,387  oh-aoci-4: in=18,901,010 out=106,586  oh-aoci-5: in=19,357,390 out=108,922  oh-aoci-6: in=18,587,011 out=105,363  oh-aoci-7: in=18,585,047 out=107,799  oh-aoci-8: in=18,532,271 out=106,226  oh-aoci-9: in=18,680,566 out=106,054  oh-cg-1: in=2,706,066 out=37,042  oh-cg-10: in=2,883,722 out=39,652  oh-cg-2: in=2,836,630 out=45,194  oh-cg-3: in=2,486,848 out=34,764  oh-cg-4: in=2,494,952 out=34,599  oh-cg-5: in=2,609,832 out=33,773  oh-cg-6: in=2,730,491 out=36,675  oh-cg-7: in=2,644,956 out=35,615  oh-cg-8: in=2,705,027 out=36,645  oh-cg-9: in=2,571,636 out=36,100
+
+== oh-10 - oh-1: n=48 Δ=-2.6 95%CI=[-4.7,-0.7] median=-1.0 win/tie/loss=13/10/25 sign-test p=0.073 | n for 80% power at this Δ ≈ 55
+   by category: what: -0.8 [-3.5,+1.8] (n=12)  how: -4.8 [-9.2,-1.3] (n=12)  why: -2.8 [-8.2,+2.1] (n=12)  where: -2.1 [-5.3,+1.1] (n=12)
+   paired efficiency (b−a): input_tokens: -4918 [-11049,+359] (0.90x)  peak_input_tokens: -418 [-889,+26] (0.96x)  output_tokens: -71 [-166,+18] (0.93x)  tool_calls: -0 [-1,+0] (0.96x)  wall_s: -1 [-3,-0] (0.86x)  answer_chars: -94 [-234,+36] (0.92x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/27/10; hit cap: {'oh-1': 5, 'oh-10': 3}
+   -26  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-10          read=['src/_pytest/_py/path.py'] steps=8 retried=None
+   -20  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-10          read=['src/_pytest/config/__init__.py', 'testing/test_config.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+   -18  How does pytest's indirect parametrization mechanism resolve non-hashable dictionary items through fixture request param
+         oh-1           read=['src/_pytest/fixtures.py', 'src/_pytest/mark/structures.py', 'src/_pytest/python.py'] steps=9 retried=None
+         oh-10          read=['src/_pytest/fixtures.py', 'src/_pytest/mark/structures.py', 'src/_pytest/python.py'] steps=10 retried=None
+   +15  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-10          read=['testing/test_terminal.py'] steps=6 retried=None
+   +9  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-10          read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +6  What is the dependency relationship between evaluate_skip_marks function and the pytester fixture's getitem method in te
+         oh-1           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=3 retried=None
+         oh-10          read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=3 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-1.9 95%CI=[-4.5,+0.4] median=-1.0 win/tie/loss=19/3/26 sign-test p=0.371 | n for 80% power at this Δ ≈ 158
+   by category: what: +1.3 [-2.6,+5.4] (n=12)  how: -1.8 [-4.6,+0.8] (n=12)  why: -2.5 [-10.2,+3.9] (n=12)  where: -4.8 [-9.2,-0.9] (n=12)
+   paired efficiency (b−a): input_tokens: -1668 [-6405,+2366] (0.97x)  peak_input_tokens: -59 [-430,+321] (0.99x)  output_tokens: -37 [-124,+48] (0.96x)  tool_calls: +0 [-0,+1] (1.01x)  wall_s: -0 [-1,+1] (0.97x)  answer_chars: -156 [-282,-40] (0.86x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/31/8; hit cap: {'oh-1': 5, 'oh-2': 5}
+   -37  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-2           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=4 retried=None
+   -23  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-2           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=9 retried=None
+   -12  Where in the test_attr_hasmarkup function is the hasmarkup attribute of the TerminalWriter instance being bound to contr
+         oh-1           read=['testing/io/test_terminalwriter.py'] steps=2 retried=None
+         oh-2           read=['testing/io/test_terminalwriter.py'] steps=2 retried=None
+   +19  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-2           read=['src/_pytest/config/__init__.py', 'src/_pytest/helpconfig.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=5 retried=None
+   +18  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-2           read=['src/_pytest/_argcomplete.py', 'testing/test_argcomplete.py'] steps=2 retried=None
+   +7  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-2           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+
+== oh-3 - oh-1: n=48 Δ=-2.6 95%CI=[-5.5,+0.0] median=-1.0 win/tie/loss=18/3/27 sign-test p=0.233 | n for 80% power at this Δ ≈ 113
+   by category: what: -1.5 [-4.8,+1.2] (n=12)  how: -3.9 [-10.6,+0.3] (n=12)  why: -5.5 [-13.7,+1.1] (n=12)  where: +0.7 [-3.1,+5.5] (n=12)
+   paired efficiency (b−a): input_tokens: -5002 [-11063,+449] (0.90x)  peak_input_tokens: -257 [-712,+144] (0.98x)  output_tokens: -51 [-151,+43] (0.95x)  tool_calls: -0 [-1,+0] (0.95x)  wall_s: -1 [-2,+0] (0.92x)  answer_chars: -47 [-176,+78] (0.96x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/26/11; hit cap: {'oh-1': 5, 'oh-3': 5}
+   -39  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-3           read=['src/_pytest/_py/path.py'] steps=6 retried=None
+   -36  How does pytest's indirect parametrization mechanism resolve non-hashable dictionary items through fixture request param
+         oh-1           read=['src/_pytest/fixtures.py', 'src/_pytest/mark/structures.py', 'src/_pytest/python.py'] steps=9 retried=None
+         oh-3           read=['src/_pytest/fixtures.py', 'src/_pytest/python.py'] steps=10 retried=None
+   -22  Why does the SysCapture class maintain consistency between its captured buffer state and the original system stream when
+         oh-1           read=['src/_pytest/capture.py', 'testing/test_capture.py'] steps=6 retried=None
+         oh-3           read=['src/_pytest/capture.py'] steps=2 retried=None
+   +23  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-3           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +10  Why does the repeated fixture instantiation and teardown cycle in test_package_fixture_complex impact performance when s
+         oh-1           read=['src/_pytest/fixtures.py', 'testing/python/fixtures.py'] steps=10 retried=None
+         oh-3           read=['src/_pytest/fixtures.py', 'src/_pytest/runner.py', 'testing/python/fixtures.py'] steps=10 retried=None
+   +7  Why does the test_parse_from_file method verify that the parser correctly handles file-based argument input through the 
+         oh-1           read=['src/_pytest/config/argparsing.py', 'testing/test_parseopt.py'] steps=4 retried=None
+         oh-3           read=['src/_pytest/config/argparsing.py', 'testing/test_parseopt.py'] steps=4 retried=None
+
+== oh-4 - oh-1: n=48 Δ=-1.9 95%CI=[-5.2,+1.3] median=-1.5 win/tie/loss=18/2/28 sign-test p=0.184 | n for 80% power at this Δ ≈ 290
+   by category: what: +1.4 [-5.8,+8.0] (n=12)  how: -3.4 [-7.5,+0.5] (n=12)  why: -5.1 [-12.9,+2.2] (n=12)  where: -0.5 [-5.6,+6.5] (n=12)
+   paired efficiency (b−a): input_tokens: -1709 [-7288,+3523] (0.97x)  peak_input_tokens: -91 [-488,+295] (0.99x)  output_tokens: -29 [-107,+45] (0.97x)  tool_calls: -0 [-1,+0] (0.99x)  wall_s: -1 [-3,+0] (0.89x)  answer_chars: -91 [-228,+51] (0.92x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/25/13; hit cap: {'oh-1': 5, 'oh-4': 4}
+   -37  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-4           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=6 retried=None
+   -26  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-4           read=['src/_pytest/junitxml.py'] steps=4 retried=None
+   -19  Why does the ensure_deletable function's resilience mechanism prevent cascading failures when both lock file removal and
+         oh-1           read=['src/_pytest/pathlib.py', 'testing/test_pathlib.py'] steps=2 retried=None
+         oh-4           read=['src/_pytest/pathlib.py'] steps=2 retried=None
+   +33  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-4           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +21  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-4           read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +17  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-4           read=['src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=4 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-0.8 95%CI=[-3.1,+1.6] median=+0.0 win/tie/loss=20/5/23 sign-test p=0.761 | n for 80% power at this Δ ≈ 923
+   by category: what: -0.4 [-5.0,+3.8] (n=12)  how: -0.8 [-4.5,+2.7] (n=12)  why: +0.2 [-4.9,+4.6] (n=12)  where: -2.1 [-7.2,+4.1] (n=12)
+   paired efficiency (b−a): input_tokens: +1687 [-3618,+6904] (1.03x)  peak_input_tokens: -75 [-471,+276] (0.99x)  output_tokens: -1 [-80,+76] (1.00x)  tool_calls: +0 [-0,+1] (1.04x)  wall_s: +0 [-1,+1] (1.02x)  answer_chars: -120 [-253,+18] (0.89x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/25/15; hit cap: {'oh-1': 5, 'oh-5': 7}
+   -19  Why does the repeated fixture instantiation and teardown cycle in test_package_fixture_complex impact performance when s
+         oh-1           read=['src/_pytest/fixtures.py', 'testing/python/fixtures.py'] steps=10 retried=None
+         oh-5           read=['src/_pytest/fixtures.py', 'src/_pytest/python.py', 'testing/python/fixtures.py'] steps=10 retried=None
+   -17  Where in the LocalPath class can I locate the code logic responsible for assigning the absolute path value to the strpat
+         oh-1           read=['src/_pytest/_py/path.py'] steps=2 retried=None
+         oh-5           read=['src/_pytest/_py/path.py'] steps=2 retried=None
+   -13  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-5           read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +25  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-5           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +13  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-5           read=['testing/logging/test_reporting.py', 'testing/test_terminal.py'] steps=4 retried=None
+   +11  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-5           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'testing/test_assertion.py'] steps=5 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-1.7 95%CI=[-4.6,+1.0] median=-1.5 win/tie/loss=17/4/27 sign-test p=0.174 | n for 80% power at this Δ ≈ 269
+   by category: what: -3.7 [-9.7,+2.7] (n=12)  how: -1.0 [-3.7,+1.9] (n=12)  why: -2.9 [-10.9,+3.1] (n=12)  where: +0.8 [-3.5,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: -1908 [-7174,+2790] (0.96x)  peak_input_tokens: +84 [-496,+908] (1.01x)  output_tokens: +84 [-114,+414] (1.09x)  tool_calls: -0 [-1,+0] (0.95x)  wall_s: -0 [-2,+2] (0.98x)  answer_chars: -126 [-241,-22] (0.89x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/33/7; hit cap: {'oh-1': 5, 'oh-6': 5}
+   -40  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-6           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+   -23  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-6           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+   -14  What is the impact of the tmpdir fixture's conversion from Path to LEGACY_PATH through legacy_path() on the fixture's de
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/legacypath.py', 'src/_pytest/tmpdir.py'] steps=3 retried=None
+         oh-6           read=['src/_pytest/compat.py', 'src/_pytest/legacypath.py', 'src/_pytest/tmpdir.py'] steps=3 retried=None
+   +25  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-6           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +19  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-6           read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +13  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-6           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-2.7 95%CI=[-5.7,+0.2] median=-2.0 win/tie/loss=15/4/29 sign-test p=0.049 | n for 80% power at this Δ ≈ 116
+   by category: what: -3.9 [-9.8,+1.2] (n=12)  how: -2.6 [-6.8,+1.8] (n=12)  why: -2.4 [-9.7,+3.4] (n=12)  where: -1.8 [-7.5,+5.7] (n=12)
+   paired efficiency (b−a): input_tokens: -1287 [-8478,+5522] (0.97x)  peak_input_tokens: -86 [-568,+428] (0.99x)  output_tokens: -30 [-153,+87] (0.97x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: -1 [-2,+1] (0.92x)  answer_chars: -177 [-309,-55] (0.84x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/27/11; hit cap: {'oh-1': 5, 'oh-7': 6}
+   -35  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-7           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=3 retried=None
+   -28  What is the sentinel value abstraction pattern that NotSetType implements within the pytest compatibility layer to decou
+         oh-1           read=['src/_pytest/compat.py'] steps=2 retried=None
+         oh-7           read=['src/_pytest/compat.py'] steps=2 retried=None
+   -17  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-7           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+   +33  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-7           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +15  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-7           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=7 retried=None
+   +15  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-7           read=['src/_pytest/compat.py', 'src/_pytest/python.py'] steps=4 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-0.4 95%CI=[-3.0,+2.4] median=-1.0 win/tie/loss=19/3/26 sign-test p=0.371 | n for 80% power at this Δ ≈ 4690
+   by category: what: +0.6 [-5.6,+7.2] (n=12)  how: -1.4 [-5.1,+2.2] (n=12)  why: +0.4 [-4.6,+5.5] (n=12)  where: -1.2 [-5.9,+5.8] (n=12)
+   paired efficiency (b−a): input_tokens: -4573 [-11038,+840] (0.91x)  peak_input_tokens: -118 [-507,+233] (0.99x)  output_tokens: -37 [-128,+46] (0.96x)  tool_calls: -0 [-1,+0] (0.97x)  wall_s: -1 [-3,+0] (0.90x)  answer_chars: +2 [-142,+144] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/25/10; hit cap: {'oh-1': 5, 'oh-8': 3}
+   -18  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-8           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+   -15  Why does the ensure_deletable function's resilience mechanism prevent cascading failures when both lock file removal and
+         oh-1           read=['src/_pytest/pathlib.py', 'testing/test_pathlib.py'] steps=2 retried=None
+         oh-8           read=['src/_pytest/pathlib.py'] steps=2 retried=None
+   -12  Why would caching the Source object initialization in setup_class impact the performance characteristics of the TestAcce
+         oh-1           read=['src/_pytest/_code/source.py', 'src/_pytest/python.py', 'testing/code/test_source.py'] steps=10 retried=None
+         oh-8           read=['src/_pytest/_code/source.py', 'testing/code/test_source.py'] steps=8 retried=None
+   +33  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-8           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +25  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-8           read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +19  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-8           read=['src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=5 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-0.9 95%CI=[-3.3,+1.4] median=-1.5 win/tie/loss=19/4/25 sign-test p=0.451 | n for 80% power at this Δ ≈ 615
+   by category: what: -1.8 [-5.8,+2.0] (n=12)  how: +2.2 [-1.1,+5.9] (n=12)  why: -1.8 [-7.0,+2.3] (n=12)  where: -2.3 [-6.6,+3.7] (n=12)
+   paired efficiency (b−a): input_tokens: -6449 [-13219,-604] (0.87x)  peak_input_tokens: -393 [-850,+15] (0.96x)  output_tokens: -117 [-236,-24] (0.88x)  tool_calls: -1 [-1,-0] (0.89x)  wall_s: -1 [-3,-0] (0.85x)  answer_chars: -110 [-223,-6] (0.90x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/26/8; hit cap: {'oh-1': 5, 'oh-9': 3}
+   -26  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-9           read=['src/_pytest/_py/path.py'] steps=6 retried=None
+   -14  What is the impact of the tmpdir fixture's conversion from Path to LEGACY_PATH through legacy_path() on the fixture's de
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/legacypath.py', 'src/_pytest/tmpdir.py'] steps=3 retried=None
+         oh-9           read=['src/_pytest/compat.py', 'src/_pytest/legacypath.py', 'src/_pytest/tmpdir.py'] steps=3 retried=None
+   -10  What external dependencies and context must be available for TestEvaluation test methods to correctly evaluate skipif co
+         oh-1           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=4 retried=None
+         oh-9           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=5 retried=None
+   +27  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-9           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +17  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-9           read=['src/_pytest/python.py'] steps=4 retried=None
+   +9  Why would caching the Source object initialization in setup_class impact the performance characteristics of the TestAcce
+         oh-1           read=['src/_pytest/_code/source.py', 'src/_pytest/python.py', 'testing/code/test_source.py'] steps=10 retried=None
+         oh-9           read=['src/_pytest/_code/source.py', 'testing/code/test_source.py'] steps=4 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+1.9 95%CI=[-2.5,+6.1] median=+2.0 win/tie/loss=27/4/17 sign-test p=0.174 | n for 80% power at this Δ ≈ 509
+   by category: what: +2.8 [-4.9,+10.8] (n=12)  how: +0.8 [-9.9,+9.2] (n=12)  why: +1.8 [-8.7,+10.8] (n=12)  where: +2.2 [-3.8,+10.6] (n=12)
+   paired efficiency (b−a): input_tokens: +314738 [+281873,+350374] (7.17x)  peak_input_tokens: +35568 [+34878,+36189] (4.29x)  output_tokens: +1180 [+1052,+1299] (2.20x)  tool_calls: -2 [-3,-1] (0.72x)  wall_s: +9 [+7,+11] (2.04x)  answer_chars: +287 [+141,+425] (1.26x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'terminal': 14, 'aoci_get_entries': 7, 'aoci_search': 22, '(none)': 5}}
+   steps (b−a): fewer/same/more = 21/12/15; hit cap: {'oh-1': 5, 'oh-aoci-1': 4}
+   -48  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -37  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-aoci-1      read=['src/_pytest/_py/path.py'] steps=4 retried=None
+   -21  Why does the repeated fixture instantiation and teardown cycle in test_package_fixture_complex impact performance when s
+         oh-1           read=['src/_pytest/fixtures.py', 'testing/python/fixtures.py'] steps=10 retried=None
+         oh-aoci-1      read=['src/_pytest/fixtures.py', 'src/_pytest/runner.py', 'testing/python/fixtures.py'] steps=10 retried=None
+   +42  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-1      read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +33  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-1      read=['src/_pytest/_argcomplete.py', 'testing/test_argcomplete.py'] steps=1 retried=None
+   +31  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-1      read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/conftest.py', 'testing/test_assertion.py', 'testing/test_assertrewrite.py'] steps=6 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+3.7 95%CI=[+0.9,+6.7] median=+2.5 win/tie/loss=29/5/14 sign-test p=0.032 | n for 80% power at this Δ ≈ 60
+   by category: what: +2.6 [-2.0,+8.9] (n=12)  how: +1.4 [-4.1,+6.9] (n=12)  why: +6.9 [+2.9,+11.7] (n=12)  where: +3.8 [-2.0,+11.4] (n=12)
+   paired efficiency (b−a): input_tokens: +330451 [+295385,+368243] (7.48x)  peak_input_tokens: +35680 [+34978,+36317] (4.30x)  output_tokens: +1202 [+1070,+1325] (2.22x)  tool_calls: -1 [-2,-0] (0.79x)  wall_s: +10 [+8,+12] (2.13x)  answer_chars: +266 [+126,+412] (1.24x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'terminal': 16, 'aoci_search': 23, 'aoci_get_entries': 4, '(none)': 5}}
+   steps (b−a): fewer/same/more = 17/13/18; hit cap: {'oh-1': 5, 'oh-aoci-10': 6}
+   -16  How does the import_path API framework resolve module identity and ensure module caching consistency when the same file 
+         oh-1           read=['src/_pytest/pathlib.py'] steps=4 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -11  Where in the test_attr_hasmarkup function is the hasmarkup attribute of the TerminalWriter instance being bound to contr
+         oh-1           read=['testing/io/test_terminalwriter.py'] steps=2 retried=None
+         oh-aoci-10     read=['testing/io/test_terminalwriter.py'] steps=2 retried=None
+   -9  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-10     read=['src/_pytest/config/__init__.py'] steps=9 retried=None
+   +40  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-10     read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +32  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-10     read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +27  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-10     read=['doc/en/how-to/writing_plugins.rst', 'src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'testing/acceptance_test.py', 'testing/test_assertion.py', 'testing/test_assertrewrite.py'] steps=8 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=+3.1 95%CI=[-1.2,+7.2] median=+3.0 win/tie/loss=29/6/13 sign-test p=0.020 | n for 80% power at this Δ ≈ 181
+   by category: what: +5.2 [-3.6,+13.4] (n=12)  how: +0.9 [-11.4,+10.1] (n=12)  why: +2.7 [-4.6,+8.8] (n=12)  where: +3.8 [-1.8,+11.8] (n=12)
+   paired efficiency (b−a): input_tokens: +339790 [+305273,+374515] (7.66x)  peak_input_tokens: +36096 [+35353,+36740] (4.34x)  output_tokens: +1224 [+1071,+1361] (2.25x)  tool_calls: -1 [-2,-0] (0.81x)  wall_s: +10 [+7,+12] (2.11x)  answer_chars: +257 [+61,+462] (1.23x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'terminal': 15, 'aoci_get_entries': 8, 'aoci_search': 24, '(none)': 1}}
+   steps (b−a): fewer/same/more = 13/14/21; hit cap: {'oh-1': 5, 'oh-aoci-2': 6}
+   -54  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -27  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-aoci-2      read=['src/_pytest/_py/path.py'] steps=5 retried=None
+   -26  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/_pytest/junitxml.py'] steps=1 retried=None
+   +43  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +31  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/_pytest/_argcomplete.py', 'testing/test_argcomplete.py'] steps=1 retried=None
+   +30  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-aoci-2      read=['src/_pytest/compat.py', 'src/_pytest/python.py'] steps=5 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+4.9 95%CI=[+2.0,+8.0] median=+3.5 win/tie/loss=33/0/15 sign-test p=0.013 | n for 80% power at this Δ ≈ 37
+   by category: what: +6.2 [-0.4,+13.6] (n=12)  how: +5.7 [+1.2,+10.3] (n=12)  why: +4.8 [+0.9,+8.2] (n=12)  where: +2.8 [-3.8,+11.3] (n=12)
+   paired efficiency (b−a): input_tokens: +342044 [+308062,+377032] (7.70x)  peak_input_tokens: +35684 [+35025,+36314] (4.30x)  output_tokens: +1235 [+1099,+1354] (2.26x)  tool_calls: -1 [-2,-0] (0.79x)  wall_s: +10 [+8,+12] (2.13x)  answer_chars: +324 [+139,+512] (1.29x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'terminal': 15, 'aoci_get_entries': 7, 'aoci_search': 23, '(none)': 3}}
+   steps (b−a): fewer/same/more = 14/14/20; hit cap: {'oh-1': 5, 'oh-aoci-3': 7}
+   -16  Where in the test_attr_hasmarkup function is the hasmarkup attribute of the TerminalWriter instance being bound to contr
+         oh-1           read=['testing/io/test_terminalwriter.py'] steps=2 retried=None
+         oh-aoci-3      read=['testing/io/test_terminalwriter.py'] steps=2 retried=None
+   -11  What external dependencies and context must be available for TestEvaluation test methods to correctly evaluate skipif co
+         oh-1           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=4 retried=None
+         oh-aoci-3      read=['src/_pytest/hookspec.py', 'src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=9 retried=None
+   -11  What is the defensive layering pattern established by the exception handling architecture in _format_repr_exception to p
+         oh-1           read=['src/_pytest/_io/saferepr.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/_pytest/_io/saferepr.py'] steps=3 retried=None
+   +42  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +36  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/_pytest/_argcomplete.py', 'testing/test_argcomplete.py'] steps=1 retried=None
+   +22  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-aoci-3      read=['src/_pytest/python.py'] steps=2 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+3.2 95%CI=[-0.1,+6.5] median=+2.0 win/tie/loss=28/7/13 sign-test p=0.028 | n for 80% power at this Δ ≈ 104
+   by category: what: +2.8 [-4.4,+10.8] (n=12)  how: +1.7 [-5.1,+7.2] (n=12)  why: +5.3 [+0.9,+10.3] (n=12)  where: +3.0 [-3.1,+11.1] (n=12)
+   paired efficiency (b−a): input_tokens: +342742 [+310289,+378180] (7.72x)  peak_input_tokens: +35979 [+35405,+36443] (4.33x)  output_tokens: +1239 [+1110,+1351] (2.26x)  tool_calls: -1 [-2,-0] (0.82x)  wall_s: +11 [+9,+12] (2.17x)  answer_chars: +251 [+87,+411] (1.23x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_search': 22, 'aoci_get_entries': 9, 'terminal': 15, '(none)': 2}}
+   steps (b−a): fewer/same/more = 14/16/18; hit cap: {'oh-1': 5, 'oh-aoci-4': 7}
+   -29  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-4      read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+   -19  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-aoci-4      read=['src/_pytest/junitxml.py'] steps=1 retried=None
+   -13  What external dependencies and context must be available for TestEvaluation test methods to correctly evaluate skipif co
+         oh-1           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=4 retried=None
+         oh-aoci-4      read=['src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=3 retried=None
+   +42  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-4      read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +36  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-4      read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +21  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-4      read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'testing/acceptance_test.py', 'testing/test_assertion.py', 'testing/test_assertrewrite.py'] steps=9 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+2.6 95%CI=[-1.0,+6.2] median=+2.5 win/tie/loss=28/6/14 sign-test p=0.044 | n for 80% power at this Δ ≈ 179
+   by category: what: +0.4 [-6.7,+8.2] (n=12)  how: -0.4 [-9.6,+6.3] (n=12)  why: +6.3 [+1.6,+11.5] (n=12)  where: +4.2 [-1.8,+11.8] (n=12)
+   paired efficiency (b−a): input_tokens: +352250 [+315601,+390032] (7.90x)  peak_input_tokens: +35944 [+35226,+36591] (4.32x)  output_tokens: +1288 [+1157,+1408] (2.31x)  tool_calls: -1 [-2,+0] (0.84x)  wall_s: +11 [+9,+13] (2.25x)  answer_chars: +426 [+240,+622] (1.38x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_search': 24, 'aoci_get_entries': 9, 'terminal': 12, '(none)': 3}}
+   steps (b−a): fewer/same/more = 13/12/23; hit cap: {'oh-1': 5, 'oh-aoci-5': 7}
+   -42  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -21  What is the dependency relationship between evaluate_skip_marks function and the pytester fixture's getitem method in te
+         oh-1           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=3 retried=None
+         oh-aoci-5      read=['src/_pytest/skipping.py'] steps=3 retried=None
+   -17  What is the defensive layering pattern established by the exception handling architecture in _format_repr_exception to p
+         oh-1           read=['src/_pytest/_io/saferepr.py'] steps=2 retried=None
+         oh-aoci-5      read=['src/_pytest/_io/saferepr.py'] steps=3 retried=None
+   +40  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-5      read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +33  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-5      read=['src/_pytest/_argcomplete.py', 'testing/test_argcomplete.py'] steps=1 retried=None
+   +24  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-5      read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'testing/test_assertion.py', 'testing/test_assertrewrite.py'] steps=7 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+2.1 95%CI=[-0.3,+4.7] median=+0.0 win/tie/loss=23/7/18 sign-test p=0.533 | n for 80% power at this Δ ≈ 147
+   by category: what: +6.0 [+1.0,+11.8] (n=12)  how: +1.8 [-3.1,+8.1] (n=12)  why: -0.8 [-5.2,+3.2] (n=12)  where: +1.2 [-2.5,+5.8] (n=12)
+   paired efficiency (b−a): input_tokens: +336201 [+305490,+369246] (7.59x)  peak_input_tokens: +35861 [+35215,+36467] (4.31x)  output_tokens: +1213 [+1098,+1319] (2.24x)  tool_calls: -1 [-2,-1] (0.78x)  wall_s: +11 [+10,+12] (2.20x)  answer_chars: +222 [+46,+405] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'terminal': 14, 'aoci_get_entries': 6, 'aoci_search': 26, '(none)': 2}}
+   steps (b−a): fewer/same/more = 16/13/19; hit cap: {'oh-1': 5, 'oh-aoci-6': 5}
+   -18  Why would caching the Source object initialization in setup_class impact the performance characteristics of the TestAcce
+         oh-1           read=['src/_pytest/_code/source.py', 'src/_pytest/python.py', 'testing/code/test_source.py'] steps=10 retried=None
+         oh-aoci-6      read=['src/_pytest/_code/source.py', 'testing/code/test_source.py'] steps=7 retried=None
+   -13  Why does the SysCapture class maintain consistency between its captured buffer state and the original system stream when
+         oh-1           read=['src/_pytest/capture.py', 'testing/test_capture.py'] steps=6 retried=None
+         oh-aoci-6      read=['src/_pytest/capture.py'] steps=6 retried=None
+   -9  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-6      read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+   +31  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-6      read=['testing/test_argcomplete.py'] steps=1 retried=None
+   +28  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-aoci-6      read=['src/_pytest/compat.py', 'src/_pytest/python.py'] steps=4 retried=None
+   +22  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-6      read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+2.3 95%CI=[-1.9,+6.1] median=+2.0 win/tie/loss=27/5/16 sign-test p=0.126 | n for 80% power at this Δ ≈ 306
+   by category: what: +1.3 [-5.8,+8.8] (n=12)  how: -2.2 [-14.2,+5.8] (n=12)  why: +3.5 [-1.3,+8.6] (n=12)  where: +6.4 [+1.0,+14.7] (n=12)
+   paired efficiency (b−a): input_tokens: +336160 [+299313,+373408] (7.59x)  peak_input_tokens: +35706 [+35012,+36312] (4.30x)  output_tokens: +1264 [+1130,+1389] (2.29x)  tool_calls: -1 [-2,-0] (0.81x)  wall_s: +11 [+9,+13] (2.25x)  answer_chars: +369 [+189,+563] (1.33x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'terminal': 19, 'aoci_get_entries': 7, 'aoci_search': 19, '(none)': 3}}
+   steps (b−a): fewer/same/more = 12/16/20; hit cap: {'oh-1': 5, 'oh-aoci-7': 8}
+   -60  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -23  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-aoci-7      read=['src/_pytest/junitxml.py'] steps=1 retried=None
+   -12  Why would caching the Source object initialization in setup_class impact the performance characteristics of the TestAcce
+         oh-1           read=['src/_pytest/_code/source.py', 'src/_pytest/python.py', 'testing/code/test_source.py'] steps=10 retried=None
+         oh-aoci-7      read=['src/_pytest/_code/source.py', 'testing/code/test_source.py'] steps=10 retried=None
+   +48  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-7      read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +31  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-7      read=['testing/test_argcomplete.py'] steps=1 retried=None
+   +23  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-7      read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'testing/test_assertion.py', 'testing/test_assertrewrite.py'] steps=7 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+2.7 95%CI=[-0.8,+6.2] median=+0.5 win/tie/loss=24/6/18 sign-test p=0.441 | n for 80% power at this Δ ≈ 160
+   by category: what: +2.5 [-2.8,+9.1] (n=12)  how: +2.5 [-4.2,+8.8] (n=12)  why: +2.9 [-5.8,+10.9] (n=12)  where: +2.9 [-1.6,+10.2] (n=12)
+   paired efficiency (b−a): input_tokens: +335060 [+299605,+372943] (7.57x)  peak_input_tokens: +35827 [+35112,+36463] (4.31x)  output_tokens: +1231 [+1091,+1362] (2.25x)  tool_calls: -1 [-2,-0] (0.80x)  wall_s: +10 [+8,+12] (2.14x)  answer_chars: +350 [+154,+554] (1.31x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'terminal': 15, 'aoci_get_entries': 8, 'aoci_search': 21, '(none)': 4}}
+   steps (b−a): fewer/same/more = 12/17/19; hit cap: {'oh-1': 5, 'oh-aoci-8': 7}
+   -33  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-aoci-8      read=['src/_pytest/_py/path.py'] steps=3 retried=None
+   -22  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -11  What is the defensive layering pattern established by the exception handling architecture in _format_repr_exception to p
+         oh-1           read=['src/_pytest/_io/saferepr.py'] steps=2 retried=None
+         oh-aoci-8      read=['src/_pytest/_code/code.py', 'src/_pytest/_io/saferepr.py'] steps=4 retried=None
+   +40  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-8      read=[] steps=2 retried=None
+   +31  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-8      read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +27  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-8      read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/_pytest/config/__init__.py', 'testing/test_assertion.py'] steps=7 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+3.0 95%CI=[-0.4,+6.6] median=+1.5 win/tie/loss=26/3/19 sign-test p=0.371 | n for 80% power at this Δ ≈ 136
+   by category: what: +0.9 [-5.7,+8.5] (n=12)  how: +4.1 [-0.1,+9.1] (n=12)  why: +6.5 [+0.8,+12.4] (n=12)  where: +0.3 [-8.3,+9.9] (n=12)
+   paired efficiency (b−a): input_tokens: +338150 [+304160,+374957] (7.63x)  peak_input_tokens: +35777 [+35115,+36390] (4.31x)  output_tokens: +1228 [+1079,+1357] (2.25x)  tool_calls: -1 [-2,-0] (0.78x)  wall_s: +11 [+9,+12] (2.20x)  answer_chars: +399 [+206,+591] (1.36x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'terminal': 13, 'aoci_get_entries': 10, 'aoci_search': 22, '(none)': 3}}
+   steps (b−a): fewer/same/more = 12/17/19; hit cap: {'oh-1': 5, 'oh-aoci-9': 8}
+   -24  Where does the data flow from `_early_rewrite_bailout` through `_basenames_to_check_rewrite` state mutation determine wh
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-9      read=[] steps=2 retried=None
+   -22  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-aoci-9      read=['src/_pytest/pytester.py'] steps=5 retried=None
+   -16  What is the sentinel value abstraction pattern that NotSetType implements within the pytest compatibility layer to decou
+         oh-1           read=['src/_pytest/compat.py'] steps=2 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +43  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-aoci-9      read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+   +32  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-aoci-9      read=['testing/test_argcomplete.py'] steps=1 retried=None
+   +28  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-aoci-9      read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'testing/test_assertion.py'] steps=5 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+2.3 95%CI=[-0.4,+5.1] median=+0.0 win/tie/loss=22/9/17 sign-test p=0.522 | n for 80% power at this Δ ≈ 138
+   by category: what: +7.3 [+2.3,+13.2] (n=12)  how: +0.4 [-1.9,+3.1] (n=12)  why: +3.4 [-2.6,+9.2] (n=12)  where: -1.9 [-7.8,+3.8] (n=12)
+   paired efficiency (b−a): input_tokens: +5348 [-4236,+15149] (1.10x)  peak_input_tokens: +5055 [+4086,+6070] (1.47x)  output_tokens: -210 [-356,-75] (0.79x)  tool_calls: -2 [-3,-1] (0.68x)  wall_s: -1 [-3,-0] (0.85x)  answer_chars: +166 [-12,+359] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 26/15/7; hit cap: {'oh-1': 5, 'oh-cg-1': 1}
+   -23  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-cg-1        read=['src/_pytest/pytester.py'] steps=6 retried=None
+   -15  Why does the SysCapture class maintain consistency between its captured buffer state and the original system stream when
+         oh-1           read=['src/_pytest/capture.py', 'testing/test_capture.py'] steps=6 retried=None
+         oh-cg-1        read=[] steps=3 retried=None
+   -9  Where is the LocalPath class definition located that implements the comparison operators being tested in test_gt_with_st
+         oh-1           read=['src/_pytest/_py/path.py', 'testing/_py/test_local.py'] steps=3 retried=None
+         oh-cg-1        read=['src/_pytest/_py/path.py'] steps=3 retried=None
+   +31  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-cg-1        read=['testing/test_argcomplete.py'] steps=2 retried=None
+   +25  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-1        read=['src/_pytest/python.py'] steps=2 retried=None
+   +23  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-1        read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+0.6 95%CI=[-2.1,+3.4] median=+0.5 win/tie/loss=24/2/22 sign-test p=0.883 | n for 80% power at this Δ ≈ 2168
+   by category: what: +2.7 [-0.2,+5.9] (n=12)  how: +1.0 [-2.8,+5.9] (n=12)  why: -0.4 [-7.1,+5.4] (n=12)  where: -0.9 [-7.7,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: +9049 [+210,+17898] (1.18x)  peak_input_tokens: +5028 [+4264,+5780] (1.46x)  output_tokens: -156 [-297,-22] (0.84x)  tool_calls: -2 [-3,-1] (0.73x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +123 [-25,+268] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 25/15/8; hit cap: {'oh-1': 5, 'oh-cg-10': 2}
+   -26  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-10       read=['src/_pytest/_py/path.py'] steps=5 retried=None
+   -24  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-cg-10       read=['src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=9 retried=None
+   -14  Why does the SysCapture class maintain consistency between its captured buffer state and the original system stream when
+         oh-1           read=['src/_pytest/capture.py', 'testing/test_capture.py'] steps=6 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   +34  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-10       read=['src/_pytest/assertion/rewrite.py'] steps=4 retried=None
+   +23  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   +18  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-cg-10       read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=4 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.0 95%CI=[-3.5,+3.5] median=+0.0 win/tie/loss=19/8/21 sign-test p=0.875 | n for 80% power at this Δ ≈ nan
+   by category: what: +2.0 [-3.4,+7.8] (n=12)  how: -0.4 [-4.5,+3.9] (n=12)  why: -2.2 [-11.0,+5.2] (n=12)  where: +0.6 [-6.6,+9.6] (n=12)
+   paired efficiency (b−a): input_tokens: +8068 [-942,+17099] (1.16x)  peak_input_tokens: +6045 [+4548,+7746] (1.56x)  output_tokens: -40 [-295,+345] (0.96x)  tool_calls: -2 [-3,-1] (0.69x)  wall_s: -0 [-2,+1] (0.96x)  answer_chars: +127 [-56,+312] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 29/10/9; hit cap: {'oh-1': 5, 'oh-cg-2': 1}
+   -39  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-2        read=['src/_pytest/_py/path.py'] steps=5 retried=None
+   -18  Why does the repeated fixture instantiation and teardown cycle in test_package_fixture_complex impact performance when s
+         oh-1           read=['src/_pytest/fixtures.py', 'testing/python/fixtures.py'] steps=10 retried=None
+         oh-cg-2        read=['src/_pytest/fixtures.py', 'testing/python/fixtures.py'] steps=8 retried=None
+   -14  Where is the line-wrapping logic that determines when function arguments exceed terminal width implemented in the ReprFu
+         oh-1           read=['src/_pytest/_code/code.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   +42  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-2        read=['src/_pytest/assertion/rewrite.py'] steps=4 retried=None
+   +25  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-2        read=['src/_pytest/python.py'] steps=2 retried=None
+   +17  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-cg-2        read=['testing/test_terminal.py'] steps=4 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+0.5 95%CI=[-2.6,+3.9] median=+0.0 win/tie/loss=23/4/21 sign-test p=0.880 | n for 80% power at this Δ ≈ 4419
+   by category: what: +5.8 [+0.2,+11.9] (n=12)  how: +0.3 [-2.1,+2.2] (n=12)  why: -2.8 [-9.2,+3.2] (n=12)  where: -1.5 [-8.8,+8.1] (n=12)
+   paired efficiency (b−a): input_tokens: +781 [-9011,+10916] (1.02x)  peak_input_tokens: +4585 [+3667,+5520] (1.42x)  output_tokens: -257 [-416,-102] (0.74x)  tool_calls: -2 [-3,-1] (0.63x)  wall_s: -2 [-4,-1] (0.73x)  answer_chars: +85 [-90,+275] (1.08x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 29/13/6; hit cap: {'oh-1': 5, 'oh-cg-3': 1}
+   -26  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-3        read=['src/_pytest/_py/path.py'] steps=5 retried=None
+   -23  Where is the line-wrapping logic that determines when function arguments exceed terminal width implemented in the ReprFu
+         oh-1           read=['src/_pytest/_code/code.py'] steps=2 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   -13  Why would repeated invocations of pytester.getitem() followed by evaluate_xfail_marks() impact test suite performance, a
+         oh-1           read=['src/_pytest/mark/evaluate.py', 'src/_pytest/nodes.py', 'src/_pytest/pathlib.py', 'src/_pytest/pytester.py', 'src/_pytest/python.py', 'src/_pytest/skipping.py'] steps=10 retried=None
+         oh-cg-3        read=['src/_pytest/pytester.py', 'testing/test_skipping.py'] steps=3 retried=None
+   +43  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-3        read=['src/_pytest/assertion/rewrite.py'] steps=4 retried=None
+   +32  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-3        read=['src/_pytest/python.py'] steps=2 retried=None
+   +15  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-cg-3        read=['testing/test_argcomplete.py'] steps=2 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+1.2 95%CI=[-2.4,+4.8] median=+1.0 win/tie/loss=26/6/16 sign-test p=0.164 | n for 80% power at this Δ ≈ 807
+   by category: what: +7.3 [+1.6,+13.4] (n=12)  how: -1.3 [-8.1,+4.5] (n=12)  why: +0.6 [-8.4,+7.7] (n=12)  where: -1.6 [-8.2,+5.6] (n=12)
+   paired efficiency (b−a): input_tokens: +950 [-10029,+12003] (1.02x)  peak_input_tokens: +4562 [+3641,+5427] (1.42x)  output_tokens: -261 [-412,-123] (0.73x)  tool_calls: -2 [-3,-1] (0.63x)  wall_s: -3 [-5,-1] (0.72x)  answer_chars: +99 [-56,+255] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/9/9; hit cap: {'oh-1': 5, 'oh-cg-4': 1}
+   -39  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-4        read=['src/_pytest/_py/path.py'] steps=4 retried=None
+   -25  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-cg-4        read=['src/_pytest/pytester.py'] steps=5 retried=None
+   -23  How should the plugin manager architecture be redesigned to enforce plugin registration policies at the system level rat
+         oh-1           read=['src/_pytest/config/__init__.py', 'testing/test_pluginmanager.py'] steps=10 retried=None
+         oh-cg-4        read=['src/_pytest/config/__init__.py', 'src/_pytest/deprecated.py', 'testing/test_pluginmanager.py'] steps=6 retried=None
+   +32  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-4        read=['src/_pytest/python.py'] steps=2 retried=None
+   +31  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-4        read=['src/_pytest/assertion/rewrite.py'] steps=4 retried=None
+   +19  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-cg-4        read=['testing/test_terminal.py'] steps=4 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+0.8 95%CI=[-2.2,+3.9] median=+0.0 win/tie/loss=21/6/21 sign-test p=1.000 | n for 80% power at this Δ ≈ 1515
+   by category: what: +2.7 [-3.6,+8.6] (n=12)  how: +1.2 [-2.0,+5.8] (n=12)  why: -0.9 [-6.2,+4.1] (n=12)  where: +0.2 [-7.6,+8.8] (n=12)
+   paired efficiency (b−a): input_tokens: +3343 [-8159,+15871] (1.07x)  peak_input_tokens: +4651 [+3505,+5876] (1.43x)  output_tokens: -278 [-450,-124] (0.72x)  tool_calls: -2 [-3,-2] (0.61x)  wall_s: -2 [-4,-1] (0.74x)  answer_chars: +52 [-111,+214] (1.05x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 28/13/7; hit cap: {'oh-1': 5, 'oh-cg-5': 2}
+   -29  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-cg-5        read=['src/_pytest/pytester.py'] steps=5 retried=None
+   -20  Why would caching the Source object initialization in setup_class impact the performance characteristics of the TestAcce
+         oh-1           read=['src/_pytest/_code/source.py', 'src/_pytest/python.py', 'testing/code/test_source.py'] steps=10 retried=None
+         oh-cg-5        read=['testing/code/test_source.py'] steps=3 retried=None
+   -15  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-cg-5        read=['src/_pytest/junitxml.py'] steps=2 retried=None
+   +38  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-5        read=['src/_pytest/assertion/rewrite.py'] steps=4 retried=None
+   +24  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +18  What is the architectural pattern in the TestArgComplete class that decouples the comparison logic between FastFilesComp
+         oh-1           read=['testing/test_argcomplete.py'] steps=2 retried=None
+         oh-cg-5        read=['testing/test_argcomplete.py'] steps=2 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+1.5 95%CI=[-1.4,+4.2] median=+0.0 win/tie/loss=23/8/17 sign-test p=0.430 | n for 80% power at this Δ ≈ 355
+   by category: what: +8.4 [+4.3,+12.5] (n=12)  how: -0.1 [-2.3,+2.5] (n=12)  why: -0.7 [-8.8,+5.8] (n=12)  where: -1.8 [-6.3,+3.5] (n=12)
+   paired efficiency (b−a): input_tokens: +5857 [-5719,+18770] (1.11x)  peak_input_tokens: +4427 [+3286,+5735] (1.41x)  output_tokens: -218 [-367,-74] (0.78x)  tool_calls: -2 [-3,-1] (0.66x)  wall_s: -2 [-3,-1] (0.79x)  answer_chars: +99 [-69,+261] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 28/12/8; hit cap: {'oh-1': 5, 'oh-cg-6': 2}
+   -37  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-6        read=['src/_pytest/_py/path.py'] steps=3 retried=None
+   -12  Why would repeated invocations of pytester.getitem() followed by evaluate_xfail_marks() impact test suite performance, a
+         oh-1           read=['src/_pytest/mark/evaluate.py', 'src/_pytest/nodes.py', 'src/_pytest/pathlib.py', 'src/_pytest/pytester.py', 'src/_pytest/python.py', 'src/_pytest/skipping.py'] steps=10 retried=None
+         oh-cg-6        read=['src/_pytest/nodes.py', 'src/_pytest/pytester.py', 'testing/test_skipping.py'] steps=5 retried=None
+   -10  Where are the functions or methods in the assertion module that indirectly invoke the _HighlightFunc protocol through co
+         oh-1           read=['src/_pytest/assertion/util.py'] steps=3 retried=None
+         oh-cg-6        read=['src/_pytest/assertion/util.py'] steps=4 retried=None
+   +23  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-6        read=['src/_pytest/python.py'] steps=2 retried=None
+   +21  Why does the test design rely on injecting the TerminalReporter through a fixture request rather than directly instantia
+         oh-1           read=['src/_pytest/config/__init__.py', 'src/_pytest/terminal.py', 'testing/test_terminal.py'] steps=3 retried=None
+         oh-cg-6        read=['testing/test_terminal.py'] steps=4 retried=None
+   +21  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-6        read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+0.2 95%CI=[-2.3,+2.8] median=+0.0 win/tie/loss=19/9/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 22995
+   by category: what: +5.9 [+1.7,+11.6] (n=12)  how: -0.6 [-3.5,+2.8] (n=12)  why: -2.7 [-7.9,+1.4] (n=12)  where: -2.0 [-7.2,+4.1] (n=12)
+   paired efficiency (b−a): input_tokens: +4075 [-6715,+16433] (1.08x)  peak_input_tokens: +4430 [+3425,+5560] (1.41x)  output_tokens: -240 [-383,-104] (0.76x)  tool_calls: -2 [-3,-1] (0.65x)  wall_s: -2 [-4,-1] (0.78x)  answer_chars: +15 [-138,+175] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 28/13/7; hit cap: {'oh-1': 5, 'oh-cg-7': 2}
+   -26  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-7        read=['src/_pytest/_py/path.py'] steps=3 retried=None
+   -16  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-cg-7        read=['src/_pytest/pytester.py'] steps=7 retried=None
+   -10  Where are the functions or methods in the assertion module that indirectly invoke the _HighlightFunc protocol through co
+         oh-1           read=['src/_pytest/assertion/util.py'] steps=3 retried=None
+         oh-cg-7        read=['src/_pytest/assertion/util.py'] steps=3 retried=None
+   +32  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-7        read=['src/_pytest/python.py'] steps=2 retried=None
+   +25  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-7        read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +14  What is the architectural separation in the pytest fixture resolution system that decouples fixture discovery and valida
+         oh-1           read=['src/_pytest/fixtures.py'] steps=7 retried=None
+         oh-cg-7        read=['src/_pytest/fixtures.py'] steps=3 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+0.3 95%CI=[-2.1,+2.5] median=+1.0 win/tie/loss=25/9/14 sign-test p=0.108 | n for 80% power at this Δ ≈ 6056
+   by category: what: +0.8 [-4.4,+5.2] (n=12)  how: +0.0 [-2.3,+1.9] (n=12)  why: +3.6 [+1.4,+6.0] (n=12)  where: -3.2 [-10.2,+3.1] (n=12)
+   paired efficiency (b−a): input_tokens: +5326 [-4484,+15535] (1.10x)  peak_input_tokens: +4977 [+3768,+6444] (1.46x)  output_tokens: -218 [-341,-106] (0.78x)  tool_calls: -2 [-3,-1] (0.68x)  wall_s: -1 [-2,-0] (0.84x)  answer_chars: +102 [-48,+241] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 31/10/7; hit cap: {'oh-1': 5, 'oh-cg-8': 3}
+   -26  Where is the subprocess execution mechanism that `pytester.runpytest_subprocess` delegates to, and how does it handle sy
+         oh-1           read=['src/_pytest/main.py', 'src/_pytest/pytester.py', 'src/_pytest/runner.py'] steps=10 retried=None
+         oh-cg-8        read=['src/_pytest/pytester.py'] steps=5 retried=None
+   -23  Where is the line-wrapping logic that determines when function arguments exceed terminal width implemented in the ReprFu
+         oh-1           read=['src/_pytest/_code/code.py'] steps=2 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   -18  What is the conditional logic in write_captured_output that determines which captured output streams are written to the 
+         oh-1           read=['src/_pytest/junitxml.py'] steps=2 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   +21  Where does the `_marked_for_rewrite_cache` dictionary control the data flow through `_is_marked_for_rewrite` to prevent 
+         oh-1           read=['src/_pytest/assertion/rewrite.py'] steps=2 retried=None
+         oh-cg-8        read=['src/_pytest/assertion/rewrite.py'] steps=3 retried=None
+   +12  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-8        read=['src/_pytest/_py/path.py'] steps=4 retried=None
+   +12  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-8        read=['src/_pytest/compat.py', 'src/_pytest/python.py'] steps=10 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+1.5 95%CI=[-1.2,+4.1] median=+1.0 win/tie/loss=25/7/16 sign-test p=0.211 | n for 80% power at this Δ ≈ 312
+   by category: what: +4.4 [-0.4,+9.4] (n=12)  how: +1.1 [-2.8,+5.8] (n=12)  why: +0.1 [-6.4,+6.4] (n=12)  where: +0.4 [-4.3,+5.4] (n=12)
+   paired efficiency (b−a): input_tokens: +2547 [-7855,+13655] (1.05x)  peak_input_tokens: +4223 [+3205,+5284] (1.39x)  output_tokens: -230 [-380,-97] (0.77x)  tool_calls: -2 [-3,-1] (0.65x)  wall_s: -2 [-4,-1] (0.77x)  answer_chars: +43 [-102,+189] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 27/13/8; hit cap: {'oh-1': 5, 'oh-cg-9': 2}
+   -26  Why does the repeated instantiation of FNMatcher objects in the Visitor.__init__ method impact memory consumption and tr
+         oh-1           read=['src/_pytest/_py/path.py', 'src/_pytest/pathlib.py'] steps=5 retried=None
+         oh-cg-9        read=['src/_pytest/_py/path.py'] steps=6 retried=None
+   -13  What external dependencies and context must be available for TestEvaluation test methods to correctly evaluate skipif co
+         oh-1           read=['src/_pytest/pytester.py', 'src/_pytest/skipping.py', 'testing/test_skipping.py'] steps=4 retried=None
+         oh-cg-9        read=['testing/test_skipping.py'] steps=2 retried=None
+   -13  Why does the ensure_deletable function's resilience mechanism prevent cascading failures when both lock file removal and
+         oh-1           read=['src/_pytest/pathlib.py', 'testing/test_pathlib.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=2 retried=None
+   +22  Why does test_rewrite_ast employ pytest.register_assert_rewrite() in the package's __init__.py rather than relying solel
+         oh-1           read=['src/_pytest/assertion/__init__.py', 'src/_pytest/assertion/rewrite.py', 'src/pytest/__init__.py', 'testing/test_assertion.py'] steps=5 retried=None
+         oh-cg-9        read=['src/pytest/__init__.py', 'testing/test_assertion.py'] steps=2 retried=None
+   +22  What is the failure mechanism when the parametrize method's validation of indirect parameter names detects that an indir
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/outcomes.py', 'src/_pytest/python.py'] steps=8 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   +22  How should the `isnosetest` method be refactored to separate the concern of attribute validation from test detection log
+         oh-1           read=['src/_pytest/compat.py', 'src/_pytest/python.py', 'testing/python/integration.py'] steps=6 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+
+wrote runs/sweqa-r5-pytest-k10/analysis.json

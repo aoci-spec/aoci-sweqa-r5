@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-sqlfluff-k10
+manifest: harness=None created=2026-10-15T20:44:05Z repo=sqlfluff commit=db9801b7eb7f index_entries=392
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   1 |   74.8  13.0   72.8   81.9   69.8   74.0 |   4.7   7.0   2.3   0.0 |    51083    10929    1022     838    n/a    8.6 |   0.77   0.00   0.35
+oh-10           48   0   1 |   72.4  12.7   70.9   78.2   67.9   71.9 |   4.5   6.8   2.2   0.0 |    49821    10967     962     742    n/a    8.3 |   0.73   0.00   0.31
+oh-2            48   0   0 |   74.8   9.6   75.2   80.0   69.8   73.5 |   4.6   6.9   2.2   0.0 |    50446    10920     996     757    n/a    8.3 |   0.75   0.00   0.37
+oh-3            48   0   0 |   73.6  13.3   75.9   78.0   66.6   73.4 |   4.6   6.9   2.2   0.0 |    51856    11094    1022     849    n/a    8.4 |   0.75   0.00   0.38
+oh-4            48   0   1 |   76.6  10.1   77.2   80.3   74.0   74.6 |   4.6   6.9   2.4   0.0 |    52205    11361    1006     843    n/a    8.3 |   0.78   0.00   0.36
+oh-5            48   0   1 |   75.7  10.6   76.0   80.0   72.2   74.2 |   4.9   7.3   2.3   0.0 |    54102    11296    1035     778    n/a    8.5 |   0.76   0.00   0.34
+oh-6            48   0   1 |   71.8  14.2   68.5   78.4   66.5   73.5 |   4.8   7.0   2.3   0.0 |    54110    11260    1014     803    n/a   10.2 |   0.75   0.00   0.28
+oh-7            48   0   0 |   74.7  12.9   78.8   79.2   69.5   70.5 |   4.8   7.1   2.6   0.0 |    53833    11259    1028     779    n/a    9.4 |   0.77   0.00   0.33
+oh-8            48   0   1 |   75.0  11.1   76.2   79.3   70.5   73.4 |   4.7   7.1   2.2   0.0 |    51435    10870    1039     797    n/a    8.9 |   0.78   0.00   0.34
+oh-9            48   0   1 |   74.6  11.4   74.2   77.4   73.1   73.2 |   4.8   7.1   2.3   0.0 |    53667    11400    1045     841    n/a    8.8 |   0.76   0.00   0.38
+oh-aoci-1       48   0   1 |   77.4  13.8   76.9   84.7   74.6   72.4 |   4.4   5.2   2.0   7.4 |   603968    68368    2561    1068    n/a   24.3 |   0.72   0.44   0.43
+oh-aoci-10      48   0   1 |   76.6  15.3   71.8   81.0   78.7   74.3 |   4.0   4.7   1.8   7.5 |   575899    67533    2210    1020    n/a   23.4 |   0.60   0.41   0.48
+oh-aoci-2       48   0   2 |   78.2  12.8   79.2   82.2   76.9   73.6 |   3.6   4.4   1.8  11.0 |   556591    67792    2329    1042    n/a   23.5 |   0.64   0.50   0.49
+oh-aoci-3       48   0   1 |   77.9  13.1   73.8   84.8   76.7   75.5 |   4.5   5.3   2.2   7.5 |   612574    68286    2507    1136    n/a   24.3 |   0.70   0.41   0.42
+oh-aoci-4       48   0   0 |   76.6  13.2   75.8   83.2   72.3   74.5 |   3.9   4.7   2.1   9.0 |   569179    67713    2228    1042    n/a   23.7 |   0.72   0.43   0.38
+oh-aoci-5       48   0   2 |   77.9  15.1   75.2   85.2   79.9   70.0 |   4.0   4.6   1.9   7.3 |   576272    67551    2224    1094    n/a   24.9 |   0.65   0.46   0.43
+oh-aoci-6       48   0   1 |   77.8  15.3   80.2   82.3   78.1   69.4 |   4.7   5.5   2.1  10.6 |   623296    68483    2326    1089    n/a   25.6 |   0.73   0.41   0.45
+oh-aoci-7       48   0   0 |   76.6  13.6   75.3   83.9   74.1   72.2 |   4.0   4.6   1.8   7.6 |   571231    67456    2231    1023    n/a   23.6 |   0.68   0.47   0.47
+oh-aoci-8       48   0   2 |   75.0  14.7   72.8   83.0   72.5   70.8 |   4.8   5.8   2.2   7.2 |   629768    68287    2359    1031    n/a   25.0 |   0.70   0.47   0.43
+oh-aoci-9       48   0   1 |   75.2  18.2   78.2   84.8   72.0   64.1 |   4.5   5.3   2.1   8.6 |   605810    68135    2403    1062    n/a   24.9 |   0.68   0.47   0.42
+oh-cg-1         48   0   0 |   74.6  15.2   74.3   82.2   75.5   64.8 |   4.0   4.8   1.2  13.6 |    64051    16556     801     932    n/a   20.1 |   0.43   0.71   0.33
+oh-cg-10        48   0   1 |   73.3  16.5   72.4   83.6   69.2   66.5 |   3.5   4.5   1.3  13.9 |    56892    16262     726     927    n/a    7.0 |   0.47   0.65   0.34
+oh-cg-2         48   0   1 |   74.6  14.2   76.2   81.2   72.2   67.6 |   3.6   4.6   1.1  12.5 |    59690    16509     892     923    n/a    7.5 |   0.45   0.62   0.36
+oh-cg-3         48   0   1 |   75.6  13.2   77.9   82.2   74.2   66.9 |   4.1   4.8   1.4  12.5 |    66042    16233     803     838    n/a    7.5 |   0.46   0.65   0.34
+oh-cg-4         48   0   1 |   75.5  13.9   73.8   83.8   75.0   68.2 |   3.9   5.0   1.6  12.5 |    62194    16105     775     912    n/a    7.1 |   0.51   0.62   0.36
+oh-cg-5         48   0   1 |   73.8  15.2   75.5   81.8   71.8   64.7 |   4.1   5.2   1.6  13.6 |    69867    17081     847     933    n/a    7.9 |   0.51   0.64   0.34
+oh-cg-6         48   0   0 |   75.1  14.8   79.2   84.4   71.1   63.9 |   3.6   4.6   1.2  13.6 |    59234    16454     731     956    n/a    7.3 |   0.46   0.72   0.34
+oh-cg-7         48   0   0 |   77.2  12.8   79.9   84.2   75.2   68.2 |   3.9   4.9   1.2  12.1 |    63319    16272     805     953    n/a    8.0 |   0.42   0.63   0.39
+oh-cg-8         48   0   1 |   75.6  12.5   77.1   78.2   75.9   70.4 |   3.7   4.8   1.4  12.8 |    60021    16164     769     905    n/a    7.4 |   0.46   0.66   0.31
+oh-cg-9         48   0   0 |   76.0  13.1   76.5   82.9   74.4   69.2 |   3.9   4.9   1.4  13.8 |    63749    16760     802     843    n/a    7.5 |   0.44   0.69   0.37
+dims: oh-1=15.2/12.2/18.2/15.7/13.5  oh-10=14.6/11.6/17.9/15.4/12.9  oh-2=15.3/12.0/18.5/15.6/13.4  oh-3=14.9/11.9/18.0/15.7/13.2  oh-4=15.6/12.5/18.8/16.0/13.8  oh-5=15.4/12.4/18.6/15.8/13.6  oh-6=14.4/11.4/17.7/15.3/13.1  oh-7=15.1/12.1/18.2/15.9/13.4  oh-8=15.2/12.2/18.4/15.8/13.4  oh-9=15.1/12.1/18.4/15.6/13.4  oh-aoci-1=15.6/13.2/18.1/15.9/14.5  oh-aoci-10=15.5/13.1/18.0/15.9/14.2  oh-aoci-2=16.0/13.3/18.4/15.9/14.6  oh-aoci-3=15.9/13.4/18.2/16.0/14.5  oh-aoci-4=15.6/12.9/18.1/15.8/14.2  oh-aoci-5=15.7/13.3/18.2/16.1/14.5  oh-aoci-6=15.8/13.3/18.3/15.8/14.5  oh-aoci-7=15.6/12.9/18.1/15.8/14.2  oh-aoci-8=15.1/12.8/17.7/15.5/13.9  oh-aoci-9=15.3/12.8/17.5/15.6/14.0  oh-cg-1=15.0/12.4/17.8/15.7/13.7  oh-cg-10=14.8/12.1/17.5/15.6/13.3  oh-cg-2=15.0/12.3/18.0/15.7/13.6  oh-cg-3=15.5/12.3/18.1/16.0/13.8  oh-cg-4=15.4/12.3/18.3/15.9/13.8  oh-cg-5=14.8/12.2/17.9/15.5/13.5  oh-cg-6=15.1/12.5/17.9/15.9/13.8  oh-cg-7=15.7/12.9/18.3/16.0/14.3  oh-cg-8=15.3/12.6/18.2/15.6/13.8  oh-cg-9=15.3/12.6/18.2/16.0/13.9
+judge vote SD (mean over questions): oh-1=1.0  oh-10=1.2  oh-2=1.1  oh-3=0.9  oh-4=0.8  oh-5=1.2  oh-6=1.3  oh-7=0.9  oh-8=1.1  oh-9=1.0  oh-aoci-1=1.0  oh-aoci-10=1.0  oh-aoci-2=1.0  oh-aoci-3=1.1  oh-aoci-4=0.9  oh-aoci-5=1.0  oh-aoci-6=1.1  oh-aoci-7=1.1  oh-aoci-8=1.1  oh-aoci-9=0.9  oh-cg-1=0.8  oh-cg-10=1.1  oh-cg-2=1.0  oh-cg-3=1.0  oh-cg-4=1.2  oh-cg-5=1.0  oh-cg-6=0.9  oh-cg-7=0.9  oh-cg-8=1.0  oh-cg-9=0.9
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.1 calls/1887ch (used on 75% of questions)  oh-aoci-10=1.1 calls/1932ch (used on 71% of questions)  oh-aoci-2=1.1 calls/2687ch (used on 75% of questions)  oh-aoci-3=1.0 calls/1905ch (used on 67% of questions)  oh-aoci-4=1.1 calls/2052ch (used on 73% of questions)  oh-aoci-5=1.1 calls/1812ch (used on 71% of questions)  oh-aoci-6=1.1 calls/2668ch (used on 73% of questions)  oh-aoci-7=1.1 calls/1753ch (used on 71% of questions)  oh-aoci-8=1.2 calls/1837ch (used on 75% of questions)  oh-aoci-9=1.2 calls/2073ch (used on 73% of questions)  oh-cg-1=1.3 calls/28752ch (used on 100% of questions)  oh-cg-10=1.2 calls/28399ch (used on 100% of questions)  oh-cg-2=1.2 calls/27309ch (used on 100% of questions)  oh-cg-3=1.2 calls/26914ch (used on 100% of questions)  oh-cg-4=1.2 calls/26234ch (used on 100% of questions)  oh-cg-5=1.3 calls/28986ch (used on 100% of questions)  oh-cg-6=1.3 calls/28834ch (used on 100% of questions)  oh-cg-7=1.2 calls/27192ch (used on 100% of questions)  oh-cg-8=1.2 calls/27042ch (used on 100% of questions)  oh-cg-9=1.3 calls/29455ch (used on 100% of questions)
+totals: oh-1: in=2,452,004 out=49,040  oh-10: in=2,391,431 out=46,197  oh-2: in=2,421,413 out=47,813  oh-3: in=2,489,091 out=49,038  oh-4: in=2,505,846 out=48,307  oh-5: in=2,596,890 out=49,669  oh-6: in=2,597,266 out=48,658  oh-7: in=2,583,993 out=49,360  oh-8: in=2,468,899 out=49,863  oh-9: in=2,576,007 out=50,143  oh-aoci-1: in=28,990,486 out=122,913  oh-aoci-10: in=27,643,146 out=106,063  oh-aoci-2: in=26,716,357 out=111,810  oh-aoci-3: in=29,403,555 out=120,342  oh-aoci-4: in=27,320,608 out=106,953  oh-aoci-5: in=27,661,064 out=106,766  oh-aoci-6: in=29,918,197 out=111,633  oh-aoci-7: in=27,419,065 out=107,072  oh-aoci-8: in=30,228,864 out=113,210  oh-aoci-9: in=29,078,869 out=115,355  oh-cg-1: in=3,074,443 out=38,425  oh-cg-10: in=2,730,800 out=34,866  oh-cg-2: in=2,865,138 out=42,838  oh-cg-3: in=3,169,993 out=38,532  oh-cg-4: in=2,985,325 out=37,213  oh-cg-5: in=3,353,607 out=40,637  oh-cg-6: in=2,843,236 out=35,098  oh-cg-7: in=3,039,318 out=38,641  oh-cg-8: in=2,881,004 out=36,913  oh-cg-9: in=3,059,971 out=38,509
+
+== oh-10 - oh-1: n=48 Δ=-2.5 95%CI=[-4.9,-0.4] median=-0.5 win/tie/loss=17/7/24 sign-test p=0.349 | n for 80% power at this Δ ≈ 82
+   by category: what: -1.9 [-7.9,+3.5] (n=12)  how: -3.8 [-6.4,-1.4] (n=13)  why: -1.9 [-8.2,+2.8] (n=12)  where: -2.1 [-5.1,+1.2] (n=11)
+   paired efficiency (b−a): input_tokens: -1262 [-6812,+4268] (0.98x)  peak_input_tokens: +38 [-456,+521] (1.00x)  output_tokens: -59 [-168,+43] (0.94x)  tool_calls: -0 [-1,+1] (0.97x)  wall_s: -0 [-1,+0] (0.97x)  answer_chars: -96 [-185,-9] (0.89x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 15/23/10; hit cap: {'oh-1': 5, 'oh-10': 4}
+   -32  Why does the segment class that represents operator class references integrate with the dialect's type system to enable 
+         oh-1           read=['src/sqlfluff/core/dialects/common.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'test/fixtures/dialects/postgres/create_index.yml'] steps=8 retried=None
+         oh-10          read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py'] steps=10 retried=None
+   -27  What is the architectural role of the functional-style wrapper classes that convert rule context segments into tuple-bas
+         oh-1           read=['docs/source/reference/internals/functional.rst', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py', 'src/sqlfluff/utils/functional/__init__.py', 'src/sqlfluff/utils/functional/context.py', 'src/sqlfluff/utils/functional/segments.py'] steps=5 retried=None
+         oh-10          read=['src/sqlfluff/rules/layout/LT10.py', 'src/sqlfluff/utils/functional/__init__.py', 'src/sqlfluff/utils/functional/context.py', 'src/sqlfluff/utils/functional/segments.py'] steps=3 retried=None
+   -11   What is the architectural design of the NamedTuple storing parsing results with an optional parse tree field enabling g
+         oh-1           read=['src/sqlfluff/core/linter/common.py'] steps=2 retried=None
+         oh-10          read=['src/sqlfluff/core/linter/common.py'] steps=2 retried=None
+   +14  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-10          read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/layout/LT05.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=8 retried=None
+   +10  What is the relationship between the standalone header formatting function's use of StringIO text buffers and the output
+         oh-1           read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py'] steps=5 retried=None
+         oh-10          read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py'] steps=5 retried=None
+   +8  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-10          read=['src/sqlfluff/core/parser/lexer.py'] steps=6 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-0.0 95%CI=[-2.1,+2.2] median=-1.0 win/tie/loss=14/8/26 sign-test p=0.081 | n for 80% power at this Δ ≈ 273200
+   by category: what: +2.3 [-1.7,+7.1] (n=12)  how: -1.9 [-4.5,+0.2] (n=13)  why: +0.0 [-4.9,+5.0] (n=12)  where: -0.5 [-4.9,+5.4] (n=11)
+   paired efficiency (b−a): input_tokens: -637 [-6308,+5248] (0.99x)  peak_input_tokens: -9 [-483,+479] (1.00x)  output_tokens: -26 [-141,+101] (0.97x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-1,+1] (0.97x)  answer_chars: -82 [-184,+20] (0.90x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 15/25/8; hit cap: {'oh-1': 5, 'oh-2': 6}
+   -19  Why does the segment class that represents operator class references integrate with the dialect's type system to enable 
+         oh-1           read=['src/sqlfluff/core/dialects/common.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'test/fixtures/dialects/postgres/create_index.yml'] steps=8 retried=None
+         oh-2           read=['src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py'] steps=6 retried=None
+   -13  How does the SELECT statement segment in Vertica resolve the grammar composition conflict when the timeseries clause seg
+         oh-1           read=['src/sqlfluff/dialects/dialect_vertica.py'] steps=3 retried=None
+         oh-2           read=['src/sqlfluff/dialects/dialect_vertica.py'] steps=2 retried=None
+   -10  Where does the method in the jinja padding rule that partitions tag whitespace determine boundaries between opening mark
+         oh-1           read=['src/sqlfluff/rules/jinja/JJ01.py'] steps=3 retried=None
+         oh-2           read=['src/sqlfluff/rules/jinja/JJ01.py'] steps=2 retried=None
+   +25  Where does the table reference segment parsed from the table-like clause flow through the bracketed delimited identifier
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-2           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_sparksql.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=10 retried=None
+   +22  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-2           read=['src/sqlfluff/core/rules/analysis/select.py', 'src/sqlfluff/utils/analysis/select.py'] steps=3 retried=None
+   +16  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-2           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=6 retried=None
+
+== oh-3 - oh-1: n=48 Δ=-1.2 95%CI=[-3.1,+0.7] median=-1.0 win/tie/loss=11/11/26 sign-test p=0.020 | n for 80% power at this Δ ≈ 232
+   by category: what: +3.1 [-1.3,+8.1] (n=12)  how: -3.9 [-7.6,-0.3] (n=13)  why: -3.2 [-5.5,-1.2] (n=12)  where: -0.6 [-3.4,+2.8] (n=11)
+   paired efficiency (b−a): input_tokens: +773 [-4838,+6815] (1.02x)  peak_input_tokens: +166 [-298,+643] (1.02x)  output_tokens: -0 [-91,+102] (1.00x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-1,+1] (0.98x)  answer_chars: +11 [-96,+117] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/28/8; hit cap: {'oh-1': 5, 'oh-3': 4}
+   -14  How does the DROP VIEW statement grammar's pattern matching attribute handle optional IF EXISTS and drop behavior clause
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=3 retried=None
+         oh-3           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=3 retried=None
+   -13  How does the SELECT REPLACE clause segment's parsing grammar handle failures when the delimiter-based parser encounters 
+         oh-1           read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/match_algorithms.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=6 retried=None
+         oh-3           read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=5 retried=None
+   -12  How should the logging adapter that prepends rule codes to messages in the SQL linting framework be refactored to separa
+         oh-1           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+         oh-3           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+   +22  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-3           read=['src/sqlfluff/utils/analysis/select.py'] steps=2 retried=None
+   +13  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-3           read=['src/sqlfluff/core/parser/lexer.py'] steps=7 retried=None
+   +13  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-3           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=9 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+1.8 95%CI=[-0.7,+4.6] median=+0.0 win/tie/loss=20/10/18 sign-test p=0.871 | n for 80% power at this Δ ≈ 213
+   by category: what: +4.3 [-0.8,+10.5] (n=12)  how: -1.6 [-4.5,+1.2] (n=13)  why: +4.2 [-2.1,+11.5] (n=12)  where: +0.6 [-3.5,+6.4] (n=11)
+   paired efficiency (b−a): input_tokens: +1122 [-5001,+7173] (1.02x)  peak_input_tokens: +432 [-67,+951] (1.04x)  output_tokens: -15 [-119,+83] (0.99x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-1,+0] (0.97x)  answer_chars: +5 [-99,+113] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/22/13; hit cap: {'oh-1': 5, 'oh-4': 3}
+   -17  Why does the segment class that represents operator class references integrate with the dialect's type system to enable 
+         oh-1           read=['src/sqlfluff/core/dialects/common.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'test/fixtures/dialects/postgres/create_index.yml'] steps=8 retried=None
+         oh-4           read=['src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py'] steps=5 retried=None
+   -14  How does the DROP VIEW statement grammar's pattern matching attribute handle optional IF EXISTS and drop behavior clause
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=3 retried=None
+         oh-4           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=3 retried=None
+   -11   What would be the impact of modifying the pattern matching definition in the list partition definition segment to suppo
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_doris.py'] steps=10 retried=None
+         oh-4           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_doris.py'] steps=7 retried=None
+   +30  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-4           read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=8 retried=None
+   +30   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-4           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_teradata.py'] steps=4 retried=None
+   +26  Where does the table reference segment parsed from the table-like clause flow through the bracketed delimited identifier
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-4           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/rules/structure/ST06.py'] steps=10 retried=None
+
+== oh-5 - oh-1: n=48 Δ=+0.9 95%CI=[-1.3,+3.2] median=+0.0 win/tie/loss=19/7/22 sign-test p=0.755 | n for 80% power at this Δ ≈ 613
+   by category: what: +3.2 [-1.2,+8.1] (n=12)  how: -1.9 [-4.8,+0.6] (n=13)  why: +2.4 [-3.8,+8.8] (n=12)  where: +0.2 [-3.0,+3.4] (n=11)
+   paired efficiency (b−a): input_tokens: +3018 [-3699,+10187] (1.06x)  peak_input_tokens: +368 [-204,+925] (1.03x)  output_tokens: +13 [-86,+120] (1.01x)  tool_calls: +0 [-1,+1] (1.04x)  wall_s: -0 [-1,+1] (1.00x)  answer_chars: -61 [-168,+59] (0.93x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/23/14; hit cap: {'oh-1': 5, 'oh-5': 7}
+   -18  Why does the segment class that represents operator class references integrate with the dialect's type system to enable 
+         oh-1           read=['src/sqlfluff/core/dialects/common.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'test/fixtures/dialects/postgres/create_index.yml'] steps=8 retried=None
+         oh-5           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py'] steps=10 retried=None
+   -13  How does the SELECT statement segment in Vertica resolve the grammar composition conflict when the timeseries clause seg
+         oh-1           read=['src/sqlfluff/dialects/dialect_vertica.py'] steps=3 retried=None
+         oh-5           read=['src/sqlfluff/dialects/dialect_vertica.py'] steps=3 retried=None
+   -10  How does the DROP VIEW statement grammar's pattern matching attribute handle optional IF EXISTS and drop behavior clause
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=3 retried=None
+         oh-5           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=4 retried=None
+   +22  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-5           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=4 retried=None
+   +22  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-5           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py'] steps=10 retried=None
+   +21  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-5           read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/config.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=6 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-3.0 95%CI=[-5.9,-0.5] median=-0.5 win/tie/loss=14/10/24 sign-test p=0.143 | n for 80% power at this Δ ≈ 79
+   by category: what: -4.3 [-14.1,+2.7] (n=12)  how: -3.5 [-6.9,-0.4] (n=13)  why: -3.3 [-8.2,+0.6] (n=12)  where: -0.5 [-3.7,+3.5] (n=11)
+   paired efficiency (b−a): input_tokens: +3026 [-3166,+9400] (1.06x)  peak_input_tokens: +331 [-177,+931] (1.03x)  output_tokens: -8 [-101,+93] (0.99x)  tool_calls: -0 [-1,+1] (1.00x)  wall_s: +2 [+1,+3] (1.19x)  answer_chars: -35 [-150,+88] (0.96x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/21/14; hit cap: {'oh-1': 5, 'oh-6': 5}
+   -48  What coordination mechanism between the method that scans raw SQL files for inline configuration directives and the rule
+         oh-1           read=['src/sqlfluff/core/config/fluffconfig.py', 'src/sqlfluff/core/rules/base.py'] steps=4 retried=None
+         oh-6           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/noqa.py'] steps=9 retried=None
+   -23  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-6           read=['CHANGELOG.md', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=10 retried=None
+   -16  How does the hook-based discovery mechanism in the function that aggregates rule configuration information from plugins 
+         oh-1           read=['src/sqlfluff/core/plugin/__init__.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/config_info.py'] steps=3 retried=None
+         oh-6           read=['src/sqlfluff/core/plugin/hooks.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/config_info.py'] steps=4 retried=None
+   +15  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-6           read=['src/sqlfluff/core/parser/lexer.py'] steps=8 retried=None
+   +14  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-6           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=8 retried=None
+   +10  What is the relationship between the standalone header formatting function's use of StringIO text buffers and the output
+         oh-1           read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py'] steps=5 retried=None
+         oh-6           read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py'] steps=4 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-0.1 95%CI=[-2.4,+2.2] median=-1.0 win/tie/loss=16/6/26 sign-test p=0.164 | n for 80% power at this Δ ≈ 26096
+   by category: what: +5.9 [-0.4,+13.3] (n=12)  how: -2.7 [-5.8,+0.3] (n=13)  why: -0.3 [-3.2,+2.8] (n=12)  where: -3.5 [-6.5,-0.8] (n=11)
+   paired efficiency (b−a): input_tokens: +2750 [-1741,+7288] (1.05x)  peak_input_tokens: +330 [-140,+780] (1.03x)  output_tokens: +7 [-66,+84] (1.01x)  tool_calls: +0 [-1,+1] (1.02x)  wall_s: +1 [+0,+1] (1.09x)  answer_chars: -59 [-174,+59] (0.93x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/27/12; hit cap: {'oh-1': 5, 'oh-7': 6}
+   -15  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-7           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+   -12  How should the logging adapter that prepends rule codes to messages in the SQL linting framework be refactored to separa
+         oh-1           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+         oh-7           read=['base.py', 'src/sqlfluff/core/rules/base.py'] steps=4 retried=None
+   -11  How does the SELECT statement segment in Vertica resolve the grammar composition conflict when the timeseries clause seg
+         oh-1           read=['src/sqlfluff/dialects/dialect_vertica.py'] steps=3 retried=None
+         oh-7           read=['src/sqlfluff/dialects/dialect_vertica.py'] steps=3 retried=None
+   +29  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-7           read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/config.py', 'src/sqlfluff/utils/reflow/elements.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=7 retried=None
+   +29  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-7           read=['src/sqlfluff/core/rules/analysis/select.py', 'src/sqlfluff/utils/analysis/select.py'] steps=3 retried=None
+   +13  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-7           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py'] steps=10 retried=None
+
+== oh-8 - oh-1: n=48 Δ=+0.1 95%CI=[-2.5,+2.9] median=+0.0 win/tie/loss=18/10/20 sign-test p=0.871 | n for 80% power at this Δ ≈ 34360
+   by category: what: +3.3 [-2.0,+9.9] (n=12)  how: -2.6 [-6.6,+1.5] (n=13)  why: +0.7 [-4.8,+5.9] (n=12)  where: -0.6 [-6.3,+5.4] (n=11)
+   paired efficiency (b−a): input_tokens: +352 [-4024,+4830] (1.01x)  peak_input_tokens: -59 [-498,+352] (0.99x)  output_tokens: +17 [-42,+78] (1.02x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +0 [-0,+1] (1.04x)  answer_chars: -41 [-152,+86] (0.95x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/22/14; hit cap: {'oh-1': 5, 'oh-8': 2}
+   -18  Where in the Hive dialect function parsing class do grammar rules prevent ambiguity between the row keyword used as a fu
+         oh-1           read=['src/sqlfluff/dialects/dialect_hive.py'] steps=2 retried=None
+         oh-8           read=['src/sqlfluff/dialects/dialect_hive.py'] steps=2 retried=None
+   -18  Why does the segment class that represents operator class references integrate with the dialect's type system to enable 
+         oh-1           read=['src/sqlfluff/core/dialects/common.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'test/fixtures/dialects/postgres/create_index.yml'] steps=8 retried=None
+         oh-8           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_postgres.py'] steps=10 retried=None
+   -13   What would be the impact of modifying the pattern matching definition in the list partition definition segment to suppo
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_doris.py'] steps=10 retried=None
+         oh-8           read=['src/sqlfluff/dialects/dialect_doris.py'] steps=9 retried=None
+   +31  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-8           read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/config.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=7 retried=None
+   +19  Where does the table reference segment parsed from the table-like clause flow through the bracketed delimited identifier
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-8           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_flink.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=9 retried=None
+   +16  What is the relationship between the standalone header formatting function's use of StringIO text buffers and the output
+         oh-1           read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py'] steps=5 retried=None
+         oh-8           read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py', 'src/sqlfluff/core/formatter.py'] steps=5 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-0.2 95%CI=[-3.0,+2.8] median=+0.0 win/tie/loss=18/8/22 sign-test p=0.636 | n for 80% power at this Δ ≈ 13095
+   by category: what: +1.4 [-3.2,+6.8] (n=12)  how: -4.5 [-7.9,-1.5] (n=13)  why: +3.2 [-4.2,+12.5] (n=12)  where: -0.8 [-4.5,+3.0] (n=11)
+   paired efficiency (b−a): input_tokens: +2583 [-3211,+8066] (1.05x)  peak_input_tokens: +471 [-15,+939] (1.04x)  output_tokens: +23 [-62,+101] (1.02x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +0 [-0,+1] (1.03x)  answer_chars: +2 [-100,+118] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/22/17; hit cap: {'oh-1': 5, 'oh-9': 3}
+   -22  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-9           read=['src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=8 retried=None
+   -17  How should the function that dynamically imports user-provided Python modules from configuration in the Jinja templater 
+         oh-1           read=['docs/source/configuration/templating/jinja.rst', 'docs/source/production/security.rst', 'src/sqlfluff/core/templaters/jinja.py', 'test/core/templaters/jinja_test.py'] steps=9 retried=None
+         oh-9           read=['CHANGELOG.md', 'docs/source/configuration/templating/jinja.rst', 'docs/source/production/security.rst', 'src/sqlfluff/core/templaters/jinja.py'] steps=8 retried=None
+   -15   What would be the impact of modifying the pattern matching definition in the list partition definition segment to suppo
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_doris.py'] steps=10 retried=None
+         oh-9           read=['src/sqlfluff/dialects/dialect_doris.py'] steps=5 retried=None
+   +45  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-9           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+   +24  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-9           read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/config.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=8 retried=None
+   +15  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-9           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_dir.py', 'src/sqlfluff/core/linter/linted_file.py', 'src/sqlfluff/core/linter/linting_result.py'] steps=8 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+2.6 95%CI=[-1.2,+6.3] median=+1.5 win/tie/loss=27/7/14 sign-test p=0.060 | n for 80% power at this Δ ≈ 208
+   by category: what: +4.1 [-8.3,+15.2] (n=12)  how: +2.8 [-0.2,+6.0] (n=13)  why: +4.8 [-2.4,+12.0] (n=12)  where: -1.6 [-6.8,+2.0] (n=11)
+   paired efficiency (b−a): input_tokens: +552885 [+501450,+606199] (11.82x)  peak_input_tokens: +57439 [+56310,+58667] (6.26x)  output_tokens: +1539 [+1163,+2037] (2.51x)  tool_calls: -2 [-3,-1] (0.74x)  wall_s: +16 [+14,+17] (2.83x)  answer_chars: +230 [+44,+433] (1.27x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_get_entries': 12, 'terminal': 9, 'aoci_search': 24, '(none)': 3}}
+   steps (b−a): fewer/same/more = 15/18/15; hit cap: {'oh-1': 5, 'oh-aoci-1': 7}
+   -50  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -22  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-aoci-1      read=['src/sqlfluff/core/parser/lexer.py'] steps=4 retried=None
+   -14  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-aoci-1      read=['src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/rules/layout/LT09.py'] steps=6 retried=None
+   +39  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-1      read=['src/sqlfluff/utils/analysis/select.py'] steps=2 retried=None
+   +33  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-aoci-1      read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_hive.py'] steps=10 retried=None
+   +28  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+1.8 95%CI=[-2.5,+5.9] median=+2.0 win/tie/loss=25/6/17 sign-test p=0.280 | n for 80% power at this Δ ≈ 557
+   by category: what: -1.0 [-11.8,+9.4] (n=12)  how: -0.9 [-9.5,+6.4] (n=13)  why: +8.8 [+1.3,+17.0] (n=12)  where: +0.3 [-3.8,+4.8] (n=11)
+   paired efficiency (b−a): input_tokens: +524815 [+473413,+579420] (11.27x)  peak_input_tokens: +56604 [+55689,+57527] (6.18x)  output_tokens: +1188 [+1033,+1340] (2.16x)  tool_calls: -2 [-4,-1] (0.67x)  wall_s: +15 [+14,+16] (2.74x)  answer_chars: +181 [+10,+355] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_get_entries': 10, 'aoci_search': 24, 'terminal': 9, '(none)': 5}}
+   steps (b−a): fewer/same/more = 20/15/13; hit cap: {'oh-1': 5, 'oh-aoci-10': 5}
+   -49  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -41  How does the method that returns column and table analysis information handle treating Data Manipulation Language statem
+         oh-1           read=['src/sqlfluff/utils/analysis/query.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-10     read=['src/sqlfluff/utils/analysis/select.py'] steps=3 retried=None
+   -15   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-aoci-10     read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=3 retried=None
+   +42  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-aoci-10     read=['src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+   +37  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-10     read=[] steps=2 retried=too_short
+   +20  How does the SELECT REPLACE clause segment's parsing grammar handle failures when the delimiter-based parser encounters 
+         oh-1           read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/match_algorithms.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=6 retried=None
+         oh-aoci-10     read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=10 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=+3.4 95%CI=[+0.4,+6.6] median=+2.0 win/tie/loss=28/1/19 sign-test p=0.243 | n for 80% power at this Δ ≈ 81
+   by category: what: +6.4 [-1.2,+15.2] (n=12)  how: +0.3 [-3.2,+3.8] (n=13)  why: +7.1 [+0.2,+12.9] (n=12)  where: -0.4 [-4.5,+3.8] (n=11)
+   paired efficiency (b−a): input_tokens: +505507 [+459996,+554933] (10.90x)  peak_input_tokens: +56864 [+55781,+57896] (6.20x)  output_tokens: +1308 [+1036,+1688] (2.28x)  tool_calls: -3 [-4,-2] (0.62x)  wall_s: +15 [+13,+16] (2.74x)  answer_chars: +204 [+17,+408] (1.24x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'aoci_get_entries': 12, 'terminal': 8, 'aoci_search': 24, '(none)': 4}}
+   steps (b−a): fewer/same/more = 23/18/7; hit cap: {'oh-1': 5, 'oh-aoci-2': 3}
+   -22   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-aoci-2      read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=3 retried=None
+   -14  What is the architectural role of the functional-style wrapper classes that convert rule context segments into tuple-bas
+         oh-1           read=['docs/source/reference/internals/functional.rst', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py', 'src/sqlfluff/utils/functional/__init__.py', 'src/sqlfluff/utils/functional/context.py', 'src/sqlfluff/utils/functional/segments.py'] steps=5 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -13  How does the method that merges configuration values in the spacing configuration dataclass handle precedence when multi
+         oh-1           read=['src/sqlfluff/utils/reflow/config.py'] steps=3 retried=None
+         oh-aoci-2      read=['src/sqlfluff/utils/reflow/config.py'] steps=2 retried=None
+   +38  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-2      read=['src/sqlfluff/utils/analysis/select.py'] steps=3 retried=too_short
+   +28  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +25  Why does the statement segment class that defines the grammar pattern for parsing DROP SEARCH INDEX statements enable Bi
+         oh-1           read=['src/sqlfluff/dialects/dialect_bigquery.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/sqlfluff/dialects/dialect_bigquery.py'] steps=7 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+3.1 95%CI=[-0.6,+6.6] median=+2.0 win/tie/loss=26/6/16 sign-test p=0.164 | n for 80% power at this Δ ≈ 131
+   by category: what: +0.9 [-10.3,+10.8] (n=12)  how: +2.9 [-1.2,+7.2] (n=13)  why: +6.8 [+0.2,+14.6] (n=12)  where: +1.5 [-2.1,+6.3] (n=11)
+   paired efficiency (b−a): input_tokens: +561491 [+503826,+619561] (11.99x)  peak_input_tokens: +57357 [+56308,+58393] (6.25x)  output_tokens: +1485 [+1204,+1830] (2.45x)  tool_calls: -2 [-3,-0] (0.76x)  wall_s: +16 [+14,+17] (2.84x)  answer_chars: +298 [+112,+497] (1.36x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_get_entries': 9, 'aoci_search': 23, 'terminal': 12, '(none)': 4}}
+   steps (b−a): fewer/same/more = 17/12/19; hit cap: {'oh-1': 5, 'oh-aoci-3': 6}
+   -49  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -11   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-aoci-3      read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=3 retried=None
+   -11  How does the linting error class manage edit recommendation objects through dictionary conversion, duplicate detection, 
+         oh-1           read=['src/sqlfluff/core/errors.py', 'src/sqlfluff/core/linter/linted_file.py', 'src/sqlfluff/core/rules/fix.py'] steps=6 retried=None
+         oh-aoci-3      read=['src/sqlfluff/core/errors.py', 'src/sqlfluff/core/linter/linted_file.py', 'src/sqlfluff/core/parser/markers.py', 'src/sqlfluff/core/rules/fix.py', 'src/sqlfluff/core/templaters/base.py'] steps=7 retried=None
+   +40  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-aoci-3      read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/core/parser/segments/generator.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+   +28  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   +23  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-3      read=['src/sqlfluff/utils/analysis/select.py'] steps=3 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+1.8 95%CI=[-1.4,+5.2] median=+1.0 win/tie/loss=25/7/16 sign-test p=0.211 | n for 80% power at this Δ ≈ 335
+   by category: what: +2.9 [-5.9,+11.8] (n=12)  how: +1.3 [-1.1,+3.8] (n=13)  why: +2.5 [-6.2,+12.6] (n=12)  where: +0.5 [-1.8,+3.1] (n=11)
+   paired efficiency (b−a): input_tokens: +518096 [+470212,+566576] (11.14x)  peak_input_tokens: +56784 [+55847,+57671] (6.20x)  output_tokens: +1207 [+1019,+1379] (2.18x)  tool_calls: -2 [-4,-1] (0.67x)  wall_s: +15 [+14,+17] (2.76x)  answer_chars: +204 [+5,+414] (1.24x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_search': 23, 'aoci_get_entries': 12, 'terminal': 10, '(none)': 3}}
+   steps (b−a): fewer/same/more = 19/17/12; hit cap: {'oh-1': 5, 'oh-aoci-4': 3}
+   -32  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-4      read=['src/sqlfluff/rules/layout/LT01.py', 'src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/rules/layout/LT10.py', 'src/sqlfluff/utils/analysis/select.py'] steps=9 retried=None
+   -28  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-aoci-4      read=['src/sqlfluff/cli/commands.py', 'src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/linter/linted_dir.py', 'src/sqlfluff/core/linter/linted_file.py', 'src/sqlfluff/core/linter/linting_result.py'] steps=6 retried=None
+   -13  What is the architectural role of the functional-style wrapper classes that convert rule context segments into tuple-bas
+         oh-1           read=['docs/source/reference/internals/functional.rst', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py', 'src/sqlfluff/utils/functional/__init__.py', 'src/sqlfluff/utils/functional/context.py', 'src/sqlfluff/utils/functional/segments.py'] steps=5 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +46  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-aoci-4      read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/core/parser/segments/generator.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_athena.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_hive.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+   +30  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +25  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-4      read=['src/sqlfluff/utils/analysis/select.py'] steps=4 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+3.1 95%CI=[-1.2,+7.1] median=+3.0 win/tie/loss=32/5/11 sign-test p=0.002 | n for 80% power at this Δ ≈ 180
+   by category: what: +2.4 [-8.4,+11.8] (n=12)  how: +3.2 [-0.3,+6.8] (n=13)  why: +10.1 [+3.6,+17.6] (n=12)  where: -4.0 [-15.1,+3.8] (n=11)
+   paired efficiency (b−a): input_tokens: +525189 [+472903,+582089] (11.28x)  peak_input_tokens: +56622 [+55681,+57544] (6.18x)  output_tokens: +1203 [+1029,+1366] (2.18x)  tool_calls: -2 [-4,-1] (0.66x)  wall_s: +16 [+15,+18] (2.90x)  answer_chars: +255 [+53,+462] (1.30x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_get_entries': 12, 'terminal': 9, 'aoci_search': 22, '(none)': 5}}
+   steps (b−a): fewer/same/more = 21/14/13; hit cap: {'oh-1': 5, 'oh-aoci-5': 6}
+   -54  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-aoci-5      read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=2 retried=None
+   -49  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -9   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   +42  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-aoci-5      read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_athena.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_hive.py', 'src/sqlfluff/dialects/dialect_sparksql.py', 'src/sqlfluff/dialects/dialect_trino.py'] steps=10 retried=None
+   +29  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-aoci-5      read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/layout/LT05.py', 'src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=9 retried=None
+   +24  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+3.0 95%CI=[-0.9,+6.7] median=+3.0 win/tie/loss=27/5/16 sign-test p=0.126 | n for 80% power at this Δ ≈ 164
+   by category: what: +7.4 [+1.2,+13.9] (n=12)  how: +0.4 [-4.0,+4.6] (n=13)  why: +8.2 [-0.5,+17.2] (n=12)  where: -4.6 [-14.7,+1.9] (n=11)
+   paired efficiency (b−a): input_tokens: +572212 [+517551,+629052] (12.20x)  peak_input_tokens: +57554 [+56662,+58437] (6.27x)  output_tokens: +1304 [+1176,+1428] (2.28x)  tool_calls: -1 [-2,-1] (0.79x)  wall_s: +17 [+16,+18] (2.99x)  answer_chars: +251 [+37,+483] (1.30x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_get_entries': 11, 'aoci_search': 24, 'terminal': 10, '(none)': 3}}
+   steps (b−a): fewer/same/more = 15/16/17; hit cap: {'oh-1': 5, 'oh-aoci-6': 8}
+   -49  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-aoci-6      read=['src/sqlfluff/core/templaters/python.py'] steps=10 retried=None
+   -22  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-aoci-6      read=['src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/rules/layout/LT09.py'] steps=9 retried=None
+   -13  How should the logging adapter that prepends rule codes to messages in the SQL linting framework be refactored to separa
+         oh-1           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+         oh-aoci-6      read=['src/sqlfluff/core/rules/base.py'] steps=10 retried=None
+   +43  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-aoci-6      read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/core/parser/segments/generator.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=10 retried=None
+   +27  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-aoci-6      read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+   +26  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+1.8 95%CI=[-1.6,+4.9] median=+2.5 win/tie/loss=27/4/17 sign-test p=0.174 | n for 80% power at this Δ ≈ 320
+   by category: what: +2.5 [-8.5,+11.6] (n=12)  how: +2.0 [-2.5,+7.2] (n=13)  why: +4.2 [+0.5,+7.8] (n=12)  where: -1.8 [-6.5,+3.1] (n=11)
+   paired efficiency (b−a): input_tokens: +520147 [+473452,+570317] (11.18x)  peak_input_tokens: +56527 [+55645,+57388] (6.17x)  output_tokens: +1209 [+1059,+1351] (2.18x)  tool_calls: -2 [-3,-1] (0.67x)  wall_s: +15 [+14,+16] (2.76x)  answer_chars: +185 [+13,+357] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'aoci_get_entries': 13, 'terminal': 10, 'aoci_search': 21, '(none)': 4}}
+   steps (b−a): fewer/same/more = 20/16/12; hit cap: {'oh-1': 5, 'oh-aoci-7': 5}
+   -49  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -18  Where in the Hive dialect function parsing class do grammar rules prevent ambiguity between the row keyword used as a fu
+         oh-1           read=['src/sqlfluff/dialects/dialect_hive.py'] steps=2 retried=None
+         oh-aoci-7      read=['src/sqlfluff/dialects/dialect_hive.py'] steps=2 retried=None
+   -12  How should the logging adapter that prepends rule codes to messages in the SQL linting framework be refactored to separa
+         oh-1           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+         oh-aoci-7      read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+   +26  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +24  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-7      read=['src/sqlfluff/utils/analysis/select.py'] steps=3 retried=None
+   +20  How does the SELECT REPLACE clause segment's parsing grammar handle failures when the delimiter-based parser encounters 
+         oh-1           read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/match_algorithms.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=6 retried=None
+         oh-aoci-7      read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=9 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+0.2 95%CI=[-3.0,+3.1] median=+1.5 win/tie/loss=25/3/20 sign-test p=0.551 | n for 80% power at this Δ ≈ 17095
+   by category: what: +0.0 [-10.6,+8.4] (n=12)  how: +1.1 [-2.1,+4.2] (n=13)  why: +2.7 [-2.3,+7.2] (n=12)  where: -3.2 [-7.6,+0.3] (n=11)
+   paired efficiency (b−a): input_tokens: +578685 [+523353,+634747] (12.33x)  peak_input_tokens: +57359 [+56425,+58295] (6.25x)  output_tokens: +1337 [+1167,+1511] (2.31x)  tool_calls: -1 [-2,+0] (0.83x)  wall_s: +16 [+15,+18] (2.92x)  answer_chars: +193 [+2,+397] (1.23x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_search': 27, 'terminal': 10, 'aoci_get_entries': 9, '(none)': 2}}
+   steps (b−a): fewer/same/more = 14/16/18; hit cap: {'oh-1': 5, 'oh-aoci-8': 7}
+   -49  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-8      read=[] steps=1 retried=None
+   -21  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-aoci-8      read=['src/sqlfluff/core/parser/lexer.py'] steps=5 retried=None
+   -13   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-aoci-8      read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=3 retried=None
+   +26  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +18  Why does the statement segment class that defines the grammar pattern for parsing DROP SEARCH INDEX statements enable Bi
+         oh-1           read=['src/sqlfluff/dialects/dialect_bigquery.py'] steps=2 retried=None
+         oh-aoci-8      read=['src/sqlfluff/dialects/dialect_bigquery.py'] steps=5 retried=None
+   +12  Why does the method that dispatches dialect warnings integrate with the CLI formatter's output routing mechanism to ensu
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linter.py'] steps=4 retried=None
+         oh-aoci-8      read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/cli/outputstream.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linter.py'] steps=7 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+0.4 95%CI=[-4.6,+4.9] median=+4.0 win/tie/loss=28/5/15 sign-test p=0.066 | n for 80% power at this Δ ≈ 14277
+   by category: what: +5.4 [-7.2,+16.2] (n=12)  how: +2.8 [-1.2,+6.8] (n=13)  why: +2.2 [-4.5,+7.8] (n=12)  where: -9.9 [-23.5,+1.3] (n=11)
+   paired efficiency (b−a): input_tokens: +554726 [+499274,+613485] (11.86x)  peak_input_tokens: +57206 [+56203,+58206] (6.23x)  output_tokens: +1382 [+1194,+1620] (2.35x)  tool_calls: -2 [-3,-1] (0.76x)  wall_s: +16 [+15,+18] (2.91x)  answer_chars: +224 [+22,+441] (1.27x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'aoci_get_entries': 10, 'terminal': 10, 'aoci_search': 25, '(none)': 3}}
+   steps (b−a): fewer/same/more = 18/13/17; hit cap: {'oh-1': 5, 'oh-aoci-9': 7}
+   -56  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-aoci-9      read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=4 retried=None
+   -51  What is the architectural responsibility distribution between the static method that extracts select clause structural i
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/analysis/select.py'] steps=5 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -47  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-aoci-9      read=['src/sqlfluff/core/helpers/string.py', 'src/sqlfluff/core/templaters/python.py'] steps=10 retried=None
+   +29  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-aoci-9      read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=7 retried=None
+   +28  What architectural mechanism in the main linting class decouples SQL dialect-specific grammar definitions from the rule-
+         oh-1           read=['src/sqlfluff/core/linter/linter.py', 'src/sqlfluff/core/plugin/hookspecs.py', 'src/sqlfluff/core/plugin/host.py', 'src/sqlfluff/core/plugin/lib.py', 'src/sqlfluff/core/rules/base.py', 'src/sqlfluff/core/rules/crawlers.py'] steps=10 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +25  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-aoci-9      read=['src/sqlfluff/utils/analysis/select.py'] steps=2 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=-0.2 95%CI=[-4.3,+3.6] median=-1.0 win/tie/loss=21/2/25 sign-test p=0.659 | n for 80% power at this Δ ≈ 24390
+   by category: what: +1.5 [-3.8,+8.1] (n=12)  how: +0.2 [-2.8,+2.7] (n=13)  why: +5.7 [-3.1,+15.3] (n=12)  where: -9.2 [-19.7,-0.7] (n=11)
+   paired efficiency (b−a): input_tokens: +12967 [+4695,+21545] (1.25x)  peak_input_tokens: +5628 [+4646,+6699] (1.51x)  output_tokens: -221 [-331,-118] (0.78x)  tool_calls: -2 [-3,-1] (0.69x)  wall_s: +12 [-2,+37] (2.34x)  answer_chars: +94 [-49,+241] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 25/11/12; hit cap: {'oh-1': 5, 'oh-cg-1': 4}
+   -51  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-1        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -36  Where is the logic that determines which segments halt greedy matching implemented within the grammar class that matches
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/noncode.py'] steps=3 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   -19  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-cg-1        read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=10 retried=None
+   +45  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-cg-1        read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_athena.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+   +29  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-cg-1        read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=9 retried=None
+   +24  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-cg-1        read=['src/sqlfluff/core/linter/linted_file.py'] steps=2 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=-1.5 95%CI=[-5.1,+1.8] median=+0.0 win/tie/loss=19/6/23 sign-test p=0.644 | n for 80% power at this Δ ≈ 499
+   by category: what: -0.4 [-6.7,+5.5] (n=12)  how: +1.7 [-2.2,+6.2] (n=13)  why: -0.6 [-6.2,+4.7] (n=12)  where: -7.5 [-17.8,+0.9] (n=11)
+   paired efficiency (b−a): input_tokens: +5808 [-2360,+14279] (1.11x)  peak_input_tokens: +5334 [+4356,+6352] (1.49x)  output_tokens: -295 [-413,-178] (0.71x)  tool_calls: -2 [-3,-2] (0.64x)  wall_s: -2 [-2,-1] (0.82x)  answer_chars: +89 [-53,+231] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/11/9; hit cap: {'oh-1': 5, 'oh-cg-10': 1}
+   -49  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-10       read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=4 retried=None
+   -31  Where is the logic that determines which segments halt greedy matching implemented within the grammar class that matches
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/noncode.py'] steps=3 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   -26  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-cg-10       read=[] steps=1 retried=too_short
+   +21  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-cg-10       read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=5 retried=None
+   +18   How does the test helper function that validates dialect-specific SQL statements ensure the parsed tree matches the exp
+         oh-1           read=['test/dialects/conftest.py'] steps=2 retried=None
+         oh-cg-10       read=['test/dialects/conftest.py'] steps=4 retried=None
+   +17  How does the SELECT REPLACE clause segment's parsing grammar handle failures when the delimiter-based parser encounters 
+         oh-1           read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/match_algorithms.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=6 retried=None
+         oh-cg-10       read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=5 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=-0.2 95%CI=[-3.2,+2.4] median=+0.0 win/tie/loss=22/9/17 sign-test p=0.522 | n for 80% power at this Δ ≈ 14837
+   by category: what: +3.3 [-0.4,+8.0] (n=12)  how: -0.7 [-4.2,+2.2] (n=13)  why: +2.3 [-1.8,+6.6] (n=12)  where: -6.4 [-15.4,+1.2] (n=11)
+   paired efficiency (b−a): input_tokens: +8607 [-341,+17580] (1.17x)  peak_input_tokens: +5580 [+4470,+6803] (1.51x)  output_tokens: -129 [-357,+211] (0.87x)  tool_calls: -2 [-3,-1] (0.66x)  wall_s: -1 [-2,+0] (0.88x)  answer_chars: +85 [-34,+209] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 26/9/13; hit cap: {'oh-1': 5, 'oh-cg-2': 2}
+   -46  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=3 retried=None
+   -14  How should the logging adapter that prepends rule codes to messages in the SQL linting framework be refactored to separa
+         oh-1           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+         oh-cg-2        read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+   -13  How does the DROP VIEW statement grammar's pattern matching attribute handle optional IF EXISTS and drop behavior clause
+         oh-1           read=['src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_clickhouse.py', 'src/sqlfluff/dialects/dialect_exasol.py', 'src/sqlfluff/dialects/dialect_postgres.py', 'src/sqlfluff/dialects/dialect_tsql.py'] steps=3 retried=None
+         oh-cg-2        read=[] steps=2 retried=None
+   +23  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-cg-2        read=['src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=4 retried=None
+   +14  Where does the return value of the substring location method on the remaining unprocessed string buffer in the exact str
+         oh-1           read=['src/sqlfluff/core/parser/lexer.py'] steps=9 retried=None
+         oh-cg-2        read=['src/sqlfluff/core/parser/lexer.py'] steps=10 retried=None
+   +14   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-cg-2        read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=4 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+0.8 95%CI=[-2.9,+4.1] median=+0.0 win/tie/loss=18/11/19 sign-test p=1.000 | n for 80% power at this Δ ≈ 1823
+   by category: what: +5.1 [-0.3,+11.8] (n=12)  how: +0.2 [-3.9,+4.8] (n=13)  why: +4.4 [+0.0,+8.8] (n=12)  where: -7.1 [-18.1,+1.5] (n=11)
+   paired efficiency (b−a): input_tokens: +14958 [+3774,+26898] (1.29x)  peak_input_tokens: +5304 [+4422,+6233] (1.49x)  output_tokens: -219 [-348,-90] (0.79x)  tool_calls: -2 [-3,-1] (0.69x)  wall_s: -1 [-2,+0] (0.88x)  answer_chars: -1 [-125,+135] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/9/12; hit cap: {'oh-1': 5, 'oh-cg-3': 5}
+   -54  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-3        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -26  Where is the logic that determines which segments halt greedy matching implemented within the grammar class that matches
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/noncode.py'] steps=3 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   -14  How should the logging adapter that prepends rule codes to messages in the SQL linting framework be refactored to separa
+         oh-1           read=['src/sqlfluff/core/rules/base.py'] steps=5 retried=None
+         oh-cg-3        read=['src/sqlfluff/core/rules/base.py'] steps=4 retried=cut_off
+   +29  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-cg-3        read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=6 retried=None
+   +27  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-cg-3        read=[] steps=2 retried=None
+   +18   How does the test helper function that validates dialect-specific SQL statements ensure the parsed tree matches the exp
+         oh-1           read=['test/dialects/conftest.py'] steps=2 retried=None
+         oh-cg-3        read=['test/dialects/conftest.py'] steps=4 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+0.7 95%CI=[-3.0,+4.0] median=+0.0 win/tie/loss=20/8/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 2284
+   by category: what: +1.0 [-2.4,+5.2] (n=12)  how: +1.9 [-0.7,+4.9] (n=13)  why: +5.2 [-2.9,+13.0] (n=12)  where: -5.8 [-17.2,+3.0] (n=11)
+   paired efficiency (b−a): input_tokens: +11111 [+2798,+19451] (1.22x)  peak_input_tokens: +5177 [+4340,+6022] (1.47x)  output_tokens: -246 [-369,-124] (0.76x)  tool_calls: -2 [-3,-1] (0.72x)  wall_s: -1 [-2,-1] (0.83x)  answer_chars: +74 [-53,+201] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 26/9/13; hit cap: {'oh-1': 5, 'oh-cg-4': 2}
+   -56  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-4        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -26  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-cg-4        read=['src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/rules/layout/LT09.py'] steps=6 retried=None
+   -12  Where in the Hive dialect function parsing class do grammar rules prevent ambiguity between the row keyword used as a fu
+         oh-1           read=['src/sqlfluff/dialects/dialect_hive.py'] steps=2 retried=None
+         oh-cg-4        read=['src/sqlfluff/dialects/dialect_hive.py'] steps=3 retried=None
+   +26  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-cg-4        read=['src/sqlfluff/core/linter/linted_file.py'] steps=2 retried=None
+   +24  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-cg-4        read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/core/parser/segments/base.py'] steps=10 retried=None
+   +24   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-cg-4        read=[] steps=2 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=-1.0 95%CI=[-4.5,+2.1] median=+0.0 win/tie/loss=19/8/21 sign-test p=0.875 | n for 80% power at this Δ ≈ 1025
+   by category: what: +2.7 [-1.4,+7.8] (n=12)  how: -0.2 [-4.6,+4.6] (n=13)  why: +1.9 [-3.2,+6.8] (n=12)  where: -9.3 [-19.4,-1.5] (n=11)
+   paired efficiency (b−a): input_tokens: +18783 [+7962,+31285] (1.37x)  peak_input_tokens: +6153 [+5121,+7203] (1.56x)  output_tokens: -175 [-303,-43] (0.83x)  tool_calls: -2 [-3,-1] (0.75x)  wall_s: -1 [-2,+0] (0.92x)  answer_chars: +95 [-46,+238] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 24/10/14; hit cap: {'oh-1': 5, 'oh-cg-5': 3}
+   -54  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-5        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -26  Where is the logic that determines which segments halt greedy matching implemented within the grammar class that matches
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/noncode.py'] steps=3 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   -16  Why does the test function that validates SQL rule fixes use a three-phase sequence of linting, fixing, and linting agai
+         oh-1           read=['src/sqlfluff/utils/testing/rules.py'] steps=4 retried=None
+         oh-cg-5        read=['docs/source/guides/contributing/rules.rst', 'src/sqlfluff/utils/testing/rules.py'] steps=10 retried=None
+   +23  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-cg-5        read=['src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/config.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=6 retried=None
+   +20   How does the test helper function that validates dialect-specific SQL statements ensure the parsed tree matches the exp
+         oh-1           read=['test/dialects/conftest.py'] steps=2 retried=None
+         oh-cg-5        read=['test/dialects/conftest.py'] steps=4 retried=None
+   +16   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-cg-5        read=[] steps=2 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+0.2 95%CI=[-3.6,+3.8] median=+1.0 win/tie/loss=26/6/16 sign-test p=0.164 | n for 80% power at this Δ ≈ 20820
+   by category: what: +6.3 [+1.6,+11.7] (n=12)  how: +2.5 [-0.4,+6.2] (n=13)  why: +1.2 [-6.4,+8.5] (n=12)  where: -10.1 [-20.2,-2.0] (n=11)
+   paired efficiency (b−a): input_tokens: +8151 [-990,+17265] (1.16x)  peak_input_tokens: +5525 [+4630,+6478] (1.51x)  output_tokens: -290 [-430,-156] (0.72x)  tool_calls: -2 [-4,-1] (0.66x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +118 [-7,+244] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/7/13; hit cap: {'oh-1': 5, 'oh-cg-6': 1}
+   -49  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-6        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -36  Where is the logic that determines which segments halt greedy matching implemented within the grammar class that matches
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/noncode.py'] steps=3 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   -24  Why does the test function that validates SQL rule fixes use a three-phase sequence of linting, fixing, and linting agai
+         oh-1           read=['src/sqlfluff/utils/testing/rules.py'] steps=4 retried=None
+         oh-cg-6        read=['src/sqlfluff/utils/testing/rules.py'] steps=5 retried=None
+   +26  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-cg-6        read=[] steps=1 retried=None
+   +26   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-cg-6        read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=3 retried=None
+   +21   How does the test helper function that validates dialect-specific SQL statements ensure the parsed tree matches the exp
+         oh-1           read=['test/dialects/conftest.py'] steps=2 retried=None
+         oh-cg-6        read=['test/dialects/conftest.py'] steps=4 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+2.4 95%CI=[-1.0,+5.2] median=+2.0 win/tie/loss=30/5/13 sign-test p=0.014 | n for 80% power at this Δ ≈ 169
+   by category: what: +7.1 [+3.0,+11.2] (n=12)  how: +2.2 [-1.6,+6.4] (n=13)  why: +5.4 [+1.8,+9.2] (n=12)  where: -5.8 [-16.5,+2.2] (n=11)
+   paired efficiency (b−a): input_tokens: +12236 [+3888,+20808] (1.24x)  peak_input_tokens: +5343 [+4519,+6218] (1.49x)  output_tokens: -217 [-342,-94] (0.79x)  tool_calls: -2 [-3,-1] (0.71x)  wall_s: -1 [-2,+0] (0.93x)  answer_chars: +115 [-4,+244] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 23/12/13; hit cap: {'oh-1': 5, 'oh-cg-7': 2}
+   -54  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-7        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -9  Where does the method in the jinja padding rule that partitions tag whitespace determine boundaries between opening mark
+         oh-1           read=['src/sqlfluff/rules/jinja/JJ01.py'] steps=3 retried=None
+         oh-cg-7        read=['src/sqlfluff/rules/jinja/JJ01.py'] steps=3 retried=None
+   -9  Where in the Hive dialect function parsing class do grammar rules prevent ambiguity between the row keyword used as a fu
+         oh-1           read=['src/sqlfluff/dialects/dialect_hive.py'] steps=2 retried=None
+         oh-cg-7        read=['src/sqlfluff/dialects/dialect_hive.py'] steps=3 retried=None
+   +19  What is the longest-match priority algorithm in the grammar matching attribute of the top-level statement parsing segmen
+         oh-1           read=['src/sqlfluff/core/parser/match_algorithms.py'] steps=3 retried=None
+         oh-cg-7        read=['src/sqlfluff/core/parser/grammar/anyof.py', 'src/sqlfluff/core/parser/match_algorithms.py', 'src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=7 retried=None
+   +18  How does the SELECT REPLACE clause segment's parsing grammar handle failures when the delimiter-based parser encounters 
+         oh-1           read=['src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/core/parser/match_algorithms.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=6 retried=None
+         oh-cg-7        read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/grammar/delimited.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_snowflake.py'] steps=5 retried=None
+   +17  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-cg-7        read=[] steps=1 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+0.8 95%CI=[-3.0,+4.2] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 2242
+   by category: what: +4.2 [-1.0,+10.3] (n=12)  how: -3.7 [-9.0,+1.3] (n=13)  why: +6.1 [+0.2,+12.4] (n=12)  where: -3.6 [-14.2,+4.6] (n=11)
+   paired efficiency (b−a): input_tokens: +8938 [+802,+17049] (1.17x)  peak_input_tokens: +5235 [+4287,+6185] (1.48x)  output_tokens: -253 [-376,-130] (0.75x)  tool_calls: -2 [-3,-1] (0.69x)  wall_s: -1 [-2,-0] (0.86x)  answer_chars: +67 [-56,+195] (1.08x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 26/9/13; hit cap: {'oh-1': 5, 'oh-cg-8': 2}
+   -50  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-8        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -19  How does the linting error class manage edit recommendation objects through dictionary conversion, duplicate detection, 
+         oh-1           read=['src/sqlfluff/core/errors.py', 'src/sqlfluff/core/linter/linted_file.py', 'src/sqlfluff/core/rules/fix.py'] steps=6 retried=None
+         oh-cg-8        read=['src/sqlfluff/core/parser/markers.py', 'src/sqlfluff/core/rules/fix.py', 'src/sqlfluff/core/templaters/base.py'] steps=5 retried=None
+   -19  How does the method that merges configuration values in the spacing configuration dataclass handle precedence when multi
+         oh-1           read=['src/sqlfluff/utils/reflow/config.py'] steps=3 retried=None
+         oh-cg-8        read=['src/sqlfluff/utils/reflow/config.py'] steps=4 retried=None
+   +29  What would be the propagation path through the whitespace reformatting utility's indentation checking workflow if the in
+         oh-1           read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=10 retried=None
+         oh-cg-8        read=['src/sqlfluff/rules/layout/LT02.py', 'src/sqlfluff/rules/structure/ST04.py', 'src/sqlfluff/utils/reflow/reindent.py', 'src/sqlfluff/utils/reflow/sequence.py'] steps=7 retried=None
+   +26   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-cg-8        read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=6 retried=None
+   +25  Why does the persist filename dispatcher conditionally suppress skipped file messages based on verbosity rather than del
+         oh-1           read=['src/sqlfluff/cli/formatters.py', 'src/sqlfluff/core/formatter.py', 'src/sqlfluff/core/linter/linted_file.py'] steps=3 retried=None
+         oh-cg-8        read=['src/sqlfluff/core/linter/linted_file.py'] steps=2 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+1.2 95%CI=[-2.5,+4.5] median=+1.0 win/tie/loss=25/4/19 sign-test p=0.451 | n for 80% power at this Δ ≈ 798
+   by category: what: +3.7 [-0.7,+9.1] (n=12)  how: +1.0 [-2.6,+5.2] (n=13)  why: +4.6 [-2.7,+12.0] (n=12)  where: -4.8 [-15.9,+3.2] (n=11)
+   paired efficiency (b−a): input_tokens: +12666 [+3352,+22590] (1.25x)  peak_input_tokens: +5831 [+4898,+6807] (1.53x)  output_tokens: -219 [-328,-116] (0.79x)  tool_calls: -2 [-3,-1] (0.71x)  wall_s: -1 [-2,-0] (0.88x)  answer_chars: +5 [-106,+117] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 25/11/12; hit cap: {'oh-1': 5, 'oh-cg-9': 2}
+   -55  Where is the match_grammar definition for the JSON format clause class located within the CREATE EXTERNAL FILE FORMAT st
+         oh-1           read=['src/sqlfluff/dialects/dialect_tsql.py'] steps=2 retried=None
+         oh-cg-9        read=['src/sqlfluff/dialects/dialect_snowflake.py'] steps=3 retried=None
+   -19  Why would repeatedly instantiating the NamedTuple that stores select clause target information in the layout rule during
+         oh-1           read=['src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/segments.py'] steps=7 retried=None
+         oh-cg-9        read=['CHANGELOG.md', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/rules/layout/LT09.py', 'src/sqlfluff/utils/functional/context.py', 'src/sqlfluff/utils/functional/segments.py'] steps=10 retried=None
+   -11  How does the grammar matching attribute of the segment class defining REJECT clauses in import or export statements depe
+         oh-1           read=['src/sqlfluff/core/parser/grammar/anyof.py', 'src/sqlfluff/core/parser/grammar/sequence.py', 'src/sqlfluff/dialects/dialect_exasol.py'] steps=5 retried=None
+         oh-cg-9        read=[] steps=3 retried=None
+   +26  What method in the filtering logic that extracts aliases from SELECT FROM clauses differentiates between regular table r
+         oh-1           read=['src/sqlfluff/core/rules/analysis/select.py'] steps=3 retried=too_short
+         oh-cg-9        read=[] steps=1 retried=None
+   +26   Why does the SQL dialect segment class for unordered SELECT statements use grammar composition with copy and insert met
+         oh-1           read=['src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py'] steps=5 retried=None
+         oh-cg-9        read=['src/sqlfluff/dialects/dialect_ansi.py'] steps=4 retried=None
+   +25  Why does repeatedly instantiating the segment class that parses structured data type definitions during parsing of deepl
+         oh-1           read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py', 'src/sqlfluff/dialects/dialect_sparksql.py'] steps=10 retried=None
+         oh-cg-9        read=['src/sqlfluff/core/dialects/base.py', 'src/sqlfluff/core/parser/grammar/base.py', 'src/sqlfluff/core/parser/match_result.py', 'src/sqlfluff/core/parser/segments/base.py', 'src/sqlfluff/dialects/dialect_ansi.py', 'src/sqlfluff/dialects/dialect_bigquery.py', 'src/sqlfluff/dialects/dialect_duckdb.py'] steps=10 retried=None
+
+wrote runs/sweqa-r5-sqlfluff-k10/analysis.json

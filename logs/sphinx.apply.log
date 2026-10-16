@@ -1,0 +1,31 @@
+loaded 746 authored entries from /root/aoci-eval/repos-deepswe/sphinx-r5/aoci.code.txt
+batch 1: submitted 26 entries, status=applied remaining=640 applied_total=26 5s
+batch 2: submitted 27 entries, status=applied remaining=613 applied_total=53 9s
+batch 3: submitted 26 entries, status=applied remaining=587 applied_total=79 12s
+batch 4: submitted 26 entries, status=applied remaining=561 applied_total=105 15s
+batch 5: submitted 27 entries, status=applied remaining=534 applied_total=132 17s
+batch 6: submitted 27 entries, status=applied remaining=507 applied_total=159 19s
+batch 7: submitted 27 entries, status=applied remaining=480 applied_total=186 21s
+batch 8: submitted 27 entries, status=applied remaining=453 applied_total=213 23s
+batch 9: submitted 27 entries, status=applied remaining=426 applied_total=240 25s
+batch 10: submitted 23 entries, status=applied remaining=403 applied_total=263 27s
+batch 11: submitted 22 entries, status=applied remaining=381 applied_total=285 29s
+batch 12: submitted 23 entries, status=applied remaining=358 applied_total=308 31s
+batch 13: submitted 23 entries, status=applied remaining=335 applied_total=331 33s
+batch 14: submitted 23 entries, status=applied remaining=312 applied_total=354 34s
+batch 15: submitted 21 entries, status=applied remaining=291 applied_total=375 36s
+batch 16: submitted 22 entries, status=applied remaining=269 applied_total=397 38s
+batch 17: submitted 23 entries, status=applied remaining=246 applied_total=420 41s
+batch 18: submitted 22 entries, status=applied remaining=224 applied_total=442 44s
+batch 19: submitted 24 entries, status=applied remaining=200 applied_total=466 46s
+batch 20: submitted 23 entries, status=applied remaining=177 applied_total=489 48s
+batch 21: submitted 25 entries, status=applied remaining=152 applied_total=514 50s
+batch 22: submitted 25 entries, status=applied remaining=127 applied_total=539 52s
+batch 23: submitted 24 entries, status=applied remaining=103 applied_total=563 54s
+batch 24: submitted 23 entries, status=applied remaining=80 applied_total=586 56s
+batch 25: submitted 23 entries, status=applied remaining=57 applied_total=609 58s
+batch 26: submitted 25 entries, status=applied remaining=32 applied_total=634 60s
+batch 27: submitted 25 entries, status=applied remaining=7 applied_total=659 62s
+batch 28: submitted 7 entries, status=applied remaining=0 applied_total=666 64s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=666 findings=[('code_skipped', 'sphinx/_cli/util/__init__.py'), ('code_skipped', 'sphinx/search/_stopwords/__init__.py'), ('code_skipped', 'tests/__init__.py'), ('code_skipped', 'tests/js/roots/cpp/conf.py'), ('code_skipped', 'tests/js/roots/multiterm/conf.py')]

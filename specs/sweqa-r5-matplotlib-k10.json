@@ -1,0 +1,43 @@
+{
+ "run": "sweqa-r5-matplotlib-k10",
+ "repo": "matplotlib",
+ "repo_root": "repos-r5/matplotlib",
+ "questions": "benchmarks/swe-qa/matplotlib.jsonl",
+ "draws": 10,
+ "limit": 0,
+ "workers": 48,
+ "concurrent_passes": 2,
+ "arms": [
+  {
+   "name": "oh",
+   "kind": "oh",
+   "profile": "official-dsflash",
+   "max_iterations": 10,
+   "temperature": 0.0,
+   "max_output_tokens": 12288
+  },
+  {
+   "name": "oh-aoci",
+   "kind": "oh-aoci",
+   "profile": "official-dsflash",
+   "max_iterations": 10,
+   "temperature": 0.0,
+   "max_output_tokens": 12288
+  },
+  {
+   "name": "oh-cg",
+   "kind": "oh-cg",
+   "profile": "official-dsflash",
+   "max_iterations": 10,
+   "temperature": 0.0,
+   "max_output_tokens": 12288
+  }
+ ],
+ "judge": {
+  "profile": "gptnb-judge",
+  "votes": 5,
+  "workers": 48
+ },
+ "require_complete_index": true,
+ "_comment": "R5 — SWE-QA ALL 15 REPOS (2026-10-16; published as a reproduction package). Host: OpenHands 1.1.0 default agent (terminal + file_editor + task_tracker), max 10 reasoning-action iterations, temperature 0 — the paper's protocol. Three arms, k=10 interleaved: oh (bare) / oh-aoci (AOCI served by aoci-code 0.1.0-rc20 MCP, nine tools; every question first runs a COGNITION TURN with its own budget (<=30 iterations): aoci_rules -> aoci_overview through every next_cursor to completed=true (chunk_tokens=24000) -> attestation, then the paper's 10-iteration question turn) / oh-cg (CodeGraph 1.5.0 served as an MCP tool from a read-only mirror). No mixed arm. Index scope (all 15 repos, uniform): Managed Scope full profile + observe ** (order 0) + index **/*.py, **/*.pyx, **/*.pxd, **/*.pyi (order 10-13) + exclude AGENTS.md: Python/Cython sources INCLUDING tests get Entries (173/720 questions reference test files), non-code files are observed; this keeps every whole index under the rc20 cognition budget (whole_index.max_tokens 400k; django 2,845 entries is the largest). Entries authored by Claude Sonnet 5.5 (CloseAI) with s3_author under the rc20 quota profile and written through the governed path (aoci_maintain -> aoci_update_entry) until verify reports aligned; the four r4 repos are re-indexed under this scope and re-run (r4 used the full profile, so r4 numbers are not mixed in). Answer model DeepSeek-V4.1-Flash (official deepseek-flash, thinking disabled, 1M context). Judge: claude-sonnet-4-5 x5 votes per answer, per-dimension majority (median if no majority), five dimensions 1-20 = 100, rubric sha 750916e2 (the benchmark's); only rows with 5 valid votes count. PREREGISTERED (frozen before the first answer): H1 oh-aoci - oh > 0; H2 oh-aoci - oh-cg (two-sided); H3 oh-cg - oh (two-sided). Per repo: run-level exact permutation 10 v 10 (184,756 splits, two-sided). Merged: 15-repo stratified permutation (MC 1e5, equal repo weights). Exploratory: question category by first word; effect vs index size (<=2 / 3-5 / >=8 overview chunks); the 173 test-referencing questions. Absolute scores are not comparable with r4 or batch one. Acceptance gate before judging: 0 leaks, 0 network successes, delivery sha asserted per record, workspace-modified records discarded and re-answered (audited in discards.jsonl)."
+}

@@ -1,0 +1,41 @@
+loaded 973 authored entries from /root/aoci-eval/repos-deepswe/astropy-r5/aoci.code.txt
+batch 1: submitted 26 entries, status=applied remaining=904 applied_total=26 14s
+batch 2: submitted 25 entries, status=applied remaining=879 applied_total=51 15s
+batch 3: submitted 24 entries, status=applied remaining=855 applied_total=75 16s
+batch 4: submitted 23 entries, status=applied remaining=832 applied_total=98 17s
+batch 5: submitted 23 entries, status=applied remaining=809 applied_total=121 18s
+batch 6: submitted 23 entries, status=applied remaining=786 applied_total=144 20s
+batch 7: submitted 23 entries, status=applied remaining=763 applied_total=167 21s
+batch 8: submitted 25 entries, status=applied remaining=738 applied_total=192 22s
+batch 9: submitted 24 entries, status=applied remaining=714 applied_total=216 23s
+batch 10: submitted 24 entries, status=applied remaining=690 applied_total=240 25s
+batch 11: submitted 25 entries, status=applied remaining=665 applied_total=265 27s
+batch 12: submitted 27 entries, status=applied remaining=638 applied_total=292 28s
+batch 13: submitted 26 entries, status=applied remaining=612 applied_total=318 30s
+batch 14: submitted 25 entries, status=applied remaining=587 applied_total=343 33s
+batch 15: submitted 25 entries, status=applied remaining=562 applied_total=368 35s
+batch 16: submitted 25 entries, status=applied remaining=537 applied_total=393 38s
+batch 17: submitted 26 entries, status=applied remaining=511 applied_total=419 40s
+batch 18: submitted 26 entries, status=applied remaining=485 applied_total=445 43s
+batch 19: submitted 25 entries, status=applied remaining=460 applied_total=470 44s
+batch 20: submitted 25 entries, status=applied remaining=435 applied_total=495 46s
+batch 21: submitted 25 entries, status=applied remaining=410 applied_total=520 48s
+batch 22: submitted 27 entries, status=applied remaining=383 applied_total=547 49s
+batch 23: submitted 26 entries, status=applied remaining=357 applied_total=573 51s
+batch 24: submitted 26 entries, status=applied remaining=331 applied_total=599 53s
+batch 25: submitted 26 entries, status=applied remaining=305 applied_total=625 54s
+batch 26: submitted 25 entries, status=applied remaining=280 applied_total=650 56s
+batch 27: submitted 23 entries, status=applied remaining=257 applied_total=673 58s
+batch 28: submitted 20 entries, status=applied remaining=237 applied_total=693 59s
+batch 29: submitted 26 entries, status=applied remaining=211 applied_total=719 61s
+batch 30: submitted 26 entries, status=applied remaining=185 applied_total=745 63s
+batch 31: submitted 25 entries, status=applied remaining=160 applied_total=770 65s
+batch 32: submitted 26 entries, status=applied remaining=134 applied_total=796 68s
+batch 33: submitted 25 entries, status=applied remaining=109 applied_total=821 71s
+batch 34: submitted 25 entries, status=applied remaining=84 applied_total=846 74s
+batch 35: submitted 24 entries, status=applied remaining=60 applied_total=870 77s
+batch 36: submitted 23 entries, status=applied remaining=37 applied_total=893 80s
+batch 37: submitted 26 entries, status=applied remaining=11 applied_total=919 83s
+batch 38: submitted 11 entries, status=applied remaining=0 applied_total=930 87s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=930 findings=[('code_skipped', 'astropy/config/tests/__init__.py'), ('code_skipped', 'astropy/constants/tests/__init__.py'), ('code_skipped', 'astropy/convolution/tests/__init__.py'), ('code_skipped', 'astropy/coordinates/tests/__init__.py'), ('code_skipped', 'astropy/cosmology/_src/tests/__init__.py')]

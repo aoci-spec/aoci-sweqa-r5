@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-gpt51-reflex-k1
+manifest: harness=None created=2026-10-15T17:46:01Z repo=reflex commit=fe0f946dc0c2 index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   69.7  14.5   66.6   71.7   75.8   63.4 |   7.5   7.6   1.6   0.0 |    67650    11481     518     604    n/a   41.7 |   0.28   0.00   0.24
+dims: oh=12.8/11.4/17.1/15.6/12.7
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,247,221 out=24,884
+
+wrote runs/sweqa-r5p-gpt51-reflex-k1/analysis.json

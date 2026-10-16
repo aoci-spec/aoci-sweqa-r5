@@ -1,0 +1,834 @@
+{
+ "run": "runs/sweqa-r5-streamlink-k10",
+ "passes": [
+  {
+   "pass": "oh-1",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-10",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 2,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-2",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 1,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-3",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-4",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 5,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-5",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 4,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-6",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 5,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-7",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 5,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-8",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 6,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-9",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 8,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 0,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-1",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 11,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-10",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 4,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 10,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-2",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 11,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-3",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 4,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 9,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-4",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 4,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 8,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-5",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 7,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-6",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 8,
+   "dirty_benign": 1,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-7",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 8,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-8",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 10,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-aoci-9",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 5,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 11,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-1",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 1,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 1,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 14,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-10",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 4,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 11,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-2",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 1,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 2,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 12,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-3",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 2,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 14,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-4",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 12,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-5",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 3,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 13,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-6",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 1,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 17,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-7",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 0,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 2,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 14,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-8",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 0,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 16,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  },
+  {
+   "pass": "oh-cg-9",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 0,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 2,
+   "retried": 0,
+   "degenerate": 0,
+   "garbled": 0,
+   "zero_source": 15,
+   "dirty_benign": 0,
+   "models": [
+    "deepseek-flash"
+   ],
+   "profiles": [
+    "official-dsflash"
+   ],
+   "hard_fail": false
+  }
+ ],
+ "totals": {
+  "n": 1440,
+  "errors": 0,
+  "missing": 0,
+  "extra": 0,
+  "leaks": 0,
+  "net_attempts": 8,
+  "net_success": 0,
+  "delivery_bad": 0,
+  "dirty": 0,
+  "dirty_benign": 1,
+  "probes": 3,
+  "forced": 99,
+  "retried": 18,
+  "degenerate": 10,
+  "garbled": 0,
+  "zero_source": 231
+ },
+ "ok": true
+}

@@ -1,0 +1,45 @@
+loaded 1060 authored entries from /root/aoci-eval/repos-deepswe/scikit-learn-r5/aoci.code.txt
+batch 1: submitted 25 entries, status=applied remaining=979 applied_total=25 2s
+batch 2: submitted 25 entries, status=applied remaining=954 applied_total=50 4s
+batch 3: submitted 26 entries, status=applied remaining=928 applied_total=76 6s
+batch 4: submitted 23 entries, status=applied remaining=905 applied_total=99 7s
+batch 5: submitted 24 entries, status=applied remaining=881 applied_total=123 9s
+batch 6: submitted 24 entries, status=applied remaining=857 applied_total=147 10s
+batch 7: submitted 23 entries, status=applied remaining=834 applied_total=170 12s
+batch 8: submitted 23 entries, status=applied remaining=811 applied_total=193 13s
+batch 9: submitted 23 entries, status=applied remaining=788 applied_total=216 15s
+batch 10: submitted 23 entries, status=applied remaining=765 applied_total=239 17s
+batch 11: submitted 23 entries, status=applied remaining=742 applied_total=262 19s
+batch 12: submitted 24 entries, status=applied remaining=718 applied_total=286 20s
+batch 13: submitted 23 entries, status=applied remaining=695 applied_total=309 22s
+batch 14: submitted 22 entries, status=applied remaining=673 applied_total=331 24s
+batch 15: submitted 23 entries, status=applied remaining=650 applied_total=354 26s
+batch 16: submitted 26 entries, status=applied remaining=624 applied_total=380 28s
+batch 17: submitted 26 entries, status=applied remaining=598 applied_total=406 30s
+batch 18: submitted 25 entries, status=applied remaining=573 applied_total=431 32s
+batch 19: submitted 25 entries, status=applied remaining=548 applied_total=456 33s
+batch 20: submitted 25 entries, status=applied remaining=523 applied_total=481 35s
+batch 21: submitted 24 entries, status=applied remaining=499 applied_total=505 38s
+batch 22: submitted 22 entries, status=applied remaining=477 applied_total=527 40s
+batch 23: submitted 25 entries, status=applied remaining=452 applied_total=552 42s
+batch 24: submitted 23 entries, status=applied remaining=429 applied_total=575 45s
+batch 25: submitted 23 entries, status=applied remaining=406 applied_total=598 47s
+batch 26: submitted 24 entries, status=applied remaining=382 applied_total=622 50s
+batch 27: submitted 24 entries, status=applied remaining=358 applied_total=646 52s
+batch 28: submitted 25 entries, status=applied remaining=333 applied_total=671 55s
+batch 29: submitted 25 entries, status=applied remaining=308 applied_total=696 57s
+batch 30: submitted 24 entries, status=applied remaining=284 applied_total=720 60s
+batch 31: submitted 24 entries, status=applied remaining=260 applied_total=744 62s
+batch 32: submitted 24 entries, status=applied remaining=236 applied_total=768 64s
+batch 33: submitted 25 entries, status=applied remaining=211 applied_total=793 66s
+batch 34: submitted 25 entries, status=applied remaining=186 applied_total=818 69s
+batch 35: submitted 25 entries, status=applied remaining=161 applied_total=843 72s
+batch 36: submitted 26 entries, status=applied remaining=135 applied_total=869 75s
+batch 37: submitted 26 entries, status=applied remaining=109 applied_total=895 77s
+batch 38: submitted 27 entries, status=applied remaining=82 applied_total=922 79s
+batch 39: submitted 26 entries, status=applied remaining=56 applied_total=948 81s
+batch 40: submitted 26 entries, status=applied remaining=30 applied_total=974 83s
+batch 41: submitted 25 entries, status=applied remaining=5 applied_total=999 85s
+batch 42: submitted 5 entries, status=applied remaining=0 applied_total=1004 87s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=1004 findings=[('code_skipped', 'sklearn/_build_utils/__init__.py'), ('code_skipped', 'sklearn/_loss/tests/__init__.py'), ('code_skipped', 'sklearn/cluster/_hdbscan/tests/__init__.py'), ('code_skipped', 'sklearn/cluster/tests/__init__.py'), ('code_skipped', 'sklearn/compose/tests/__init__.py')]

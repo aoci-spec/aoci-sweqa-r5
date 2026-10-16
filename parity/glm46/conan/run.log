@@ -1,0 +1,139 @@
+=== run.py specs/sweqa-r5p-glm46-conan-k1.json at 2026-10-15T18:23:03Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name conan --questions benchmarks/swe-qa/conan.jsonl --condition oh --out runs/sweqa-r5p-glm46-conan-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/conan --profile openrouter-glm46-novita --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=openrouter-glm46-novita model=z-ai/glm-4.6 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=52f43d98fe44
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[10/16/26 02:23:29] ERROR    Tool 'terminal! Let me search for test agent.py:380
+                             classes related to! Let me search! Let             
+                             me search for test classes                         
+                             related!</think><tool_call>terminal'               
+                             not found. Available: ['terminal',                 
+                             'file_editor', 'task_tracker',                     
+                             'finish', 'think']                                 
+[1/48] 33.5s steps=4 calls=4 files=3+0m map=0/0c in=35708 out=579 status=finished   
+[2/48] 38.9s steps=2 calls=2 files=1+0m map=0/0c in=21557 out=1043 status=finished   
+[3/48] 40.8s steps=3 calls=3 files=1+0m map=0/0c in=29634 out=931 status=finished   
+[4/48] 42.2s steps=4 calls=4 files=2+0m map=0/0c in=39954 out=808 status=finished   
+[5/48] 50.2s steps=3 calls=3 files=1+0m map=0/0c in=31676 out=1128 status=finished   
+[6/48] 50.8s steps=4 calls=4 files=1+0m map=0/0c in=33589 out=886 status=finished   
+[7/48] 57.5s steps=6 calls=6 files=3+0m map=0/0c in=70511 out=996 status=finished   
+[8/48] 65.6s steps=6 calls=6 files=1+0m map=0/0c in=63744 out=1191 status=finished retried=too_short  
+[9/48] 68.3s steps=5 calls=5 files=3+0m map=0/0c in=57976 out=1503 status=finished   
+[10/48] 30.0s steps=2 calls=2 files=1+0m map=0/0c in=23906 out=601 status=finished   
+[11/48] 74.1s steps=8 calls=8 files=5+0m map=0/0c in=78637 out=1320 status=finished   
+[12/48] 86.5s steps=10 calls=10 files=5+0m map=0/0c in=108200 out=1312 status=finished forced   
+[13/48] 90.3s steps=10 calls=10 files=3+0m map=0/0c in=112861 out=1590 status=finished forced   
+[14/48] 91.6s steps=10 calls=10 files=1+0m map=0/0c in=131842 out=1435 status=finished forced   
+[15/48] 95.0s steps=10 calls=16 files=6+0m map=0/0c in=178786 out=1651 status=finished forced   
+[16/48] 33.2s steps=4 calls=4 files=3+0m map=0/0c in=38097 out=445 status=finished   
+[17/48] 101.0s steps=8 calls=8 files=2+0m map=0/0c in=113077 out=2618 status=finished   
+[18/48] 44.9s steps=3 calls=3 files=2+0m map=0/0c in=35830 out=1053 status=finished   
+[19/48] 92.1s steps=10 calls=10 files=5+0m map=0/0c in=114563 out=1517 status=finished forced   
+[20/48] 38.7s steps=3 calls=3 files=2+0m map=0/0c in=30846 out=778 status=finished   
+[21/48] 31.9s steps=3 calls=3 files=2+0m map=0/0c in=29810 out=641 status=finished   
+[22/48] 102.7s steps=10 calls=10 files=7+0m map=0/0c in=132107 out=2014 status=finished forced   
+[23/48] 90.3s steps=10 calls=10 files=4+0m map=0/0c in=169070 out=1782 status=finished forced   
+[24/48] 98.7s steps=10 calls=10 files=5+0m map=0/0c in=181612 out=2205 status=finished forced   
+[25/48] 74.2s steps=7 calls=7 files=4+0m map=0/0c in=73523 out=1349 status=finished   
+[26/48] 100.5s steps=10 calls=10 files=7+0m map=0/0c in=131055 out=1853 status=finished forced   
+[27/48] 85.0s steps=8 calls=8 files=5+0m map=0/0c in=96626 out=1692 status=finished   
+[28/48] 96.1s steps=10 calls=10 files=3+0m map=0/0c in=166243 out=1742 status=finished forced   
+[10/16/26 02:26:02] ERROR    Tool                                   agent.py:380
+                             'terminal!s!</think><tool_call>termina             
+                             l' not found. Available: ['terminal',              
+                             'file_editor', 'task_tracker',                     
+                             'finish', 'think']                                 
+[29/48] 32.5s steps=4 calls=4 files=1+0m map=0/0c in=38037 out=548 status=finished   
+[30/48] 33.2s steps=2 calls=2 files=1+0m map=0/0c in=21261 out=755 status=finished   
+[31/48] 23.7s steps=3 calls=3 files=1+0m map=0/0c in=28241 out=411 status=finished   
+[32/48] 44.8s steps=4 calls=4 files=2+0m map=0/0c in=44935 out=873 status=finished   
+[33/48] 94.3s steps=10 calls=10 files=3+0m map=0/0c in=114052 out=1756 status=finished forced   
+[34/48] 43.2s steps=4 calls=4 files=2+0m map=0/0c in=40469 out=909 status=finished   
+[35/48] 99.1s steps=10 calls=10 files=2+0m map=0/0c in=145444 out=2174 status=finished forced   
+[36/48] 99.3s steps=10 calls=10 files=1+0m map=0/0c in=125902 out=1769 status=finished forced   
+[37/48] 40.5s steps=4 calls=4 files=1+0m map=0/0c in=38097 out=707 status=finished   
+[38/48] 98.4s steps=10 calls=10 files=4+0m map=0/0c in=171573 out=1878 status=finished forced   
+[39/48] 32.2s steps=4 calls=4 files=3+0m map=0/0c in=38912 out=543 status=finished   
+[40/48] 208.7s steps=10 calls=10 files=8+0m map=0/0c in=156048 out=6182 status=finished forced   
+[41/48] 33.6s steps=4 calls=4 files=3+0m map=0/0c in=36446 out=479 status=finished   
+[42/48] 132.7s steps=10 calls=10 files=5+0m map=0/0c in=159731 out=3144 status=finished forced   
+[43/48] 86.7s steps=10 calls=10 files=7+0m map=0/0c in=94653 out=1505 status=finished forced   
+[44/48] 106.8s steps=10 calls=10 files=2+0m map=0/0c in=115707 out=2304 status=finished forced   
+[45/48] 84.5s steps=10 calls=10 files=4+0m map=0/0c in=120631 out=1254 status=finished forced   
+[46/48] 86.4s steps=10 calls=10 files=1+0m map=0/0c in=102831 out=1334 status=finished forced   
+[47/48] 86.4s steps=10 calls=10 files=2+0m map=0/0c in=112039 out=1538 status=finished forced   
+[48/48] 129.8s steps=10 calls=10 files=3+0m map=0/0c in=154248 out=3112 status=finished forced   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-glm46-conan-k1 --json runs/sweqa-r5p-glm46-conan-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-glm46-conan-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     0     22     1     1     0    0
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 0 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 22 forced answers · 1 refusal/garble re-runs · 1 degenerate · 0 garbled-final · 0 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-glm46-conan-k1/answers-oh.jsonl --out runs/sweqa-r5p-glm46-conan-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['z-ai/glm-4.6']
+[1/48] total=64 votes=5 
+[2/48] total=83 votes=5 
+[3/48] total=50 votes=5 
+[4/48] total=59 votes=5 
+[5/48] total=84 votes=5 
+[6/48] total=72 votes=5 
+[7/48] total=56 votes=5 
+[8/48] total=72 votes=5 
+[9/48] total=46 votes=5 
+[10/48] total=59 votes=5 
+[11/48] total=81 votes=5 
+[12/48] total=89 votes=5 
+[13/48] total=84 votes=5 
+[14/48] total=86 votes=5 
+[15/48] total=90 votes=5 
+[16/48] total=24 votes=5 
+[17/48] total=71 votes=5 
+[18/48] total=83 votes=5 
+[19/48] total=85 votes=5 
+[20/48] total=85 votes=5 
+[21/48] total=84 votes=5 
+[22/48] total=83 votes=5 
+[23/48] total=83 votes=5 
+[24/48] total=90 votes=5 
+[25/48] total=81 votes=5 
+[26/48] total=47 votes=5 
+[27/48] total=72 votes=5 
+[28/48] total=51 votes=5 
+[29/48] total=85 votes=5 
+[30/48] total=57 votes=5 
+[31/48] total=74 votes=5 
+[32/48] total=82 votes=5 
+[33/48] total=45 votes=5 
+[34/48] total=85 votes=5 
+[35/48] total=72 votes=5 
+[36/48] total=51 votes=5 
+[37/48] total=92 votes=5 
+[38/48] total=84 votes=5 
+[39/48] total=84 votes=5 
+[40/48] total=87 votes=5 
+[41/48] total=85 votes=5 
+[42/48] total=76 votes=5 
+[43/48] total=46 votes=5 
+[44/48] total=82 votes=5 
+[45/48] total=83 votes=5 
+[46/48] total=47 votes=5 
+[47/48] total=84 votes=5 
+[48/48] total=82 votes=5 
+run: runs/sweqa-r5p-glm46-conan-k1
+manifest: harness=None created=2026-10-15T18:23:09Z repo=conan commit=52f43d98fe44 index_entries=0
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   1 |   72.9  16.1   74.6   74.5   69.9   72.4 |   6.9   7.0   3.0   0.0 |    87298    14992    1455    1028    n/a   72.9 |   0.41   0.00   0.03
+dims: oh=14.6/11.8/17.4/15.7/13.4
+judge vote SD (mean over questions): oh=1.2
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=4,190,297 out=69,838
+
+wrote runs/sweqa-r5p-glm46-conan-k1/analysis.json
+

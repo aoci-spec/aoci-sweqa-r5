@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-sphinx-k10
+manifest: harness=None created=2026-10-15T21:42:06Z repo=sphinx commit=6c9e3209c4eb index_entries=666
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   73.4  14.5   66.7   75.3   78.3   74.4 |   5.9   8.5   2.2   0.0 |    62606    11427    1143     753    n/a   10.5 |   0.70   0.00   0.22
+oh-10           48   0   0 |   71.7  15.1   68.1   71.7   79.2   67.4 |   6.4   9.3   2.4   0.0 |    69695    12085    1252     734    n/a   12.8 |   0.71   0.00   0.22
+oh-2            48   0   0 |   72.9  15.2   68.1   75.8   78.8   68.1 |   6.1   9.3   2.4   0.0 |    67214    11949    1258     780    n/a   11.7 |   0.68   0.00   0.24
+oh-3            48   0   0 |   73.8  13.4   71.0   75.0   76.3   72.8 |   6.0   9.0   2.3   0.0 |    68239    12152    1219     732    n/a   10.9 |   0.70   0.00   0.22
+oh-4            48   0   0 |   72.1  14.5   68.4   75.2   76.0   68.3 |   6.2   9.4   2.5   0.0 |    68460    11965    1251     770    n/a   13.0 |   0.71   0.00   0.24
+oh-5            48   0   0 |   72.6  16.8   68.1   74.8   77.7   69.9 |   6.2   8.6   2.2   0.0 |    67900    11940    1378    1381    n/a   12.3 |   0.74   0.00   0.22
+oh-6            48   0   0 |   72.5  14.5   69.4   73.1   79.3   67.6 |   6.2   9.1   2.6   0.0 |    68567    12032    1234     787    n/a   11.7 |   0.73   0.00   0.23
+oh-7            48   0   0 |   72.7  15.6   66.8   73.0   79.2   72.6 |   6.2   8.9   2.2   0.0 |    69845    12105    1216     770    n/a   11.2 |   0.74   0.00   0.23
+oh-8            48   0   0 |   72.2  16.2   67.4   77.5   75.2   67.9 |   5.9   8.8   2.2   0.0 |    66255    11888    1192     822    n/a   12.8 |   0.74   0.00   0.25
+oh-9            48   0   0 |   74.2  12.5   69.5   78.2   75.8   73.7 |   6.1   8.9   2.3   0.0 |    67217    11868    1213     783    n/a   12.9 |   0.72   0.00   0.26
+oh-aoci-1       48   0   0 |   75.9  18.2   70.3   82.4   79.0   71.1 |   6.1   7.4   2.2  11.0 |   830620    82219    2557    1150    n/a   26.0 |   0.70   0.49   0.42
+oh-aoci-10      48   0   0 |   78.0  17.0   71.4   82.5   82.0   76.6 |   5.8   7.0   2.1   9.6 |   801746    81757    2480    1119    n/a   26.1 |   0.66   0.57   0.37
+oh-aoci-2       48   0   0 |   75.9  17.4   74.6   76.5   81.7   69.7 |   5.4   6.6   2.1  12.1 |   775707    81951    2466    1059    n/a   24.8 |   0.70   0.60   0.29
+oh-aoci-3       48   0   0 |   78.2  14.9   74.1   80.0   80.5   79.2 |   6.1   7.5   2.4  12.3 |   833529    82260    2560    1173    n/a   25.6 |   0.72   0.54   0.37
+oh-aoci-4       48   0   0 |   77.1  17.8   72.3   79.8   80.4   76.3 |   5.6   7.1   1.9  12.1 |   791264    81759    2460    1073    n/a   25.7 |   0.71   0.54   0.37
+oh-aoci-5       48   0   1 |   76.4  16.5   73.8   76.9   79.6   75.4 |   6.0   7.4   1.9  12.6 |   825299    81851    2529    1175    n/a   27.0 |   0.70   0.58   0.35
+oh-aoci-6       48   0   0 |   78.6  15.7   71.4   84.2   80.5   79.1 |   5.7   6.7   2.1  12.1 |   804548    81771    2520    1338    n/a   26.4 |   0.69   0.51   0.44
+oh-aoci-7       48   0   0 |   76.6  19.4   69.6   83.0   80.2   73.4 |   5.7   6.6   2.1  10.2 |   792846    81230    2474    1144    n/a   26.6 |   0.72   0.52   0.43
+oh-aoci-8       48   0   0 |   76.9  17.6   71.3   81.5   77.8   77.9 |   5.2   6.6   2.0  11.5 |   760405    81474    2423    1093    n/a   26.8 |   0.70   0.47   0.43
+oh-aoci-9       48   0   0 |   76.1  17.0   74.6   80.3   77.2   71.0 |   5.5   6.4   1.9  10.2 |   780594    81279    2424    1122    n/a   27.1 |   0.66   0.44   0.37
+oh-cg-1         48   0   0 |   76.1  12.7   68.7   79.3   82.0   75.3 |   4.4   5.9   1.6  11.2 |    80377    17622     924     904    n/a    9.6 |   0.50   0.59   0.27
+oh-cg-10        48   0   1 |   74.7  14.0   68.4   76.5   81.8   72.2 |   4.3   5.7   1.6  11.2 |    76455    17297     878     822    n/a    9.2 |   0.46   0.59   0.29
+oh-cg-2         48   0   0 |   76.2  12.0   70.6   78.9   81.4   73.9 |   4.7   6.5   1.7  11.4 |    86182    17836    1011     907    n/a   10.2 |   0.47   0.59   0.30
+oh-cg-3         48   0   0 |   76.1  14.9   71.7   77.5   80.9   74.6 |   4.4   6.0   1.5  12.5 |    79792    18007     947     854    n/a    8.8 |   0.49   0.63   0.35
+oh-cg-4         48   0   0 |   75.0  14.0   66.9   77.4   82.7   73.8 |   4.6   6.2   1.6  11.5 |    84990    18329     964     929    n/a   10.2 |   0.49   0.63   0.34
+oh-cg-5         48   0   0 |   73.5  14.3   70.7   71.2   81.2   70.8 |   4.4   5.7   1.3  12.0 |    83198    17494     887     844    n/a   10.0 |   0.46   0.60   0.34
+oh-cg-6         48   0   0 |   73.9  13.7   65.6   76.2   82.2   72.2 |   4.4   6.1   1.5  11.3 |    81036    17657     959     871    n/a   10.0 |   0.51   0.57   0.32
+oh-cg-7         48   0   0 |   74.0  14.1   67.1   77.4   77.3   75.2 |   4.7   6.4   1.3  11.2 |    83641    17801     975     828    n/a    9.9 |   0.46   0.59   0.21
+oh-cg-8         48   0   0 |   74.4  14.1   67.9   75.8   81.6   72.9 |   4.8   6.5   1.6  11.7 |    84921    17893     988     893    n/a   12.2 |   0.47   0.62   0.33
+oh-cg-9         48   0   0 |   73.9  14.2   66.9   72.7   81.6   76.1 |   4.7   6.3   1.5  12.6 |    86712    18539     945     907    n/a   11.2 |   0.45   0.65   0.34
+dims: oh-1=14.8/12.0/17.9/15.5/13.2  oh-10=14.4/11.5/17.6/15.3/12.9  oh-2=14.6/11.6/17.8/15.7/13.1  oh-3=14.8/11.9/18.1/15.5/13.4  oh-4=14.3/11.8/17.6/15.4/12.9  oh-5=14.7/11.9/17.7/15.2/13.1  oh-6=14.5/11.9/17.9/15.2/13.1  oh-7=14.6/11.7/17.7/15.5/13.2  oh-8=14.6/11.8/17.5/15.2/13.0  oh-9=15.0/12.1/18.1/15.5/13.4  oh-aoci-1=15.0/13.1/17.8/15.9/14.2  oh-aoci-10=15.6/13.4/18.0/16.3/14.7  oh-aoci-2=15.1/13.1/17.6/15.8/14.3  oh-aoci-3=15.8/13.6/18.2/16.0/14.8  oh-aoci-4=15.4/13.4/17.8/15.9/14.6  oh-aoci-5=15.2/13.0/17.8/16.0/14.4  oh-aoci-6=15.8/13.8/18.1/16.1/14.8  oh-aoci-7=15.2/13.3/17.6/15.9/14.5  oh-aoci-8=15.3/13.4/17.9/16.0/14.4  oh-aoci-9=15.2/13.3/17.6/15.6/14.5  oh-cg-1=15.4/12.6/18.4/15.7/14.1  oh-cg-10=15.0/12.4/17.9/15.6/13.8  oh-cg-2=15.3/12.9/18.1/15.8/14.1  oh-cg-3=15.4/12.8/18.0/15.9/14.1  oh-cg-4=14.8/12.6/18.2/15.7/13.7  oh-cg-5=14.7/12.0/17.9/15.5/13.4  oh-cg-6=14.7/12.2/17.9/15.5/13.6  oh-cg-7=14.9/12.1/17.9/15.7/13.5  oh-cg-8=14.8/12.4/17.9/15.5/13.8  oh-cg-9=14.8/12.3/17.9/15.4/13.5
+judge vote SD (mean over questions): oh-1=0.8  oh-10=1.1  oh-2=1.2  oh-3=1.2  oh-4=1.2  oh-5=1.0  oh-6=1.2  oh-7=1.1  oh-8=1.0  oh-9=1.2  oh-aoci-1=1.2  oh-aoci-10=1.1  oh-aoci-2=1.0  oh-aoci-3=1.0  oh-aoci-4=1.1  oh-aoci-5=1.0  oh-aoci-6=1.2  oh-aoci-7=1.1  oh-aoci-8=1.2  oh-aoci-9=1.0  oh-cg-1=0.9  oh-cg-10=0.8  oh-cg-2=1.2  oh-cg-3=1.0  oh-cg-4=1.0  oh-cg-5=1.0  oh-cg-6=1.3  oh-cg-7=0.9  oh-cg-8=1.1  oh-cg-9=1.1
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.7 calls/2635ch (used on 94% of questions)  oh-aoci-10=1.6 calls/2195ch (used on 90% of questions)  oh-aoci-2=1.6 calls/2795ch (used on 90% of questions)  oh-aoci-3=1.8 calls/2918ch (used on 98% of questions)  oh-aoci-4=1.7 calls/2816ch (used on 94% of questions)  oh-aoci-5=1.7 calls/2979ch (used on 94% of questions)  oh-aoci-6=1.6 calls/2864ch (used on 88% of questions)  oh-aoci-7=1.6 calls/2365ch (used on 92% of questions)  oh-aoci-8=1.6 calls/2639ch (used on 85% of questions)  oh-aoci-9=1.4 calls/2376ch (used on 83% of questions)  oh-cg-1=1.3 calls/28347ch (used on 100% of questions)  oh-cg-10=1.2 calls/28183ch (used on 100% of questions)  oh-cg-2=1.3 calls/27721ch (used on 98% of questions)  oh-cg-3=1.4 calls/30211ch (used on 100% of questions)  oh-cg-4=1.4 calls/31075ch (used on 100% of questions)  oh-cg-5=1.4 calls/30219ch (used on 98% of questions)  oh-cg-6=1.3 calls/28236ch (used on 98% of questions)  oh-cg-7=1.4 calls/29416ch (used on 100% of questions)  oh-cg-8=1.3 calls/29121ch (used on 100% of questions)  oh-cg-9=1.5 calls/32154ch (used on 100% of questions)
+totals: oh-1: in=3,005,077 out=54,855  oh-10: in=3,345,342 out=60,110  oh-2: in=3,226,290 out=60,381  oh-3: in=3,275,494 out=58,514  oh-4: in=3,286,086 out=60,071  oh-5: in=3,259,209 out=66,135  oh-6: in=3,291,213 out=59,249  oh-7: in=3,352,566 out=58,365  oh-8: in=3,180,222 out=57,200  oh-9: in=3,226,418 out=58,246  oh-aoci-1: in=39,869,740 out=122,752  oh-aoci-10: in=38,483,830 out=119,023  oh-aoci-2: in=37,233,952 out=118,379  oh-aoci-3: in=40,009,393 out=122,867  oh-aoci-4: in=37,980,658 out=118,073  oh-aoci-5: in=39,614,369 out=121,381  oh-aoci-6: in=38,618,314 out=120,940  oh-aoci-7: in=38,056,622 out=118,741  oh-aoci-8: in=36,499,444 out=116,299  oh-aoci-9: in=37,468,535 out=116,334  oh-cg-1: in=3,858,079 out=44,332  oh-cg-10: in=3,669,854 out=42,151  oh-cg-2: in=4,136,760 out=48,534  oh-cg-3: in=3,829,998 out=45,473  oh-cg-4: in=4,079,528 out=46,252  oh-cg-5: in=3,993,488 out=42,586  oh-cg-6: in=3,889,741 out=46,016  oh-cg-7: in=4,014,764 out=46,805  oh-cg-8: in=4,076,205 out=47,435  oh-cg-9: in=4,162,171 out=45,375
+
+== oh-10 - oh-1: n=48 Δ=-1.7 95%CI=[-5.1,+1.6] median=+0.0 win/tie/loss=18/7/23 sign-test p=0.533 | n for 80% power at this Δ ≈ 402
+   by category: what: +1.4 [-4.5,+7.1] (n=14)  how: -3.6 [-8.0,+0.2] (n=13)  why: +0.9 [-4.9,+8.8] (n=12)  where: -7.0 [-17.8,+0.7] (n=9)
+   paired efficiency (b−a): input_tokens: +7089 [+1271,+13441] (1.11x)  peak_input_tokens: +657 [+146,+1189] (1.06x)  output_tokens: +109 [+1,+228] (1.10x)  tool_calls: +1 [-0,+2] (1.09x)  wall_s: +2 [+1,+4] (1.22x)  answer_chars: -19 [-161,+125] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/21/19; hit cap: {'oh-1': 11, 'oh-10': 13}
+   -45  Where does the C/C++ declaration parser handle and recover from parsing failures when distinguishing cast expressions fr
+         oh-1           read=['sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+         oh-10          read=['sphinx/domains/cpp/_parser.py'] steps=7 retried=None
+   -22  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-10          read=['sphinx/builders/__init__.py', 'sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   -20  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-10          read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/__init__.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=10 retried=None
+   +39  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-10          read=['sphinx/domains/python/__init__.py'] steps=5 retried=None
+   +18  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-10          read=['tests/roots/test-ext-autodoc/circular_import/__init__.py', 'tests/roots/test-ext-autodoc/circular_import/a.py', 'tests/roots/test-ext-autodoc/circular_import/b.py', 'tests/roots/test-ext-autodoc/circular_import/c.py'] steps=4 retried=None
+   +17  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-10          read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-0.5 95%CI=[-4.0,+2.5] median=+1.5 win/tie/loss=27/3/18 sign-test p=0.233 | n for 80% power at this Δ ≈ 3568
+   by category: what: +1.4 [-4.2,+6.8] (n=14)  how: +0.5 [-5.5,+6.8] (n=13)  why: +0.4 [-2.4,+3.1] (n=12)  where: -6.3 [-19.1,+2.2] (n=9)
+   paired efficiency (b−a): input_tokens: +4609 [-620,+10259] (1.07x)  peak_input_tokens: +522 [+126,+949] (1.05x)  output_tokens: +115 [+28,+202] (1.10x)  tool_calls: +1 [+0,+2] (1.09x)  wall_s: +1 [+0,+2] (1.11x)  answer_chars: +27 [-97,+151] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/27/13; hit cap: {'oh-1': 11, 'oh-2': 12}
+   -52  Where does the C/C++ declaration parser handle and recover from parsing failures when distinguishing cast expressions fr
+         oh-1           read=['sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+         oh-2           read=['sphinx/domains/cpp/_parser.py'] steps=6 retried=None
+   -18  What is the propagation mechanism of the return value of the boolean method that determines spacing requirements after t
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+         oh-2           read=['sphinx/domains/c/_ast.py'] steps=5 retried=None
+   -17  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-2           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   +28  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-2           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_ids.py', 'sphinx/domains/cpp/_symbol.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+   +19  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-2           read=['sphinx/domains/cpp/_ast.py'] steps=8 retried=None
+   +12  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-2           read=['sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=7 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+0.4 95%CI=[-2.8,+3.3] median=+1.0 win/tie/loss=25/6/17 sign-test p=0.280 | n for 80% power at this Δ ≈ 7426
+   by category: what: +4.3 [-0.4,+9.6] (n=14)  how: -0.3 [-6.7,+5.3] (n=13)  why: -2.0 [-6.8,+3.0] (n=12)  where: -1.7 [-11.8,+5.0] (n=9)
+   paired efficiency (b−a): input_tokens: +5634 [+185,+11107] (1.09x)  peak_input_tokens: +725 [+240,+1219] (1.06x)  output_tokens: +76 [-29,+176] (1.07x)  tool_calls: +0 [-0,+1] (1.06x)  wall_s: +0 [-0,+1] (1.04x)  answer_chars: -21 [-123,+79] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/24/14; hit cap: {'oh-1': 11, 'oh-3': 12}
+   -38  Where does the C/C++ declaration parser handle and recover from parsing failures when distinguishing cast expressions fr
+         oh-1           read=['sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+         oh-3           read=['sphinx/domains/c/_parser.py', 'sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+   -28  How does the equality comparison method in the class representing user-defined parenthesized attributes implement guard 
+         oh-1           read=['sphinx/util/cfamily.py'] steps=2 retried=None
+         oh-3           read=['sphinx/domains/c/_ast.py'] steps=3 retried=None
+   -16  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-3           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   +21  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-3           read=['tests/roots/test-ext-autodoc/circular_import/__init__.py', 'tests/roots/test-ext-autodoc/circular_import/a.py', 'tests/roots/test-ext-autodoc/circular_import/b.py', 'tests/roots/test-ext-autodoc/circular_import/c.py'] steps=4 retried=None
+   +19  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-3           read=['sphinx/domains/cpp/_ast.py'] steps=9 retried=None
+   +18  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-3           read=['sphinx/directives/patches.py'] steps=2 retried=None
+
+== oh-4 - oh-1: n=48 Δ=-1.3 95%CI=[-4.1,+1.3] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 439
+   by category: what: +1.6 [-3.9,+6.4] (n=14)  how: -0.2 [-3.0,+2.7] (n=13)  why: -2.3 [-7.4,+2.7] (n=12)  where: -6.1 [-14.9,+1.7] (n=9)
+   paired efficiency (b−a): input_tokens: +5854 [+1420,+10381] (1.09x)  peak_input_tokens: +538 [+114,+986] (1.05x)  output_tokens: +109 [+17,+202] (1.10x)  tool_calls: +1 [+0,+2] (1.10x)  wall_s: +3 [+1,+5] (1.24x)  answer_chars: +17 [-110,+136] (1.02x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 6/27/15; hit cap: {'oh-1': 11, 'oh-4': 12}
+   -31  Where does the C/C++ declaration parser handle and recover from parsing failures when distinguishing cast expressions fr
+         oh-1           read=['sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+         oh-4           read=['sphinx/domains/c/_parser.py', 'sphinx/domains/cpp/_parser.py'] steps=6 retried=None
+   -27  What is the semantic significance of the processing order where the declarator following parentheses is processed before
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=9 retried=None
+         oh-4           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+   -24  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-4           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+   +18  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-4           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py'] steps=9 retried=None
+   +14  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-4           read=['tests/roots/test-ext-autodoc/circular_import/__init__.py', 'tests/roots/test-ext-autodoc/circular_import/a.py', 'tests/roots/test-ext-autodoc/circular_import/b.py', 'tests/roots/test-ext-autodoc/circular_import/c.py'] steps=5 retried=None
+   +13  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-4           read=['sphinx/domains/python/__init__.py'] steps=8 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-0.8 95%CI=[-4.1,+2.6] median=+0.0 win/tie/loss=19/6/23 sign-test p=0.644 | n for 80% power at this Δ ≈ 1859
+   by category: what: +1.4 [-3.9,+7.2] (n=14)  how: -0.5 [-6.5,+5.0] (n=13)  why: -0.7 [-7.2,+7.9] (n=12)  where: -4.6 [-13.6,+2.4] (n=9)
+   paired efficiency (b−a): input_tokens: +5294 [+404,+10645] (1.08x)  peak_input_tokens: +513 [-29,+1117] (1.04x)  output_tokens: +235 [-21,+691] (1.21x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +2 [+0,+4] (1.18x)  answer_chars: +628 [-39,+1882] (1.83x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/22/14; hit cap: {'oh-1': 11, 'oh-5': 13}
+   -34  Where would the source code analysis process determine whether a function with no parameters, calls, or control flow sta
+         oh-1           read=['sphinx/ext/autodoc/_documenters.py', 'sphinx/pycode/parser.py'] steps=10 retried=None
+         oh-5           read=['sphinx/ext/autodoc/_documenters.py', 'sphinx/pycode/__init__.py', 'sphinx/pycode/parser.py'] steps=9 retried=None
+   -23  How should the mechanism that resolves parameter type annotations in docstrings be refactored to remove duplicate parsin
+         oh-1           read=['sphinx/domains/python/_annotations.py', 'sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py', 'sphinx/util/docstrings.py'] steps=10 retried=None
+         oh-5           read=['sphinx/domains/python/_annotations.py', 'sphinx/domains/python/_object.py', 'sphinx/util/docfields.py'] steps=10 retried=None
+   -19  Why does the standard domain method that resolves cross-references across multiple object types apply case-lowering sele
+         oh-1           read=['sphinx/domains/std.py', 'sphinx/domains/std/__init__.py'] steps=5 retried=None
+         oh-5           read=['sphinx/domains/std.py', 'sphinx/domains/std/__init__.py'] steps=10 retried=None
+   +40  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-5           read=['sphinx/domains/python/__init__.py', 'sphinx/roles.py'] steps=10 retried=None
+   +24  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-5           read=[] steps=4 retried=None
+   +20  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-5           read=['CHANGES.rst', 'sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-0.9 95%CI=[-4.3,+2.5] median=-0.5 win/tie/loss=19/5/24 sign-test p=0.542 | n for 80% power at this Δ ≈ 1525
+   by category: what: +2.7 [-0.5,+6.2] (n=14)  how: -2.2 [-7.4,+3.4] (n=13)  why: +1.0 [-5.5,+9.0] (n=12)  where: -6.9 [-18.4,+2.0] (n=9)
+   paired efficiency (b−a): input_tokens: +5961 [+1268,+11272] (1.10x)  peak_input_tokens: +605 [+99,+1140] (1.05x)  output_tokens: +92 [+2,+183] (1.08x)  tool_calls: +1 [-0,+1] (1.07x)  wall_s: +1 [-0,+2] (1.12x)  answer_chars: +34 [-96,+163] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 7/27/14; hit cap: {'oh-1': 11, 'oh-6': 14}
+   -45  Where does the C/C++ declaration parser handle and recover from parsing failures when distinguishing cast expressions fr
+         oh-1           read=['sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+         oh-6           read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_parser.py'] steps=7 retried=None
+   -22  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-6           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+   -18  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-6           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/util/nodes.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+   +37  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-6           read=['CHANGES.rst', 'sphinx/domains/python.py', 'sphinx/domains/python/__init__.py', 'sphinx/roles.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+   +20  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-6           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+   +17  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-6           read=['sphinx/domains/cpp/_ast.py'] steps=8 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-0.7 95%CI=[-2.8,+1.2] median=+0.0 win/tie/loss=19/10/19 sign-test p=1.000 | n for 80% power at this Δ ≈ 748
+   by category: what: +0.1 [-4.4,+4.4] (n=14)  how: -2.3 [-7.8,+2.2] (n=13)  why: +0.9 [-1.9,+3.5] (n=12)  where: -1.9 [-3.7,-0.6] (n=9)
+   paired efficiency (b−a): input_tokens: +7239 [+1996,+12900] (1.12x)  peak_input_tokens: +678 [+16,+1422] (1.06x)  output_tokens: +73 [-29,+175] (1.06x)  tool_calls: +0 [-0,+1] (1.04x)  wall_s: +1 [-1,+2] (1.06x)  answer_chars: +17 [-112,+139] (1.02x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 7/26/15; hit cap: {'oh-1': 11, 'oh-7': 16}
+   -28  How should the mechanism that resolves parameter type annotations in docstrings be refactored to remove duplicate parsin
+         oh-1           read=['sphinx/domains/python/_annotations.py', 'sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py', 'sphinx/util/docstrings.py'] steps=10 retried=None
+         oh-7           read=['sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py'] steps=10 retried=None
+   -14  What is the propagation mechanism of the return value of the boolean method that determines spacing requirements after t
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+         oh-7           read=['sphinx/domains/c/_ast.py'] steps=6 retried=None
+   -13  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-7           read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   +13  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-7           read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+   +11  What is the interaction mechanism between the conditional logic that checks the object type attribute in the index text 
+         oh-1           read=['sphinx/domains/python.py', 'sphinx/domains/python/__init__.py', 'sphinx/domains/python/_object.py'] steps=6 retried=None
+         oh-7           read=['sphinx/domains/python.py', 'sphinx/domains/python/__init__.py', 'sphinx/domains/python/_object.py'] steps=10 retried=None
+   +10  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-7           read=['tests/test_extensions/test_ext_autodoc.py'] steps=4 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-1.2 95%CI=[-3.9,+1.3] median=+0.0 win/tie/loss=17/9/22 sign-test p=0.522 | n for 80% power at this Δ ≈ 423
+   by category: what: +0.6 [-4.8,+6.2] (n=14)  how: +2.2 [-0.2,+5.1] (n=13)  why: -3.2 [-6.9,+0.3] (n=12)  where: -6.6 [-14.3,-1.6] (n=9)
+   paired efficiency (b−a): input_tokens: +3649 [-2875,+10623] (1.06x)  peak_input_tokens: +461 [-154,+1172] (1.04x)  output_tokens: +49 [-49,+151] (1.04x)  tool_calls: +0 [-1,+1] (1.03x)  wall_s: +2 [+1,+4] (1.22x)  answer_chars: +68 [-52,+178] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/22/12; hit cap: {'oh-1': 11, 'oh-8': 12}
+   -35  Where does the C/C++ declaration parser handle and recover from parsing failures when distinguishing cast expressions fr
+         oh-1           read=['sphinx/domains/cpp/_parser.py'] steps=5 retried=None
+         oh-8           read=['sphinx/domains/cpp/_parser.py'] steps=6 retried=None
+   -17  Why does the standard domain method that resolves cross-references across multiple object types apply case-lowering sele
+         oh-1           read=['sphinx/domains/std.py', 'sphinx/domains/std/__init__.py'] steps=5 retried=None
+         oh-8           read=['sphinx/domains/std/__init__.py'] steps=3 retried=None
+   -16  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-8           read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/roots/test-ext-autosummary/index.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   +19  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-8           read=['sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=7 retried=None
+   +17  What is the dependency of the hash implementation in the C++ postfix member-of-pointer operator AST node class on the ne
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=5 retried=None
+         oh-8           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py'] steps=9 retried=None
+   +15  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-8           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+
+== oh-9 - oh-1: n=48 Δ=+0.8 95%CI=[-1.4,+3.2] median=+0.0 win/tie/loss=18/8/22 sign-test p=0.636 | n for 80% power at this Δ ≈ 798
+   by category: what: +2.8 [-1.6,+7.9] (n=14)  how: +2.9 [-0.9,+8.3] (n=13)  why: -2.6 [-5.5,+1.2] (n=12)  where: -0.8 [-5.3,+3.3] (n=9)
+   paired efficiency (b−a): input_tokens: +4611 [+21,+9400] (1.07x)  peak_input_tokens: +441 [+8,+880] (1.04x)  output_tokens: +71 [-23,+170] (1.06x)  tool_calls: +0 [-0,+1] (1.04x)  wall_s: +2 [+1,+4] (1.23x)  answer_chars: +30 [-89,+150] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/25/13; hit cap: {'oh-1': 11, 'oh-9': 15}
+   -15  Where does invoking the line termination method before the parent class footnote visitor affect the manual page translat
+         oh-1           read=['manpage.py', 'sphinx/util/docutils.py', 'sphinx/writers/manpage.py'] steps=9 retried=None
+         oh-9           read=['sphinx/writers/manpage.py', 'tests/test_build_manpage.py', 'tests/test_builders/test_build_manpage.py'] steps=10 retried=None
+   -10  What is the semantic significance of the processing order where the declarator following parentheses is processed before
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=9 retried=None
+         oh-9           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+   -9  Why would removing the inherited greeting method from the enum mixin class affect the method resolution order for classe
+         oh-1           read=['sphinx/ext/autodoc/_documenters.py', 'sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=10 retried=None
+         oh-9           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=7 retried=None
+   +31  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-9           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py'] steps=10 retried=None
+   +24  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-9           read=['tests/roots/test-ext-autodoc/circular_import/__init__.py', 'tests/roots/test-ext-autodoc/circular_import/a.py', 'tests/roots/test-ext-autodoc/circular_import/b.py', 'tests/roots/test-ext-autodoc/circular_import/c.py'] steps=3 retried=None
+   +16  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-9           read=['docutils.parsers.rst', 'sphinx/directives/patches.py'] steps=10 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+2.5 95%CI=[-1.7,+6.3] median=+5.5 win/tie/loss=34/0/14 sign-test p=0.006 | n for 80% power at this Δ ≈ 245
+   by category: what: +3.6 [-6.8,+12.4] (n=14)  how: +7.1 [+1.3,+13.4] (n=13)  why: +0.7 [-6.2,+6.3] (n=12)  where: -3.3 [-11.7,+2.4] (n=9)
+   paired efficiency (b−a): input_tokens: +768014 [+701751,+830477] (13.27x)  peak_input_tokens: +70792 [+70094,+71483] (7.20x)  output_tokens: +1415 [+1271,+1546] (2.24x)  tool_calls: -1 [-2,-0] (0.87x)  wall_s: +16 [+14,+17] (2.48x)  answer_chars: +396 [+222,+572] (1.53x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_search': 36, 'aoci_get_entries': 9, 'terminal': 2, '(none)': 1}}
+   steps (b−a): fewer/same/more = 12/16/20; hit cap: {'oh-1': 11, 'oh-aoci-1': 14}
+   -38  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-1      read=['doc/development/tutorials/examples/recipe.py'] steps=2 retried=None
+   -32  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-aoci-1      read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   -31  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-aoci-1      read=['sphinx/ext/autodoc/_documenters.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=10 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-1      read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+   +23  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-1      read=['tests/roots/test-ext-autodoc/circular_import/c.py'] steps=2 retried=None
+   +21  What is the interaction mechanism between the conditional logic that checks the object type attribute in the index text 
+         oh-1           read=['sphinx/domains/python.py', 'sphinx/domains/python/__init__.py', 'sphinx/domains/python/_object.py'] steps=6 retried=None
+         oh-aoci-1      read=['sphinx/config.py', 'sphinx/domains/python/__init__.py', 'sphinx/domains/python/_object.py', 'sphinx/locale/__init__.py', 'sphinx/transforms/i18n.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+4.6 95%CI=[+1.6,+7.5] median=+4.5 win/tie/loss=35/5/8 sign-test p=0.000 | n for 80% power at this Δ ≈ 41
+   by category: what: +4.7 [-4.1,+11.8] (n=14)  how: +7.2 [+3.2,+12.8] (n=13)  why: +3.7 [-1.8,+8.0] (n=12)  where: +2.1 [-1.3,+5.8] (n=9)
+   paired efficiency (b−a): input_tokens: +739141 [+670082,+806327] (12.81x)  peak_input_tokens: +70330 [+69503,+71115] (7.15x)  output_tokens: +1337 [+1176,+1477] (2.17x)  tool_calls: -2 [-3,-0] (0.81x)  wall_s: +16 [+14,+17] (2.49x)  answer_chars: +366 [+194,+535] (1.49x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_search': 32, 'aoci_get_entries': 11, 'terminal': 3, '(none)': 2}}
+   steps (b−a): fewer/same/more = 14/17/17; hit cap: {'oh-1': 11, 'oh-aoci-10': 11}
+   -38  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-10     read=['doc/development/tutorials/examples/recipe.py'] steps=2 retried=None
+   -21  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-aoci-10     read=['sphinx/builders/latex/nodes.py'] steps=10 retried=None
+   -7  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-10     read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+   +28  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-10     read=[] steps=1 retried=None
+   +19  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-aoci-10     read=['sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=7 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=+2.5 95%CI=[-1.9,+6.9] median=+3.0 win/tie/loss=28/5/15 sign-test p=0.066 | n for 80% power at this Δ ≈ 293
+   by category: what: +7.9 [-1.4,+16.2] (n=14)  how: +1.2 [-5.5,+6.9] (n=13)  why: +3.3 [-6.4,+13.6] (n=12)  where: -4.8 [-13.6,+1.8] (n=9)
+   paired efficiency (b−a): input_tokens: +713102 [+642898,+784538] (12.39x)  peak_input_tokens: +70524 [+69574,+71422] (7.17x)  output_tokens: +1323 [+1160,+1467] (2.16x)  tool_calls: -2 [-3,-1] (0.77x)  wall_s: +14 [+12,+16] (2.37x)  answer_chars: +306 [+152,+465] (1.41x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'aoci_search': 32, 'aoci_get_entries': 11, '(none)': 3, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 17/15/16; hit cap: {'oh-1': 11, 'oh-aoci-2': 11}
+   -34  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-2      read=['doc/development/tutorials/examples/recipe.py'] steps=2 retried=None
+   -34  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-aoci-2      read=['sphinx/ext/autodoc/_documenters.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=10 retried=None
+   -34  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-aoci-2      read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=6 retried=None
+   +47  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-aoci-2      read=['sphinx/domains/python/__init__.py', 'sphinx/roles.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+   +33  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-2      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +31  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+4.9 95%CI=[+1.8,+7.8] median=+4.5 win/tie/loss=39/1/8 sign-test p=0.000 | n for 80% power at this Δ ≈ 40
+   by category: what: +7.4 [-0.9,+14.7] (n=14)  how: +4.7 [-1.5,+11.2] (n=13)  why: +2.2 [-2.6,+6.2] (n=12)  where: +4.8 [+2.4,+7.2] (n=9)
+   paired efficiency (b−a): input_tokens: +770923 [+704651,+836085] (13.31x)  peak_input_tokens: +70832 [+70107,+71596] (7.20x)  output_tokens: +1417 [+1287,+1545] (2.24x)  tool_calls: -1 [-2,-0] (0.88x)  wall_s: +15 [+13,+17] (2.44x)  answer_chars: +419 [+250,+598] (1.56x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_search': 36, 'aoci_get_entries': 11, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 14/16/18; hit cap: {'oh-1': 11, 'oh-aoci-3': 14}
+   -34  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-aoci-3      read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py'] steps=10 retried=None
+   -17  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-aoci-3      read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=9 retried=None
+   -15  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-aoci-3      read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   +33  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-3      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +33  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-3      read=['sphinx/domains/c/_ast.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py'] steps=10 retried=None
+   +27  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-3      read=['tests/roots/test-ext-autodoc/circular_import/a.py'] steps=2 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+3.7 95%CI=[-0.2,+7.5] median=+4.0 win/tie/loss=32/3/13 sign-test p=0.007 | n for 80% power at this Δ ≈ 103
+   by category: what: +5.6 [-5.3,+15.6] (n=14)  how: +4.5 [-2.5,+11.6] (n=13)  why: +2.1 [-2.8,+6.2] (n=12)  where: +1.9 [-1.3,+5.2] (n=9)
+   paired efficiency (b−a): input_tokens: +728658 [+661496,+794926] (12.64x)  peak_input_tokens: +70331 [+69524,+71116] (7.15x)  output_tokens: +1317 [+1167,+1449] (2.15x)  tool_calls: -1 [-3,-0] (0.84x)  wall_s: +15 [+14,+17] (2.45x)  answer_chars: +319 [+154,+484] (1.42x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_search': 36, 'aoci_get_entries': 9, '(none)': 1, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 17/15/16; hit cap: {'oh-1': 11, 'oh-aoci-4': 12}
+   -40  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-4      read=['doc/development/tutorials/examples/recipe.py', 'sphinx/directives/__init__.py'] steps=3 retried=None
+   -21  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-aoci-4      read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   -20  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-aoci-4      read=['tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=3 retried=None
+   +39  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-4      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-4      read=['sphinx/domains/cpp/_ast.py'] steps=10 retried=None
+   +30  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-4      read=[] steps=2 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+3.0 95%CI=[-0.7,+6.5] median=+2.5 win/tie/loss=30/3/15 sign-test p=0.036 | n for 80% power at this Δ ≈ 151
+   by category: what: +7.1 [-2.9,+16.0] (n=14)  how: +1.6 [-3.5,+7.4] (n=13)  why: +1.2 [-6.5,+6.8] (n=12)  where: +1.0 [-2.7,+5.2] (n=9)
+   paired efficiency (b−a): input_tokens: +762694 [+692945,+829343] (13.18x)  peak_input_tokens: +70424 [+69725,+71102] (7.16x)  output_tokens: +1386 [+1249,+1522] (2.21x)  tool_calls: -1 [-2,-0] (0.86x)  wall_s: +16 [+15,+17] (2.57x)  answer_chars: +422 [+235,+617] (1.56x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_search': 34, 'aoci_get_entries': 11, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 13/18/17; hit cap: {'oh-1': 11, 'oh-aoci-5': 15}
+   -42  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-aoci-5      read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   -34  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-aoci-5      read=['sphinx/builders/latex/nodes.py'] steps=10 retried=None
+   -16  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-aoci-5      read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   +33  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-5      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +30  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-5      read=[] steps=2 retried=None
+   +29  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-5      read=['sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py'] steps=10 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+5.2 95%CI=[+1.4,+8.8] median=+5.5 win/tie/loss=36/1/11 sign-test p=0.000 | n for 80% power at this Δ ≈ 50
+   by category: what: +4.6 [-6.1,+14.6] (n=14)  how: +8.9 [+4.1,+14.7] (n=13)  why: +2.2 [-3.0,+6.6] (n=12)  where: +4.7 [+0.6,+8.7] (n=9)
+   paired efficiency (b−a): input_tokens: +741942 [+665755,+815757] (12.85x)  peak_input_tokens: +70344 [+69447,+71196] (7.16x)  output_tokens: +1377 [+1247,+1506] (2.20x)  tool_calls: -2 [-3,-1] (0.78x)  wall_s: +16 [+15,+17] (2.52x)  answer_chars: +584 [+395,+779] (1.78x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_search': 33, 'aoci_get_entries': 9, '(none)': 3, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 14/14/20; hit cap: {'oh-1': 11, 'oh-aoci-6': 13}
+   -38  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-6      read=['doc/development/tutorials/examples/recipe.py', 'sphinx/directives/__init__.py'] steps=3 retried=None
+   -24  What is the integration mechanism between the macro declaration node class and the abstract syntax tree hierarchy that m
+         oh-1           read=['sphinx/domains/c/_ast.py', 'sphinx/domains/c/_parser.py', 'sphinx/domains/c/_symbol.py'] steps=10 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -20  Why does the Python domain's object resolution method reconcile the tension between fully-qualified and unqualified refe
+         oh-1           read=['sphinx/domains/python/__init__.py'] steps=4 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   +37  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-6      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-6      read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/util/cfamily.py'] steps=10 retried=None
+   +23  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-6      read=[] steps=1 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+3.2 95%CI=[-0.7,+6.8] median=+4.0 win/tie/loss=34/3/11 sign-test p=0.001 | n for 80% power at this Δ ≈ 135
+   by category: what: +2.9 [-7.6,+12.6] (n=14)  how: +7.7 [+3.0,+13.3] (n=13)  why: +1.9 [-4.2,+6.4] (n=12)  where: -1.0 [-5.4,+3.0] (n=9)
+   paired efficiency (b−a): input_tokens: +730241 [+664125,+797706] (12.66x)  peak_input_tokens: +69803 [+69065,+70548] (7.11x)  output_tokens: +1331 [+1183,+1464] (2.16x)  tool_calls: -2 [-3,-1] (0.78x)  wall_s: +16 [+15,+18] (2.54x)  answer_chars: +391 [+234,+545] (1.52x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'aoci_search': 32, 'aoci_get_entries': 12, '(none)': 1, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 18/10/20; hit cap: {'oh-1': 11, 'oh-aoci-7': 12}
+   -34  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-7      read=['doc/development/tutorials/examples/recipe.py'] steps=2 retried=None
+   -32  What architectural separation does the initialization method in the builder class that generates Texinfo output establis
+         oh-1           read=['sphinx/builders/texinfo.py'] steps=2 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -27  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-aoci-7      read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=9 retried=None
+   +33  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-7      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +30  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-7      read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py'] steps=10 retried=None
+   +26  How should the mechanism that resolves parameter type annotations in docstrings be refactored to remove duplicate parsin
+         oh-1           read=['sphinx/domains/python/_annotations.py', 'sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py', 'sphinx/util/docstrings.py'] steps=10 retried=None
+         oh-aoci-7      read=['sphinx/domains/python/_object.py', 'sphinx/ext/napoleon/__init__.py', 'sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py', 'tests/roots/test-ext-napoleon-paramtype/pkg/foo.py', 'tests/test_extensions/test_ext_napoleon_docstring.py'] steps=10 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+3.5 95%CI=[-0.4,+7.1] median=+4.0 win/tie/loss=33/3/12 sign-test p=0.002 | n for 80% power at this Δ ≈ 114
+   by category: what: +4.6 [-5.4,+13.0] (n=14)  how: +6.2 [+1.3,+11.8] (n=13)  why: -0.6 [-9.1,+6.3] (n=12)  where: +3.4 [-0.8,+8.0] (n=9)
+   paired efficiency (b−a): input_tokens: +697799 [+629263,+766970] (12.15x)  peak_input_tokens: +70047 [+69154,+70866] (7.13x)  output_tokens: +1280 [+1115,+1425] (2.12x)  tool_calls: -2 [-3,-1] (0.77x)  wall_s: +16 [+14,+18] (2.55x)  answer_chars: +340 [+180,+497] (1.45x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_search': 34, 'aoci_get_entries': 7, '(none)': 4, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 20/11/17; hit cap: {'oh-1': 11, 'oh-aoci-8': 10}
+   -38  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-8      read=['doc/development/tutorials/examples/recipe.py'] steps=2 retried=None
+   -32  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-aoci-8      read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py'] steps=5 retried=None
+   -26  What architectural separation does the initialization method in the builder class that generates Texinfo output establis
+         oh-1           read=['sphinx/builders/texinfo.py'] steps=2 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +33  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-8      read=['sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py'] steps=10 retried=None
+   +27  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-8      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +27  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-8      read=[] steps=1 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+2.8 95%CI=[-1.9,+7.1] median=+5.5 win/tie/loss=34/3/11 sign-test p=0.001 | n for 80% power at this Δ ≈ 270
+   by category: what: +7.9 [-1.6,+16.2] (n=14)  how: +5.0 [-0.6,+11.5] (n=13)  why: -1.1 [-10.9,+6.7] (n=12)  where: -3.4 [-17.3,+7.3] (n=9)
+   paired efficiency (b−a): input_tokens: +717989 [+643334,+791684] (12.47x)  peak_input_tokens: +69852 [+68931,+70755] (7.11x)  output_tokens: +1281 [+1133,+1418] (2.12x)  tool_calls: -2 [-3,-1] (0.75x)  wall_s: +17 [+15,+18] (2.59x)  answer_chars: +369 [+187,+553] (1.49x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'aoci_search': 29, 'aoci_get_entries': 11, '(none)': 4, 'terminal': 4}}
+   steps (b−a): fewer/same/more = 19/14/15; hit cap: {'oh-1': 11, 'oh-aoci-9': 11}
+   -41  Where are the conditional branches that determine whether the pointer suffix identifier generation method in the parenth
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py'] steps=4 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -38  What is the contract established by the return value of the required method in the tutorial example directive class betw
+         oh-1           read=['doc/development/tutorials/examples/helloworld.py', 'doc/development/tutorials/extending_syntax.rst'] steps=3 retried=None
+         oh-aoci-9      read=['doc/development/tutorials/examples/recipe.py'] steps=2 retried=None
+   -38  Why does the Python domain's object resolution method reconcile the tension between fully-qualified and unqualified refe
+         oh-1           read=['sphinx/domains/python/__init__.py'] steps=4 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +37  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-aoci-9      read=['sphinx/directives/patches.py'] steps=2 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-aoci-9      read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'sphinx/util/cfamily.py', 'tests/test_domains/test_domain_cpp.py'] steps=10 retried=None
+   +27  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-aoci-9      read=['tests/roots/test-ext-autodoc/circular_import/c.py'] steps=2 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+2.8 95%CI=[+0.0,+5.5] median=+2.0 win/tie/loss=29/7/12 sign-test p=0.012 | n for 80% power at this Δ ≈ 97
+   by category: what: +2.0 [-5.3,+9.4] (n=14)  how: +4.0 [+0.3,+7.9] (n=13)  why: +3.7 [-0.4,+9.0] (n=12)  where: +0.9 [-1.9,+4.1] (n=9)
+   paired efficiency (b−a): input_tokens: +17771 [+5174,+31599] (1.28x)  peak_input_tokens: +6194 [+5017,+7498] (1.54x)  output_tokens: -219 [-349,-99] (0.81x)  tool_calls: -3 [-4,-2] (0.69x)  wall_s: -1 [-2,+0] (0.91x)  answer_chars: +151 [+18,+272] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 31/12/5; hit cap: {'oh-1': 11, 'oh-cg-1': 6}
+   -24  What is the propagation mechanism of the return value of the boolean method that determines spacing requirements after t
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+         oh-cg-1        read=[] steps=2 retried=None
+   -23  What is the semantic significance of the processing order where the declarator following parentheses is processed before
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=9 retried=None
+         oh-cg-1        read=['sphinx/domains/cpp/_ast.py'] steps=9 retried=None
+   -10  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-cg-1        read=['sphinx/domains/std/__init__.py', 'sphinx/transforms/i18n.py'] steps=4 retried=None
+   +34  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-cg-1        read=[] steps=2 retried=None
+   +28  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-1        read=['sphinx/domains/python/__init__.py'] steps=3 retried=None
+   +20  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-1        read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py'] steps=3 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+1.3 95%CI=[-2.0,+4.8] median=-1.5 win/tie/loss=20/3/25 sign-test p=0.551 | n for 80% power at this Δ ≈ 707
+   by category: what: +1.7 [-6.1,+10.2] (n=14)  how: +1.2 [-3.8,+6.9] (n=13)  why: +3.5 [-2.3,+11.3] (n=12)  where: -2.2 [-5.2,+0.7] (n=9)
+   paired efficiency (b−a): input_tokens: +13850 [+1901,+25811] (1.22x)  peak_input_tokens: +5870 [+4865,+6975] (1.51x)  output_tokens: -265 [-400,-130] (0.77x)  tool_calls: -3 [-4,-2] (0.67x)  wall_s: -1 [-4,+1] (0.87x)  answer_chars: +69 [-58,+202] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 31/11/6; hit cap: {'oh-1': 11, 'oh-cg-10': 7}
+   -22  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-cg-10       read=['sphinx/domains/std/__init__.py', 'sphinx/transforms/i18n.py'] steps=4 retried=None
+   -16  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-cg-10       read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   -14  What is the propagation mechanism of the return value of the boolean method that determines spacing requirements after t
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+         oh-cg-10       read=[] steps=2 retried=None
+   +40  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-10       read=['sphinx/domains/__init__.py', 'sphinx/domains/python/__init__.py', 'sphinx/roles.py'] steps=8 retried=None
+   +33  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-cg-10       read=['docutils.parsers.rst', 'sphinx/environment/__init__.py', 'tests/test_directives/test_directive_patch.py'] steps=7 retried=None
+   +29  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-10       read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=3 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+2.8 95%CI=[-0.1,+6.0] median=+1.5 win/tie/loss=28/6/14 sign-test p=0.044 | n for 80% power at this Δ ≈ 116
+   by category: what: +3.9 [-2.2,+10.1] (n=14)  how: +3.6 [-1.8,+10.2] (n=13)  why: +3.1 [-2.0,+10.3] (n=12)  where: -0.6 [-4.9,+3.1] (n=9)
+   paired efficiency (b−a): input_tokens: +23577 [+10010,+37983] (1.38x)  peak_input_tokens: +6409 [+5034,+7891] (1.56x)  output_tokens: -132 [-279,+12] (0.88x)  tool_calls: -2 [-3,-1] (0.77x)  wall_s: -0 [-2,+1] (0.97x)  answer_chars: +154 [+6,+299] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 29/13/6; hit cap: {'oh-1': 11, 'oh-cg-2': 8}
+   -20  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-cg-2        read=['sphinx/domains/std/__init__.py', 'sphinx/transforms/i18n.py'] steps=4 retried=None
+   -17  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-2        read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=10 retried=None
+   -13  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-cg-2        read=['sphinx/ext/autodoc/importer.py', 'sphinx/util/inspect.py'] steps=3 retried=None
+   +38  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-2        read=['sphinx/domains/python/__init__.py'] steps=3 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-2        read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=6 retried=None
+   +26  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-cg-2        read=[] steps=3 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+2.7 95%CI=[-0.1,+5.7] median=+2.0 win/tie/loss=26/9/13 sign-test p=0.053 | n for 80% power at this Δ ≈ 113
+   by category: what: +5.0 [-2.1,+12.6] (n=14)  how: +2.2 [-3.3,+9.0] (n=13)  why: +2.6 [-0.8,+6.7] (n=12)  where: +0.1 [-2.6,+2.7] (n=9)
+   paired efficiency (b−a): input_tokens: +17186 [+6025,+29132] (1.27x)  peak_input_tokens: +6580 [+5468,+7787] (1.58x)  output_tokens: -195 [-328,-60] (0.83x)  tool_calls: -3 [-3,-2] (0.70x)  wall_s: -2 [-3,-0] (0.84x)  answer_chars: +100 [-27,+231] (1.13x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 32/12/4; hit cap: {'oh-1': 11, 'oh-cg-3': 6}
+   -23  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-cg-3        read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   -14  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-3        read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=8 retried=None
+   -13  How do the signature description methods on the inner and next declarator attributes handle recursive traversal of neste
+         oh-1           read=['sphinx/domains/c/_ast.py', 'sphinx/util/cfamily.py'] steps=5 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   +35  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-3        read=['sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=7 retried=None
+   +33  What is the dependency mechanism in the directive class that handles CSV table rendering in the patches module's executi
+         oh-1           read=['docutils.parsers.rst', 'sphinx/directives/patches.py', 'sphinx/environment/collectors/dependencies.py', 'tests/test_directives/test_directive_patch.py'] steps=6 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   +27  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-cg-3        read=['tests/roots/test-ext-autodoc/circular_import/__init__.py', 'tests/roots/test-ext-autodoc/circular_import/a.py', 'tests/roots/test-ext-autodoc/circular_import/b.py', 'tests/roots/test-ext-autodoc/circular_import/c.py'] steps=4 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+1.6 95%CI=[-1.4,+4.8] median=+1.0 win/tie/loss=25/4/19 sign-test p=0.451 | n for 80% power at this Δ ≈ 381
+   by category: what: +0.2 [-5.4,+5.8] (n=14)  how: +2.1 [-2.8,+8.9] (n=13)  why: +4.3 [-2.2,+12.5] (n=12)  where: -0.7 [-4.7,+3.0] (n=9)
+   paired efficiency (b−a): input_tokens: +22384 [+8218,+38087] (1.36x)  peak_input_tokens: +6902 [+5616,+8561] (1.60x)  output_tokens: -179 [-301,-64] (0.84x)  tool_calls: -2 [-3,-1] (0.73x)  wall_s: -0 [-2,+1] (0.98x)  answer_chars: +176 [+29,+321] (1.23x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 31/9/8; hit cap: {'oh-1': 11, 'oh-cg-4': 8}
+   -20  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-cg-4        read=['sphinx/domains/std/__init__.py', 'sphinx/transforms/i18n.py'] steps=4 retried=None
+   -17  What is the transformation mechanism in the method that converts the binary operator expression class in the C++ domain 
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py'] steps=3 retried=None
+         oh-cg-4        read=['sphinx/domains/cpp/_ast.py'] steps=3 retried=None
+   -12  How does the formatter-returning method in the highlighting bridge class select which formatter class to instantiate bas
+         oh-1           read=['sphinx/highlighting.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   +40  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-4        read=[] steps=3 retried=None
+   +36  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-4        read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=4 retried=None
+   +19  Why does the custom LaTeX node class that wraps literal blocks with captions and inherits from the docutils container no
+         oh-1           read=['sphinx/builders/latex/nodes.py', 'sphinx/builders/latex/transforms.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+         oh-cg-4        read=['sphinx/util/docutils.py', 'sphinx/writers/latex.py'] steps=10 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+0.1 95%CI=[-3.3,+3.4] median=+0.0 win/tie/loss=22/3/23 sign-test p=1.000 | n for 80% power at this Δ ≈ 161245
+   by category: what: +4.0 [-0.7,+9.4] (n=14)  how: -4.2 [-12.6,+3.8] (n=13)  why: +2.9 [-1.9,+8.8] (n=12)  where: -3.7 [-10.3,+0.6] (n=9)
+   paired efficiency (b−a): input_tokens: +20592 [+4694,+37944] (1.33x)  peak_input_tokens: +6067 [+4787,+7470] (1.53x)  output_tokens: -256 [-403,-115] (0.78x)  tool_calls: -3 [-4,-2] (0.67x)  wall_s: -0 [-3,+2] (0.95x)  answer_chars: +90 [-38,+214] (1.12x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 30/10/8; hit cap: {'oh-1': 11, 'oh-cg-5': 8}
+   -34  How should the mechanism that resolves parameter type annotations in docstrings be refactored to remove duplicate parsin
+         oh-1           read=['sphinx/domains/python/_annotations.py', 'sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py', 'sphinx/util/docstrings.py'] steps=10 retried=None
+         oh-cg-5        read=['sphinx/ext/autodoc/typehints.py', 'tests/test_extensions/test_ext_autodoc_configs.py'] steps=10 retried=None
+   -32  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-5        read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=6 retried=None
+   -27  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-cg-5        read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py'] steps=3 retried=None
+   +28  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-cg-5        read=[] steps=3 retried=None
+   +28  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-5        read=['sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py', 'tests/test_domains/test_domain_cpp.py'] steps=7 retried=None
+   +27  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-5        read=[] steps=2 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+0.5 95%CI=[-3.3,+4.2] median=+0.0 win/tie/loss=22/5/21 sign-test p=1.000 | n for 80% power at this Δ ≈ 6587
+   by category: what: -1.1 [-9.7,+7.0] (n=14)  how: +0.9 [-4.8,+8.2] (n=13)  why: +3.8 [-2.6,+11.9] (n=12)  where: -2.2 [-9.3,+3.7] (n=9)
+   paired efficiency (b−a): input_tokens: +18430 [+7072,+30521] (1.29x)  peak_input_tokens: +6230 [+5075,+7449] (1.55x)  output_tokens: -184 [-328,-46] (0.84x)  tool_calls: -2 [-4,-1] (0.71x)  wall_s: -1 [-2,+1] (0.95x)  answer_chars: +117 [-28,+258] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 31/8/9; hit cap: {'oh-1': 11, 'oh-cg-6': 7}
+   -40  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-cg-6        read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_ext_autosummary.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+   -24  Where does the MRO in the enum class inheriting from both a non-enum mixin and the standard enum base affect which data 
+         oh-1           read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=6 retried=None
+         oh-cg-6        read=['sphinx/ext/autodoc/importer.py', 'tests/roots/test-ext-autodoc/target/enums.py', 'tests/test_extensions/test_ext_autodoc.py'] steps=5 retried=None
+   -19  What is the semantic significance of the processing order where the declarator following parentheses is processed before
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=9 retried=None
+         oh-cg-6        read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py'] steps=10 retried=None
+   +38  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-6        read=['sphinx/domains/python/__init__.py'] steps=2 retried=None
+   +36  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-6        read=['sphinx/domains/cpp/_ast.py'] steps=3 retried=None
+   +26  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-cg-6        read=[] steps=3 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+0.6 95%CI=[-2.0,+3.1] median=+0.0 win/tie/loss=23/7/18 sign-test p=0.533 | n for 80% power at this Δ ≈ 2006
+   by category: what: +0.4 [-5.6,+6.3] (n=14)  how: +2.1 [-3.4,+8.2] (n=13)  why: -1.0 [-3.7,+1.7] (n=12)  where: +0.8 [-2.4,+4.7] (n=9)
+   paired efficiency (b−a): input_tokens: +21035 [+7665,+35902] (1.34x)  peak_input_tokens: +6374 [+4983,+7922] (1.56x)  output_tokens: -168 [-313,-12] (0.85x)  tool_calls: -2 [-3,-1] (0.75x)  wall_s: -1 [-3,+1] (0.95x)  answer_chars: +75 [-58,+201] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 30/11/7; hit cap: {'oh-1': 11, 'oh-cg-7': 8}
+   -23  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-cg-7        read=['sphinx/domains/std/__init__.py', 'sphinx/transforms/i18n.py'] steps=5 retried=None
+   -18  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-7        read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py'] steps=7 retried=None
+   -14  What is the propagation mechanism of the return value of the boolean method that determines spacing requirements after t
+         oh-1           read=['sphinx/domains/cpp/_ast.py'] steps=7 retried=None
+         oh-cg-7        read=[] steps=2 retried=None
+   +29  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-7        read=['sphinx/domains/cpp/_ast.py'] steps=3 retried=None
+   +21  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-cg-7        read=[] steps=3 retried=None
+   +17  What is the algorithmic approach used by the test function that validates parsing of type delimiters in Napoleon-style d
+         oh-1           read=['sphinx/ext/napoleon/docstring.py', 'tests/test_extensions/test_ext_napoleon_docstring.py'] steps=10 retried=None
+         oh-cg-7        read=['tests/test_extensions/test_ext_napoleon.py', 'tests/test_extensions/test_ext_napoleon_docstring.py'] steps=10 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+1.0 95%CI=[-2.2,+4.3] median=+0.0 win/tie/loss=22/3/23 sign-test p=1.000 | n for 80% power at this Δ ≈ 1095
+   by category: what: +1.1 [-6.1,+8.3] (n=14)  how: +0.5 [-5.5,+8.2] (n=13)  why: +3.2 [-2.0,+10.3] (n=12)  where: -1.6 [-4.8,+1.8] (n=9)
+   paired efficiency (b−a): input_tokens: +22315 [+10847,+34677] (1.36x)  peak_input_tokens: +6465 [+5571,+7418] (1.57x)  output_tokens: -155 [-287,-18] (0.86x)  tool_calls: -2 [-3,-1] (0.76x)  wall_s: +2 [+0,+3] (1.16x)  answer_chars: +140 [+54,+235] (1.19x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 29/10/9; hit cap: {'oh-1': 11, 'oh-cg-8': 5}
+   -32  What implicit contract does the empty test class with no methods or attributes establish for the automatic documentation
+         oh-1           read=['sphinx/ext/autosummary/__init__.py', 'sphinx/ext/autosummary/templates/autosummary/class.rst', 'tests/test_extensions/test_ext_autosummary.py'] steps=10 retried=None
+         oh-cg-8        read=['sphinx/ext/autosummary/generate.py', 'tests/roots/test-ext-autosummary/autosummary_class_module.py', 'tests/roots/test-ext-autosummary/autosummary_dummy_module.py', 'tests/test_extensions/test_ext_autosummary.py'] steps=7 retried=None
+   -16  What is the semantic significance of the processing order where the declarator following parentheses is processed before
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=9 retried=None
+         oh-cg-8        read=['sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=9 retried=None
+   -14  How do the signature description methods on the inner and next declarator attributes handle recursive traversal of neste
+         oh-1           read=['sphinx/domains/c/_ast.py', 'sphinx/util/cfamily.py'] steps=5 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   +38  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-8        read=['sphinx/domains/python/__init__.py'] steps=4 retried=None
+   +36  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-8        read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=4 retried=None
+   +29  What architectural pattern does the class defined in the third module use to resolve the circular dependency between the
+         oh-1           read=[] steps=5 retried=None
+         oh-cg-8        read=[] steps=3 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+0.5 95%CI=[-2.6,+3.7] median=+0.0 win/tie/loss=23/5/20 sign-test p=0.761 | n for 80% power at this Δ ≈ 4127
+   by category: what: +0.2 [-4.4,+4.9] (n=14)  how: -2.6 [-9.9,+4.3] (n=13)  why: +3.2 [-2.1,+11.0] (n=12)  where: +1.7 [-1.9,+6.8] (n=9)
+   paired efficiency (b−a): input_tokens: +24106 [+11173,+38482] (1.39x)  peak_input_tokens: +7112 [+5870,+8512] (1.62x)  output_tokens: -198 [-318,-80] (0.83x)  tool_calls: -2 [-3,-1] (0.73x)  wall_s: +1 [-1,+3] (1.07x)  answer_chars: +154 [+30,+283] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 29/8/11; hit cap: {'oh-1': 11, 'oh-cg-9': 8}
+   -29  How does the identifier caching dictionary in the EPUB builder's generation method interact with environment pickling to
+         oh-1           read=['sphinx/builders/_epub_base.py', 'sphinx/environment/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-9        read=['sphinx/builders/_epub_base.py'] steps=7 retried=None
+   -24  How should the mechanism that resolves parameter type annotations in docstrings be refactored to remove duplicate parsin
+         oh-1           read=['sphinx/domains/python/_annotations.py', 'sphinx/ext/napoleon/docstring.py', 'sphinx/util/docfields.py', 'sphinx/util/docstrings.py'] steps=10 retried=None
+         oh-cg-9        read=['sphinx/domains/python/_object.py', 'sphinx/ext/autodoc/_documenters.py', 'sphinx/ext/autodoc/typehints.py', 'sphinx/util/docfields.py', 'tests/roots/test-ext-autodoc/target/typehints.py'] steps=10 retried=None
+   -20  What is the integration mechanism between the test function that validates glossary term reference consistency and the t
+         oh-1           read=['sphinx/application.py', 'sphinx/transforms/i18n.py', 'tests/test_intl/test_intl.py'] steps=6 retried=None
+         oh-cg-9        read=['sphinx/domains/std/__init__.py', 'sphinx/transforms/i18n.py'] steps=5 retried=None
+   +41  Why does the Python domain cross-reference handler's link processing method require optimization to reduce redundant str
+         oh-1           read=['CHANGES.rst', 'sphinx/domains/python/__init__.py', 'sphinx/util/nodes.py'] steps=10 retried=None
+         oh-cg-9        read=[] steps=3 retried=None
+   +24  How should the noexcept expression class in the C++ domain's abstract syntax tree be refactored to separate expression w
+         oh-1           read=['sphinx/domains/cpp.py', 'sphinx/domains/cpp/__init__.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=10 retried=None
+         oh-cg-9        read=['sphinx/domains/c/_ast.py', 'sphinx/domains/cpp.py', 'sphinx/domains/cpp/_ast.py', 'sphinx/domains/cpp/_parser.py'] steps=7 retried=None
+   +20  Where would the source code analysis process determine whether a function with no parameters, calls, or control flow sta
+         oh-1           read=['sphinx/ext/autodoc/_documenters.py', 'sphinx/pycode/parser.py'] steps=10 retried=None
+         oh-cg-9        read=['sphinx/ext/autodoc/_documenters.py', 'sphinx/pycode/parser.py'] steps=10 retried=None
+
+wrote runs/sweqa-r5-sphinx-k10/analysis.json

@@ -1,0 +1,127 @@
+=== run.py specs/sweqa-r5p-glm46-django-k1.json at 2026-10-15T19:18:16Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name django --questions benchmarks/swe-qa/django.jsonl --condition oh --out runs/sweqa-r5p-glm46-django-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/django --profile openrouter-glm46-novita --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=openrouter-glm46-novita model=z-ai/glm-4.6 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=14fc2e97036f
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[1/48] 34.5s steps=2 calls=3 files=2+0m map=0/0c in=20268 out=908 status=finished   
+[2/48] 38.0s steps=2 calls=2 files=1+0m map=0/0c in=21388 out=892 status=finished   
+[3/48] 49.7s steps=2 calls=2 files=1+0m map=0/0c in=20972 out=1287 status=finished   
+[4/48] 52.8s steps=2 calls=2 files=1+0m map=0/0c in=21265 out=1307 status=finished   
+[5/48] 64.2s steps=7 calls=9 files=4+0m map=0/0c in=61425 out=1063 status=finished   
+[6/48] 67.0s steps=3 calls=3 files=1+0m map=0/0c in=30321 out=1708 status=finished retried=too_short  
+[7/48] 69.3s steps=7 calls=7 files=3+0m map=0/0c in=69387 out=1180 status=finished   
+[8/48] 72.8s steps=6 calls=6 files=4+0m map=0/0c in=80820 out=1743 status=finished   
+[9/48] 82.0s steps=3 calls=3 files=1+0m map=0/0c in=35088 out=2176 status=finished   
+[10/48] 95.2s steps=10 calls=10 files=4+0m map=0/0c in=95343 out=1786 status=finished forced   
+[11/48] 95.9s steps=10 calls=11 files=3+0m map=0/0c in=89400 out=1933 status=finished forced   
+[12/48] 96.9s steps=10 calls=10 files=4+0m map=0/0c in=97363 out=1645 status=finished forced   
+[13/48] 98.2s steps=10 calls=10 files=3+0m map=0/0c in=92891 out=1730 status=finished forced   
+[14/48] 105.0s steps=10 calls=10 files=4+0m map=0/0c in=90419 out=2019 status=finished forced   
+[15/48] 110.4s steps=10 calls=10 files=5+0m map=0/0c in=185476 out=2199 status=finished forced   
+[16/48] 82.3s steps=8 calls=11 files=3+0m map=0/0c in=69408 out=1519 status=finished   
+[17/48] 58.1s steps=2 calls=2 files=1+0m map=0/0c in=20673 out=1506 status=finished   
+[18/48] 89.9s steps=10 calls=10 files=4+0m map=0/0c in=104553 out=1458 status=finished forced   
+[19/48] 135.0s steps=10 calls=10 files=2+0m map=0/0c in=91181 out=3256 status=finished forced   
+[20/48] 88.6s steps=10 calls=10 files=8+0m map=0/0c in=159496 out=1658 status=finished forced   
+[21/48] 58.9s steps=5 calls=5 files=2+0m map=0/0c in=45121 out=1110 status=finished   
+[22/48] 106.3s steps=10 calls=10 files=1+0m map=0/0c in=137339 out=1891 status=finished forced   
+[23/48] 36.4s steps=4 calls=4 files=1+0m map=0/0c in=32621 out=516 status=finished   
+[24/48] 106.9s steps=10 calls=10 files=2+0m map=0/0c in=140398 out=2001 status=finished forced   
+[25/48] 97.3s steps=9 calls=9 files=4+0m map=0/0c in=94944 out=1796 status=finished   
+[26/48] 111.6s steps=10 calls=10 files=4+0m map=0/0c in=81951 out=2245 status=finished forced   
+[27/48] 74.8s steps=7 calls=7 files=2+0m map=0/0c in=66566 out=1339 status=finished   
+[28/48] 109.1s steps=10 calls=10 files=2+0m map=0/0c in=95926 out=2126 status=finished forced   
+[29/48] 103.5s steps=10 calls=10 files=1+0m map=0/0c in=94715 out=2006 status=finished forced   
+[30/48] 93.5s steps=10 calls=10 files=3+0m map=0/0c in=107587 out=1738 status=finished forced   
+[31/48] 131.0s steps=10 calls=10 files=2+0m map=0/0c in=81566 out=1642 status=finished forced   
+[32/48] 50.9s steps=5 calls=6 files=2+0m map=0/0c in=43018 out=945 status=finished   
+[33/48] 73.9s steps=9 calls=9 files=2+0m map=0/0c in=76416 out=1455 status=finished   
+[34/48] 44.9s steps=5 calls=5 files=2+0m map=0/0c in=41021 out=667 status=finished   
+[35/48] 110.4s steps=10 calls=10 files=1+0m map=0/0c in=116673 out=2451 status=finished forced   
+[36/48] 109.4s steps=10 calls=10 files=4+0m map=0/0c in=159705 out=2008 status=finished forced   
+[37/48] 73.9s steps=6 calls=6 files=2+0m map=0/0c in=75093 out=1698 status=finished   
+[38/48] 160.5s steps=10 calls=10 files=3+0m map=0/0c in=87157 out=3746 status=finished forced   
+[39/48] 119.4s steps=9 calls=9 files=7+0m map=0/0c in=190999 out=2354 status=finished   
+[40/48] 105.4s steps=10 calls=10 files=4+0m map=0/0c in=85485 out=2026 status=finished forced   
+[41/48] 61.2s steps=9 calls=9 files=3+0m map=0/0c in=70430 out=643 status=finished   
+[42/48] 57.7s steps=2 calls=2 files=1+0m map=0/0c in=20961 out=1632 status=finished   
+[43/48] 108.8s steps=10 calls=11 files=3+0m map=0/0c in=105861 out=2124 status=finished forced   
+[44/48] 108.0s steps=10 calls=10 files=4+0m map=0/0c in=98533 out=2331 status=finished forced   
+[45/48] 87.2s steps=10 calls=10 files=3+0m map=0/0c in=81664 out=1536 status=finished forced   
+[46/48] 100.1s steps=8 calls=20 files=7+0m map=0/0c in=82020 out=2038 status=finished   
+[47/48] 86.9s steps=10 calls=10 files=2+0m map=0/0c in=86059 out=1690 status=finished forced   
+[48/48] 826.4s steps=10 calls=10 files=3+0m map=0/0c in=107533 out=27953 status=finished forced retried=empty  
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-glm46-django-k1 --json runs/sweqa-r5p-glm46-django-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-glm46-django-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     0     25     2     2     0    0
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 0 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 25 forced answers · 2 refusal/garble re-runs · 2 degenerate · 0 garbled-final · 0 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-glm46-django-k1/answers-oh.jsonl --out runs/sweqa-r5p-glm46-django-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=47 scored=0 todo=47 answer_models=['z-ai/glm-4.6']
+empty finals scored 0 by rule: 1
+[1/47] total=92 votes=5 
+[2/47] total=91 votes=5 
+[3/47] total=90 votes=5 
+[4/47] total=88 votes=5 
+[5/47] total=84 votes=5 
+[6/47] total=77 votes=5 
+[7/47] total=59 votes=5 
+[8/47] total=78 votes=5 
+[9/47] total=72 votes=5 
+[10/47] total=87 votes=5 
+[11/47] total=86 votes=5 
+[12/47] total=75 votes=5 
+[13/47] total=93 votes=5 
+[14/47] total=86 votes=5 
+[15/47] total=77 votes=5 
+[16/47] total=87 votes=5 
+[17/47] total=89 votes=5 
+[18/47] total=83 votes=5 
+[19/47] total=87 votes=5 
+[20/47] total=95 votes=5 
+[21/47] total=95 votes=5 
+[22/47] total=89 votes=5 
+[23/47] total=86 votes=5 
+[24/47] total=84 votes=5 
+[25/47] total=91 votes=5 
+[26/47] total=90 votes=5 
+[27/47] total=92 votes=5 
+[28/47] total=90 votes=5 
+[29/47] total=90 votes=5 
+[30/47] total=79 votes=5 
+[31/47] total=85 votes=5 
+[32/47] total=90 votes=5 
+[33/47] total=84 votes=5 
+[34/47] total=75 votes=5 
+[35/47] total=87 votes=5 
+[36/47] total=84 votes=5 
+[37/47] total=86 votes=5 
+[38/47] total=95 votes=5 
+[39/47] total=87 votes=5 
+[40/47] total=73 votes=5 
+[41/47] total=74 votes=5 
+[42/47] total=90 votes=5 
+[43/47] total=83 votes=5 
+[44/47] total=32 votes=5 
+[45/47] total=92 votes=5 
+[46/47] total=90 votes=5 
+[47/47] total=83 votes=5 
+run: runs/sweqa-r5p-glm46-django-k1
+manifest: harness=None created=2026-10-15T19:18:21Z repo=django commit=14fc2e97036f index_entries=2246
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              47   0   1 |   82.3  15.8   69.3   88.1   86.5   85.4 |   7.7   8.1   2.8   0.0 |    82063    12282    1718    1794    n/a   86.7 |   0.72   0.00   0.26
+dims: oh=16.3/14.7/18.2/17.2/15.9
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,856,966 out=80,727
+
+wrote runs/sweqa-r5p-glm46-django-k1/analysis.json
+

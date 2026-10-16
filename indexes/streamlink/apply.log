@@ -1,0 +1,22 @@
+loaded 511 authored entries from /root/aoci-eval/repos-deepswe/streamlink-r5/aoci.code.txt
+batch 1: submitted 27 entries, status=applied remaining=467 applied_total=27 2s
+batch 2: submitted 25 entries, status=applied remaining=442 applied_total=52 2s
+batch 3: submitted 26 entries, status=applied remaining=416 applied_total=78 3s
+batch 4: submitted 26 entries, status=applied remaining=390 applied_total=104 4s
+batch 5: submitted 26 entries, status=applied remaining=364 applied_total=130 5s
+batch 6: submitted 26 entries, status=applied remaining=338 applied_total=156 5s
+batch 7: submitted 26 entries, status=applied remaining=312 applied_total=182 6s
+batch 8: submitted 26 entries, status=applied remaining=286 applied_total=208 7s
+batch 9: submitted 25 entries, status=applied remaining=261 applied_total=233 8s
+batch 10: submitted 24 entries, status=applied remaining=237 applied_total=257 9s
+batch 11: submitted 26 entries, status=applied remaining=211 applied_total=283 10s
+batch 12: submitted 26 entries, status=applied remaining=185 applied_total=309 11s
+batch 13: submitted 26 entries, status=applied remaining=159 applied_total=335 12s
+batch 14: submitted 27 entries, status=applied remaining=132 applied_total=362 13s
+batch 15: submitted 26 entries, status=applied remaining=106 applied_total=388 14s
+batch 16: submitted 27 entries, status=applied remaining=79 applied_total=415 15s
+batch 17: submitted 26 entries, status=applied remaining=53 applied_total=441 16s
+batch 18: submitted 27 entries, status=applied remaining=26 applied_total=468 17s
+batch 19: submitted 26 entries, status=applied remaining=0 applied_total=494 19s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=494 findings=[('code_skipped', 'src/streamlink/packages/__init__.py'), ('code_skipped', 'src/streamlink/plugin/api/__init__.py'), ('code_skipped', 'src/streamlink/plugins/__init__.py'), ('code_skipped', 'tests/cli/__init__.py'), ('code_skipped', 'tests/cli/console/__init__.py')]

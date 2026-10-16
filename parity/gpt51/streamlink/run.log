@@ -1,0 +1,125 @@
+=== run.py specs/sweqa-r5p-gpt51-streamlink-k1.json at 2026-10-15T17:57:39Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name streamlink --questions benchmarks/swe-qa/streamlink.jsonl --condition oh --out runs/sweqa-r5p-gpt51-streamlink-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/streamlink --profile closeai-gpt51 --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=closeai-gpt51 model=gpt-5.1-2025-11-13 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=ab1f36560005
+[1/48] 9.3s steps=2 calls=2 files=1+0m map=0/0c in=23784 out=182 status=finished   
+[2/48] 13.0s steps=3 calls=3 files=1+0m map=0/0c in=29041 out=294 status=finished   
+[3/48] 14.0s steps=4 calls=4 files=1+0m map=0/0c in=35178 out=328 status=finished   
+[4/48] 15.8s steps=4 calls=4 files=1+0m map=0/0c in=32327 out=325 status=finished   
+[5/48] 18.4s steps=4 calls=4 files=1+0m map=0/0c in=50719 out=264 status=finished retried=too_short  
+[6/48] 18.0s steps=4 calls=4 files=1+0m map=0/0c in=33639 out=505 status=finished   
+[7/48] 19.9s steps=6 calls=6 files=1+0m map=0/0c in=50595 out=363 status=finished   
+[8/48] 20.3s steps=6 calls=6 files=0+0m map=0/0c in=42669 out=431 status=finished   
+[9/48] 19.5s steps=5 calls=6 files=1+0m map=0/0c in=43906 out=424 status=finished   
+[10/48] 22.9s steps=7 calls=7 files=1+0m map=0/0c in=54368 out=324 status=finished   
+[11/48] 22.7s steps=6 calls=6 files=1+0m map=0/0c in=59855 out=359 status=finished   
+[12/48] 28.0s steps=8 calls=8 files=2+0m map=0/0c in=74947 out=563 status=finished   
+[13/48] 16.7s steps=4 calls=4 files=1+0m map=0/0c in=39396 out=302 status=finished   
+[14/48] 36.0s steps=10 calls=10 files=2+0m map=0/0c in=90050 out=608 status=finished forced   
+[15/48] 13.5s steps=4 calls=4 files=1+0m map=0/0c in=32600 out=264 status=finished   
+[16/48] 25.1s steps=7 calls=7 files=2+0m map=0/0c in=59308 out=528 status=finished   
+[17/48] 18.5s steps=5 calls=5 files=1+0m map=0/0c in=41191 out=465 status=finished   
+[18/48] 29.0s steps=7 calls=8 files=2+0m map=0/0c in=88363 out=568 status=finished   
+[19/48] 24.7s steps=8 calls=8 files=2+0m map=0/0c in=59865 out=478 status=finished   
+[20/48] 42.8s steps=10 calls=10 files=2+0m map=0/0c in=102605 out=968 status=finished forced   
+[21/48] 45.1s steps=4 calls=4 files=1+0m map=0/0c in=37318 out=375 status=finished   
+[22/48] 23.5s steps=6 calls=6 files=1+0m map=0/0c in=48654 out=561 status=finished   
+[23/48] 19.0s steps=6 calls=6 files=0+0m map=0/0c in=42455 out=396 status=finished   
+[24/48] 10.7s steps=2 calls=2 files=1+0m map=0/0c in=25246 out=325 status=finished   
+[25/48] 31.1s steps=7 calls=8 files=4+0m map=0/0c in=72791 out=851 status=finished   
+[26/48] 36.4s steps=5 calls=5 files=1+0m map=0/0c in=45164 out=407 status=finished   
+[27/48] 31.6s steps=9 calls=9 files=1+0m map=0/0c in=69066 out=614 status=finished   
+[28/48] 17.9s steps=4 calls=4 files=2+0m map=0/0c in=58062 out=302 status=finished   
+[29/48] 17.2s steps=5 calls=5 files=1+0m map=0/0c in=39867 out=350 status=finished   
+[30/48] 17.5s steps=5 calls=5 files=1+0m map=0/0c in=40534 out=402 status=finished   
+[31/48] 24.1s steps=7 calls=7 files=2+0m map=0/0c in=68076 out=578 status=finished   
+[32/48] 43.9s steps=10 calls=10 files=3+0m map=0/0c in=80097 out=1387 status=finished forced   
+[33/48] 20.1s steps=6 calls=6 files=1+0m map=0/0c in=44541 out=430 status=finished   
+[34/48] 14.4s steps=4 calls=4 files=1+0m map=0/0c in=41222 out=252 status=finished   
+[35/48] 28.1s steps=5 calls=5 files=1+0m map=0/0c in=38160 out=292 status=finished   
+[36/48] 20.6s steps=6 calls=6 files=1+0m map=0/0c in=52292 out=395 status=finished   
+[37/48] 18.1s steps=5 calls=5 files=1+0m map=0/0c in=41742 out=338 status=finished   
+[38/48] 13.0s steps=3 calls=3 files=1+0m map=0/0c in=25017 out=307 status=finished   
+[39/48] 10.9s steps=2 calls=3 files=2+0m map=0/0c in=27358 out=273 status=finished   
+[40/48] 16.0s steps=4 calls=4 files=1+0m map=0/0c in=33294 out=428 status=finished   
+[41/48] 26.9s steps=8 calls=8 files=2+0m map=0/0c in=99926 out=459 status=finished   
+[42/48] 31.5s steps=10 calls=10 files=0+0m map=0/0c in=76392 out=541 status=finished forced   
+[43/48] 19.8s steps=6 calls=6 files=1+0m map=0/0c in=49513 out=409 status=finished   
+[44/48] 42.2s steps=7 calls=7 files=3+0m map=0/0c in=56292 out=518 status=finished   
+[45/48] 31.7s steps=10 calls=10 files=0+0m map=0/0c in=105242 out=671 status=finished forced   
+[46/48] 28.6s steps=7 calls=9 files=3+0m map=0/0c in=54180 out=1090 status=finished   
+[47/48] 92.9s steps=4 calls=4 files=1+0m map=0/0c in=36572 out=343 status=finished   
+[48/48] 142.5s steps=5 calls=5 files=1+0m map=0/0c in=44374 out=328 status=finished   
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-gpt51-streamlink-k1 --json runs/sweqa-r5p-gpt51-streamlink-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-gpt51-streamlink-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     0      5     1     1     0    4
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 0 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 5 forced answers · 1 refusal/garble re-runs · 1 degenerate · 0 garbled-final · 4 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-gpt51-streamlink-k1/answers-oh.jsonl --out runs/sweqa-r5p-gpt51-streamlink-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['gpt-5.1-2025-11-13']
+[1/48] total=91 votes=5 
+[2/48] total=30 votes=5 
+[3/48] total=55 votes=5 
+[4/48] total=39 votes=5 
+[5/48] total=35 votes=5 
+[6/48] total=75 votes=5 
+[7/48] total=92 votes=5 
+[8/48] total=69 votes=5 
+[9/48] total=90 votes=5 
+[10/48] total=53 votes=5 
+[11/48] total=96 votes=5 
+[12/48] total=55 votes=5 
+[13/48] total=50 votes=5 
+[14/48] total=55 votes=5 
+[15/48] total=45 votes=5 
+[16/48] total=73 votes=5 
+[17/48] total=76 votes=5 
+[18/48] total=47 votes=5 
+[19/48] total=29 votes=5 
+[20/48] total=95 votes=5 
+[21/48] total=40 votes=5 
+[22/48] total=73 votes=5 
+[23/48] total=85 votes=5 
+[24/48] total=67 votes=5 
+[25/48] total=61 votes=5 
+[26/48] total=47 votes=5 
+[27/48] total=80 votes=5 
+[28/48] total=34 votes=5 
+[29/48] total=57 votes=5 
+[30/48] total=74 votes=5 
+[31/48] total=53 votes=5 
+[32/48] total=72 votes=5 
+[33/48] total=59 votes=5 
+[34/48] total=65 votes=5 
+[35/48] total=84 votes=5 
+[36/48] total=95 votes=5 
+[37/48] total=74 votes=5 
+[38/48] total=90 votes=5 
+[39/48] total=76 votes=5 
+[40/48] total=92 votes=5 
+[41/48] total=49 votes=5 
+[42/48] total=64 votes=5 
+[43/48] total=90 votes=5 
+[44/48] total=90 votes=5 
+[45/48] total=73 votes=5 
+[46/48] total=70 votes=5 
+[47/48] total=84 votes=5 
+[48/48] total=67 votes=5 
+run: runs/sweqa-r5p-gpt51-streamlink-k1
+manifest: harness=None created=2026-10-15T17:57:55Z repo=streamlink commit=ab1f36560005 index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   1 |   67.0  19.0   64.1   67.5   80.0   56.3 |   5.8   5.9   1.3   0.0 |    52039    11041     462     616    n/a   27.2 |   0.00   0.00   0.00
+dims: oh=11.9/11.0/16.2/16.0/11.9
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=2,497,853 out=22,165
+
+wrote runs/sweqa-r5p-gpt51-streamlink-k1/analysis.json
+

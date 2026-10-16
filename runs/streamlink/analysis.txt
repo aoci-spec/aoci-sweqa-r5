@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-streamlink-k10
+manifest: harness=None created=2026-10-15T20:18:04Z repo=streamlink commit=ab1f36560005 index_entries=494
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   1 |   74.1  19.0   63.1   81.6   74.4   77.2 |   5.3   8.1   2.2   0.0 |    61828    12365    1160     778    n/a    9.6 |   1.00   0.00   1.00
+oh-10           48   0   1 |   77.0  15.1   71.2   77.8   81.1   77.9 |   4.8   7.2   2.4   0.0 |    52589    11972    1076     925    n/a    9.0 |   1.00   0.00   1.00
+oh-2            48   0   1 |   73.8  19.2   65.8   75.9   73.6   79.7 |   5.4   8.1   2.4   0.0 |    59770    12380    1180     934    n/a    9.9 |   1.00   0.00   1.00
+oh-3            48   0   0 |   75.0  17.6   67.9   77.2   78.2   76.8 |   5.1   7.6   2.4   0.0 |    60448    12434    1125     992    n/a    9.6 |   1.00   0.00   1.00
+oh-4            48   0   0 |   75.1  14.9   70.8   81.5   73.2   75.0 |   5.5   8.5   2.5   0.0 |    63929    12516    1214     873    n/a    9.8 |   1.00   0.00   1.00
+oh-5            48   0   1 |   73.1  17.0   67.4   74.1   76.0   74.8 |   5.5   8.0   2.3   0.0 |    61361    12215    1150     898    n/a    9.6 |   1.00   0.00   1.00
+oh-6            48   0   1 |   74.8  16.7   69.1   76.3   75.9   78.0 |   5.3   8.0   2.4   0.0 |    63062    12673    1135     884    n/a    9.6 |   1.00   0.00   1.00
+oh-7            48   0   1 |   74.1  16.6   66.1   79.1   74.4   76.9 |   5.5   8.0   2.2   0.0 |    61322    11872    1151     887    n/a    9.8 |   1.00   0.00   1.00
+oh-8            48   0   1 |   74.0  17.2   71.8   76.8   74.2   73.2 |   5.2   7.7   2.2   0.0 |    59002    12162    1120     832    n/a   10.1 |   1.00   0.00   1.00
+oh-9            48   0   1 |   76.8  14.8   70.9   81.8   77.2   77.4 |   5.8   8.5   2.7   0.0 |    67028    12662    1219     863    n/a   10.5 |   1.00   0.00   1.00
+oh-aoci-1       48   0   0 |   72.9  19.9   67.2   75.5   68.7   80.2 |   3.5   4.4   1.6   9.4 |   437907    60732    2063    1147    n/a   18.1 |   1.00   1.00   1.00
+oh-aoci-10      48   0   1 |   74.1  16.9   69.0   73.0   71.9   82.4 |   3.5   4.7   1.6  11.6 |   445527    61108    2093    1094    n/a   18.5 |   1.00   1.00   1.00
+oh-aoci-2       48   0   0 |   70.0  21.2   55.3   79.2   64.1   81.4 |   3.4   4.5   1.4  11.4 |   433848    60627    2091    1065    n/a   19.1 |   1.00   1.00   1.00
+oh-aoci-3       48   0   1 |   73.9  19.2   66.4   76.8   71.3   80.8 |   3.7   4.5   1.5  10.5 |   448856    60948    2056    1080    n/a   18.2 |   0.00   1.00   1.00
+oh-aoci-4       48   0   1 |   75.2  18.5   65.9   77.7   75.2   82.2 |   3.8   4.5   1.5  11.0 |   457315    61046    2065    1113    n/a   18.2 |   1.00   1.00   1.00
+oh-aoci-5       48   0   0 |   75.4  18.2   68.1   74.8   76.5   82.1 |   3.7   4.6   1.5  10.6 |   451894    60997    2099    1197    n/a   18.9 |   1.00   1.00   1.00
+oh-aoci-6       48   0   1 |   74.7  17.7   65.2   76.8   75.6   81.2 |   3.6   4.3   1.7   9.1 |   448303    60857    2086    1182    n/a   18.2 |   0.00   1.00   1.00
+oh-aoci-7       48   0   1 |   74.7  19.5   66.5   72.4   77.3   82.5 |   3.9   4.6   1.7   9.7 |   455060    60936    2140    1120    n/a   18.8 |   1.00   1.00   1.00
+oh-aoci-8       48   0   1 |   76.0  17.8   72.3   75.0   72.8   83.8 |   3.6   4.8   1.5  10.5 |   446728    60637    2121    1199    n/a   19.0 |   0.00   1.00   1.00
+oh-aoci-9       48   0   1 |   75.9  16.6   67.9   76.6   72.8   86.5 |   3.8   4.6   1.5  10.8 |   454100    60795    2059    1009    n/a   18.6 |   0.00   1.00   1.00
+oh-cg-1         48   0   0 |   74.8  17.1   69.2   79.5   79.2   71.2 |   3.7   4.6   1.3  14.2 |    61613    17725     764    1009    n/a    7.1 |   1.00   0.00   1.00
+oh-cg-10        48   0   0 |   76.9  15.6   69.3   84.1   81.1   73.0 |   4.2   5.4   1.7  12.2 |    68526    17066     901     998    n/a    8.2 |   1.00   0.00   1.00
+oh-cg-2         48   0   0 |   74.6  16.9   73.4   75.5   79.2   70.2 |   3.7   5.0   1.5  13.2 |    61616    16998     820    1134    n/a    7.5 |   1.00   0.00   1.00
+oh-cg-3         48   0   1 |   76.6  17.2   67.1   81.7   78.2   79.4 |   3.8   5.1   1.3  12.8 |    62292    16946     808    1000    n/a    7.4 |   0.00   0.00   1.00
+oh-cg-4         48   0   1 |   75.2  17.2   70.7   77.3   79.2   73.8 |   4.2   5.8   1.6  13.5 |    69311    17365     911    1014    n/a    8.3 |   1.00   0.00   1.00
+oh-cg-5         48   0   1 |   74.4  18.1   67.4   76.2   73.6   80.5 |   3.7   5.0   1.5  13.5 |    60998    17085     806    1034    n/a    8.1 |   1.00   0.00   1.00
+oh-cg-6         48   0   0 |   74.5  18.3   68.2   80.9   72.1   76.6 |   3.5   4.5   1.3  12.9 |    59014    16931     736    1020    n/a    7.0 |   1.00   0.00   1.00
+oh-cg-7         48   0   0 |   77.5  15.8   70.4   82.2   81.1   76.3 |   3.7   5.0   1.3  13.6 |    61311    17059     775    1022    n/a    7.2 |   1.00   0.00   1.00
+oh-cg-8         48   0   0 |   73.0  17.7   67.4   75.3   75.6   73.6 |   3.6   4.8   1.3  12.8 |    59190    16513     803    1094    n/a    7.3 |   1.00   0.00   1.00
+oh-cg-9         48   0   0 |   75.9  17.1   68.7   78.2   78.4   78.5 |   3.9   5.0   1.4  14.1 |    63178    16788     825    1067    n/a    7.7 |   1.00   0.00   1.00
+dims: oh-1=13.9/13.3/16.9/16.3/13.8  oh-10=14.6/13.9/17.5/16.4/14.6  oh-2=13.6/13.3/16.6/16.0/14.1  oh-3=14.2/13.7/16.8/16.0/14.3  oh-4=14.4/13.6/17.0/15.9/14.3  oh-5=13.7/13.0/16.5/16.2/13.7  oh-6=14.3/13.4/16.9/16.0/14.2  oh-7=14.0/13.5/16.8/15.9/14.0  oh-8=13.7/13.2/16.8/16.4/13.9  oh-9=14.7/14.1/17.4/16.2/14.6  oh-aoci-1=13.6/13.4/16.0/15.8/14.0  oh-aoci-10=13.9/13.5/16.5/15.8/14.3  oh-aoci-2=12.8/12.6/15.5/15.5/13.6  oh-aoci-3=13.9/13.6/16.1/16.1/14.1  oh-aoci-4=14.4/13.9/16.4/16.0/14.5  oh-aoci-5=14.4/13.9/16.5/16.0/14.6  oh-aoci-6=14.2/13.6/16.3/16.1/14.5  oh-aoci-7=14.1/13.6/16.4/16.2/14.3  oh-aoci-8=14.5/14.1/16.6/16.1/14.7  oh-aoci-9=14.3/14.0/16.9/16.0/14.7  oh-cg-1=14.2/13.5/16.7/16.0/14.3  oh-cg-10=14.8/14.3/17.1/16.0/14.7  oh-cg-2=14.2/13.6/16.6/15.9/14.2  oh-cg-3=14.7/14.0/16.9/16.4/14.6  oh-cg-4=14.2/13.8/16.8/16.1/14.3  oh-cg-5=14.1/13.5/16.7/15.9/14.2  oh-cg-6=14.1/13.7/16.3/16.1/14.2  oh-cg-7=14.9/14.2/17.2/16.4/14.8  oh-cg-8=13.7/13.4/16.4/15.7/13.8  oh-cg-9=14.4/13.9/16.8/16.3/14.6
+judge vote SD (mean over questions): oh-1=0.7  oh-10=0.8  oh-2=1.0  oh-3=1.1  oh-4=1.2  oh-5=1.0  oh-6=1.1  oh-7=1.2  oh-8=1.1  oh-9=1.2  oh-aoci-1=1.1  oh-aoci-10=1.3  oh-aoci-2=1.7  oh-aoci-3=0.9  oh-aoci-4=1.2  oh-aoci-5=1.4  oh-aoci-6=0.9  oh-aoci-7=1.2  oh-aoci-8=1.2  oh-aoci-9=1.2  oh-cg-1=1.1  oh-cg-10=0.9  oh-cg-2=1.3  oh-cg-3=1.3  oh-cg-4=0.7  oh-cg-5=0.8  oh-cg-6=1.1  oh-cg-7=1.0  oh-cg-8=1.1  oh-cg-9=0.9
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.4 calls/2470ch (used on 79% of questions)  oh-aoci-10=1.4 calls/3004ch (used on 77% of questions)  oh-aoci-2=1.3 calls/2851ch (used on 77% of questions)  oh-aoci-3=1.4 calls/2754ch (used on 77% of questions)  oh-aoci-4=1.4 calls/2960ch (used on 81% of questions)  oh-aoci-5=1.5 calls/2812ch (used on 88% of questions)  oh-aoci-6=1.3 calls/2448ch (used on 79% of questions)  oh-aoci-7=1.4 calls/2399ch (used on 79% of questions)  oh-aoci-8=1.5 calls/2739ch (used on 81% of questions)  oh-aoci-9=1.4 calls/2820ch (used on 79% of questions)  oh-cg-1=1.4 calls/29631ch (used on 100% of questions)  oh-cg-10=1.2 calls/26687ch (used on 100% of questions)  oh-cg-2=1.2 calls/27068ch (used on 100% of questions)  oh-cg-3=1.2 calls/27097ch (used on 100% of questions)  oh-cg-4=1.2 calls/26509ch (used on 100% of questions)  oh-cg-5=1.3 calls/27616ch (used on 100% of questions)  oh-cg-6=1.3 calls/27593ch (used on 100% of questions)  oh-cg-7=1.3 calls/27845ch (used on 100% of questions)  oh-cg-8=1.2 calls/26524ch (used on 100% of questions)  oh-cg-9=1.2 calls/27163ch (used on 100% of questions)
+totals: oh-1: in=2,967,730 out=55,658  oh-10: in=2,524,287 out=51,648  oh-2: in=2,868,964 out=56,616  oh-3: in=2,901,509 out=54,014  oh-4: in=3,068,608 out=58,287  oh-5: in=2,945,307 out=55,201  oh-6: in=3,026,974 out=54,472  oh-7: in=2,943,462 out=55,255  oh-8: in=2,832,079 out=53,741  oh-9: in=3,217,368 out=58,525  oh-aoci-1: in=21,019,557 out=99,035  oh-aoci-10: in=21,385,318 out=100,451  oh-aoci-2: in=20,824,724 out=100,346  oh-aoci-3: in=21,545,071 out=98,684  oh-aoci-4: in=21,951,129 out=99,102  oh-aoci-5: in=21,690,932 out=100,773  oh-aoci-6: in=21,518,534 out=100,135  oh-aoci-7: in=21,842,902 out=102,735  oh-aoci-8: in=21,442,931 out=101,809  oh-aoci-9: in=21,796,791 out=98,809  oh-cg-1: in=2,957,425 out=36,669  oh-cg-10: in=3,289,239 out=43,261  oh-cg-2: in=2,957,576 out=39,366  oh-cg-3: in=2,990,018 out=38,771  oh-cg-4: in=3,326,917 out=43,724  oh-cg-5: in=2,927,891 out=38,696  oh-cg-6: in=2,832,668 out=35,335  oh-cg-7: in=2,942,906 out=37,207  oh-cg-8: in=2,841,136 out=38,548  oh-cg-9: in=3,032,526 out=39,597
+
+== oh-10 - oh-1: n=48 Δ=+2.9 95%CI=[-1.1,+6.8] median=+0.0 win/tie/loss=23/8/17 sign-test p=0.430 | n for 80% power at this Δ ≈ 176
+   by category: what: +8.1 [+0.2,+17.0] (n=12)  how: -3.8 [-14.1,+4.0] (n=12)  why: +6.7 [-0.7,+14.6] (n=12)  where: +0.7 [-1.6,+2.9] (n=12)
+   paired efficiency (b−a): input_tokens: -9238 [-15342,-3283] (0.85x)  peak_input_tokens: -393 [-1038,+274] (0.97x)  output_tokens: -84 [-217,+37] (0.93x)  tool_calls: -1 [-2,-0] (0.90x)  wall_s: -1 [-1,+0] (0.94x)  answer_chars: +147 [-4,+317] (1.19x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 25/13/10; hit cap: {'oh-1': 3, 'oh-10': 2}
+   -51  How does the specialized HLS stream class that coordinates with a WebSocket client integrate WebSocket communication wit
+         oh-1           read=['src/streamlink/plugin/api/websocket.py', 'src/streamlink/plugins/nicolive.py'] steps=7 retried=None
+         oh-10          read=['src/streamlink/plugins/twitcasting.py', 'src/streamlink/plugins/ustreamtv.py'] steps=6 retried=None
+   -14  How does the stream retrieval method implement multi-stage validation schema composition for extracting and processing e
+         oh-1           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=9 retried=None
+         oh-10          read=['src/streamlink/plugin/plugin.py', 'src/streamlink/plugins/brightcove.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=8 retried=None
+   -14  Why is the plugin discovery and metadata extraction class used in the custom documentation generation extension for exte
+         oh-1           read=['docs/plugins.rst', 'docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-10          read=['docs/conf.py', 'docs/plugins.rst', 'docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/__init__.py'] steps=6 retried=None
+   +42  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-10          read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=9 retried=None
+   +35  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-10          read=['src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/ustvnow.py', 'tests/plugins/test_mjunoon.py'] steps=6 retried=None
+   +30  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-10          read=['src/streamlink/stream/dash/__init__.py', 'src/streamlink/stream/hls/__init__.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/__init__.py'] steps=10 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-0.3 95%CI=[-5.1,+3.9] median=+1.0 win/tie/loss=25/5/18 sign-test p=0.360 | n for 80% power at this Δ ≈ 18379
+   by category: what: +2.8 [-10.0,+13.5] (n=12)  how: -5.7 [-15.2,+0.5] (n=12)  why: -0.8 [-12.1,+7.2] (n=12)  where: +2.4 [-1.3,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: -2058 [-10183,+6044] (0.97x)  peak_input_tokens: +15 [-700,+814] (1.00x)  output_tokens: +20 [-115,+154] (1.02x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: +0 [-1,+1] (1.03x)  answer_chars: +156 [-23,+345] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 17/12/19; hit cap: {'oh-1': 3, 'oh-2': 3}
+   -53  What are the dataflow dependencies between the composite data structure that aggregates token status and parsed token da
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+         oh-2           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/webbrowser/cdp/client.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=10 retried=None
+   -52  Why does the design rationale justify the specific enumeration of cookie exemption reason values in relation to third-pa
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=9 retried=None
+         oh-2           read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=7 retried=None
+   -51  How does the specialized HLS stream class that coordinates with a WebSocket client integrate WebSocket communication wit
+         oh-1           read=['src/streamlink/plugin/api/websocket.py', 'src/streamlink/plugins/nicolive.py'] steps=7 retried=None
+         oh-2           read=['src/streamlink/plugins/twitcasting.py', 'src/streamlink/plugins/ustreamtv.py'] steps=6 retried=None
+   +30  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-2           read=['src/streamlink/webbrowser/cdp/__init__.py', 'src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=7 retried=None
+   +30  What architectural patterns enable a streaming service plugin that handles multiple content types to maintain separation
+         oh-1           read=['src/streamlink/plugin/plugin.py', 'src/streamlink/plugins/ard_mediathek.py', 'src/streamlink/plugins/twitch.py'] steps=7 retried=None
+         oh-2           read=['src/streamlink/plugin/api/__init__.py', 'src/streamlink/plugin/plugin.py', 'src/streamlink/plugins/pluto.py'] steps=8 retried=None
+   +23  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-2           read=['CHANGELOG.md', 'src/streamlink/plugins/mjunoon.py'] steps=6 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+1.0 95%CI=[-2.7,+4.4] median=+0.0 win/tie/loss=22/6/20 sign-test p=0.878 | n for 80% power at this Δ ≈ 1322
+   by category: what: +4.8 [-0.1,+11.6] (n=12)  how: -4.3 [-14.2,+2.2] (n=12)  why: +3.8 [-3.4,+11.5] (n=12)  where: -0.5 [-4.9,+3.7] (n=12)
+   paired efficiency (b−a): input_tokens: -1380 [-9992,+7782] (0.98x)  peak_input_tokens: +70 [-717,+837] (1.01x)  output_tokens: -34 [-170,+94] (0.97x)  tool_calls: -0 [-1,+0] (0.95x)  wall_s: +0 [-1,+1] (1.00x)  answer_chars: +214 [+62,+388] (1.28x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 20/16/12; hit cap: {'oh-1': 3, 'oh-3': 3}
+   -52  How does the specialized HLS stream class that coordinates with a WebSocket client integrate WebSocket communication wit
+         oh-1           read=['src/streamlink/plugin/api/websocket.py', 'src/streamlink/plugins/nicolive.py'] steps=7 retried=None
+         oh-3           read=['src/streamlink/plugins/twitcasting.py'] steps=5 retried=None
+   -22  Why is the plugin discovery and metadata extraction class used in the custom documentation generation extension for exte
+         oh-1           read=['docs/plugins.rst', 'docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-3           read=['docs/plugins.rst', 'docs/sphinxext/ext_plugins.py'] steps=3 retried=None
+   -19  Where in the input dictionary must the specific JSON structure and data types be located for the JSON deserialization me
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=5 retried=None
+         oh-3           read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=4 retried=None
+   +37  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-3           read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +33  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-3           read=['src/streamlink/stream/hls/m3u8.py'] steps=7 retried=None
+   +16  Why does the parameter that enables reduced-latency streaming mode in a platform-specific HLS stream implementation clas
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-3           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'src/streamlink/session/http.py', 'src/streamlink/stream/hls/hls.py'] steps=7 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+1.0 95%CI=[-2.2,+4.6] median=+0.0 win/tie/loss=19/8/21 sign-test p=0.875 | n for 80% power at this Δ ≈ 1059
+   by category: what: +7.7 [-0.6,+18.0] (n=12)  how: -0.1 [-2.7,+2.6] (n=12)  why: -1.2 [-8.0,+4.7] (n=12)  where: -2.2 [-7.8,+3.6] (n=12)
+   paired efficiency (b−a): input_tokens: +2102 [-4554,+8745] (1.03x)  peak_input_tokens: +151 [-465,+853] (1.01x)  output_tokens: +55 [-75,+187] (1.05x)  tool_calls: +0 [-0,+1] (1.05x)  wall_s: +0 [-1,+1] (1.02x)  answer_chars: +95 [-36,+230] (1.12x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/16/19; hit cap: {'oh-1': 3, 'oh-4': 5}
+   -30  Why does the design rationale justify the specific enumeration of cookie exemption reason values in relation to third-pa
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=9 retried=None
+         oh-4           read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=6 retried=None
+   -19  Where in the test method that verifies timing offset handling during periodic refresh operations does the control flow a
+         oh-1           read=['tests/stream/hls/test_hls.py'] steps=4 retried=None
+         oh-4           read=['tests/stream/dash/test_dash.py', 'tests/stream/hls/test_hls.py'] steps=4 retried=None
+   -18  Where is the asynchronous in-memory communication channel implementation for capturing and routing stdout and stderr out
+         oh-1           read=['tests/utils/test_processoutput.py'] steps=3 retried=None
+         oh-4           read=['tests/utils/test_processoutput.py'] steps=4 retried=None
+   +42  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-4           read=['src/streamlink/stream/dash/dash.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/__init__.py'] steps=10 retried=None
+   +42  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-4           read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=10 retried=None
+   +19  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-4           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=9 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-1.0 95%CI=[-4.8,+2.4] median=-1.0 win/tie/loss=20/3/25 sign-test p=0.551 | n for 80% power at this Δ ≈ 1245
+   by category: what: +4.3 [-0.2,+9.8] (n=12)  how: -7.5 [-17.8,-1.3] (n=12)  why: +1.6 [-5.6,+9.6] (n=12)  where: -2.4 [-6.2,+1.0] (n=12)
+   paired efficiency (b−a): input_tokens: -467 [-8327,+7811] (0.99x)  peak_input_tokens: -150 [-958,+697] (0.99x)  output_tokens: -10 [-163,+141] (0.99x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +0 [-1,+1] (1.01x)  answer_chars: +121 [-11,+244] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 16/16/16; hit cap: {'oh-1': 3, 'oh-5': 4}
+   -59  How does the specialized HLS stream class that coordinates with a WebSocket client integrate WebSocket communication wit
+         oh-1           read=['src/streamlink/plugin/api/websocket.py', 'src/streamlink/plugins/nicolive.py'] steps=7 retried=None
+         oh-5           read=['src/streamlink/plugins/twitcasting.py', 'src/streamlink/plugins/ustreamtv.py'] steps=7 retried=None
+   -18  Why does the method responsible for retrieving master playlist files with enforced UTF-8 encoding serve a specific archi
+         oh-1           read=['src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-5           read=['src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=9 retried=None
+   -15  Where in the test method that verifies timing offset handling during periodic refresh operations does the control flow a
+         oh-1           read=['tests/stream/hls/test_hls.py'] steps=4 retried=None
+         oh-5           read=['src/streamlink/stream/dash/dash.py', 'tests/stream/dash/test_dash.py', 'tests/stream/dash/test_manifest.py', 'tests/stream/hls/test_hls.py'] steps=10 retried=None
+   +34  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-5           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=5 retried=None
+   +28  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-5           read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +18  Why does the parameter that enables reduced-latency streaming mode in a platform-specific HLS stream implementation clas
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-5           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py'] steps=5 retried=None
+
+== oh-6 - oh-1: n=48 Δ=+0.8 95%CI=[-2.8,+4.1] median=+0.0 win/tie/loss=19/9/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 2001
+   by category: what: +6.0 [+0.9,+12.6] (n=12)  how: -5.2 [-15.0,+1.3] (n=12)  why: +1.5 [-3.5,+7.0] (n=12)  where: +0.8 [-3.6,+7.0] (n=12)
+   paired efficiency (b−a): input_tokens: +1234 [-6195,+8326] (1.02x)  peak_input_tokens: +308 [-414,+1061] (1.02x)  output_tokens: -25 [-145,+89] (0.98x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +0 [-1,+1] (1.00x)  answer_chars: +106 [-30,+245] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 15/20/13; hit cap: {'oh-1': 3, 'oh-6': 5}
+   -51  How does the specialized HLS stream class that coordinates with a WebSocket client integrate WebSocket communication wit
+         oh-1           read=['src/streamlink/plugin/api/websocket.py', 'src/streamlink/plugins/nicolive.py'] steps=7 retried=None
+         oh-6           read=['src/streamlink/plugins/ustreamtv.py'] steps=7 retried=None
+   -17  How does the stream retrieval method implement multi-stage validation schema composition for extracting and processing e
+         oh-1           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=9 retried=None
+         oh-6           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/plugins/brightcove.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=10 retried=None
+   -15  Why is the plugin discovery and metadata extraction class used in the custom documentation generation extension for exte
+         oh-1           read=['docs/plugins.rst', 'docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-6           read=['docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/__init__.py'] steps=3 retried=None
+   +31  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-6           read=['src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=8 retried=None
+   +30  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-6           read=['src/streamlink/stream/hls/m3u8.py'] steps=10 retried=None
+   +26  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-6           read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/__init__.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=7 retried=None
+
+== oh-7 - oh-1: n=48 Δ=+0.0 95%CI=[-4.0,+3.8] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 864023
+   by category: what: +3.0 [-9.8,+14.7] (n=12)  how: -2.5 [-5.8,+1.1] (n=12)  why: +0.0 [-8.8,+6.9] (n=12)  where: -0.3 [-4.1,+3.5] (n=12)
+   paired efficiency (b−a): input_tokens: -506 [-7107,+6051] (0.99x)  peak_input_tokens: -493 [-1193,+192] (0.96x)  output_tokens: -8 [-151,+125] (0.99x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +0 [-1,+1] (1.02x)  answer_chars: +109 [-17,+238] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/16/18; hit cap: {'oh-1': 3, 'oh-7': 5}
+   -51  What are the dataflow dependencies between the composite data structure that aggregates token status and parsed token da
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+         oh-7           read=['src/streamlink/plugins/twitch.py'] steps=10 retried=None
+   -39  Why does the design rationale justify the specific enumeration of cookie exemption reason values in relation to third-pa
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=9 retried=None
+         oh-7           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=6 retried=None
+   -13  How does the configuration flag that determines whether unmatched network requests should be blocked or allowed to proce
+         oh-1           read=['src/streamlink/webbrowser/cdp/client.py'] steps=4 retried=None
+         oh-7           read=['src/streamlink/webbrowser/cdp/client.py'] steps=4 retried=None
+   +43  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-7           read=['src/streamlink/stream/hls/__init__.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py'] steps=10 retried=None
+   +28  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-7           read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +19  Why does the parameter that enables reduced-latency streaming mode in a platform-specific HLS stream implementation clas
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-7           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/session/options.py', 'src/streamlink/stream/hls/hls.py'] steps=7 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-0.1 95%CI=[-4.5,+3.9] median=+0.0 win/tie/loss=19/10/19 sign-test p=1.000 | n for 80% power at this Δ ≈ 109501
+   by category: what: +8.7 [+1.5,+17.8] (n=12)  how: -4.8 [-16.0,+3.5] (n=12)  why: -0.2 [-2.8,+2.4] (n=12)  where: -4.1 [-13.4,+3.2] (n=12)
+   paired efficiency (b−a): input_tokens: -2826 [-9945,+4754] (0.95x)  peak_input_tokens: -203 [-909,+549] (0.98x)  output_tokens: -40 [-174,+101] (0.97x)  tool_calls: -0 [-1,+1] (0.96x)  wall_s: +1 [-1,+2] (1.06x)  answer_chars: +54 [-77,+184] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/20/14; hit cap: {'oh-1': 3, 'oh-8': 6}
+   -55  How does the specialized HLS stream class that coordinates with a WebSocket client integrate WebSocket communication wit
+         oh-1           read=['src/streamlink/plugin/api/websocket.py', 'src/streamlink/plugins/nicolive.py'] steps=7 retried=None
+         oh-8           read=['src/streamlink/plugins/twitcasting.py', 'src/streamlink/plugins/ustreamtv.py'] steps=6 retried=None
+   -47  Where in the codebase does the initialization of a base class for parsing elements containing multiple segment definitio
+         oh-1           read=['src/streamlink/stream/dash/manifest.py'] steps=3 retried=None
+         oh-8           read=['src/streamlink/stream/dash/manifest.py'] steps=5 retried=None
+   -14  How does the stream retrieval method implement multi-stage validation schema composition for extracting and processing e
+         oh-1           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=9 retried=None
+         oh-8           read=['src/streamlink/plugin/plugin.py', 'src/streamlink/plugins/dailymotion.py', 'src/streamlink/plugins/mangomolo.py', 'src/streamlink/plugins/reuters.py', 'src/streamlink/plugins/vimeo.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=10 retried=None
+   +51  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-8           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/m3u8.py'] steps=10 retried=None
+   +22  How can a prefetching mechanism for adaptive streaming protocol stream segments be designed to integrate with the existi
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/dash/dash.py', 'src/streamlink/stream/dash/segment.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/segment.py', 'src/streamlink/stream/segmented/__init__.py', 'src/streamlink/stream/segmented/segment.py', 'src/streamlink/stream/segmented/segmented.py'] steps=7 retried=None
+         oh-8           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'src/streamlink/stream/dash/dash.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/segment.py', 'src/streamlink/stream/segmented/__init__.py', 'src/streamlink/stream/segmented/segment.py', 'src/streamlink/stream/segmented/segmented.py'] steps=10 retried=None
+   +19  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-8           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=8 retried=None
+
+== oh-9 - oh-1: n=48 Δ=+2.7 95%CI=[+0.2,+5.4] median=-1.0 win/tie/loss=17/6/25 sign-test p=0.280 | n for 80% power at this Δ ≈ 90
+   by category: what: +7.8 [+1.9,+14.6] (n=12)  how: +0.2 [-3.2,+4.4] (n=12)  why: +2.8 [-1.8,+8.2] (n=12)  where: +0.2 [-3.4,+4.8] (n=12)
+   paired efficiency (b−a): input_tokens: +5201 [-1542,+11849] (1.08x)  peak_input_tokens: +297 [-487,+1019] (1.02x)  output_tokens: +60 [-57,+175] (1.05x)  tool_calls: +0 [-1,+1] (1.05x)  wall_s: +1 [+0,+2] (1.10x)  answer_chars: +85 [-39,+205] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/18/17; hit cap: {'oh-1': 3, 'oh-9': 8}
+   -10  How can a systematic approach ensure that the validation framework's extensibility maintains backward compatibility when
+         oh-1           read=['src/streamlink/validate/__init__.py', 'src/streamlink/validate/_exception.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py', 'tests/test_validate.py'] steps=5 retried=None
+         oh-9           read=['src/streamlink/validate/__init__.py', 'src/streamlink/validate/_exception.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py', 'tests/test_validate.py'] steps=5 retried=None
+   -8  Where in the input dictionary must the specific JSON structure and data types be located for the JSON deserialization me
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=5 retried=None
+         oh-9           read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   -8  Why does the design rationale justify the specific enumeration of cookie exemption reason values in relation to third-pa
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=9 retried=None
+         oh-9           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+   +31  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-9           read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/__init__.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=8 retried=None
+   +27  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-9           read=['src/streamlink/stream/hls/__init__.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py'] steps=10 retried=None
+   +23  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-9           read=['src/streamlink/plugins/albavision.py', 'src/streamlink/plugins/btv.py', 'src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/streann.py', 'src/streamlink/plugins/turkuvaz.py', 'src/streamlink/plugins/ustvnow.py'] steps=10 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=-1.2 95%CI=[-6.2,+3.6] median=+0.0 win/tie/loss=23/2/23 sign-test p=1.000 | n for 80% power at this Δ ≈ 1761
+   by category: what: +4.2 [-5.7,+15.4] (n=12)  how: -6.1 [-16.5,+2.2] (n=12)  why: -5.8 [-17.3,+4.8] (n=12)  where: +3.0 [-2.1,+8.4] (n=12)
+   paired efficiency (b−a): input_tokens: +376080 [+325925,+428924] (7.08x)  peak_input_tokens: +48368 [+46848,+49885] (4.91x)  output_tokens: +904 [+724,+1085] (1.78x)  tool_calls: -4 [-5,-2] (0.55x)  wall_s: +9 [+7,+10] (1.89x)  answer_chars: +369 [+191,+561] (1.47x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_search': 25, '(none)': 10, 'aoci_get_entries': 13}}
+   steps (b−a): fewer/same/more = 31/7/10; hit cap: {'oh-1': 3, 'oh-aoci-1': 3}
+   -51  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -43  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-1      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=2 retried=None
+   -36  Why is the domain code generator class used in generating type-safe Python modules from protocol domain definitions?
+         oh-1           read=['script/generate-cdp.py'] steps=5 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +43  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-1      read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   +38  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-aoci-1      read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/m3u8.py'] steps=7 retried=None
+   +27  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+0.0 95%CI=[-4.9,+4.7] median=+1.0 win/tie/loss=25/1/22 sign-test p=0.771 | n for 80% power at this Δ ≈ nan
+   by category: what: +5.9 [-1.0,+14.9] (n=12)  how: -8.6 [-19.9,+1.2] (n=12)  why: -2.5 [-13.2,+7.0] (n=12)  where: +5.2 [-2.2,+12.2] (n=12)
+   paired efficiency (b−a): input_tokens: +383700 [+338649,+432503] (7.21x)  peak_input_tokens: +48743 [+47246,+50201] (4.94x)  output_tokens: +933 [+752,+1117] (1.80x)  tool_calls: -3 [-5,-2] (0.58x)  wall_s: +9 [+7,+10] (1.93x)  answer_chars: +316 [+140,+502] (1.41x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_search': 32, '(none)': 8, 'terminal': 3, 'aoci_get_entries': 5}}
+   steps (b−a): fewer/same/more = 26/13/9; hit cap: {'oh-1': 3, 'oh-aoci-10': 4}
+   -48  How does a test utility class that combines event-based testing capabilities with streaming service-specific stream writ
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py'] steps=4 retried=None
+         oh-aoci-10     read=['src/streamlink/stream/hls/hls.py', 'tests/mixins/stream_hls.py', 'tests/testutils/handshake.py'] steps=3 retried=None
+   -45  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -45  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-10     read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=5 retried=None
+   +44  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-10     read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   +27  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +27  Where is the validation of session parameters and headers integration into the adaptive streaming protocol stream handle
+         oh-1           read=['tests/stream/test_stream_json.py'] steps=2 retried=None
+         oh-aoci-10     read=['tests/stream/test_stream_json.py'] steps=3 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=-4.1 95%CI=[-8.8,+0.1] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 116
+   by category: what: -7.8 [-19.5,+0.4] (n=12)  how: -2.3 [-7.5,+2.0] (n=12)  why: -10.3 [-21.6,-0.4] (n=12)  where: +4.2 [-1.1,+9.9] (n=12)
+   paired efficiency (b−a): input_tokens: +372021 [+321367,+426168] (7.02x)  peak_input_tokens: +48262 [+46632,+49883] (4.90x)  output_tokens: +931 [+738,+1143] (1.80x)  tool_calls: -4 [-5,-2] (0.56x)  wall_s: +10 [+7,+13] (1.99x)  answer_chars: +287 [+91,+524] (1.37x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'(none)': 10, 'aoci_search': 29, 'aoci_get_entries': 8, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 27/12/9; hit cap: {'oh-1': 3, 'oh-aoci-2': 3}
+   -63  What are the dataflow dependencies between the composite data structure that aggregates token status and parsed token da
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+         oh-aoci-2      read=['src/streamlink/plugins/twitch.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+   -51  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-2      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=5 retried=None
+   -34  Why does the design rationale justify the specific enumeration of cookie exemption reason values in relation to third-pa
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=9 retried=None
+         oh-aoci-2      read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=3 retried=None
+   +23  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-aoci-2      read=['src/streamlink/validate/_validate.py'] steps=3 retried=None
+   +20  Where is the validation of session parameters and headers integration into the adaptive streaming protocol stream handle
+         oh-1           read=['tests/stream/test_stream_json.py'] steps=2 retried=None
+         oh-aoci-2      read=[] steps=2 retried=None
+   +15  Where is the implementation that handles the inheritance and merging of initialization parameters between parent and chi
+         oh-1           read=['src/streamlink/plugin/plugin.py'] steps=4 retried=None
+         oh-aoci-2      read=['src/streamlink/options.py', 'src/streamlink/plugin/plugin.py'] steps=4 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=-0.2 95%CI=[-4.2,+3.4] median=+0.0 win/tie/loss=21/9/18 sign-test p=0.749 | n for 80% power at this Δ ≈ 27949
+   by category: what: +3.3 [-2.4,+9.4] (n=12)  how: -4.8 [-15.2,+3.2] (n=12)  why: -3.1 [-12.4,+6.3] (n=12)  where: +3.6 [+1.1,+6.4] (n=12)
+   paired efficiency (b−a): input_tokens: +387028 [+338780,+441742] (7.26x)  peak_input_tokens: +48583 [+47030,+50128] (4.93x)  output_tokens: +896 [+699,+1094] (1.77x)  tool_calls: -4 [-5,-2] (0.56x)  wall_s: +9 [+7,+10] (1.90x)  answer_chars: +302 [+118,+507] (1.39x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_search': 28, '(none)': 7, 'aoci_get_entries': 9, 'terminal': 4}}
+   steps (b−a): fewer/same/more = 26/11/11; hit cap: {'oh-1': 3, 'oh-aoci-3': 4}
+   -53  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -37  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-3      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=8 retried=None
+   -22  Why does the parameter that enables reduced-latency streaming mode in a platform-specific HLS stream implementation clas
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-aoci-3      read=['src/streamlink/plugins/twitch.py'] steps=4 retried=None
+   +31  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-aoci-3      read=['src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/ustvnow.py', 'tests/plugins/test_mjunoon.py'] steps=10 retried=None
+   +26  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   +19  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-aoci-3      read=['src/streamlink/stream/hls/m3u8.py'] steps=4 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+1.2 95%CI=[-3.3,+5.4] median=+0.5 win/tie/loss=24/5/19 sign-test p=0.542 | n for 80% power at this Δ ≈ 1359
+   by category: what: +2.8 [-5.9,+12.7] (n=12)  how: -3.9 [-12.9,+2.0] (n=12)  why: +0.8 [-10.6,+11.8] (n=12)  where: +5.0 [+1.0,+9.7] (n=12)
+   paired efficiency (b−a): input_tokens: +395487 [+347718,+447748] (7.40x)  peak_input_tokens: +48681 [+47081,+50296] (4.94x)  output_tokens: +905 [+709,+1104] (1.78x)  tool_calls: -4 [-5,-2] (0.56x)  wall_s: +9 [+7,+10] (1.91x)  answer_chars: +335 [+154,+530] (1.43x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_search': 26, '(none)': 7, 'aoci_get_entries': 13, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 24/12/12; hit cap: {'oh-1': 3, 'oh-aoci-4': 4}
+   -48  How does a test utility class that combines event-based testing capabilities with streaming service-specific stream writ
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py'] steps=4 retried=None
+         oh-aoci-4      read=['tests/cli/test_streamrunner.py', 'tests/mixins/stream_hls.py', 'tests/testutils/handshake.py'] steps=8 retried=None
+   -37  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-4      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+   -23  What is the conceptual relationship between the directional force measurement property and the spatial orientation angle
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/input_.py'] steps=3 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +43  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-4      read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   +37  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-aoci-4      read=['src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/ustvnow.py', 'tests/plugins/test_mjunoon.py'] steps=10 retried=None
+   +26  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-aoci-4      read=['src/streamlink/stream/hls/m3u8.py'] steps=6 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=+1.3 95%CI=[-4.4,+6.7] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 1773
+   by category: what: +5.0 [-9.4,+18.3] (n=12)  how: -6.8 [-17.7,+2.2] (n=12)  why: +2.1 [-8.7,+12.2] (n=12)  where: +4.8 [-2.9,+12.1] (n=12)
+   paired efficiency (b−a): input_tokens: +390067 [+345393,+438683] (7.31x)  peak_input_tokens: +48632 [+47128,+50184] (4.93x)  output_tokens: +940 [+731,+1152] (1.81x)  tool_calls: -3 [-5,-2] (0.57x)  wall_s: +9 [+8,+11] (1.97x)  answer_chars: +420 [+181,+715] (1.54x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_search': 31, '(none)': 5, 'aoci_get_entries': 11, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 27/10/11; hit cap: {'oh-1': 3, 'oh-aoci-5': 3}
+   -55  What are the dataflow dependencies between the composite data structure that aggregates token status and parsed token da
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+         oh-aoci-5      read=['src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py'] steps=10 retried=None
+   -52  How does a test utility class that combines event-based testing capabilities with streaming service-specific stream writ
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py'] steps=4 retried=None
+         oh-aoci-5      read=['src/streamlink/stream/hls/hls.py', 'tests/mixins/stream_hls.py', 'tests/testutils/handshake.py'] steps=6 retried=None
+   -37  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-5      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=5 retried=None
+   +44  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-aoci-5      read=['src/streamlink/plugins/kick.py'] steps=5 retried=None
+   +43  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-5      read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   +36  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-aoci-5      read=['src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/ustvnow.py'] steps=7 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+0.6 95%CI=[-2.3,+3.6] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 2207
+   by category: what: +2.2 [-4.8,+9.4] (n=12)  how: -4.8 [-9.6,-0.2] (n=12)  why: +1.2 [-4.2,+6.8] (n=12)  where: +4.0 [+0.0,+8.8] (n=12)
+   paired efficiency (b−a): input_tokens: +386475 [+338224,+437658] (7.25x)  peak_input_tokens: +48492 [+47094,+49895] (4.92x)  output_tokens: +927 [+721,+1145] (1.80x)  tool_calls: -4 [-5,-2] (0.53x)  wall_s: +9 [+7,+10] (1.90x)  answer_chars: +404 [+208,+629] (1.52x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_search': 27, '(none)': 7, 'aoci_get_entries': 11, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 30/9/9; hit cap: {'oh-1': 3, 'oh-aoci-6': 3}
+   -16  How can a systematic approach ensure that the validation framework's extensibility maintains backward compatibility when
+         oh-1           read=['src/streamlink/validate/__init__.py', 'src/streamlink/validate/_exception.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py', 'tests/test_validate.py'] steps=5 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -16  How does the stream retrieval method implement multi-stage validation schema composition for extracting and processing e
+         oh-1           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=9 retried=None
+         oh-aoci-6      read=['src/streamlink/plugins/tvp.py', 'src/streamlink/session/http.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_exception.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=7 retried=None
+   -16  What is the conceptual relationship between the directional force measurement property and the spatial orientation angle
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/input_.py'] steps=3 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   +30  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-aoci-6      read=['src/streamlink/plugins/kick.py'] steps=3 retried=None
+   +25  Where in the streaming platform's API client class are error responses from the API handled and transformed into consist
+         oh-1           read=['src/streamlink/plugins/twitch.py'] steps=5 retried=None
+         oh-aoci-6      read=['src/streamlink/plugins/chzzk.py', 'src/streamlink/plugins/oneplusone.py', 'src/streamlink/plugins/twitch.py'] steps=6 retried=None
+   +22  Why does the parameter that enables reduced-latency streaming mode in a platform-specific HLS stream implementation clas
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-aoci-6      read=['src/streamlink/plugins/kick.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/segmented/segmented.py'] steps=10 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+0.6 95%CI=[-4.9,+5.8] median=+1.0 win/tie/loss=26/4/18 sign-test p=0.291 | n for 80% power at this Δ ≈ 8030
+   by category: what: +3.4 [-11.5,+16.1] (n=12)  how: -9.2 [-18.7,-1.5] (n=12)  why: +2.9 [-8.6,+13.6] (n=12)  where: +5.2 [-1.1,+12.6] (n=12)
+   paired efficiency (b−a): input_tokens: +393233 [+343789,+446440] (7.36x)  peak_input_tokens: +48571 [+46995,+50042] (4.93x)  output_tokens: +981 [+779,+1195] (1.85x)  tool_calls: -3 [-5,-2] (0.57x)  wall_s: +9 [+8,+11] (1.97x)  answer_chars: +342 [+141,+564] (1.44x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'(none)': 8, 'aoci_search': 29, 'aoci_get_entries': 9, 'terminal': 2}}
+   steps (b−a): fewer/same/more = 24/11/13; hit cap: {'oh-1': 3, 'oh-aoci-7': 3}
+   -62  What are the dataflow dependencies between the composite data structure that aggregates token status and parsed token da
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+         oh-aoci-7      read=['src/streamlink/plugins/twitch.py'] steps=10 retried=None
+   -44  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -41  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-7      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=6 retried=None
+   +45  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-7      read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=5 retried=None
+   +37  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-aoci-7      read=['src/streamlink/plugins/adultswim.py', 'src/streamlink/plugins/bfmtv.py', 'src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/ustvnow.py', 'tests/plugins/test_mjunoon.py', 'tests/plugins/test_n13tv.py'] steps=10 retried=None
+   +36  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-aoci-7      read=['src/streamlink/validate/_validate.py'] steps=4 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+1.9 95%CI=[-3.1,+6.6] median=+1.0 win/tie/loss=25/8/15 sign-test p=0.154 | n for 80% power at this Δ ≈ 647
+   by category: what: +9.2 [+2.5,+17.7] (n=12)  how: -6.6 [-17.4,+1.2] (n=12)  why: -1.6 [-14.1,+10.2] (n=12)  where: +6.5 [+1.4,+12.4] (n=12)
+   paired efficiency (b−a): input_tokens: +384900 [+336782,+436918] (7.23x)  peak_input_tokens: +48273 [+46676,+49838] (4.90x)  output_tokens: +961 [+767,+1161] (1.83x)  tool_calls: -3 [-5,-2] (0.59x)  wall_s: +9 [+8,+11] (1.99x)  answer_chars: +421 [+215,+645] (1.54x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'(none)': 8, 'aoci_search': 29, 'aoci_get_entries': 10, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 27/10/11; hit cap: {'oh-1': 3, 'oh-aoci-8': 3}
+   -56  How does a test utility class that combines event-based testing capabilities with streaming service-specific stream writ
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py'] steps=4 retried=None
+         oh-aoci-8      read=['tests/mixins/stream_hls.py', 'tests/testutils/handshake.py'] steps=4 retried=None
+   -46  Why does the frame metadata storage class facilitate accurate frame rendering and synchronization within the browser deb
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=3 retried=None
+         oh-aoci-8      read=['src/streamlink/webbrowser/cdp/devtools/page.py'] steps=4 retried=None
+   -27  Why is the domain code generator class used in generating type-safe Python modules from protocol domain definitions?
+         oh-1           read=['script/generate-cdp.py'] steps=5 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +42  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-8      read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   +37  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-aoci-8      read=['src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/rtpplay.py', 'src/streamlink/plugins/ustvnow.py'] steps=10 retried=None
+   +30  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-aoci-8      read=['src/streamlink/stream/dash/__init__.py', 'src/streamlink/stream/hls/__init__.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py'] steps=10 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+1.9 95%CI=[-2.6,+6.1] median=+2.0 win/tie/loss=27/4/17 sign-test p=0.174 | n for 80% power at this Δ ≈ 541
+   by category: what: +4.8 [-1.6,+13.4] (n=12)  how: -5.0 [-14.6,+1.4] (n=12)  why: -1.7 [-11.5,+7.7] (n=12)  where: +9.2 [+2.8,+16.6] (n=12)
+   paired efficiency (b−a): input_tokens: +392272 [+342626,+444899] (7.34x)  peak_input_tokens: +48430 [+46916,+50003] (4.92x)  output_tokens: +899 [+707,+1083] (1.78x)  tool_calls: -3 [-5,-2] (0.57x)  wall_s: +9 [+7,+11] (1.94x)  answer_chars: +231 [+67,+395] (1.30x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'aoci_search': 28, '(none)': 9, 'aoci_get_entries': 10, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 23/10/15; hit cap: {'oh-1': 3, 'oh-aoci-9': 5}
+   -50  How does a test utility class that combines event-based testing capabilities with streaming service-specific stream writ
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py'] steps=4 retried=None
+         oh-aoci-9      read=['tests/mixins/stream_hls.py'] steps=4 retried=None
+   -39  Why is a JSON deserialization factory method implemented in a browser context identifier type wrapper instead of using d
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/__init__.py', 'src/streamlink/webbrowser/cdp/devtools/browser.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=8 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -21  Why is the domain code generator class used in generating type-safe Python modules from protocol domain definitions?
+         oh-1           read=['script/generate-cdp.py'] steps=5 retried=None
+         oh-aoci-9      read=['script/generate-cdp.py'] steps=3 retried=None
+   +43  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-aoci-9      read=['src/streamlink/webbrowser/cdp/devtools/network.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=3 retried=None
+   +35  Where is the validation of session parameters and headers integration into the adaptive streaming protocol stream handle
+         oh-1           read=['tests/stream/test_stream_json.py'] steps=2 retried=None
+         oh-aoci-9      read=['tests/stream/test_stream_json.py'] steps=3 retried=None
+   +29  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+0.7 95%CI=[-3.9,+5.0] median=+0.5 win/tie/loss=24/5/19 sign-test p=0.542 | n for 80% power at this Δ ≈ 4289
+   by category: what: +6.1 [-0.8,+14.9] (n=12)  how: -2.1 [-12.2,+4.3] (n=12)  why: +4.8 [-2.4,+12.8] (n=12)  where: -6.1 [-15.8,+1.6] (n=12)
+   paired efficiency (b−a): input_tokens: -215 [-11201,+10896] (1.00x)  peak_input_tokens: +5360 [+4050,+6604] (1.43x)  output_tokens: -396 [-555,-245] (0.66x)  tool_calls: -3 [-5,-2] (0.58x)  wall_s: -2 [-4,-1] (0.74x)  answer_chars: +231 [+46,+421] (1.30x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 33/7/8; hit cap: {'oh-1': 3, 'oh-cg-1': 1}
+   -53  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-cg-1        read=['src/streamlink/plugins/abematv.py'] steps=5 retried=None
+   -49  Where in the codebase does the initialization of a base class for parsing elements containing multiple segment definitio
+         oh-1           read=['src/streamlink/stream/dash/manifest.py'] steps=3 retried=None
+         oh-cg-1        read=['src/streamlink/stream/dash/manifest.py', 'src/streamlink/stream/dash/segment.py'] steps=5 retried=None
+   -17  Why is the domain code generator class used in generating type-safe Python modules from protocol domain definitions?
+         oh-1           read=['script/generate-cdp.py'] steps=5 retried=None
+         oh-cg-1        read=['script/generate-cdp.py'] steps=3 retried=None
+   +45  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-cg-1        read=['src/streamlink/stream/hls/m3u8.py'] steps=10 retried=None
+   +37  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-1        read=['src/streamlink/plugins/mjunoon.py'] steps=5 retried=None
+   +25  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-cg-1        read=['src/streamlink/stream/hls/m3u8.py'] steps=4 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+2.8 95%CI=[-1.0,+6.4] median=+1.0 win/tie/loss=25/9/14 sign-test p=0.108 | n for 80% power at this Δ ≈ 170
+   by category: what: +6.2 [-0.5,+13.6] (n=12)  how: +2.5 [-0.2,+6.0] (n=12)  why: +6.7 [+0.3,+13.9] (n=12)  where: -4.2 [-14.5,+3.8] (n=12)
+   paired efficiency (b−a): input_tokens: +6698 [-6410,+20858] (1.11x)  peak_input_tokens: +4701 [+3480,+5889] (1.38x)  output_tokens: -258 [-446,-61] (0.78x)  tool_calls: -3 [-4,-1] (0.67x)  wall_s: -1 [-3,+0] (0.86x)  answer_chars: +220 [+76,+378] (1.28x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/10/11; hit cap: {'oh-1': 3, 'oh-cg-10': 4}
+   -49  Where in the codebase does the initialization of a base class for parsing elements containing multiple segment definitio
+         oh-1           read=['src/streamlink/stream/dash/manifest.py'] steps=3 retried=None
+         oh-cg-10       read=['src/streamlink/stream/dash/manifest.py'] steps=3 retried=None
+   -20  Where is the asynchronous in-memory communication channel implementation for capturing and routing stdout and stderr out
+         oh-1           read=['tests/utils/test_processoutput.py'] steps=3 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   -14  Where in the test method that verifies timing offset handling during periodic refresh operations does the control flow a
+         oh-1           read=['tests/stream/hls/test_hls.py'] steps=4 retried=None
+         oh-cg-10       read=['src/streamlink/stream/dash/dash.py', 'tests/stream/dash/test_dash.py'] steps=5 retried=None
+   +34  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-10       read=['CHANGELOG.md', 'src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=10 retried=None
+   +30  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-cg-10       read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/__init__.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py', 'src/streamlink/stream/segmented/segmented.py'] steps=10 retried=None
+   +27  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-cg-10       read=['src/streamlink/stream/hls/m3u8.py'] steps=5 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.5 95%CI=[-3.7,+4.6] median=+0.0 win/tie/loss=18/7/23 sign-test p=0.533 | n for 80% power at this Δ ≈ 6987
+   by category: what: +10.3 [+3.1,+19.3] (n=12)  how: -6.1 [-14.2,+0.4] (n=12)  why: +4.8 [-0.9,+11.1] (n=12)  where: -7.1 [-13.8,-2.0] (n=12)
+   paired efficiency (b−a): input_tokens: -212 [-12530,+12562] (1.00x)  peak_input_tokens: +4633 [+3317,+5901] (1.37x)  output_tokens: -339 [-497,-181] (0.71x)  tool_calls: -3 [-4,-2] (0.63x)  wall_s: -2 [-3,-1] (0.79x)  answer_chars: +356 [+184,+539] (1.46x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 34/6/8; hit cap: {'oh-1': 3, 'oh-cg-2': 2}
+   -40  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-cg-2        read=['src/streamlink/plugins/abematv.py', 'src/streamlink/utils/crypto.py'] steps=4 retried=None
+   -36  Where in the test class for file input/output operations is the logic implemented that determines the modification track
+         oh-1           read=['tests/test_cache.py'] steps=3 retried=None
+         oh-cg-2        read=['src/streamlink_cli/output/file.py', 'tests/cli/console/test_progress.py', 'tests/cli/output/test_file.py'] steps=10 retried=None
+   -24  How does a test utility class that combines event-based testing capabilities with streaming service-specific stream writ
+         oh-1           read=['src/streamlink/plugins/kick.py', 'src/streamlink/plugins/twitch.py', 'tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py'] steps=4 retried=None
+         oh-cg-2        read=['tests/mixins/stream_hls.py', 'tests/plugins/test_kick.py', 'tests/plugins/test_twitch.py', 'tests/testutils/handshake.py'] steps=7 retried=None
+   +45  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-2        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +32  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-cg-2        read=['src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py', 'src/streamlink/stream/segmented/segmented.py'] steps=7 retried=None
+   +30  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-2        read=['src/streamlink/plugins/adultswim.py', 'src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_adultswim.py'] steps=9 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+2.5 95%CI=[-0.2,+5.5] median=+0.5 win/tie/loss=24/6/18 sign-test p=0.441 | n for 80% power at this Δ ≈ 130
+   by category: what: +4.0 [-1.5,+10.7] (n=12)  how: +0.1 [-2.8,+3.3] (n=12)  why: +3.8 [-3.2,+11.9] (n=12)  where: +2.2 [-2.8,+7.6] (n=12)
+   paired efficiency (b−a): input_tokens: +464 [-10970,+12295] (1.01x)  peak_input_tokens: +4581 [+3538,+5609] (1.37x)  output_tokens: -352 [-508,-202] (0.70x)  tool_calls: -3 [-4,-2] (0.63x)  wall_s: -2 [-3,-1] (0.77x)  answer_chars: +222 [+66,+379] (1.29x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 32/7/9; hit cap: {'oh-1': 3, 'oh-cg-3': 2}
+   -14  Why is a JSON deserialization factory method implemented in a browser context identifier type wrapper instead of using d
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/__init__.py', 'src/streamlink/webbrowser/cdp/devtools/browser.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=8 retried=None
+         oh-cg-3        read=['src/streamlink/webbrowser/cdp/devtools/util.py'] steps=2 retried=None
+   -13  What is the conceptual role of the handshake mechanism in the test class for HTTP output operations' test method for wri
+         oh-1           read=['tests/cli/test_streamrunner.py', 'tests/testutils/handshake.py'] steps=8 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   -13  Where is the circular dependency detection mechanism implemented for configurable parameter dependency resolution in the
+         oh-1           read=['src/streamlink/options.py'] steps=5 retried=None
+         oh-cg-3        read=['src/streamlink_cli/main.py'] steps=10 retried=None
+   +35  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-3        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +34  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-3        read=['src/streamlink/plugins/adultswim.py', 'src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/n13tv.py', 'src/streamlink/plugins/ustvnow.py'] steps=10 retried=None
+   +21  Where in the streaming platform's API client class are error responses from the API handled and transformed into consist
+         oh-1           read=['src/streamlink/plugins/twitch.py'] steps=5 retried=None
+         oh-cg-3        read=['src/streamlink/plugins/chzzk.py', 'src/streamlink/plugins/twitch.py'] steps=8 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+1.1 95%CI=[-2.8,+5.1] median=+0.0 win/tie/loss=19/10/19 sign-test p=1.000 | n for 80% power at this Δ ≈ 1151
+   by category: what: +7.6 [+1.0,+16.2] (n=12)  how: -4.2 [-13.2,+2.4] (n=12)  why: +4.8 [-0.8,+10.9] (n=12)  where: -3.5 [-11.0,+3.4] (n=12)
+   paired efficiency (b−a): input_tokens: +7483 [-4990,+19569] (1.12x)  peak_input_tokens: +5000 [+3910,+6061] (1.40x)  output_tokens: -249 [-395,-104] (0.79x)  tool_calls: -2 [-3,-1] (0.71x)  wall_s: -1 [-2,-0] (0.87x)  answer_chars: +237 [+64,+407] (1.30x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/7/11; hit cap: {'oh-1': 3, 'oh-cg-4': 3}
+   -47  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-cg-4        read=['src/streamlink/plugins/mjunoon.py', 'src/streamlink/plugins/streann.py'] steps=4 retried=None
+   -33  Where is the asynchronous in-memory communication channel implementation for capturing and routing stdout and stderr out
+         oh-1           read=['tests/utils/test_processoutput.py'] steps=3 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   -15  Where in the test method that verifies timing offset handling during periodic refresh operations does the control flow a
+         oh-1           read=['tests/stream/hls/test_hls.py'] steps=4 retried=None
+         oh-cg-4        read=['src/streamlink/stream/dash/dash.py', 'tests/stream/dash/test_dash.py'] steps=8 retried=None
+   +42  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-4        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=10 retried=None
+   +29  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-cg-4        read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=10 retried=None
+   +28  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-4        read=['src/streamlink/plugins/albavision.py', 'src/streamlink/plugins/bloomberg.py', 'src/streamlink/plugins/btv.py', 'src/streamlink/plugins/mrtmk.py', 'src/streamlink/plugins/twitch.py', 'src/streamlink/plugins/ustvnow.py'] steps=10 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+0.4 95%CI=[-2.5,+3.1] median=+0.0 win/tie/loss=19/10/19 sign-test p=1.000 | n for 80% power at this Δ ≈ 5999
+   by category: what: +4.3 [+0.5,+9.1] (n=12)  how: -5.3 [-11.9,-0.8] (n=12)  why: -0.8 [-6.9,+5.4] (n=12)  where: +3.2 [+0.7,+7.2] (n=12)
+   paired efficiency (b−a): input_tokens: -830 [-12928,+12293] (0.99x)  peak_input_tokens: +4720 [+3499,+5868] (1.38x)  output_tokens: -353 [-523,-188] (0.70x)  tool_calls: -3 [-4,-2] (0.61x)  wall_s: -1 [-3,+0] (0.85x)  answer_chars: +256 [+119,+403] (1.33x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 33/7/8; hit cap: {'oh-1': 3, 'oh-cg-5': 3}
+   -38  How does the stream retrieval method implement multi-stage validation schema composition for extracting and processing e
+         oh-1           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=9 retried=None
+         oh-cg-5        read=[] steps=3 retried=None
+   -18  Why does the method responsible for retrieving master playlist files with enforced UTF-8 encoding serve a specific archi
+         oh-1           read=['src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-cg-5        read=['src/streamlink/plugins/filmon.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=4 retried=None
+   -14  Why is the plugin discovery and metadata extraction class used in the custom documentation generation extension for exte
+         oh-1           read=['docs/plugins.rst', 'docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-cg-5        read=['docs/conf.py', 'docs/plugins.rst'] steps=4 retried=None
+   +24  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-5        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=7 retried=None
+   +23  Where in the streaming platform's API client class are error responses from the API handled and transformed into consist
+         oh-1           read=['src/streamlink/plugins/twitch.py'] steps=5 retried=None
+         oh-cg-5        read=['src/streamlink/plugins/twitch.py'] steps=7 retried=None
+   +21  Why does the decorator-based tag parsing approach introduce performance overhead compared to direct function registratio
+         oh-1           read=['src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+0.4 95%CI=[-2.2,+2.9] median=+0.0 win/tie/loss=23/5/20 sign-test p=0.761 | n for 80% power at this Δ ≈ 4719
+   by category: what: +5.2 [+1.2,+9.8] (n=12)  how: -0.7 [-5.2,+4.0] (n=12)  why: -2.3 [-8.3,+3.4] (n=12)  where: -0.7 [-5.3,+3.8] (n=12)
+   paired efficiency (b−a): input_tokens: -2814 [-14583,+9712] (0.95x)  peak_input_tokens: +4566 [+3263,+5854] (1.37x)  output_tokens: -423 [-579,-277] (0.63x)  tool_calls: -4 [-5,-3] (0.56x)  wall_s: -3 [-4,-1] (0.73x)  answer_chars: +242 [+108,+386] (1.31x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 33/11/4; hit cap: {'oh-1': 3, 'oh-cg-6': 1}
+   -20  Why does the method responsible for retrieving master playlist files with enforced UTF-8 encoding serve a specific archi
+         oh-1           read=['src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=8 retried=None
+         oh-cg-6        read=['src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py'] steps=5 retried=None
+   -16  Why is the plugin discovery and metadata extraction class used in the custom documentation generation extension for exte
+         oh-1           read=['docs/plugins.rst', 'docs/sphinxext/ext_plugins.py', 'src/streamlink/plugins/twitch.py'] steps=4 retried=None
+         oh-cg-6        read=['docs/plugins.rst'] steps=4 retried=None
+   -15  How can a systematic approach ensure that the validation framework's extensibility maintains backward compatibility when
+         oh-1           read=['src/streamlink/validate/__init__.py', 'src/streamlink/validate/_exception.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py', 'tests/test_validate.py'] steps=5 retried=None
+         oh-cg-6        read=['src/streamlink/plugin/api/validate.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_exception.py', 'src/streamlink/validate/_validators.py'] steps=3 retried=None
+   +24  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-6        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +17  How does the stream retrieval method implement multi-stage validation schema composition for extracting and processing e
+         oh-1           read=['docs/api_guide/validate.rst', 'src/streamlink/plugin/plugin.py', 'src/streamlink/validate/__init__.py', 'src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py'] steps=9 retried=None
+         oh-cg-6        read=[] steps=2 retried=None
+   +16  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-cg-6        read=[] steps=2 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+3.4 95%CI=[+0.9,+6.3] median=+0.5 win/tie/loss=24/7/17 sign-test p=0.349 | n for 80% power at this Δ ≈ 59
+   by category: what: +7.3 [+2.8,+12.8] (n=12)  how: +0.7 [-2.2,+3.4] (n=12)  why: +6.7 [+0.5,+13.9] (n=12)  where: -0.9 [-4.8,+3.7] (n=12)
+   paired efficiency (b−a): input_tokens: -517 [-12293,+11818] (0.99x)  peak_input_tokens: +4694 [+3660,+5661] (1.38x)  output_tokens: -384 [-551,-224] (0.67x)  tool_calls: -3 [-4,-2] (0.62x)  wall_s: -2 [-4,-1] (0.75x)  answer_chars: +245 [+76,+421] (1.31x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 34/7/7; hit cap: {'oh-1': 3, 'oh-cg-7': 2}
+   -12  Where in the test class for file input/output operations is the logic implemented that determines the modification track
+         oh-1           read=['tests/test_cache.py'] steps=3 retried=None
+         oh-cg-7        read=['src/streamlink/cache.py', 'tests/cli/output/test_file.py'] steps=10 retried=None
+   -8  How should the component testing framework be designed to automatically validate input pattern matching across multiple 
+         oh-1           read=['docs/developing.rst', 'tests/conftest.py', 'tests/plugin/test_plugin.py', 'tests/plugins/__init__.py', 'tests/plugins/conftest.py', 'tests/plugins/test_youtube.py'] steps=7 retried=None
+         oh-cg-7        read=['tests/plugins/__init__.py', 'tests/plugins/conftest.py', 'tests/plugins/test_twitch.py', 'tests/test_plugins.py'] steps=3 retried=None
+   -7  Where in the input dictionary must the specific JSON structure and data types be located for the JSON deserialization me
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=5 retried=None
+         oh-cg-7        read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=5 retried=None
+   +39  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-7        read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=6 retried=None
+   +30  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-7        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=5 retried=None
+   +19  Where in the control flow of a validation function that applies multiple key path lookups to the same input value is nes
+         oh-1           read=['src/streamlink/validate/_schemas.py', 'src/streamlink/validate/_validate.py', 'src/streamlink/validate/_validators.py'] steps=4 retried=None
+         oh-cg-7        read=[] steps=3 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=-1.1 95%CI=[-5.4,+2.7] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 1276
+   by category: what: +4.3 [-1.8,+10.8] (n=12)  how: -6.2 [-18.3,+2.6] (n=12)  why: +1.2 [-4.8,+7.0] (n=12)  where: -3.7 [-9.3,+2.7] (n=12)
+   paired efficiency (b−a): input_tokens: -2637 [-13485,+8446] (0.96x)  peak_input_tokens: +4148 [+2956,+5316] (1.34x)  output_tokens: -356 [-523,-191] (0.69x)  tool_calls: -3 [-4,-2] (0.59x)  wall_s: -2 [-3,-1] (0.77x)  answer_chars: +317 [+133,+507] (1.41x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 35/7/6; hit cap: {'oh-1': 3, 'oh-cg-8': 0}
+   -65  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-cg-8        read=['src/streamlink/plugins/abematv.py', 'src/streamlink/utils/crypto.py', 'tests/plugins/test_abematv.py'] steps=5 retried=None
+   -20  Why is the domain code generator class used in generating type-safe Python modules from protocol domain definitions?
+         oh-1           read=['script/generate-cdp.py'] steps=5 retried=None
+         oh-cg-8        read=['script/generate-cdp.py'] steps=2 retried=None
+   -18  Where is the asynchronous in-memory communication channel implementation for capturing and routing stdout and stderr out
+         oh-1           read=['tests/utils/test_processoutput.py'] steps=3 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   +25  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-8        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +23  Where in the streaming platform's API client class are error responses from the API handled and transformed into consist
+         oh-1           read=['src/streamlink/plugins/twitch.py'] steps=5 retried=None
+         oh-cg-8        read=['src/streamlink/plugins/chzzk.py', 'src/streamlink/plugins/twitch.py'] steps=6 retried=None
+   +22  What architectural role does the prefetch metadata handler class play in the adaptive streaming protocol module's layere
+         oh-1           read=['src/streamlink/plugins/twitch.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/segmented/segmented.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=10 retried=None
+         oh-cg-8        read=['src/streamlink/plugins/kick.py', 'src/streamlink/stream/hls/__init__.py', 'src/streamlink/stream/hls/hls.py', 'src/streamlink/stream/hls/m3u8.py', 'src/streamlink/stream/hls/segment.py'] steps=9 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+1.9 95%CI=[-2.1,+5.6] median=+1.0 win/tie/loss=28/5/15 sign-test p=0.066 | n for 80% power at this Δ ≈ 421
+   by category: what: +5.6 [-1.0,+14.1] (n=12)  how: -3.4 [-13.1,+3.2] (n=12)  why: +4.0 [-1.5,+9.6] (n=12)  where: +1.2 [-6.8,+8.1] (n=12)
+   paired efficiency (b−a): input_tokens: +1350 [-10318,+13732] (1.02x)  peak_input_tokens: +4423 [+3240,+5553] (1.36x)  output_tokens: -335 [-495,-178] (0.71x)  tool_calls: -3 [-4,-2] (0.62x)  wall_s: -2 [-3,-1] (0.81x)  answer_chars: +289 [+142,+449] (1.37x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 32/6/10; hit cap: {'oh-1': 3, 'oh-cg-9': 2}
+   -50  How does a streaming plugin that processes encrypted streaming data from embedded iframes ensure secure authentication t
+         oh-1           read=['src/streamlink/plugins/streann.py', 'src/streamlink/utils/crypto.py'] steps=6 retried=None
+         oh-cg-9        read=['src/streamlink/plugins/abematv.py', 'src/streamlink/utils/crypto.py'] steps=4 retried=None
+   -35  Where is the asynchronous in-memory communication channel implementation for capturing and routing stdout and stderr out
+         oh-1           read=['tests/utils/test_processoutput.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   -11  Why does the design rationale justify the specific enumeration of cookie exemption reason values in relation to third-pa
+         oh-1           read=['script/generate-cdp.py', 'src/streamlink/webbrowser/cdp/devtools/network.py'] steps=9 retried=None
+         oh-cg-9        read=['src/streamlink/webbrowser/cdp/devtools/network.py'] steps=2 retried=None
+   +44  What architectural role does the event class that handles WebSocket message errors play in the browser protocol event ha
+         oh-1           read=['src/streamlink/webbrowser/cdp/devtools/__init__.py'] steps=10 retried=None
+         oh-cg-9        read=['src/streamlink/webbrowser/cdp/connection.py', 'src/streamlink/webbrowser/cdp/devtools/util.py'] steps=6 retried=None
+   +23  Why does the performance of a streaming service plugin's stream retrieval method degrade when the JavaScript resource fi
+         oh-1           read=['src/streamlink/plugins/mjunoon.py', 'tests/plugins/test_mjunoon.py'] steps=9 retried=None
+         oh-cg-9        read=['src/streamlink/plugins/mjunoon.py'] steps=7 retried=None
+   +22  Where in the streaming platform's API client class are error responses from the API handled and transformed into consist
+         oh-1           read=['src/streamlink/plugins/twitch.py'] steps=5 retried=None
+         oh-cg-9        read=['src/streamlink/plugins/chzzk.py', 'src/streamlink/plugins/twitch.py'] steps=8 retried=None
+
+wrote runs/sweqa-r5-streamlink-k10/analysis.json

@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-reflex-k1
+manifest: harness=None created=2026-10-15T18:03:16Z repo=reflex commit=fe0f946dc0c2 index_entries=0
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   83.5  13.7   80.8   77.6   85.2   89.7 |   8.6   8.6   2.2   0.0 |   106949    15925    1691    1137    n/a   87.8 |   0.76   0.00   0.75
+dims: oh=16.0/15.5/18.3/17.6/16.2
+judge vote SD (mean over questions): oh=0.8
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=5,133,550 out=81,185
+
+wrote runs/sweqa-r5p-glm46-reflex-k1/analysis.json

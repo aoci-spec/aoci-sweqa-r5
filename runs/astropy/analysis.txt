@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-astropy-k10
+manifest: harness=None created=2026-10-15T21:48:06Z repo=astropy commit=0a041d38fbd0 index_entries=930
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   77.1  12.4   68.2   81.6   79.0   79.2 |   5.3   7.6   1.7   0.0 |    59529    11813    1120     750    n/a    9.9 |   0.73   0.00   0.68
+oh-10           48   0   0 |   78.5  10.7   73.6   82.7   77.7   82.4 |   5.5   7.7   1.9   0.0 |    62458    11978    1082     777    n/a    9.6 |   0.73   0.00   0.55
+oh-2            48   0   0 |   76.7  12.3   68.0   82.8   78.6   80.9 |   5.4   7.7   1.8   0.0 |    61713    11812    1049     738    n/a    9.4 |   0.73   0.00   0.55
+oh-3            48   0   0 |   76.1  12.2   68.8   81.7   75.3   77.5 |   5.2   7.6   1.8   0.0 |    58992    11882    1065     758    n/a    9.4 |   0.68   0.00   0.55
+oh-4            48   0   0 |   75.8  14.8   66.1   82.8   77.9   79.5 |   5.1   7.4   1.8   0.0 |    57182    11543    1025     744    n/a    9.0 |   0.72   0.00   0.46
+oh-5            48   0   0 |   76.8  12.9   70.6   79.8   77.5   79.7 |   5.2   7.3   1.7   0.0 |    56842    11764    1032     726    n/a    9.2 |   0.69   0.00   0.55
+oh-6            48   0   1 |   75.6  13.9   69.2   79.7   73.6   79.0 |   5.1   7.6   1.7   0.0 |    58072    11629    1025     747    n/a    9.1 |   0.70   0.00   0.55
+oh-7            48   0   0 |   75.7  14.1   70.8   82.7   73.2   79.4 |   5.6   7.9   1.7   0.0 |    62142    11860    1101     739    n/a   11.7 |   0.68   0.00   0.52
+oh-8            48   0   1 |   75.0  14.8   66.8   81.8   73.6   81.2 |   5.8   8.1   1.9   0.0 |    63766    11917    1094     662    n/a   11.6 |   0.73   0.00   0.55
+oh-9            48   0   2 |   74.4  13.7   64.8   78.5   78.5   75.8 |   5.7   8.1   1.7   0.0 |    63224    11754    1284    1404    n/a   10.4 |   0.70   0.00   0.57
+oh-aoci-1       48   0   0 |   77.3  18.0   63.7   82.4   85.5   78.1 |   5.2   5.7   1.5  12.8 |  1235756   119206    2705    1096    n/a   29.9 |   0.57   0.59   0.54
+oh-aoci-10      48   0   1 |   81.0  12.6   76.7   79.6   84.9   82.8 |   5.1   5.9   1.6  15.7 |  1242056   119337    2718    1099    n/a   30.1 |   0.61   0.54   0.78
+oh-aoci-2       48   0   0 |   74.5  18.0   62.3   78.8   83.3   77.5 |   4.4   5.2   1.3  14.2 |  1150938   118740    2609     997    n/a   28.9 |   0.54   0.38   0.57
+oh-aoci-3       48   0   0 |   78.9  15.5   67.4   80.7   87.9   83.7 |   5.0   5.5   1.5  10.6 |  1210494   118880    2630     986    n/a   29.5 |   0.57   0.39   0.62
+oh-aoci-4       48   0   0 |   76.4  16.5   59.9   83.2   80.5   82.8 |   5.2   6.0   1.6  13.2 |  1240195   119299    2710    1077    n/a   30.5 |   0.68   0.43   0.58
+oh-aoci-5       48   0   0 |   76.3  17.6   63.1   82.0   81.9   82.1 |   5.5   6.4   1.6  16.3 |  1288826   119850    2857    1048    n/a   32.0 |   0.60   0.54   0.61
+oh-aoci-6       48   0   0 |   77.7  16.6   67.9   83.3   82.9   79.7 |   4.8   5.4   1.5  13.9 |  1189521   118997    2687    1116    n/a   31.8 |   0.68   0.48   0.64
+oh-aoci-7       48   0   0 |   77.0  15.8   68.0   84.2   75.4   83.3 |   5.5   6.1   1.7  14.7 |  1277983   119714    2737    1128    n/a   32.5 |   0.68   0.48   0.61
+oh-aoci-8       48   0   0 |   78.2  15.8   69.0   85.2   80.3   82.3 |   5.0   5.5   1.6  10.1 |  1206692   119027    2673    1119    n/a   30.1 |   0.62   0.54   0.74
+oh-aoci-9       48   0   0 |   76.1  16.6   68.6   83.6   80.2   74.5 |   5.5   6.4   1.7  15.5 |  1279921   119686    2746    1024    n/a   30.7 |   0.57   0.59   0.59
+oh-cg-1         48   0   1 |   76.5  15.5   68.5   81.9   79.8   76.8 |   4.6   5.6   1.3  11.1 |    79759    17457     893     821    n/a    8.4 |   0.66   0.31   0.58
+oh-cg-10        48   0   1 |   77.3  14.3   68.7   83.6   76.9   78.5 |   4.6   5.4   1.5  11.0 |    73777    16738     830     763    n/a    8.9 |   0.66   0.32   0.54
+oh-cg-2         48   0   0 |   76.1  15.3   65.2   83.2   80.8   74.4 |   4.8   5.6   1.5   9.6 |    78995    16821     863     835    n/a    8.4 |   0.61   0.36   0.54
+oh-cg-3         48   0   0 |   77.8  13.6   68.7   82.0   80.3   79.9 |   5.0   6.4   1.5  11.5 |    86124    17751     975     852    n/a   10.1 |   0.55   0.33   0.65
+oh-cg-4         48   0   0 |   76.0  14.6   65.6   82.6   78.4   76.2 |   4.9   5.8   1.4   9.9 |    77530    16786     874     726    n/a    8.6 |   0.61   0.40   0.56
+oh-cg-5         48   0   0 |   75.1  13.8   68.4   79.6   79.9   72.6 |   4.8   5.6   1.5   9.9 |    76989    16729     886     736    n/a    8.7 |   0.68   0.39   0.46
+oh-cg-6         48   0   1 |   76.3  13.6   67.6   83.5   77.4   75.9 |   5.1   5.9   1.6  10.4 |    86095    17453     909     770    n/a   11.0 |   0.66   0.36   0.56
+oh-cg-7         48   0   0 |   76.5  14.0   67.3   81.8   78.9   79.4 |   4.8   5.7   1.5   9.5 |    77621    17046    1051    1565    n/a    9.8 |   0.68   0.31   0.49
+oh-cg-8         48   0   0 |   76.7  12.7   66.1   81.4   80.6   79.1 |   5.0   6.0   1.4  10.2 |    83120    17321     908     741    n/a    9.3 |   0.63   0.36   0.63
+oh-cg-9         48   0   2 |   77.6  14.0   67.4   85.0   76.2   82.0 |   4.9   5.9   1.5   9.2 |    83812    17174     932     792    n/a    9.0 |   0.65   0.46   0.58
+dims: oh-1=15.2/13.3/18.4/15.9/14.2  oh-10=15.6/13.5/18.6/16.1/14.6  oh-2=15.2/13.2/18.3/15.8/14.2  oh-3=15.1/13.0/18.2/15.8/14.0  oh-4=14.9/12.9/18.2/15.9/13.9  oh-5=15.2/13.4/18.2/15.8/14.2  oh-6=14.9/13.0/18.2/15.6/13.9  oh-7=14.9/12.8/18.5/15.8/13.9  oh-8=14.7/12.9/18.1/15.7/13.7  oh-9=14.6/12.7/18.0/15.4/13.6  oh-aoci-1=15.2/13.8/17.8/15.8/14.7  oh-aoci-10=16.2/14.7/18.4/16.3/15.5  oh-aoci-2=14.5/13.1/17.3/15.5/14.0  oh-aoci-3=15.6/14.0/18.2/16.1/15.1  oh-aoci-4=14.9/13.4/17.7/15.9/14.5  oh-aoci-5=15.0/13.7/17.4/15.8/14.6  oh-aoci-6=15.2/13.8/18.0/16.0/14.8  oh-aoci-7=15.0/13.9/17.7/15.8/14.6  oh-aoci-8=15.4/14.0/18.0/15.9/14.8  oh-aoci-9=15.0/13.4/17.6/15.6/14.5  oh-cg-1=15.1/13.2/18.1/15.9/14.2  oh-cg-10=15.3/13.3/18.4/16.0/14.3  oh-cg-2=15.3/13.2/17.9/15.6/14.1  oh-cg-3=15.5/13.4/18.4/16.2/14.4  oh-cg-4=15.0/13.1/18.0/16.0/14.0  oh-cg-5=14.5/13.0/18.2/15.6/13.8  oh-cg-6=15.0/13.1/18.3/15.8/14.1  oh-cg-7=15.2/13.2/18.1/15.7/14.2  oh-cg-8=15.2/13.1/18.4/15.9/14.1  oh-cg-9=15.4/13.4/18.4/15.9/14.5
+judge vote SD (mean over questions): oh-1=0.8  oh-10=1.0  oh-2=1.1  oh-3=0.8  oh-4=0.8  oh-5=0.7  oh-6=0.8  oh-7=1.2  oh-8=0.8  oh-9=0.9  oh-aoci-1=0.9  oh-aoci-10=0.7  oh-aoci-2=1.1  oh-aoci-3=0.9  oh-aoci-4=1.0  oh-aoci-5=1.1  oh-aoci-6=1.1  oh-aoci-7=0.9  oh-aoci-8=1.0  oh-aoci-9=0.7  oh-cg-1=0.8  oh-cg-10=0.8  oh-cg-2=1.2  oh-cg-3=0.8  oh-cg-4=0.9  oh-cg-5=1.1  oh-cg-6=1.0  oh-cg-7=1.0  oh-cg-8=0.8  oh-cg-9=0.8
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.4 calls/2994ch (used on 81% of questions)  oh-aoci-10=1.5 calls/3731ch (used on 83% of questions)  oh-aoci-2=1.1 calls/3172ch (used on 75% of questions)  oh-aoci-3=1.2 calls/2590ch (used on 77% of questions)  oh-aoci-4=1.3 calls/3029ch (used on 81% of questions)  oh-aoci-5=1.5 calls/3760ch (used on 88% of questions)  oh-aoci-6=1.2 calls/3099ch (used on 79% of questions)  oh-aoci-7=1.3 calls/3371ch (used on 79% of questions)  oh-aoci-8=1.2 calls/2343ch (used on 79% of questions)  oh-aoci-9=1.4 calls/3451ch (used on 81% of questions)  oh-cg-1=1.2 calls/27187ch (used on 100% of questions)  oh-cg-10=1.1 calls/24414ch (used on 100% of questions)  oh-cg-2=1.1 calls/24393ch (used on 100% of questions)  oh-cg-3=1.2 calls/26318ch (used on 100% of questions)  oh-cg-4=1.1 calls/23908ch (used on 100% of questions)  oh-cg-5=1.1 calls/24517ch (used on 100% of questions)  oh-cg-6=1.1 calls/24798ch (used on 100% of questions)  oh-cg-7=1.2 calls/24873ch (used on 100% of questions)  oh-cg-8=1.2 calls/25283ch (used on 100% of questions)  oh-cg-9=1.1 calls/24361ch (used on 100% of questions)
+totals: oh-1: in=2,857,371 out=53,765  oh-10: in=2,997,994 out=51,922  oh-2: in=2,962,211 out=50,373  oh-3: in=2,831,639 out=51,111  oh-4: in=2,744,739 out=49,208  oh-5: in=2,728,419 out=49,512  oh-6: in=2,787,438 out=49,203  oh-7: in=2,982,828 out=52,842  oh-8: in=3,060,784 out=52,532  oh-9: in=3,034,749 out=61,617  oh-aoci-1: in=59,316,275 out=129,837  oh-aoci-10: in=59,618,707 out=130,454  oh-aoci-2: in=55,245,044 out=125,250  oh-aoci-3: in=58,103,691 out=126,233  oh-aoci-4: in=59,529,359 out=130,067  oh-aoci-5: in=61,863,638 out=137,141  oh-aoci-6: in=57,097,031 out=128,973  oh-aoci-7: in=61,343,181 out=131,373  oh-aoci-8: in=57,921,192 out=128,315  oh-aoci-9: in=61,436,187 out=131,794  oh-cg-1: in=3,828,450 out=42,881  oh-cg-10: in=3,541,314 out=39,860  oh-cg-2: in=3,791,753 out=41,420  oh-cg-3: in=4,133,930 out=46,795  oh-cg-4: in=3,721,437 out=41,961  oh-cg-5: in=3,695,485 out=42,542  oh-cg-6: in=4,132,583 out=43,633  oh-cg-7: in=3,725,807 out=50,430  oh-cg-8: in=3,989,758 out=43,560  oh-cg-9: in=4,022,963 out=44,737
+
+== oh-10 - oh-1: n=48 Δ=+1.4 95%CI=[-1.3,+4.4] median=+0.0 win/tie/loss=23/10/15 sign-test p=0.256 | n for 80% power at this Δ ≈ 383
+   by category: what: +5.4 [-2.1,+13.8] (n=12)  how: +1.1 [-0.2,+2.2] (n=13)  why: -1.3 [-5.4,+3.2] (n=11)  where: +3.2 [+0.8,+6.1] (n=11)
+   paired efficiency (b−a): input_tokens: +2930 [-3539,+9208] (1.05x)  peak_input_tokens: +165 [-118,+467] (1.01x)  output_tokens: -38 [-152,+58] (0.97x)  tool_calls: +0 [-0,+1] (1.01x)  wall_s: -0 [-2,+1] (0.97x)  answer_chars: +27 [-82,+139] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 15/17/16; hit cap: {'oh-1': 7, 'oh-10': 8}
+   -31  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-10          read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+   -16  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-10          read=['astropy/units/tests/test_quantity_non_ufuncs.py', 'astropy/utils/masked/tests/test_function_helpers.py'] steps=10 retried=None
+   -9  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-10          read=['astropy/nddata/ccddata.py', 'astropy/table/serialize.py', 'astropy/table/table.py'] steps=10 retried=None
+   +42  What architectural pattern does the header initialization process use to prevent modifications when creating new header 
+         oh-1           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=6 retried=None
+         oh-10          read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/hdu/image.py', 'astropy/io/fits/hdu/table.py', 'astropy/io/fits/header.py'] steps=5 retried=None
+   +19  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-10          read=['astropy/extern/configobj/configobj.py'] steps=5 retried=None
+   +18  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-10          read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=4 retried=None
+
+== oh-2 - oh-1: n=48 Δ=-0.4 95%CI=[-3.3,+2.3] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 5451
+   by category: what: -0.2 [-5.0,+4.3] (n=12)  how: +1.2 [-1.1,+3.6] (n=13)  why: -0.4 [-5.9,+4.9] (n=11)  where: +1.7 [-1.8,+6.2] (n=11)
+   paired efficiency (b−a): input_tokens: +2184 [-6659,+11405] (1.04x)  peak_input_tokens: -1 [-640,+659] (1.00x)  output_tokens: -71 [-223,+69] (0.94x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: -0 [-3,+1] (0.95x)  answer_chars: -11 [-123,+108] (0.98x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 17/16/15; hit cap: {'oh-1': 7, 'oh-2': 10}
+   -46  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-2           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py'] steps=3 retried=None
+   -18  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-2           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py', 'astropy/utils/masked/tests/test_function_helpers.py'] steps=7 retried=None
+   -15  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-2           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+   +20  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-2           read=['astropy/utils/masked/function_helpers.py', 'astropy/utils/masked/tests/test_function_helpers.py'] steps=6 retried=None
+   +16  What architectural pattern does the header initialization process use to prevent modifications when creating new header 
+         oh-1           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=6 retried=None
+         oh-2           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=10 retried=None
+   +14  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-2           read=['astropy/table/column.py', 'astropy/table/ndarray_mixin.py', 'astropy/table/table.py'] steps=10 retried=None
+
+== oh-3 - oh-1: n=48 Δ=-1.0 95%CI=[-2.9,+1.0] median=-1.0 win/tie/loss=15/6/27 sign-test p=0.088 | n for 80% power at this Δ ≈ 368
+   by category: what: +0.7 [-3.4,+5.1] (n=12)  how: +0.1 [-1.1,+1.5] (n=13)  why: -3.7 [-8.9,+0.6] (n=11)  where: -1.7 [-5.5,+2.3] (n=11)
+   paired efficiency (b−a): input_tokens: -536 [-7704,+7197] (0.99x)  peak_input_tokens: +69 [-556,+716] (1.01x)  output_tokens: -55 [-207,+79] (0.95x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -0 [-2,+1] (0.96x)  answer_chars: +9 [-107,+129] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 18/19/11; hit cap: {'oh-1': 7, 'oh-3': 5}
+   -25  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-3           read=['astropy/convolution/convolve.py', 'astropy/modeling/bounding_box.py', 'astropy/modeling/convolution.py'] steps=9 retried=None
+   -12  Where are the lower-level mathematical transformation functions that the sky-to-pixel zenithal equal area projection cla
+         oh-1           read=['astropy/modeling/projections.py'] steps=10 retried=None
+         oh-3           read=['astropy/modeling/projections.py', 'astropy/wcs/wcs.py'] steps=10 retried=None
+   -11  Why does the function that validates unified content descriptor strings enforce stricter standard compliance when the co
+         oh-1           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=5 retried=None
+         oh-3           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=4 retried=None
+   +15  What is the semantic interpretation of the three-dimensional cartesian velocity differential object returned by the func
+         oh-1           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+         oh-3           read=['astropy/coordinates/spectral_coordinate.py'] steps=2 retried=None
+   +11  Where is the base class for all fitters defined and which module implements constraint processing for the Sequential Lea
+         oh-1           read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=5 retried=None
+         oh-3           read=['fitting.py', 'optimizers.py'] steps=4 retried=None
+   +11  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-3           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=5 retried=None
+
+== oh-4 - oh-1: n=48 Δ=-1.3 95%CI=[-4.2,+1.2] median=+0.0 win/tie/loss=18/8/22 sign-test p=0.636 | n for 80% power at this Δ ≈ 412
+   by category: what: -2.1 [-5.5,+1.4] (n=12)  how: +1.2 [-1.0,+3.8] (n=13)  why: -1.1 [-6.7,+4.7] (n=11)  where: +0.4 [-3.5,+4.0] (n=11)
+   paired efficiency (b−a): input_tokens: -2346 [-8964,+4438] (0.96x)  peak_input_tokens: -270 [-779,+229] (0.98x)  output_tokens: -95 [-235,+26] (0.92x)  tool_calls: -0 [-1,+0] (0.96x)  wall_s: -1 [-3,+0] (0.91x)  answer_chars: -5 [-118,+106] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 18/16/14; hit cap: {'oh-1': 7, 'oh-4': 6}
+   -46  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-4           read=['astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py', 'astropy/units/function/units.py'] steps=3 retried=None
+   -15  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-4           read=['astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+   -14  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-4           read=['astropy/convolution/convolve.py', 'astropy/modeling/convolution.py'] steps=6 retried=None
+   +16  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-4           read=['astropy/table/column.py', 'astropy/table/ndarray_mixin.py', 'astropy/table/table.py'] steps=4 retried=None
+   +12  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-4           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=7 retried=None
+   +12  How should the validation methods that orchestrate unit serialization and deserialization testing be refactored to separ
+         oh-1           read=['astropy/units/tests/test_format.py'] steps=7 retried=None
+         oh-4           read=['astropy/units/tests/test_format.py', 'test_format.py'] steps=7 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-0.3 95%CI=[-2.2,+1.6] median=+0.0 win/tie/loss=16/11/21 sign-test p=0.511 | n for 80% power at this Δ ≈ 3643
+   by category: what: +2.4 [-0.9,+6.4] (n=12)  how: -1.8 [-5.4,+0.5] (n=13)  why: -1.5 [-5.7,+3.5] (n=11)  where: +0.5 [-2.6,+3.7] (n=11)
+   paired efficiency (b−a): input_tokens: -2686 [-9331,+3416] (0.95x)  peak_input_tokens: -49 [-564,+454] (1.00x)  output_tokens: -89 [-219,+25] (0.92x)  tool_calls: -0 [-1,+0] (0.96x)  wall_s: -1 [-2,+0] (0.93x)  answer_chars: -23 [-142,+100] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 18/17/13; hit cap: {'oh-1': 7, 'oh-5': 4}
+   -21  How does the test class that validates table initialization from heterogeneous column sources enforce separation between
+         oh-1           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+         oh-5           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+   -16  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-5           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+   -11  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-5           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+   +18  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-5           read=['astropy/table/column.py', 'astropy/table/ndarray_mixin.py', 'astropy/table/table.py'] steps=5 retried=None
+   +16  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-5           read=['astropy/coordinates/baseframe.py', 'astropy/coordinates/sky_coordinate_parsers.py'] steps=7 retried=None
+   +13  What is the semantic interpretation of the three-dimensional cartesian velocity differential object returned by the func
+         oh-1           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+         oh-5           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-1.5 95%CI=[-4.9,+2.2] median=-0.5 win/tie/loss=18/6/24 sign-test p=0.441 | n for 80% power at this Δ ≈ 581
+   by category: what: +1.1 [-9.5,+12.6] (n=12)  how: -1.9 [-5.1,+0.8] (n=13)  why: -5.4 [-13.0,+1.9] (n=11)  where: -0.2 [-3.9,+3.1] (n=11)
+   paired efficiency (b−a): input_tokens: -1457 [-9730,+7000] (0.98x)  peak_input_tokens: -184 [-832,+473] (0.98x)  output_tokens: -95 [-255,+54] (0.92x)  tool_calls: -0 [-1,+1] (1.00x)  wall_s: -1 [-2,+1] (0.93x)  answer_chars: -2 [-122,+114] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 17/17/14; hit cap: {'oh-1': 7, 'oh-6': 6}
+   -30  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-6           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+   -28  What modules imported in the helper module that provides Quantity-specific implementations for numpy function overrides 
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+         oh-6           read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-6           read=['astropy/time/tests/test_methods.py', 'astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py', 'astropy/utils/masked/tests/test_function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=too_short
+   +52  What architectural pattern does the header initialization process use to prevent modifications when creating new header 
+         oh-1           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=6 retried=None
+         oh-6           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/hdu/image.py', 'astropy/io/fits/hdu/table.py', 'astropy/io/fits/header.py'] steps=10 retried=None
+   +18  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-6           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=5 retried=None
+   +16  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-6           read=['astropy/table/column.py', 'astropy/table/ndarray_mixin.py', 'astropy/table/table.py'] steps=5 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-1.3 95%CI=[-4.7,+1.6] median=+0.5 win/tie/loss=24/5/19 sign-test p=0.542 | n for 80% power at this Δ ≈ 564
+   by category: what: +2.6 [-3.4,+8.0] (n=12)  how: +1.1 [-1.1,+3.5] (n=13)  why: -5.8 [-11.8,-0.1] (n=11)  where: +0.2 [-5.9,+5.1] (n=11)
+   paired efficiency (b−a): input_tokens: +2614 [-5083,+10630] (1.04x)  peak_input_tokens: +47 [-429,+532] (1.00x)  output_tokens: -19 [-164,+114] (0.98x)  tool_calls: +0 [-1,+1] (1.04x)  wall_s: +2 [-1,+4] (1.18x)  answer_chars: -10 [-125,+104] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 17/14/17; hit cap: {'oh-1': 7, 'oh-7': 7}
+   -47  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-7           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py', 'astropy/units/function/units.py'] steps=5 retried=None
+   -27  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-7           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=9 retried=None
+   -25  Where are the lower-level mathematical transformation functions that the sky-to-pixel zenithal equal area projection cla
+         oh-1           read=['astropy/modeling/projections.py'] steps=10 retried=None
+         oh-7           read=['astropy/modeling/projections.py'] steps=10 retried=None
+   +19  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-7           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=5 retried=None
+   +16  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-7           read=['astropy/utils/masked/function_helpers.py', 'astropy/utils/masked/tests/test_function_helpers.py'] steps=6 retried=None
+   +13  What modules imported in the helper module that provides Quantity-specific implementations for numpy function overrides 
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+         oh-7           read=['astropy/units/quantity_helper/__init__.py', 'astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-2.1 95%CI=[-5.1,+0.6] median=+0.0 win/tie/loss=16/9/23 sign-test p=0.337 | n for 80% power at this Δ ≈ 194
+   by category: what: -1.4 [-6.9,+3.7] (n=12)  how: +0.2 [-2.9,+2.5] (n=13)  why: -5.4 [-8.8,-1.6] (n=11)  where: +2.0 [-2.5,+7.2] (n=11)
+   paired efficiency (b−a): input_tokens: +4238 [-3339,+11998] (1.07x)  peak_input_tokens: +104 [-365,+608] (1.01x)  output_tokens: -26 [-162,+102] (0.98x)  tool_calls: +1 [-0,+1] (1.07x)  wall_s: +2 [-0,+4] (1.17x)  answer_chars: -88 [-181,+0] (0.88x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/15/20; hit cap: {'oh-1': 7, 'oh-8': 10}
+   -48  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-8           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py'] steps=3 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-8           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py', 'astropy/utils/masked/tests/test_function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=too_short
+   -16  How does the test class that validates table initialization from heterogeneous column sources enforce separation between
+         oh-1           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+         oh-8           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+   +18  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-8           read=['astropy/table/operations.py', 'astropy/table/table.py', 'astropy/uncertainty/function_helpers.py', 'astropy/utils/masked/function_helpers.py', 'astropy/visualization/wcsaxes/coordinate_helpers.py'] steps=10 retried=None
+   +16  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-8           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=10 retried=None
+   +14  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-8           read=['astropy/utils/data.py'] steps=4 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-2.7 95%CI=[-5.2,-0.4] median=+0.0 win/tie/loss=16/10/22 sign-test p=0.418 | n for 80% power at this Δ ≈ 77
+   by category: what: -3.4 [-8.5,+1.0] (n=12)  how: -3.1 [-6.8,+0.1] (n=13)  why: -0.5 [-4.8,+3.9] (n=11)  where: -3.4 [-10.5,+2.4] (n=11)
+   paired efficiency (b−a): input_tokens: +3695 [-2880,+10722] (1.06x)  peak_input_tokens: -59 [-589,+496] (0.99x)  output_tokens: +164 [-91,+556] (1.15x)  tool_calls: +0 [-0,+1] (1.06x)  wall_s: +1 [-1,+2] (1.06x)  answer_chars: +654 [-157,+2181] (1.87x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/24/15; hit cap: {'oh-1': 7, 'oh-9': 10}
+   -33  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-9           read=['astropy/wcs/wcs.py'] steps=10 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-9           read=['astropy/time/core.py', 'astropy/time/tests/test_functions.py', 'astropy/utils/shapes.py'] steps=10 retried=too_short
+   -17  How does the test class that validates table initialization from heterogeneous column sources enforce separation between
+         oh-1           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+         oh-9           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+   +14  Why does the time delta format class that represents time intervals as human-readable strings with quantity components u
+         oh-1           read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=6 retried=None
+         oh-9           read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=6 retried=None
+   +11  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-9           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=10 retried=None
+   +11  Where in the logging system are file output handlers assigned character encoding from configuration settings versus plat
+         oh-1           read=['astropy/logger.py'] steps=2 retried=None
+         oh-9           read=['astropy/logger.py'] steps=5 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=+0.3 95%CI=[-4.1,+4.1] median=+2.5 win/tie/loss=31/2/15 sign-test p=0.026 | n for 80% power at this Δ ≈ 22783
+   by category: what: -4.5 [-18.2,+7.0] (n=12)  how: +0.8 [-5.4,+5.8] (n=13)  why: +6.5 [+0.9,+11.2] (n=11)  where: -1.1 [-8.3,+4.9] (n=11)
+   paired efficiency (b−a): input_tokens: +1176227 [+1073857,+1279977] (20.76x)  peak_input_tokens: +107393 [+106510,+108271] (10.09x)  output_tokens: +1585 [+1386,+1765] (2.41x)  tool_calls: -2 [-3,-1] (0.75x)  wall_s: +20 [+18,+22] (3.03x)  answer_chars: +347 [+188,+517] (1.46x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_get_entries': 16, 'terminal': 3, 'aoci_search': 23, '(none)': 6}}
+   steps (b−a): fewer/same/more = 20/9/19; hit cap: {'oh-1': 7, 'oh-aoci-1': 8}
+   -63  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -28  Where are the lower-level mathematical transformation functions that the sky-to-pixel zenithal equal area projection cla
+         oh-1           read=['astropy/modeling/projections.py'] steps=10 retried=None
+         oh-aoci-1      read=['astropy/modeling/projections.py'] steps=6 retried=None
+   -26  How does the cosmology trait mixin that provides Hubble parameter functionality leverage the functools caching decorator
+         oh-1           read=['astropy/cosmology/_src/traits/hubble.py'] steps=3 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +19  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-aoci-1      read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=8 retried=None
+   +17  Why does the time delta format class that represents time intervals as human-readable strings with quantity components u
+         oh-1           read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=6 retried=None
+         oh-aoci-1      read=['astropy/time/formats.py'] steps=4 retried=None
+   +17  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-aoci-1      read=['astropy/coordinates/baseframe.py', 'docs/coordinates/frames.rst'] steps=10 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+4.0 95%CI=[+0.4,+7.3] median=+2.5 win/tie/loss=31/4/13 sign-test p=0.010 | n for 80% power at this Δ ≈ 73
+   by category: what: +8.5 [-1.3,+16.9] (n=12)  how: -2.0 [-8.8,+4.0] (n=13)  why: +5.9 [+0.3,+11.4] (n=11)  where: +3.6 [-0.8,+8.0] (n=11)
+   paired efficiency (b−a): input_tokens: +1182528 [+1071378,+1288003] (20.86x)  peak_input_tokens: +107524 [+106534,+108451] (10.10x)  output_tokens: +1598 [+1412,+1762] (2.43x)  tool_calls: -2 [-3,-1] (0.78x)  wall_s: +20 [+18,+22] (3.05x)  answer_chars: +350 [+195,+507] (1.47x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_get_entries': 12, 'terminal': 2, 'aoci_search': 28, '(none)': 6}}
+   steps (b−a): fewer/same/more = 17/12/19; hit cap: {'oh-1': 7, 'oh-aoci-10': 9}
+   -32  How does the cosmology trait mixin that provides Hubble parameter functionality leverage the functools caching decorator
+         oh-1           read=['astropy/cosmology/_src/traits/hubble.py'] steps=3 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -29  What design mechanisms in the numpy.ndarray subclass that represents numbers with associated physical units in the astro
+         oh-1           read=['astropy/units/quantity.py'] steps=4 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -17  How does the standard deviation uncertainty class's property that references the associated n-dimensional data container
+         oh-1           read=['astropy/nddata/nduncertainty.py'] steps=3 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +32  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-aoci-10     read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+   +23  What is the semantic interpretation of the three-dimensional cartesian velocity differential object returned by the func
+         oh-1           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+         oh-aoci-10     read=['astropy/coordinates/representation/cartesian.py', 'astropy/coordinates/spectral_coordinate.py'] steps=5 retried=None
+   +21  Why does the time delta format class that represents time intervals as human-readable strings with quantity components u
+         oh-1           read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=6 retried=None
+         oh-aoci-10     read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=6 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=-2.6 95%CI=[-7.4,+2.0] median=-0.5 win/tie/loss=21/3/24 sign-test p=0.766 | n for 80% power at this Δ ≈ 330
+   by category: what: -5.8 [-20.2,+7.8] (n=12)  how: -2.8 [-9.2,+2.8] (n=13)  why: +4.3 [+0.1,+8.3] (n=11)  where: -1.6 [-8.0,+5.4] (n=11)
+   paired efficiency (b−a): input_tokens: +1091410 [+985524,+1198610] (19.33x)  peak_input_tokens: +106927 [+105774,+108068] (10.05x)  output_tokens: +1489 [+1286,+1702] (2.33x)  tool_calls: -2 [-4,-1] (0.68x)  wall_s: +19 [+17,+21] (2.93x)  answer_chars: +248 [+106,+395] (1.33x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'(none)': 9, 'terminal': 3, 'aoci_get_entries': 14, 'aoci_search': 22}}
+   steps (b−a): fewer/same/more = 23/10/15; hit cap: {'oh-1': 7, 'oh-aoci-2': 5}
+   -63  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -48  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -29  How does the cosmology trait mixin that provides Hubble parameter functionality leverage the functools caching decorator
+         oh-1           read=['astropy/cosmology/_src/traits/hubble.py'] steps=3 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +31  What architectural pattern does the header initialization process use to prevent modifications when creating new header 
+         oh-1           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=6 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +23  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-aoci-2      read=['astropy/coordinates/baseframe.py'] steps=6 retried=None
+   +20  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-aoci-2      read=['astropy/utils/data.py'] steps=3 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+1.9 95%CI=[-2.6,+5.8] median=+2.5 win/tie/loss=30/3/15 sign-test p=0.036 | n for 80% power at this Δ ≈ 474
+   by category: what: -0.8 [-14.3,+9.3] (n=12)  how: -0.9 [-5.9,+3.8] (n=13)  why: +8.9 [+4.2,+13.4] (n=11)  where: +4.5 [+0.4,+9.7] (n=11)
+   paired efficiency (b−a): input_tokens: +1150965 [+1048055,+1251396] (20.33x)  peak_input_tokens: +107067 [+106042,+108064] (10.06x)  output_tokens: +1510 [+1314,+1684] (2.35x)  tool_calls: -2 [-3,-1] (0.72x)  wall_s: +20 [+17,+22] (2.99x)  answer_chars: +236 [+84,+403] (1.31x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_get_entries': 15, 'terminal': 5, 'aoci_search': 22, '(none)': 6}}
+   steps (b−a): fewer/same/more = 18/14/16; hit cap: {'oh-1': 7, 'oh-aoci-3': 7}
+   -63  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-3      read=['astropy/utils/metadata/core.py', 'astropy/utils/metadata/merge.py'] steps=4 retried=None
+   -37  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-3      read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py'] steps=6 retried=None
+   -20  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-aoci-3      read=['astropy/time/tests/test_functions.py', 'astropy/utils/shapes.py'] steps=5 retried=None
+   +22  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-aoci-3      read=['astropy/utils/data.py'] steps=3 retried=None
+   +19  What is the semantic interpretation of the three-dimensional cartesian velocity differential object returned by the func
+         oh-1           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+         oh-aoci-3      read=['astropy/coordinates/spectral_coordinate.py'] steps=5 retried=None
+   +18  Why does the function that validates unified content descriptor strings enforce stricter standard compliance when the co
+         oh-1           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=5 retried=None
+         oh-aoci-3      read=['astropy/io/votable/ucd.py'] steps=2 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=-0.7 95%CI=[-5.0,+3.2] median=+1.5 win/tie/loss=26/2/20 sign-test p=0.461 | n for 80% power at this Δ ≈ 3569
+   by category: what: -8.2 [-20.7,+2.8] (n=12)  how: +1.5 [-4.0,+6.5] (n=13)  why: +1.5 [-4.4,+7.1] (n=11)  where: +3.6 [-1.3,+9.4] (n=11)
+   paired efficiency (b−a): input_tokens: +1180666 [+1065408,+1291499] (20.83x)  peak_input_tokens: +107486 [+106350,+108655] (10.10x)  output_tokens: +1590 [+1397,+1756] (2.42x)  tool_calls: -2 [-3,-1] (0.78x)  wall_s: +21 [+19,+22] (3.09x)  answer_chars: +328 [+160,+502] (1.44x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_get_entries': 16, 'aoci_search': 23, 'terminal': 2, '(none)': 7}}
+   steps (b−a): fewer/same/more = 19/9/20; hit cap: {'oh-1': 7, 'oh-aoci-4': 9}
+   -56  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-4      read=['astropy/utils/metadata/core.py', 'astropy/utils/metadata/merge.py', 'astropy/utils/metadata/tests/test_metadata.py'] steps=7 retried=None
+   -30  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-aoci-4      read=['astropy/utils/masked/core.py', 'astropy/utils/masked/tests/test_function_helpers.py', 'astropy/utils/masked/tests/test_masked.py', 'astropy/utils/shapes.py', 'astropy/utils/tests/test_shapes.py'] steps=10 retried=None
+   -27  What design mechanisms in the numpy.ndarray subclass that represents numbers with associated physical units in the astro
+         oh-1           read=['astropy/units/quantity.py'] steps=4 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +21  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-aoci-4      read=['astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/masked/tests/test_function_helpers.py'] steps=8 retried=None
+   +21  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-aoci-4      read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=10 retried=None
+   +18  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-aoci-4      read=['astropy/utils/data.py'] steps=3 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=-0.7 95%CI=[-5.6,+3.9] median=+1.5 win/tie/loss=25/2/21 sign-test p=0.659 | n for 80% power at this Δ ≈ 4197
+   by category: what: -5.1 [-19.8,+8.8] (n=12)  how: +0.4 [-3.6,+4.5] (n=13)  why: +2.9 [-3.4,+9.3] (n=11)  where: +2.9 [-3.6,+10.5] (n=11)
+   paired efficiency (b−a): input_tokens: +1229297 [+1120903,+1334421] (21.65x)  peak_input_tokens: +108037 [+106980,+109114] (10.15x)  output_tokens: +1737 [+1478,+2046] (2.55x)  tool_calls: -1 [-2,-0] (0.83x)  wall_s: +22 [+20,+24] (3.25x)  answer_chars: +299 [+156,+448] (1.40x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'(none)': 4, 'terminal': 2, 'aoci_get_entries': 16, 'aoci_search': 26}}
+   steps (b−a): fewer/same/more = 14/14/20; hit cap: {'oh-1': 7, 'oh-aoci-5': 10}
+   -56  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -43  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -43  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-aoci-5      read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_iers.py'] steps=10 retried=None
+   +30  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-aoci-5      read=['astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py'] steps=4 retried=None
+   +28  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-aoci-5      read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+   +21  Why is the test function in the console utilities test module that verifies terminal color output without assertions imp
+         oh-1           read=['astropy/utils/tests/test_console.py'] steps=3 retried=None
+         oh-aoci-5      read=['astropy/utils/tests/test_console.py'] steps=3 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+0.6 95%CI=[-4.0,+4.8] median=+2.0 win/tie/loss=30/4/14 sign-test p=0.023 | n for 80% power at this Δ ≈ 4480
+   by category: what: -0.2 [-12.8,+9.5] (n=12)  how: +1.7 [-4.6,+7.5] (n=13)  why: +3.9 [-0.9,+8.5] (n=11)  where: +0.5 [-9.5,+9.1] (n=11)
+   paired efficiency (b−a): input_tokens: +1129993 [+1030919,+1231056] (19.98x)  peak_input_tokens: +107184 [+106188,+108134] (10.07x)  output_tokens: +1567 [+1392,+1735] (2.40x)  tool_calls: -2 [-3,-1] (0.71x)  wall_s: +22 [+20,+24] (3.22x)  answer_chars: +366 [+228,+517] (1.49x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'(none)': 7, 'terminal': 3, 'aoci_get_entries': 15, 'aoci_search': 23}}
+   steps (b−a): fewer/same/more = 21/8/19; hit cap: {'oh-1': 7, 'oh-aoci-6': 5}
+   -56  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-6      read=['astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py', 'astropy/utils/metadata/merge.py'] steps=3 retried=None
+   -39  Where are the lower-level mathematical transformation functions that the sky-to-pixel zenithal equal area projection cla
+         oh-1           read=['astropy/modeling/projections.py'] steps=10 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -37  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   +25  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-aoci-6      read=['astropy/utils/masked/function_helpers.py'] steps=4 retried=None
+   +20  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-aoci-6      read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=8 retried=None
+   +20  How should the validation methods that orchestrate unit serialization and deserialization testing be refactored to separ
+         oh-1           read=['astropy/units/tests/test_format.py'] steps=7 retried=None
+         oh-aoci-6      read=['astropy/units/tests/test_format.py'] steps=6 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=-0.1 95%CI=[-4.4,+3.9] median=+2.0 win/tie/loss=27/4/17 sign-test p=0.174 | n for 80% power at this Δ ≈ 156315
+   by category: what: -0.2 [-8.5,+7.0] (n=12)  how: +2.6 [-1.3,+6.8] (n=13)  why: -3.6 [-14.7,+6.2] (n=11)  where: +4.1 [-2.6,+11.9] (n=11)
+   paired efficiency (b−a): input_tokens: +1218454 [+1109914,+1323986] (21.47x)  peak_input_tokens: +107901 [+106778,+108979] (10.13x)  output_tokens: +1617 [+1429,+1787] (2.44x)  tool_calls: -2 [-3,-1] (0.80x)  wall_s: +23 [+21,+25] (3.30x)  answer_chars: +379 [+203,+567] (1.51x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'(none)': 6, 'terminal': 4, 'aoci_get_entries': 16, 'aoci_search': 22}}
+   steps (b−a): fewer/same/more = 14/10/24; hit cap: {'oh-1': 7, 'oh-aoci-7': 9}
+   -42  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -36  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-aoci-7      read=['astropy/io/votable/tests/test_table.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+   -33  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-aoci-7      read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_iers.py'] steps=8 retried=None
+   +33  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-aoci-7      read=['astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py'] steps=4 retried=None
+   +18  Why is the test function in the console utilities test module that verifies terminal color output without assertions imp
+         oh-1           read=['astropy/utils/tests/test_console.py'] steps=3 retried=None
+         oh-aoci-7      read=['astropy/utils/console.py', 'astropy/utils/tests/test_console.py'] steps=6 retried=None
+   +18  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-aoci-7      read=['astropy/utils/data.py'] steps=3 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+1.1 95%CI=[-3.9,+5.6] median=+4.5 win/tie/loss=31/2/15 sign-test p=0.026 | n for 80% power at this Δ ≈ 1636
+   by category: what: +0.8 [-14.1,+13.3] (n=12)  how: +3.6 [-1.3,+8.0] (n=13)  why: +1.3 [-3.9,+5.8] (n=11)  where: +3.1 [-2.6,+9.5] (n=11)
+   paired efficiency (b−a): input_tokens: +1147163 [+1038099,+1251589] (20.27x)  peak_input_tokens: +107214 [+106164,+108248] (10.08x)  output_tokens: +1553 [+1360,+1728] (2.39x)  tool_calls: -2 [-3,-1] (0.72x)  wall_s: +20 [+18,+22] (3.05x)  answer_chars: +370 [+193,+556] (1.49x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_get_entries': 16, 'terminal': 3, 'aoci_search': 22, '(none)': 7}}
+   steps (b−a): fewer/same/more = 17/13/18; hit cap: {'oh-1': 7, 'oh-aoci-8': 5}
+   -63  What architectural trade-offs does the base metadata container class for masked arrays introduce by delegating the mecha
+         oh-1           read=['astropy/utils/data_info.py', 'astropy/utils/masked/core.py', 'astropy/utils/metadata/core.py'] steps=5 retried=None
+         oh-aoci-8      read=['astropy/utils/metadata/core.py', 'astropy/utils/metadata/merge.py'] steps=4 retried=None
+   -50  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-8      read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py', 'astropy/units/function/units.py'] steps=9 retried=None
+   -27  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-aoci-8      read=['astropy/time/tests/test_functions.py'] steps=4 retried=None
+   +27  What architectural pattern does the header initialization process use to prevent modifications when creating new header 
+         oh-1           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=6 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +23  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-aoci-8      read=['astropy/coordinates/baseframe.py'] steps=7 retried=None
+   +22  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-aoci-8      read=['astropy/utils/data.py'] steps=3 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=-0.9 95%CI=[-5.5,+3.2] median=+1.5 win/tie/loss=27/3/18 sign-test p=0.233 | n for 80% power at this Δ ≈ 2117
+   by category: what: +0.4 [-10.6,+11.2] (n=12)  how: +2.0 [-4.1,+6.5] (n=13)  why: +1.2 [-4.2,+6.4] (n=11)  where: -4.6 [-15.4,+4.6] (n=11)
+   paired efficiency (b−a): input_tokens: +1220392 [+1112436,+1327581] (21.50x)  peak_input_tokens: +107873 [+106737,+109000] (10.13x)  output_tokens: +1626 [+1443,+1793] (2.45x)  tool_calls: -1 [-2,-0] (0.83x)  wall_s: +21 [+19,+23] (3.11x)  answer_chars: +275 [+115,+460] (1.37x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'aoci_get_entries': 18, 'terminal': 4, '(none)': 5, 'aoci_search': 21}}
+   steps (b−a): fewer/same/more = 15/11/22; hit cap: {'oh-1': 7, 'oh-aoci-9': 10}
+   -47  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-aoci-9      read=['astropy/wcs/wcs.py'] steps=10 retried=None
+   -38  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-aoci-9      read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py', 'astropy/units/function/mixin.py'] steps=5 retried=None
+   -33  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-aoci-9      read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_iers.py'] steps=7 retried=None
+   +27  What architectural pattern does the header initialization process use to prevent modifications when creating new header 
+         oh-1           read=['astropy/io/fits/hdu/base.py', 'astropy/io/fits/header.py'] steps=6 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +24  What modules imported in the helper module that provides Quantity-specific implementations for numpy function overrides 
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+         oh-aoci-9      read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+   +23  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-aoci-9      read=['astropy/coordinates/baseframe.py'] steps=7 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=-0.6 95%CI=[-3.6,+2.3] median=+1.0 win/tie/loss=25/6/17 sign-test p=0.280 | n for 80% power at this Δ ≈ 2733
+   by category: what: +0.3 [-7.4,+7.6] (n=12)  how: +0.3 [-3.6,+3.5] (n=13)  why: +0.8 [-3.6,+5.2] (n=11)  where: -2.4 [-9.7,+4.4] (n=11)
+   paired efficiency (b−a): input_tokens: +20231 [+7281,+33073] (1.34x)  peak_input_tokens: +5644 [+4701,+6554] (1.48x)  output_tokens: -227 [-357,-106] (0.80x)  tool_calls: -2 [-3,-1] (0.73x)  wall_s: -1 [-3,-0] (0.85x)  answer_chars: +71 [-52,+201] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 23/11/14; hit cap: {'oh-1': 7, 'oh-cg-1': 5}
+   -30  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   -26  What modules imported in the helper module that provides Quantity-specific implementations for numpy function overrides 
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+         oh-cg-1        read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-1        read=['astropy/time/core.py', 'astropy/time/tests/test_methods.py', 'astropy/utils/shapes.py'] steps=10 retried=too_short
+   +17  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   +15  Why does the function that validates unified content descriptor strings enforce stricter standard compliance when the co
+         oh-1           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=5 retried=None
+         oh-cg-1        read=[] steps=2 retried=None
+   +15  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-cg-1        read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=7 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+0.2 95%CI=[-2.8,+2.9] median=+0.5 win/tie/loss=24/9/15 sign-test p=0.200 | n for 80% power at this Δ ≈ 15079
+   by category: what: +0.5 [-5.9,+6.2] (n=12)  how: +2.0 [+0.5,+3.9] (n=13)  why: -2.1 [-11.1,+5.3] (n=11)  where: -0.7 [-6.5,+4.6] (n=11)
+   paired efficiency (b−a): input_tokens: +14249 [+3066,+25790] (1.24x)  peak_input_tokens: +4925 [+4081,+5789] (1.42x)  output_tokens: -290 [-426,-171] (0.74x)  tool_calls: -2 [-3,-1] (0.71x)  wall_s: -1 [-3,+1] (0.90x)  answer_chars: +14 [-106,+142] (1.02x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 25/9/14; hit cap: {'oh-1': 7, 'oh-cg-10': 4}
+   -36  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-cg-10       read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=8 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-10       read=['astropy/time/core.py', 'astropy/time/tests/test_methods.py', 'astropy/utils/shapes.py'] steps=7 retried=too_short
+   -23  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-cg-10       read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/convolution/kernels.py', 'astropy/convolution/utils.py'] steps=10 retried=None
+   +15  Where is the base class for all fitters defined and which module implements constraint processing for the Sequential Lea
+         oh-1           read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=5 retried=None
+         oh-cg-10       read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=3 retried=None
+   +15  What performance overhead does the unit validation decorator in the astropy units module introduce when validating unit 
+         oh-1           read=['CHANGES.rst', 'astropy/units/core.py', 'astropy/units/decorators.py'] steps=9 retried=None
+         oh-cg-10       read=['astropy/units/decorators.py'] steps=2 retried=None
+   +14  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-cg-10       read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=4 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=-0.9 95%CI=[-3.7,+1.6] median=+1.0 win/tie/loss=25/3/20 sign-test p=0.551 | n for 80% power at this Δ ≈ 841
+   by category: what: -2.9 [-10.4,+3.5] (n=12)  how: +1.5 [-0.1,+3.2] (n=13)  why: +1.8 [-1.9,+5.4] (n=11)  where: -4.8 [-12.1,+1.5] (n=11)
+   paired efficiency (b−a): input_tokens: +19466 [+7289,+31456] (1.33x)  peak_input_tokens: +5008 [+4046,+5937] (1.42x)  output_tokens: -257 [-423,-120] (0.77x)  tool_calls: -2 [-3,-1] (0.74x)  wall_s: -1 [-3,-0] (0.85x)  answer_chars: +85 [-49,+220] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 23/9/16; hit cap: {'oh-1': 7, 'oh-cg-2': 4}
+   -35  What modules imported in the helper module that provides Quantity-specific implementations for numpy function overrides 
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+         oh-cg-2        read=['astropy/units/quantity.py', 'astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py'] steps=8 retried=None
+   -33  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-cg-2        read=['astropy/wcs/wcs.py'] steps=10 retried=None
+   -13  Where are the lower-level mathematical transformation functions that the sky-to-pixel zenithal equal area projection cla
+         oh-1           read=['astropy/modeling/projections.py'] steps=10 retried=None
+         oh-cg-2        read=[] steps=4 retried=None
+   +13  Why does the serialization state preparation method use the mixin-safe copying function conditionally only for columns t
+         oh-1           read=['astropy/table/column.py', 'astropy/table/table.py'] steps=6 retried=None
+         oh-cg-2        read=['astropy/table/column.py', 'astropy/table/serialize.py', 'astropy/table/table.py'] steps=8 retried=None
+   +13  What is the semantic interpretation of the three-dimensional cartesian velocity differential object returned by the func
+         oh-1           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+         oh-cg-2        read=['astropy/coordinates/spectral_coordinate.py'] steps=4 retried=None
+   +12  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-cg-2        read=['astropy/coordinates/baseframe.py'] steps=4 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+0.8 95%CI=[-1.6,+3.2] median=+1.0 win/tie/loss=25/4/19 sign-test p=0.451 | n for 80% power at this Δ ≈ 987
+   by category: what: +0.5 [-5.5,+6.3] (n=12)  how: +0.4 [-2.5,+3.2] (n=13)  why: +1.3 [-4.1,+5.8] (n=11)  where: +0.7 [-5.1,+6.5] (n=11)
+   paired efficiency (b−a): input_tokens: +26595 [+13570,+39980] (1.45x)  peak_input_tokens: +5938 [+4743,+7155] (1.50x)  output_tokens: -145 [-285,-12] (0.87x)  tool_calls: -1 [-2,-0] (0.83x)  wall_s: +0 [-1,+1] (1.02x)  answer_chars: +103 [-15,+232] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 20/11/17; hit cap: {'oh-1': 7, 'oh-cg-3': 7}
+   -20  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-3        read=['astropy/units/tests/test_quantity_non_ufuncs.py'] steps=10 retried=None
+   -17  Why does the base class for non-corrupted header data units that enable checksum verification exist in the FITS header d
+         oh-1           read=['astropy/io/fits/hdu/base.py'] steps=5 retried=None
+         oh-cg-3        read=['astropy/io/fits/hdu/base.py'] steps=3 retried=None
+   -14  Where are the lower-level mathematical transformation functions that the sky-to-pixel zenithal equal area projection cla
+         oh-1           read=['astropy/modeling/projections.py'] steps=10 retried=None
+         oh-cg-3        read=['astropy/modeling/projections.py', 'astropy/wcs/wcs.py'] steps=10 retried=None
+   +21  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-cg-3        read=['astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py'] steps=6 retried=None
+   +18  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-cg-3        read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=4 retried=None
+   +17  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-cg-3        read=['astropy/coordinates/baseframe.py', 'astropy/coordinates/representation/base.py'] steps=4 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=-1.0 95%CI=[-3.8,+1.6] median=+1.0 win/tie/loss=25/4/19 sign-test p=0.451 | n for 80% power at this Δ ≈ 669
+   by category: what: -2.6 [-9.0,+3.8] (n=12)  how: +1.0 [-2.9,+4.8] (n=13)  why: -0.6 [-6.3,+4.0] (n=11)  where: -3.0 [-9.5,+2.9] (n=11)
+   paired efficiency (b−a): input_tokens: +18001 [+6695,+29974] (1.30x)  peak_input_tokens: +4973 [+3953,+5966] (1.42x)  output_tokens: -246 [-414,-96] (0.78x)  tool_calls: -2 [-3,-1] (0.76x)  wall_s: -1 [-3,+0] (0.88x)  answer_chars: -24 [-137,+92] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 23/13/12; hit cap: {'oh-1': 7, 'oh-cg-4': 6}
+   -27  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-cg-4        read=[] steps=2 retried=None
+   -22  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-4        read=['astropy/time/tests/test_methods.py', 'astropy/units/quantity_helper/function_helpers.py'] steps=5 retried=None
+   -22  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-cg-4        read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/convolution/kernels.py', 'astropy/convolution/utils.py'] steps=10 retried=None
+   +17  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   +15  Where in the data utilities module are the module-level functions responsible for raising the exception that indicates c
+         oh-1           read=['astropy/utils/data.py'] steps=3 retried=None
+         oh-cg-4        read=['astropy/utils/data.py'] steps=3 retried=None
+   +13  How should the validation methods that orchestrate unit serialization and deserialization testing be refactored to separ
+         oh-1           read=['astropy/units/tests/test_format.py'] steps=7 retried=None
+         oh-cg-4        read=['astropy/units/tests/test_format.py'] steps=6 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=-1.9 95%CI=[-4.4,+0.4] median=+0.0 win/tie/loss=19/8/21 sign-test p=0.875 | n for 80% power at this Δ ≈ 152
+   by category: what: +0.2 [-5.3,+5.4] (n=12)  how: -2.0 [-5.9,+0.9] (n=13)  why: +0.9 [-2.8,+4.5] (n=11)  where: -6.5 [-12.4,-1.0] (n=11)
+   paired efficiency (b−a): input_tokens: +17461 [+4940,+30247] (1.29x)  peak_input_tokens: +4916 [+3835,+5999] (1.42x)  output_tokens: -234 [-353,-126] (0.79x)  tool_calls: -2 [-3,-1] (0.74x)  wall_s: -1 [-3,+0] (0.89x)  answer_chars: -13 [-124,+101] (0.98x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 22/15/11; hit cap: {'oh-1': 7, 'oh-cg-5': 6}
+   -25  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   -22  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-5        read=['astropy/time/core.py', 'astropy/time/tests/test_methods.py', 'astropy/units/quantity_helper/function_helpers.py'] steps=10 retried=None
+   -21  How does the test class that validates table initialization from heterogeneous column sources enforce separation between
+         oh-1           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+         oh-cg-5        read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+   +17  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +12  Where in the logging system are file output handlers assigned character encoding from configuration settings versus plat
+         oh-1           read=['astropy/logger.py'] steps=2 retried=None
+         oh-cg-5        read=['astropy/logger.py'] steps=3 retried=None
+   +10  Why does the function that validates unified content descriptor strings enforce stricter standard compliance when the co
+         oh-1           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=5 retried=None
+         oh-cg-5        read=[] steps=2 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=-0.7 95%CI=[-3.3,+1.6] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 1119
+   by category: what: -0.6 [-6.8,+4.9] (n=12)  how: +1.8 [-0.5,+3.9] (n=13)  why: -1.6 [-7.4,+3.1] (n=11)  where: -3.3 [-9.5,+2.6] (n=11)
+   paired efficiency (b−a): input_tokens: +26567 [+13004,+39330] (1.45x)  peak_input_tokens: +5640 [+4560,+6684] (1.48x)  output_tokens: -211 [-344,-87] (0.81x)  tool_calls: -2 [-3,-1] (0.77x)  wall_s: +1 [-1,+3] (1.11x)  answer_chars: +20 [-94,+151] (1.03x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 25/7/16; hit cap: {'oh-1': 7, 'oh-cg-6': 6}
+   -26  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   -25  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-cg-6        read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/convolution/kernels.py', 'astropy/convolution/utils.py'] steps=10 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-6        read=['astropy/time/core.py', 'astropy/time/tests/test_methods.py'] steps=10 retried=too_short
+   +15  Where is the base class for all fitters defined and which module implements constraint processing for the Sequential Lea
+         oh-1           read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=5 retried=None
+         oh-cg-6        read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=3 retried=None
+   +13  What performance overhead does the unit validation decorator in the astropy units module introduce when validating unit 
+         oh-1           read=['CHANGES.rst', 'astropy/units/core.py', 'astropy/units/decorators.py'] steps=9 retried=None
+         oh-cg-6        read=['astropy/units/decorators.py', 'astropy/units/tests/test_quantity_annotations.py'] steps=6 retried=None
+   +10  What is the semantic interpretation of the three-dimensional cartesian velocity differential object returned by the func
+         oh-1           read=['astropy/coordinates/spectral_coordinate.py'] steps=3 retried=None
+         oh-cg-6        read=[] steps=4 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=-0.6 95%CI=[-3.3,+2.0] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 2181
+   by category: what: -0.8 [-8.5,+5.6] (n=12)  how: +0.2 [-3.3,+3.2] (n=13)  why: -0.1 [-4.5,+4.2] (n=11)  where: +0.2 [-5.1,+5.3] (n=11)
+   paired efficiency (b−a): input_tokens: +18092 [+5546,+30446] (1.30x)  peak_input_tokens: +5232 [+4168,+6325] (1.44x)  output_tokens: -69 [-334,+316] (0.94x)  tool_calls: -2 [-3,-1] (0.74x)  wall_s: -0 [-2,+2] (1.00x)  answer_chars: +816 [-30,+2401] (2.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 22/11/15; hit cap: {'oh-1': 7, 'oh-cg-7': 5}
+   -34  What is the semantic relationship between the expiration threshold computed in the test initialization method and the ea
+         oh-1           read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+         oh-cg-7        read=['astropy/utils/iers/iers.py', 'astropy/utils/iers/tests/test_leap_second.py'] steps=6 retried=None
+   -21  At which level in the inheritance hierarchy does the class attribute specifying the function unit class control instanti
+         oh-1           read=['astropy/units/function/core.py', 'astropy/units/function/logarithmic.py'] steps=4 retried=None
+         oh-cg-7        read=['astropy/units/function/core.py'] steps=5 retried=None
+   -17  How does the test class that validates table initialization from heterogeneous column sources enforce separation between
+         oh-1           read=['astropy/table/table.py', 'astropy/table/tests/test_init_table.py', 'astropy/table/tests/test_table.py'] steps=10 retried=None
+         oh-cg-7        read=['astropy/table/tests/test_init_table.py'] steps=2 retried=None
+   +17  What semantic constraints does the unit mapping specification field in the representation-to-frame attribute mapping tup
+         oh-1           read=['astropy/coordinates/attribute_mapping.py', 'astropy/coordinates/baseframe.py'] steps=5 retried=None
+         oh-cg-7        read=['astropy/coordinates/baseframe.py'] steps=4 retried=None
+   +15  Where is the base class for all fitters defined and which module implements constraint processing for the Sequential Lea
+         oh-1           read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=5 retried=None
+         oh-cg-7        read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=3 retried=None
+   +13  Why does the function that validates unified content descriptor strings enforce stricter standard compliance when the co
+         oh-1           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=5 retried=None
+         oh-cg-7        read=['astropy/io/votable/ucd.py'] steps=3 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=-0.3 95%CI=[-3.1,+2.3] median=+0.0 win/tie/loss=19/8/21 sign-test p=0.875 | n for 80% power at this Δ ≈ 6581
+   by category: what: -2.1 [-6.9,+2.0] (n=12)  how: -0.2 [-2.6,+2.3] (n=13)  why: +1.6 [-3.3,+6.6] (n=11)  where: -0.1 [-9.3,+8.5] (n=11)
+   paired efficiency (b−a): input_tokens: +23591 [+11197,+35968] (1.40x)  peak_input_tokens: +5508 [+4416,+6612] (1.47x)  output_tokens: -213 [-367,-76] (0.81x)  tool_calls: -2 [-2,-1] (0.79x)  wall_s: -1 [-3,+1] (0.94x)  answer_chars: -8 [-126,+117] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 21/14/13; hit cap: {'oh-1': 7, 'oh-cg-8': 6}
+   -36  Where in the control flow of the Simple Imaging Polynomial distortion correction method does the transformation of input
+         oh-1           read=[] steps=6 retried=None
+         oh-cg-8        read=[] steps=2 retried=None
+   -22  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-8        read=['astropy/time/core.py'] steps=10 retried=None
+   -17  Why does the test class that performs binary serialization roundtrips in the VOTable test suite incur performance overhe
+         oh-1           read=['astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+         oh-cg-8        read=['astropy/io/votable/converters.py', 'astropy/io/votable/tests/test_table.py', 'astropy/io/votable/tests/test_vo.py', 'astropy/io/votable/tree.py'] steps=10 retried=None
+   +27  Where in the astropy codebase is the mechanism that propagates boolean exclusion flags during array shape expansion impl
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/utils/masked/core.py', 'astropy/utils/masked/function_helpers.py', 'astropy/utils/shapes.py'] steps=10 retried=None
+         oh-cg-8        read=['astropy/utils/masked/function_helpers.py', 'astropy/utils/masked/tests/test_function_helpers.py'] steps=6 retried=None
+   +17  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-cg-8        read=['astropy/convolution/convolve.py', 'astropy/modeling/convolution.py'] steps=4 retried=None
+   +14  Why does the function that validates unified content descriptor strings enforce stricter standard compliance when the co
+         oh-1           read=['astropy/io/votable/tree.py', 'astropy/io/votable/ucd.py'] steps=5 retried=None
+         oh-cg-8        read=[] steps=3 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+0.5 95%CI=[-2.3,+3.2] median=+0.0 win/tie/loss=23/5/20 sign-test p=0.761 | n for 80% power at this Δ ≈ 2717
+   by category: what: -0.8 [-6.6,+4.6] (n=12)  how: +3.4 [+1.1,+5.8] (n=13)  why: -2.8 [-11.3,+4.4] (n=11)  where: +2.8 [-1.9,+7.5] (n=11)
+   paired efficiency (b−a): input_tokens: +24283 [+10607,+37794] (1.41x)  peak_input_tokens: +5361 [+4308,+6392] (1.45x)  output_tokens: -188 [-316,-72] (0.83x)  tool_calls: -2 [-3,-1] (0.78x)  wall_s: -1 [-2,+0] (0.92x)  answer_chars: +43 [-87,+168] (1.06x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 22/11/15; hit cap: {'oh-1': 7, 'oh-cg-9': 5}
+   -31  Why does the base class for non-corrupted header data units that enable checksum verification exist in the FITS header d
+         oh-1           read=['astropy/io/fits/hdu/base.py'] steps=5 retried=None
+         oh-cg-9        read=['astropy/io/fits/hdu/base.py'] steps=9 retried=None
+   -25  Why does the boolean caching control parameter in the wrapper class initialization method for convolution models create 
+         oh-1           read=['astropy/convolution/convolve.py', 'astropy/convolution/core.py', 'astropy/modeling/convolution.py'] steps=5 retried=None
+         oh-cg-9        read=['astropy/convolution/core.py', 'astropy/convolution/kernels.py', 'astropy/convolution/utils.py', 'astropy/modeling/core.py'] steps=10 retried=None
+   -24  What attributes must be implemented by the object type tested in the test class that verifies compatibility with numpy's
+         oh-1           read=['astropy/units/quantity_helper/function_helpers.py', 'astropy/units/tests/test_quantity_non_ufuncs.py'] steps=7 retried=None
+         oh-cg-9        read=['astropy/time/core.py', 'astropy/time/formats.py', 'astropy/time/tests/test_methods.py'] steps=10 retried=too_short
+   +17  Why does the time delta format class that represents time intervals as human-readable strings with quantity components u
+         oh-1           read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=6 retried=None
+         oh-cg-9        read=['astropy/time/formats.py', 'astropy/time/utils.py'] steps=7 retried=None
+   +15  What architectural design does the template-style string interpolation class employ to separate identifying template var
+         oh-1           read=['astropy/extern/configobj/configobj.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   +14  Where is the base class for all fitters defined and which module implements constraint processing for the Sequential Lea
+         oh-1           read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=5 retried=None
+         oh-cg-9        read=['astropy/modeling/fitting.py', 'astropy/modeling/optimizers.py'] steps=4 retried=None
+
+wrote runs/sweqa-r5-astropy-k10/analysis.json

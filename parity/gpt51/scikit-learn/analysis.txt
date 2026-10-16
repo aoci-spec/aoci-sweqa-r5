@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-gpt51-scikit-learn-k1
+manifest: harness=None created=2026-10-15T18:10:58Z repo=scikit-learn commit=adb1ae76d798 index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   75.8  12.5   69.7   79.3   78.9   75.3 |   3.8   3.9   1.2   0.0 |    36947    10364     461    1036    n/a   20.0 |   0.65   0.00   0.16
+dims: oh=15.0/12.5/18.0/16.3/14.0
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=1,773,459 out=22,131
+
+wrote runs/sweqa-r5p-gpt51-scikit-learn-k1/analysis.json

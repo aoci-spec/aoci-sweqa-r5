@@ -1,0 +1,1105 @@
+#AOCI-CODE-VOLUME: 1
+
+===/root/aoci-eval/repos-r5/sphinx/===
+
+===/root/aoci-eval/repos-r5/sphinx/doc/===
+conf.py[FC3M]: F:Sphinx's own documentation build configuration: extensions, HTML/LaTeX/epub/man settings, nitpick ignores, an event object type and HTML redirects. | R:code:sphinx/__init__.py,code:sphinx/addnodes.py,code:sphinx/application.py | A:setup, parse_event, build_redirects, linkify_issues_in_changelog | S:nitpicky=True: each new unresolvable reference nee
+
+===/root/aoci-eval/repos-r5/sphinx/doc/development/tutorials/examples/===
+autodoc_intenum.py[SE2T]: F:Tutorial example extension adding an autodoc Documenter for IntEnum subclasses that lists members, optionally in hex. | R:code:sphinx/application.py | A:IntEnumDocumenter, setup | S:-
+helloworld.py[SE2T]: F:Tutorial example extension registering a 'hello' role and a 'hello' directive. | R:code:sphinx/application.py | A:HelloRole, HelloDirective, setup | S:-
+recipe.py[SE2S]: F:Tutorial example extension defining a custom 'recipe' domain with a directive, xref role and two indices. | R:code:sphinx/application.py | A:RecipeDomain, RecipeDirective, RecipeIndex, IngredientIndex, setup | S:-
+todo.py[SE2S]: F:Tutorial example extension implementing todo and todolist directives with env purge/merge and doctree-resolved handling. | R:code:sphinx/application.py | A:TodoDirective, TodolistDirective, todo, todolist, setup | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/doc/usage/extensions/===
+example_google.py[SE2M]: F:Example module showing Google-style docstrings for the napoleon extension documentation. | R:- | A:module_level_function, ExampleClass, ExampleError, example_generator | S:-
+example_numpy.py[SE2M]: F:Example module showing NumPy-style docstrings for the napoleon extension documentation. | R:- | A:module_level_function, ExampleClass, ExampleError, example_generator | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/===
+__init__.py[LG5T]: F:Package root defining the Sphinx version constants, version_info tuple and package_dir, appending the git short hash to the display version. | R:code:sphinx/util/_pathlib.py | A:__version__, __display_version__, version_info, package_dir | S:Must stay self-executable (packaging reads version). __display_version__ adds '+/<githash>' via git while _in_development is True; flip at release. Update version_info and __version__ together.
+__main__.py[EU3T]: F:Entry point for 'python -m sphinx' that runs the sphinx-build CLI main and exits with its return code. | R:code:sphinx/cmd/build.py | A:- | S:Raises SystemExit at import, no __main__ guard: im
+addnodes.py[DB6L]: F:Defines Sphinx's docutils node classes (toctree, desc_* signature nodes, pending_xref, index, etc.) and registers them via setup. | R:code:sphinx/application.py | A:desc_signature, desc_name, desc_parameterlist, pending_xref, toctree, SIG_ELEMENTS | S:New desc_sig_* subclasses need _sig_element=True to enter SIG_ELEMENTS, which setup() registers. _desc_classes_injector must be first base. Class lists (classes) append to 'classes'.
+application.py[AG9L]: F:Defines the Sphinx application class, which sets up config, extensions, environment and builder, runs builds, and exposes the extension API, plus TemplateBridge | R:code:sphinx/config.py,code:sphinx/environment/__init__.py,code:sphinx/registry.py,code:sphinx/events.py,code:sphinx/project.py,code:sphinx/util/logging.py,code:sphinx/locale/__init__.py | A:Sphinx, TemplateBridge, builtin_extensions, ENV_PICKLE_FILENAME | S:Init order: config, i18n, builtin then user extensions, builder preload, conf.py setup(), config-inited, env, builder. build() deletes environment.pickle on any exception. keep_going is unused; _fail_on_warnings is the real flag. add_index_to_domain ignores _override. Failed pickle load silently makes a fresh env. needs_sphinx check is a string comparison. add_directive/add_role/add_node on an existing name warn but still overwrite; override only silences the warning. add_autodocumenter override covers only the directive.
+config.py[DC8L]: F:Defines Sphinx's Config object, the built-in config option table, conf.py evaluation, override conversion, pickling, and config-inited validation hooks. | R:code:sphinx/errors.py,code:sphinx/deprecation.py,code:sphinx/application.py,code:sphinx/environment/__init__.py | A:Config, _Opt, ENUM, ConfigValue, eval_config_file, check_confval_types | S:Config.__getattr__ resolves overrides, then conf.py, then default, and caches into __dict__. Pickling drops non-serializable values and valid_types (restored as empty frozenset) and warns if rebuild is set. Aliases master_doc/root_doc and copyright/project_copyright sync on set. conf.py runs via exec in confdir. Handlers on config-inited run in priority order.
+deprecation.py[CG4T]: F:Declares Sphinx deprecation warning classes and a helper for emitting module-level deprecation warnings or AttributeErrors. | R:- | A:RemovedInSphinx90Warning, RemovedInSphinx10Warning, RemovedInNextVersionWarning, _deprecation_warning | S:_deprecation_warning only takes remove=(9, 0) or (10, 0), else RuntimeError. raises=True gives AttributeError.
+errors.py[CR4S]: F:Defines the SphinxError exception hierarchy and a few standalone exceptions used across the Sphinx codebase. | R:- | A:SphinxError, ExtensionError, ConfigError, SphinxParallelError, PycodeError, NoUri | S:Only SphinxError subclasses show as clean errors; others traceback.
+events.py[AM7L]: F:Implements EventManager that registers core and custom events, connects prioritized listeners, and emits events to them. | R:code:sphinx/errors.py,code:sphinx/deprecation.py,code:sphinx/application.py | A:EventManager, EventListener, core_events | S:Listeners run by priority (lower first). Non-SphinxError exceptions are wrapped in ExtensionError unless app.pdb is set or allowed_exceptions lists them. connect rejects unknown events.
+extension.py[RE5T]: F:Holds the Extension metadata record and a config-inited check that needs_extensions version requirements are satisfied. | R:code:sphinx/errors.py,code:sphinx/config.py | A:Extension, verify_needs_extensions, setup | S:Version defaults to 'unknown version', always failing needs_extensions. Unparsable versions compare as strings. parallel_read_safe=None, parallel_write_safe=True. Missing extensions only warn.
+highlighting.py[IU4M]: F:Wraps Pygments to pick lexers and highlight code blocks for HTML or LaTeX output, including the style stylesheet. | R:code:sphinx/pygments_styles.py,code:sphinx/util/texescape.py | A:PygmentsBridge, lexers, lexer_classes | S:Lexing errors retry once in relaxed mode; 'default' falls back to 'none' silently. Unknown lexers use text lexer.
+io.py[AD5S]: F:Deprecated docutils reader, writer and file-input classes that Sphinx once used to read source files and emit the source-read event. | R:code:sphinx/transforms/__init__.py,code:sphinx/util/docutils.py,code:sphinx/deprecation.py | A:SphinxStandaloneReader, SphinxBaseReader, SphinxDummyWriter, SphinxFileInput, SphinxDummySourceClass | S:Importing the module itself emits RemovedInSphinx10Warning, as does instantiating each class. SphinxFileInput forces error_handler 'sphinx'. Reading emits source-read on env.current_document.
+jinja2glue.py[IU5M]: F:Glue between Sphinx builders and the sandboxed Jinja2 template engine, with theme-aware template loading and Sphinx-specific filters. | R:code:sphinx/application.py,code:sphinx/util/_pathlib.py,code:sphinx/util/osutil.py,code:sphinx/theming.py | A:BuiltinTemplateLoader, SphinxFileSystemLoader, accesskey, idgen, warning | S:Names starting '!' skip templates_path loaders and search theme dirs only. Names ending '.jinja' fall back to legacy '_t' files. newest_template_mtime scans only *.html. init must precede render.
+parsers.py[DB5S]: F:Provides the Sphinx base Parser class and RSTParser, which applies rst_prolog/rst_epilog and replaces docutils' SmartQuotes transform. | R:code:sphinx/util/rst.py,code:sphinx/deprecation.py | A:Parser, RSTParser, setup | S:_config and _env are injected by the registry, not set in __init__. The config, env and set_application accessors emit deprecation warnings. RSTParser.decorate reads self._config directly.
+project.py[DD4S]: F:Discovers the project's source documents and maps between docnames and file paths. | R:code:sphinx/util/matching.py,code:sphinx/util/osutil.py,code:sphinx/util/_pathlib.py | A:Project, EXCLUDE_PATHS | S:discover clears mappings; skips duplicate docnames (warns), unreadable files. doc2path unknown name: first suffix.
+pygments_styles.py[DU2T]: F:Defines Pygments styles (NoneStyle, SphinxStyle, PyramidStyle) used for Sphinx code highlighting. | R:code:sphinx/highlighting.py | A:NoneStyle, SphinxStyle, PyramidStyle | S:-
+registry.py[AE8L]: F:SphinxComponentRegistry stores builders, domains, parsers, translators, transforms and assets, and loads extensions. | R:code:sphinx/extension.py,code:sphinx/parsers.py,code:sphinx/errors.py,code:sphinx/environment/__init__.py | A:SphinxComponentRegistry, merge_source_suffix, EXTENSION_BLACKLIST, setup | S:add_object_type/add_crossref_type call add_directive_to_domain and add_role_to_domain without override, so override=True cannot replace existing names; failure leaves partial registration. Math renderer duplicates always raise. Duplicate latex package only warns. Blacklisted extension skipped; no setup() warns; non-dict result becomes empty metadata. merge_source_suffix runs at config-inited priority 800.
+roles.py[DU6L]: F:Defines and registers Sphinx's reST roles: cross-reference, CVE/CWE/PEP/RFC links, GUI labels, kbd, abbr, manpage, and the code role override. | R:- | A:XRefRole, AnyXRefRole, generic_docroles, specific_docroles, code_role, setup | S:setup() registers roles globally with docutils; XRefRole.run needs self.env; CWE/PEP/RFC build_uri raise ValueError on non-int numbers; fix_parens strips '()' from target.
+theming.py[DU6L]: F:Loads HTML themes from built-in dirs, html_theme_path, zips and entry points, resolving inheritance chains and theme.toml or theme.conf settings. | R:code:sphinx/config.py,code:sphinx/errors.py,code:sphinx/util/_pathlib.py,code:sphinx/util/osutil.py,code:sphinx/registry.py | A:Theme, HTMLThemeFactory | S:Zip themes are extracted to temp dirs; call Theme._cleanup. Inheritance max 10 levels, 'none' ends the chain. Entry-point themes load lazily in create(). theme.toml wins over theme.conf.
+versioning.py[KD4S]: F:Assigns UIDs to doctree nodes and merges old and new doctrees by Levenshtein similarity to preserve UIDs across rebuilds. | R:code:sphinx/transforms/__init__.py | A:add_uids, merge_doctrees, get_ratio, levenshtein_distance, UIDTransform, VERSIONING_RATIO | S:get_ratio 0 means equal; empty string gives 65 (VERSIONING_RATIO). Pairs with ratio < 65 reuse old uid.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/_cli/===
+__init__.py[EU6M]: F:Implements the base 'sphinx' command: root parser, help formatting, and lazy dispatch to subcommand modules. | R:code:sphinx/_cli/util/colour.py,code:sphinx/locale/__init__.py | A:run, _COMMANDS, _create_parser, _RootArgumentParser | S:_COMMANDS is empty here; subcommands register elsewhere. run() converts SystemExit to its code and any other exception to 2 silently. Subcommands need parser_description, set_up_parser, run.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/_cli/util/===
+colour.py[CU3S]: F:Provides ANSI colour helper functions and terminal colour support detection with a global enable/disable switch. | R:- | A:terminal_supports_colour, enable_colour, disable_colour, colourise, bold | S:NO_COLOR beats FORCE_COLOR;
+errors.py[CO4M]: F:Formats exceptions with environment info, saves tracebacks to temp files and prints user-facing error reports. | R:code:sphinx/errors.py,code:sphinx/_cli/util/colour.py,code:sphinx/extension.py | A:handle_exception, save_traceback, full_exception_context, strip_escape_sequences, terminal_safe | S:handle_exception returns silently on BdbQuit; log files are delete=False sphinx-err-*.log; with pdb it skips saving.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/builders/===
+__init__.py[AW9L]: F:Defines the Builder base class driving read, resolve, write and finish phases, parallel read/write, catalog compile and doctree caching. | R:code:sphinx/environment/__init__.py,code:sphinx/util/parallel.py,code:sphinx/util/i18n.py,code:sphinx/application.py,code:sphinx/directives/__init__.py,code:sphinx/roles.py | A:Builder, _write_docname | S:build/build_all/build_specific/build_update/read/read_doc/write_doctree are @final. Importing registers roles and directives. docnames ['__all__'] means everything (get_outdated_docs returning str triggers it). Environment pickled only if some doc was re-read. all_docs times are microseconds. write_doctree nulls reporter/transformer; parallel reads pass _cache=False. Parallel write does first doc serially, uses parallel-1 workers; finish_tasks always serial. read() raises SphinxError if master_doc was not read. Builder.app is deprecated, use _app.
+_epub_base.py[AB5L]: F:Base EpubBuilder extending the HTML builder to generate epub metadata (content.opf, toc.ncx, container.xml), fix IDs and zip the epub. | R:code:sphinx/builders/html/__init__.py,code:sphinx/builders/html/_build_info.py,code:sphinx/util/fileutil.py,code:sphinx/util/osutil.py | A:EpubBuilder, ManifestItem, Spine, Guide, NavPoint, sphinx_smarty_pants | S:mimetype must be first in zip, ZIP_STORED. Colons in ids/hrefs become hyphens. build_content walks outdir: call after writing files. Subclasses set template_dir.
+changes.py[AB3S]: F:ChangesBuilder writes an HTML summary of versionadded/changed/deprecated/removed entries for the configured version. | R:code:sphinx/builders/__init__.py,code:sphinx/theming.py,code:sphinx/util/fileutil.py | A:ChangesBuilder, setup | S:Always rebuilds; writes nothing if no changesets m
+dirhtml.py[AB3T]: F:DirectoryHTMLBuilder emits each page as index.html in a directory named for the page, producing URLs without .html. | R:code:sphinx/builders/html/__init__.py | A:DirectoryHTMLBuilder, setup | S:get_target_uri: '' for root index, else docname +
+dummy.py[AB2T]: F:DummyBuilder parses and checks sources but writes no output files. | R:code:sphinx/builders/__init__.py | A:DummyBuilder, setup | S:-
+epub3.py[AB4M]: F:Defines the EPUB3 builder that writes content.opf, nav.xhtml and toc.ncx, validates epub_* config values and registers them. | R:code:sphinx/builders/_epub_base.py,code:sphinx/builders/html/__init__.py | A:Epub3Builder, NavPoint, validate_config_values, convert_epub_css_files, setup | S:Config validators only warn. build_navlist raises RuntimeError if a level jumps by more than 1.
+gettext.py[AL5M]: F:Implements the i18n and gettext builders that extract translatable messages from doctrees and templates into .pot catalogs. | R:code:sphinx/builders/__init__.py,code:sphinx/util/i18n.py,code:sphinx/util/template.py,code:sphinx/util/nodes.py | A:MessageCatalogBuilder, I18nBuilder, Catalog, Message, MsgOrigin, GettextRenderer | S:I18nTags.eval_condition always returns True, so only-nodes are always extracted. Catalog.add skips nodes without uid. should_write ignores POT-Creation-Date, so unchanged catalogs aren't rewritten.
+linkcheck.py[AN6L]: F:Builder that collects hyperlinks via a post-transform and checks them concurrently over HTTP, writing output.txt and output.json. | R:code:sphinx/builders/dummy.py,code:sphinx/util/requests.py,code:sphinx/util/_uri.py,code:sphinx/util/http_date.py | A:CheckExternalLinksBuilder, HyperlinkCollector, HyperlinkAvailabilityChecker, HyperlinkAvailabilityCheckWorker, contains_anchor, setup | S:Daemon worker threads; shutdown queues a None-hyperlink sentinel per worker. Rate-limited links are requeued, not reported. HEAD is tried before GET unless an anchor check is needed.
+manpage.py[AB4S]: F:Builds groff man pages from the documents listed in man_pages, inlining their toctrees. | R:code:sphinx/writers/manpage.py,code:sphinx/util/nodes.py,code:sphinx/builders/__init__.py | A:ManualPageBuilder, default_man_pages, setup | S:Entries naming unknown docs are warned and skipped. A shared docsettings object is mutated per entry.
+singlehtml.py[AB4M]: F:Builds the whole documentation as one HTML page by inlining all toctrees under the root doc. | R:code:sphinx/builders/html/__init__.py,code:sphinx/util/nodes.py,code:sphinx/environment/adapters/toctree.py | A:SingleFileHTMLBuilder, setup | S:Overwrites env.toc_secnumbers/toc_fignumbers with 'docname/id' keys. Targets are '#document-<name>' anchors.
+texinfo.py[AB4M]: F:Builds Texinfo output per texinfo_documents entry, assembling doctrees with appendices and copying images and Makefile. | R:code:sphinx/writers/texinfo.py,code:sphinx/util/nodes.py,code:sphinx/builders/__init__.py | A:TexinfoBuilder, default_texinfo_documents, setup | S:get_target_uri raises NoUri for docs outside self.docnames. pending_xref becomes emphasized text.
+text.py[AB3T]: F:Builds plain-text output for each document using the TextTranslator. | R:code:sphinx/writers/text.py,code:sphinx/builders/__init__.py | A:TextBuilder, setup | S:-
+xml.py[AB3S]: F:Builds docutils-native XML and pseudo-XML output files for each document. | R:code:sphinx/builders/__init__.py | A:XMLBuilder, PseudoXMLBuilder, setup | S:write_doc deep-copies doctree;
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/builders/html/===
+__init__.py[AB8L]: F:Defines Sphinx's StandaloneHTMLBuilder, which renders doctrees to themed HTML pages with assets and search index, and registers html_* config, events and valida | R:code:sphinx/builders/html/_assets.py,code:sphinx/builders/html/_build_info.py,code:sphinx/builders/__init__.py,code:sphinx/theming.py,code:sphinx/search/__init__.py,code:sphinx/writers/html5.py | A:StandaloneHTMLBuilder, INVENTORY_FILENAME, convert_html_css_files, validate_html_static_path, setup | S:handle_page resets _css_files/_js_files to _orig_* snapshots every page, so page-level additions don't persist. Emits html-page-context; sorts assets by priority. CSS/JS URIs get ?v=crc except epub/htmlhelp. get_outdated_docs rebuilds all on .buildinfo mismatch or newer templates. Search index written to .tmp then replaced. Unknown Stylesheet/JavaScript names resolve via deprecation __getattr__.
+_assets.py[CU4S]: F:Immutable CSS and JS asset descriptors with a deprecated str-like interface, plus CRC32 asset checksum helpers. | R:code:sphinx/deprecation.py,code:sphinx/errors.py | A:_CascadingStyleSheet, _JavaScript, _file_checksum | S:Immutable (setattr raises). _file_checksum raises ThemeError for local paths with '?'; inner is cached, ignores CR.
+_build_info.py[CD4T]: F:Reads and writes the .buildinfo file holding config and tags hashes used to detect when HTML needs a full rebuild. | R:code:sphinx/util/_serialise.py,code:sphinx/config.py | A:BuildInfo | S:load: ValueError on bad header or missing config/tags lines; truncated file IndexError. __eq__ compares only hashes.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/builders/latex/===
+__init__.py[AV6L]: F:Defines LaTeXBuilder that assembles per-document doctrees into .tex files and support assets, registers latex_* config values and defaults. | R:code:sphinx/builders/latex/constants.py,code:sphinx/builders/latex/theming.py,code:sphinx/builders/latex/util.py,code:sphinx/builders/latex/transforms.py,code:sphinx/builders/latex/nodes.py,code:sphinx/writers/latex.py | A:LaTeXBuilder, setup, default_latex_engine, default_latex_documents, XINDY_LANG_OPTIONS | S:Import builders.latex.nodes before the writer import (else ImportError). Unknown latex_elements keys are warned and dropped. .tex rewritten only if bytes differ. Language sliced [:2].
+constants.py[FC4M]: F:Holds default LaTeX preamble settings, per-engine and engine-plus-language overrides, and font package snippets for the LaTeX builder. | R:code:sphinx/builders/latex/__init__.py | A:DEFAULT_SETTINGS, ADDITIONAL_SETTINGS, SHORTHANDOFF, PDFLATEX_DEFAULT_FONTPKG | S:DEFAULT_SETTINGS keys define valid latex_elements keys; add new keys there.
+nodes.py[DB2T]: F:Declares custom docutils node classes used by the LaTeX transforms and writer. | R:code:sphinx/builders/latex/transforms.py,code:sphinx/writers/latex.py | A:captioned_literal_block, footnotemark, footnotetext, math_reference, thebibliography, HYPERLINK_SUPPORT_NODES | S:-
+theming.py[DU4S]: F:Implements LaTeX themes (built-in manual and howto, user themes from theme.conf) and a factory that looks them up and applies config overrides. | R:code:sphinx/builders/latex/__init__.py | A:Theme, BuiltInTheme, UserTheme, ThemeFactory | S:ThemeFactory.get mutates the cached theme via update() on every call. Unknown names fall back to a bare Theme.
+transforms.py[DB5L]: F:Post-transforms that rewrite footnotes, citations, math refs, literal blocks, URLs and index nodes into forms the LaTeX writer handles. | R:code:sphinx/builders/latex/nodes.py,code:sphinx/writers/latex.py | A:setup, LaTeXFootnoteTransform, ShowUrlsTransform, BibliographyTransform, FootnoteDocnameUpdater | S:Footnote handling depends on docname set by FootnoteDocnameUpdater. Citation and math transforms run at priority 5, before ReferencesResolver. ShowUrls temporarily swaps settings.id_prefix.
+util.py[CL3T]: F:Extends docutils Babel to map language codes to LaTeX babel or polyglossia names and detect Cyrillic languages. | R:code:sphinx/builders/latex/__init__.py | A:ExtBabel | S:Unknown languages fall back to english with suppor
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/cmd/===
+__init__.py[EU1T]: F:Package marker for command line executables modules. | R:- | A:- | S:-
+build.py[EU7L]: F:Implements the sphinx-build command line: argument parsing, logging setup, Sphinx application construction and error handling. | R:code:sphinx/cmd/make_mode.py,code:sphinx/application.py | A:main, build_main, get_parser, make_main, jobs_argument | S:Returns 2 on exception. -M dispatches to make_mode. keep_going is always False. -D values stay strings; -A values become int when parseable. -w file is closed in finally.
+make_mode.py[EU5M]: F:Implements sphinx-build -M make mode, dispatching build_<target> methods or running generic builds, including latexpdf and clean. | R:code:sphinx/cmd/build.py | A:run_make_mode, Make, BUILDERS | S:Must not import heavy Sphinx modules (fast import). $MAKE must start with 'make' or RuntimeError. PAPER env adds latex papersize -D opts. Needs 3+ args; clean refuses when source is inside build.
+quickstart.py[EU5L]: F:Implements the interactive sphinx-quickstart tool that prompts for settings and generates conf.py, the root document and Makefile/make.bat. | R:code:sphinx/util/template.py | A:main, generate, ask_user, get_parser, term_input | S:generate is called with overwrite=False so existing files are skipped. Quiet mode needs project and author. English language is stored as None. term_input is overridden by tests.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/directives/===
+__init__.py[DB7M]: F:Defines the ObjectDescription base directive for domain objects plus default-role and default-domain directives, and registers them. | R:code:sphinx/util/docfields.py,code:sphinx/util/docutils.py,code:sphinx/addnodes.py | A:ObjectDescription, DefaultRole, DefaultDomain, optional_int, setup | S:handle_signature must raise ValueError on failure (fallback to desc_name, no index). Duplicate names skip add_target_and_index. Old noindex options copy to no-index.
+admonitions.py[DU3S]: F:Defines admonition directives (note, warning, seealso etc.) with a collapsible option and registers them overriding docutils ones. | R:code:sphinx/util/docutils.py | A:SphinxAdmonition, Admonition, SeeAlso, setup | S:Subclasses must set node_class.
+code.py[DU5L]: F:Defines the highlight, code-block, sourcecode and literalinclude reST directives plus the file-reading and line-filtering helper LiteralIncludeReader. | R:code:sphinx/directives/__init__.py,code:sphinx/util/_lines.py,code:sphinx/util/docutils.py,code:sphinx/pycode/__init__.py,code:sphinx/addnodes.py | A:Highlight, CodeBlock, LiteralInclude, LiteralIncludeReader, dedent_lines, container_wrapper | S:literalinclude filters run in fixed order: pyobject, start, end, lines, dedent, prepend, append; lineno-match offsets accumulate. A diff skips all filters. Exceptions become warnings, not errors.
+other.py[AU6L]: F:Defines Sphinx's built-in reST directives (toctree, only, include, hlist, acks, authors, centered, tabularcolumns) and registers them with docutils. | R:code:sphinx/addnodes.py,code:sphinx/util/docutils.py,code:sphinx/util/nodes.py,code:sphinx/util/matching.py,code:sphinx/environment/__init__.py | A:TocTree, Only, Include, HList, Author, setup | S:toctree: glob matches consume docs (no repeats); generated docs excluded. Missing doc warns, calls env.note_reread(). Include patches state_machine.insert_input only if include-read has listeners.
+patches.py[DU4M]: F:Overrides docutils figure, meta, csv-table, code, math and rubric directives with Sphinx-specific behaviour and registers them. | R:code:sphinx/directives/__init__.py,code:sphinx/util/docutils.py,code:sphinx/util/nodes.py,code:sphinx/util/osutil.py,code:sphinx/locale/__init__.py | A:Figure, CSVTable, Code, MathDirective, Rubric, setup | S:CSVTable absolute :file: is srcdir-relative unless it exists on disk. Math sets 'no-wrap' and deprecated 'nowrap'.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/domains/===
+__init__.py[DD8M]: F:Defines the Domain base class and ObjType that all Sphinx domains subclass, with role/directive adapters, per-domain data storage and xref resolution hooks. | R:code:sphinx/domains/_index.py,code:sphinx/environment/__init__.py,code:sphinx/roles.py,code:sphinx/addnodes.py | A:Domain, ObjType, Index, IndexEntry | S:Domain.__init__ raises OSError when data['version'] != data_version; bump data_version on format change. Class dicts are copied per instance, so edit the copies. initial_data is deep-copied. merge_domaindata raises NotImplementedError by default, blocking parallel builds. add_object_type updates role maps. resolve_any_xref raises NotImplementedError; resolve_xref returns None. Role/directive adapters are cached.
+_domains_container.py[DD5M]: F:Defines a private read-only container of domain instances with typed core-domain attributes and fan-out of per-document lifecycle calls. | R:code:sphinx/domains/__init__.py,code:sphinx/registry.py,code:sphinx/environment/__init__.py,code:sphinx/domains/python/__init__.py | A:_DomainsContainer | S:__getitem__ uses getattr first, so keys like 'sorted' or 'get' return methods. __hash__ calls hash(sorted(...)) on a list and raises TypeError. __init__ raises ValueError if dict key != domain.name.
+_index.py[DD4S]: F:Defines the IndexEntry named tuple and the abstract Index base class that domain-specific index pages (such as py-modindex) subclass. | R:code:sphinx/errors.py,code:sphinx/domains/__init__.py | A:IndexEntry, Index | S:Index.__init__ raises SphinxError if name is empty or localname is None; shortname defaults to None.
+changeset.py[DB4S]: F:Defines the changeset domain and the versionadded/versionchanged/deprecated/versionremoved directives that record per-version change entries. | R:code:sphinx/domains/__init__.py,code:sphinx/addnodes.py,code:sphinx/util/docutils.py | A:ChangeSetDomain, VersionChange, ChangeSet, versionlabels, versionlabel_classes, setup | S:Directive name must be a key of versionlabels; merge_domaindata appends without dedup;
+citation.py[DB4S]: F:Sphinx citation domain: records citation definitions and references, resolves [label] cross-references, and warns about duplicate or unreferenced citations. | R:code:sphinx/domains/__init__.py,code:sphinx/addnodes.py,code:sphinx/transforms/__init__.py,code:sphinx/util/nodes.py | A:CitationDomain, CitationDefinitionTransform, CitationReferenceTransform, setup | S:Both transforms run at priority 619, before docutils resolves citations.
+index.py[DB4S]: F:Defines Sphinx's index domain plus the index directive and role, collecting per-document index entries and validating them after reading. | R:code:sphinx/util/index_entries.py,code:sphinx/util/nodes.py,code:sphinx/domains/__init__.py,code:sphinx/addnodes.py | A:IndexDomain, IndexDirective, IndexRole, setup | S:process_doc drops an index node with a warning if any entry fails split_index_msg, so none of its entries get stored.
+javascript.py[DD5L]: F:Implements Sphinx's built-in JavaScript domain: directives, roles, object and module registry, and cross-reference resolution for JS APIs. | R:code:sphinx/domains/python/_annotations.py,code:sphinx/directives/__init__.py,code:sphinx/domains/__init__.py,code:sphinx/util/docfields.py,code:sphinx/roles.py | A:JavaScriptDomain, JSObject, JSCallable, JSConstructor, JSModule, JSXRefRole | S:find_obj loops through all searches with no break, so with searchorder 0 (reversed list) the last match, the most specific name, wins. note_object only warns on duplicates and then overwrites.
+math.py[DD4S]: F:Defines the Sphinx math domain: records labelled equations, assigns numbers, and resolves :eq: and :numref: references to equation anchors. | R:code:sphinx/domains/__init__.py,code:sphinx/roles.py,code:sphinx/util/nodes.py | A:MathDomain, MathReferenceRole, setup | S:Equation numbers come from env.new_serialno('eqno')+1, not per-document. A bad math_eqref_format falls back to '(N)'.
+rst.py[DB4M]: F:Defines the Sphinx reStructuredText domain: directive, directive option and role object descriptions, cross-reference resolution and object registry. | R:code:sphinx/domains/__init__.py,code:sphinx/directives/__init__.py,code:sphinx/roles.py,code:sphinx/util/nodes.py,code:sphinx/addnodes.py | A:ReSTDomain, ReSTMarkup, ReSTDirective, ReSTDirectiveOption, ReSTRole, parse_directive | S:Keys 'directive:name' use rst:directives stack pushed/popped by before/after_content; dup warns, overwrites.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/domains/c/===
+__init__.py[DB5L]: F:Defines the Sphinx C domain: c:* directives, roles, alias transform, cross-reference resolution and the setup() registering config values. | R:code:sphinx/domains/c/_ast.py,code:sphinx/domains/c/_ids.py,code:sphinx/domains/c/_parser.py,code:sphinx/domains/c/_symbol.py,code:sphinx/util/cfamily.py | A:CDomain, CObject, AliasNode, AliasTransform, CXRefRole, CExprRole | S:env_version 3 must be bumped if _max_id changes (ids sit in pickled lookup keys). Parse errors raise ValueError after adding a phony-named symbol. Alias 'noroot' with maxdepth 1 only warns.
+_ast.py[DB4L]: F:AST node classes for C declarations, expressions, types and names, with stringification, id generation and docutils signature rendering. | R:code:sphinx/domains/c/_ids.py,code:sphinx/util/cfamily.py,code:sphinx/domains/c/_symbol.py | A:ASTDeclaration, ASTNestedName, ASTIdentifier, ASTType, ASTMacro, ASTDeclSpecs | S:get_newest_id caches the id; don't mutate after. ASTDeclSpecsSimple.mergeWith passes volatile/const before restrict.
+_ids.py[FC2S]: F:Holds C keyword sets, operator precedence tables, id prefixes, _max_id and regexes used by the C domain parser. | R:- | A:_keywords, _macro_keywords, _max_id, _id_prefix, _expression_bin_ops | S:Changing _max_id requires an env version bump.
+_parser.py[KB5L]: F:Recursive-descent parser turning C declaration, expression, macro and xref strings into AST nodes. | R:code:sphinx/domains/c/_ast.py,code:sphinx/domains/c/_ids.py,code:sphinx/util/cfamily.py | A:DefinitionParser | S:Reads c_id_attributes, c_paren_attributes, c_extra_keywords; those words are not identifiers. Ternary and comma expressions are not parsed. Failed expressions fall back to raw text with a warning.
+_symbol.py[DB4L]: F:Symbol tree for the C domain: adds, looks up, merges and clears declarations and function-parameter symbols per document. | R:code:sphinx/domains/c/_ast.py | A:Symbol, SymbolLookupResult, LookupKey, _DuplicateSymbolError | S:Never assign .children; duplicate declaration raises _DuplicateSymbolError after adding symbol flagged isRedeclaration.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/domains/cpp/===
+__init__.py[EB5L]: F:Defines the Sphinx C++ domain: directives, roles, alias transform, cross-reference resolution, index objects and the extension setup. | R:code:sphinx/domains/cpp/_ast.py,code:sphinx/domains/cpp/_symbol.py,code:sphinx/domains/cpp/_parser.py,code:sphinx/domains/cpp/_ids.py,code:sphinx/util/cfamily.py | A:CPPDomain, CPPObject, AliasNode, AliasTransform, CPPXRefRole, setup | S:CPPDomain.initial_data builds a root Symbol with 7 args. Lookup keys assume no nested scopes in functions, so declarations there get a phony name. Bump env_version (9) when data changes.
+_ast.py[DB4L]: F:Defines the C++ domain's AST node classes, giving each node ID mangling, string form and docutils signature rendering. | R:code:sphinx/domains/cpp/_ids.py,code:sphinx/util/cfamily.py,code:sphinx/addnodes.py,code:sphinx/domains/cpp/_symbol.py | A:ASTDeclaration, ASTNestedName, ASTIdentifier, ASTType, ASTTemplateParams, ASTNamespace | S:get_id(version) may raise NoOldIdError; ASTDeclaration caches get_newest_id, so don't mutate after the first call.
+_ids.py[CB3L]: F:Defines regexes, keyword set and Itanium-style v1/v2 mangling tables used by the C++ domain parser and AST id generation. | R:code:sphinx/domains/cpp/_parser.py | A:_max_id, _id_prefix, _keywords, _operator_re, _id_fundamental_v2, _id_operator_v2 | S:Changing _max_id requires bumping ENV_VERSION.
+_parser.py[DB5L]: F:Recursive-descent parser turning C++ declaration, expression, type and cross-reference text into ASTs for the C++ domain. | R:code:sphinx/domains/cpp/_ast.py,code:sphinx/domains/cpp/_ids.py,code:sphinx/util/cfamily.py | A:DefinitionParser, parse_declaration, parse_namespace_object, parse_xref_object, parse_expression | S:Backtracks by resetting self.pos and merges errors via _make_multi_error. Expression fallback scanning is used only when allowFallbackExpressionParsing is set. new-placement is unsupported and fails.
+_symbol.py[DD4L]: F:Maintains the C++ domain symbol tree: adding, looking up, merging and clearing declarations per document, with template-aware matching. | R:code:sphinx/domains/cpp/_ast.py | A:Symbol, LookupKey, SymbolLookupResult | S:Raises _DuplicateSymbolError after marking isRedeclaration; .children assign raises; no copy; deepcopy only for root.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/domains/python/===
+__init__.py[DB7L]: F:Defines the Sphinx Python domain: py:* directives, xref roles, object/module registries, module index, builtin_resolver and extension setup. | R:code:sphinx/domains/python/_object.py,code:sphinx/domains/python/_annotations.py | A:PythonDomain, PyFunction, PyClasslike, PyMethod, PyModule, PythonModuleIndex | S:setup() env_version is 4; bump when pickled data shape changes. note_object: an aliased entry never overrides a real one, a real one overrides an alias. Keep header re-exports (backwards compat).
+_annotations.py[KB5L]: F:Parses Python annotations, argument lists and PEP 695 type parameter lists into docutils/addnodes trees with cross-reference nodes. | R:code:sphinx/pycode/parser.py,code:sphinx/util/inspect.py,code:sphinx/addnodes.py | A:_parse_annotation, _parse_arglist, _parse_type_list, _pseudo_parse_arglist, type_to_xref, parse_reftarget | S:_parse_annotation swallows SyntaxError, giving one xref of the whole string. _pseudo_parse_arglist splits on every comma, even in strings. type_to_xref reads env.config before its truthiness check.
+_object.py[DB5L]: F:Base PyObject directive and Python field/xref mixins: signature parsing, line wrapping, index entries, and py:class/py:module context nesting. | R:code:sphinx/domains/python/_annotations.py,code:sphinx/directives/__init__.py,code:sphinx/util/docfields.py | A:PyObject, PyXrefMixin, PyField, PyGroupedField, PyTypedField, py_sig_re | S:before_content/after_content must pair: they push/pop py:class and py:modules in ref_context. get_signature_prefix must return nodes, not str (TypeError). Arglist SyntaxError falls back silently.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/domains/std/===
+__init__.py[DB7L]: F:Defines the standard domain: ref/doc/term/option/numref labels, glossary, productionlist, program, confval and envvar directives, and their xref resolution. | R:code:sphinx/domains/__init__.py,code:sphinx/directives/__init__.py,code:sphinx/util/nodes.py,code:sphinx/roles.py | A:StandardDomain, Glossary, ProductionList, Cmdoption, ConfigurationValue, make_glossary_term | S:setup env_version is 2. Terms are stored twice: objects keyed exactly, _terms keyed lower-case for fallback match. :ref: targets are lowercased. merge_domaindata assumes 'terms' exists in otherdata.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/environment/===
+__init__.py[DD9L]: F:Defines BuildEnvironment, the pickled per-project inventory of docs, tocs, domain data and dependencies, plus the _CurrentDocument per-document scratch store. | R:code:sphinx/environment/adapters/toctree.py,code:sphinx/domains/_domains_container.py,code:sphinx/util/_files.py,code:sphinx/util/_pathlib.py,code:sphinx/project.py,code:sphinx/transforms/__init__.py,code:sphinx/util/osutil.py,code:sphinx/config.py | A:BuildEnvironment, ENV_VERSION, CONFIG_OK, CONFIG_NEW, CONFIG_CHANGED, CONFIG_EXTENSIONS_CHANGED | S:Bump ENV_VERSION on pickled-attribute changes. __getstate__ nulls _app/domains/events, empties both doctree caches; setup() rebuilds domains and raises BuildEnvironmentError if srcdir or env version differs. all_docs times are int microseconds. get_outdated_files lists all docs as added if config_changed. get_and_resolve_doctree pops _write_doc_doctree_cache and overwrites tags arg with builder.tags. relfn2path treats leading '/' as srcdir-relative, KeyError without docname. _CurrentDocument.pop on mapped keys ignores default, resets to type default (None for parser/symbols/default_domain).
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/environment/adapters/===
+__init__.py[DD1T]: F:Package marker with a docstring for the sphinx.environment adapters subpackage. | R:- | A:- | S:-
+asset.py[DD2T]: F:ImageAdapter resolves an image URI back to its original URI via the environment's original_image_uri mapping. | R:code:sphinx/environment/__init__.py,code:sphinx/util/_pathlib.py | A:ImageAdapter | S:Follows original_image_uri chain; cycles hang.
+indexentries.py[DD5M]: F:IndexEntries builds the sorted, letter-grouped general index from the index domain's collected entries. | R:code:sphinx/util/index_entries.py,code:sphinx/environment/__init__.py,code:sphinx/errors.py | A:IndexEntries | S:see/seealso entries use link=False (no targets). group_entries folds 'name (qualifier)' keys only if adjacent and without sub_items. New entry types must also be listed in directives/other.py.
+toctree.py[DD6L]: F:Resolves toctree nodes into pruned, classed bullet lists and computes toctree ancestors, local TOCs and global TOCs. | R:code:sphinx/environment/__init__.py,code:sphinx/util/nodes.py,code:sphinx/util/matching.py,code:sphinx/addnodes.py | A:note_toctree, document_toc, global_toctree_for_doc, TocTree | S:_entries_from_toctree skips LookupError entries (circular refs). global_toctree_for_doc default tags=... warns RemovedInSphinx10Warning. Hidden toctrees yield None unless includehidden.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/environment/collectors/===
+__init__.py[DD5S]: F:Base class EnvironmentCollector that wires per-document data collection to Sphinx events. | R:code:sphinx/environment/__init__.py,code:sphinx/application.py | A:EnvironmentCollector | S:enable() asserts listener_ids is None, disable() asserts it is set; clear_doc, merge_other, process_doc raise NotImplementedError and must be overridden; get_*_docs default to [].
+asset.py[DD4S]: F:Collectors that rewrite image URIs into candidates and register image and download files in the environment. | R:code:sphinx/environment/collectors/__init__.py,code:sphinx/environment/__init__.py,code:sphinx/util/i18n.py,code:sphinx/util/images.py | A:ImageCollector, DownloadFileCollector, setup | S:'*' single file, '?' remote/data URI. Glob: shortest path per mimetype. Unreadable skipped after note_dependency.
+dependencies.py[DD3T]: F:Collector recording docutils-reported dependency files as environment dependencies of each document. | R:code:sphinx/environment/collectors/__init__.py,code:sphinx/util/osutil.py | A:DependenciesCollector, setup | S:Docutils deps resolve against cwd, not srcdir.
+metadata.py[DD3T]: F:Collector that stores a document's docinfo fields as metadata in the environment. | R:code:sphinx/environment/collectors/__init__.py,code:sphinx/environment/__init__.py | A:MetadataCollector, setup | S:Pops docinfo from doctree; tocdepth int, bad->0.
+title.py[DD3T]: F:Collector that records each document's title and long title nodes in the environment. | R:code:sphinx/environment/collectors/__init__.py,code:sphinx/transforms/__init__.py | A:TitleCollector, setup | S:Only first section title; none -> '<no title>'.
+toctree.py[DD5L]: F:Collector building each document's TOC and assigning section and figure numbers under numbered toctrees. | R:code:sphinx/environment/collectors/__init__.py,code:sphinx/environment/adapters/toctree.py,code:sphinx/transforms/__init__.py | A:TocTreeCollector, setup | S:First TOC entry gets empty anchor. get_updated_docs returns docs whose numbers changed. only nodes always numbered regardless of tags. Figure numbers need config.numfig; cut by numfig_secnum_depth.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/ext/===
+__init__.py[LE1T]: F:Package marker for Sphinx extensions that are not activated by default. | R:- | A:- | S:-
+autosectionlabel.py[EU3T]: F:Registers every section title as a std-domain label so :ref: can target sections by title, with optional document prefix and depth limit. | R:- | A:register_sections_as_label, get_node_depth, setup | S:Duplicate labels still overwrite domain.labels (wi
+coverage.py[EQ4L]: F:Provides the 'coverage' builder that reports undocumented Python objects and C API items, writing python.txt, c.txt and undoc.pickle. | R:code:sphinx/builders/__init__.py,code:sphinx/util/inspect.py,code:sphinx/_cli/util/colour.py | A:CoverageBuilder, setup, compile_regex_list, write_header | S:Imports every checked module (runs import-time code). Ignore regexes: match for modules/functions/classes, search for py
+doctest.py[EQ5L]: F:Adds testsetup, testcleanup, doctest, testcode and testoutput directives and a 'doctest' builder that runs the snippets and writes output.txt. | R:code:sphinx/builders/__init__.py,code:sphinx/util/docutils.py,code:sphinx/util/osutil.py | A:DocTestBuilder, TestDirective, TestGroup, TestCode, SphinxDocTestRunner, setup | S:init() monkey-patches doctest.compile globally and prepends doctest_path to sys.path. skipif uses eval/exec. Each group shares one namespace. testoutput pairs only with preceding testcode.
+duration.py[EO3S]: F:Measures per-document reading time via event hooks, stores it in a custom domain, and logs the five slowest documents at build end. | R:code:sphinx/domains/__init__.py | A:DurationDomain, setup | S:-
+extlinks.py[EU3S]: F:Creates roles from the extlinks config mapping that expand to external URLs, and optionally warns about hardcoded links that could use them. | R:code:sphinx/transforms/post_transforms/__init__.py,code:sphinx/util/nodes.py | A:ExternalLinksChecker, make_link_role, setup_link_roles, setup | S:Roles register at builder-inited.
+githubpages.py[EO2T]: F:After env update, creates .nojekyll and a CNAME file derived from html_baseurl in the output directory of HTML builds. | R:- | A:create_nojekyll_and_cname, setup | S:-
+graphviz.py[EU4L]: F:Adds graphviz, graph and digraph directives that render dot code via the dot executable into HTML, LaTeX, Texinfo, text and man output. | R:code:sphinx/util/docutils.py,code:sphinx/util/i18n.py,code:sphinx/util/nodes.py | A:graphviz, Graphviz, render_dot_html, render_dot_latex, render_dot_texinfo, figure_wrapper | S:Output cached by sha1 of code+options. Missing dot warns once per executable. HTML allows only png/svg.
+ifconfig.py[EC3T]: F:Provides the ifconfig directive that includes content only when a Python expression over config values is true. | R:code:sphinx/util/docutils.py | A:IfConfig, ifconfig, setup | S:-
+imgconverter.py[EU3S]: F:Post-transform that converts unsupported image types (SVG, GIF, PDF, WebP) to PNG using ImageMagick or a custom command. | R:code:sphinx/transforms/post_transforms/images.py | A:ImagemagickConverter, setup | S:-
+imgmath.py[EU4L]: F:HTML math renderer that compiles LaTeX to DVI and then to PNG or SVG with dvipng or dvisvgm, with optional base64 embedding. | R:code:sphinx/util/math.py,code:sphinx/util/png.py,code:sphinx/util/template.py | A:render_math, html_visit_math, html_visit_displaymath, MathExtError, setup | S:No latex/dvipng: warns once, text fallback; failed run raises MathExtError. Embed mode deletes math dir at build end.
+inheritance_diagram.py[EU4L]: F:Adds the inheritance-diagram directive that imports classes, builds their base-class graph and renders it through the graphviz extension. | R:code:sphinx/ext/graphviz.py,code:sphinx/util/docutils.py | A:InheritanceGraph, InheritanceDiagram, inheritance_diagram, setup | S:Imports classes at parse time. Graph hash covers only content and parts. Builtin/underscore bases hidden by default.
+linkcode.py[EU3S]: F:Adds [source] links to Python, C, C++ and JS object signatures by calling the user-supplied linkcode_resolve function. | R:- | A:add_linkcode_domain, LinkcodeError, setup | S:linkcode_resolve is required, else LinkcodeError.
+mathjax.py[IU3S]: F:Registers a MathJax HTML math renderer that emits inline and display math markup and injects MathJax config and script tags on pages. | R:code:sphinx/util/math.py | A:setup, html_visit_math, html_visit_displaymath, install_mathjax, MATHJAX_URL | S:Empty mathjax_path raises ExtensionError;
+todo.py[DB3M]: F:Provides todo and todolist directives, a todo domain collecting entries per document, and builder-specific todo node rendering. | R:code:sphinx/directives/admonitions.py,code:sphinx/util/docutils.py | A:setup, Todo, TodoList, TodoDomain, todo_node, todolist | S:Todos hidden unless todo_include_todos True;
+viewcode.py[IU4L]: F:Adds [source] links from Python object descriptions to highlighted module source pages and [docs] backlinks, generated under _modules. | R:code:sphinx/pycode/__init__.py,code:sphinx/transforms/post_transforms/__init__.py,code:sphinx/util/osutil.py | A:setup, doctree_read, collect_pages, ViewcodeAnchorTransform, viewcode_anchor, OUTPUT_DIRNAME | S:Imports modules at build time, catching BaseException. _viewcode_modules entry False = unresolvable.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/ext/apidoc/===
+__init__.py[EU4T]: F:Package facade for apidoc: re-exports the CLI main and defines setup registering apidoc_* config values and the builder-inited hook. | R:code:sphinx/ext/apidoc/_cli.py,code:sphinx/ext/apidoc/_extension.py | A:main, setup | S:setup requires sphinx.ext.autodoc and imports run_apidoc lazily; run happens on builder-inited, config rebuild 'env'.
+__main__.py[EU2T]: F:Runs the apidoc command line via python -m sphinx.ext.apidoc. | R:code:sphinx/ext/apidoc/_cli.py | A:- | S:-
+_cli.py[EU4M]: F:Defines the sphinx-apidoc argument parser and main entry that generates rst files, the toc file, or a full quickstart project. | R:code:sphinx/ext/apidoc/_generate.py,code:sphinx/ext/apidoc/_shared.py,code:sphinx/cmd/quickstart.py | A:main, get_parser | S:Exclude patterns made absolute. --remove-old and --full are mutually exclusive. --remove-old skipped on dry run.
+_extension.py[AC4M]: F:Runs apidoc from the apidoc_modules config at builder-init, validating each item and generating rst files per module. | R:code:sphinx/ext/apidoc/_generate.py,code:sphinx/ext/apidoc/_shared.py | A:run_apidoc | S:Invalid items only warn (apidoc) and are skipped. path is relative to confdir, destination to srcdir; absolute rejected.
+_generate.py[DB5M]: F:Walks a source tree and renders module, package and toc rst files from Jinja templates, honouring exclusion and privacy options. | R:code:sphinx/ext/apidoc/_shared.py,code:sphinx/util/template.py,code:sphinx/util/osutil.py | A:recurse_tree, create_modules_toc_file, create_package_file, create_module_file, write_file, is_excluded | S:OPTIONS is read once at import from SPHINX_APIDOC_OPTIONS. Exclude regexes match full path strings. create_modules_toc_file mutates the modules list. Non-forced writes skip existing files.
+_shared.py[CC3T]: F:Shared apidoc logger, frozen option dataclasses and a helper that removes stale generated files. | R:code:sphinx/config.py | A:LOGGER, ApidocOptions, ApidocDefaults, _remove_old_files | S:ApidocOptions defaults: force=True, remove_old=Tru
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/ext/autodoc/===
+__init__.py[LB6S]: F:Public facade of autodoc that re-exports documenters, option helpers and sentinels, and registers documenters, config values and events. | R:code:sphinx/ext/autodoc/_documenters.py,code:sphinx/ext/autodoc/_directive_options.py,code:sphinx/ext/autodoc/_sentinels.py,code:sphinx/ext/autodoc/_event_listeners.py | A:setup, Documenter, ModuleDocumenter, ClassDocumenter, cut_lines, between | S:Names in __all__ are re-exported for compatibility, so removing them breaks third-party imports. INSTANCEATTR and SLOTSATTR are aliases. setup also loads preserve_defaults, type_comment and typehints.
+_directive_options.py[DC4M]: F:Option converters, the Options dict and the merging and default-handling for autodoc directive options. | R:code:sphinx/ext/autodoc/_sentinels.py | A:Options, members_option, merge_members_option, _process_documenter_options, bool_option | S:A '+' prefix extends autodoc_default_options only for members, private-members, special-members, exclude-members.
+_documenters.py[DE8L]: F:Defines autodoc's Documenter base class and its subclasses that generate reST directives and docstring content for modules, functions, classes, data, methods, a | R:code:sphinx/ext/autodoc/importer.py,code:sphinx/ext/autodoc/_directive_options.py,code:sphinx/ext/autodoc/_property_types.py,code:sphinx/ext/autodoc/_sentinels.py,code:sphinx/ext/autodoc/directive.py,code:sphinx/ext/autodoc/mock.py | A:Documenter, ModuleDocumenter, ClassDocumenter, ObjectMember, py_ext_sig_re, autodoc_attrgetter | S:Instances are one-shot: _load_object_by_name caches by flag and shifts instance member_order (-1 static, -2 classmethod). document_members imports all members before sorting, then calls _generate directly, not generate(). AttributeDocumenter.get_doc temporarily sets config.autodoc_inherit_docstrings False. ClassDocumenter.generate drops real_modname; Data/AttributeDocumenter.add_content set analyzer None.
+_event_listeners.py[DE3S]: F:Provides cut_lines and between factories that build autodoc-process-docstring listeners to trim or filter docstring lines. | R:- | A:cut_lines, between | S:between reverts to original lines if result empty
+_property_types.py[DE3S]: F:Declares dataclasses holding resolved properties of a documented item: module, class, function and assignment variants. | R:code:sphinx/ext/autodoc/_sentinels.py | A:_ItemProperties, _ModuleProperties, _ClassDefProperties, _FunctionDefProperties, _AssignStatementProperties | S:doc_as_attr true if __name__ missing or differs
+_sentinels.py[CE3S]: F:Defines unique immutable sentinel objects (ALL, EMPTY, INSTANCE_ATTR, SLOTS_ATTR, SUPPRESS and others) used by autodoc. | R:- | A:ALL, EMPTY, INSTANCE_ATTR, RUNTIME_INSTANCE_ATTRIBUTE, SLOTS_ATTR, SUPPRESS | S:Unpicklable and immutable; ALL matches any item
+directive.py[EE5S]: F:Implements the generic autodoc directive that dispatches to a Documenter and parses the reST it generates. | R:code:sphinx/ext/autodoc/_directive_options.py,code:sphinx/ext/autodoc/_documenters.py | A:AutodocDirective, DocumenterBridge, DummyOptionSpec, process_documenter_options, parse_generated_content | S:Directive name minus 'auto' picks documenter. DummyOptionSpec passes all options unvalidated; real parsing happens in run(), bad options log error, no nodes. titles_allowed False blocks titles.
+importer.py[DE6L]: F:Imports modules and objects for autodoc, collects class and module members, and builds the item property objects. | R:code:sphinx/ext/autodoc/_property_types.py,code:sphinx/ext/autodoc/_sentinels.py,code:sphinx/ext/autodoc/mock.py,code:sphinx/ext/autodoc/_documenters.py | A:import_module, import_object, get_class_members, get_object_members, _load_object_by_name, _resolve_name | S:import_module wraps any BaseException (SystemExit too) as ImportError; failed import retries parent modules, shifting names into obj_path; SPHINX_AUTODOC_RELOAD_MODULES enables TYPE_CHECKING reload.
+mock.py[DE4M]: F:Provides a sys.meta_path finder and mock module/object classes so autodoc can import code whose dependencies are unavailable. | R:code:sphinx/util/inspect.py,code:sphinx/util/logging.py | A:mock, MockFinder, MockLoader, ismock, ismockmodule, undecorate | S:mock() puts the finder first in sys.meta_path and purges mocked modules from sys.modules on exit.
+preserve_defaults.py[DE3M]: F:Autodoc extension that replaces evaluated default argument values in signatures with their original source text. | R:code:sphinx/pycode/ast.py,code:sphinx/deprecation.py | A:setup, update_defvalue, DefaultValue, get_function_def | S:Default off; multiline defaults use ast_unparse
+type_comment.py[DE3S]: F:Autodoc extension that merges PEP 484 type comments of functions into the __annotations__ of living objects. | R:code:sphinx/pycode/ast.py,code:sphinx/util/inspect.py | A:setup, update_annotations_using_type_comments, get_type_comment, signature_from_ast | S:Mutates __annotations__; tab indents undetected
+typehints.py[DE4M]: F:Records autodoc signature type hints in the environment and merges them into description field lists. | R:code:sphinx/util/typing.py,code:sphinx/util/inspect.py,code:sphinx/ext/autodoc/_directive_options.py | A:setup, record_typehints, merge_typehints, modify_field_list, augment_descriptions_with_types | S:Annotations in env.current_document.autodoc_annotations. insert_field_list inserts at index-1, before sub-desc.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/ext/autosummary/===
+__init__.py[LE6L]: F:Implements the autosummary directive, the autolink role and the object import helpers that build summary tables and toctrees. | R:code:sphinx/ext/autodoc/mock.py,code:sphinx/ext/autodoc/importer.py,code:sphinx/ext/autodoc/directive.py,code:sphinx/ext/autosummary/generate.py | A:Autosummary, AutoLink, import_by_name, import_ivar_by_name, mangle_signature, extract_summary | S:Imports run under mock(autosummary_mock_imports). generate.py imports this; this imports it lazily. Names tried with every import prefix; current-module-prefixed names skipped with warning.
+generate.py[LE5L]: F:Generates reST stub files for autosummary entries via Jinja templates, and provides the sphinx-autogen command. | R:code:sphinx/ext/autosummary/__init__.py,code:sphinx/ext/autodoc/importer.py,code:sphinx/util/template.py,code:sphinx/pycode/__init__.py | A:generate_autosummary_docs, generate_autosummary_content, find_autosummary_in_files, AutosummaryRenderer, main, DummyApplication | S:Recurses into newly written files. Skips entries without :toctree:. Existing files are rewritten only if content differs and overwrite is set. main() with --remove-old requires -o.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/ext/intersphinx/===
+__init__.py[LE5S]: F:Public facade of the intersphinx extension: re-exports its API, registers config values and event hooks, and keeps a deprecated alias. | R:code:sphinx/ext/intersphinx/_load.py,code:sphinx/ext/intersphinx/_resolve.py,code:sphinx/ext/intersphinx/_shared.py,code:sphinx/ext/intersphinx/_cli.py | A:setup, fetch_inventory, load_mappings, validate_intersphinx_mapping, missing_reference, InventoryAdapter | S:validate_intersphinx_mapping runs on config-inited at priority=800, normalising mapping before other handlers. Deprecated normalize_intersphinx_mapping via module __getattr__ (removal 10.0).
+__main__.py[EU2T]: F:Entry point for python -m sphinx.ext.intersphinx that prints an inventory file. | R:code:sphinx/ext/intersphinx/_cli.py | A:- | S:-
+_cli.py[EU3T]: F:Implements the inspect_main command that loads an inventory from a path or URL and prints its entries. | R:code:sphinx/ext/intersphinx/_load.py | A:inspect_main | S:Hardcodes tls_verify=False.
+_load.py[IN5L]: F:Validates and normalises intersphinx_mapping and fetches, caches and merges remote and local inventories into the environment. | R:code:sphinx/ext/intersphinx/_shared.py,code:sphinx/util/inventory.py,code:sphinx/util/requests.py,code:sphinx/builders/html/__init__.py | A:validate_intersphinx_mapping, load_mappings, fetch_inventory, _InvConfig | S:Validation rewrites mapping to name -> (name, (uri, locations)); raises ConfigError. Inventories fetched in thread pool. Cache expires after intersphinx_cache_limit days (negative: never).
+_resolve.py[DE5L]: F:Resolves pending_xref nodes against loaded inventories and implements the external role, its dispatcher and post-transform. | R:code:sphinx/ext/intersphinx/_shared.py,code:sphinx/transforms/post_transforms/__init__.py,code:sphinx/util/docutils.py | A:missing_reference, IntersphinxRole, IntersphinxDispatcher, IntersphinxRoleResolver, resolve_reference_detect_inventory, inventory_exists | S:intersphinx_disabled_reftypes applies only when no inventory name is given. std:label/std:term fall back to case-insensitive match. node['reftarget'] is temporarily rewritten, then restored.
+_shared.py[CE3S]: F:Shared types, logger, immutable project record and environment-backed inventory adapter used by the intersphinx modules. | R:code:sphinx/util/logging.py | A:InventoryAdapter, _IntersphinxProject, LOGGER | S:InventoryAdapter lazily attaches cache attributes
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/ext/napoleon/===
+__init__.py[EE5L]: F:Napoleon extension entry: defines the Config defaults and setup() that hooks docstring conversion and member skipping into autodoc. | R:code:sphinx/ext/napoleon/docstring.py,code:sphinx/application.py,code:sphinx/util/inspect.py,code:sphinx/domains/python/_object.py | A:Config, setup | S:_patch_python_domain mutates PyObject.doc_field_types globally, not idempotent (appends keyword field each call). Numpy runs before Google. _skip_member returns False or None, never True.
+docstring.py[DE6L]: F:Parses Google and NumPy style docstrings into reStructuredText, including section handling and optional type spec conversion. | R:code:sphinx/ext/napoleon/__init__.py,code:sphinx/locale/__init__.py,code:sphinx/util/typing.py,code:sphinx/util/logging.py | A:GoogleDocstring, NumpyDocstring | S:Parsing runs in __init__. Nested fields are re-parsed via self.__class__(...), so subclass __init__ must accept (lines, config). NumpyDocstring must set _directive_sections before super().__init__.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/locale/===
+__init__.py[CL6M]: F:Gettext-based translation utilities providing lazy translation proxies, per-catalog translator registry, and the _ and __ shortcuts. | R:code:sphinx/__init__.py | A:_, __, init, init_console, get_translation, get_translator | S:Before init() for a catalog, the translation function returns a lazy _TranslationProxy, not str; use str() to force. init() merges catalogs via fallback, replacing a prior NullTranslations.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/pycode/===
+__init__.py[DA5S]: F:ModuleAnalyzer locates and parses Python module source to expose attribute docs, annotations, finals, overloads and definition tags. | R:code:sphinx/pycode/parser.py,code:sphinx/errors.py,code:sphinx/util/_pathlib.py | A:ModuleAnalyzer | S:Class-level cache stores analyzers by file and module; for_module also caches PycodeError and re-raises.
+ast.py[KA4M]: F:Cut-down AST-to-source unparser used to render annotations, defaults and signatures as strings. | R:- | A:unparse, OPERATORS | S:Unsupported node types raise NotImplementedError via generic_visit.
+parser.py[KA5L]: F:Parses Python source with ast and tokenize to extract variable doc comments, annotations, final/overload markers and definition line ranges. | R:code:sphinx/pycode/ast.py,code:sphinx/util/inspect.py | A:Parser, VariableCommentPicker, DefinitionFinder, TokenProcessor | S:Only '#:' comments and string literals after assignments become docs. Except-clause definitions are ignored; try body and else are visited. Form feeds become spaces.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/search/===
+__init__.py[DD6L]: F:Builds, freezes, loads and prunes the offline full-text search index and defines the SearchLanguage base class. | R:code:sphinx/search/en.py,code:sphinx/util/index_entries.py,code:sphinx/util/_pathlib.py,code:sphinx/environment/__init__.py | A:SearchLanguage, IndexBuilder, js_index, languages, WordStore | S:SearchEnglish is imported after SearchLanguage (circular import). load() raises ValueError on envversion mismatch. A term in one doc is stored as int, not list. Unknown languages fall back to English.
+da.py[DL1T]: F:Danish search language with a snowball stemmer and stopwords. | R:code:sphinx/search/__init__.py | A:SearchDanish | S:-
+de.py[DL1T]: F:German search language with a snowball stemmer and stopwords. | R:code:sphinx/search/__init__.py | A:SearchGerman | S:-
+en.py[DL2T]: F:English search language with a snowball stemmer and stopwords; default fallback language. | R:code:sphinx/search/__init__.py | A:SearchEnglish | S:Fallback language for unknown languages in IndexBu
+es.py[DL1T]: F:Spanish search language with a snowball stemmer and stopwords. | R:code:sphinx/search/__init__.py | A:SearchSpanish | S:-
+fi.py[DL1T]: F:Finnish search language with a snowball stemmer and stopwords. | R:code:sphinx/search/__init__.py | A:SearchFinnish | S:-
+fr.py[DL1T]: F:Defines the French SearchLanguage using the Snowball french stemmer and French stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/fr.py | A:SearchFrench | S:-
+hu.py[DL1T]: F:Defines the Hungarian SearchLanguage using the Snowball hungarian stemmer and Hungarian stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/hu.py | A:SearchHungarian | S:-
+it.py[DL1T]: F:Defines the Italian SearchLanguage using the Snowball italian stemmer and Italian stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/it.py | A:SearchItalian | S:-
+ja.py[KL3L]: F:Japanese search language with word splitters: MeCab (native or ctypes), Janome, and a pure-Python TinySegmenter port, plus a pluggable splitter option. | R:code:sphinx/search/__init__.py,code:sphinx/util/_importer.py,code:sphinx/errors.py | A:SearchJapanese, DefaultSplitter, MecabSplitter, JanomeSplitter, BaseSplitter | S:type=dotted splitter path; 1-char words dropped
+nl.py[DL1T]: F:Defines the Dutch SearchLanguage using the Snowball dutch stemmer and Dutch stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/nl.py | A:SearchDutch | S:-
+no.py[DL1T]: F:Defines the Norwegian SearchLanguage using the Snowball norwegian stemmer and Norwegian stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/no.py | A:SearchNorwegian | S:-
+pt.py[DL1T]: F:Defines the Portuguese SearchLanguage using the Snowball portuguese stemmer and Portuguese stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/pt.py | A:SearchPortuguese | S:-
+ro.py[DL1T]: F:Defines the Romanian SearchLanguage using the Snowball romanian stemmer. | R:code:sphinx/search/__init__.py | A:SearchRomanian | S:Empty stopwords: no stopword filtering.
+ru.py[DL1T]: F:Defines the Russian SearchLanguage using the Snowball russian stemmer and Russian stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/ru.py | A:SearchRussian | S:-
+sv.py[DL1T]: F:Defines the Swedish SearchLanguage using the Snowball swedish stemmer and Swedish stopword set. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/sv.py | A:SearchSwedish | S:-
+tr.py[DL1T]: F:Defines the Turkish SearchLanguage using the Snowball turkish stemmer. | R:code:sphinx/search/__init__.py | A:SearchTurkish | S:Empty stopword frozenset; no stopword filtering.
+zh.py[KL2T]: F:Chinese search language that splits text with jieba and stems Latin terms with the English Snowball stemmer. | R:code:sphinx/search/__init__.py,code:sphinx/search/_stopwords/en.py | A:SearchChinese | S:Without jieba, cut_for_search yields nothing.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/search/_stopwords/===
+da.py[FL1S]: F:Generated Danish stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:DANISH_STOPWORDS | S:Generated file; edit utils/generate-snowball.py.
+de.py[FL1M]: F:Generated German stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:GERMAN_STOPWORDS | S:Generated file; edit utils/generate-snowball.py.
+en.py[FL1S]: F:Generated English stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:ENGLISH_STOPWORDS | S:Generated file; edit utils/generate-snowball.py.
+es.py[FL1M]: F:Generated Spanish stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:SPANISH_STOPWORDS | S:Generated file; edit utils/generate-snowball.py.
+fi.py[FL1M]: F:Generated Finnish stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:FINNISH_STOPWORDS | S:Generated: utils/generate-snowball.py; don't edit
+fr.py[FL1S]: F:Generated French stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:FRENCH_STOPWORDS | S:Generated: utils/generate-snowball.py; don't edit
+hu.py[FL1M]: F:Generated Hungarian stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:HUNGARIAN_STOPWORDS | S:Generated: utils/generate-snowball.py; has 'ill.'
+it.py[FL1M]: F:Generated Italian stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:ITALIAN_STOPWORDS | S:Generated: utils/generate-snowball.py; don't edit
+nl.py[FL1S]: F:Generated Dutch stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:DUTCH_STOPWORDS | S:Generated: utils/generate-snowball.py; don't edit
+no.py[FL1S]: F:Generated Norwegian stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:NORWEGIAN_STOPWORDS | S:Generated: utils/generate-snowball.py; don't edit
+pt.py[FL1M]: F:Generated Portuguese stopword frozenset from the Snowball stop list. | R:code:sphinx/search/_stopwords/__init__.py | A:PORTUGUESE_STOPWORDS | S:Generated by utils/generate-snowball.py;
+ru.py[FL1S]: F:Generated frozenset of Russian Snowball stopwords used by the Russian search language support. | R:- | A:RUSSIAN_STOPWORDS | S:Generated by utils/generate-snowball.py;
+sv.py[FL1S]: F:Generated frozenset of Swedish Snowball stopwords used by the Swedish search language support. | R:- | A:SWEDISH_STOPWORDS | S:Generated by utils/generate-snowball.py;
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/testing/===
+__init__.py[TQ2T]: F:Package docstring for sphinx.testing explaining how to enable its pytest fixtures via pytest_plugins. | R:code:sphinx/testing/fixtures.py | A:- | S:-
+fixtures.py[TQ5M]: F:Pytest fixtures and marker registration for building Sphinx test apps from 'sphinx' and 'test_params' markers. | R:code:sphinx/testing/util.py | A:app, make_app, app_params, test_params, shared_result, if_graphviz_found | S:shared_result and explicit srcdir are mutually exclusive (pytest.fail). shared_result makes make_app skip the build if outdir is non-empty. SharedResult.cache is class-level, cleared per module.
+path.py[TQ2M]: F:Deprecated str-subclass path class wrapping os.path and shutil helpers for tests. | R:code:sphinx/deprecation.py | A:path | S:Import emits RemovedInSphinx90Warning;
+restructuredtext.py[TQ3T]: F:Test helper that parses a string as reStructuredText into a doctree using an existing Sphinx app. | R:code:sphinx/parsers.py,code:sphinx/util/docutils.py | A:parse | S:Sets env.current_document.docname during parse, re
+util.py[TQ5M]: F:SphinxTestApp subclass, skip-building wrapper, doctree/XML assertion helpers and global-state cleanup for the Sphinx test suite. | R:code:sphinx/application.py,code:sphinx/util/docutils.py,code:sphinx/_cli/util/errors.py | A:SphinxTestApp, SphinxTestAppWrapperForSkipBuilding, assert_node, etree_parse | S:Requires srcdir; status/warning must be StringIO; verbosity=-1 makes them quiet. cleanup() restores sys.path, clears docutils/locale/ModuleAnalyzer globals. html_theme alabaster is replaced by basic.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/transforms/===
+__init__.py[DB6L]: F:Defines SphinxTransform/SphinxTransformer bases and the built-in docutils transforms Sphinx registers when reading documents. | R:code:sphinx/util/nodes.py,code:sphinx/util/i18n.py,code:sphinx/addnodes.py,code:sphinx/deprecation.py | A:SphinxTransform, SphinxTransformer, DefaultSubstitutions, SphinxContentsFilter, SphinxSmartQuotes, setup | S:Priority numbers matter: ReorderConsecutiveTargetAndIndexNodes (220) must run before PropagateTargets. SphinxTransform.app is deprecated (removal 10.0). Default substitutions apply only if undefined.
+compact_bullet_list.py[DB3T]: F:Transform that converts bullet lists containing only single cross-references into compact paragraphs. | R:code:sphinx/transforms/__init__.py,code:sphinx/addnodes.py | A:RefOnlyBulletListTransform, RefOnlyListChecker | S:No-op if html_compact_lists is true.
+i18n.py[DL6L]: F:Transforms that replace translatable nodes with translated doctrees from gettext catalogs and track translation progress. | R:code:sphinx/transforms/__init__.py,code:sphinx/util/nodes.py,code:sphinx/util/i18n.py | A:Locale, PreserveTranslatableMessages, TranslationProgressTotaliser, AddTranslationClasses, RemoveTranslatableInline, parse_noqa | S:PreserveTranslatableMessages (10) must run before Locale (20); totaliser (25) after. Locale has two phases using node['translated'] to avoid double translation.
+references.py[DB2T]: F:Transforms that suppress INFO messages from docutils dangling-reference handling and collect objects into domains. | R:code:sphinx/transforms/__init__.py | A:SphinxDanglingReferences, SphinxDomains | S:Reporter report_level is raised temporarily and re
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/transforms/post_transforms/===
+__init__.py[DB6L]: F:Post-transform base class and transforms that resolve cross-references, process only nodes, and fall back signature nodes. | R:code:sphinx/transforms/__init__.py,code:sphinx/util/nodes.py,code:sphinx/addnodes.py,code:sphinx/util/docutils.py | A:SphinxPostTransform, ReferencesResolver, OnlyNodeTransform, SigElementFallbackTransform, PropagateDescDomain | S:Resolution order: domain resolve_xref, missing-reference event, intersphinx self-referential retry, warning. NoUri means unresolved, no warning.
+code.py[DB3S]: F:Post-transforms that apply highlight_language/linenos to literal blocks and strip doctest flags from Python console blocks. | R:code:sphinx/transforms/__init__.py,code:sphinx/ext/doctest.py,code:sphinx/addnodes.py | A:HighlightLanguageTransform, TrimDoctestFlagsTransform, HighlightSetting, setup | S:Settings reset at start_of_file;
+images.py[DB4M]: F:Post-transforms that download remote images, extract data-URI images, and provide the ImageConverter base class for format conversion. | R:code:sphinx/transforms/__init__.py,code:sphinx/util/_pathlib.py,code:sphinx/util/images.py,code:sphinx/util/http_date.py,code:sphinx/util/requests.py | A:BaseImageConverter, ImageDownloader, DataURIExtractor, ImageConverter, get_filename_for, setup | S:ImageConverter.available is cached on the class, shared by all instances;
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/util/===
+__init__.py[CG4S]: F:Utility package root with docname/filetype helpers and a lazy __getattr__ that re-exports moved or deprecated names. | R:code:sphinx/util/_uri.py,code:sphinx/util/_importer.py,code:sphinx/util/_files.py,code:sphinx/util/osutil.py,code:sphinx/deprecation.py | A:docname_join, get_filetype, ws_re, url_re, md5, sha1 | S:Moved names resolve lazily via __getattr__; md5/sha1/split_index_msg/ExtensionError removal in 9.0, DownloadFiles/Filena
+_files.py[CD3T]: F:Dict subclasses tracking image and download files per document, assigning unique output names. | R:code:sphinx/util/_pathlib.py | A:FilenameUniqDict, DownloadFiles | S:Pickles only _existing; entries dropped on load.
+_importer.py[CG3T]: F:Imports a Python object by dotted qualified name, wrapping failures in ExtensionError. | R:code:sphinx/errors.py | A:import_object | S:getattr, then submodule import;
+_inventory_file_reader.py[CD3T]: F:Reads inventory files as plain text lines or zlib-compressed lines from a byte stream. | R:code:sphinx/util/logging.py | A:InventoryFileReader | S:Compressed read drops last line without newline.
+_io.py[CO2T]: F:File-like object that writes to a terminal stream and a file stream, stripping ANSI escapes for the file. | R:code:sphinx/_cli/util/errors.py | A:TeeStripANSI | S:-
+_lines.py[CG2T]: F:Parses a line-number spec such as 1,2,4-6 into a list of zero-based line indices. | R:- | A:parse_line_num_spec | S:1-based input, 0-based output;
+_pathlib.py[CD3S]: F:Defines the transitional _StrPath Path subclass that acts like str with deprecation warnings, plus a descriptor coercing attributes to it. | R:code:sphinx/deprecation.py | A:_StrPath, _StrPathProperty | S:replace() is str.replace, not rename;
+_serialise.py[CD2T]: F:Produces stable hashes and JSON strings of Python data structures independent of collection order. | R:- | A:stable_hash, stable_str | S:Keys by qualified name; unknown objects use unstab
+_timestamps.py[CD2T]: F:Formats a microsecond timestamp as an RFC 3339-style UTC string. | R:- | A:_format_rfc3339_microseconds | S:Input is µs; fraction truncated to unpadded ms.
+_uri.py[CN2T]: F:Helpers to percent-encode a URI (IDNA host) and test whether a string looks like a URL. | R:- | A:encode_uri, is_url | S:is_url only checks for '://'.
+build_phase.py[CW2T]: F:Defines the BuildPhase IntEnum naming the stages of a Sphinx build. | R:- | A:BuildPhase | S:RESOLVING aliases CONSISTENCY_CHECK (both 3);
+cfamily.py[CB4L]: F:Shared regexes, AST base classes, attribute nodes and a BaseParser for the C and C++ domain declaration parsers. | R:code:sphinx/addnodes.py,code:sphinx/util/logging.py,code:sphinx/config.py | A:BaseParser, DefinitionError, ASTBaseBase, ASTAttributeList, identifier_re, verify_description_mode | S:ASTBaseBase.__hash__ hashes a list (TypeError); subclasses must define __hash__. fail() clears otherErrors.
+console.py[CO3T]: F:Backward-compatible facade over sphinx._cli.util.colour that adds terminal width and colouring helpers. | R:code:sphinx/_cli/util/colour.py,code:sphinx/_cli/util/errors.py | A:colorize, term_width_line, terminal_safe, get_terminal_width, color_terminal, nocolor | S:_tw computed once at import.
+display.py[CO3T]: F:Progress display helpers: a status_iterator that logs progress and a progress_message context manager/decorator. | R:code:sphinx/_cli/util/colour.py,code:sphinx/util/logging.py,code:sphinx/locale/__init__.py | A:status_iterator, progress_message, SkipProgressMessage, display_chunk | S:SkipProgressMessage raised in progress_message is
+docfields.py[CB5L]: F:Field, GroupedField, TypedField and DocFieldTransformer, which turn reST field lists in object descriptions into domain-specific rendered fields. | R:code:sphinx/addnodes.py,code:sphinx/util/nodes.py,code:sphinx/directives/__init__.py | A:Field, GroupedField, TypedField, DocFieldTransformer | S:Only immediate-child field lists transformed. TypedField.make_field pops types entries (consumed once). has_arg mismatch keeps plain capitalised field. make_xref needs env.
+docstrings.py[CB3T]: F:Docstring helpers: separate meta fields, normalise indentation into reST lines, and extract #: comment docs. | R:- | A:separate_metadata, prepare_docstring, prepare_commentdoc | S:prepare_docstring ignores first line's indent;
+docutils.py[RU7L]: F:Sphinx's docutils glue: registers directives, roles and nodes, patches docutils temporarily, and supplies base classes, reporters and doctree-parsing helpers. | R:code:sphinx/util/parsing.py,code:sphinx/transforms/__init__.py,code:sphinx/util/logging.py,code:sphinx/util/rst.py,code:sphinx/errors.py | A:SphinxDirective, SphinxRole, ReferenceRole, SphinxTranslator, sphinx_domains, docutils_namespace | S:Directive, role and node registration mutates docutils global state, so wrap it in docutils_namespace().
+fileutil.py[CD3S]: F:Copies asset files and directories, rendering _t and .jinja templates when a context is given. | R:code:sphinx/util/osutil.py,code:sphinx/util/template.py,code:sphinx/util/logging.py | A:copy_asset, copy_asset_file | S:Templates render only when context is not None.
+http_date.py[CN2T]: F:Converts between epoch seconds and RFC 7231 HTTP-date strings. | R:code:sphinx/deprecation.py | A:epoch_to_rfc1123, rfc1123_to_epoch | S:Non-GMT input only emits RemovedInSphinx90Warning.
+i18n.py[CL5M]: F:i18n helpers: .po/.mo catalog discovery and compilation, strftime-to-Babel date formatting and language-specific image filename lookup. | R:code:sphinx/util/osutil.py,code:sphinx/util/_pathlib.py,code:sphinx/errors.py,code:sphinx/util/logging.py | A:CatalogInfo, CatalogRepository, format_date, docname_to_domain, search_image_for_language, get_image_filename_for_language | S:format_date uses SOURCE_DATE_EPOCH when date is None and then forces UTC even if local_time is set. Invalid locales fall back to 'en' with a warning.
+images.py[CD3S]: F:Image helpers: size detection, MIME guessing, data URI parsing and file-header type sniffing. | R:- | A:get_image_size, guess_mimetype, parse_data_uri, get_image_extension | S:get_image_size swallows all errors and returns Non
+index_entries.py[CB2T]: F:Splits index directive entry text into parts by entry type. | R:code:sphinx/util/nodes.py | A:split_index_msg | S:'single' falls back to 1 part if 2 fail.
+inspect.py[CA6L]: F:Helpers for inspecting Python objects: safe attribute access, callable and descriptor checks, signature handling, docstring lookup, and reST-safe object repr. | R:code:sphinx/util/typing.py,code:sphinx/pycode/ast.py,code:sphinx/util/logging.py | A:signature, stringify_signature, safe_getattr, getdoc, object_description, unwrap_all | S:safe_getattr maps any error to AttributeError. signature() swallows get_type_hints failures, skips validation. getslots raises TypeError for non-classes. is{function,builtin,routine} unpartial first.
+inventory.py[CD5M]: F:Reads and writes Sphinx objects.inv inventory files (v1 and v2) and defines the in-memory _Inventory and immutable _InventoryItem containers. | R:code:sphinx/util/_inventory_file_reader.py,code:sphinx/deprecation.py,code:sphinx/util/logging.py | A:InventoryFile, _Inventory, _InventoryItem, BUFSIZE | S:load() ignores joinfunc, returns .data. __getitem__ uses setdefault: lookups create empty type dicts. Item tuple access deprecated. $-ending location gets name. __hash__ raises TypeError.
+logging.py[CO7L]: F:Sphinx logging layer: namespaced logger adapter, record classes, handlers, filters and context managers for buffering, suppressing and prefixing warnings. | R:code:sphinx/errors.py,code:sphinx/_cli/util/colour.py | A:getLogger, setup, pending_logging, suppress_logging, prefixed_warnings, is_suppressed_warning | S:Loggers forced under 'sphinx.' with propagate False. setup() clears all handlers; raise-on-warning filter runs before suppression. Extra kwargs: type/subtype/location/nonl/color/once.
+matching.py[CG4S]: F:Translates shell-style glob patterns into regexes and provides matchers and recursive file listing with include/exclude filters. | R:code:sphinx/util/osutil.py | A:Matcher, compile_matchers, patmatch, patfilter, get_matching_files, DOTFILES | S:* and ? never match '/'; ** does. Excludes beat includes; yields NFC posix relative paths; prunes excluded dirs.
+math.py[CB2T]: F:Helpers for math output: equation number lookup for HTML and LaTeX wrapping of display math. | R:code:sphinx/writers/html5.py | A:get_node_equation_number, wrap_displaymath | S:Label⇒numbered; 1 part: equation, more: align
+nodes.py[CB7L]: F:Docutils node utilities: node matching, i18n message extraction, source-info workarounds, id generation, reference nodes, only-node filtering and copy patches. | R:code:sphinx/addnodes.py,code:sphinx/util/parsing.py,code:sphinx/locale/__init__.py,code:sphinx/util/logging.py | A:NodeMatcher, extract_messages, make_id, make_refnode, split_explicit_title, process_only_nodes | S:Import monkey-patches nodes.Element.copy (drops _document) and deepcopy globally. process_only_nodes keeps children if expr fails. inline_all_toctrees deep-copies, warns on unreadable files.
+osutil.py[CD5M]: F:OS and path helpers: canonical path conversion, relative URIs, mtime reading, safe file copy, write-if-changed file wrapper and rmtree. | R:code:sphinx/locale/__init__.py,code:sphinx/util/logging.py | A:canon_path, relative_uri, copyfile, FileAvoidWrite, ensuredir, path_stabilize | S:copyfile refuses to overwrite a differing dest unless force=True (warns only). mtime is microseconds rounded up. FileAvoidWrite rejects empty files; __exit__ returns True, suppressing exceptions.
+parallel.py[CP5S]: F:Runs build tasks serially or in forked worker processes, collecting results and logs, and splits arguments into chunks. | R:code:sphinx/errors.py,code:sphinx/util/logging.py | A:ParallelTasks, SerialTasks, parallel_available, make_chunks | S:Parallel only on posix with fork. Child exceptions arrive as SphinxParallelError. Child logs are replayed in the parent. result_func is called in the parent; SerialTasks passes it only the result.
+parsing.py[CB3T]: F:Parses reST text into docutils nodes via nested state-machine parsing with isolated title-style context. | R:code:sphinx/util/nodes.py | A:nested_parse_to_nodes | S:Restores title styles unless keep_title_context.
+png.py[CD2T]: F:Reads and writes a custom tEXt depth chunk just before the IEND chunk of PNG files. | R:- | A:read_png_depth, write_png_depth | S:Overwrites last 12 bytes (IEND), assumed final.
+requests.py[CN3S]: F:Thin wrappers over requests for GET/HEAD with Sphinx user-agent, TLS cert selection and ignorable redirects. | R:code:sphinx/__init__.py | A:get, head | S:Ignored redirect raises _IgnoredRedirection.
+rst.py[CB4S]: F:reStructuredText helpers: escaping, text width, heading generation, default role switching and prologue/epilogue insertion. | R:code:sphinx/util/docutils.py,code:sphinx/util/logging.py | A:escape, textwidth, heading, default_role, WIDECHARS | S:heading asserts level <= 3, needs env.language injected. default_role doesn't unregister on exception (no try/finally).
+tags.py[CC3S]: F:Holds the set of build tags and evaluates only/ifconfig-style boolean tag conditions via a restricted Jinja expression parser. | R:code:sphinx/deprecation.py | A:Tags, BooleanParser | S:Eval cached; add()/remove() leave stale results.
+template.py[CU3S]: F:Provides sandboxed Jinja renderers (file, Sphinx, LaTeX, reST) and a template loader that supports inheritance across template dirs. | R:code:sphinx/jinja2glue.py,code:sphinx/util/texescape.py,code:sphinx/util/rst.py,code:sphinx/locale/__init__.py | A:BaseRenderer, FileRenderer, SphinxRenderer, LaTeXRenderer, ReSTRenderer, SphinxTemplateLoader | S:LaTeX uses <% %>; '!name' loads system only.
+texescape.py[CB3S]: F:Escapes text for LaTeX output and highlighting with replacement tables that depend on the LaTeX engine. | R:- | A:escape, hlescape, escape_abbr, init, tex_replace_map | S:Empty until init(); lua/xelatex: no unicode maps
+typing.py[CA6L]: F:Defines shared type aliases and converts annotations into reST references (restify) or plain strings (stringify_annotation). | R:code:sphinx/util/inspect.py,code:sphinx/ext/autodoc/mock.py,code:sphinx/deprecation.py,code:sphinx/util/inventory.py | A:restify, stringify_annotation, get_type_hints, ExtensionMetadata, RoleFunction, OptionSpec | S:Invalid mode raises ValueError. get_type_hints swallows errors and falls back to raw __annotations__ or {} on KeyError. Imports of inspect and autodoc.mock are lazy to avoid cycles.
+
+===/root/aoci-eval/repos-r5/sphinx/sphinx/writers/===
+__init__.py[RU1T]: F:Package marker for custom docutils writers. | R:- | A:- | S:-
+html.py[DU3T]: F:HTMLWriter wraps the HTML5 translator for the HTML builder and aliases HTMLTranslator to HTML5Translator. | R:code:sphinx/writers/html5.py,code:sphinx/builders/html/__init__.py | A:HTMLWriter, HTMLTranslator | S:translate() copies visitor attrs onto the writer.
+html5.py[DU6L]: F:HTML5 docutils translator that renders Sphinx custom nodes (signatures, admonitions, code, tables, math, numbering) to HTML. | R:code:sphinx/addnodes.py,code:sphinx/util/docutils.py,code:sphinx/util/images.py,code:sphinx/locale/__init__.py,code:sphinx/builders/html/__init__.py | A:HTML5Translator, multiply_length | S:supported_inline_tags is emptied on purpose. Signature parameter rendering keeps state across visit/depart calls and depends on ordering. Math output goes through the builder registry renderer.
+latex.py[DU7L]: F:Docutils writer and translator that renders Sphinx doctrees to LaTeX source, including tables, signatures, indices, figures, references and highlighting. | R:code:sphinx/builders/latex/nodes.py,code:sphinx/builders/latex/__init__.py,code:sphinx/builders/latex/theming.py,code:sphinx/util/texescape.py,code:sphinx/util/template.py,code:sphinx/highlighting.py | A:LaTeXWriter, LaTeXTranslator, Table, TableCell, rstdim_to_latexdim, UnsupportedError | S:Imports builders.latex.nodes at file bottom (circular); table nesting >3 raises UnsupportedError; longtable if row>30; template lookup falls back to legacy _t files; visit_rubric skips Footnotes
+manpage.py[DU4L]: F:Man page writer and translator extending docutils manpage for Sphinx nodes, with a transform flattening nested inline markup. | R:code:sphinx/util/docutils.py,code:sphinx/util/nodes.py,code:sphinx/util/i18n.py,code:sphinx/addnodes.py | A:ManualPageWriter, ManualPageTranslator, NestedInlineTransform | S:_docinfo is class-level, shared across translator instances; NestedInlineTransform mutates the doctree first;
+texinfo.py[IU5L]: F:Docutils writer and translator that renders a Sphinx doctree to a Texinfo document with nodes, menus, indices, anchors and cross-references. | R:code:sphinx/writers/latex.py,code:sphinx/builders/texinfo.py,code:sphinx/util/docutils.py | A:TexinfoWriter, TexinfoTranslator, find_subsections, smart_capwords, TEMPLATE | S:Node names must be unique: duplicates get a '<n>' suffix. Image filename uses filename[:-5] to strip '.info', so overridden filenames must end in .info. Footnotes are re-walked at each reference.
+text.py[IU5L]: F:Docutils writer and translator that renders a Sphinx doctree to wrapped plain text, with its own Table, Cell and width-aware TextWrapper. | R:code:sphinx/builders/text.py,code:sphinx/util/docutils.py,code:sphinx/locale/__init__.py | A:TextWriter, TextTranslator, Table, Cell, TextWrapper, my_wrap | S:Nested tables raise NotImplementedError. new_state/end_state calls must be balanced. MAXWIDTH=70 is subtracted by cumulative indent. Table colwidth is not computed, it comes from colspecs.
+xml.py[IU3T]: F:Docutils-native XML writer and pseudo-XML writer subclasses that let a Sphinx builder supply its own translator class. | R:code:sphinx/builders/xml.py | A:XMLWriter, PseudoXMLWriter | S:XMLWriter.translate forces xml/doctype declaration
+
+===/root/aoci-eval/repos-r5/sphinx/tests/===
+conftest.py[TQ4S]: F:Pytest configuration: test roots directory fixture, global-state cleanup, console init patch, HTTP stub and empty-project app factory. | R:code:sphinx/testing/util.py,code:sphinx/testing/fixtures.py,code:sphinx/locale/__init__.py | A:rootdir, make_app_with_empty_project, _http_teapot, _cleanup_docutils | S:Uses roots-read-only if CI is set and the dir exists. Monkeypatches sphinx.locale.init_console at import to keep English
+test_addnodes.py[TQ2T]: F:Tests that desc_sig_element subclasses register in addnodes.SIG_ELEMENTS only when declared with _sig_element=True. | R:code:sphinx/addnodes.py | A:- | S:-
+test_application.py[TQ3S]: F:Tests Sphinx application behaviour: instantiation, event connect/emit, extension setup warnings, source parsers, parallel flags and build_specific. | R:code:sphinx/application.py,code:sphinx/testing/util.py,code:sphinx/errors.py | A:- | S:-
+test_command_line.py[TQ3M]: F:Tests sphinx-build and make-mode argument parsing with positional and option orderings, with xfails on older argparse versions. | R:code:sphinx/cmd/build.py,code:sphinx/cmd/make_mode.py | A:- | S:-
+test_errors.py[TQ2T]: F:Tests the repr of ExtensionError with and without an original exception. | R:code:sphinx/errors.py | A:- | S:-
+test_events.py[TQ2T]: F:Tests EventManager listener priority ordering, ExtensionError wrapping, allowed_exceptions and pdb pass-through. | R:code:sphinx/events.py,code:sphinx/errors.py | A:- | S:-
+test_highlighting.py[TQ2S]: F:Tests PygmentsBridge lexer registration, interactive detection, lexer options, custom formatter and default-language fallback with warnings. | R:code:sphinx/highlighting.py | A:- | S:-
+test_project.py[TQ2S]: F:Tests Project document discovery, exclude patterns, suffixes, path2doc and doc2path. | R:code:sphinx/project.py | A:- | S:-
+test_quickstart.py[TQ3M]: F:Tests sphinx.cmd.quickstart prompting, project generation, EOL handling, --extensions option and a build of the generated project. | R:code:sphinx/cmd/quickstart.py,code:sphinx/testing/util.py | A:- | S:Patches qs.term_input; repeated prompt raises.
+test_roles.py[TQ2S]: F:Tests the samp role's EmphasizedLiteral brace and escape parsing and _format_rfc_target RFC anchor formatting. | R:code:sphinx/roles.py,code:sphinx/testing/util.py | A:- | S:RFC name- anchors stay raw, no section guessing.
+test_search.py[TQ3L]: F:Tests the search IndexBuilder (feed, freeze, dump/load, prune), searchindex.js contents, determinism, and JS fixture parity. | R:code:sphinx/search/__init__.py,code:tests/utils.py | A:- | S:JS fixtures must equal regenerated searchindex.js
+test_versioning.py[TQ2S]: F:Tests sphinx.versioning uid assignment, get_ratio and merge_doctrees across modified, added, deleted and inserted paragraphs. | R:code:sphinx/versioning.py,code:sphinx/testing/util.py | A:- | S:Module autouse fixture builds once; shared state.
+utils.py[TQ3S]: F:Shared test helpers: threaded HTTP/HTTPS servers, linkcheck URI rewriting to a dynamic port, and TESTS_ROOT. | R:- | A:http_server, TESTS_ROOT, CERT_FILE, rewrite_hyperlinks, serve_application | S:http_server only; localhost:7777 → real port
+
+===/root/aoci-eval/repos-r5/sphinx/tests/js/roots/titles/===
+conf.py[TQ2T]: F:Sphinx conf for the JS 'titles' test root enabling autodoc with cwd on sys.path. | R:code:tests/js/roots/titles/relevance.py | A:- | S:Needs cwd in sys.path: run build from this dir
+relevance.py[TQ1T]: F:Example class with attributes and docstrings documented via autodoc in the JS titles search-relevance root. | R:- | A:Example | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-add_enumerable_node/===
+conf.py[TQ2T]: F:Sphinx conf for the test root loading the enumerable_node extension with numfig enabled. | R:- | A:- | S:Adds cwd to sys.path for local extension import.
+enumerable_node.py[TE4T]: F:Test-root extension registering two enumerable nodes (my_figure, numbered_text) with directives and HTML visitors for numfig testing. | R:- | A:my_figure, MyFigure, numbered_text, NumberedText, setup | S:numbered_text writes body, raises SkipNode; html depart None. setdefault numfig_format 'original'='No.%s' (user wins)
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-add_source_parser-conflicts-with-users-setting/===
+conf.py[TE3T]: F:Test-root conf that pre-sets source_suffix and source_parsers for .test, to conflict with an extension registering its own parser. | R:code:tests/roots/test-add_source_parser-conflicts-with-users-setting/source_parser.py | A:extensions, source_suffix, source_parsers, DummyTestParser | S:Deliberate suffix clash; user setting must win
+source_parser.py[TE2T]: F:Test extension registering TestSourceParser for the .test suffix, used to check conflicts with user settings. | R:- | A:TestSourceParser, setup | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-add_source_parser/===
+conf.py[TE2T]: F:Test-root conf that puts the cwd on sys.path and loads the local source_parser extension. | R:code:tests/roots/test-add_source_parser/source_parser.py | A:extensions | S:Extension importable only if cwd is the root dir
+source_parser.py[TE2T]: F:Test extension defining a dummy docutils Parser and registering it for the .test source suffix. | R:- | A:TestSourceParser, setup | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-api-set-translator/===
+conf.py[TE3T]: F:Test-root conf defining translator subclasses for every builder and registering each via app.set_translator. | R:- | A:setup, ConfHTMLTranslator, ConfLaTeXTranslator | S:sys.path setup commented out; test must add path
+translator.py[TE2T]: F:Defines an HTML5Translator subclass used as an external translator in set_translator tests. | R:- | A:ExtHTMLTranslator | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-api-set-translator/nonext/===
+conf.py[TC2T]: F:Minimal test-root conf without extensions, adding cwd to sys.path, for set_translator tests. | R:- | A:project | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-basic/===
+conf.py[TC3T]: F:Basic test-root conf selecting the basic HTML theme and one latex document entry. | R:- | A:html_theme, latex_documents | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-build-html-theme-having-multiple-stylesheets/===
+conf.py[TC2T]: F:Test-root conf selecting a custom theme 'mytheme' from the local _themes directory. | R:- | A:html_theme_path, html_theme | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-build-text/===
+conf.py[TC2T]: F:Test-root conf for the text builder: .txt as the only source suffix, excluding _build. | R:- | A:source_suffix, exclude_patterns | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-builder-gettext-dont-rebuild-mo/===
+conf.py[TQ2T]: F:Test-root Sphinx conf setting language to 'xx' for the gettext no-rebuild-of-.mo builder test. | R:- | A:- | S:language 'xx' tied to catalogs in same root
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-changes/===
+conf.py[TQ2T]: F:Test-root Sphinx conf giving project, copyright, version and release values for ChangesBuilder tests. | R:- | A:- | S:version 0.6/release 0.6alpha1 match docs' entries
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-circular/===
+conf.py[TQ2T]: F:Test-root Sphinx conf that only excludes the _build directory, for circular-toctree/include tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-config/===
+conf.py[TQ2T]: F:Test-root Sphinx conf with an HTML-special project name, a release and a templates_path for config tests. | R:- | A:- | S:Angle brackets in project are deliberate; keep
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-copyright-multiline/===
+conf.py[TQ2T]: F:Test-root Sphinx conf defining copyright as a tuple of multiple year-range entries with the basic HTML theme. | R:- | A:- | S:copyright is a tuple; entries asserted verbatim
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-directive-code/===
+conf.py[TQ2T]: F:Test-root Sphinx conf excluding _build and enabling numfig for code-block directive tests. | R:code:tests/roots/test-directive-code/target.py | A:- | S:numfig=True required by numbered caption tests.
+target.py[TQ2T]: F:Python sample file that literalinclude directives in the code tests pull lines, pyobject and tab handling from. | R:code:tests/roots/test-directive-code/conf.py | A:- | S:Don't reformat: line numbers/tabs/non-ASCII tested
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-directive-include/===
+conf.py[TQ2T]: F:Test-root Sphinx conf naming the project and excluding _build for include directive tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-directive-only/===
+conf.py[TQ2T]: F:Test-root Sphinx conf naming the project and excluding _build for the 'only' directive tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-c-c_maximum_signature_line_length/===
+conf.py[TQ2T]: F:Sphinx config for a C domain test root that sets c_maximum_signature_line_length just below the length of a sample signature. | R:- | A:c_maximum_signature_line_length | S:Limit = len('str hello(str name)') - 1: wraps it
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-c-intersphinx/===
+conf.py[TQ1T]: F:Sphinx config for the C domain intersphinx test root that enables sphinx.ext.intersphinx. | R:- | A:exclude_patterns, extensions | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-c/===
+conf.py[TQ1T]: F:Sphinx config for the C domain test root that only excludes the _build directory. | R:- | A:exclude_patterns | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-cpp-cpp_maximum_signature_line_length/===
+conf.py[TQ2T]: F:Sphinx config for a C++ domain test root that sets cpp_maximum_signature_line_length just below the length of a sample signature. | R:- | A:cpp_maximum_signature_line_length | S:Limit = len('str hello(str name)') - 1: wraps it
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-cpp-intersphinx/===
+conf.py[TQ1T]: F:Sphinx config for the C++ domain intersphinx test root that enables sphinx.ext.intersphinx. | R:- | A:exclude_patterns, extensions | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-cpp/===
+conf.py[TQ1T]: F:Sphinx config for the C++ domain test root that only excludes the _build directory. | R:- | A:exclude_patterns | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-js-javascript_maximum_signature_line_length/===
+conf.py[TQ2T]: F:Sphinx config for a JavaScript domain test root that sets javascript_maximum_signature_line_length to 1. | R:- | A:javascript_maximum_signature_line_length | S:Limit 1: every signature with params wraps.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-js/===
+conf.py[TQ1T]: F:Sphinx config for the JavaScript domain test root that only excludes the _build directory. | R:- | A:exclude_patterns | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-py-python_maximum_signature_line_length/===
+conf.py[TQ2T]: F:Sphinx config for a Python domain test root that sets python_maximum_signature_line_length to 1. | R:- | A:python_maximum_signature_line_length | S:Limit of 1 wraps every signature with parameters.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-py-python_use_unqualified_type_names/===
+conf.py[TQ2T]: F:Test-root Sphinx config enabling python_use_unqualified_type_names for Python domain type-name rendering tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-domain-py/===
+conf.py[TQ1T]: F:Sphinx config for the Python domain test root that only excludes the _build directory. | R:- | A:exclude_patterns | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-double-inheriting-theme/===
+conf.py[TQ2T]: F:Test-root config selecting html_theme base_theme2 from base_themes_dir to exercise themes inheriting through two levels. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-environment-record-dependencies/===
+conf.py[TQ2T]: F:Test-root config adding the current directory to sys.path and enabling autodoc so imported module dependencies get recorded. | R:code:tests/roots/test-environment-record-dependencies/example_module.py | A:- | S:sys.path is cwd-based; needs cwd = root dir.
+example_module.py[TQ1T]: F:Trivial module with example_function returning 42, documented via autodoc to test dependency recording. | R:- | A:example_function | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-epub-anchor-id/===
+conf.py[TQ2T]: F:Test-root config registering a 'setting' cross-reference type and role for epub anchor id tests. | R:- | A:setup | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-pep420/a/b/c/===
+__init__.py[TQ1T]: F:Package 'c' with a docstring, nested inside the PEP 420 namespace layout a/b/c for apidoc tests. | R:- | A:- | S:-
+d.py[TQ2T]: F:Fixture module d with only a docstring, in a PEP 420 namespace package tree used by the apidoc extension tests. | R:- | A:- | S:a/b/c lacks __init__.py; tests PEP 420 discovery.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-pep420/a/b/e/===
+f.py[TQ1T]: F:Fixture module f with only a docstring, inside regular package e of the PEP 420 apidoc fixture. | R:code:tests/roots/test-ext-apidoc-pep420/a/b/e/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-pep420/a/b/x/===
+y.py[TQ1T]: F:Fixture module y with only a docstring, in directory x of the PEP 420 apidoc fixture. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-subpackage-in-toc/parent/child/===
+foo.py[TQ1T]: F:Fixture module foo with only a docstring, inside the nested child subpackage. | R:code:tests/roots/test-ext-apidoc-subpackage-in-toc/parent/child/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-toc/mypackage/===
+main.py[TQ2T]: F:Fixture script that prints a greeting using mod_something and reads resource.txt next to mod_resource. | R:code:tests/roots/test-ext-apidoc-toc/mypackage/something/__init__.py,code:tests/roots/test-ext-apidoc-toc/mypackage/resource/__init__.py | A:- | S:Imports undefined modules; only parsed, not run.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-toc/mypackage/no_init/===
+foo.py[TQ2T]: F:Fixture module in a directory without __init__.py, which apidoc should leave out of the generated toc. | R:- | A:- | S:Keep no_init without __init__.py; deliberate.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-toc/mypackage/something/===
+__init__.py[TQ1T]: F:Subpackage something with only a docstring, in the apidoc toc fixture. | R:code:tests/roots/test-ext-apidoc-toc/mypackage/main.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc-trailing-underscore/package_/===
+__init__.py[TQ2T]: F:Test-root package whose name ends in an underscore, used as an apidoc fixture. | R:code:tests/roots/test-ext-apidoc-trailing-underscore/package_/module_.py | A:- | S:-
+module_.py[TQ2T]: F:Fixture module with a trailing-underscore class, function and argument name for apidoc escaping tests. | R:code:tests/roots/test-ext-apidoc-trailing-underscore/package_/__init__.py | A:SomeClass_, some_function_ | S:Keep trailing underscores: tests RST escaping.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc/===
+conf.py[TQ3T]: F:Test-root config for sphinx.ext.apidoc, generating docs from 'src' into 'generated' with private members and separate modules. | R:code:sphinx/ext/apidoc/__init__.py | A:- | S:Exclude is root-relative; paths are cwd-relative.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-apidoc/src/===
+exclude_package.py[TQ1T]: F:Empty docstring-only module that the apidoc exclude-pattern test must leave out of generated output. | R:- | A:- | S:-
+my_package.py[TQ2T]: F:Small example module with one annotated function, used as apidoc test input. | R:code:tests/roots/test-ext-apidoc/src/exclude_package.py | A:example_function | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc-type-alias-xref/===
+alias_module.py[TQ2T]: F:Fixture module with PEP 604 union and generic type aliases used by functions, to test alias cross-referencing. | R:code:tests/roots/test-ext-autodoc-type-alias-xref/conf.py | A:pathlike, Handler, read_file, process_error | S:'#:' comments document aliases;
+conf.py[FC2T]: F:Sphinx configuration for the type-alias xref root, mapping alias names via autodoc_type_aliases. | R:code:tests/roots/test-ext-autodoc-type-alias-xref/alias_module.py | A:- | S:autodoc_type_aliases keys must match alias_module
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc/===
+autodoc_dummy_bar.py[TQ2T]: F:Fixture class Bar with an attribute aliasing Foo imported from the bug2437 package. | R:code:tests/roots/test-ext-autodoc/bug2437/autodoc_dummy_foo.py | A:Bar | S:Needs test root on sys.path (top-level bug2437).
+autodoc_dummy_module.py[TQ2T]: F:Fixture module that star-imports the mocked 'dummy' module and calls its function. | R:code:tests/roots/test-ext-autodoc/conf.py | A:test | S:'dummy' is not on disk; conf.py mocks it via autod
+conf.py[FC3T]: F:Sphinx configuration for the autodoc test root: enables autodoc, mocks 'dummy', turns on nitpicky mode. | R:code:tests/roots/test-ext-autodoc/autodoc_dummy_module.py | A:- | S:Inserts cwd into sys.path (cwd-dependent);
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc/bug2437/===
+autodoc_dummy_foo.py[TQ1T]: F:Fixture defining the dummy class Foo for the bug2437 alias regression test. | R:code:tests/roots/test-ext-autodoc/autodoc_dummy_bar.py | A:Foo | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc/circular_import/===
+__init__.py[TQ2T]: F:Package init that re-exports SomeClass from circular_import.c, fixture for circular import handling. | R:- | A:SomeClass | S:Imports circular_import.c mid-initialization;
+a.py[TQ2T]: F:Test fixture module defining constant X = 42 for the circular-import autodoc test. | R:code:tests/roots/test-ext-autodoc/circular_import/c.py | A:X | S:-
+b.py[TQ2T]: F:Test fixture that imports SomeClass from circular_import only under TYPE_CHECKING to create a circular import. | R:code:tests/roots/test-ext-autodoc/circular_import/c.py | A:- | S:Circular import guarded by TYPE_CHECKING;
+c.py[TQ2T]: F:Test fixture defining SomeClass whose class attribute X reads circular_import.a.X, importing sibling modules a and b. | R:code:tests/roots/test-ext-autodoc/circular_import/a.py,code:tests/roots/test-ext-autodoc/circular_import/b.py | A:SomeClass | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc/target/===
+TYPE_CHECKING.py[TQ3T]: F:Autodoc fixture with annotations that reference names imported only under TYPE_CHECKING, using postponed annotation evaluation. | R:- | A:Foo, spam | S:Iterable/StringIO TYPE_CHECKING-only; unresolved
+__init__.py[TQ5M]: F:Main autodoc test-target package with many classes and members covering doc comments, signatures, aliases, instance attributes and special methods. | R:code:tests/roots/test-ext-autodoc/target/_functions_to_import.py | A:Class, CustomEx, CustomDict, Outer, InnerChild, DocstringSig | S:__all__ is only ['Class']; other names need explicit directives. Tests depend on exact docstrings, comments, non-ASCII text; Class.skipmeth/excludemeth skipped by test hooks; edits break tests.
+_functions_to_import.py[TQ2T]: F:Fixture module providing function_to_be_imported, which is imported into the target package to test imported-member handling. | R:code:tests/roots/test-ext-autodoc/target/__init__.py | A:function_to_be_imported | S:Sphinx TYPE_CHECKING-only; annotation is a string
+abstractmethods.py[TQ2T]: F:Autodoc fixture class with abstract, static, class, property and coroutine abstract methods. | R:- | A:Base | S:Base lacks ABC: abstractmethod not enforced
+annotated.py[TQ2T]: F:Autodoc fixture using typing.Annotated in a type alias, a function parameter and class attributes. | R:- | A:ValidatedString, hello, AnnotatedAttributes, FuncValidator, MaxLen | S:__future__ annotations import intentionally off
+autoclass_content.py[TQ2T]: F:Autodoc fixture classes A to H with varying combinations of __init__ and __new__ docstrings for testing autoclass_content. | R:- | A:A, B, C, D, E, F | S:G/H __init__ lack docstring, inherit base's
+autodoc_type_aliases.py[TQ3T]: F:Autodoc fixture for autodoc_type_aliases with annotated variables, overloads and attributes that use the alias myint. | R:- | A:myint, variable, read, sum, mult, Foo | S:myint=int resolves only via autodoc_type_aliases;
+bound_method.py[TQ2T]: F:Autodoc fixture exposing a module-level bound method taken from a Cls instance. | R:- | A:Cls, bound_method | S:-
+cached_property.py[TQ2T]: F:Autodoc fixture class with functools.cached_property members, one typed via a type comment. | R:- | A:Foo | S:prop_with_type_comment has only a type comment, no
+callable.py[TQ3T]: F:Autodoc test fixture defining a class with __call__ and a method, plus module-level instance and bound-method aliases. | R:- | A:Callable, function, method | S:Callable `function`, bound `method`; not classes
+classes.py[TQ3T]: F:Autodoc test fixture with classes using different signature sources (__init__, __new__, __signature__), generic subclasses and class aliases. | R:- | A:Foo, Bar, Baz, Qux, Quux, Corge | S:Qux: __signature__ (foo, bar) wins over __init__
+coroutine.py[TQ3T]: F:Autodoc test fixture with coroutine, classmethod, staticmethod and async-generator methods and a sync wrapper around a coroutine. | R:- | A:AsyncClass, sync_func, myawait | S:sync_func wraps coroutine; no call inside loop
+cython.pyx[TQ2T]: F:Cython source fixture with a typed function and class method, used to test autodoc on compiled modules. | R:- | A:foo, Class | S:Compile first; needs binding=True for signatures
+decorator.py[TQ3T]: F:Autodoc test fixture with decorators, with and without functools.wraps, applied to functions, methods, __init__, __new__ and a metaclass __call__. | R:- | A:deco1, deco2, foo, Bar, Baz, Qux | S:deco1 uses @wraps; deco2 doesn't, loses signature
+descriptor.py[TQ3T]: F:Autodoc test fixture with custom data descriptor classes, a descriptor metaclass and a class using a descriptor and a property. | R:- | A:CustomDataDescriptor, CustomDataDescriptorMeta, CustomDataDescriptor2, Class | S:__get__(None) returns self; __metaclass__ unused
+docstring_signature.py[TQ3T]: F:Autodoc test fixture with classes whose signatures are written in docstrings of the class, __init__ or __new__, including overloaded multi-line forms. | R:- | A:A, B, C, D, E, F | S:B and C have conflicting signatures in class doc v
+empty_all.py[TQ2T]: F:Autodoc test fixture module with an empty __all__ and three documented functions. | R:- | A:foo, bar, baz | S:__all__ is empty, not absent: no members documente
+enums.py[TQ4M]: F:Autodoc test fixture with many Enum classes covering mixins, data types, inherited and overridden members and name/_missing_ overrides. | R:- | A:EnumCls, EnumClassWithDataType, EnumClassWithMixinType, EnumClassWithMixinAndDataType, EnumClassWithParentEnum, MemberType | S:Docstrings 'inherited'/'overridden' mark inherited members. MemberType.__data is name-mangled; never show it.
+final.py[TQ2T]: F:Autodoc test fixture using typing.final, typing_extensions.final and aliased imports on a class and its methods. | R:- | A:Class | S:Finals via typing.final, final_ext alias, typing_e
+functions.py[TQ2T]: F:Autodoc test fixture with plain, async, async-generator, partial and builtin functions and a slice-annotated argument. | R:- | A:func, coroutinefunc, asyncgenerator, partial_func, partial_coroutinefunc, builtin_func | S:slice_arg_func has undefined annotation 'float64[:
+generic_class.py[TQ2T]: F:Autodoc test fixture with a Generic[T] class defining __init__, checking Generic.__new__ does not mask its signature. | R:- | A:A, T | S:A's expected signature is from __init__(a, b=None)
+genericalias.py[TQ3T]: F:Autodoc test fixture defining generic aliases (List[int], Callable) at module and class level, with and without doc comments. | R:- | A:T, C, Class, L | S:C is deliberately undocumented alias;
+hide_value.py[TQ3T]: F:Autodoc test fixture with module and class attributes marked with the ':meta hide-value:' doc comment. | R:- | A:SENTINEL1, SENTINEL2, Foo | S:Hidden in module and Foo; SENTINEL2 meta only
+imported_members.py[TQ2T]: F:Autodoc test fixture that re-exports func2 and func3 from the partialfunction fixture module via relative import. | R:code:tests/roots/test-ext-autodoc/target/partialfunction.py | A:func2, func3 | S:Only shown with imported-members; needs package
+inheritance.py[TQ3T]: F:Autodoc test fixture with Base, AnotherBase, Derived (multiple inheritance) and MyList to test inherited-members behaviour. | R:- | A:Base, AnotherBase, Derived, MyList | S:inheritedmeth undocumented, must inherit Base doc
+inherited_annotations.py[TQ3T]: F:Autodoc test fixture for issue 11387: subclasses inheriting a type-annotated member with docstring. | R:- | A:HasTypeAnnotatedMember, NoTypeAnnotation, NoTypeAnnotation2 | S:Twin subclasses intentional (py≤3.9 cache bug)
+instance_variable.py[TQ3T]: F:Autodoc test fixture with instance attributes documented via trailing doc comments in __init__, overridden in a subclass. | R:- | A:Foo, Bar | S:Exact comment text matters; attr4 undocumented
+literal.py[TQ3T]: F:Autodoc test fixture using Literal types in TypeVar bounds and function annotations, including enum members. | R:- | A:MyEnum, T, U, bar, foo | S:Postponed annotations; Literal of int/str/enum
+metadata.py[TQ2T]: F:Autodoc test fixture whose function has a docstring containing only a ':meta metadata-only-docstring:' field. | R:- | A:foo | S:Metadata-only docstring, no body text
+methods.py[TQ3T]: F:Autodoc test fixture with regular, static, class, property, partialmethod and coroutine methods plus an inheriting subclass. | R:- | A:Base, Inherited | S:partialmethod members lack docs; Inherited empty
+module.py[TQ2T]: F:Autodoc test fixture with documented/undocumented, annotated and dunder module-level variables. | R:- | A:documented, annotated, __documented_special__, undocumented | S:Only commented vars documented; __special__ not
+name_mangling.py[TQ2T]: F:Autodoc test fixture with private name-mangled class attributes and a mangled-looking name in a subclass. | R:- | A:Foo, Bar | S:Only Foo.__name and Bar._Baz__email documented
+need_mocks.py[TQ3T]: F:Autodoc test fixture importing nonexistent modules so autodoc mock handling is exercised for decorators, annotations, aliases and bases. | R:- | A:decorated_function, func, TestAutodoc, Inherited, Alias | S:Keep unimportable; mocked by autodoc_mock_imports
+overload.py[TQ4T]: F:Autodoc fixture defining @overload-decorated functions, methods, __new__, __init__ and metaclass __call__ signatures for overload rendering tests. | R:code:tests/roots/test-ext-autodoc/target/overload2.py | A:sum, Math, Foo, Bar, Meta, Baz | S:Any is TYPE_CHECKING-only, so annotations must stay lazy (__future__). Baz takes Meta.__call__ overloads.
+overload2.py[TQ2T]: F:Autodoc fixture subclassing Bar from the overload fixture to test inherited overloaded __init__ signatures. | R:code:tests/roots/test-ext-autodoc/target/overload.py | A:Baz | S:Absolute target.overload import; needs sys.path.
+overload3.py[TQ3T]: F:Autodoc fixture overloading one function via typing.overload, an aliased import and typing_extensions.overload to test all decorator spellings. | R:- | A:test | S:Spellings vary on purpose; keep imports, noqa.
+partialfunction.py[TQ3T]: F:Autodoc fixture with chained functools.partial objects of a function, some carrying custom docstrings. | R:- | A:func1, func2, func3, func4 | S:func3 sets __doc__; func2/func4 none; keep chain.
+partialmethod.py[TQ3T]: F:Autodoc fixture class with partialmethod attributes, one with a #: doc comment and one without any docstring. | R:- | A:Cell | S:set_alive uses #: doc; set_dead has plain # only.
+pep604.py[TQ3T]: F:Autodoc fixture using PEP 604 union annotations (int / str) on a module attribute, function, class attribute and method. | R:- | A:attr, sum, Foo | S:__future__ annotations: lazy, never evaluated.
+preserve_defaults.py[TQ4T]: F:Autodoc fixture with functions, methods, a lambda and property lambdas whose default values should be preserved as source text. | R:- | A:foo, Class, get_sentinel, MultiLine, CONSTANT, SENTINEL | S:Only prop3 parses; prop1/2/4/5 hit SyntaxError. fmt: off guards layout: don't reformat. now() default varies.
+preserve_defaults_special_constructs.py[TQ3T]: F:Autodoc fixture covering default preservation for lambdas, dataclasses, TypedDict, NamedTuple and namedtuple with defaults. | R:- | A:SENTINEL, ze_lambda, foo, DataClass, DataClassNoInit, MyTypedDict | S:DataClassNoInit init=False: no generated __init__
+private.py[TQ3T]: F:Autodoc fixture exercising :meta private: and :meta public: overrides on functions, constants and class attributes regardless of underscore naming. | R:- | A:private_function, _public_function, PRIVATE_CONSTANT, _PUBLIC_CONSTANT, Foo | S:Names contradict :meta: on purpose; don't rename.
+process_docstring.py[TQ2T]: F:Autodoc fixture whose docstring contains --- separator lines for autodoc-process-docstring event handler tests. | R:- | A:func | S:Tests match docstring text/--- lines; don't edit.
+properties.py[TQ3T]: F:Autodoc fixture class with property and classmethod-property members, annotated either inline or via type comments. | R:- | A:Foo | S:*_with_type_comment use type comments on purpose.
+singledispatch.py[TQ3T]: F:Autodoc test fixture defining a singledispatch function with int, float, str and dict (annotation-registered) overloads. | R:- | A:func | S:assign_signature sets _func_str.__signature__
+singledispatchmethod.py[TQ3T]: F:Autodoc test fixture class Foo with a singledispatchmethod and int, float, str and dict overloads. | R:- | A:Foo | S:Requires Python 3.8+; overload names are private
+singledispatchmethod_classmethod.py[TQ3T]: F:Autodoc test fixture class Foo with a singledispatchmethod stacked on classmethod, including registered overloads. | R:- | A:Foo | S:Order: @singledispatchmethod above @classmethod
+slots.py[TQ3T]: F:Autodoc test fixture classes using __slots__ as list, dict with docstrings, and a bare string. | R:- | A:Foo, Bar, Baz | S:Bar dict-valued __slots__ supplies attribute docs
+sort_by_all.py[TQ3T]: F:Autodoc test fixture module whose __all__ lists baz, foo, Bar, plus members outside __all__. | R:- | A:foo, Bar, baz, qux, Quux, foobar | S:__all__ order: baz, foo, Bar; others excluded
+typed_vars.py[TQ3T]: F:Autodoc test fixture with annotated and type-comment variables at module and class level, plus a descriptor. | R:- | A:attr1, attr2, attr3, Class, Derived, Alias | S:attr2 is annotation-only and never assigned
+typehints.py[TQ4S]: F:Autodoc test fixture covering annotation and type-comment signatures: functions, class members, properties, __new__, metaclass __call__ and documented __init__. | R:- | A:incr, decr, Math, tuple_args, complex_func, missing_attr | S:complex_func comment uses undefined List/Unknown; evaluation must tolerate them. Tests pin exact signatures.
+typevar.py[TQ3T]: F:Autodoc test fixture defining TypeVar and NewType declarations at module and class level, with and without doc comments. | R:- | A:T1, T2, T3, T4, T5, T6 | S:T2 has no doc comment on purpose;
+uninitialized_attributes.py[TQ2T]: F:Autodoc test fixture with annotation-only class attributes in a base and derived class. | R:- | A:Base, Derived | S:Annotated, never-assigned attrs;
+wrappedfunction.py[TQ2T]: F:Autodoc test fixture with functions wrapped by lru_cache and contextmanager. | R:- | A:slow_function, feeling_good | S:Wrapper-object functions, not plain;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc/target/canonical/===
+__init__.py[TQ2T]: F:Autodoc test fixture package that re-exports Foo and Bar from the original submodule. | R:code:tests/roots/test-ext-autodoc/target/canonical/original.py | A:Foo, Bar | S:Imports absolute 'target.canonical.original';
+original.py[TQ2T]: F:Autodoc test fixture defining Foo and a Bar class created inside a factory function. | R:- | A:Foo, Bar | S:Bar built in bar(); __qualname__ 'bar.<locals>.Bar
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autodoc/target/name_conflict/===
+__init__.py[TQ3T]: F:Autodoc test fixture package defining a class foo that collides with the submodule foo, and re-exporting bar from it. | R:code:tests/roots/test-ext-autodoc/target/name_conflict/foo.py | A:foo, bar | S:Class foo shadows submodule foo; resolve module.
+foo.py[TQ2T]: F:Autodoc fixture submodule foo holding class bar, imported into the package __init__ under a name that clashes with a class. | R:code:tests/roots/test-ext-autodoc/target/name_conflict/__init__.py | A:bar | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosectionlabel-prefix-document/===
+conf.py[TQ2T]: F:Sphinx conf for autosectionlabel test root with autosectionlabel_prefix_document enabled. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosectionlabel/===
+conf.py[TQ2T]: F:Minimal Sphinx conf for the autosectionlabel test root enabling only the extension. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-ext/===
+conf.py[TQ3T]: F:Sphinx conf for the autosummary-ext test root enabling autosummary generation and excluding _build. | R:code:tests/roots/test-ext-autosummary-ext/dummy_module.py | A:extensions, autosummary_generate, exclude_patterns | S:Path.cwd() on sys.path; build cwd must be root.
+dummy_module.py[TQ4T]: F:Autosummary-ext fixture module with functions, attributes, properties and a nested class to test summary extraction and attribute docs. | R:code:tests/roots/test-ext-autosummary-ext/conf.py | A:with_sentence, no_sentence, empty_line, module_attr, C, func | S:Edge-case docstrings for summary extraction; don't reformat. Module docstring holds the autosummary directive.
+underscore_module_.py[TQ2T]: F:Autosummary fixture module whose module, class, method and function names end in underscores. | R:- | A:class_, function_ | S:Trailing underscores test reST escaping;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-filename-map/===
+autosummary_dummy_module.py[TQ3T]: F:Dummy module with class Foo (nested Bar, method bar, property baz) and function bar, used as autosummary filename-map test input. | R:code:tests/roots/test-ext-autosummary-filename-map/conf.py | A:Foo, bar | S:Foo.bar and bar are filename-map targets;
+conf.py[TQ3T]: F:Sphinx test-root config enabling autosummary generation with autosummary_filename_map renaming the dummy module and its bar function. | R:code:tests/roots/test-ext-autosummary-filename-map/autosummary_dummy_module.py | A:- | S:Keys=full dummy module names; needs cwd=root
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-import_cycle/===
+conf.py[TQ2T]: F:Sphinx test-root config loading autosummary with autosummary_generate disabled for the import-cycle scenario. | R:code:tests/roots/test-ext-autosummary-import_cycle/spam/__init__.py | A:- | S:No stubs generated (autosummary_generate False)
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-import_cycle/spam/===
+__init__.py[TQ1T]: F:Package init for the import-cycle fixture containing only a module docstring. | R:code:tests/roots/test-ext-autosummary-import_cycle/spam/eggs.py | A:- | S:-
+eggs.py[TQ2T]: F:Fixture submodule defining class Ham that imports its parent package spam to create an import cycle for autosummary. | R:code:tests/roots/test-ext-autosummary-import_cycle/spam/__init__.py | A:Ham | S:Keep 'import spam': it forms the tested cycle
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-imported_members/autosummary_dummy_package/===
+__init__.py[TQ2T]: F:Fixture package that re-exports Bar and foo from its submodule to exercise imported-member documentation. | R:code:tests/roots/test-ext-autosummary-imported_members/autosummary_dummy_package/autosummary_dummy_module.py | A:Bar, foo | S:-
+autosummary_dummy_module.py[TQ1T]: F:Fixture module defining class Bar and function foo with docstrings. | R:- | A:Bar, foo | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-imported_members/===
+conf.py[TQ2T]: F:Sphinx test-root config enabling autosummary generation with autosummary_imported_members True. | R:code:tests/roots/test-ext-autosummary-imported_members/autosummary_dummy_package/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-mock_imports/===
+conf.py[TQ2T]: F:Sphinx test-root config enabling autosummary generation with 'unknown' in autosummary_mock_imports. | R:code:tests/roots/test-ext-autosummary-mock_imports/foo.py | A:- | S:'unknown' must stay uninstalled; mock supplies it
+foo.py[TQ1T]: F:Fixture module whose class Foo subclasses unknown.Class, a module that only resolves through autosummary mocking. | R:code:tests/roots/test-ext-autosummary-mock_imports/conf.py | A:Foo | S:Importing it fails without the mock for 'unknown'.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-module_all/autosummary_dummy_package_all/===
+__init__.py[TQ2T]: F:Fixture package importing Bar, PublicBar, foo, public_foo and defining baz and public_baz, with an __all__ restricting the public names. | R:code:tests/roots/test-ext-autosummary-module_all/autosummary_dummy_package_all/autosummary_dummy_module.py | A:baz, public_baz | S:__all__ has undefined name, omits Bar/foo/baz
+autosummary_dummy_module.py[TQ2T]: F:Test fixture module defining Bar, PublicBar, foo and public_foo for autosummary __all__ handling tests. | R:code:tests/roots/test-ext-autosummary-module_all/autosummary_dummy_package_all/extra_dummy_module.py | A:Bar, PublicBar, foo, public_foo | S:-
+extra_dummy_module.py[TQ2T]: F:Test fixture module identical in content to autosummary_dummy_module, providing extra members for the __all__ autosummary test. | R:code:tests/roots/test-ext-autosummary-module_all/autosummary_dummy_package_all/autosummary_dummy_module.py | A:Bar, PublicBar, foo, public_foo | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-module_all/===
+conf.py[TQ2T]: F:Sphinx test-root config enabling autosummary generation with autosummary_ignore_module_all False. | R:code:tests/roots/test-ext-autosummary-module_all/autosummary_dummy_package_all/__init__.py | A:- | S:Setting False, so __all__ is honored
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-module_empty_all/autosummary_dummy_package_empty_all/===
+__init__.py[TQ1T]: F:Test fixture package whose __all__ is an empty tuple, used to test autosummary with empty __all__. | R:code:tests/roots/test-ext-autosummary-module_empty_all/conf.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-module_empty_all/===
+conf.py[TQ2T]: F:Sphinx test-root configuration enabling autodoc and autosummary with members default and autosummary_ignore_module_all disabled. | R:code:tests/roots/test-ext-autosummary-module_empty_all/autosummary_dummy_package_empty_all/__init__.py | A:- | S:'autosummary_imorted_members' typo is deliberate;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-module_prefix/===
+conf.py[TQ2T]: F:Sphinx test-root configuration enabling only sphinx.ext.autosummary for the module prefix test. | R:code:tests/roots/test-ext-autosummary-module_prefix/pkg/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-recursive/===
+conf.py[TQ2T]: F:Sphinx test-root configuration enabling autosummary with autosummary_generate for recursive module documentation. | R:code:tests/roots/test-ext-autosummary-recursive/package/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-recursive/package/===
+module.py[TQ2T]: F:Test fixture module with a Foo class (method and property) and a star import from os. | R:- | A:Foo | S:Intentional star import from os (NoQA F403);
+module_importfail.py[TQ2T]: F:Test fixture module that raises SystemExit at import to simulate a catastrophic import failure. | R:- | A:- | S:Import raises SystemExit(1), not ImportError;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-recursive/package/package/===
+module.py[TQ2T]: F:Fixture module with class Foo (init, method, property) and a star import from os, used for autosummary recursive tests. | R:code:tests/roots/test-ext-autosummary-recursive/package2/module.py | A:Foo | S:Deliberate os star import; same as package2
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-recursive/package2/===
+module.py[TQ2T]: F:Fixture module with class Foo and a star import from os, a duplicate of package/package/module.py for recursive autosummary tests. | R:code:tests/roots/test-ext-autosummary-recursive/package/package/module.py | A:Foo | S:Deliberate os star import; mirrors package copy
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-skip-member/===
+conf.py[TQ2T]: F:Sphinx test config that enables autosummary and connects an autodoc-skip-member handler to force skipping or including members. | R:code:tests/roots/test-ext-autosummary-skip-member/target.py | A:skip_member, setup | S:Skips skipmeth, keeps _privatemeth; adds cwd path
+target.py[TQ2T]: F:Fixture class Foo with public, skipped and private methods used to test autodoc-skip-member in autosummary. | R:code:tests/roots/test-ext-autosummary-skip-member/conf.py | A:Foo | S:conf.py matches skipmeth, _privatemeth by name
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary-template/===
+conf.py[TQ2T]: F:Sphinx test config enabling autosummary generation with members and a custom _templates directory. | R:code:tests/roots/test-ext-autosummary-template/target.py | A:- | S:Build must run from root: sys.path is cwd
+target.py[TQ1T]: F:Minimal fixture module defining class Foo for the autosummary custom template test. | R:code:tests/roots/test-ext-autosummary-template/conf.py | A:Foo | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-autosummary/===
+autosummary_class_module.py[TQ2T]: F:Autosummary fixture module defining an empty Class that is imported by the dummy module. | R:code:tests/roots/test-ext-autosummary/autosummary_dummy_module.py | A:Class | S:-
+autosummary_dummy_inherited_module.py[TQ3T]: F:Autosummary fixture with InheritedAttrClass subclassing Foo and adding a documented instance attribute. | R:code:tests/roots/test-ext-autosummary/autosummary_dummy_module.py | A:InheritedAttrClass | S:Top-level import needs conf.py's sys.path root.
+autosummary_dummy_module.py[TQ4T]: F:Autosummary fixture module with public, private, imported and excluded members to exercise member and import filtering in generated stubs. | R:code:tests/roots/test-ext-autosummary/autosummary_class_module.py | A:CONSTANT1, Exc, Foo, _Baz, bar, qux | S:__all__ includes private _Baz and path, omits quuz/CONSTANT2. No-docstring considered_as_imported is imported.
+autosummary_importfail.py[TQ3T]: F:Autosummary fixture whose import raises SystemExit to test handling of catastrophic import failures. | R:- | A:- | S:SystemExit at import; importer must catch it.
+conf.py[TQ3T]: F:Sphinx conf for the autosummary test root enabling the extension and stub generation with cwd on sys.path. | R:code:tests/roots/test-ext-autosummary/autosummary_dummy_module.py | A:extensions, autosummary_generate | S:Uses cwd for sys.path; run build from the root.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-coverage/===
+conf.py[TQ3T]: F:Sphinx test config for the coverage extension targeting module grog with regex patterns of ignored Python objects. | R:code:tests/roots/test-ext-coverage/grog/coverage_ignored.py,code:tests/roots/test-ext-coverage/grog/__init__.py | A:- | S:Ignore regexes match full dotted names (1 digit)
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-coverage/grog/===
+coverage_ignored.py[TQ2T]: F:Fixture module with classes and methods, some matched by coverage_ignore_pyobjects, used to test coverage ignoring. | R:code:tests/roots/test-ext-coverage/conf.py | A:Documented, Ignored, NotIgnored | S:Names mirror conf.py ignore regexes; don't rename
+coverage_missing.py[TQ2T]: F:Fixture module with a class and method that coverage should report as lacking documentation. | R:code:tests/roots/test-ext-coverage/conf.py | A:Missing | S:Must stay unreferenced in docs (reported missing)
+coverage_not_ignored.py[TQ2T]: F:Fixture module with a documented class and undocumented classes and methods, used by the sphinx.ext.coverage tests. | R:- | A:Documented, Ignored, NotIgnored | S:Names match coverage ignore regexes in test conf;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-doctest-fail-fast/===
+conf.py[TQ2T]: F:Sphinx test-root configuration for doctest fail-fast behaviour with root document 'fail-fast'. | R:- | A:- | S:doctest_fail_fast intentionally unset;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-doctest-skipif/===
+conf.py[TQ3T]: F:Sphinx test-root configuration for the doctest :skipif: directive, recording global setup and cleanup execution. | R:code:tests/test_extensions/test_ext_doctest.py | A:- | S:Snippets import record from test_ext_doctest;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-doctest-with-autodoc/===
+conf.py[TQ2T]: F:Sphinx test-root configuration enabling autodoc and doctest to check doctest reporting of file and line numbers. | R:code:tests/roots/test-ext-doctest-with-autodoc/foo.py,code:tests/roots/test-ext-doctest-with-autodoc/dir/bar.py | A:- | S:Adds Path.cwd() to sys.path;
+foo.py[TQ1T]: F:Fixture module whose docstring holds a doctest reporting its file and line. | R:- | A:- | S:Tests assert 'foo.py:3' line; editing shifts it
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-doctest-with-autodoc/dir/===
+bar.py[TQ1T]: F:Fixture module in a subpackage whose docstring holds a doctest reporting its path and line. | R:- | A:- | S:Tests assert 'dir/bar.py:2'; don't edit lines
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-doctest/===
+conf.py[TQ2T]: F:Sphinx test-root configuration enabling sphinx.ext.doctest with root document 'doctest'. | R:- | A:- | S:root_doc='doctest', .txt only: document must be do
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-extlinks-hardcoded-urls-multiple-replacements/===
+conf.py[TQ2T]: F:Sphinx test-root configuration defining two extlinks roles sharing a URL base with hardcoded-link detection on. | R:- | A:- | S:Two roles share one URL pattern; keep both
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-extlinks-hardcoded-urls/===
+conf.py[TQ2T]: F:Sphinx test-root configuration enabling extlinks with hardcoded-link detection for an issue role. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-githubpages/===
+conf.py[TQ1T]: F:Minimal Sphinx test-root configuration enabling sphinx.ext.githubpages. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-graphviz/===
+conf.py[TQ1T]: F:Sphinx test-root configuration enabling sphinx.ext.graphviz with a static path. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-ifconfig/===
+conf.py[TQ3T]: F:Sphinx test-root config enabling sphinx.ext.ifconfig and registering confval1, confval2 and false_config config values. | R:- | A:- | S:confval1 True, confval2/false_config False
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-imgconverter/===
+conf.py[TQ2T]: F:Sphinx test-root config enabling only sphinx.ext.imgconverter. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-imgmockconverter/===
+conf.py[TQ3T]: F:Test-root config that adds the current directory to sys.path and loads the mocksvgconverter extension. | R:code:tests/roots/test-ext-imgmockconverter/mocksvgconverter.py | A:- | S:sys.path gets cwd, not conf dir; run from root.
+mocksvgconverter.py[TE3T]: F:Mock Sphinx extension whose post-transform ImageConverter copies SVG files to PDF unchanged. | R:code:tests/roots/test-ext-imgmockconverter/conf.py | A:MyConverter, setup | S:Fake: copies bytes, not PDF; add_post_transform.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-inheritance_diagram/===
+conf.py[TQ3T]: F:Test-root config adding the cwd to sys.path and enabling inheritance_diagram and intersphinx. | R:code:tests/roots/test-ext-inheritance_diagram/test.py | A:- | S:sys.path uses cwd; run from this root.
+test.py[TQ2T]: F:Fixture module defining a small class hierarchy (Foo, DocHere, DocSubDir1/2, DocMainLevel, Alice) for inheritance diagram tests. | R:- | A:Foo, DocHere, DocSubDir1, DocSubDir2, DocMainLevel, Alice | S:Alice is base for external/other.py; don't rename
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-inheritance_diagram/example/===
+__init__.py[TQ1T]: F:Near-empty package marker for the example fixture package. | R:- | A:- | S:-
+sphinx.py[TQ1T]: F:Fixture submodule example.sphinx defining DummyClass. | R:- | A:DummyClass | S:Module named sphinx on purpose: tests name clash.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-inheritance_diagram/external/===
+other.py[TQ2T]: F:Fixture module whose class Bob subclasses Alice imported from test, for cross-module inheritance diagrams. | R:code:tests/roots/test-ext-inheritance_diagram/test.py | A:Bob | S:Imports top-level `test`; needs root on sys.path.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-intersphinx-cppdomain/===
+conf.py[TQ2T]: F:Test-root config enabling sphinx.ext.intersphinx for C++ domain cross-reference tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-intersphinx-role/===
+conf.py[TQ2T]: F:Test-root config enabling intersphinx with intersphinx_disabled_reftypes set to all types. | R:- | A:- | S:Keep disabled_reftypes=['*']; role must ignore it
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-math-compat/===
+conf.py[TQ3T]: F:Test-root conf enabling sphinx.ext.mathjax and registering a custom my_math role and my-math directive that always emit E = mc^2 math nodes. | R:- | A:- | S:Role/directive ignore input; emit 'E = mc^2'
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-napoleon-paramtype/===
+conf.py[TQ3T]: F:Test-root conf enabling autodoc, napoleon and intersphinx with an empty mapping and no caching for paramtype tests. | R:code:tests/roots/test-ext-napoleon-paramtype/pkg/foo.py,code:tests/roots/test-ext-napoleon-paramtype/pkg/bar.py | A:- | S:intersphinx_mapping empty (hand-built inventory)
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-napoleon-paramtype/pkg/===
+bar.py[TQ2T]: F:Fixture class Bar whose method names list and int shadow builtin type names, to test cross-reference resolution. | R:code:tests/roots/test-ext-napoleon-paramtype/pkg/foo.py | A:Bar | S:Don't rename methods list/int; tests depend
+foo.py[TQ2T]: F:Fixture class Foo whose do method documents keyword-only params via :keyword/:kwarg/:kwparam with :paramtype and :kwtype fields. | R:code:tests/roots/test-ext-napoleon-paramtype/pkg/bar.py | A:Foo | S:Six field combos; all list[int], expect xrefs
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-napoleon/===
+conf.py[TQ2T]: F:Test-root conf enabling sphinx.ext.napoleon and putting the current working directory on sys.path. | R:code:tests/roots/test-ext-napoleon/mypackage/typehints.py | A:- | S:sys.path uses cwd; works only if run at root
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-napoleon/mypackage/===
+typehints.py[TQ2T]: F:Fixture function hello with annotated args and a NumPy-style docstring that lists *args and **kwargs. | R:code:tests/roots/test-ext-napoleon/conf.py | A:hello | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-todo/===
+conf.py[TQ1T]: F:Test-root conf enabling sphinx.ext.todo. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode-find-package/===
+conf.py[TQ3T]: F:Sphinx test-root config with autodoc and viewcode, switching to linkcode with linkcode_resolve when the test_linkcode tag is set. | R:code:tests/roots/test-ext-viewcode-find-package/main_package/__init__.py | A:linkcode_resolve | S:Tag test_linkcode swaps viewcode for linkcode
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode-find-package/main_package/===
+__init__.py[TQ1T]: F:Test fixture package root that imports its subpackage. | R:code:tests/roots/test-ext-viewcode-find-package/main_package/subpackage/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode-find-package/main_package/subpackage/===
+__init__.py[TQ2T]: F:Test fixture subpackage re-exporting submodule from the private _subpackage2 package. | R:code:tests/roots/test-ext-viewcode-find-package/main_package/subpackage/_subpackage2/submodule.py | A:submodule | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode-find-package/main_package/subpackage/_subpackage2/===
+__init__.py[TQ1T]: F:Empty package marker for the private _subpackage2 test fixture package. | R:- | A:- | S:-
+submodule.py[TQ2T]: F:Fixture module with decorated func1, decorated Class1 and Class3 with a documented class attribute, used for viewcode source lookup. | R:- | A:func1, Class1, Class3, decorator | S:Commented RuntimeError: module may be imported
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode-find/===
+conf.py[TQ3T]: F:Sphinx test-root config enabling viewcode with viewcode_follow_imported_members disabled. | R:code:tests/roots/test-ext-viewcode-find/not_a_package/__init__.py | A:- | S:Re-exported Class1/func1 not followed to origin
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode-find/not_a_package/===
+__init__.py[TQ2T]: F:Test fixture package re-exporting Class1 and func1 from its submodule. | R:code:tests/roots/test-ext-viewcode-find/not_a_package/submodule.py | A:Class1, func1 | S:Import raises RuntimeError; analyse statically
+submodule.py[TQ2T]: F:Fixture module that raises on import, verifying viewcode finds source for decorated func1, Class1 and Class3 without importing. | R:- | A:func1, Class1, Class3, decorator | S:Raises RuntimeError on import; never import it
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode/===
+conf.py[TQ3T]: F:Test-root conf using viewcode, or linkcode with a fake linkcode_resolve when the test_linkcode tag is set. | R:- | A:linkcode_resolve, setup | S:test_linkcode tag swaps viewcode for linkcode
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-ext-viewcode/spam/===
+__init__.py[TQ2T]: F:Test fixture package re-exporting Class1, func1, Class2 and func2 from mod1 and mod2. | R:code:tests/roots/test-ext-viewcode/spam/mod1.py,code:tests/roots/test-ext-viewcode/spam/mod2.py | A:Class1, func1, Class2, func2 | S:Does not export Class3 or import mod3.
+mod1.py[TQ2T]: F:Fixture module with decorated func1, Class1 and Class3 with a documented class attribute, for viewcode tests. | R:- | A:func1, Class1, Class3, decorator | S:Class3 is reached via mod3, not spam/__init__
+mod2.py[TQ2T]: F:Fixture module with decorated func2 and Class2 for viewcode tests. | R:- | A:func2, Class2, decorator | S:-
+mod3.py[TQ2T]: F:Fixture module re-exporting Class3 from spam.mod1 through __all__ to test imported-member viewcode handling. | R:code:tests/roots/test-ext-viewcode/spam/mod1.py | A:Class3 | S:Class3 comes from mod1; source page is mod1's
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-extensions/===
+conf.py[TQ2T]: F:Sphinx test-root conf that prepends the current working directory to sys.path so sibling extension modules can be imported. | R:code:tests/roots/test-extensions/read_parallel.py,code:tests/roots/test-extensions/read_serial.py,code:tests/roots/test-extensions/write_parallel.py | A:- | S:Path.cwd() not conf dir; imports need cwd=root
+read_parallel.py[TQ2T]: F:Test extension whose setup() declares parallel_read_safe True. | R:code:tests/roots/test-extensions/conf.py | A:setup | S:Only parallel_read_safe set; write flag default
+read_serial.py[TQ2T]: F:Test extension whose setup() declares parallel_read_safe False. | R:code:tests/roots/test-extensions/conf.py | A:setup | S:parallel_read_safe=False only; write flag default
+write_parallel.py[TQ2T]: F:Test extension whose setup() declares parallel_write_safe True. | R:code:tests/roots/test-extensions/conf.py | A:setup | S:Only parallel_write_safe set; read flag default
+write_serial.py[TQ2T]: F:Test extension whose setup() declares parallel_write_safe False. | R:code:tests/roots/test-extensions/conf.py | A:setup | S:parallel_write_safe=False only; read flag default
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-footnotes/===
+conf.py[FQ1T]: F:Test-root Sphinx config for the footnotes document set that excludes the _build directory. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-gettext-custom-output-template/===
+conf.py[FL1T]: F:Test-root Sphinx config pointing templates_path at _templates for the custom gettext output template test. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-gettext-template/===
+conf.py[FL1T]: F:Test-root Sphinx config pointing templates_path at _templates for the gettext template test. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-highlight_options/===
+conf.py[FQ1T]: F:Test-root Sphinx config defining per-language highlight_options for default and python. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-html_assets/===
+conf.py[FQ2T]: F:Test-root Sphinx config declaring html static and extra paths plus CSS and JS files with attributes and priorities. | R:- | A:- | S:static, subdir in static and extra paths: collide
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-html_entity/===
+conf.py[FQ1T]: F:Test-root Sphinx config selecting the classic HTML theme and excluding _build. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-html_file_checksum/===
+conf.py[TQ1T]: F:Sphinx test-root config that sets html_static_path to ['static'] for HTML file checksum tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-html_signaturereturn_icon/===
+conf.py[TQ1T]: F:Sphinx test-root config enabling sphinx.ext.autodoc for the signature return icon HTML test. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-html_style/===
+conf.py[TQ1T]: F:Sphinx test-root config setting html_style to default.css and html_static_path to ['_static']. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-image-in-parsed-literal/===
+conf.py[TQ1T]: F:Sphinx test-root config excluding _build and defining a /picture/ substitution image via rst_epilog for parsed-literal tests. | R:- | A:- | S:rst_epilog appends /picture/ substitution to all
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-image-in-section/===
+conf.py[TQ1T]: F:Sphinx test-root config excluding _build and defining a 15pt /picture/ substitution image via rst_epilog. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-inheritance/===
+conf.py[TQ1T]: F:Sphinx test-root config enabling inheritance_diagram and putting the current working directory on sys.path. | R:code:tests/roots/test-inheritance/dummy/test.py | A:- | S:sys.path uses cwd; run tests from the root dir.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-inheritance/dummy/===
+test.py[TQ1T]: F:Defines diamond-shaped class hierarchy A to F as fixture for inheritance diagram tests. | R:- | A:A, B, C, D, E, F | S:D inherits B and C; docstring diagram must match
+test_nested.py[TQ1T]: F:Fixture module defining nested class A.B and subclass C(A.B) for inheritance-diagram tests. | R:- | A:A, C | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-intl/===
+conf.py[TL2T]: F:Sphinx test-root config for intl/gettext tests: keep_warnings, extra html page, gettext_additional_targets index. | R:- | A:- | S:Keeps warnings; translates 'index' targets
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-intl_substitution_definitions/===
+conf.py[TL1T]: F:Test-root config defining rst_prolog and rst_epilog substitutions (replace and image) for intl substitution tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-keep_warnings/===
+conf.py[TQ1T]: F:Test-root config that enables keep_warnings. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-babel/===
+conf.py[TL1T]: F:Test-root config setting custom numfig_format strings for figure, table and code-block in LaTeX babel tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-equations/===
+conf.py[TQ1T]: F:Test-root config setting root_doc to equations and enabling sphinx.ext.imgmath for LaTeX equation tests. | R:- | A:- | S:root_doc is 'equations', not the default 'index'.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-figure-in-admonition/===
+conf.py[TQ1T]: F:Test-root config enabling sphinx.ext.todo with todo_include_todos for figure-in-admonition LaTeX tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-includegraphics/===
+conf.py[TQ2T]: F:Test-root config injecting a LaTeX preamble that wraps sphinxincludegraphics to log image dimensions and flag aspect-ratio errors. | R:- | A:- | S:Ratio >0.01pt calls undefined \ASPECTRATIOERROR
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-labels-before-module/===
+automodule1.py[TQ1T]: F:Docstring-only module used as an autodoc target in the test-latex-labels-before-module test root. | R:code:tests/roots/test-latex-labels-before-module/conf.py | A:- | S:-
+automodule2a.py[TQ1T]: F:Docstring-only module used as an autodoc target in the test-latex-labels-before-module test root. | R:code:tests/roots/test-latex-labels-before-module/conf.py | A:- | S:-
+automodule2b.py[TQ1T]: F:Docstring-only module used as an autodoc target in the test-latex-labels-before-module test root. | R:code:tests/roots/test-latex-labels-before-module/conf.py | A:- | S:-
+automodule3.py[TQ1T]: F:Docstring-only module used as an autodoc target in the test-latex-labels-before-module test root. | R:code:tests/roots/test-latex-labels-before-module/conf.py | A:- | S:-
+conf.py[TQ1T]: F:Sphinx conf for the labels-before-module LaTeX test root, enabling autodoc and nitpicky mode. | R:code:tests/roots/test-latex-labels-before-module/automodule1.py | A:- | S:Inserts cwd into sys.path; nitpicky=True.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-numfig/===
+conf.py[TQ1T]: F:Sphinx conf for the LaTeX numfig test root, defining manual and howto latex_documents and enabling imgmath. | R:- | A:- | S:imgmath only for math_numfig; manual+howto docs
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-theme/===
+conf.py[TQ1T]: F:Sphinx conf for the LaTeX theme test root, selecting a custom theme from a local theme directory. | R:- | A:- | S:latex_theme 'custom' found via path ['theme']
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-latex-title/===
+conf.py[TQ1T]: F:Sphinx conf for the LaTeX title test root, with an empty document title in latex_documents. | R:- | A:- | S:Empty title uses first section as document title
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-anchors-ignore-for-url/===
+conf.py[TQ1T]: F:Test-root Sphinx config enabling linkcheck anchor checking with a 0.25 s timeout for the ignore-for-url scenario. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-anchors-ignore/===
+conf.py[TQ1T]: F:Test-root Sphinx config enabling linkcheck anchor checking with a 0.25 s timeout and excluding _build. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-documents_exclude/===
+conf.py[TQ1T]: F:Test-root Sphinx config setting linkcheck_exclude_documents regexes to skip broken_link documents, with a short timeout. | R:- | A:- | S:Regexes: '^broken_link$', 'br[0-9]ken_link'
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-localserver-anchor/===
+conf.py[TQ1T]: F:Test-root Sphinx config for linkcheck against a local server with anchor checking enabled. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-localserver-https/===
+conf.py[TQ1T]: F:Test-root Sphinx config for linkcheck against a local HTTPS server, with a 0.25 s timeout. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-localserver-warn-redirects/===
+conf.py[TQ1T]: F:Test-root Sphinx config for linkcheck redirect-warning tests against a local server, with a short timeout. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-localserver/===
+conf.py[TQ1T]: F:Test-root Sphinx config for linkcheck against a local server, with a 0.25 s timeout. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-raw-node/===
+conf.py[TQ1T]: F:Test-root Sphinx config for linkcheck of raw nodes, with a 0.25 s timeout. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck-too-many-retries/===
+conf.py[TQ1T]: F:Test-root Sphinx config for the linkcheck too-many-retries scenario, with anchors checked and a short timeout. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-linkcheck/===
+conf.py[TQ1T]: F:Sphinx conf for the linkcheck test root, with links as root doc, anchor checking and a short timeout. | R:- | A:- | S:root_doc=links; timeout 0.25s; anchors checked.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-local-logo/===
+conf.py[TQ1T]: F:Test-root Sphinx config defining a minimal LaTeX document and a local html_logo path images/img.png. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-manpage_url/===
+conf.py[TQ1T]: F:Minimal test-root Sphinx config that only excludes the _build directory, for manpage_url tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-markup-citation/===
+conf.py[TQ1T]: F:Test-root Sphinx config defining a minimal LaTeX document for citation markup tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-markup-rubric/===
+conf.py[TQ1T]: F:Sphinx test-root config setting a LaTeX report document and 'section' as the top-level sectioning for rubric markup tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-maxlistdepth/===
+conf.py[TQ1T]: F:Sphinx test-root config excluding _build and setting the LaTeX maxlistdepth element to 10. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-need-escaped/===
+conf.py[TQ1T]: F:Sphinx test-root config with a project name containing HTML and quotes, and smartquotes disabled, to test escaping. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-nitpicky-warnings/===
+conf.py[TQ1T]: F:Sphinx test-root config enabling nitpicky mode so unresolved references emit warnings. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-numbered-circular/===
+conf.py[TQ1T]: F:Sphinx test-root config excluding _build, for the circular numbered toctree test root. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-numfig/===
+conf.py[TQ1T]: F:Sphinx test-root config excluding _build, for the numfig numbering test root. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-productionlist/===
+conf.py[TQ1T]: F:Sphinx test-root config excluding _build, for the productionlist directive test root. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-prolog/===
+conf.py[TQ1T]: F:Sphinx test-root config that loads a local markdown parser extension and sets rst_prolog and rst_epilog strings. | R:code:tests/roots/test-prolog/prolog_markdown_parser.py | A:- | S:sys.path gets cwd; run tests from the root dir.
+prolog_markdown_parser.py[TQ2T]: F:Test-root extension registering a dummy markdown parser for .md files that only stores the raw input on the document. | R:- | A:DummyMarkdownParser, setup | S:parse() only sets rawsource; document stays empty
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-pycode/===
+cp_1251_coded.py[TQ1T]: F:Fixture source file encoded in windows-1251 with a coding cookie, used to test pycode encoding detection. | R:- | A:- | S:Keep windows-1251 encoding; UTF-8 breaks the test
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-refonly_bullet_list/===
+conf.py[FQ1T]: F:Test-root config disabling compact lists in HTML output. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-remote-logo/===
+conf.py[FQ1T]: F:Test-root config setting remote URLs for html_logo and html_favicon plus a minimal latex_documents entry. | R:- | A:- | S:Remote html_logo and html_favicon URLs: network.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-roles-download/===
+conf.py[FQ1T]: F:Test-root config defining a single latex_documents entry for the download-role tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-root/===
+autodoc_target.py[TQ3M]: F:Sample module whose classes, attributes, descriptors and docstrings serve as the autodoc test target in the shared test root. | R:- | A:Class, CustomDataDescriptor, DocstringSig, InstAttCls, EnumCls, Outer | S:__all__ is ['Class']; exact text is asserted.
+conf.py[FQ3S]: F:Shared test-root Sphinx config enabling extensions, HTML/LaTeX options, and registering a directive, object type, and custom parser. | R:code:tests/roots/test-root/parsermod.py | A:setup, ClassDirective, userdesc_parse | S:cwd must be root; version 0.6 tied to tests.
+parsermod.py[TQ2T]: F:Dummy docutils parser for the 'foo' suffix that emits one generated section and no transforms. | R:- | A:Parser | S:Fixed id 'id1'; get_transforms returns [].
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-root/special/===
+code.py[TQ1T]: F:Two-line Python snippet used as literalinclude and code-listing content in the test root. | R:- | A:- | S:Line count and content are asserted by tests.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-search/===
+conf.py[FQ1T]: F:Test-root config for search tests, excluding _build and setting English search language. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-stylesheets/===
+conf.py[TQ1T]: F:Sphinx test-root conf registering persistent, preferred and alternate CSS files via add_css_file with the classic theme. | R:- | A:setup | S:Registration order, title, rel shape link output
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-templating/===
+conf.py[TQ1T]: F:Sphinx test-root conf for templating tests, enabling autosummary generation for the autosummary_templating document. | R:- | A:- | S:keep_warnings=True; project name contains <>
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-theming/===
+conf.py[TQ1T]: F:Sphinx test-root conf selecting the local test-theme from a theme path including the test_theme package. | R:code:tests/roots/test-theming/test_theme/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-tocdepth/===
+conf.py[TQ1T]: F:Sphinx test-root conf using the classic HTML theme for toctree depth tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-toctree-empty/===
+conf.py[TQ1T]: F:Sphinx test-root conf excluding _build and setting a _templates path for the empty-toctree test. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-toctree-glob/===
+conf.py[TQ1T]: F:Sphinx test-root conf excluding _build for glob toctree tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-toctree-maxdepth/===
+conf.py[TQ1T]: F:Sphinx test-root config for toctree maxdepth tests; only excludes the _build directory. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-toctree-multiple-parents/===
+conf.py[TQ1T]: F:Sphinx test-root config for toctree multiple-parents tests; sets the basic HTML theme. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-transforms-post_transforms-missing-reference/===
+conf.py[TQ1T]: F:Sphinx test-root config enabling nitpicky mode for missing-reference post-transform tests. | R:- | A:- | S:nitpicky=True: unresolved references warn.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-trim_doctest_flags/===
+conf.py[TQ1T]: F:Sphinx test-root config enabling sphinx.ext.doctest for the trim_doctest_flags tests. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-util-copyasset_overwrite/===
+conf.py[TQ1T]: F:Sphinx test-root config loading the local myext extension with a user_static static path and basic theme. | R:code:tests/roots/test-util-copyasset_overwrite/myext.py | A:- | S:Needs cwd as root so myext imports.
+myext.py[TQ2T]: F:Test extension that calls copy_asset on an existing CSS and asserts it is not overwritten. | R:code:tests/roots/test-util-copyasset_overwrite/conf.py | A:setup | S:Hook asserts; expects a copy_asset warning.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-versioning/===
+conf.py[TQ1T]: F:Sphinx test-root config for versioning tests; maps only .txt sources to restructuredtext. | R:- | A:- | S:Only .txt is a source suffix; .rst is ignored.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/roots/test-warnings/===
+autodoc_fodder.py[TQ1T]: F:Fixture class whose docstring contains a deliberate markup error to test warning location reporting. | R:code:tests/roots/test-warnings/conf.py | A:MarkupError | S:Intentional docstring markup error; do not fix.
+conf.py[TQ1T]: F:Sphinx test-root config enabling autodoc with the root directory on sys.path for warnings tests. | R:code:tests/roots/test-warnings/autodoc_fodder.py | A:- | S:Imports autodoc_fodder only when cwd is the root.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test__cli/===
+test__cli_util_errors.py[TU3T]: F:Tests that strip_escape_sequences removes Sphinx-known ANSI codes (colour, erase-line, short forms) across permutations and line separators. | R:code:sphinx/_cli/util/errors.py,code:sphinx/_cli/util/colour.py | A:- | S:Cursor-up code \x1b[2A is left unstripped.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_builders/===
+conftest.py[TQ3T]: F:Pytest fixture giving a package-scoped, path-keyed cache of parsed HTML element trees for the builder tests. | R:code:sphinx/testing/util.py | A:cached_etree_parse | S:Cache keyed by path only; rebuilds go stale.
+test_build.py[TQ4S]: F:Tests generic build behaviour: missing root doc error, circular and multi-parent toctree warnings, and image glob candidate resolution. | R:code:sphinx/errors.py,code:sphinx/testing/util.py | A:- | S:Image-glob test indexes doctree[0][N] by position, needs _http_teapot fixture; reordering images root breaks it.
+test_build_all.py[TQ3T]: F:Smoke-builds dirhtml, singlehtml, text, xml, pseudoxml and linkcheck on a non-ASCII source directory. | R:code:sphinx/testing/util.py,code:sphinx/builders/linkcheck.py | A:- | S:linkcheck test mocks requests.head at sphinx.build
+test_build_changes.py[TQ3T]: F:Tests the changes builder output for versionadded/changed/deprecated entries and the no-changes case. | R:code:sphinx/testing/util.py | A:- | S:-
+test_build_dirhtml.py[TQ3T]: F:Tests dirhtml output layout, trailing-slash links, and objects.inv URIs. | R:code:sphinx/util/inventory.py,code:sphinx/testing/util.py | A:- | S:-
+test_build_epub.py[TQ3L]: F:Tests EPUB builder output: toc.ncx, content.opf, nav.xhtml, cover, writing mode, assets, and optional epubcheck validation. | R:code:sphinx/builders/epub3.py,code:sphinx/testing/util.py | A:- | S:-
+test_build_gettext.py[TL3M]: F:Tests the gettext builder: Catalog deduplication, .pot generation, msgid ordering, and msginit/msgfmt round trip. | R:code:sphinx/builders/gettext.py,code:sphinx/testing/util.py | A:- | S:-
+test_build_html.py[TQ4L]: F:Tests the HTML builder: config validation, footnote and enumerable XPath output, sidebars, inventory, baseurl, permalinks, and PEP 695 signatures. | R:code:sphinx/builders/html/__init__.py,code:tests/test_builders/xpath_util.py,code:tests/test_builders/xpath_data.py,code:sphinx/util/inventory.py | A:- | S:Parametrized tests rely on the shared cached_etree_parse cache and shared_result;
+test_build_html_5_output.py[TQ3L]: F:Large parametrized XPath check of HTML5 builder output on the root testroot, plus a rubric heading-level warning test. | R:code:tests/test_builders/xpath_util.py,code:sphinx/testing/util.py | A:- | S:-
+test_build_html_assets.py[TQ3S]: F:Tests HTML static and extra path handling, CSS/JS priority ordering, file checksums, and JS loading methods. | R:code:sphinx/builders/html/_assets.py,code:sphinx/builders/html/__init__.py | A:- | S:-
+test_build_html_code.py[TQ2T]: F:Tests HTML output of code-block line-number styles (table/inline) and the inline code role with Pygments highlighting. | R:- | A:- | S:Space after def: w span if Pygments >=2.19
+test_build_html_copyright.py[TQ3S]: F:Tests multi-line copyright footer rendering in HTML, with and without SOURCE_DATE_EPOCH year substitution. | R:- | A:- | S:Patched localtime=2009; toggles SOURCE_DATE_EPOCH
+test_build_html_download.py[TQ2T]: F:Tests that :download: references are copied under _downloads/<md5 digest>/ and rendered as download links in HTML. | R:- | A:- | S:md5 of relative path names dir; href %-encoded
+test_build_html_highlight.py[TQ3S]: F:Tests Pygments style selection per theme and highlight_options handling passed to highlight_block in the HTML builder. | R:- | A:- | S:-
+test_build_html_image.py[TQ3S]: F:Tests HTML image handling: remote/local images and logos, escaped filenames, scaled-image links, and image copying. | R:- | A:- | S:Scaled-image markup differs: docutils 0.21/0.22
+test_build_html_maths.py[TQ3T]: F:Tests selection of the HTML math renderer among mathjax, imgmath and jsmath, including conflict and mismatch errors. | R:- | A:- | S:-
+test_build_html_numfig.py[TQ3L]: F:Parametrized XPath tests of figure/table/code-block numbering and numref text for html and singlehtml under numfig settings. | R:code:tests/test_builders/xpath_data.py,code:tests/test_builders/xpath_util.py | A:- | S:-
+test_build_html_tocdepth.py[TQ3S]: F:XPath tests checking toctree depth, section numbers and sidebar entries for html and singlehtml builds. | R:code:tests/test_builders/xpath_html_util.py,code:tests/test_builders/xpath_util.py | A:- | S:-
+test_build_html_toctree.py[TQ3S]: F:Tests HTML builder toctree relations, singlehtml hyperlinks, numbered toctree and multi-parent toctree resolution. | R:code:tests/test_builders/xpath_html_util.py,code:tests/test_builders/xpath_util.py | A:- | S:-
+test_build_latex.py[TQ4L]: F:Large test suite for the LaTeX builder: generated .tex output, babel/polyglossia, footnotes, tables, numfig, and real engine compilation. | R:code:tests/utils.py | A:- | S:Compile tests skip via SKIP_LATEX_BUILD or missing kpsewhich styles. Values depend on docutils 0.22, Pygments 2.19.
+test_build_linkcheck.py[TQ4L]: F:Integration tests for the Sphinx linkcheck builder, run against local HTTP/TLS servers covering anchors, auth, redirects, retries, rate limits and timeouts. | R:code:tests/utils.py,code:sphinx/builders/linkcheck.py,code:sphinx/util/http_date.py,code:sphinx/util/requests.py,code:sphinx/testing/util.py | A:- | S:Stderr tests need log_date_time_string overridden to ''; TZ tests patch http_date._GMT_OFFSET, call time.tzset;
+test_build_manpage.py[TQ3S]: F:Tests the Sphinx manpage builder output, man_pages config, section directories, captioned code blocks, rubrics and default_man_pages. | R:code:sphinx/builders/manpage.py,code:sphinx/config.py | A:- | S:Code-block expectation varies: docutils <0.21 .nf/
+test_build_texinfo.py[TQ3S]: F:Tests the Sphinx Texinfo builder: anchors, rubrics, citations, footnotes, xrefs, id escaping, default documents and image copying. | R:code:sphinx/builders/texinfo.py,code:sphinx/writers/texinfo.py,code:sphinx/config.py,code:sphinx/util/docutils.py | A:- | S:Globally sets TexinfoTranslator.ignore_missing_ima
+test_build_text.py[TQ3M]: F:Tests the Sphinx text builder: table rendering, spans, line blocks, non-ASCII widths, admonition lists and section-number options. | R:code:sphinx/writers/text.py,code:sphinx/testing/util.py | A:- | S:test_secnums mutates app.config between builds, ne
+test_build_warnings.py[TQ3S]: F:Tests that html, latex and texinfo builds of the warnings testroot emit the expected warnings, and that exception-on-warning and unpicklable config cases behave | R:code:sphinx/_cli/util/errors.py,code:sphinx/errors.py,code:sphinx/testing/util.py | A:- | S:Regex must match whole output;
+test_incremental_reading.py[TQ3T]: F:Tests that Builder.read() re-reads only added, modified or removed documents on a second pass, including docs referencing missing files. | R:- | A:- | S:Faked modification via env.all_docs['index']=0;
+xpath_data.py[TQ2T]: F:Holds the XPath constant for locating figure caption paragraphs, shared by builder tests. | R:- | A:FIGURE_CAPTION | S:Final imported only under TYPE_CHECKING;
+xpath_html_util.py[TQ2T]: F:Test helper asserting that a sequence of HTML anchor nodes all link within the current page, apart from Sphinx index pages. | R:- | A:_intradocument_hyperlink_check | S:Empty nodes fail; genindex/modindex/search exempt;
+xpath_util.py[TQ3T]: F:Test helper that asserts XPath-selected nodes in an element tree satisfy a regex or callable predicate, with minimum count and negation options. | R:- | A:check_xpath | S:check=None asserts zero matches;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_config/===
+test_config.py[TC4L]: F:Pytest tests for sphinx.config.Config covering overrides, type checking, serialization and pickling, conf.py loading, nitpick settings, and version requirements | R:code:sphinx/config.py,code:sphinx/testing/util.py,code:sphinx/errors.py,code:sphinx/util/tags.py,code:sphinx/deprecation.py | A:- | S:Patches sphinx.config.logger, so warning asserts break if the logger name changes.
+test_copyright.py[TC3M]: F:Tests that Sphinx rewrites copyright years via correct_copyright_year and evaluate_copyright_placeholders, using SOURCE_DATE_EPOCH and a mocked 2009 local time. | R:code:sphinx/config.py,code:sphinx/testing/util.py | A:- | S:Fixture patches time.localtime to 2009;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_directives/===
+test_directive_code.py[TQ3L]: F:Tests LiteralIncludeReader options and the code-block/literalinclude directives (captions, line numbers, dedent, emphasize) via XML, HTML and LaTeX builds. | R:code:sphinx/directives/code.py | A:- | S:Linenos HTML asserts switch at pygments 2.19.
+test_directive_object_description.py[TQ2T]: F:Tests object-description directives: section nesting in desc_content and source line numbers on cross-references. | R:code:sphinx/util/docutils.py,code:sphinx/testing/restructuredtext.py | A:- | S:-
+test_directive_only.py[TQ2T]: F:Tests that the only directive keeps section numbering and nesting correct in the resulting doctree. | R:- | A:- | S:-
+test_directive_option.py[TQ2T]: F:Tests HTML rendering of option directive placeholders and option cross-references in the root test project. | R:- | A:- | S:-
+test_directive_other.py[TQ3M]: F:Tests the toctree directive (relative, glob, urls, reversed, class) and the include-read event for the include directive. | R:code:sphinx/testing/restructuredtext.py | A:- | S:-
+test_directive_patch.py[TQ2S]: F:Tests Sphinx-patched docutils directives: code, csv-table path resolution and math (labels and numbering). | R:code:sphinx/testing/restructuredtext.py | A:- | S:-
+test_directive_productionlist.py[TQ2S]: F:Tests productionlist rendering, grammar-token xref resolution and continuation lines in text and HTML output. | R:code:sphinx/testing/restructuredtext.py | A:- | S:-
+test_directives_no_typesetting.py[TQ2M]: F:Parametrized tests of the no-typesetting option across the c, cpp, js, py, rst, cmdoption and envvar directives. | R:code:sphinx/testing/restructuredtext.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_domains/===
+test_domain_c.py[TQ4L]: F:Tests the C domain: parser round-trips and ids for expressions, types, members and functions, plus builds, intersphinx and signature line-length. | R:code:sphinx/domains/c/_parser.py,code:sphinx/domains/c/_ids.py,code:sphinx/domains/c/_symbol.py,code:sphinx/util/cfamily.py | A:- | S:check() runs each case twice, with trailing ' ;' except for macros. Missing-version ids copy the previous version.
+test_domain_cpp.py[TQ4L]: F:Tests the Sphinx C++ domain: declaration parsing, ID generation per version, rendering, role warnings, intersphinx, symbol merging and signature line-length... | R:code:sphinx/domains/cpp/_parser.py,code:sphinx/domains/cpp/_symbol.py,code:sphinx/domains/cpp/_ids.py,code:sphinx/domains/cpp/_ast.py | A:- | S:check() runs each case twice, plain and with ' ;'. Missing id_dict key inherits N-1's ID. Builds need domain-cpp root.
+test_domain_js.py[TB3L]: F:Tests the Sphinx JavaScript domain: xref resolution, object registry, directives, index entries and signature line-length wrapping in HTML and text. | R:code:sphinx/domains/javascript.py,code:sphinx/addnodes.py,code:sphinx/testing/restructuredtext.py,code:sphinx/testing/util.py | A:- | S:javascript_maximum_signature_line_length overrides
+test_domain_py.py[TQ4L]: F:Tests the Python domain: signature parsing, annotations, xref resolution, module index, PEP 695/696 type parameters, signature line wrapping and the deco role. | R:code:sphinx/domains/python/_annotations.py,code:sphinx/domains/python/_object.py,code:sphinx/domains/python/__init__.py | A:- | S:Xref assertions rely on node order in the domain-py testroot; editing roots/test-domain-py breaks indices.
+test_domain_py_canonical.py[TQ2S]: F:Tests the :canonical: option of py:class: alias registration, override and skip precedence between canonical and real definitions, and duplicate warnings. | R:code:sphinx/domains/python/__init__.py,code:sphinx/testing/restructuredtext.py,code:sphinx/testing/util.py | A:- | S:4th objects item True marks canonical aliases.
+test_domain_py_fields.py[TQ3L]: F:Tests Python domain info-field handling (param, type, var, meta) and the :type: option, checking type xref nodes for piped, Literal and napoleon-style types. | R:code:sphinx/domains/python/__init__.py,code:sphinx/testing/restructuredtext.py,code:sphinx/testing/util.py | A:- | S:Positional doctree indexing; extra nodes break.
+test_domain_py_pyfunction.py[TQ3L]: F:Tests that the Sphinx Python domain's py:function directive builds the expected doctree nodes, index entries and line-wrapping behaviour for various signatures. | R:code:sphinx/domains/python/__init__.py,code:sphinx/domains/python/_object.py,code:sphinx/testing/restructuredtext.py,code:sphinx/testing/util.py | A:- | S:Signature exactly at max line length stays single-
+test_domain_py_pyobject.py[TQ3L]: F:Tests that Sphinx Python domain object directives produce the expected doctree nodes, index entries and domain object registrations. | R:code:sphinx/domains/python/__init__.py,code:sphinx/domains/python/_object.py,code:sphinx/testing/restructuredtext.py,code:sphinx/testing/util.py | A:- | S:-
+test_domain_rst.py[TQ3M]: F:Tests the reStructuredText domain: parse_directive and the rst:directive, rst:directive:option and rst:role directives with their doctree and index entries. | R:code:sphinx/domains/rst.py,code:sphinx/testing/restructuredtext.py,code:sphinx/testing/util.py | A:- | S:-
+test_domain_std.py[TB3L]: F:Tests the std domain: figure/table labels, option and program directives, glossary parsing and warnings, labeled objects, and manpage HTML output. | R:- | A:- | S:Glossary term ids derive from text;
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_environment/===
+test_environment.py[TD3M]: F:Tests BuildEnvironment config status detection, image post-processing, py/c domain data, relfn2path resolution and differing config keys. | R:code:sphinx/environment/__init__.py,code:sphinx/config.py,code:sphinx/builders/html/__init__.py,code:sphinx/builders/latex/__init__.py | A:- | S:Config status test rebuilds copied srcdir, moving
+test_environment_indexentries.py[TD3M]: F:Tests IndexEntries.create_index grouping, sorting and anchors for single, pair, triple, see, seealso, main and named index entries. | R:code:sphinx/environment/adapters/indexentries.py | A:- | S:Index anchors numbered per entry (#index-N);
+test_environment_record_dependencies.py[TD2T]: F:Tests that env.dependencies is cleared for a document that no longer records dependencies after reading. | R:code:sphinx/environment/__init__.py | A:- | S:-
+test_environment_toctree.py[TD3L]: F:Tests toctree handling in the environment: stored tocs, glob, domain-object entries, document_toc, global_toctree_for_doc options and only-node filtering. | R:code:sphinx/environment/adapters/toctree.py,code:sphinx/addnodes.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_extensions/===
+autodoc_util.py[TQ3T]: F:Test helper that runs an autodoc documenter for an object type and name and returns the generated StringList. | R:code:sphinx/ext/autodoc/directive.py,code:sphinx/ext/autodoc/_directive_options.py | A:do_autodoc | S:-
+ext_napoleon_pep526_data_google.py[TQ1T]: F:Fixture module with PEP 526 annotated variables and a Google-style docstring for napoleon tests. | R:- | A:PEP526GoogleClass, module_level_var | S:-
+ext_napoleon_pep526_data_numpy.py[TQ1T]: F:Fixture module with PEP 526 annotated variables and a NumPy-style docstring for napoleon tests. | R:- | A:PEP526NumpyClass, module_level_var | S:-
+test_ext_apidoc.py[TQ3L]: F:Tests sphinx-apidoc CLI and extension output: namespaces, excludes, templates, private members, module-first layout, old-file removal. | R:code:sphinx/ext/apidoc/_cli.py,code:sphinx/ext/apidoc/_generate.py | A:- | S:test_no_duplicates mutates PY_SUFFIXES, then resto
+test_ext_autodoc.py[TQ4L]: F:Tests the autodoc Documenters: name parsing, signature formatting, member selection and ordering, enums, overloads, typing aliases and Literal rendering. | R:code:tests/test_extensions/autodoc_util.py,code:sphinx/ext/autodoc/_documenters.py,code:sphinx/ext/autodoc/directive.py | A:- | S:test_new_documenter returns early, so its list assertions never run. Enum preamble args vary by Python version.
+test_ext_autodoc_autoattribute.py[TQ2S]: F:Tests the autodoc 'attribute' documenter on class, typed, slots, alias, GenericAlias and hide-value attributes. | R:code:tests/test_extensions/autodoc_util.py | A:- | S:-
+test_ext_autodoc_autoclass.py[TQ3L]: F:Tests autodoc class documentation: instance and inherited attributes, show-inheritance, process-bases, class-doc-from, aliases, coroutines and TypeVar aliases. | R:code:tests/test_extensions/autodoc_util.py | A:- | S:Aliases must not emit autodoc-process-docstring.
+test_ext_autodoc_autodata.py[TQ2S]: F:Tests the autodoc 'data' documenter for module-level variables: values, no-value, typed variables, GenericAlias and hide-value. | R:code:tests/test_extensions/autodoc_util.py | A:- | S:-
+test_ext_autodoc_autofunction.py[TQ2M]: F:Tests the autodoc 'function' documenter on classes, callables, builtins, decorated, singledispatch, wrapped, coroutine and async-generator functions. | R:code:tests/test_extensions/autodoc_util.py | A:- | S:-
+test_ext_autodoc_automodule.py[TQ2M]: F:Tests autodoc module documentation: __all__ handling, undoc, special and inherited members, and subclasses of mocked objects. | R:code:tests/test_extensions/autodoc_util.py,code:sphinx/ext/autodoc/mock.py | A:- | S:Mock test relies on rollback_sysmodules fixture.
+test_ext_autodoc_autoproperty.py[TQ2S]: F:Tests the autodoc 'property' documenter for properties, class properties, cached properties and type comments. | R:code:tests/test_extensions/autodoc_util.py | A:- | S:-
+test_ext_autodoc_configs.py[TE3L]: F:Tests autodoc config values (autoclass_content, typehints, type aliases, default options, mock imports) against expected directive output. | R:code:tests/test_extensions/autodoc_util.py,code:sphinx/ext/autodoc/__init__.py | A:- | S:Tests rewriting index.rst need copy_test_root=True
+test_ext_autodoc_events.py[TE2S]: F:Tests autodoc events and the cut_lines and between helpers: process-docstring and skip-member handlers. | R:code:tests/test_extensions/autodoc_util.py,code:sphinx/ext/autodoc/__init__.py | A:- | S:-
+test_ext_autodoc_importer.py[TE2T]: F:Tests that import_module resolves a native module stub to its .pyi file. | R:code:sphinx/ext/autodoc/importer.py | A:- | S:sys.path restored without try/finally
+test_ext_autodoc_mock.py[TE2S]: F:Tests the autodoc mock machinery: mocked modules and objects, the mock() context manager, ismock and undecorate. | R:code:sphinx/ext/autodoc/mock.py | A:- | S:-
+test_ext_autodoc_preserve_defaults.py[TE2M]: F:Tests autodoc_preserve_defaults output for ordinary and special constructs such as dataclasses and named tuples. | R:code:tests/test_extensions/autodoc_util.py,code:sphinx/ext/autodoc/__init__.py | A:- | S:-
+test_ext_autodoc_private_members.py[TE2S]: F:Tests autodoc private-members option and :meta public:/:meta private: handling for module and class members. | R:code:tests/test_extensions/autodoc_util.py,code:sphinx/ext/autodoc/__init__.py | A:- | S:-
+test_ext_autodoc_type_alias_nitpicky.py[TE2T]: F:Tests that type aliases documented as py:data resolve as links in function signatures in nitpicky mode. | R:code:sphinx/ext/autodoc/__init__.py | A:- | S:-
+test_ext_autosectionlabel.py[TE2S]: F:Tests autosectionlabel HTML references, the prefix-document variant and autosectionlabel_maxdepth. | R:code:sphinx/ext/autosectionlabel.py | A:- | S:Prefix test reuses html test body unchanged
+test_ext_autosummary.py[TE3L]: F:Tests autosummary: signature mangling, summary extraction, stub generation, templates, recursion, mock imports and the autogen CLI. | R:code:sphinx/ext/autosummary/__init__.py,code:sphinx/ext/autosummary/generate.py | A:- | S:Autouse fixture drops sys.modules target per test
+test_ext_autosummary_imports.py[TE2T]: F:Tests autosummary handling of import cycles and module-prefixed items, including the current-module warning. | R:code:sphinx/ext/autosummary/__init__.py | A:- | S:-
+test_ext_coverage.py[TE2S]: F:Tests the coverage builder's Python and C undocumented reports, ignore settings and coverage_show_missing_items output. | R:code:sphinx/ext/coverage.py | A:- | S:-
+test_ext_doctest.py[TE2S]: F:Tests the doctest builder: cleanup calls, version specifiers, :skipif: evaluation, failure reporting and doctest_fail_fast. | R:code:sphinx/ext/doctest.py | A:- | S:skipif test uses own testroot: options eval once
+test_ext_duration.py[TQ2T]: F:Tests that sphinx.ext.duration prints a slowest reading durations report with per-document timings in build status output. | R:code:sphinx/ext/duration.py | A:- | S:-
+test_ext_extlinks.py[TQ2T]: F:Tests extlinks hardcoded-URL detection warnings, including suggestions of every matching extlink role and disabling via config. | R:code:sphinx/ext/extlinks.py | A:- | S:Asserts exact index.rst line numbers in warnings.
+test_ext_githubpages.py[TQ2T]: F:Tests that sphinx.ext.githubpages writes .nojekyll and writes CNAME only for custom (non github.io) html_baseurl domains. | R:code:sphinx/ext/githubpages.py | A:- | S:-
+test_ext_graphviz.py[TQ2M]: F:Tests graphviz directive HTML (png/svg), LaTeX, i18n output and ClickableMapDefinition parsing of image map files. | R:code:sphinx/ext/graphviz.py | A:- | S:Build tests need graphviz (if_graphviz_found).
+test_ext_ifconfig.py[TQ2T]: F:Tests ifconfig directive content filtering by config value and source line numbers kept on pending_xref nodes inside it. | R:code:sphinx/ext/ifconfig.py | A:- | S:-
+test_ext_imgconverter.py[TQ2T]: F:Tests that sphinx.ext.imgconverter converts unsupported SVG to PNG for LaTeX output while leaving supported images alone. | R:code:sphinx/ext/imgconverter.py | A:- | S:-
+test_ext_imgmockconverter.py[TQ2T]: F:Tests that a mock image converter gives distinct output files to images with identical basenames in LaTeX builds. | R:code:sphinx/ext/imgconverter.py | A:- | S:-
+test_ext_inheritance_diagram.py[TQ3M]: F:Tests inheritance_diagram directive graphs, intersphinx-linked HTML and LaTeX output, aliases and import_classes error handling. | R:code:sphinx/ext/inheritance_diagram.py,code:sphinx/ext/intersphinx/_load.py | A:- | S:Patches InheritanceDiagram.run and sys.path.
+test_ext_intersphinx.py[TN3L]: F:Tests intersphinx inventory fetching, redirects, cache expiry, mapping validation, reference resolution across domains and the inspect CLI. | R:code:sphinx/ext/intersphinx/_load.py,code:sphinx/ext/intersphinx/_resolve.py,code:sphinx/ext/intersphinx/_cli.py | A:- | S:-
+test_ext_intersphinx_cache.py[TN3M]: F:Tests that intersphinx inventory cache and named inventory follow changes of the mapping URL across successive builds served by a local HTTP server. | R:code:sphinx/ext/intersphinx/_shared.py,code:tests/utils.py | A:- | S:-
+test_ext_math.py[TQ3L]: F:Tests imgmath and mathjax HTML/LaTeX output, equation numbering and references, MathJax config and conditional script inclusion. | R:code:sphinx/ext/mathjax.py,code:sphinx/ext/imgmath.py | A:- | S:-
+test_ext_napoleon.py[TQ2M]: F:Tests napoleon setup registration, in-place docstring processing and private/special member skip decisions. | R:code:sphinx/ext/napoleon/__init__.py | A:- | S:-
+test_ext_napoleon_docstring.py[TQ3L]: F:Tests Google and NumPy docstring conversion to reST in sphinx.ext.napoleon, including type-spec tokenizing, PEP 526 attributes and autodoc typehints builds. | R:code:tests/test_extensions/ext_napoleon_pep526_data_google.py,code:tests/test_extensions/ext_napoleon_pep526_data_numpy.py | A:- | S:Expected output depends on napoleon_* config flags
+test_ext_todo.py[TQ2S]: F:Tests the todo extension's directive output, todolist inclusion, warnings, todo-defined event and LaTeX link targets. | R:- | A:- | S:-
+test_ext_viewcode.py[TQ2S]: F:Tests viewcode source-page generation, line numbers, epub toggling, linkcode URLs and local source discovery. | R:- | A:- | S:-
+test_extension.py[TQ3T]: F:Tests verify_needs_extensions for empty, satisfied and unsatisfied needs_extensions version requirements. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_intl/===
+test_catalogs.py[TL3T]: F:Tests builder catalog compilation (all, specific, update) of .po files into .mo files. | R:- | A:- | S:-
+test_intl.py[TL4L]: F:Tests Sphinx internationalization by building the intl test root with text, html, xml and gettext builders and checking translated output, warnings and catalog  | R:- | A:- | S:Clock mocked only on Windows, real sleeps on posix; shared_result 'test_intl_basic' tests share one build
+test_locale.py[TL3T]: F:Tests sphinx.locale init, get_translation and add_message_catalog with test locale catalogs. | R:- | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_markup/===
+test_markup.py[TQ4L]: F:Tests Sphinx inline roles, smart quotes, XRefRole, rst_prolog, default_role and keep_warnings by rendering reST to HTML5 and LaTeX. | R:code:sphinx/roles.py,code:sphinx/writers/html5.py,code:sphinx/writers/latex.py,code:sphinx/builders/latex/__init__.py | A:- | S:verify escapes expected text and appends $; verify_re uses raw regex. A None expected value skips that writer.
+test_metadata.py[TQ2T]: F:Tests that docinfo bibliographic fields of the metadata testroot are stored in app.env.metadata for the index document. | R:code:sphinx/environment/__init__.py | A:- | S:Expected dict includes tocdepth as int 1 and empty
+test_parser.py[TQ2T]: F:Tests that RSTParser inserts rst_prolog and rst_epilog lines and expands tabs and whitespace before running the state machine. | R:code:sphinx/parsers.py,code:sphinx/util/docutils.py | A:- | S:Patches RSTStateMachine, so no real parsing occurs
+test_smartquotes.py[TQ2S]: F:Tests smart-quote conversion across html, text, man and latex builders, language excludes, and the smartquotes options. | R:code:sphinx/transforms/__init__.py | A:- | S:ja, zh_CN, zh_TW and man are excluded by default.
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_pycode/===
+test_pycode.py[TQ3S]: F:Tests ModuleAnalyzer source lookup, constructors, find_tags and find_attr_docs including tagorder numbering. | R:code:sphinx/pycode/__init__.py,code:sphinx/errors.py | A:- | S:-
+test_pycode_ast.py[TQ3T]: F:Parametrized tests of sphinx.pycode.ast.unparse rendering of expression nodes back to source strings. | R:code:sphinx/pycode/ast.py | A:- | S:Lambda bodies unparse to ellipsis;
+test_pycode_parser.py[TQ3L]: F:Tests pycode Parser extraction of attribute comments, definitions, deforders, annotations, typing.final and typing.overload. | R:code:sphinx/pycode/parser.py,code:sphinx/util/inspect.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_theming/===
+test_html_theme.py[TQ2T]: F:Tests that HTML theme options reach documentation_options.js and that multiple theme stylesheets are linked. | R:code:sphinx/builders/html/__init__.py | A:- | S:-
+test_templating.py[TQ2T]: F:Tests that templating testroot overrides layout and autosummary class templates and that autosummary_context is applied. | R:code:sphinx/ext/autosummary/generate.py | A:- | S:Needs copy_test_root and setup_documenters(app) fi
+test_theming.py[TQ3M]: F:Tests theme loading, inheritance, zipped themes, static files, dark pygments style, sidebars and theme.toml/theme.conf parsing. | R:code:sphinx/theming.py,code:sphinx/builders/html/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_transforms/===
+test_transforms_move_module_targets.py[TQ2T]: F:Tests that MoveModuleTargets lifts py:module and js:module target IDs into the enclosing section and does nothing without a section or when removed. | R:code:sphinx/transforms/__init__.py | A:- | S:Disable via app.registry.transforms.remove() befor
+test_transforms_post_transforms.py[TQ3M]: F:Tests post-transforms: missing-reference warnings and event, keyboard role spacing, and SigElementFallbackTransform conversion of desc_sig_* nodes to inline. | R:code:sphinx/transforms/post_transforms/__init__.py,code:sphinx/addnodes.py | A:- | S:Fallback tests depend on SIG_ELEMENTS tuple order.
+test_transforms_post_transforms_code.py[TQ2T]: F:Tests that trim_doctest_flags strips doctest option flags from highlighted code in HTML and LaTeX output. | R:code:sphinx/transforms/post_transforms/code.py | A:- | S:Substring asserts on trim_doctest_flags testroot o
+test_transforms_post_transforms_images.py[TQ2T]: F:Tests ImageConverter.guess_mimetypes detecting image/webp from the extension and from file content. | R:code:sphinx/transforms/post_transforms/images.py | A:- | S:-
+test_transforms_reorder_nodes.py[TQ2S]: F:Tests that consecutive index and target nodes are reordered so index nodes come first, preserving order and not merging across other nodes. | R:code:sphinx/transforms/__init__.py | A:- | S:-
+test_unreferenced_footnotes.py[TQ2T]: F:Tests that UnreferencedFootnotesDetector warns about unreferenced footnotes alongside docutils duplicate-target warnings. | R:code:sphinx/transforms/__init__.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_util/===
+intersphinx_data.py[TQ2T]: F:Provides byte-string Sphinx inventory fixtures (v1, v2 and variants) used by intersphinx tests. | R:code:sphinx/ext/intersphinx/_load.py | A:INVENTORY_V1, INVENTORY_V2, INVENTORY_V2_NO_VERSION, INVENTORY_V2_AMBIGUOUS_TERMS, INVENTORY_V2_TEXT_VERSION | S:V2 bodies are zlib-compressed after plain header.
+test_util.py[TQ2T]: F:Tests sphinx.util helpers and the deprecated or re-exported attributes of the sphinx.util namespace. | R:code:sphinx/util/__init__.py,code:sphinx/util/osutil.py | A:- | S:Deprecated names warn; other re-exports must be id
+test_util_display.py[TQ2S]: F:Tests display_chunk, status_iterator and progress_message output formatting. | R:code:sphinx/util/display.py | A:- | S:Progress tests need FORCE_COLOR=1 and logging.setu
+test_util_docstrings.py[TQ2T]: F:Tests separate_metadata, prepare_docstring and prepare_commentdoc for docstring parsing. | R:code:sphinx/util/docstrings.py | A:- | S:-
+test_util_docutils.py[TQ2S]: F:Tests docutils helpers: register_node namespace scoping, SphinxFileOutput overwrite_if_changed, and SphinxTranslator visit fallback to base class. | R:code:sphinx/util/docutils.py | A:- | S:-
+test_util_docutils_sphinx_directive.py[TQ2S]: F:Tests SphinxDirective env/config access, source info and location helpers, and content/text/inline parsing into nodes, using a hand-built RST state. | R:code:sphinx/util/docutils.py | A:- | S:-
+test_util_fileutil.py[TQ2S]: F:Tests copy_asset and copy_asset_file including Jinja template rendering, exclusion, overwrite warnings and template basename detection. | R:code:sphinx/util/fileutil.py,code:sphinx/jinja2glue.py,code:sphinx/util/template.py,code:sphinx/_cli/util/errors.py | A:- | S:-
+test_util_i18n.py[TL2M]: F:Tests sphinx.util.i18n: CatalogInfo paths and staleness, mo writing, format_date, image filename-per-language templates, and CatalogRepository discovery. | R:code:sphinx/util/i18n.py,code:sphinx/errors.py | A:- | S:-
+test_util_images.py[TQ2T]: F:Tests image helpers: get_image_size, guess_mimetype, get_image_extension and data URI parsing. | R:code:sphinx/util/images.py | A:- | S:-
+test_util_importer.py[TQ1T]: F:Tests import_object for modules and attributes and the ExtensionError messages on failure. | R:code:sphinx/util/_importer.py,code:sphinx/errors.py | A:- | S:-
+test_util_inspect.py[TQ3L]: F:Tests sphinx.util.inspect: signature stringification, signature_from_str/ast, safe_getattr, object_description ordering, method kind and descriptor predicates. | R:code:sphinx/util/inspect.py,code:sphinx/util/typing.py,code:tests/test_util/typing_test_data.py | A:- | S:-
+test_util_inventory.py[TQ2S]: F:Tests reading v1 and v2 intersphinx inventories, ambiguous-term logging level, and locale-dependent objects.inv output. | R:code:sphinx/util/inventory.py,code:tests/test_util/intersphinx_data.py,code:sphinx/testing/util.py | A:- | S:-
+test_util_lines.py[TQ1T]: F:Tests parse_line_num_spec conversion of 1-based line specs to 0-based indices and invalid spec errors. | R:code:sphinx/util/_lines.py | A:- | S:-
+test_util_logging.py[TO3L]: F:Tests sphinx.util.logging: level routing, warning suppression, locations, pending and prefixed warnings, colors and parallel task logging. | R:code:sphinx/util/logging.py,code:sphinx/util/parallel.py,code:sphinx/cmd/build.py,code:tests/utils.py | A:- | S:-
+test_util_matching.py[TQ2M]: F:Tests glob-pattern compilation, Matcher and get_matching_files include/exclude behaviour against the test-root fixture. | R:code:sphinx/util/matching.py | A:- | S:-
+test_util_nodes.py[TQ2M]: F:Tests sphinx.util.nodes helpers: NodeMatcher, extract_messages, clean_astext, make_id, split_explicit_title and apply_source_workaround. | R:code:sphinx/util/nodes.py,code:sphinx/transforms/__init__.py | A:- | S:-
+test_util_rst.py[TQ2S]: F:Tests sphinx.util.rst: escape, prologue/epilogue insertion into StringList, textwidth and heading underline widths. | R:code:sphinx/util/rst.py | A:- | S:Heading width: ja treats Cyrillic as double width
+test_util_template.py[TQ2T]: F:Tests ReSTRenderer escape and heading filters, including ja-language wide heading underline. | R:code:sphinx/util/template.py | A:- | S:-
+test_util_typing.py[TQ3L]: F:Tests restify and stringify_annotation across typing constructs and modes, and the _INVALID_BUILTIN_CLASSES module list. | R:code:sphinx/util/typing.py,code:sphinx/ext/autodoc/mock.py | A:- | S:Py3.12/3.13 branches; failure=__module__ changed
+test_util_uri.py[TQ2T]: F:Tests encode_uri percent-encoding of non-ASCII paths and query strings while keeping existing escapes. | R:code:sphinx/util/_uri.py | A:- | S:-
+typing_test_data.py[TQ2S]: F:Fixture module of functions with varied annotations and signatures used as test data for typing and inspect tests. | R:- | A:- | S:Stub data; signature edits break dependent tests
+
+===/root/aoci-eval/repos-r5/sphinx/tests/test_writers/===
+test_api_translator.py[TQ2S]: F:Tests that translator classes registered via set_translator in a test root are returned by each builder. | R:code:sphinx/testing/util.py | A:- | S:Temp sys.path entry: test-api-set-translator
+test_docutilsconf.py[TQ2T]: F:Tests that docutils.conf settings such as trim_footnote_reference_space change the parsed doctree. | R:code:sphinx/util/docutils.py,code:sphinx/testing/util.py | A:- | S:Needs freshenv + patch_docutils(app.confdir)
+test_writer_latex.py[TQ2T]: F:Tests rstdim_to_latexdim conversion of reST length units to LaTeX dimensions. | R:code:sphinx/writers/latex.py | A:- | S:-
+
+===/root/aoci-eval/repos-r5/sphinx/utils/===
+babel_runner.py[XL4M]: F:CLI script to extract messages to sphinx.pot, update .po catalogues and compile .mo and .js translation files. | R:code:sphinx/__init__.py | A:run_extract, run_update, run_compile, CLI actions extract/update/compile/all | S:Run from repo root (relative sphinx/__init__.py); compile skips fuzzy/erroring locales; babel_compile.txt only if CI
+bump_docker.py[XV3T]: F:Release script that bumps the Sphinx version in sibling sphinx-docker-images Dockerfiles, then commits, tags and pushes. | R:- | A:- | S:Runs at import; pushes master+tag upstream
+bump_version.py[XV4M]: F:Release helper CLI that rewrites version constants in sphinx/__init__.py and updates the top heading of CHANGES.rst for a given version. | R:code:sphinx/__init__.py | A:parse_version, bump_version, VersionInfo, Changes, main | S:Matches only lines starting __version__: Final =, version_info: Final =, _in_development =;
+convert_attestations.py[XV3T]: F:Script converting Sigstore bundles of built dists into PEP 740 attestations in dist/ and verifying each against a signer identity. | R:- | A:- | S:Runs at import, no main guard;
+generate_js_fixtures.py[XQ3T]: F:Builds each JS test root with sphinx-build and copies its searchindex.js into tests/js/fixtures for the JavaScript tests. | R:- | A:- | S:Runs at import, no main guard;
+generate_snowball.py[XV3S]: F:Regenerates Snowball stopword modules and non-minified JS stemmers under sphinx/search from pinned upstream sources. | R:- | A:regenerate_stopwords, regenerate_javascript, parse_stop_word | S:Skips JS regen on win32, needs make;

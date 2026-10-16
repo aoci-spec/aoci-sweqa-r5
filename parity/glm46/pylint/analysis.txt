@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-pylint-k1
+manifest: harness=None created=2026-10-15T19:08:35Z repo=pylint commit=44740e5e5cdd index_entries=2215
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   3 |   69.9  18.0   65.5   73.6   70.4   71.1 |   7.7   7.7   2.4   0.0 |    85997    12777    1889     895    n/a   91.2 |   0.59   0.00   0.21
+dims: oh=13.4/11.2/16.5/16.1/12.7
+judge vote SD (mean over questions): oh=1.0
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=4,127,841 out=90,680
+
+wrote runs/sweqa-r5p-glm46-pylint-k1/analysis.json

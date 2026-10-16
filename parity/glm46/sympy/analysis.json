@@ -1,0 +1,183 @@
+{
+ "run": "runs/sweqa-r5p-glm46-sympy-k1",
+ "manifest": {
+  "created": "2026-10-15T19:03:17Z",
+  "harness_sha": null,
+  "updated": "2026-10-15T19:07:59Z",
+  "provenance": [
+   {
+    "sha": null,
+    "at": "2026-10-15T19:03:17Z"
+   }
+  ],
+  "spec_file": "specs/sweqa-r5p-glm46-sympy-k1.json",
+  "spec": {
+   "run": "sweqa-r5p-glm46-sympy-k1",
+   "repo": "sympy",
+   "repo_root": "repos-r5/sympy",
+   "questions": "benchmarks/swe-qa/sympy.jsonl",
+   "draws": 1,
+   "limit": 0,
+   "workers": 16,
+   "concurrent_passes": 1,
+   "arms": [
+    {
+     "name": "oh",
+     "kind": "oh",
+     "profile": "openrouter-glm46-novita",
+     "max_iterations": 10,
+     "temperature": 0.0,
+     "max_output_tokens": 12288
+    }
+   ],
+   "judge": {
+    "profile": "gptnb-judge",
+    "votes": 5,
+    "workers": 48
+   },
+   "require_complete_index": false,
+   "_comment": "R5 PARITY CHECK (2026-10-16): bare OpenHands 1.1.0 default agent, 10 iterations, temperature 0, ONE run per question (the paper's protocol), same judge as the main batch (claude-sonnet-4-5 x5 majority, 1-20 x5 = 100). Purpose: show this pipeline reproduces the published Table 3 OpenHands row for a paper model before AOCI is added. Acceptance band: merged 15-repo mean within 3 points of the paper's number and all five dimensions in the same direction; outside the band -> investigate (iteration cap, SDK version, reasoning parameters, provider precision) before any main-batch claim. No AOCI, no CodeGraph in this run. Model: GLM-4.6 via OpenRouter pinned to Novita bf16; paper Table 3 OpenHands 70.15."
+  },
+  "repo": "sympy",
+  "repo_commit": "3c817ed8ab551d71e36907ce869afe5e4ca789ff",
+  "index": {
+   "repo_commit": "3c817ed8ab551d71e36907ce869afe5e4ca789ff",
+   "entries": 1503,
+   "volumes": {
+    "aoci.txt": {
+     "sha256": "a7ace56f29eddc3a",
+     "bytes": 294
+    },
+    "aoci.meta.txt": {
+     "sha256": "ebafbe54981dfb23",
+     "bytes": 2307
+    },
+    "aoci.code.txt": {
+     "sha256": "ceacc4cc124442af",
+     "bytes": 510061
+    }
+   }
+  },
+  "index_artifact": null,
+  "draws": 1,
+  "arm_passes": [
+   {
+    "name": "oh",
+    "base": "oh",
+    "draw": 1,
+    "kind": "oh",
+    "order": 0
+   }
+  ],
+  "questions_sha256": "e8e02178dd7a3e26",
+  "aoci_bin": "/root/aoci-eval/bin/aoci-rc20",
+  "arms": {
+   "oh": {
+    "kind": "oh",
+    "host": "openhands",
+    "profile": "openrouter-glm46-novita",
+    "model": "z-ai/glm-4.6",
+    "protocol": "openai",
+    "params": {
+     "max_iterations": 10,
+     "temperature": 0.0,
+     "max_output_tokens": 12288,
+     "sdk": "1.1.0",
+     "workspace": "plain export of the pinned commit (no VCS metadata)",
+     "terminal": "subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)",
+     "file_editor": "file_editor confined to the workspace",
+     "tools": [
+      "terminal",
+      "file_editor",
+      "task_tracker",
+      "finish",
+      "think"
+     ],
+     "sdk_text_limit": 400000,
+     "cognition_turn": null
+    },
+    "workers": 16,
+    "questions_sha256": "e8e02178dd7a3e26",
+    "prompt_sha256": "e4bcf5ba08313c6e",
+    "hint_chars": 200,
+    "task_delivery": "system_message_suffix (SWE-QA text in the system prompt; user turn = Repository/Question)",
+    "index_chars": 0,
+    "index_parts": 0,
+    "text_part_limit": 45000,
+    "sdk_text_content_limit": 50000,
+    "workspace_extras": [],
+    "llm_path": "uses_responses_api pinned False (chat.completions only; reseller gateway cannot round-trip encrypted reasoning items)",
+    "map_served_from": null,
+    "index": null
+   }
+  },
+  "judge": {
+   "oh": {
+    "profile": "gptnb-judge",
+    "model": "claude-sonnet-4-5",
+    "votes": 5,
+    "max_tokens": 2048,
+    "workers": 48,
+    "rubric_sha256": "750916e297e28a10",
+    "answer_models": [
+     "z-ai/glm-4.6"
+    ]
+   }
+  }
+ },
+ "arms": [
+  {
+   "arm": "oh",
+   "model": "z-ai/glm-4.6",
+   "kind": "oh",
+   "n_answers": 48,
+   "n_valid": 48,
+   "errors": 0,
+   "retried": 1,
+   "min_steps_nudged": 0,
+   "n_scored": 48,
+   "judge_vote_sd": 0.9627644240802553,
+   "score_mean": 72.54166666666667,
+   "score_median": 76.5,
+   "score_sd": 18.012678790846802,
+   "by_category": {
+    "what": 59.5,
+    "how": 83.08333333333333,
+    "why": 76.08333333333333,
+    "where": 71.5
+   },
+   "dims": {
+    "correctness": 14.1875,
+    "completeness": 11.854166666666666,
+    "relevance": 17.270833333333332,
+    "clarity": 15.979166666666666,
+    "reasoning": 13.25
+   },
+   "steps": 6.708333333333333,
+   "tool_calls": 6.708333333333333,
+   "files_read": 1.7291666666666667,
+   "ans_chars": 864.375,
+   "map_calls": 0,
+   "map_chars": 0,
+   "map_used_share": 0.0,
+   "files_via_map": 0,
+   "peak_in_tok": 13333.625,
+   "in_tok": 76268.89583333333,
+   "out_tok": 1520.3958333333333,
+   "cache_read_tok": 62434.666666666664,
+   "tokens_total": {
+    "input": 3660907,
+    "output": 72979,
+    "cache_read": 2996864,
+    "cache_write": 0
+   },
+   "cost_total": null,
+   "cost_per_q": null,
+   "wall_s": 75.39375,
+   "recall_read": 0.7371794871794872,
+   "recall_seen": 0.0,
+   "recall_ans": 0.1985535831689678
+  }
+ ],
+ "pairs": []
+}

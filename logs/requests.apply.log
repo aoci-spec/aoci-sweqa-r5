@@ -1,0 +1,5 @@
+loaded 36 authored entries from /root/aoci-eval/repos-deepswe/requests-r5/aoci.code.txt
+batch 1: submitted 28 entries, status=applied remaining=7 applied_total=28 0s
+batch 2: submitted 7 entries, status=applied remaining=0 applied_total=35 0s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=35 findings=[('code_skipped', 'tests/testserver/__init__.py')]

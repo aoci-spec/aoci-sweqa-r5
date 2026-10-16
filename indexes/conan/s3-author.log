@@ -1,0 +1,101 @@
+  baseline roles: 1076 index of 1124 files (observe/exclude skipped)
+s3 · conan-r5 · files=1076 full=1076 excerpt=0 binary=0 · full-text 7027KB ≈ 2248k tok · old entries 0 · model=closeai-sonnet55 workers=12
+  batches=91
+  pretag: 1076/1076 files tagged
+[batch 1/91] ok=12
+[batch 2/91] ok=24
+[batch 3/91] ok=36
+[batch 4/91] ok=48
+[batch 5/91] ok=60
+[batch 6/91] ok=72
+[batch 7/91] ok=84
+[batch 8/91] ok=96
+[batch 9/91] ok=108
+[batch 10/91] ok=120
+[batch 11/91] ok=132
+[batch 12/91] ok=144
+[batch 13/91] ok=156
+[batch 14/91] ok=168
+[batch 15/91] ok=180
+[batch 16/91] ok=192
+[batch 17/91] ok=204
+[batch 18/91] ok=216
+[batch 19/91] ok=228
+[batch 20/91] ok=240
+[batch 21/91] ok=250
+[batch 22/91] ok=262
+[batch 23/91] ok=274
+[batch 24/91] ok=286
+[batch 25/91] ok=298
+[batch 26/91] ok=310
+[batch 27/91] ok=322
+[batch 28/91] ok=334
+[batch 29/91] ok=346
+[batch 30/91] ok=358
+[batch 31/91] ok=370
+[batch 32/91] ok=382
+[batch 33/91] ok=394
+[batch 34/91] ok=406
+[batch 35/91] ok=418
+[batch 36/91] ok=430
+[batch 37/91] ok=442
+[batch 38/91] ok=454
+[batch 39/91] ok=466
+[batch 40/91] ok=478
+[batch 41/91] ok=490
+[batch 42/91] ok=502
+[batch 43/91] ok=514
+[batch 44/91] ok=526
+[batch 45/91] ok=538
+[batch 46/91] ok=550
+[batch 47/91] ok=562
+[batch 48/91] ok=574
+[batch 49/91] ok=586
+[batch 50/91] ok=598
+[batch 51/91] ok=610
+[batch 52/91] ok=622
+[batch 53/91] ok=634
+[batch 54/91] ok=646
+[batch 55/91] ok=658
+[batch 56/91] ok=670
+[batch 57/91] ok=682
+[batch 58/91] ok=694
+[batch 59/91] ok=706
+[batch 60/91] ok=714
+[batch 61/91] ok=726
+[batch 62/91] ok=738
+[batch 63/91] ok=738
+[batch 64/91] ok=750
+[batch 65/91] ok=762
+[batch 66/91] ok=774
+[batch 67/91] ok=786
+[batch 68/91] ok=798
+[batch 69/91] ok=808
+[batch 70/91] ok=820
+[batch 71/91] ok=832
+[batch 72/91] ok=844
+[batch 73/91] ok=856
+[batch 74/91] ok=868
+[batch 75/91] ok=880
+[batch 76/91] ok=892
+[batch 77/91] ok=904
+[batch 78/91] ok=916
+[batch 79/91] ok=928
+[batch 80/91] ok=940
+[batch 81/91] ok=952
+[batch 82/91] ok=964
+[batch 83/91] ok=968
+[batch 84/91] ok=980
+[batch 85/91] ok=992
+[batch 86/91] ok=1004
+[batch 87/91] ok=1016
+[batch 88/91] ok=1028
+[batch 89/91] ok=1040
+[batch 90/91] ok=1041
+[batch 91/91] ok=1053
+  coverage retry 1: 23 files
+  extend round: 17 entries
+  shorten round: 512 entries
+  F shorten round: 42 entries
+
+s3 done · conan-r5 · entries 1076/1076 · verify missing=0 (untracked-in-clone 1) · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.90 · fallback 0 · tokens in=3749154 out=378522 · est $28.21

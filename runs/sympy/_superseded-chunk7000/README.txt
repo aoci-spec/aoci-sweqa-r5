@@ -1,0 +1,1 @@
+These oh-aoci passes were answered while the governed clone still had overview_delivery.chunk_tokens=7000 (25 chunks); the preregistered delivery is chunk_tokens=24000 (as r4). Superseded 2026-10-16 02:4x and re-answered under 24000; not used in any statistic.

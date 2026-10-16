@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-glm46-astropy-k1
+manifest: harness=None created=2026-10-15T18:35:06Z repo=astropy commit=0a041d38fbd0 index_entries=0
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              47   0   3 |   78.3  17.2   71.5   83.2   83.1   77.8 |   7.0   7.1   2.0   0.0 |    80520    13557    1578     876    n/a   88.2 |   0.77   0.00   0.52
+dims: oh=15.4/13.5/18.4/16.4/14.6
+judge vote SD (mean over questions): oh=0.9
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,784,449 out=74,149
+
+wrote runs/sweqa-r5p-glm46-astropy-k1/analysis.json

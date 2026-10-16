@@ -1,0 +1,222 @@
+  baseline roles: 2309 index of 3890 files (observe/exclude skipped)
+s3 · pylint-r5 · files=2309 full=2309 excerpt=0 binary=0 · full-text 3530KB ≈ 1129k tok · old entries 0 · model=closeai-sonnet55 workers=12
+  batches=197
+  pretag chunk: unparseable output (25324 chars)
+  pretag chunk: unparseable output (25501 chars)
+  pretag chunk: unparseable output (26141 chars)
+  pretag: 1559/2309 files tagged
+[batch 1/197] ok=12
+[batch 2/197] ok=24
+[batch 3/197] ok=36
+[batch 4/197] ok=48
+[batch 5/197] ok=60
+[batch 6/197] ok=72
+[batch 7/197] ok=84
+[batch 8/197] ok=96
+[batch 9/197] ok=108
+[batch 10/197] ok=120
+[batch 11/197] ok=132
+[batch 12/197] ok=144
+[batch 13/197] ok=156
+[batch 14/197] ok=168
+[batch 15/197] ok=180
+[batch 16/197] ok=192
+[batch 17/197] ok=204
+[batch 18/197] ok=216
+[batch 19/197] ok=228
+[batch 20/197] ok=240
+[batch 21/197] ok=252
+[batch 22/197] ok=264
+[batch 23/197] ok=276
+[batch 24/197] ok=288
+[batch 25/197] ok=300
+[batch 26/197] ok=312
+[batch 27/197] ok=324
+[batch 28/197] ok=336
+[batch 29/197] ok=348
+[batch 30/197] ok=360
+[batch 31/197] ok=372
+[batch 32/197] ok=384
+[batch 33/197] ok=396
+[batch 34/197] ok=408
+[batch 35/197] ok=420
+[batch 36/197] ok=432
+[batch 37/197] ok=444
+[batch 38/197] ok=456
+[batch 39/197] ok=468
+[batch 40/197] ok=480
+[batch 41/197] ok=492
+[batch 42/197] ok=504
+[batch 43/197] ok=516
+[batch 44/197] ok=528
+[batch 45/197] ok=540
+[batch 46/197] ok=552
+[batch 47/197] ok=564
+[batch 48/197] ok=576
+[batch 49/197] ok=588
+[batch 50/197] ok=600
+[batch 51/197] ok=612
+[batch 52/197] ok=624
+[batch 53/197] ok=636
+[batch 54/197] ok=648
+[batch 55/197] ok=660
+[batch 56/197] ok=672
+[batch 57/197] ok=684
+[batch 58/197] ok=696
+[batch 59/197] ok=708
+[batch 60/197] ok=720
+[batch 61/197] ok=732
+[batch 62/197] ok=744
+[batch 63/197] ok=756
+[batch 64/197] ok=768
+[batch 65/197] ok=780
+[batch 66/197] ok=792
+  batch returned non-path keys (error?): ['error']
+[batch 67/197] ok=792
+[batch 68/197] ok=804
+[batch 69/197] ok=808
+[batch 70/197] ok=809
+[batch 71/197] ok=821
+[batch 72/197] ok=824
+[batch 73/197] ok=836
+[batch 74/197] ok=848
+[batch 75/197] ok=860
+[batch 76/197] ok=872
+[batch 77/197] ok=884
+[batch 78/197] ok=896
+[batch 79/197] ok=908
+[batch 80/197] ok=920
+[batch 81/197] ok=921
+[batch 82/197] ok=922
+[batch 83/197] ok=934
+[batch 84/197] ok=934
+[batch 85/197] ok=942
+[batch 86/197] ok=954
+[batch 87/197] ok=966
+[batch 88/197] ok=978
+[batch 89/197] ok=989
+[batch 90/197] ok=989
+[batch 91/197] ok=1001
+[batch 92/197] ok=1013
+[batch 93/197] ok=1025
+[batch 94/197] ok=1037
+[batch 95/197] ok=1049
+[batch 96/197] ok=1061
+[batch 97/197] ok=1073
+[batch 98/197] ok=1085
+[batch 99/197] ok=1097
+[batch 100/197] ok=1109
+[batch 101/197] ok=1121
+[batch 102/197] ok=1133
+[batch 103/197] ok=1145
+[batch 104/197] ok=1157
+[batch 105/197] ok=1169
+[batch 106/197] ok=1181
+[batch 107/197] ok=1193
+[batch 108/197] ok=1205
+[batch 109/197] ok=1217
+[batch 110/197] ok=1229
+[batch 111/197] ok=1241
+[batch 112/197] ok=1253
+[batch 113/197] ok=1265
+[batch 114/197] ok=1277
+[batch 115/197] ok=1289
+[batch 116/197] ok=1301
+[batch 117/197] ok=1313
+[batch 118/197] ok=1325
+[batch 119/197] ok=1337
+[batch 120/197] ok=1349
+[batch 121/197] ok=1361
+[batch 122/197] ok=1373
+[batch 123/197] ok=1385
+[batch 124/197] ok=1397
+[batch 125/197] ok=1409
+[batch 126/197] ok=1421
+[batch 127/197] ok=1433
+[batch 128/197] ok=1445
+[batch 129/197] ok=1457
+[batch 130/197] ok=1469
+[batch 131/197] ok=1481
+[batch 132/197] ok=1493
+[batch 133/197] ok=1505
+[batch 134/197] ok=1517
+[batch 135/197] ok=1529
+[batch 136/197] ok=1541
+[batch 137/197] ok=1553
+[batch 138/197] ok=1565
+[batch 139/197] ok=1577
+[batch 140/197] ok=1589
+[batch 141/197] ok=1601
+[batch 142/197] ok=1613
+[batch 143/197] ok=1625
+[batch 144/197] ok=1637
+[batch 145/197] ok=1649
+[batch 146/197] ok=1661
+[batch 147/197] ok=1673
+[batch 148/197] ok=1685
+[batch 149/197] ok=1697
+[batch 150/197] ok=1709
+[batch 151/197] ok=1721
+[batch 152/197] ok=1733
+[batch 153/197] ok=1745
+[batch 154/197] ok=1757
+[batch 155/197] ok=1769
+[batch 156/197] ok=1781
+[batch 157/197] ok=1793
+[batch 158/197] ok=1805
+[batch 159/197] ok=1817
+[batch 160/197] ok=1829
+[batch 161/197] ok=1841
+[batch 162/197] ok=1853
+  batch returned non-path keys (error?): ['error']
+[batch 163/197] ok=1853
+[batch 164/197] ok=1865
+[batch 165/197] ok=1877
+[batch 166/197] ok=1889
+[batch 167/197] ok=1901
+[batch 168/197] ok=1913
+[batch 169/197] ok=1925
+[batch 170/197] ok=1937
+[batch 171/197] ok=1949
+  batch returned non-path keys (error?): ['error']
+[batch 172/197] ok=1949
+  batch returned non-path keys (error?): ['error']
+[batch 173/197] ok=1949
+  batch returned non-path keys (error?): ['error']
+[batch 174/197] ok=1949
+[batch 175/197] ok=1961
+  batch returned non-path keys (error?): ['error']
+[batch 176/197] ok=1961
+  batch returned non-path keys (error?): ['error']
+[batch 177/197] ok=1961
+  batch returned non-path keys (error?): ['error']
+[batch 178/197] ok=1961
+[batch 179/197] ok=1973
+  batch returned non-path keys (error?): ['error']
+[batch 180/197] ok=1973
+  batch returned non-path keys (error?): ['error']
+[batch 181/197] ok=1973
+  batch returned non-path keys (error?): ['error']
+[batch 182/197] ok=1973
+[batch 183/197] ok=1985
+[batch 184/197] ok=1997
+[batch 185/197] ok=2009
+[batch 186/197] ok=2021
+[batch 187/197] ok=2033
+[batch 188/197] ok=2045
+[batch 189/197] ok=2052
+[batch 190/197] ok=2064
+[batch 191/197] ok=2076
+[batch 192/197] ok=2088
+[batch 193/197] ok=2100
+[batch 194/197] ok=2112
+[batch 195/197] ok=2124
+[batch 196/197] ok=2136
+[batch 197/197] ok=2148
+  coverage retry 1: 161 files
+  extend round: 4 entries
+  shorten round: 1074 entries
+  shorten round failed (ValueError: too many values to unpack (expected 2)); continuing with current S
+  F shorten round: 29 entries
+
+s3 done · pylint-r5 · entries 2309/2309 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.89 · fallback 0 · tokens in=2984545 out=707017 · est $32.60

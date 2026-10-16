@@ -1,0 +1,11 @@
+=== 臂均值(k 轮 run 级均值;括号=轮间 sd) · runs/sweqa-r5-pylint-k10 ===
+  oh                    67.59 (1.49)  k=10
+  oh-aoci               65.46 (1.61)  k=10
+  oh-cg                 69.38 (1.38)  k=10
+
+=== run 级精确置换(两侧;k=10v10 -> C(20,10)=184,756) ===
+  H1_aoci-bare             oh-aoci − oh =  -2.12   p=0.0095
+  H2_aoci-cg               oh-aoci − oh-cg =  -3.92   p=0.0000
+  H3_cg-bare               oh-cg − oh =  +1.79   p=0.0141
+
+wrote runs/sweqa-r5-pylint-k10/runlevel-stats.json

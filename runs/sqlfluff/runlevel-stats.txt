@@ -1,0 +1,11 @@
+=== 臂均值(k 轮 run 级均值;括号=轮间 sd) · runs/sweqa-r5-sqlfluff-k10 ===
+  oh                    74.39 (1.38)  k=10
+  oh-aoci               76.92 (1.06)  k=10
+  oh-cg                 75.13 (1.07)  k=10
+
+=== run 级精确置换(两侧;k=10v10 -> C(20,10)=184,756) ===
+  H1_aoci-bare             oh-aoci − oh =  +2.53   p=0.0004
+  H2_aoci-cg               oh-aoci − oh-cg =  +1.79   p=0.0028
+  H3_cg-bare               oh-cg − oh =  +0.74   p=0.2228
+
+wrote runs/sweqa-r5-sqlfluff-k10/runlevel-stats.json

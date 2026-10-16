@@ -1,0 +1,51 @@
+{
+ "run": "runs/sweqa-r5p-glm46-sympy-k1",
+ "passes": [
+  {
+   "pass": "oh",
+   "n": 48,
+   "errors": 0,
+   "missing": 0,
+   "extra": 0,
+   "leaks": [],
+   "net_attempts": 1,
+   "net_success": [],
+   "probes": 1,
+   "delivery_bad": 0,
+   "delivery_ok": 0,
+   "dirty": 0,
+   "forced": 18,
+   "retried": 1,
+   "degenerate": 1,
+   "garbled": 0,
+   "zero_source": 1,
+   "dirty_benign": 1,
+   "models": [
+    "z-ai/glm-4.6"
+   ],
+   "profiles": [
+    "openrouter-glm46-novita"
+   ],
+   "hard_fail": false
+  }
+ ],
+ "totals": {
+  "n": 48,
+  "errors": 0,
+  "missing": 0,
+  "extra": 0,
+  "leaks": 0,
+  "net_attempts": 1,
+  "net_success": 0,
+  "delivery_bad": 0,
+  "dirty": 0,
+  "dirty_benign": 1,
+  "probes": 1,
+  "forced": 18,
+  "retried": 1,
+  "degenerate": 1,
+  "garbled": 0,
+  "zero_source": 1
+ },
+ "ok": true
+}

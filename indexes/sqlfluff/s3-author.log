@@ -1,0 +1,56 @@
+  baseline roles: 392 index of 5053 files (observe/exclude skipped)
+s3 · sqlfluff-r5 · files=392 full=392 excerpt=0 binary=0 · full-text 4512KB ≈ 1444k tok · old entries 0 · model=closeai-sonnet55 workers=12
+  batches=44
+  pretag chunk: unparseable output (12699 chars)
+  pretag chunk: unparseable output (21907 chars)
+  pretag: 0/392 files tagged
+[batch 1/44] ok=1
+[batch 2/44] ok=2
+[batch 3/44] ok=7
+[batch 4/44] ok=14
+[batch 5/44] ok=26
+[batch 6/44] ok=38
+[batch 7/44] ok=44
+[batch 8/44] ok=49
+[batch 9/44] ok=51
+[batch 10/44] ok=52
+[batch 11/44] ok=64
+[batch 12/44] ok=76
+[batch 13/44] ok=88
+[batch 14/44] ok=100
+[batch 15/44] ok=112
+[batch 16/44] ok=113
+[batch 17/44] ok=114
+[batch 18/44] ok=115
+[batch 19/44] ok=119
+[batch 20/44] ok=131
+[batch 21/44] ok=143
+[batch 22/44] ok=150
+[batch 23/44] ok=153
+[batch 24/44] ok=165
+[batch 25/44] ok=177
+[batch 26/44] ok=189
+[batch 27/44] ok=201
+[batch 28/44] ok=205
+[batch 29/44] ok=217
+[batch 30/44] ok=223
+[batch 31/44] ok=235
+[batch 32/44] ok=247
+[batch 33/44] ok=259
+[batch 34/44] ok=271
+[batch 35/44] ok=283
+[batch 36/44] ok=285
+[batch 37/44] ok=297
+[batch 38/44] ok=309
+[batch 39/44] ok=321
+[batch 40/44] ok=333
+[batch 41/44] ok=345
+[batch 42/44] ok=357
+[batch 43/44] ok=369
+[batch 44/44] ok=381
+  coverage retry 1: 11 files
+  extend round: 17 entries
+  shorten round: 306 entries
+  F shorten round: 22 entries
+
+s3 done · sqlfluff-r5 · entries 392/392 · verify missing=0 · check findings={'observed_pending': 1, '(expected-drift)': 2, 'python_coverage_missing': 0} · C≥4 fill mean 0.88 · fallback 0 · tokens in=2522761 out=208120 · est $17.82

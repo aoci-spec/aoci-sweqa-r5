@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-requests-k10
+manifest: harness=None created=2026-10-15T17:39:03Z repo=requests commit=46e939b5525d index_entries=35
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   81.6   8.7   80.1   85.2   81.4   79.9 |   3.1   4.2   2.3   0.0 |    31526     8855     653     912    n/a    6.0 |   0.82   0.00   0.24
+oh-10           48   0   0 |   82.0  10.1   82.5   81.5   83.4   80.6 |   3.2   4.3   2.4   0.0 |    33406     8901     676     915    n/a    6.4 |   0.80   0.00   0.25
+oh-2            48   0   0 |   82.4   8.1   81.4   87.2   83.0   78.0 |   3.1   4.1   2.2   0.0 |    30654     8889     643     953    n/a    5.5 |   0.81   0.00   0.23
+oh-3            48   0   0 |   81.7   8.3   80.1   85.2   83.3   78.6 |   3.3   4.4   2.2   0.0 |    33282     8959     679     906    n/a    5.8 |   0.81   0.00   0.24
+oh-4            48   0   0 |   83.0   7.1   83.3   84.9   81.5   82.3 |   3.2   4.3   2.3   0.0 |    31971     9067     670     954    n/a    5.8 |   0.82   0.00   0.23
+oh-5            48   0   0 |   80.9   9.3   81.2   85.9   80.6   75.6 |   3.2   4.5   2.4   0.0 |    33164     9094     690     923    n/a    7.0 |   0.82   0.00   0.21
+oh-6            48   0   0 |   81.4   8.0   83.3   84.5   79.9   77.5 |   3.2   4.2   2.3   0.0 |    32229     8933     643     890    n/a    5.7 |   0.82   0.00   0.22
+oh-7            48   0   0 |   81.8   7.6   79.7   85.4   82.5   79.8 |   3.1   4.3   2.2   0.0 |    31697     8916     648     893    n/a    5.5 |   0.80   0.00   0.25
+oh-8            48   0   0 |   81.1   8.9   82.4   85.3   82.5   74.2 |   3.3   4.4   2.3   0.0 |    32923     8933     674     926    n/a    5.9 |   0.83   0.00   0.22
+oh-9            48   0   0 |   82.9   6.2   81.8   85.6   83.3   80.9 |   3.0   4.1   2.2   0.0 |    30466     8855     639     915    n/a    5.5 |   0.81   0.00   0.22
+oh-aoci-1       48   0   1 |   80.3   8.1   79.4   83.4   81.3   77.4 |   2.3   2.5   1.4   3.0 |   146808    24026    1638    1010    n/a   12.4 |   0.65   0.37   0.30
+oh-aoci-10      48   0   1 |   78.8  13.0   76.5   83.7   79.3   76.1 |   2.0   2.1   1.3   2.4 |   137066    23683    1558    1042    n/a   12.0 |   0.65   0.27   0.23
+oh-aoci-2       48   0   1 |   80.5  10.2   78.4   84.1   80.4   79.3 |   2.1   2.2   1.3   2.5 |   142394    23876    1579     943    n/a   12.1 |   0.66   0.32   0.23
+oh-aoci-3       48   0   1 |   80.9  10.1   78.3   84.1   83.4   78.2 |   2.2   2.6   1.4   2.8 |   144413    24100    1628    1047    n/a   12.2 |   0.65   0.33   0.24
+oh-aoci-4       48   0   1 |   81.0  10.6   78.8   84.3   83.5   77.7 |   2.0   2.1   1.2   2.4 |   139615    23680    1622    1073    n/a   12.6 |   0.61   0.28   0.25
+oh-aoci-5       48   0   1 |   78.5  10.6   77.2   85.2   76.8   74.8 |   2.2   2.4   1.3   2.9 |   142649    23887    1575     951    n/a   11.9 |   0.64   0.29   0.26
+oh-aoci-6       48   0   1 |   78.6  12.8   76.2   80.2   79.5   78.7 |   2.1   2.2   1.4   2.3 |   140381    23733    1589    1094    n/a   11.9 |   0.69   0.31   0.25
+oh-aoci-7       48   0   0 |   79.9  10.0   76.4   82.6   80.6   80.2 |   1.9   2.1   1.4   1.9 |   136737    24001    1617     975    n/a   12.0 |   0.62   0.24   0.24
+oh-aoci-8       48   0   1 |   79.7  10.2   77.5   84.9   79.8   76.6 |   2.0   2.1   1.2   1.8 |   140292    23716    1605    1099    n/a   11.9 |   0.62   0.23   0.27
+oh-aoci-9       48   0   1 |   81.5   8.7   78.0   83.7   85.0   80.1 |   2.4   2.7   1.5   2.2 |   147251    24123    1631    1069    n/a   12.3 |   0.68   0.35   0.26
+oh-cg-1         48   0   0 |   83.1   9.1   82.9   87.1   83.9   78.4 |   2.1   2.6   1.0   6.3 |    32031    12355     517    1192    n/a    4.9 |   0.31   0.92   0.29
+oh-cg-10        48   0   0 |   83.5   8.5   84.0   87.4   84.5   78.2 |   2.1   2.7   0.9   6.4 |    33450    12628     507    1145    n/a    4.7 |   0.28   0.92   0.23
+oh-cg-2         48   0   0 |   82.3   9.0   81.2   87.7   82.7   77.9 |   2.0   2.5   0.9   6.3 |    31374    12441     484    1060    n/a    4.6 |   0.26   0.92   0.29
+oh-cg-3         48   0   0 |   82.6   9.4   83.6   86.5   84.5   76.1 |   2.1   2.7   0.9   6.6 |    32304    12581     502    1110    n/a    4.6 |   0.26   0.92   0.26
+oh-cg-4         48   0   0 |   82.4  10.8   80.9   88.0   83.2   77.8 |   2.0   2.5   0.9   6.4 |    31562    12275     490    1135    n/a    5.4 |   0.29   0.92   0.31
+oh-cg-5         48   0   0 |   82.9   9.0   81.0   86.8   84.4   79.8 |   2.0   2.5   1.0   6.4 |    30958    12366     490    1137    n/a    4.6 |   0.24   0.92   0.28
+oh-cg-6         48   0   0 |   84.4   8.8   86.4   86.6   86.1   78.6 |   2.0   2.6   1.0   6.4 |    31211    12260     525    1198    n/a    4.8 |   0.28   0.92   0.28
+oh-cg-7         48   0   0 |   83.0   8.9   84.3   86.8   83.8   77.2 |   2.1   2.7   1.0   6.2 |    32546    12278     517    1160    n/a    4.6 |   0.29   0.92   0.23
+oh-cg-8         48   0   0 |   82.9   9.8   85.6   87.1   84.9   73.8 |   2.0   2.5   0.9   6.1 |    30972    12079     486    1068    n/a    4.7 |   0.30   0.92   0.26
+oh-cg-9         48   0   0 |   83.1   8.5   83.5   87.8   82.9   78.3 |   2.0   2.6   0.9   6.2 |    32073    12408     513    1174    n/a    4.6 |   0.26   0.93   0.26
+dims: oh-1=16.6/14.2/18.9/16.5/15.4  oh-10=16.5/14.3/19.0/16.7/15.5  oh-2=16.7/14.4/19.1/16.6/15.6  oh-3=16.6/14.2/19.0/16.7/15.3  oh-4=16.8/14.6/19.1/16.6/15.9  oh-5=16.3/14.1/18.9/16.4/15.2  oh-6=16.5/14.0/19.0/16.6/15.3  oh-7=16.6/14.2/19.0/16.6/15.5  oh-8=16.4/14.0/19.0/16.5/15.2  oh-9=16.9/14.4/19.2/16.7/15.6  oh-aoci-1=16.3/14.3/18.6/15.8/15.3  oh-aoci-10=15.9/13.9/18.2/15.9/14.9  oh-aoci-2=16.3/14.2/18.7/16.0/15.3  oh-aoci-3=16.3/14.4/18.8/16.0/15.4  oh-aoci-4=16.2/14.4/18.7/16.1/15.6  oh-aoci-5=15.8/13.8/18.4/15.6/14.9  oh-aoci-6=15.6/13.9/18.4/15.9/14.8  oh-aoci-7=16.0/14.0/18.6/16.1/15.2  oh-aoci-8=16.0/13.8/18.7/16.2/15.0  oh-aoci-9=16.6/14.5/18.8/16.1/15.6  oh-cg-1=16.8/14.7/19.1/16.7/15.8  oh-cg-10=16.9/14.7/19.1/16.9/16.0  oh-cg-2=16.7/14.4/19.0/16.6/15.6  oh-cg-3=16.7/14.5/19.0/16.7/15.7  oh-cg-4=16.6/14.5/19.1/16.7/15.5  oh-cg-5=16.8/14.6/19.0/16.8/15.7  oh-cg-6=17.0/15.0/19.1/17.0/16.2  oh-cg-7=16.8/14.6/19.1/16.8/15.7  oh-cg-8=16.6/14.5/19.1/16.9/15.8  oh-cg-9=16.9/14.6/19.1/16.8/15.8
+judge vote SD (mean over questions): oh-1=1.0  oh-10=0.8  oh-2=1.0  oh-3=1.0  oh-4=0.8  oh-5=1.0  oh-6=1.1  oh-7=1.0  oh-8=0.9  oh-9=0.9  oh-aoci-1=1.0  oh-aoci-10=1.1  oh-aoci-2=0.9  oh-aoci-3=1.0  oh-aoci-4=0.8  oh-aoci-5=1.1  oh-aoci-6=1.3  oh-aoci-7=0.9  oh-aoci-8=0.9  oh-aoci-9=0.9  oh-cg-1=0.7  oh-cg-10=0.8  oh-cg-2=0.7  oh-cg-3=1.0  oh-cg-4=0.8  oh-cg-5=0.9  oh-cg-6=0.8  oh-cg-7=0.8  oh-cg-8=0.9  oh-cg-9=0.9
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=0.5 calls/603ch (used on 44% of questions)  oh-aoci-10=0.4 calls/438ch (used on 42% of questions)  oh-aoci-2=0.4 calls/475ch (used on 40% of questions)  oh-aoci-3=0.5 calls/530ch (used on 44% of questions)  oh-aoci-4=0.4 calls/446ch (used on 42% of questions)  oh-aoci-5=0.6 calls/556ch (used on 48% of questions)  oh-aoci-6=0.4 calls/423ch (used on 40% of questions)  oh-aoci-7=0.4 calls/365ch (used on 33% of questions)  oh-aoci-8=0.3 calls/290ch (used on 27% of questions)  oh-aoci-9=0.5 calls/406ch (used on 42% of questions)  oh-cg-1=1.1 calls/18238ch (used on 100% of questions)  oh-cg-10=1.2 calls/19722ch (used on 100% of questions)  oh-cg-2=1.1 calls/19181ch (used on 100% of questions)  oh-cg-3=1.2 calls/19834ch (used on 100% of questions)  oh-cg-4=1.1 calls/18578ch (used on 100% of questions)  oh-cg-5=1.1 calls/18973ch (used on 100% of questions)  oh-cg-6=1.1 calls/18085ch (used on 100% of questions)  oh-cg-7=1.1 calls/18220ch (used on 100% of questions)  oh-cg-8=1.1 calls/18014ch (used on 100% of questions)  oh-cg-9=1.1 calls/19101ch (used on 100% of questions)
+totals: oh-1: in=1,513,225 out=31,328  oh-10: in=1,603,488 out=32,465  oh-2: in=1,471,407 out=30,874  oh-3: in=1,597,531 out=32,574  oh-4: in=1,534,608 out=32,164  oh-5: in=1,591,852 out=33,122  oh-6: in=1,546,969 out=30,853  oh-7: in=1,521,460 out=31,082  oh-8: in=1,580,291 out=32,351  oh-9: in=1,462,344 out=30,695  oh-aoci-1: in=7,046,765 out=78,624  oh-aoci-10: in=6,579,190 out=74,774  oh-aoci-2: in=6,834,913 out=75,796  oh-aoci-3: in=6,931,822 out=78,136  oh-aoci-4: in=6,701,522 out=77,854  oh-aoci-5: in=6,847,159 out=75,593  oh-aoci-6: in=6,738,302 out=76,261  oh-aoci-7: in=6,563,373 out=77,627  oh-aoci-8: in=6,734,022 out=77,036  oh-aoci-9: in=7,068,034 out=78,299  oh-cg-1: in=1,537,483 out=24,835  oh-cg-10: in=1,605,580 out=24,314  oh-cg-2: in=1,505,949 out=23,212  oh-cg-3: in=1,550,604 out=24,080  oh-cg-4: in=1,514,992 out=23,502  oh-cg-5: in=1,486,004 out=23,505  oh-cg-6: in=1,498,137 out=25,209  oh-cg-7: in=1,562,201 out=24,833  oh-cg-8: in=1,486,667 out=23,321  oh-cg-9: in=1,539,491 out=24,646
+
+== oh-10 - oh-1: n=48 Δ=+0.3 95%CI=[-2.1,+2.5] median=+0.0 win/tie/loss=23/7/18 sign-test p=0.533 | n for 80% power at this Δ ≈ 4590
+   by category: what: +2.4 [-0.9,+6.5] (n=13)  how: -3.8 [-11.0,+2.1] (n=12)  why: +2.0 [-1.1,+5.2] (n=11)  where: +0.7 [-1.7,+3.5] (n=12)
+   paired efficiency (b−a): input_tokens: +1880 [-1471,+5336] (1.06x)  peak_input_tokens: +46 [-152,+273] (1.01x)  output_tokens: +24 [-31,+81] (1.04x)  tool_calls: +0 [-0,+0] (1.02x)  wall_s: +0 [-1,+2] (1.07x)  answer_chars: +3 [-107,+119] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 7/29/12; hit cap: {'oh-1': 0, 'oh-10': 1}
+   -38  How should the TLSServer class refactor its SSL context initialization and mutual TLS configuration to separate certific
+         oh-1           read=['tests/testserver/server.py'] steps=2 retried=None
+         oh-10          read=['tests/test_requests.py', 'tests/testserver/server.py'] steps=4 retried=None
+   -12  How does the should_strip_auth method's special case for http->https upgrades on standard ports maintain backward compat
+         oh-1           read=['src/requests/sessions.py', 'tests/test_requests.py'] steps=2 retried=None
+         oh-10          read=['src/requests/sessions.py'] steps=2 retried=None
+   -7  What is the dependency chain between the TestRequests class and the requests library's exception hierarchy, and how do t
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py', 'src/requests/sessions.py', 'src/requests/utils.py', 'tests/test_requests.py'] steps=7 retried=None
+         oh-10          read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/auth.py', 'src/requests/exceptions.py', 'src/requests/models.py', 'src/requests/sessions.py', 'tests/test_requests.py'] steps=9 retried=None
+   +20  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-10          read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+   +15  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-10          read=['requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+   +13  Why does the ConnectionError exception class serve as a specialized error handler within the requests library's exceptio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-10          read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=4 retried=None
+
+== oh-2 - oh-1: n=48 Δ=+0.7 95%CI=[-0.8,+2.3] median=+0.0 win/tie/loss=19/14/15 sign-test p=0.608 | n for 80% power at this Δ ≈ 459
+   by category: what: +1.3 [-0.8,+4.2] (n=13)  how: +1.9 [-0.9,+5.0] (n=12)  why: +1.6 [-1.3,+5.0] (n=11)  where: -1.9 [-5.6,+1.4] (n=12)
+   paired efficiency (b−a): input_tokens: -871 [-3569,+1835] (0.97x)  peak_input_tokens: +34 [-165,+238] (1.00x)  output_tokens: -9 [-54,+35] (0.99x)  tool_calls: -0 [-0,+0] (0.97x)  wall_s: -0 [-1,-0] (0.92x)  answer_chars: +42 [-53,+141] (1.05x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/26/9; hit cap: {'oh-1': 0, 'oh-2': 0}
+   -15  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-2           read=['src/requests/structures.py'] steps=4 retried=None
+   -10  Where does the ProxyError exception propagate through the exception hierarchy to influence control flow when a proxy con
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=2 retried=None
+         oh-2           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=3 retried=None
+   -8  Where is the delegation chain through which MockResponse.getheaders() ultimately retrieves header information, and why d
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-2           read=['src/requests/cookies.py'] steps=2 retried=None
+   +16  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-2           read=['requests/models.py', 'src/requests/_internal_utils.py', 'src/requests/models.py', 'src/requests/structures.py'] steps=4 retried=None
+   +13  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-2           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=2 retried=None
+   +12  Why does the ConnectionError exception class serve as a specialized error handler within the requests library's exceptio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-2           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=4 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+0.1 95%CI=[-1.6,+1.8] median=+0.0 win/tie/loss=19/11/18 sign-test p=1.000 | n for 80% power at this Δ ≈ 25115
+   by category: what: +0.0 [-2.2,+2.1] (n=13)  how: +0.0 [-2.5,+2.8] (n=12)  why: +1.9 [-1.5,+5.5] (n=11)  where: -1.3 [-5.9,+3.2] (n=12)
+   paired efficiency (b−a): input_tokens: +1756 [-1194,+4836] (1.06x)  peak_input_tokens: +104 [-132,+359] (1.01x)  output_tokens: +26 [-20,+75] (1.04x)  tool_calls: +0 [-0,+1] (1.04x)  wall_s: -0 [-1,+0] (0.97x)  answer_chars: -6 [-108,+101] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/24/15; hit cap: {'oh-1': 0, 'oh-3': 0}
+   -16  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-3           read=['src/requests/structures.py'] steps=2 retried=None
+   -12  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-3           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+   -9  What is the architectural design in RequestException that leverages conditional request object resolution through respon
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-3           read=['requests/exceptions.py', 'src/requests/exceptions.py'] steps=3 retried=None
+   +14  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-3           read=['src/requests/cookies.py'] steps=2 retried=None
+   +11  Why does the guess_filename function's validation logic prevent security vulnerabilities when extracting filenames from 
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-3           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+   +11  Why does the ConnectionError exception class serve as a specialized error handler within the requests library's exceptio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-3           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=4 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+1.4 95%CI=[-0.3,+3.2] median=+0.0 win/tie/loss=22/8/18 sign-test p=0.636 | n for 80% power at this Δ ≈ 153
+   by category: what: +3.2 [+0.4,+6.3] (n=13)  how: -0.3 [-4.9,+4.5] (n=12)  why: +0.1 [-2.1,+2.4] (n=11)  where: +2.4 [-0.5,+6.3] (n=12)
+   paired efficiency (b−a): input_tokens: +445 [-2470,+3496] (1.01x)  peak_input_tokens: +212 [+6,+439] (1.02x)  output_tokens: +17 [-26,+62] (1.03x)  tool_calls: +0 [-0,+0] (1.02x)  wall_s: -0 [-1,+0] (0.96x)  answer_chars: +43 [-44,+132] (1.05x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/25/11; hit cap: {'oh-1': 0, 'oh-4': 0}
+   -18  How does the register_hook method's dual handling of Callable and iterable hook parameters create a potential algorithmi
+         oh-1           read=['hooks.py', 'requests/hooks.py', 'src/requests/hooks.py', 'src/requests/models.py'] steps=5 retried=None
+         oh-4           read=['src/requests/models.py'] steps=4 retried=None
+   -6  Why does BaseAdapter's __init__ method invoke super().__init__() despite BaseAdapter appearing to be a root abstraction 
+         oh-1           read=['adapters.py', 'requests/adapters.py', 'src/requests/adapters.py'] steps=3 retried=None
+         oh-4           read=['requests/adapters.py', 'src/requests/adapters.py'] steps=3 retried=None
+   -5  What is the dependency chain between the TestRequests class and the requests library's exception hierarchy, and how do t
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py', 'src/requests/sessions.py', 'src/requests/utils.py', 'tests/test_requests.py'] steps=7 retried=None
+         oh-4           read=['requests/exceptions.py', 'src/requests/auth.py', 'src/requests/exceptions.py', 'src/requests/sessions.py', 'tests/test_requests.py'] steps=8 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-4           read=['src/requests/cookies.py'] steps=2 retried=None
+   +20  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-4           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=2 retried=None
+   +14  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-4           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-0.8 95%CI=[-3.1,+1.5] median=-0.5 win/tie/loss=17/7/24 sign-test p=0.349 | n for 80% power at this Δ ≈ 885
+   by category: what: +1.2 [-1.9,+4.3] (n=13)  how: +0.7 [-2.9,+5.2] (n=12)  why: -0.7 [-2.8,+1.1] (n=11)  where: -4.3 [-11.8,+2.2] (n=12)
+   paired efficiency (b−a): input_tokens: +1638 [-2017,+6079] (1.05x)  peak_input_tokens: +239 [-68,+586] (1.03x)  output_tokens: +37 [-28,+117] (1.06x)  tool_calls: +0 [-0,+1] (1.07x)  wall_s: +1 [+0,+2] (1.16x)  answer_chars: +11 [-71,+100] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/27/13; hit cap: {'oh-1': 0, 'oh-5': 1}
+   -34  Where in the requests library codebase are the lower-level validation and encoding mechanisms implemented that handle th
+         oh-1           read=['requests/models.py', 'src/requests/models.py', 'tests/test_requests.py'] steps=7 retried=None
+         oh-5           read=['requests/models.py', 'src/requests/models.py', 'src/requests/utils.py', 'tests/test_requests.py'] steps=6 retried=None
+   -21  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-5           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+   -11  How does the Response class separate concerns between lazy content materialization and serialization state management to
+         oh-1           read=['src/requests/models.py'] steps=3 retried=None
+         oh-5           read=['models.py', 'requests/models.py'] steps=3 retried=None
+   +20  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-5           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+   +18  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-5           read=['src/requests/cookies.py'] steps=2 retried=None
+   +12  What is the dependency chain between HTTPError's inheritance from RequestException and the exception handling propagatio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-5           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=4 retried=None
+
+== oh-6 - oh-1: n=48 Δ=-0.2 95%CI=[-2.1,+1.6] median=-1.0 win/tie/loss=18/5/25 sign-test p=0.360 | n for 80% power at this Δ ≈ 5360
+   by category: what: +3.2 [+0.4,+6.2] (n=13)  how: -0.8 [-3.1,+2.2] (n=12)  why: -1.5 [-4.5,+1.0] (n=11)  where: -2.4 [-7.5,+2.8] (n=12)
+   paired efficiency (b−a): input_tokens: +703 [-2363,+3883] (1.02x)  peak_input_tokens: +78 [-158,+316] (1.01x)  output_tokens: -10 [-50,+32] (0.98x)  tool_calls: +0 [-0,+0] (1.00x)  wall_s: -0 [-1,+0] (0.95x)  answer_chars: -22 [-127,+88] (0.98x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/28/11; hit cap: {'oh-1': 0, 'oh-6': 0}
+   -21  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-6           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+   -13  Why does the repeated key-lookup pattern in CaseInsensitiveDict impact performance when scaling to thousands of case-ins
+         oh-1           read=['requests/structures.py', 'src/requests/structures.py'] steps=3 retried=None
+         oh-6           read=['src/requests/structures.py'] steps=2 retried=None
+   -10  Where does the ProxyError exception propagate through the exception hierarchy to influence control flow when a proxy con
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=2 retried=None
+         oh-6           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=4 retried=None
+   +18  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-6           read=['src/requests/cookies.py'] steps=2 retried=None
+   +15  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-6           read=['requests/models.py', 'src/requests/models.py', 'src/requests/structures.py'] steps=4 retried=None
+   +13  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-6           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+
+== oh-7 - oh-1: n=48 Δ=+0.2 95%CI=[-1.7,+2.0] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 11552
+   by category: what: -0.4 [-4.5,+3.5] (n=13)  how: +0.2 [-2.8,+3.4] (n=12)  why: +1.2 [-0.9,+3.1] (n=11)  where: -0.2 [-4.7,+4.2] (n=12)
+   paired efficiency (b−a): input_tokens: +172 [-2365,+2650] (1.01x)  peak_input_tokens: +61 [-129,+261] (1.01x)  output_tokens: -5 [-43,+34] (0.99x)  tool_calls: +0 [-0,+0] (1.01x)  wall_s: -0 [-1,-0] (0.92x)  answer_chars: -19 [-106,+65] (0.98x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/28/12; hit cap: {'oh-1': 0, 'oh-7': 0}
+   -16  Where is the delegation chain through which MockResponse.getheaders() ultimately retrieves header information, and why d
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-7           read=['src/requests/cookies.py'] steps=2 retried=None
+   -13  What is the architectural design in RequestException that leverages conditional request object resolution through respon
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-7           read=['requests/exceptions.py', 'src/requests/exceptions.py'] steps=3 retried=None
+   -13  What is the dependency chain between the TestRequests class and the requests library's exception hierarchy, and how do t
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py', 'src/requests/sessions.py', 'src/requests/utils.py', 'tests/test_requests.py'] steps=7 retried=None
+         oh-7           read=['requests/exceptions.py', 'src/requests/auth.py', 'src/requests/exceptions.py', 'src/requests/sessions.py', 'tests/test_requests.py'] steps=7 retried=None
+   +14  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-7           read=['src/requests/cookies.py'] steps=2 retried=None
+   +13  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-7           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=2 retried=None
+   +12  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-7           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-0.5 95%CI=[-2.9,+1.7] median=+0.0 win/tie/loss=21/6/21 sign-test p=1.000 | n for 80% power at this Δ ≈ 1746
+   by category: what: +2.3 [-0.2,+4.8] (n=13)  how: +0.1 [-3.6,+4.8] (n=12)  why: +1.1 [-2.0,+4.8] (n=11)  where: -5.8 [-11.9,+0.3] (n=12)
+   paired efficiency (b−a): input_tokens: +1397 [-1989,+4862] (1.04x)  peak_input_tokens: +78 [-202,+351] (1.01x)  output_tokens: +21 [-40,+87] (1.03x)  tool_calls: +0 [-0,+1] (1.05x)  wall_s: -0 [-1,+1] (0.99x)  answer_chars: +14 [-107,+137] (1.02x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/27/12; hit cap: {'oh-1': 0, 'oh-8': 0}
+   -21  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-8           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+   -18  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-8           read=['src/requests/structures.py'] steps=3 retried=None
+   -18  Where is the delegation chain through which MockResponse.getheaders() ultimately retrieves header information, and why d
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-8           read=['src/requests/cookies.py'] steps=2 retried=None
+   +21  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-8           read=['requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+   +15  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-8           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+   +14  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-8           read=['src/requests/cookies.py'] steps=2 retried=None
+
+== oh-9 - oh-1: n=48 Δ=+1.2 95%CI=[-0.4,+2.9] median=+0.0 win/tie/loss=21/9/18 sign-test p=0.749 | n for 80% power at this Δ ≈ 171
+   by category: what: +1.7 [-0.1,+3.6] (n=13)  how: +0.3 [-3.0,+4.0] (n=12)  why: +1.9 [-1.8,+6.1] (n=11)  where: +1.0 [-2.2,+4.8] (n=12)
+   paired efficiency (b−a): input_tokens: -1060 [-3741,+1612] (0.97x)  peak_input_tokens: +0 [-296,+267] (1.00x)  output_tokens: -13 [-56,+33] (0.98x)  tool_calls: -0 [-0,+0] (0.98x)  wall_s: -1 [-1,-0] (0.92x)  answer_chars: +3 [-102,+113] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/27/8; hit cap: {'oh-1': 0, 'oh-9': 0}
+   -11  How does the Response class coordinate the lifecycle management of the underlying urllib3 raw connection through its con
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-9           read=['requests/models.py'] steps=3 retried=None
+   -7  Where is the Server class implementation located that TestTestServer depends on, and how does the context manager protoc
+         oh-1           read=['tests/test_testserver.py', 'tests/testserver/server.py'] steps=2 retried=None
+         oh-9           read=['tests/test_testserver.py', 'tests/testserver/server.py'] steps=2 retried=None
+   -6  Where is the delegation chain through which MockResponse.getheaders() ultimately retrieves header information, and why d
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-9           read=['src/requests/cookies.py'] steps=2 retried=None
+   +17  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-9           read=['src/requests/cookies.py'] steps=1 retried=None
+   +15  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-9           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/exceptions.py'] steps=2 retried=None
+   +13  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-9           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=-1.3 95%CI=[-3.5,+1.0] median=-2.0 win/tie/loss=17/5/26 sign-test p=0.222 | n for 80% power at this Δ ≈ 298
+   by category: what: -0.7 [-5.8,+4.3] (n=13)  how: -1.8 [-5.1,+1.8] (n=12)  why: -0.1 [-3.3,+3.2] (n=11)  where: -2.5 [-7.7,+3.2] (n=12)
+   paired efficiency (b−a): input_tokens: +115282 [+104059,+126665] (4.66x)  peak_input_tokens: +15171 [+14823,+15521] (2.71x)  output_tokens: +985 [+900,+1076] (2.51x)  tool_calls: -2 [-2,-1] (0.59x)  wall_s: +6 [+6,+7] (2.07x)  answer_chars: +98 [-24,+231] (1.11x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'terminal': 19, '(none)': 8, 'aoci_get_entries': 14, 'aoci_search': 7}}
+   steps (b−a): fewer/same/more = 27/8/13; hit cap: {'oh-1': 0, 'oh-aoci-1': 1}
+   -18  Where does the apparent_encoding method's control flow handle the absence of the chardet library, and what data path doe
+         oh-1           read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+         oh-aoci-1      read=['src/requests/models.py'] steps=1 retried=None
+   -17  What is the dependency chain between HTTPError's inheritance from RequestException and the exception handling propagatio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -15  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-aoci-1      read=['src/requests/structures.py'] steps=1 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-1      read=['src/requests/cookies.py'] steps=1 retried=None
+   +16  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-1      read=['src/requests/models.py', 'src/requests/structures.py'] steps=3 retried=None
+   +11  Why does the `prepare()` method enforce a strict ordering where `prepare_auth()` must be called after `prepare_body()` a
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-aoci-1      read=['src/requests/models.py'] steps=2 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=-2.8 95%CI=[-6.6,+0.7] median=+0.0 win/tie/loss=19/8/21 sign-test p=0.875 | n for 80% power at this Δ ≈ 159
+   by category: what: -3.6 [-13.8,+4.6] (n=13)  how: -1.6 [-6.1,+2.4] (n=12)  why: -2.1 [-7.3,+1.5] (n=11)  where: -3.8 [-12.1,+4.0] (n=12)
+   paired efficiency (b−a): input_tokens: +105541 [+96143,+113961] (4.35x)  peak_input_tokens: +14828 [+14350,+15239] (2.67x)  output_tokens: +905 [+842,+965] (2.39x)  tool_calls: -2 [-3,-2] (0.51x)  wall_s: +6 [+5,+7] (2.00x)  answer_chars: +131 [+17,+265] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'terminal': 19, '(none)': 9, 'aoci_get_entries': 14, 'aoci_search': 6}}
+   steps (b−a): fewer/same/more = 29/12/7; hit cap: {'oh-1': 0, 'oh-aoci-10': 0}
+   -47  What is the architectural responsibility of the request preparation layer in the requests library for normalizing hetero
+         oh-1           read=['src/requests/models.py'] steps=4 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -34  Where does the ProxyError exception propagate through the exception hierarchy to influence control flow when a proxy con
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=2 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   -25  What are the critical environmental prerequisites for the TestRequests test methods that involve SSL/TLS operations to e
+         oh-1           read=['requirements-dev.txt', 'test_requests.py', 'tests/conftest.py', 'tests/test_requests.py', 'tests/testserver/server.py'] steps=7 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +20  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-10     read=['src/requests/_internal_utils.py', 'src/requests/models.py', 'src/requests/structures.py'] steps=3 retried=None
+   +16  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-10     read=['src/requests/utils.py'] steps=3 retried=None
+   +15  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-10     read=['src/requests/cookies.py'] steps=1 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=-1.1 95%CI=[-3.6,+1.3] median=-0.5 win/tie/loss=18/6/24 sign-test p=0.441 | n for 80% power at this Δ ≈ 471
+   by category: what: -1.7 [-7.8,+4.5] (n=13)  how: -1.2 [-6.4,+3.3] (n=12)  why: -1.0 [-4.2,+2.1] (n=11)  where: -0.6 [-4.8,+4.0] (n=12)
+   paired efficiency (b−a): input_tokens: +110868 [+99341,+123149] (4.52x)  peak_input_tokens: +15021 [+14634,+15367] (2.70x)  output_tokens: +926 [+842,+1016] (2.42x)  tool_calls: -2 [-2,-2] (0.53x)  wall_s: +6 [+5,+7] (2.03x)  answer_chars: +31 [-102,+156] (1.03x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'terminal': 21, '(none)': 8, 'aoci_get_entries': 15, 'aoci_search': 4}}
+   steps (b−a): fewer/same/more = 27/10/11; hit cap: {'oh-1': 0, 'oh-aoci-2': 1}
+   -25  What are the critical environmental prerequisites for the TestRequests test methods that involve SSL/TLS operations to e
+         oh-1           read=['requirements-dev.txt', 'test_requests.py', 'tests/conftest.py', 'tests/test_requests.py', 'tests/testserver/server.py'] steps=7 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -23  How does the Response class manage the dual-state content consumption pattern to prevent memory exhaustion while maintai
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -13  What is the dependency chain between HTTPError's inheritance from RequestException and the exception handling propagatio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +20  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-2      read=['src/requests/models.py', 'src/requests/utils.py'] steps=3 retried=None
+   +16  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/requests/utils.py'] steps=3 retried=None
+   +14  Where in the codebase is the TooManyRedirects exception raised and what is the call chain that leads to its instantiatio
+         oh-1           read=['src/requests/sessions.py'] steps=3 retried=None
+         oh-aoci-2      read=['src/requests/exceptions.py', 'src/requests/sessions.py'] steps=4 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=-0.8 95%CI=[-3.2,+1.8] median=-1.0 win/tie/loss=19/4/25 sign-test p=0.451 | n for 80% power at this Δ ≈ 1068
+   by category: what: -1.8 [-7.0,+3.8] (n=13)  how: -1.2 [-5.0,+2.8] (n=12)  why: +2.0 [-3.2,+6.9] (n=11)  where: -1.8 [-6.2,+3.0] (n=12)
+   paired efficiency (b−a): input_tokens: +112887 [+102732,+122544] (4.58x)  peak_input_tokens: +15245 [+14918,+15573] (2.72x)  output_tokens: +975 [+900,+1055] (2.49x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: +6 [+6,+7] (2.04x)  answer_chars: +136 [+15,+269] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'terminal': 18, '(none)': 9, 'aoci_get_entries': 14, 'aoci_search': 7}}
+   steps (b−a): fewer/same/more = 26/13/9; hit cap: {'oh-1': 0, 'oh-aoci-3': 0}
+   -18  What is the dependency chain between the TestRequests class and the requests library's exception hierarchy, and how do t
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py', 'src/requests/sessions.py', 'src/requests/utils.py', 'tests/test_requests.py'] steps=7 retried=None
+         oh-aoci-3      read=['src/requests/auth.py', 'src/requests/exceptions.py', 'src/requests/models.py', 'src/requests/sessions.py', 'tests/test_requests.py'] steps=8 retried=None
+   -15  How does the Response class manage the dual-state content consumption pattern to prevent memory exhaustion while maintai
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -15  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/requests/structures.py'] steps=1 retried=None
+   +19  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-3      read=['src/requests/models.py', 'src/requests/structures.py', 'src/requests/utils.py'] steps=3 retried=None
+   +16  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/requests/cookies.py'] steps=1 retried=None
+   +16  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/requests/utils.py'] steps=2 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=-0.6 95%CI=[-3.5,+2.2] median=+1.0 win/tie/loss=25/4/19 sign-test p=0.451 | n for 80% power at this Δ ≈ 1967
+   by category: what: -1.2 [-7.2,+4.5] (n=13)  how: -0.9 [-6.3,+3.6] (n=12)  why: +2.2 [+0.6,+4.1] (n=11)  where: -2.2 [-10.0,+4.8] (n=12)
+   paired efficiency (b−a): input_tokens: +108090 [+96796,+117983] (4.43x)  peak_input_tokens: +14826 [+14169,+15367] (2.67x)  output_tokens: +969 [+869,+1068] (2.49x)  tool_calls: -2 [-3,-1] (0.50x)  wall_s: +7 [+6,+7] (2.11x)  answer_chars: +162 [+5,+334] (1.18x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'terminal': 18, '(none)': 10, 'aoci_get_entries': 14, 'aoci_search': 6}}
+   steps (b−a): fewer/same/more = 25/17/6; hit cap: {'oh-1': 0, 'oh-aoci-4': 0}
+   -25  Where does the apparent_encoding method's control flow handle the absence of the chardet library, and what data path doe
+         oh-1           read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+         oh-aoci-4      read=['src/requests/models.py'] steps=1 retried=None
+   -24  How does the Response class manage the dual-state content consumption pattern to prevent memory exhaustion while maintai
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -23  What are the critical environmental prerequisites for the TestRequests test methods that involve SSL/TLS operations to e
+         oh-1           read=['requirements-dev.txt', 'test_requests.py', 'tests/conftest.py', 'tests/test_requests.py', 'tests/testserver/server.py'] steps=7 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +19  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-4      read=['src/requests/_internal_utils.py', 'src/requests/models.py', 'src/requests/structures.py'] steps=3 retried=None
+   +18  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-4      read=['src/requests/cookies.py'] steps=1 retried=None
+   +13  Where in the codebase is the TooManyRedirects exception raised and what is the call chain that leads to its instantiatio
+         oh-1           read=['src/requests/sessions.py'] steps=3 retried=None
+         oh-aoci-4      read=['src/requests/sessions.py'] steps=4 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=-3.1 95%CI=[-5.9,-0.3] median=-1.0 win/tie/loss=16/6/26 sign-test p=0.164 | n for 80% power at this Δ ≈ 76
+   by category: what: -2.8 [-9.3,+3.8] (n=13)  how: +0.0 [-3.6,+3.7] (n=12)  why: -4.5 [-11.3,+1.1] (n=11)  where: -5.2 [-9.0,-1.2] (n=12)
+   paired efficiency (b−a): input_tokens: +111124 [+100512,+121252] (4.52x)  peak_input_tokens: +15032 [+14621,+15414] (2.70x)  output_tokens: +922 [+857,+984] (2.41x)  tool_calls: -2 [-2,-1] (0.56x)  wall_s: +6 [+5,+7] (1.99x)  answer_chars: +39 [-81,+165] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_get_entries': 15, '(none)': 9, 'terminal': 16, 'aoci_search': 8}}
+   steps (b−a): fewer/same/more = 26/9/13; hit cap: {'oh-1': 0, 'oh-aoci-5': 0}
+   -26  Why does the repeated key-lookup pattern in CaseInsensitiveDict impact performance when scaling to thousands of case-ins
+         oh-1           read=['requests/structures.py', 'src/requests/structures.py'] steps=3 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -24  What are the critical environmental prerequisites for the TestRequests test methods that involve SSL/TLS operations to e
+         oh-1           read=['requirements-dev.txt', 'test_requests.py', 'tests/conftest.py', 'tests/test_requests.py', 'tests/testserver/server.py'] steps=7 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -24  Why would the `host` method in `MockRequest` delegating to `get_host()` through a single-level indirection cause cumulat
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   +19  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-5      read=['src/requests/models.py', 'src/requests/structures.py'] steps=2 retried=None
+   +16  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-5      read=['src/requests/utils.py'] steps=3 retried=None
+   +13  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=-3.1 95%CI=[-6.7,+0.2] median=+0.0 win/tie/loss=20/6/22 sign-test p=0.878 | n for 80% power at this Δ ≈ 126
+   by category: what: -3.9 [-12.8,+3.8] (n=13)  how: -5.1 [-10.3,-0.2] (n=12)  why: -1.8 [-11.9,+5.6] (n=11)  where: -1.2 [-5.3,+2.8] (n=12)
+   paired efficiency (b−a): input_tokens: +108856 [+98462,+118931] (4.45x)  peak_input_tokens: +14878 [+14474,+15250] (2.68x)  output_tokens: +936 [+869,+999] (2.43x)  tool_calls: -2 [-3,-1] (0.52x)  wall_s: +6 [+5,+7] (2.00x)  answer_chars: +183 [+55,+319] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'terminal': 21, '(none)': 8, 'aoci_search': 5, 'aoci_get_entries': 14}}
+   steps (b−a): fewer/same/more = 26/10/12; hit cap: {'oh-1': 0, 'oh-aoci-6': 0}
+   -44  Why does the repeated key-lookup pattern in CaseInsensitiveDict impact performance when scaling to thousands of case-ins
+         oh-1           read=['requests/structures.py', 'src/requests/structures.py'] steps=3 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -37  What assumptions about encoding representation does the test_pragmas method enforce when validating that get_encodings_f
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-6      read=['tests/test_utils.py'] steps=2 retried=None
+   -25  How does the Response class manage the dual-state content consumption pattern to prevent memory exhaustion while maintai
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   +19  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-6      read=['src/requests/utils.py'] steps=3 retried=None
+   +15  Why does the `prepare()` method enforce a strict ordering where `prepare_auth()` must be called after `prepare_body()` a
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-aoci-6      read=['src/requests/models.py'] steps=2 retried=None
+   +13  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-6      read=['src/requests/cookies.py'] steps=1 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=-1.8 95%CI=[-4.7,+1.1] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 270
+   by category: what: -3.7 [-9.7,+1.8] (n=13)  how: -2.7 [-7.8,+1.4] (n=12)  why: -0.7 [-8.5,+5.4] (n=11)  where: +0.2 [-5.2,+6.2] (n=12)
+   paired efficiency (b−a): input_tokens: +105211 [+95802,+114595] (4.34x)  peak_input_tokens: +15147 [+14728,+15519] (2.71x)  output_tokens: +965 [+872,+1059] (2.48x)  tool_calls: -2 [-3,-2] (0.50x)  wall_s: +6 [+5,+7] (2.00x)  answer_chars: +64 [-38,+166] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'terminal': 23, '(none)': 9, 'aoci_search': 3, 'aoci_get_entries': 13}}
+   steps (b−a): fewer/same/more = 31/10/7; hit cap: {'oh-1': 0, 'oh-aoci-7': 0}
+   -33  Why does the repeated key-lookup pattern in CaseInsensitiveDict impact performance when scaling to thousands of case-ins
+         oh-1           read=['requests/structures.py', 'src/requests/structures.py'] steps=3 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -30  What are the critical environmental prerequisites for the TestRequests test methods that involve SSL/TLS operations to e
+         oh-1           read=['requirements-dev.txt', 'test_requests.py', 'tests/conftest.py', 'tests/test_requests.py', 'tests/testserver/server.py'] steps=7 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -24  How does the Response class manage the dual-state content consumption pattern to prevent memory exhaustion while maintai
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-7      read=['src/requests/cookies.py'] steps=1 retried=None
+   +15  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-7      read=['src/requests/models.py'] steps=2 retried=None
+   +15  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-7      read=['src/requests/_internal_utils.py', 'src/requests/models.py', 'src/requests/structures.py'] steps=3 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=-2.0 95%CI=[-4.5,+0.5] median=+0.0 win/tie/loss=20/6/22 sign-test p=0.878 | n for 80% power at this Δ ≈ 165
+   by category: what: -2.5 [-7.8,+2.2] (n=13)  how: -0.3 [-2.9,+2.3] (n=12)  why: -1.5 [-7.4,+3.1] (n=11)  where: -3.3 [-10.0,+2.8] (n=12)
+   paired efficiency (b−a): input_tokens: +108767 [+97477,+119765] (4.45x)  peak_input_tokens: +14861 [+14477,+15205] (2.68x)  output_tokens: +952 [+874,+1032] (2.46x)  tool_calls: -2 [-3,-2] (0.49x)  wall_s: +6 [+5,+7] (1.99x)  answer_chars: +187 [+52,+336] (1.21x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'terminal': 25, '(none)': 10, 'aoci_get_entries': 11, 'aoci_search': 2}}
+   steps (b−a): fewer/same/more = 30/9/9; hit cap: {'oh-1': 0, 'oh-aoci-8': 0}
+   -25  Where does the ProxyError exception propagate through the exception hierarchy to influence control flow when a proxy con
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py'] steps=2 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -24  Why does the repeated key-lookup pattern in CaseInsensitiveDict impact performance when scaling to thousands of case-ins
+         oh-1           read=['requests/structures.py', 'src/requests/structures.py'] steps=3 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -23  What are the critical environmental prerequisites for the TestRequests test methods that involve SSL/TLS operations to e
+         oh-1           read=['requirements-dev.txt', 'test_requests.py', 'tests/conftest.py', 'tests/test_requests.py', 'tests/testserver/server.py'] steps=7 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   +13  Where does the parametrize decorator chain interact with the httpbin fixture and timeout parameter to establish the comp
+         oh-1           read=['tests/conftest.py', 'tests/test_requests.py'] steps=2 retried=None
+         oh-aoci-8      read=['tests/conftest.py', 'tests/test_requests.py'] steps=3 retried=None
+   +12  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-8      read=['src/requests/cookies.py'] steps=1 retried=None
+   +12  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-aoci-8      read=['src/requests/utils.py'] steps=3 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=-0.1 95%CI=[-1.9,+1.8] median=+0.5 win/tie/loss=24/6/18 sign-test p=0.441 | n for 80% power at this Δ ≈ 49055
+   by category: what: -2.1 [-5.7,+1.3] (n=13)  how: -1.6 [-4.8,+1.6] (n=12)  why: +3.6 [+0.2,+7.2] (n=11)  where: +0.2 [-3.8,+4.0] (n=12)
+   paired efficiency (b−a): input_tokens: +115725 [+106064,+125126] (4.67x)  peak_input_tokens: +15268 [+14973,+15540] (2.72x)  output_tokens: +979 [+915,+1039] (2.50x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: +6 [+6,+7] (2.06x)  answer_chars: +157 [+36,+277] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'terminal': 22, '(none)': 6, 'aoci_get_entries': 15, 'aoci_search': 5}}
+   steps (b−a): fewer/same/more = 26/10/12; hit cap: {'oh-1': 0, 'oh-aoci-9': 0}
+   -15  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-aoci-9      read=['src/requests/structures.py'] steps=1 retried=None
+   -13  What is the architectural design in RequestException that leverages conditional request object resolution through respon
+         oh-1           read=['requests/exceptions.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -13  What is the impact of removing the `merge_cookies` function calls on the authentication flow when a session has both pre
+         oh-1           read=['src/requests/cookies.py', 'src/requests/sessions.py'] steps=2 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +14  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-aoci-9      read=['src/requests/models.py'] steps=3 retried=None
+   +14  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-aoci-9      read=['src/requests/cookies.py'] steps=1 retried=None
+   +11  Why does the ConnectionError exception class serve as a specialized error handler within the requests library's exceptio
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-aoci-9      read=['src/requests/exceptions.py'] steps=3 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+1.4 95%CI=[-0.8,+3.7] median=+1.5 win/tie/loss=27/6/15 sign-test p=0.088 | n for 80% power at this Δ ≈ 230
+   by category: what: +2.8 [-0.5,+5.9] (n=13)  how: +1.8 [-2.9,+6.8] (n=12)  why: +2.5 [-1.5,+7.0] (n=11)  where: -1.5 [-6.6,+3.2] (n=12)
+   paired efficiency (b−a): input_tokens: +505 [-3918,+5194] (1.02x)  peak_input_tokens: +3500 [+2896,+4104] (1.40x)  output_tokens: -135 [-201,-68] (0.79x)  tool_calls: -2 [-2,-1] (0.62x)  wall_s: -1 [-2,-1] (0.82x)  answer_chars: +281 [+137,+429] (1.31x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/11/7; hit cap: {'oh-1': 0, 'oh-cg-1': 0}
+   -17  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   -16  Where does the apparent_encoding method's control flow handle the absence of the chardet library, and what data path doe
+         oh-1           read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+         oh-cg-1        read=['src/requests/models.py'] steps=2 retried=None
+   -12  How does the parametrize decorator coordinate with the test function signature to implement the test case generation alg
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=3 retried=None
+         oh-cg-1        read=['tests/test_utils.py'] steps=2 retried=None
+   +22  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-1        read=['requests/exceptions.py', 'src/requests/__init__.py'] steps=2 retried=None
+   +14  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+   +14  Why does the `prepare()` method enforce a strict ordering where `prepare_auth()` must be called after `prepare_body()` a
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-cg-1        read=[] steps=1 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+1.9 95%CI=[-0.3,+4.0] median=+2.5 win/tie/loss=27/8/13 sign-test p=0.038 | n for 80% power at this Δ ≈ 126
+   by category: what: +3.9 [+1.5,+6.3] (n=13)  how: +2.2 [-1.0,+6.2] (n=12)  why: +3.1 [-1.0,+7.3] (n=11)  where: -1.8 [-7.6,+3.7] (n=12)
+   paired efficiency (b−a): input_tokens: +1924 [-2264,+6325] (1.06x)  peak_input_tokens: +3773 [+3139,+4447] (1.43x)  output_tokens: -146 [-214,-80] (0.78x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: -1 [-2,-1] (0.78x)  answer_chars: +233 [+78,+393] (1.26x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/15/6; hit cap: {'oh-1': 0, 'oh-cg-10': 0}
+   -24  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   -14  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-10       read=['tests/test_utils.py'] steps=2 retried=None
+   -8  Why does the morsel_to_cookie function determine whether to convert a max-age attribute into an expires timestamp, and w
+         oh-1           read=['src/requests/cookies.py', 'tests/test_requests.py'] steps=2 retried=None
+         oh-cg-10       read=['src/requests/cookies.py'] steps=2 retried=None
+   +21  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-10       read=['requests/exceptions.py', 'src/requests/__init__.py'] steps=3 retried=None
+   +16  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+   +14  Why does the `prepare()` method enforce a strict ordering where `prepare_auth()` must be called after `prepare_body()` a
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-cg-10       read=[] steps=1 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.7 95%CI=[-1.3,+2.7] median=+1.0 win/tie/loss=26/5/17 sign-test p=0.222 | n for 80% power at this Δ ≈ 756
+   by category: what: +1.1 [-2.9,+4.8] (n=13)  how: +2.4 [-0.8,+6.6] (n=12)  why: +1.4 [-2.2,+5.1] (n=11)  where: -2.0 [-6.5,+1.8] (n=12)
+   paired efficiency (b−a): input_tokens: -152 [-4379,+4316] (1.00x)  peak_input_tokens: +3586 [+2990,+4234] (1.41x)  output_tokens: -169 [-242,-97] (0.74x)  tool_calls: -2 [-2,-1] (0.60x)  wall_s: -1 [-2,-1] (0.76x)  answer_chars: +148 [-0,+296] (1.16x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/12/5; hit cap: {'oh-1': 0, 'oh-cg-2': 0}
+   -17  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   -14  Where does the apparent_encoding method's control flow handle the absence of the chardet library, and what data path doe
+         oh-1           read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+         oh-cg-2        read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+   -10  What is the semantic distinction between InvalidSchema's dual inheritance from RequestException and ValueError in handli
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/sessions.py'] steps=2 retried=None
+         oh-cg-2        read=['requests/exceptions.py'] steps=2 retried=None
+   +21  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-2        read=['requests/exceptions.py'] steps=2 retried=None
+   +13  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   +12  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-cg-2        read=['tests/test_utils.py'] steps=2 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+1.0 95%CI=[-1.2,+3.2] median=+2.0 win/tie/loss=26/7/15 sign-test p=0.117 | n for 80% power at this Δ ≈ 465
+   by category: what: +3.5 [-0.3,+7.5] (n=13)  how: +1.2 [-2.2,+5.1] (n=12)  why: +3.1 [-0.6,+7.0] (n=11)  where: -3.8 [-9.2,+0.6] (n=12)
+   paired efficiency (b−a): input_tokens: +779 [-3236,+4860] (1.02x)  peak_input_tokens: +3726 [+3189,+4266] (1.42x)  output_tokens: -151 [-204,-99] (0.77x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: -1 [-2,-1] (0.76x)  answer_chars: +199 [+60,+350] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/10/7; hit cap: {'oh-1': 0, 'oh-cg-3': 0}
+   -25  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   -14  Where does the apparent_encoding method's control flow handle the absence of the chardet library, and what data path doe
+         oh-1           read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+         oh-cg-3        read=['src/requests/models.py'] steps=2 retried=None
+   -11  How does the should_strip_auth method's special case for http->https upgrades on standard ports maintain backward compat
+         oh-1           read=['src/requests/sessions.py', 'tests/test_requests.py'] steps=2 retried=None
+         oh-cg-3        read=['src/requests/sessions.py'] steps=2 retried=None
+   +18  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-3        read=['src/requests/structures.py'] steps=3 retried=None
+   +17  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-3        read=['requests/exceptions.py', 'src/requests/__init__.py'] steps=2 retried=None
+   +15  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-cg-3        read=['tests/test_utils.py'] steps=2 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+0.8 95%CI=[-1.9,+3.2] median=+1.5 win/tie/loss=28/7/13 sign-test p=0.028 | n for 80% power at this Δ ≈ 980
+   by category: what: +0.8 [-6.1,+6.5] (n=13)  how: +2.8 [-0.9,+6.3] (n=12)  why: +1.8 [-0.5,+4.5] (n=11)  where: -2.2 [-8.2,+2.7] (n=12)
+   paired efficiency (b−a): input_tokens: +37 [-4164,+4325] (1.00x)  peak_input_tokens: +3420 [+2910,+3958] (1.39x)  output_tokens: -163 [-233,-93] (0.75x)  tool_calls: -2 [-2,-1] (0.59x)  wall_s: -1 [-1,-0] (0.90x)  answer_chars: +223 [+62,+387] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 33/8/7; hit cap: {'oh-1': 0, 'oh-cg-4': 0}
+   -33  What assumptions about encoding representation does the test_pragmas method enforce when validating that get_encodings_f
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-4        read=['tests/test_utils.py'] steps=3 retried=None
+   -26  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   -14  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-4        read=['tests/test_utils.py'] steps=2 retried=None
+   +20  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-cg-4        read=['tests/test_utils.py'] steps=2 retried=None
+   +17  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-4        read=['requests/exceptions.py', 'src/requests/__init__.py'] steps=2 retried=None
+   +10  Why does the guess_filename function's validation logic prevent security vulnerabilities when extracting filenames from 
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=2 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+1.3 95%CI=[-0.8,+3.4] median=+1.0 win/tie/loss=25/10/13 sign-test p=0.073 | n for 80% power at this Δ ≈ 237
+   by category: what: +0.9 [-2.8,+4.2] (n=13)  how: +1.6 [-1.2,+4.5] (n=12)  why: +3.0 [-1.2,+7.5] (n=11)  where: -0.1 [-5.7,+5.2] (n=12)
+   paired efficiency (b−a): input_tokens: -567 [-5011,+4107] (0.98x)  peak_input_tokens: +3511 [+2855,+4226] (1.40x)  output_tokens: -163 [-232,-90] (0.75x)  tool_calls: -2 [-2,-1] (0.60x)  wall_s: -1 [-2,-1] (0.76x)  answer_chars: +225 [+89,+375] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 32/9/7; hit cap: {'oh-1': 0, 'oh-cg-5': 0}
+   -23  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   -12  What is the semantic significance of the `no_proxy` keyword argument in `get_environ_proxies` overriding environment var
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-5        read=['src/requests/utils.py'] steps=2 retried=None
+   -11  What is the semantic distinction between InvalidSchema's dual inheritance from RequestException and ValueError in handli
+         oh-1           read=['requests/exceptions.py', 'src/requests/adapters.py', 'src/requests/exceptions.py', 'src/requests/sessions.py'] steps=2 retried=None
+         oh-cg-5        read=['requests/exceptions.py', 'src/requests/models.py', 'src/requests/sessions.py'] steps=3 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +15  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +15  Why does the `prepare()` method enforce a strict ordering where `prepare_auth()` must be called after `prepare_body()` a
+         oh-1           read=['requests/models.py', 'src/requests/models.py'] steps=4 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+2.8 95%CI=[+0.3,+5.2] median=+2.0 win/tie/loss=28/6/14 sign-test p=0.044 | n for 80% power at this Δ ≈ 75
+   by category: what: +6.3 [+2.3,+10.1] (n=13)  how: +1.3 [-2.5,+5.7] (n=12)  why: +4.7 [+0.7,+8.6] (n=11)  where: -1.3 [-7.8,+4.5] (n=12)
+   paired efficiency (b−a): input_tokens: -314 [-4349,+3820] (0.99x)  peak_input_tokens: +3405 [+2849,+3964] (1.38x)  output_tokens: -127 [-189,-66] (0.80x)  tool_calls: -2 [-2,-1] (0.62x)  wall_s: -1 [-2,-1] (0.81x)  answer_chars: +286 [+148,+426] (1.31x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/12/5; hit cap: {'oh-1': 0, 'oh-cg-6': 0}
+   -26  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   -13  Where is the delegation chain through which MockResponse.getheaders() ultimately retrieves header information, and why d
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   -9  How should the TLSServer class refactor its SSL context initialization and mutual TLS configuration to separate certific
+         oh-1           read=['tests/testserver/server.py'] steps=2 retried=None
+         oh-cg-6        read=['tests/test_requests.py'] steps=2 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   +18  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-cg-6        read=['src/requests/models.py', 'tests/test_utils.py'] steps=2 retried=None
+   +18  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-6        read=['requests/exceptions.py', 'src/requests/__init__.py'] steps=2 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+1.4 95%CI=[-1.0,+3.9] median=+0.0 win/tie/loss=23/7/18 sign-test p=0.533 | n for 80% power at this Δ ≈ 287
+   by category: what: +4.2 [+0.2,+8.7] (n=13)  how: +1.5 [-2.2,+5.8] (n=12)  why: +2.5 [-1.1,+6.4] (n=11)  where: -2.8 [-8.3,+3.2] (n=12)
+   paired efficiency (b−a): input_tokens: +1020 [-3492,+5741] (1.03x)  peak_input_tokens: +3423 [+2823,+4045] (1.39x)  output_tokens: -135 [-204,-66] (0.79x)  tool_calls: -2 [-2,-1] (0.64x)  wall_s: -1 [-2,-1] (0.77x)  answer_chars: +249 [+76,+430] (1.27x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/14/7; hit cap: {'oh-1': 0, 'oh-cg-7': 0}
+   -17  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-7        read=[] steps=1 retried=None
+   -17  Where does the apparent_encoding method's control flow handle the absence of the chardet library, and what data path doe
+         oh-1           read=['src/requests/compat.py', 'src/requests/models.py'] steps=2 retried=None
+         oh-cg-7        read=['src/requests/models.py'] steps=2 retried=None
+   -15  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-7        read=['tests/test_utils.py'] steps=2 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-cg-7        read=[] steps=1 retried=None
+   +20  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-7        read=['src/requests/structures.py'] steps=3 retried=None
+   +19  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-7        read=['requests/exceptions.py'] steps=2 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+1.2 95%CI=[-1.3,+3.7] median=+1.0 win/tie/loss=27/6/15 sign-test p=0.088 | n for 80% power at this Δ ≈ 405
+   by category: what: +5.5 [+1.7,+10.0] (n=13)  how: +1.8 [-1.3,+5.2] (n=12)  why: +3.5 [-1.1,+7.7] (n=11)  where: -6.2 [-11.4,-1.2] (n=12)
+   paired efficiency (b−a): input_tokens: -553 [-4872,+3708] (0.98x)  peak_input_tokens: +3224 [+2678,+3780] (1.36x)  output_tokens: -167 [-234,-103] (0.74x)  tool_calls: -2 [-2,-1] (0.59x)  wall_s: -1 [-2,-1] (0.79x)  answer_chars: +157 [+22,+293] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 30/11/7; hit cap: {'oh-1': 0, 'oh-cg-8': 0}
+   -23  Where does the URL parsing and credential extraction dataflow in the prepare() method handle the propagation of authenti
+         oh-1           read=['src/requests/models.py', 'src/requests/utils.py'] steps=4 retried=None
+         oh-cg-8        read=[] steps=3 retried=None
+   -19  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-8        read=['tests/test_utils.py'] steps=2 retried=None
+   -17  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   +26  What is the data integrity mechanism in the PreparedRequest class that maintains header normalization when CaseInsensiti
+         oh-1           read=['src/requests/_internal_utils.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-8        read=['src/requests/structures.py'] steps=3 retried=None
+   +15  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-8        read=['requests/exceptions.py'] steps=1 retried=None
+   +14  Why does the `prepare_body()` method raise `NotImplementedError` when both streaming data and files are provided, rather
+         oh-1           read=['models.py', 'requests/models.py', 'src/requests/models.py'] steps=3 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+1.5 95%CI=[-0.5,+3.6] median=+1.0 win/tie/loss=26/7/15 sign-test p=0.117 | n for 80% power at this Δ ≈ 178
+   by category: what: +3.4 [-0.5,+7.5] (n=13)  how: +2.5 [-0.5,+6.2] (n=12)  why: +1.5 [-0.6,+4.0] (n=11)  where: -1.6 [-6.7,+3.8] (n=12)
+   paired efficiency (b−a): input_tokens: +547 [-3931,+5227] (1.02x)  peak_input_tokens: +3553 [+2941,+4203] (1.40x)  output_tokens: -139 [-212,-59] (0.79x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: -1 [-2,-1] (0.76x)  answer_chars: +262 [+114,+417] (1.29x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 28/13/7; hit cap: {'oh-1': 0, 'oh-cg-9': 0}
+   -20  Where does the CaseInsensitiveDict class implement the __iter__ method to ensure that test_list can successfully convert
+         oh-1           read=['src/requests/structures.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   -9  Where does the control flow in TestIsValidCIDR.test_invalid branch based on the parametrized value parameter to determin
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=2 retried=None
+         oh-cg-9        read=['tests/test_utils.py'] steps=2 retried=None
+   -8  What is the impact of removing the `merge_cookies` function calls on the authentication flow when a session has both pre
+         oh-1           read=['src/requests/cookies.py', 'src/requests/sessions.py'] steps=2 retried=None
+         oh-cg-9        read=['src/requests/models.py'] steps=3 retried=None
+   +20  Where in the morsel_to_cookie function implementation are the conditional branches that determine whether to parse the e
+         oh-1           read=['src/requests/cookies.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=1 retried=None
+   +20  What is the architectural distinction in the TestGuessJSONUTF class between BOM-based encoding detection and raw byte-pa
+         oh-1           read=['src/requests/utils.py', 'tests/test_utils.py'] steps=4 retried=None
+         oh-cg-9        read=['tests/test_utils.py'] steps=2 retried=None
+   +20  How should the exception hierarchy in the requests library implement version validation logic to detect and handle misma
+         oh-1           read=['requests/__init__.py', 'requests/exceptions.py', 'src/requests/__init__.py', 'src/requests/__version__.py', 'src/requests/exceptions.py'] steps=3 retried=None
+         oh-cg-9        read=['requests/exceptions.py'] steps=1 retried=None
+
+wrote runs/sweqa-r5-requests-k10/analysis.json

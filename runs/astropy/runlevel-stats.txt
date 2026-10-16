@@ -1,0 +1,11 @@
+=== 臂均值(k 轮 run 级均值;括号=轮间 sd) · runs/sweqa-r5-astropy-k10 ===
+  oh                    76.15 (1.10)  k=10
+  oh-aoci               77.35 (1.70)  k=10
+  oh-cg                 76.61 (0.76)  k=10
+
+=== run 级精确置换(两侧;k=10v10 -> C(20,10)=184,756) ===
+  H1_aoci-bare             oh-aoci − oh =  +1.20   p=0.0923
+  H2_aoci-cg               oh-aoci − oh-cg =  +0.74   p=0.2595
+  H3_cg-bare               oh-cg − oh =  +0.45   p=0.3252
+
+wrote runs/sweqa-r5-astropy-k10/runlevel-stats.json

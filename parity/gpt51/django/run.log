@@ -1,0 +1,125 @@
+=== run.py specs/sweqa-r5p-gpt51-django-k1.json at 2026-10-15T18:20:02Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name django --questions benchmarks/swe-qa/django.jsonl --condition oh --out runs/sweqa-r5p-gpt51-django-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/django --profile closeai-gpt51 --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=closeai-gpt51 model=gpt-5.1-2025-11-13 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=14fc2e97036f
+[1/48] 10.1s steps=2 calls=2 files=1+0m map=0/0c in=20086 out=266 status=finished   
+[2/48] 9.5s steps=2 calls=2 files=1+0m map=0/0c in=20278 out=198 status=finished   
+[3/48] 9.5s steps=2 calls=2 files=1+0m map=0/0c in=18242 out=179 status=finished   
+[4/48] 11.3s steps=2 calls=2 files=1+0m map=0/0c in=23439 out=284 status=finished   
+[5/48] 11.1s steps=2 calls=2 files=1+0m map=0/0c in=22074 out=256 status=finished   
+[6/48] 15.2s steps=3 calls=3 files=1+0m map=0/0c in=24273 out=297 status=finished   
+[7/48] 16.0s steps=2 calls=2 files=1+0m map=0/0c in=22108 out=520 status=finished   
+[8/48] 17.0s steps=4 calls=4 files=1+0m map=0/0c in=32945 out=278 status=finished   
+[9/48] 18.7s steps=4 calls=4 files=1+0m map=0/0c in=34689 out=501 status=finished   
+[10/48] 19.9s steps=4 calls=5 files=2+0m map=0/0c in=35851 out=487 status=finished   
+[11/48] 20.4s steps=5 calls=5 files=1+0m map=0/0c in=41844 out=362 status=finished   
+[12/48] 12.2s steps=2 calls=3 files=2+0m map=0/0c in=25565 out=323 status=finished   
+[13/48] 23.6s steps=5 calls=5 files=1+0m map=0/0c in=39810 out=516 status=finished   
+[14/48] 24.6s steps=6 calls=6 files=3+0m map=0/0c in=48081 out=451 status=finished   
+[15/48] 15.0s steps=3 calls=3 files=1+0m map=0/0c in=24198 out=368 status=finished   
+[16/48] 25.8s steps=4 calls=4 files=2+0m map=0/0c in=33675 out=377 status=finished   
+[17/48] 15.0s steps=3 calls=3 files=1+0m map=0/0c in=24380 out=361 status=finished   
+[18/48] 10.9s steps=2 calls=3 files=2+0m map=0/0c in=27849 out=261 status=finished   
+[19/48] 29.1s steps=5 calls=5 files=3+0m map=0/0c in=67355 out=1096 status=finished   
+[20/48] 12.3s steps=2 calls=2 files=1+0m map=0/0c in=17784 out=394 status=finished   
+[21/48] 10.1s steps=2 calls=2 files=1+0m map=0/0c in=18696 out=239 status=finished   
+[22/48] 31.7s steps=7 calls=7 files=2+0m map=0/0c in=58227 out=628 status=finished   
+[23/48] 22.3s steps=6 calls=6 files=1+0m map=0/0c in=60255 out=465 status=finished   
+[24/48] 14.4s steps=3 calls=3 files=1+0m map=0/0c in=28997 out=355 status=finished   
+[25/48] 13.5s steps=2 calls=2 files=1+0m map=0/0c in=22382 out=506 status=finished   
+[26/48] 14.7s steps=2 calls=3 files=2+0m map=0/0c in=19092 out=496 status=finished   
+[27/48] 11.7s steps=2 calls=2 files=1+0m map=0/0c in=19169 out=329 status=finished   
+[28/48] 26.6s steps=6 calls=7 files=2+0m map=0/0c in=55039 out=701 status=finished   
+[29/48] 10.8s steps=2 calls=2 files=1+0m map=0/0c in=18316 out=273 status=finished   
+[30/48] 26.3s steps=7 calls=7 files=2+0m map=0/0c in=75011 out=557 status=finished   
+[31/48] 18.4s steps=4 calls=4 files=2+0m map=0/0c in=41417 out=467 status=finished   
+[32/48] 28.8s steps=6 calls=8 files=2+0m map=0/0c in=67366 out=571 status=finished   
+[33/48] 13.3s steps=2 calls=3 files=2+0m map=0/0c in=24603 out=477 status=finished   
+[34/48] 19.8s steps=4 calls=4 files=1+0m map=0/0c in=34585 out=664 status=finished   
+[35/48] 17.8s steps=4 calls=4 files=2+0m map=0/0c in=31802 out=407 status=finished   
+[36/48] 24.5s steps=5 calls=5 files=1+0m map=0/0c in=40677 out=660 status=finished   
+[37/48] 17.9s steps=4 calls=4 files=1+0m map=0/0c in=32884 out=369 status=finished   
+[38/48] 16.9s steps=3 calls=3 files=1+0m map=0/0c in=27522 out=199 status=finished   
+[39/48] 20.6s steps=6 calls=6 files=1+0m map=0/0c in=46474 out=423 status=finished   
+[40/48] 15.2s steps=2 calls=2 files=1+0m map=0/0c in=18444 out=730 status=finished   
+[41/48] 18.9s steps=5 calls=5 files=1+0m map=0/0c in=42760 out=275 status=finished   
+[42/48] 34.5s steps=3 calls=3 files=1+0m map=0/0c in=29424 out=385 status=finished   
+[43/48] 19.4s steps=4 calls=4 files=1+0m map=0/0c in=31736 out=514 status=finished   
+[44/48] 30.4s steps=7 calls=7 files=3+0m map=0/0c in=75983 out=457 status=finished   
+[45/48] 47.4s steps=2 calls=2 files=1+0m map=0/0c in=18579 out=191 status=finished   
+[46/48] 42.0s steps=6 calls=6 files=2+0m map=0/0c in=45932 out=426 status=finished   
+[47/48] 44.8s steps=10 calls=16 files=7+0m map=0/0c in=168818 out=1332 status=finished forced   
+[48/48] 64.2s steps=10 calls=10 files=1+0m map=0/0c in=81416 out=608 status=finished forced  CONTAM=1 
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-gpt51-django-k1 --json runs/sweqa-r5p-gpt51-django-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-gpt51-django-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     1      2     0     0     0    0
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 1 probes (jail: ENOENT) · 0 __pycache__-only workspaces · 2 forced answers · 0 refusal/garble re-runs · 0 degenerate · 0 garbled-final · 0 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-gpt51-django-k1/answers-oh.jsonl --out runs/sweqa-r5p-gpt51-django-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['gpt-5.1-2025-11-13']
+[1/48] total=82 votes=5 
+[2/48] total=58 votes=5 
+[3/48] total=83 votes=5 
+[4/48] total=67 votes=5 
+[5/48] total=67 votes=5 
+[6/48] total=80 votes=5 
+[7/48] total=84 votes=5 
+[8/48] total=71 votes=5 
+[9/48] total=58 votes=5 
+[10/48] total=76 votes=5 
+[11/48] total=68 votes=5 
+[12/48] total=74 votes=5 
+[13/48] total=85 votes=5 
+[14/48] total=70 votes=5 
+[15/48] total=73 votes=5 
+[16/48] total=77 votes=5 
+[17/48] total=72 votes=5 
+[18/48] total=71 votes=5 
+[19/48] total=90 votes=5 
+[20/48] total=82 votes=5 
+[21/48] total=72 votes=5 
+[22/48] total=70 votes=5 
+[23/48] total=84 votes=5 
+[24/48] total=88 votes=5 
+[25/48] total=62 votes=5 
+[26/48] total=73 votes=5 
+[27/48] total=45 votes=5 
+[28/48] total=58 votes=5 
+[29/48] total=65 votes=5 
+[30/48] total=76 votes=5 
+[31/48] total=44 votes=5 
+[32/48] total=72 votes=5 
+[33/48] total=81 votes=5 
+[34/48] total=53 votes=5 
+[35/48] total=71 votes=5 
+[36/48] total=82 votes=5 
+[37/48] total=31 votes=5 
+[38/48] total=55 votes=5 
+[39/48] total=70 votes=5 
+[40/48] total=71 votes=5 
+[41/48] total=68 votes=5 
+[42/48] total=72 votes=5 
+[43/48] total=72 votes=5 
+[44/48] total=81 votes=5 
+[45/48] total=90 votes=5 
+[46/48] total=81 votes=5 
+[47/48] total=70 votes=5 
+[48/48] total=70 votes=5 
+run: runs/sweqa-r5p-gpt51-django-k1
+manifest: harness=None created=2026-10-15T18:20:08Z repo=django commit=14fc2e97036f index_entries=784
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   71.1  11.9   70.7   77.6   76.0   60.3 |   4.0   4.2   1.5   0.0 |    38336    10157     447     999    n/a   20.9 |   0.42   0.00   0.07
+dims: oh=13.9/11.1/17.7/15.6/12.8
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=1,840,132 out=21,479
+
+wrote runs/sweqa-r5p-gpt51-django-k1/analysis.json
+

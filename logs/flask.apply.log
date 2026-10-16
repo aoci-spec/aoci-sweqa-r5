@@ -1,0 +1,6 @@
+loaded 83 authored entries from /root/aoci-eval/repos-deepswe/flask-r5/aoci.code.txt
+batch 1: submitted 26 entries, status=applied remaining=54 applied_total=26 0s
+batch 2: submitted 27 entries, status=applied remaining=27 applied_total=53 1s
+batch 3: submitted 27 entries, status=applied remaining=0 applied_total=80 1s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=80 findings=[('code_skipped', 'tests/test_apps/blueprintapp/apps/__init__.py'), ('code_skipped', 'tests/test_apps/cliapp/__init__.py'), ('code_skipped', 'tests/test_apps/cliapp/inner1/inner2/__init__.py')]

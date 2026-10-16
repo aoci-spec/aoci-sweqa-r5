@@ -1,0 +1,14 @@
+run: runs/sweqa-r5p-gpt51-pytest-k1
+manifest: harness=None created=2026-10-15T17:42:13Z repo=pytest commit=5989efe3efec index_entries=0
+  arm oh: kind=oh model=gpt-5.1-2025-11-13 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   74.0  10.1   70.6   77.1   71.7   76.5 |   4.3   4.3   1.2   0.0 |    42132     9707     425     859    n/a   18.0 |   0.59   0.00   0.12
+dims: oh=14.6/12.1/18.1/15.7/13.5
+judge vote SD (mean over questions): oh=1.1
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=2,022,327 out=20,396
+
+wrote runs/sweqa-r5p-gpt51-pytest-k1/analysis.json

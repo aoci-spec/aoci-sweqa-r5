@@ -1,0 +1,12 @@
+loaded 233 authored entries from /root/aoci-eval/repos-deepswe/xarray-r5/aoci.code.txt
+batch 1: submitted 26 entries, status=applied remaining=196 applied_total=26 6s
+batch 2: submitted 26 entries, status=applied remaining=170 applied_total=52 7s
+batch 3: submitted 27 entries, status=applied remaining=143 applied_total=79 8s
+batch 4: submitted 27 entries, status=applied remaining=116 applied_total=106 9s
+batch 5: submitted 27 entries, status=applied remaining=89 applied_total=133 11s
+batch 6: submitted 26 entries, status=applied remaining=63 applied_total=159 12s
+batch 7: submitted 26 entries, status=applied remaining=37 applied_total=185 13s
+batch 8: submitted 26 entries, status=applied remaining=11 applied_total=211 14s
+batch 9: submitted 11 entries, status=applied remaining=0 applied_total=222 15s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=222 findings=[('code_skipped', 'properties/__init__.py'), ('code_skipped', 'xarray/coding/__init__.py'), ('code_skipped', 'xarray/compat/__init__.py'), ('code_skipped', 'xarray/computation/__init__.py'), ('code_skipped', 'xarray/core/__init__.py')]

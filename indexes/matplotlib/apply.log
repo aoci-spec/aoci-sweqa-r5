@@ -1,0 +1,45 @@
+loaded 991 authored entries from /root/aoci-eval/repos-deepswe/matplotlib-r5/aoci.code.txt
+batch 1: submitted 26 entries, status=applied remaining=958 applied_total=26 5s
+batch 2: submitted 23 entries, status=applied remaining=935 applied_total=49 7s
+batch 3: submitted 22 entries, status=applied remaining=913 applied_total=71 9s
+batch 4: submitted 23 entries, status=applied remaining=890 applied_total=94 12s
+batch 5: submitted 22 entries, status=applied remaining=868 applied_total=116 14s
+batch 6: submitted 21 entries, status=applied remaining=847 applied_total=137 16s
+batch 7: submitted 21 entries, status=applied remaining=826 applied_total=158 18s
+batch 8: submitted 22 entries, status=applied remaining=804 applied_total=180 20s
+batch 9: submitted 22 entries, status=applied remaining=782 applied_total=202 23s
+batch 10: submitted 24 entries, status=applied remaining=758 applied_total=226 25s
+batch 11: submitted 24 entries, status=applied remaining=734 applied_total=250 27s
+batch 12: submitted 24 entries, status=applied remaining=710 applied_total=274 29s
+batch 13: submitted 23 entries, status=applied remaining=687 applied_total=297 31s
+batch 14: submitted 23 entries, status=applied remaining=664 applied_total=320 34s
+batch 15: submitted 23 entries, status=applied remaining=641 applied_total=343 36s
+batch 16: submitted 23 entries, status=applied remaining=618 applied_total=366 38s
+batch 17: submitted 22 entries, status=applied remaining=596 applied_total=388 40s
+batch 18: submitted 21 entries, status=applied remaining=575 applied_total=409 43s
+batch 19: submitted 21 entries, status=applied remaining=554 applied_total=430 45s
+batch 20: submitted 21 entries, status=applied remaining=533 applied_total=451 48s
+batch 21: submitted 23 entries, status=applied remaining=510 applied_total=474 51s
+batch 22: submitted 23 entries, status=applied remaining=487 applied_total=497 55s
+batch 23: submitted 22 entries, status=applied remaining=465 applied_total=519 57s
+batch 24: submitted 24 entries, status=applied remaining=441 applied_total=543 62s
+batch 25: submitted 25 entries, status=applied remaining=416 applied_total=568 65s
+batch 26: submitted 23 entries, status=applied remaining=393 applied_total=591 69s
+batch 27: submitted 25 entries, status=applied remaining=368 applied_total=616 72s
+batch 28: submitted 26 entries, status=applied remaining=342 applied_total=642 76s
+batch 29: submitted 25 entries, status=applied remaining=317 applied_total=667 79s
+batch 30: submitted 24 entries, status=applied remaining=293 applied_total=691 83s
+batch 31: submitted 27 entries, status=applied remaining=266 applied_total=718 87s
+batch 32: submitted 27 entries, status=applied remaining=239 applied_total=745 90s
+batch 33: submitted 26 entries, status=applied remaining=213 applied_total=771 94s
+batch 34: submitted 26 entries, status=applied remaining=187 applied_total=797 98s
+batch 35: submitted 25 entries, status=applied remaining=162 applied_total=822 101s
+batch 36: submitted 25 entries, status=applied remaining=137 applied_total=847 105s
+batch 37: submitted 25 entries, status=applied remaining=112 applied_total=872 109s
+batch 38: submitted 25 entries, status=applied remaining=87 applied_total=897 113s
+batch 39: submitted 26 entries, status=applied remaining=61 applied_total=923 116s
+batch 40: submitted 25 entries, status=applied remaining=36 applied_total=948 120s
+batch 41: submitted 24 entries, status=applied remaining=12 applied_total=972 123s
+batch 42: submitted 12 entries, status=applied remaining=0 applied_total=984 127s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=984 findings=[('code_skipped', 'doc/sphinxext/__init__.py'), ('code_skipped', 'lib/matplotlib/_image.pyi'), ('code_skipped', 'lib/matplotlib/_qhull.pyi'), ('code_skipped', 'lib/matplotlib/backends/_backend_agg.pyi'), ('code_skipped', 'lib/matplotlib/backends/_macosx.pyi')]

@@ -1,0 +1,18 @@
+loaded 384 authored entries from /root/aoci-eval/repos-deepswe/reflex-r5/aoci.code.txt
+batch 1: submitted 27 entries, status=applied remaining=349 applied_total=27 1s
+batch 2: submitted 25 entries, status=applied remaining=324 applied_total=52 2s
+batch 3: submitted 25 entries, status=applied remaining=299 applied_total=77 3s
+batch 4: submitted 23 entries, status=applied remaining=276 applied_total=100 3s
+batch 5: submitted 22 entries, status=applied remaining=254 applied_total=122 4s
+batch 6: submitted 23 entries, status=applied remaining=231 applied_total=145 5s
+batch 7: submitted 25 entries, status=applied remaining=206 applied_total=170 5s
+batch 8: submitted 27 entries, status=applied remaining=179 applied_total=197 6s
+batch 9: submitted 27 entries, status=applied remaining=152 applied_total=224 7s
+batch 10: submitted 27 entries, status=applied remaining=125 applied_total=251 7s
+batch 11: submitted 26 entries, status=applied remaining=99 applied_total=277 8s
+batch 12: submitted 25 entries, status=applied remaining=74 applied_total=302 9s
+batch 13: submitted 24 entries, status=applied remaining=50 applied_total=326 10s
+batch 14: submitted 24 entries, status=applied remaining=26 applied_total=350 11s
+batch 15: submitted 26 entries, status=applied remaining=0 applied_total=376 12s
+maintain after final batch: status applied aligned True
+verify: aligned=True result=aligned entries=376 findings=[('code_skipped', 'reflex/.templates/apps/blank/code/__init__.py'), ('code_skipped', 'tests/benchmarks/__init__.py'), ('code_skipped', 'tests/units/components/core/__init__.py'), ('code_skipped', 'tests/units/components/forms/__init__.py'), ('code_skipped', 'tests/units/components/markdown/__init__.py')]

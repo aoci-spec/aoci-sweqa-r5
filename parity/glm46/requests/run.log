@@ -1,0 +1,137 @@
+=== run.py specs/sweqa-r5p-glm46-requests-k1.json at 2026-10-15T17:37:59Z harness=None
++ /root/aoci-eval/.venv-oh/bin/python3 /root/aoci-eval/harness/openhands_ask.py --repo-name requests --questions benchmarks/swe-qa/requests.jsonl --condition oh --out runs/sweqa-r5p-glm46-requests-k1/answers-oh.jsonl --workers 16 --repo-root repos-r5/requests --profile openrouter-glm46-novita --max-iterations 10 --temperature 0.0 --max-output-tokens 12288
+condition=oh profile=openrouter-glm46-novita model=z-ai/glm-4.6 sdk=1.1.0 workers=16 max_iterations=10 questions=48 done=0 todo=48 commit=46e939b5525d
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[1/48] 33.4s steps=2 calls=2 files=1+0m map=0/0c in=20675 out=812 status=finished   
+[2/48] 43.7s steps=5 calls=5 files=2+0m map=0/0c in=43311 out=684 status=finished   
+[3/48] 45.9s steps=4 calls=4 files=1+0m map=0/0c in=35655 out=902 status=finished   
+/root/aoci-eval/.venv-oh/lib/python3.14/site-packages/openhands/sdk/llm/utils/telemetry.py:212: UserWarning: Cost calculation failed: This model isn't mapped yet. model=z-ai/glm-4.6, custom_llm_provider=openai. Add it here - https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json.
+  warnings.warn(f"Cost calculation failed: {e}")
+[4/48] 54.6s steps=5 calls=5 files=2+0m map=0/0c in=40820 out=1109 status=finished   
+[5/48] 56.3s steps=5 calls=5 files=3+0m map=0/0c in=46750 out=1142 status=finished   
+[6/48] 62.1s steps=5 calls=5 files=2+0m map=0/0c in=45873 out=1530 status=finished   
+[7/48] 61.9s steps=7 calls=7 files=4+0m map=0/0c in=69232 out=1102 status=finished   
+[8/48] 69.8s steps=8 calls=8 files=4+0m map=0/0c in=110184 out=1260 status=finished  DIRTY  
+[9/48] 72.8s steps=5 calls=5 files=2+0m map=0/0c in=42618 out=1828 status=finished  DIRTY  
+[10/48] 78.9s steps=9 calls=9 files=8+0m map=0/0c in=117074 out=1314 status=finished  DIRTY  
+[11/48] 81.4s steps=9 calls=9 files=3+0m map=0/0c in=80351 out=1302 status=finished  DIRTY  
+[12/48] 84.9s steps=9 calls=9 files=3+0m map=0/0c in=123640 out=1638 status=finished  DIRTY  
+[13/48] 93.6s steps=10 calls=10 files=2+0m map=0/0c in=130830 out=1844 status=finished forced  DIRTY  
+[14/48] 97.7s steps=10 calls=10 files=3+0m map=0/0c in=169744 out=1734 status=finished forced  DIRTY  
+[15/48] 32.1s steps=3 calls=3 files=1+0m map=0/0c in=30166 out=467 status=finished   
+[16/48] 32.7s steps=2 calls=2 files=1+0m map=0/0c in=19870 out=696 status=finished   
+[17/48] 115.4s steps=10 calls=10 files=4+0m map=0/0c in=156253 out=2561 status=finished forced  DIRTY  
+[18/48] 118.5s steps=10 calls=10 files=4+0m map=0/0c in=156634 out=2572 status=finished forced  DIRTY  
+[19/48] 52.0s steps=3 calls=3 files=1+0m map=0/0c in=28503 out=1186 status=finished   
+[20/48] 68.6s steps=7 calls=7 files=0+0m map=0/0c in=58670 out=1269 status=finished  DIRTY CONTAM=4 
+[21/48] 49.0s steps=4 calls=4 files=3+0m map=0/0c in=35006 out=1146 status=finished   
+[22/48] 72.2s steps=8 calls=8 files=0+0m map=0/0c in=69797 out=1285 status=finished  DIRTY CONTAM=1 
+[23/48] 33.3s steps=3 calls=3 files=1+0m map=0/0c in=32243 out=673 status=finished   
+[24/48] 105.2s steps=10 calls=10 files=1+0m map=0/0c in=139521 out=2074 status=finished forced  DIRTY  
+[25/48] 42.4s steps=3 calls=3 files=1+0m map=0/0c in=32157 out=962 status=finished   
+[26/48] 85.3s steps=10 calls=10 files=0+0m map=0/0c in=100664 out=1346 status=finished forced  DIRTY CONTAM=2 
+[27/48] 31.4s steps=3 calls=3 files=1+0m map=0/0c in=25445 out=666 status=finished   
+[28/48] 90.5s steps=10 calls=10 files=0+0m map=0/0c in=78970 out=1407 status=finished forced  DIRTY CONTAM=2 
+[29/48] 68.6s steps=7 calls=7 files=1+0m map=0/0c in=62925 out=1176 status=finished   
+[30/48] 38.8s steps=5 calls=5 files=2+0m map=0/0c in=46911 out=506 status=finished   
+[31/48] 65.6s steps=6 calls=6 files=3+0m map=0/0c in=51709 out=1233 status=finished   
+[32/48] 46.6s steps=2 calls=2 files=1+0m map=0/0c in=23869 out=1296 status=finished   
+[33/48] 28.7s steps=3 calls=3 files=1+0m map=0/0c in=25549 out=640 status=finished   
+[34/48] 47.0s steps=7 calls=7 files=2+0m map=0/0c in=54626 out=770 status=finished   
+[35/48] 20.0s steps=2 calls=2 files=1+0m map=0/0c in=19825 out=282 status=finished   
+[36/48] 46.0s steps=2 calls=2 files=1+0m map=0/0c in=19825 out=1231 status=finished   
+[37/48] 51.7s steps=5 calls=5 files=2+0m map=0/0c in=39421 out=1183 status=finished   
+[38/48] 49.5s steps=3 calls=3 files=2+0m map=0/0c in=31995 out=1197 status=finished   
+[39/48] 58.6s steps=6 calls=6 files=2+0m map=0/0c in=74835 out=1104 status=finished   
+[40/48] 48.5s steps=3 calls=3 files=1+0m map=0/0c in=32189 out=1175 status=finished   
+[41/48] 51.5s steps=8 calls=8 files=3+0m map=0/0c in=60687 out=537 status=finished   
+[42/48] 40.5s steps=4 calls=7 files=2+0m map=0/0c in=58451 out=746 status=finished   
+[43/48] 70.6s steps=6 calls=6 files=2+0m map=0/0c in=52153 out=1374 status=finished   
+[44/48] 55.7s steps=6 calls=6 files=2+0m map=0/0c in=49297 out=1012 status=finished   
+[45/48] 99.9s steps=10 calls=10 files=3+0m map=0/0c in=142210 out=1907 status=finished forced   
+[46/48] 106.3s steps=10 calls=10 files=4+0m map=0/0c in=159374 out=2277 status=finished forced   
+[47/48] 282.5s steps=10 calls=10 files=1+0m map=0/0c in=120636 out=1931 status=finished forced  DIRTY  
+[48/48] 285.5s steps=10 calls=10 files=1+0m map=0/0c in=130375 out=1822 status=finished forced  DIRTY  
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/accept.py runs/sweqa-r5p-glm46-requests-k1 --json runs/sweqa-r5p-glm46-requests-k1/acceptance.json
+acceptance gate · runs/sweqa-r5p-glm46-requests-k1 · 1 passes × 48 questions · artefact — 
+pass                         n  err miss leak net net!   deliv dirty probe forced retry degen  garb 0src
+ oh                         48    0    0    0   0    0       —     0     9     11     0     0     0    4
+
+totals: 48 answers · 0 errors · 0 missing · 0 leaks · 0 network attempts (0 returned data) · 0 delivery failures · 0 dirty workspaces
+soft: 9 probes (jail: ENOENT) · 16 __pycache__-only workspaces · 11 forced answers · 0 refusal/garble re-runs · 0 degenerate · 0 garbled-final · 4 zero-source
+
+ACCEPTED: every hard check passes; judging may proceed.
++ /root/aoci-eval/.venv/bin/python3 /root/aoci-eval/harness/judge.py --answers runs/sweqa-r5p-glm46-requests-k1/answers-oh.jsonl --out runs/sweqa-r5p-glm46-requests-k1/scores-oh.jsonl --votes 5 --workers 48 --profile gptnb-judge
+judge profile=gptnb-judge model=claude-sonnet-4-5 votes=5 workers=48 answers=48 valid=48 scored=0 todo=48 answer_models=['z-ai/glm-4.6']
+[1/48] total=96 votes=5 
+[2/48] total=72 votes=5 
+[3/48] total=81 votes=5 
+[4/48] total=96 votes=5 
+[5/48] total=85 votes=5 
+[6/48] total=95 votes=5 
+[7/48] total=95 votes=5 
+[8/48] total=88 votes=5 
+[9/48] total=84 votes=5 
+[10/48] total=90 votes=5 
+[11/48] total=77 votes=5 
+[12/48] total=80 votes=5 
+[13/48] total=60 votes=5 
+[14/48] total=81 votes=5 
+[15/48] total=72 votes=5 
+[16/48] total=92 votes=5 
+[17/48] total=88 votes=5 
+[18/48] total=95 votes=5 
+[19/48] total=85 votes=5 
+[20/48] total=90 votes=5 
+[21/48] total=82 votes=5 
+[22/48] total=91 votes=5 
+[23/48] total=92 votes=5 
+[24/48] total=86 votes=5 
+[25/48] total=79 votes=5 
+[26/48] total=77 votes=5 
+[27/48] total=68 votes=5 
+[28/48] total=95 votes=5 
+[29/48] total=71 votes=5 
+[30/48] total=75 votes=5 
+[31/48] total=95 votes=5 
+[32/48] total=95 votes=5 
+[33/48] total=92 votes=5 
+[34/48] total=90 votes=5 
+[35/48] total=92 votes=5 
+[36/48] total=90 votes=5 
+[37/48] total=90 votes=5 
+[38/48] total=75 votes=5 
+[39/48] total=89 votes=5 
+[40/48] total=95 votes=5 
+[41/48] total=91 votes=5 
+[42/48] total=88 votes=5 
+[43/48] total=87 votes=5 
+[44/48] total=89 votes=5 
+[45/48] total=85 votes=5 
+[46/48] total=91 votes=5 
+[47/48] total=92 votes=5 
+[48/48] total=95 votes=5 
+run: runs/sweqa-r5p-glm46-requests-k1
+manifest: harness=None created=2026-10-15T17:38:07Z repo=requests commit=46e939b5525d index_entries=0
+  arm oh: kind=oh model=z-ai/glm-4.6 params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  judge oh: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh              48   0   0 |   86.2   8.4   85.3   87.7   88.7   83.5 |   6.1   6.2   2.0   0.0 |    68698    11828    1248    1484    n/a   71.4 |   0.80   0.00   0.13
+dims: oh=17.1/15.5/19.2/17.8/16.6
+judge vote SD (mean over questions): oh=0.6
+map tools: oh=0.0 calls/0ch (used on 0% of questions)
+totals: oh: in=3,297,518 out=59,910
+
+wrote runs/sweqa-r5p-glm46-requests-k1/analysis.json
+

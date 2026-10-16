@@ -1,0 +1,152 @@
+[parity] glm46 start 01:37:59
+[parity] gpt51 start 01:37:59
+[orch] r5 main orchestrator start 01:37:59
+[orch] sweqa-r5p-glm46-requests-k1 attempt 1 start 01:37:59
+[orch] sweqa-r5p-gpt51-requests-k1 attempt 1 start 01:37:59
+[orch] started requests 01:38:59
+[orch] sweqa-r5-requests-k10 attempt 1 start 01:38:59
+[orch] sweqa-r5p-gpt51-requests-k1 attempt 1 rc=0 01:40:00
+[orch] sweqa-r5p-gpt51-flask-k1 attempt 1 start 01:40:00
+[orch] sweqa-r5p-gpt51-flask-k1 attempt 1 rc=0 01:42:09
+[orch] sweqa-r5p-gpt51-pytest-k1 attempt 1 start 01:42:09
+[orch] sweqa-r5p-gpt51-pytest-k1 attempt 1 rc=0 01:43:59
+[orch] sweqa-r5p-gpt51-xarray-k1 attempt 1 start 01:43:59
+[orch] sweqa-r5p-glm46-requests-k1 attempt 1 rc=0 01:44:12
+[orch] sweqa-r5p-glm46-flask-k1 attempt 1 start 01:44:12
+[orch] sweqa-r5p-gpt51-xarray-k1 attempt 1 rc=0 01:45:55
+[orch] sweqa-r5p-gpt51-reflex-k1 attempt 1 start 01:45:55
+[orch] sweqa-r5p-glm46-flask-k1 attempt 1 rc=0 01:51:56
+[orch] sweqa-r5p-glm46-pytest-k1 attempt 1 start 01:51:56
+[orch] sweqa-r5p-gpt51-reflex-k1 attempt 1 rc=0 01:57:39
+[orch] sweqa-r5p-gpt51-streamlink-k1 attempt 1 start 01:57:39
+[orch] sweqa-r5p-glm46-pytest-k1 attempt 1 rc=0 01:57:42
+[orch] sweqa-r5p-glm46-xarray-k1 attempt 1 start 01:57:42
+[orch] sweqa-r5p-gpt51-streamlink-k1 attempt 1 rc=0 02:00:44
+[orch] sweqa-r5p-gpt51-sqlfluff-k1 attempt 1 start 02:00:44
+[orch] sweqa-r5p-gpt51-sqlfluff-k1 attempt 1 rc=0 02:02:47
+[orch] sweqa-r5p-gpt51-conan-k1 attempt 1 start 02:02:47
+[orch] sweqa-r5-requests-k10 attempt 1 rc=0 02:03:06
+[orch] sweqa-r5p-glm46-xarray-k1 attempt 1 rc=0 02:03:08
+[orch] sweqa-r5p-glm46-reflex-k1 attempt 1 start 02:03:08
+[orch] sweqa-r5p-gpt51-conan-k1 attempt 1 rc=0 02:04:42
+[orch] sweqa-r5p-gpt51-sphinx-k1 attempt 1 start 02:04:42
+[orch] sweqa-r5p-gpt51-sphinx-k1 attempt 1 rc=0 02:07:48
+[orch] sweqa-r5p-gpt51-astropy-k1 attempt 1 start 02:07:48
+[orch] started sympy 02:07:59
+[orch] sweqa-r5-sympy-k10 attempt 1 start 02:07:59
+[orch] sweqa-r5p-gpt51-astropy-k1 attempt 1 rc=0 02:10:53
+[orch] sweqa-r5p-gpt51-scikit-learn-k1 attempt 1 start 02:10:53
+[orch] sweqa-r5p-glm46-reflex-k1 attempt 1 rc=0 02:11:04
+[orch] sweqa-r5p-glm46-streamlink-k1 attempt 1 start 02:11:04
+[orch] sweqa-r5p-gpt51-scikit-learn-k1 attempt 1 rc=0 02:13:04
+[orch] sweqa-r5p-gpt51-matplotlib-k1 attempt 1 start 02:13:04
+[orch] sweqa-r5p-gpt51-matplotlib-k1 attempt 1 rc=0 02:15:49
+[orch] sweqa-r5p-gpt51-sympy-k1 attempt 1 start 02:15:49
+[orch] sweqa-r5p-glm46-streamlink-k1 attempt 1 rc=0 02:16:13
+[orch] sweqa-r5p-glm46-sqlfluff-k1 attempt 1 start 02:16:13
+[orch] sweqa-r5p-gpt51-sympy-k1 attempt 1 rc=0 02:17:59
+[orch] sweqa-r5p-gpt51-pylint-k1 attempt 1 start 02:17:59
+[orch] sweqa-r5p-gpt51-pylint-k1 attempt 1 rc=0 02:20:02
+[orch] sweqa-r5p-gpt51-django-k1 attempt 1 start 02:20:02
+[orch] sweqa-r5p-gpt51-django-k1 attempt 1 rc=0 02:22:33
+[parity] gpt51 ALL DONE 02:22:33
+[orch] sweqa-r5p-glm46-sqlfluff-k1 attempt 1 rc=0 02:23:03
+[orch] sweqa-r5p-glm46-conan-k1 attempt 1 start 02:23:03
+[orch] started django 02:24:59
+[orch] sweqa-r5-django-k10 attempt 1 start 02:24:59
+[orch] sweqa-r5p-glm46-conan-k1 attempt 1 rc=0 02:28:10
+[orch] sweqa-r5p-glm46-sphinx-k1 attempt 1 start 02:28:10
+[orch] 02:4x chunk_tokens 7000→24000 on all repos-r5; sympy oh-aoci passes 1-6 superseded; sympy+django relaunched
+[orch] sweqa-r5-sympy-k10 attempt 1 start 02:34:48
+[orch] sweqa-r5-django-k10 attempt 1 start 02:34:48
+[orch] sweqa-r5p-glm46-sphinx-k1 attempt 1 rc=0 02:34:58
+[orch] sweqa-r5p-glm46-astropy-k1 attempt 1 start 02:34:58
+[orch] sweqa-r5p-glm46-astropy-k1 attempt 1 rc=0 02:50:53
+[orch] sweqa-r5p-glm46-scikit-learn-k1 attempt 1 start 02:50:53
+[orch] sweqa-r5p-glm46-scikit-learn-k1 attempt 1 rc=0 02:56:43
+[orch] sweqa-r5p-glm46-matplotlib-k1 attempt 1 start 02:56:43
+[orch] sweqa-r5p-glm46-matplotlib-k1 attempt 1 rc=0 03:03:10
+[orch] sweqa-r5p-glm46-sympy-k1 attempt 1 start 03:03:10
+[orch] sweqa-r5p-glm46-sympy-k1 attempt 1 rc=0 03:08:27
+[orch] sweqa-r5p-glm46-pylint-k1 attempt 1 start 03:08:27
+[orch] sweqa-r5-sympy-k10 attempt 1 rc=0 03:15:07
+[orch] started flask 03:16:00
+[orch] sweqa-r5-flask-k10 attempt 1 start 03:16:00
+[orch] sweqa-r5p-glm46-pylint-k1 attempt 1 rc=0 03:18:16
+[orch] sweqa-r5p-glm46-django-k1 attempt 1 start 03:18:16
+[orch] sweqa-r5-django-k10 attempt 1 rc=1 03:26:15
+nothing matched; no change
+[orch] sweqa-r5-django-k10 attempt 2 start 03:26:15
+[orch] sweqa-r5p-glm46-django-k1 attempt 1 rc=0 03:33:44
+[parity] glm46 ALL DONE 03:33:44
+[orch] sweqa-r5-django-k10 attempt 2 rc=0 03:42:55
+[orch] started pytest 03:43:00
+[orch] sweqa-r5-pytest-k10 attempt 1 start 03:43:00
+[orch] sweqa-r5-flask-k10 attempt 1 rc=0 03:48:03
+[orch] started xarray 03:49:00
+[orch] sweqa-r5-xarray-k10 attempt 1 start 03:49:00
+[orch] sweqa-r5-pytest-k10 attempt 1 rc=0 04:14:27
+[orch] started reflex 04:15:01
+[orch] sweqa-r5-reflex-k10 attempt 1 start 04:15:01
+[orch] sweqa-r5-xarray-k10 attempt 1 rc=0 04:17:58
+[orch] started streamlink 04:18:01
+[orch] sweqa-r5-streamlink-k10 attempt 1 start 04:18:01
+[orch] sweqa-r5-reflex-k10 attempt 1 rc=0 04:43:55
+[orch] started sqlfluff 04:44:01
+[orch] sweqa-r5-sqlfluff-k10 attempt 1 start 04:44:01
+[orch] sweqa-r5-streamlink-k10 attempt 1 rc=0 04:46:43
+[orch] started conan 04:47:01
+[orch] sweqa-r5-conan-k10 attempt 1 start 04:47:01
+[orch] sweqa-r5-conan-k10 attempt 1 rc=1 05:05:06
+discarded 1 record(s) from runs/sweqa-r5-conan-k10/answers-oh-cg-10.jsonl (backup runs/sweqa-r5-conan-k10/answers-oh-cg-10.jsonl.discarded-20261016-050506); re-run the spec to re-answer them
+   33 Where does the source version information flow into the range membership validat RuntimeError: Prompt not visible after init
+[orch] sweqa-r5-conan-k10 attempt 2 start 05:05:06
+[orch] sweqa-r5-conan-k10 attempt 2 rc=0 05:41:50
+[orch] started sphinx 05:42:01
+[orch] sweqa-r5-sphinx-k10 attempt 1 start 05:42:01
+[orch] sweqa-r5-sqlfluff-k10 attempt 1 rc=0 05:47:32
+[orch] started astropy 05:48:02
+[orch] sweqa-r5-astropy-k10 attempt 1 start 05:48:02
+[orch] sweqa-r5-sphinx-k10 attempt 1 rc=1 06:22:01
+[orch] started scikit-learn 06:22:02
+[orch] sweqa-r5-scikit-learn-k10 attempt 1 start 06:22:02
+[orch] sweqa-r5-astropy-k10 attempt 1 rc=1 06:22:05
+[orch] started matplotlib 06:23:02
+[orch] sweqa-r5-matplotlib-k10 attempt 1 start 06:23:02
+[orch] sweqa-r5-scikit-learn-k10 attempt 1 rc=1 06:44:44
+[orch] started pylint 06:45:02
+[orch] sweqa-r5-pylint-k10 attempt 1 start 06:45:02
+[orch] sweqa-r5-pylint-k10 attempt 1 rc=1 06:45:06
+[orch] sweqa-r5-pylint-k10 (no-judge) attempt 1 start 06:52:19
+[rejudge] waiter start 06:52:19
+[orch] sweqa-r5-matplotlib-k10 attempt 1 rc=1 07:03:31
+[orch] sweqa-r5-pylint-k10 (no-judge) attempt 1 rc=0 07:21:32
+[orch] all 15 main runs ended 07:22:03
+[rejudge] manual resume start 10:04:57
+[rejudge] started reflex 10:04:57
+[orch] sweqa-r5-reflex-k10 attempt 1 start 10:04:57
+[orch] sweqa-r5-reflex-k10 attempt 1 rc=0 10:06:16
+[rejudge] started sqlfluff 10:06:42
+[orch] sweqa-r5-sqlfluff-k10 attempt 1 start 10:06:42
+[orch] sweqa-r5-sqlfluff-k10 attempt 1 rc=0 10:10:06
+[rejudge] started astropy 10:10:27
+[orch] sweqa-r5-astropy-k10 attempt 1 start 10:10:27
+[rejudge] orchestrator v2 start 10:21:12
+[rejudge] started sphinx 10:21:12
+[orch] sweqa-r5-sphinx-k10 attempt 1 start 10:21:12
+[orch] sweqa-r5-astropy-k10 attempt 1 rc=0 10:32:20
+[rejudge] started scikit-learn 10:32:28
+[orch] sweqa-r5-scikit-learn-k10 attempt 1 start 10:32:28
+[orch] sweqa-r5-sphinx-k10 attempt 1 rc=0 10:36:36
+[rejudge] started matplotlib 10:36:43
+[orch] sweqa-r5-matplotlib-k10 attempt 1 start 10:36:43
+[orch] sweqa-r5-scikit-learn-k10 attempt 1 rc=0 10:50:39
+[rejudge] started pylint 10:50:58
+[orch] sweqa-r5-pylint-k10 attempt 1 start 10:50:58
+[orch] sweqa-r5-matplotlib-k10 attempt 1 rc=0 10:51:55
+[rejudge] started reflex 10:52:13
+[orch] sweqa-r5-reflex-k10 attempt 1 start 10:52:13
+[orch] sweqa-r5-reflex-k10 attempt 1 rc=0 10:53:38
+[orch] sweqa-r5-pylint-k10 attempt 1 rc=0 11:06:21
+[rejudge] ALL RESUMED RUNS ENDED 11:06:28
+[finish] start 11:06:49

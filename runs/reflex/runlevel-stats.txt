@@ -1,0 +1,11 @@
+=== 臂均值(k 轮 run 级均值;括号=轮间 sd) · runs/sweqa-r5-reflex-k10 ===
+  oh                    79.03 (1.03)  k=10
+  oh-aoci               78.59 (1.32)  k=10
+  oh-cg                 79.41 (0.98)  k=10
+
+=== run 级精确置换(两侧;k=10v10 -> C(20,10)=184,756) ===
+  H1_aoci-bare             oh-aoci − oh =  -0.44   p=0.4404
+  H2_aoci-cg               oh-aoci − oh-cg =  -0.82   p=0.1537
+  H3_cg-bare               oh-cg − oh =  +0.38   p=0.4335
+
+wrote runs/sweqa-r5-reflex-k10/runlevel-stats.json

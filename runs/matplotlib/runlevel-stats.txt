@@ -1,0 +1,11 @@
+=== 臂均值(k 轮 run 级均值;括号=轮间 sd) · runs/sweqa-r5-matplotlib-k10 ===
+  oh                    81.25 (0.57)  k=10
+  oh-aoci               83.72 (1.00)  k=10
+  oh-cg                 81.92 (0.34)  k=10
+
+=== run 级精确置换(两侧;k=10v10 -> C(20,10)=184,756) ===
+  H1_aoci-bare             oh-aoci − oh =  +2.47   p=0.0001
+  H2_aoci-cg               oh-aoci − oh-cg =  +1.80   p=0.0002
+  H3_cg-bare               oh-cg − oh =  +0.67   p=0.0077
+
+wrote runs/sweqa-r5-matplotlib-k10/runlevel-stats.json

@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-flask-k10
+manifest: harness=None created=2026-10-15T19:16:05Z repo=flask commit=85c5d93cbd04 index_entries=80
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   74.4  13.9   68.5   81.3   73.8   74.0 |   3.2   4.4   1.6   0.0 |    32858     9172     656     805    n/a    6.1 |   0.69   0.00   0.24
+oh-10           48   0   1 |   75.1  12.5   72.3   81.5   71.7   75.1 |   3.2   4.2   1.5   0.0 |    33597     9162     637     801    n/a    5.5 |   0.65   0.00   0.23
+oh-2            48   0   0 |   75.6  12.2   71.6   81.7   74.2   75.0 |   3.3   4.2   1.6   0.0 |    33260     9020     629     759    n/a    5.6 |   0.67   0.00   0.24
+oh-3            48   0   0 |   74.7  12.4   68.8   82.4   73.5   74.2 |   3.3   4.3   1.8   0.0 |    33256     9038     655     794    n/a    5.8 |   0.70   0.00   0.25
+oh-4            48   0   2 |   74.0  14.2   68.4   81.2   72.2   74.0 |   3.2   4.0   1.7   0.0 |    33278     9074     630     753    n/a    6.6 |   0.70   0.00   0.24
+oh-5            48   0   1 |   74.6  13.5   69.2   80.9   72.5   75.8 |   3.7   4.7   1.7   0.0 |    39603     9448     699     745    n/a    7.2 |   0.71   0.00   0.26
+oh-6            48   0   0 |   74.8  13.9   73.2   80.1   74.4   71.6 |   3.2   4.2   1.6   0.0 |    33235     9193     648     781    n/a    6.1 |   0.70   0.00   0.24
+oh-7            48   0   0 |   75.7  12.0   73.2   81.2   73.9   74.3 |   3.4   4.4   1.7   0.0 |    34422     9074     669     795    n/a    6.5 |   0.71   0.00   0.26
+oh-8            48   0   1 |   74.4  13.5   69.6   79.8   73.3   74.9 |   3.4   4.7   1.6   0.0 |    35517     9196     675     713    n/a    8.5 |   0.69   0.00   0.24
+oh-9            48   0   0 |   73.7  14.0   64.3   81.7   74.3   74.3 |   3.5   4.8   1.6   0.0 |    36096     9262     692     761    n/a    6.5 |   0.66   0.00   0.25
+oh-aoci-1       48   0   0 |   74.0  16.7   64.4   78.2   75.7   77.6 |   2.7   3.0   1.3   5.8 |   177700    28658    1612     787    n/a   12.9 |   0.57   0.56   0.31
+oh-aoci-10      48   0   1 |   75.4  13.4   70.8   81.5   70.8   78.7 |   3.1   3.6   1.5   4.3 |   193412    29289    1714     949    n/a   13.6 |   0.62   0.53   0.29
+oh-aoci-2       48   0   3 |   76.2  14.9   71.4   81.6   74.2   77.4 |   2.8   3.2   1.2   5.5 |   182299    28463    1626     796    n/a   14.5 |   0.61   0.60   0.27
+oh-aoci-3       48   0   0 |   78.2  13.5   69.8   85.0   77.5   80.8 |   2.9   3.2   1.3   5.7 |   183488    28728    1664     837    n/a   13.8 |   0.59   0.58   0.30
+oh-aoci-4       48   0   0 |   76.4  13.3   71.5   79.1   77.5   77.5 |   3.0   3.4   1.4   4.3 |   186247    28753    1657     756    n/a   13.7 |   0.62   0.47   0.29
+oh-aoci-5       48   0   1 |   73.8  16.7   61.5   84.2   72.6   77.0 |   2.7   3.1   1.2   4.0 |   176443    28490    1621     768    n/a   13.1 |   0.61   0.49   0.28
+oh-aoci-6       48   0   1 |   75.8  16.3   68.4   79.0   79.4   76.2 |   3.2   3.6   1.4   5.2 |   192756    29005    1724     938    n/a   14.6 |   0.61   0.51   0.34
+oh-aoci-7       48   0   1 |   75.4  15.1   71.2   80.1   74.2   75.8 |   2.7   3.1   1.2   6.1 |   178591    28669    1674     857    n/a   13.1 |   0.56   0.59   0.27
+oh-aoci-8       48   0   1 |   74.6  14.6   69.8   82.0   70.6   75.8 |   2.9   3.2   1.4   5.4 |   183797    28740    1655     883    n/a   13.0 |   0.62   0.58   0.35
+oh-aoci-9       48   0   0 |   76.9  13.8   73.2   83.2   75.8   75.4 |   2.8   3.1   1.3   4.9 |   179780    28563    1640     844    n/a   13.2 |   0.55   0.48   0.33
+oh-cg-1         48   0   0 |   76.6  14.1   69.6   84.2   75.3   77.3 |   2.3   2.8   0.7   8.3 |    33870    13150     511     861    n/a    4.8 |   0.25   0.78   0.35
+oh-cg-10        48   0   1 |   75.4  16.0   68.6   85.2   73.7   73.9 |   2.5   3.0   0.8   7.9 |    37374    12986     512     835    n/a    5.9 |   0.30   0.73   0.34
+oh-cg-2         48   0   0 |   74.9  13.4   68.6   82.0   77.5   71.3 |   2.2   2.8   0.6   7.9 |    34015    13284     456     873    n/a    4.4 |   0.25   0.75   0.29
+oh-cg-3         48   0   1 |   78.1  11.4   72.8   84.8   79.3   75.4 |   2.3   2.9   0.8   8.0 |    34493    12669     495     880    n/a    5.1 |   0.29   0.75   0.29
+oh-cg-4         48   0   0 |   76.6  11.8   72.3   83.6   76.0   74.6 |   2.4   3.0   1.0   7.8 |    36681    12877     520    1022    n/a    5.1 |   0.39   0.75   0.30
+oh-cg-5         48   0   1 |   76.7  12.8   71.2   81.2   78.8   75.7 |   2.2   2.8   0.5   8.0 |    32948    12909     514     963    n/a    5.3 |   0.25   0.75   0.33
+oh-cg-6         48   0   0 |   75.5  14.0   70.3   82.9   73.1   75.8 |   2.2   2.7   0.7   8.3 |    33825    12947     503     929    n/a    4.9 |   0.32   0.73   0.31
+oh-cg-7         48   0   0 |   76.3  14.4   71.7   82.4   77.5   73.7 |   2.3   2.7   0.8   7.5 |    33789    12771     461     814    n/a    4.6 |   0.33   0.71   0.31
+oh-cg-8         48   0   0 |   75.2  13.8   69.1   80.9   77.6   73.4 |   2.3   2.9   0.7   7.9 |    34362    12786     460     846    n/a    4.6 |   0.33   0.73   0.32
+oh-cg-9         48   0   0 |   77.0  13.2   69.8   83.1   79.6   75.7 |   2.2   2.7   0.6   8.2 |    32769    12731     474     978    n/a    4.5 |   0.26   0.76   0.31
+dims: oh-1=15.0/12.2/18.3/15.5/13.4  oh-10=15.2/12.2/18.3/15.8/13.6  oh-2=15.5/12.4/18.4/15.7/13.7  oh-3=15.2/12.3/18.2/15.5/13.5  oh-4=15.1/11.9/18.2/15.5/13.2  oh-5=15.1/12.0/18.2/15.7/13.5  oh-6=15.1/12.1/18.2/15.8/13.6  oh-7=15.4/12.4/18.4/15.8/13.8  oh-8=15.0/11.9/18.2/15.9/13.5  oh-9=14.9/11.9/18.1/15.6/13.2  oh-aoci-1=14.8/12.2/17.7/15.6/13.6  oh-aoci-10=15.2/12.7/18.1/15.5/13.9  oh-aoci-2=15.4/13.0/18.0/15.6/14.2  oh-aoci-3=16.0/13.2/18.6/15.9/14.5  oh-aoci-4=15.5/12.8/18.4/15.7/14.0  oh-aoci-5=15.2/12.0/17.8/15.5/13.4  oh-aoci-6=15.0/12.8/17.9/15.9/14.1  oh-aoci-7=15.4/12.5/17.8/15.8/13.9  oh-aoci-8=14.9/12.4/17.9/15.7/13.7  oh-aoci-9=15.5/13.0/18.3/15.9/14.2  oh-cg-1=15.5/12.6/18.5/16.0/13.9  oh-cg-10=15.2/12.4/18.0/15.9/13.9  oh-cg-2=15.2/12.2/18.1/15.6/13.6  oh-cg-3=16.0/12.9/18.7/16.1/14.3  oh-cg-4=15.6/12.8/18.3/15.9/14.0  oh-cg-5=15.8/12.7/18.5/15.7/14.0  oh-cg-6=15.3/12.4/18.3/15.9/13.7  oh-cg-7=15.7/12.5/18.5/15.9/13.7  oh-cg-8=15.4/12.4/18.3/15.7/13.5  oh-cg-9=15.8/12.9/18.4/15.8/14.2
+judge vote SD (mean over questions): oh-1=1.2  oh-10=0.9  oh-2=1.0  oh-3=0.7  oh-4=0.8  oh-5=0.8  oh-6=1.1  oh-7=1.1  oh-8=1.0  oh-9=1.2  oh-aoci-1=1.3  oh-aoci-10=1.2  oh-aoci-2=1.1  oh-aoci-3=0.9  oh-aoci-4=1.3  oh-aoci-5=1.0  oh-aoci-6=1.0  oh-aoci-7=1.3  oh-aoci-8=1.1  oh-aoci-9=1.2  oh-cg-1=1.1  oh-cg-10=1.0  oh-cg-2=1.0  oh-cg-3=1.2  oh-cg-4=1.2  oh-cg-5=0.9  oh-cg-6=1.0  oh-cg-7=0.9  oh-cg-8=1.1  oh-cg-9=1.1
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=1.1 calls/1233ch (used on 81% of questions)  oh-aoci-10=1.0 calls/1011ch (used on 77% of questions)  oh-aoci-2=1.2 calls/1189ch (used on 83% of questions)  oh-aoci-3=1.0 calls/1095ch (used on 79% of questions)  oh-aoci-4=1.0 calls/1004ch (used on 73% of questions)  oh-aoci-5=1.0 calls/846ch (used on 75% of questions)  oh-aoci-6=1.1 calls/1248ch (used on 79% of questions)  oh-aoci-7=1.1 calls/1303ch (used on 81% of questions)  oh-aoci-8=1.1 calls/1242ch (used on 85% of questions)  oh-aoci-9=1.0 calls/1129ch (used on 77% of questions)  oh-cg-1=1.3 calls/21412ch (used on 100% of questions)  oh-cg-10=1.2 calls/20206ch (used on 100% of questions)  oh-cg-2=1.3 calls/21805ch (used on 100% of questions)  oh-cg-3=1.2 calls/19081ch (used on 100% of questions)  oh-cg-4=1.2 calls/19325ch (used on 100% of questions)  oh-cg-5=1.2 calls/20390ch (used on 100% of questions)  oh-cg-6=1.2 calls/20144ch (used on 100% of questions)  oh-cg-7=1.2 calls/19855ch (used on 100% of questions)  oh-cg-8=1.2 calls/19751ch (used on 100% of questions)  oh-cg-9=1.2 calls/19774ch (used on 100% of questions)
+totals: oh-1: in=1,577,183 out=31,471  oh-10: in=1,612,669 out=30,564  oh-2: in=1,596,503 out=30,178  oh-3: in=1,596,306 out=31,426  oh-4: in=1,597,363 out=30,250  oh-5: in=1,900,942 out=33,574  oh-6: in=1,595,265 out=31,088  oh-7: in=1,652,263 out=32,100  oh-8: in=1,704,808 out=32,377  oh-9: in=1,732,621 out=33,201  oh-aoci-1: in=8,529,597 out=77,361  oh-aoci-10: in=9,283,763 out=82,262  oh-aoci-2: in=8,750,330 out=78,063  oh-aoci-3: in=8,807,444 out=79,856  oh-aoci-4: in=8,939,843 out=79,534  oh-aoci-5: in=8,469,256 out=77,800  oh-aoci-6: in=9,252,290 out=82,729  oh-aoci-7: in=8,572,363 out=80,339  oh-aoci-8: in=8,822,263 out=79,458  oh-aoci-9: in=8,629,443 out=78,717  oh-cg-1: in=1,625,753 out=24,542  oh-cg-10: in=1,793,929 out=24,579  oh-cg-2: in=1,632,716 out=21,868  oh-cg-3: in=1,655,657 out=23,768  oh-cg-4: in=1,760,674 out=24,943  oh-cg-5: in=1,581,506 out=24,666  oh-cg-6: in=1,623,616 out=24,161  oh-cg-7: in=1,621,868 out=22,142  oh-cg-8: in=1,649,389 out=22,066  oh-cg-9: in=1,572,895 out=22,737
+
+== oh-10 - oh-1: n=48 Δ=+0.7 95%CI=[-1.9,+3.2] median=+0.5 win/tie/loss=24/7/17 sign-test p=0.349 | n for 80% power at this Δ ≈ 1179
+   by category: what: +3.8 [-3.2,+10.3] (n=12)  how: +0.2 [-5.2,+4.7] (n=12)  why: -2.2 [-6.9,+1.6] (n=12)  where: +1.1 [-1.8,+5.2] (n=12)
+   paired efficiency (b−a): input_tokens: +739 [-1924,+3413] (1.02x)  peak_input_tokens: -10 [-295,+267] (1.00x)  output_tokens: -19 [-61,+24] (0.97x)  tool_calls: -0 [-0,+0] (0.96x)  wall_s: -1 [-1,-0] (0.91x)  answer_chars: -4 [-98,+96] (1.00x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/27/10; hit cap: {'oh-1': 0, 'oh-10': 0}
+   -24  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-10          read=['docs/async-await.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py', 'tests/test_async.py'] steps=7 retried=None
+   -23  How does the callback-based modification tracking in the session class that inherits from CallbackDict ensure consistenc
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-10          read=['src/flask/sessions.py'] steps=4 retried=None
+   -23  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-10          read=['src/flask/cli.py', 'src/flask/testing.py'] steps=2 retried=cut_off
+   +24  What is the architectural pattern of the test class that isolates request context lifecycle management from streaming re
+         oh-1           read=['tests/test_helpers.py'] steps=4 retried=None
+         oh-10          read=['tests/test_helpers.py'] steps=3 retried=None
+   +20  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-10          read=['src/flask/sansio/app.py'] steps=2 retried=None
+   +18  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-10          read=['docs/lifecycle.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+
+== oh-2 - oh-1: n=48 Δ=+1.2 95%CI=[-0.4,+2.9] median=+0.0 win/tie/loss=22/8/18 sign-test p=0.636 | n for 80% power at this Δ ≈ 186
+   by category: what: +3.1 [-0.4,+6.6] (n=12)  how: +0.3 [-2.6,+3.1] (n=12)  why: +0.3 [-2.1,+3.1] (n=12)  where: +1.0 [-2.5,+5.0] (n=12)
+   paired efficiency (b−a): input_tokens: +402 [-2411,+3056] (1.01x)  peak_input_tokens: -152 [-503,+200] (0.98x)  output_tokens: -27 [-84,+27] (0.96x)  tool_calls: -0 [-0,+0] (0.96x)  wall_s: -0 [-1,-0] (0.92x)  answer_chars: -46 [-175,+86] (0.94x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/29/11; hit cap: {'oh-1': 0, 'oh-2': 0}
+   -12  Where is the test class that validates URL generation with anchors, schemes, and HTTP methods defined?
+         oh-1           read=['tests/test_helpers.py'] steps=3 retried=None
+         oh-2           read=['tests/test_url_for.py'] steps=2 retried=None
+   -9  How does the decorator that copies request contexts handle isolation of lightweight concurrent execution contexts while 
+         oh-1           read=['src/flask/ctx.py'] steps=4 retried=None
+         oh-2           read=['src/flask/ctx.py'] steps=2 retried=None
+   -7  How does the deferred registration mechanism ensure that custom template filters registered through the blueprint's appl
+         oh-1           read=['src/flask/sansio/blueprints.py'] steps=5 retried=None
+         oh-2           read=['src/flask/sansio/blueprints.py'] steps=6 retried=None
+   +17  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-2           read=['src/flask/sansio/app.py'] steps=2 retried=None
+   +13  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-2           read=['tests/test_basic.py'] steps=2 retried=None
+   +13  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-2           read=['CHANGES.rst', 'docs/lifecycle.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=5 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+0.3 95%CI=[-1.3,+1.9] median=+0.0 win/tie/loss=21/8/19 sign-test p=0.875 | n for 80% power at this Δ ≈ 2476
+   by category: what: +0.3 [-3.0,+3.8] (n=12)  how: +1.1 [-2.0,+4.1] (n=12)  why: -0.3 [-4.1,+3.3] (n=12)  where: +0.2 [-1.9,+2.2] (n=12)
+   paired efficiency (b−a): input_tokens: +398 [-2461,+3027] (1.01x)  peak_input_tokens: -134 [-393,+113] (0.99x)  output_tokens: -1 [-59,+52] (1.00x)  tool_calls: -0 [-0,+0] (0.99x)  wall_s: -0 [-1,+0] (0.96x)  answer_chars: -11 [-116,+78] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/29/11; hit cap: {'oh-1': 0, 'oh-3': 0}
+   -14  Why does the test that validates blueprint names cannot contain dots ensure that creating a modular route component with
+         oh-1           read=['src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=2 retried=None
+         oh-3           read=['src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=3 retried=None
+   -9  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-3           read=['src/flask/app.py', 'src/flask/cli.py', 'src/flask/testing.py'] steps=2 retried=None
+   -9  Why does repeated invocation of the method that instantiates cryptographic serializers within the session persistence ha
+         oh-1           read=['src/flask/sessions.py'] steps=3 retried=None
+         oh-3           read=['src/flask/sessions.py'] steps=2 retried=None
+   +12  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-3           read=['CHANGES.rst', 'docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'src/flask/sansio/scaffold.py', 'tests/test_basic.py'] steps=8 retried=None
+   +10  Why does the method that opens application package resources relative to the root path restrict file opening to read-onl
+         oh-1           read=['src/flask/app.py'] steps=2 retried=None
+         oh-3           read=['src/flask/app.py'] steps=2 retried=None
+   +10  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-3           read=['CHANGES.rst', 'docs/async-await.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py', 'tests/test_async.py'] steps=6 retried=None
+
+== oh-4 - oh-1: n=48 Δ=-0.5 95%CI=[-3.0,+2.1] median=+0.0 win/tie/loss=17/8/23 sign-test p=0.430 | n for 80% power at this Δ ≈ 3034
+   by category: what: -0.1 [-7.5,+6.3] (n=12)  how: -0.1 [-4.5,+4.4] (n=12)  why: -1.7 [-6.1,+2.1] (n=12)  where: +0.0 [-3.4,+5.0] (n=12)
+   paired efficiency (b−a): input_tokens: +420 [-3003,+4118] (1.01x)  peak_input_tokens: -98 [-373,+151] (0.99x)  output_tokens: -25 [-83,+27] (0.96x)  tool_calls: -0 [-1,+0] (0.91x)  wall_s: +1 [-1,+3] (1.09x)  answer_chars: -51 [-179,+60] (0.94x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/26/8; hit cap: {'oh-1': 0, 'oh-4': 0}
+   -30  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-4           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=2 retried=cut_off
+   -19  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-4           read=['docs/async-await.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=8 retried=None
+   -17  How does the decorator that copies request contexts handle isolation of lightweight concurrent execution contexts while 
+         oh-1           read=['src/flask/ctx.py'] steps=4 retried=None
+         oh-4           read=['src/flask/ctx.py'] steps=3 retried=None
+   +23  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-4           read=['src/flask/sansio/app.py'] steps=2 retried=None
+   +18  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-4           read=['docs/lifecycle.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'src/flask/helpers.py', 'tests/test_basic.py'] steps=7 retried=None
+   +16  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-4           read=['CHANGES.rst', 'src/flask/app.py', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=8 retried=None
+
+== oh-5 - oh-1: n=48 Δ=+0.2 95%CI=[-2.1,+2.3] median=+0.5 win/tie/loss=24/3/21 sign-test p=0.766 | n for 80% power at this Δ ≈ 16491
+   by category: what: +0.7 [-5.0,+5.5] (n=12)  how: -0.4 [-3.2,+2.7] (n=12)  why: -1.3 [-5.7,+2.2] (n=12)  where: +1.8 [-2.6,+6.4] (n=12)
+   paired efficiency (b−a): input_tokens: +6745 [+1229,+13549] (1.21x)  peak_input_tokens: +276 [-159,+852] (1.03x)  output_tokens: +44 [-34,+136] (1.07x)  tool_calls: +0 [-0,+1] (1.07x)  wall_s: +1 [-0,+3] (1.18x)  answer_chars: -60 [-180,+50] (0.93x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 8/24/16; hit cap: {'oh-1': 0, 'oh-5': 3}
+   -23  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-5           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=2 retried=cut_off
+   -20  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-5           read=['CHANGES.rst', 'pyproject.toml', 'src/flask/views.py', 'tests/test_async.py'] steps=6 retried=None
+   -11  What is the modular component registration architecture that separates static asset serving from the main application fr
+         oh-1           read=['src/flask/app.py', 'src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=7 retried=None
+         oh-5           read=['src/flask/app.py', 'src/flask/helpers.py', 'src/flask/sansio/README.md', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=10 retried=None
+   +16  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-5           read=['pyproject.toml', 'src/flask/sansio/scaffold.py', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=7 retried=None
+   +15  Where in the serialization pipeline for the JSON tag class that handles Markup API objects are the lower-level helper fu
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-5           read=['src/flask/json/__init__.py', 'src/flask/json/provider.py', 'src/flask/json/tag.py'] steps=10 retried=None
+   +12  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-5           read=['CHANGES.rst', 'src/flask/app.py', 'src/flask/typing.py'] steps=6 retried=None
+
+== oh-6 - oh-1: n=48 Δ=+0.4 95%CI=[-1.8,+2.6] median=+0.5 win/tie/loss=24/5/19 sign-test p=0.542 | n for 80% power at this Δ ≈ 2792
+   by category: what: +4.8 [+0.5,+9.4] (n=12)  how: -1.2 [-4.3,+1.8] (n=12)  why: +0.6 [-4.0,+4.6] (n=12)  where: -2.4 [-7.3,+1.9] (n=12)
+   paired efficiency (b−a): input_tokens: +377 [-3399,+4596] (1.01x)  peak_input_tokens: +21 [-396,+497] (1.00x)  output_tokens: -8 [-97,+99] (0.99x)  tool_calls: -0 [-1,+0] (0.97x)  wall_s: +0 [-1,+1] (1.01x)  answer_chars: -24 [-180,+165] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/27/9; hit cap: {'oh-1': 0, 'oh-6': 1}
+   -22  Where in the serialization pipeline for the JSON tag class that handles Markup API objects are the lower-level helper fu
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-6           read=['src/flask/json/__init__.py', 'src/flask/json/provider.py', 'src/flask/json/tag.py'] steps=7 retried=None
+   -20  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-6           read=['CHANGES.rst', 'docs/async-await.rst', 'src/flask/views.py', 'tests/test_async.py'] steps=6 retried=None
+   -11  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-6           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=3 retried=None
+   +19  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-6           read=['docs/lifecycle.rst', 'src/flask/app.py', 'src/flask/ctx.py'] steps=5 retried=None
+   +16  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-6           read=['tests/test_basic.py'] steps=2 retried=None
+   +15  Why does unconditionally setting the session access tracking attribute in dictionary access methods impact signed cookie
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-6           read=['src/flask/sessions.py'] steps=3 retried=None
+
+== oh-7 - oh-1: n=48 Δ=+1.2 95%CI=[-1.3,+3.9] median=+0.0 win/tie/loss=23/7/18 sign-test p=0.533 | n for 80% power at this Δ ≈ 407
+   by category: what: +4.7 [+0.6,+9.4] (n=12)  how: -0.1 [-5.3,+5.3] (n=12)  why: +0.1 [-5.3,+4.9] (n=12)  where: +0.3 [-4.3,+5.4] (n=12)
+   paired efficiency (b−a): input_tokens: +1564 [-2135,+5264] (1.05x)  peak_input_tokens: -98 [-493,+253] (0.99x)  output_tokens: +13 [-64,+88] (1.02x)  tool_calls: +0 [-0,+1] (1.00x)  wall_s: +0 [-1,+2] (1.08x)  answer_chars: -10 [-141,+115] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/23/14; hit cap: {'oh-1': 0, 'oh-7': 0}
+   -20  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-7           read=['pyproject.toml', 'src/flask/__init__.py', 'src/flask/app.py', 'src/flask/views.py'] steps=5 retried=None
+   -17  How does the decorator that copies request contexts handle isolation of lightweight concurrent execution contexts while 
+         oh-1           read=['src/flask/ctx.py'] steps=4 retried=None
+         oh-7           read=['src/flask/ctx.py'] steps=2 retried=None
+   -16  Where is the control flow determining whether a routing rule receives OPTIONS, including branches evaluating the automat
+         oh-1           read=['src/flask/app.py', 'src/flask/sansio/app.py'] steps=2 retried=None
+         oh-7           read=['src/flask/app.py', 'src/flask/sansio/app.py'] steps=2 retried=None
+   +21  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-7           read=['pyproject.toml', 'src/flask/sansio/scaffold.py', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=5 retried=None
+   +21  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-7           read=['tests/test_basic.py', 'tests/test_testing.py'] steps=3 retried=None
+   +17  What is the modular component registration architecture that separates static asset serving from the main application fr
+         oh-1           read=['src/flask/app.py', 'src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=7 retried=None
+         oh-7           read=['src/flask/app.py', 'src/flask/blueprints.py', 'src/flask/sansio/blueprints.py'] steps=8 retried=None
+
+== oh-8 - oh-1: n=48 Δ=-0.0 95%CI=[-1.8,+1.7] median=+0.0 win/tie/loss=20/8/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 703334
+   by category: what: +1.1 [-1.8,+3.7] (n=12)  how: -1.6 [-6.4,+2.6] (n=12)  why: -0.5 [-3.6,+2.8] (n=12)  where: +0.9 [-1.9,+3.9] (n=12)
+   paired efficiency (b−a): input_tokens: +2659 [-1940,+8241] (1.08x)  peak_input_tokens: +23 [-277,+331] (1.00x)  output_tokens: +19 [-54,+99] (1.03x)  tool_calls: +0 [-0,+1] (1.07x)  wall_s: +2 [-1,+6] (1.40x)  answer_chars: -92 [-208,+16] (0.89x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 14/25/9; hit cap: {'oh-1': 0, 'oh-8': 3}
+   -19  How does the decorator that copies request contexts handle isolation of lightweight concurrent execution contexts while 
+         oh-1           read=['src/flask/ctx.py'] steps=4 retried=None
+         oh-8           read=['src/flask/ctx.py'] steps=2 retried=None
+   -16  How does the error handling strategy in the application context globals namespace class's attribute access, deletion, an
+         oh-1           read=['src/flask/ctx.py'] steps=3 retried=None
+         oh-8           read=['src/flask/ctx.py'] steps=2 retried=None
+   -11  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-8           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=2 retried=None
+   +11  Why does the method that opens application package resources relative to the root path restrict file opening to read-onl
+         oh-1           read=['src/flask/app.py'] steps=2 retried=None
+         oh-8           read=['src/flask/app.py'] steps=2 retried=None
+   +11  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-8           read=['src/flask/sansio/app.py'] steps=2 retried=None
+   +11  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-8           read=['src/flask/app.py', 'src/flask/typing.py'] steps=6 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-0.8 95%CI=[-3.8,+2.2] median=+0.0 win/tie/loss=19/6/23 sign-test p=0.644 | n for 80% power at this Δ ≈ 1596
+   by category: what: -4.2 [-11.5,+3.0] (n=12)  how: +0.3 [-4.8,+5.1] (n=12)  why: +0.5 [-6.5,+7.4] (n=12)  where: +0.3 [-3.6,+4.5] (n=12)
+   paired efficiency (b−a): input_tokens: +3238 [-906,+7579] (1.10x)  peak_input_tokens: +90 [-189,+365] (1.01x)  output_tokens: +36 [-32,+111] (1.05x)  tool_calls: +0 [-0,+1] (1.09x)  wall_s: +0 [-1,+2] (1.06x)  answer_chars: -44 [-173,+76] (0.95x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 9/23/16; hit cap: {'oh-1': 0, 'oh-9': 1}
+   -34  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-9           read=['src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=10 retried=None
+   -26  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-9           read=['docs/async-await.rst', 'src/flask/views.py'] steps=4 retried=None
+   -16  How does the decorator that copies request contexts handle isolation of lightweight concurrent execution contexts while 
+         oh-1           read=['src/flask/ctx.py'] steps=4 retried=None
+         oh-9           read=['src/flask/ctx.py'] steps=3 retried=None
+   +26  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-9           read=['tests/test_testing.py'] steps=2 retried=None
+   +25  Why does unconditionally setting the session access tracking attribute in dictionary access methods impact signed cookie
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-9           read=['CHANGES.rst', 'src/flask/sessions.py', 'tests/test_basic.py'] steps=8 retried=None
+   +15  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-9           read=['pyproject.toml', 'src/flask/app.py', 'src/flask/sansio/scaffold.py', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=7 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=-0.5 95%CI=[-4.8,+3.4] median=+1.0 win/tie/loss=25/6/17 sign-test p=0.280 | n for 80% power at this Δ ≈ 7999
+   by category: what: -4.1 [-18.3,+7.6] (n=12)  how: -3.2 [-11.4,+3.2] (n=12)  why: +1.8 [-3.8,+6.3] (n=12)  where: +3.6 [-0.6,+8.0] (n=12)
+   paired efficiency (b−a): input_tokens: +144842 [+130195,+161119] (5.41x)  peak_input_tokens: +19486 [+18898,+20032] (3.12x)  output_tokens: +956 [+859,+1048] (2.46x)  tool_calls: -1 [-2,-1] (0.69x)  wall_s: +7 [+6,+8] (2.13x)  answer_chars: -18 [-157,+122] (0.98x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'aoci_get_entries': 18, 'aoci_search': 21, 'terminal': 3, '(none)': 6}}
+   steps (b−a): fewer/same/more = 23/9/16; hit cap: {'oh-1': 0, 'oh-aoci-1': 1}
+   -58  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -36  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   -36  What is the purpose of the registration tracking flag in the blueprint collection class that prevents setup methods from
+         oh-1           read=['src/flask/sansio/blueprints.py'] steps=2 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +24  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-1      read=['tests/test_basic.py'] steps=3 retried=None
+   +18  Where does the list serialization tag's item conversion method interact with the serializer's type dispatcher to recursi
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-1      read=['src/flask/json/tag.py'] steps=2 retried=None
+   +18  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-aoci-1      read=['src/flask/debughelpers.py'] steps=7 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=+1.0 95%CI=[-2.3,+4.2] median=+1.0 win/tie/loss=28/5/15 sign-test p=0.066 | n for 80% power at this Δ ≈ 1006
+   by category: what: +2.2 [-4.7,+9.6] (n=12)  how: +0.2 [-4.2,+4.0] (n=12)  why: -3.1 [-11.3,+3.2] (n=12)  where: +4.7 [-0.7,+9.8] (n=12)
+   paired efficiency (b−a): input_tokens: +160554 [+142674,+180282] (5.89x)  peak_input_tokens: +20117 [+19410,+20856] (3.19x)  output_tokens: +1058 [+953,+1170] (2.61x)  tool_calls: -1 [-2,-0] (0.81x)  wall_s: +7 [+7,+8] (2.24x)  answer_chars: +144 [-34,+356] (1.18x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'aoci_get_entries': 20, 'terminal': 5, 'aoci_search': 17, '(none)': 6}}
+   steps (b−a): fewer/same/more = 18/14/16; hit cap: {'oh-1': 0, 'oh-aoci-10': 1}
+   -38  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-aoci-10     read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=9 retried=None
+   -19  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-10     read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=5 retried=None
+   -18  Why does the method that opens application package resources relative to the root path restrict file opening to read-onl
+         oh-1           read=['src/flask/app.py'] steps=2 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +25  What is the architectural pattern of the test class that isolates request context lifecycle management from streaming re
+         oh-1           read=['tests/test_helpers.py'] steps=4 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +24  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-10     read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/helpers.py', 'tests/test_basic.py', 'tests/test_reqctx.py'] steps=10 retried=None
+   +18  Where does the list serialization tag's item conversion method interact with the serializer's type dispatcher to recursi
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-10     read=['src/flask/json/tag.py'] steps=2 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=+1.8 95%CI=[-1.6,+4.9] median=+3.0 win/tie/loss=32/2/14 sign-test p=0.011 | n for 80% power at this Δ ≈ 341
+   by category: what: +2.9 [-3.8,+9.9] (n=12)  how: +0.2 [-3.7,+4.0] (n=12)  why: +0.4 [-10.0,+8.5] (n=12)  where: +3.4 [-1.4,+8.1] (n=12)
+   paired efficiency (b−a): input_tokens: +149441 [+133471,+166676] (5.55x)  peak_input_tokens: +19291 [+18658,+19872] (3.10x)  output_tokens: +971 [+872,+1061] (2.48x)  tool_calls: -1 [-2,-0] (0.73x)  wall_s: +8 [+6,+12] (2.39x)  answer_chars: -9 [-140,+125] (0.99x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'aoci_get_entries': 19, 'terminal': 2, 'aoci_search': 21, '(none)': 6}}
+   steps (b−a): fewer/same/more = 22/8/18; hit cap: {'oh-1': 0, 'oh-aoci-2': 1}
+   -38  Why does the pass-through dictionary tag class's JSON conversion method apply recursive tagging only to dictionary value
+         oh-1           read=['src/flask/json/tag.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/flask/json/tag.py'] steps=2 retried=None
+   -32  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -20  What mechanisms ensure that template processing functions registered during modular component registration are accessibl
+         oh-1           read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=8 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +30  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-2      read=['tests/test_basic.py'] steps=3 retried=None
+   +20  Where does the list serialization tag's item conversion method interact with the serializer's type dispatcher to recursi
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-2      read=['src/flask/json/tag.py'] steps=2 retried=None
+   +17  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-aoci-2      read=['src/flask/debughelpers.py'] steps=7 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=+3.8 95%CI=[+1.0,+6.6] median=+3.0 win/tie/loss=28/6/14 sign-test p=0.044 | n for 80% power at this Δ ≈ 53
+   by category: what: +1.2 [-6.6,+9.1] (n=12)  how: +3.7 [+0.5,+7.6] (n=12)  why: +3.7 [-1.2,+8.2] (n=12)  where: +6.8 [+2.4,+11.5] (n=12)
+   paired efficiency (b−a): input_tokens: +150630 [+137800,+164564] (5.58x)  peak_input_tokens: +19556 [+19004,+20117] (3.13x)  output_tokens: +1008 [+908,+1116] (2.54x)  tool_calls: -1 [-2,-0] (0.73x)  wall_s: +8 [+7,+9] (2.28x)  answer_chars: +32 [-81,+153] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'aoci_get_entries': 23, 'terminal': 5, 'aoci_search': 15, '(none)': 5}}
+   steps (b−a): fewer/same/more = 20/14/14; hit cap: {'oh-1': 0, 'oh-aoci-3': 0}
+   -26  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-3      read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=5 retried=None
+   -16  What is the modular component registration architecture that separates static asset serving from the main application fr
+         oh-1           read=['src/flask/app.py', 'src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=7 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -13  Why does the linear traversal of the exception class hierarchy in _find_error_handler create performance overhead when h
+         oh-1           read=['src/flask/sansio/app.py'] steps=3 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   +30  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/testing.py', 'tests/test_basic.py'] steps=8 retried=None
+   +22  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-aoci-3      read=['src/flask/app.py', 'src/flask/sansio/app.py'] steps=5 retried=None
+   +18  Where does the list serialization tag's item conversion method interact with the serializer's type dispatcher to recursi
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-3      read=['src/flask/json/tag.py'] steps=2 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=+2.0 95%CI=[-1.2,+5.2] median=+2.0 win/tie/loss=27/8/13 sign-test p=0.038 | n for 80% power at this Δ ≈ 264
+   by category: what: +3.0 [-6.7,+12.9] (n=12)  how: -2.2 [-9.2,+2.4] (n=12)  why: +3.7 [+0.6,+6.5] (n=12)  where: +3.5 [-0.2,+7.7] (n=12)
+   paired efficiency (b−a): input_tokens: +153389 [+135529,+172658] (5.67x)  peak_input_tokens: +19581 [+18897,+20216] (3.13x)  output_tokens: +1001 [+888,+1122] (2.53x)  tool_calls: -1 [-2,-0] (0.77x)  wall_s: +8 [+6,+9] (2.26x)  answer_chars: -49 [-201,+101] (0.94x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_get_entries': 19, 'terminal': 8, '(none)': 5, 'aoci_search': 16}}
+   steps (b−a): fewer/same/more = 19/14/15; hit cap: {'oh-1': 0, 'oh-aoci-4': 0}
+   -36  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -23  What is the modular component registration architecture that separates static asset serving from the main application fr
+         oh-1           read=['src/flask/app.py', 'src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=7 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -22  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-4      read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=5 retried=None
+   +36  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-4      read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/testing.py', 'tests/test_basic.py'] steps=9 retried=None
+   +22  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-aoci-4      read=['src/flask/debughelpers.py'] steps=6 retried=None
+   +21  What is the architectural pattern of the test class that isolates request context lifecycle management from streaming re
+         oh-1           read=['tests/test_helpers.py'] steps=4 retried=None
+         oh-aoci-4      read=['tests/test_helpers.py'] steps=3 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=-0.6 95%CI=[-4.1,+2.7] median=+2.0 win/tie/loss=28/3/17 sign-test p=0.135 | n for 80% power at this Δ ≈ 3377
+   by category: what: -7.0 [-16.3,+1.9] (n=12)  how: +2.9 [+0.2,+6.1] (n=12)  why: -1.2 [-6.6,+3.3] (n=12)  where: +3.0 [-3.7,+9.6] (n=12)
+   paired efficiency (b−a): input_tokens: +143585 [+130829,+155675] (5.37x)  peak_input_tokens: +19317 [+18734,+19846] (3.11x)  output_tokens: +965 [+883,+1041] (2.47x)  tool_calls: -1 [-2,-1] (0.71x)  wall_s: +7 [+6,+8] (2.16x)  answer_chars: -37 [-158,+87] (0.95x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'aoci_get_entries': 21, 'terminal': 7, 'aoci_search': 15, '(none)': 5}}
+   steps (b−a): fewer/same/more = 17/20/11; hit cap: {'oh-1': 0, 'oh-aoci-5': 0}
+   -31  What mechanisms ensure that template processing functions registered during modular component registration are accessibl
+         oh-1           read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=8 retried=None
+         oh-aoci-5      read=[] steps=0 retried=None
+   -30  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-5      read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=3 retried=None
+   -27  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-aoci-5      read=['src/flask/cli.py', 'src/flask/testing.py'] steps=2 retried=None
+   +22  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-aoci-5      read=['src/flask/sansio/app.py'] steps=3 retried=None
+   +19  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-aoci-5      read=['pyproject.toml', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=4 retried=None
+   +16  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-5      read=['tests/test_basic.py'] steps=3 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+1.3 95%CI=[-2.5,+4.9] median=+3.0 win/tie/loss=30/4/14 sign-test p=0.023 | n for 80% power at this Δ ≈ 752
+   by category: what: -0.1 [-11.7,+10.1] (n=12)  how: -2.3 [-8.3,+2.4] (n=12)  why: +5.6 [+0.2,+9.8] (n=12)  where: +2.2 [-3.3,+7.9] (n=12)
+   paired efficiency (b−a): input_tokens: +159898 [+145514,+175358] (5.87x)  peak_input_tokens: +19833 [+19260,+20424] (3.16x)  output_tokens: +1068 [+978,+1155] (2.63x)  tool_calls: -1 [-2,-0] (0.82x)  wall_s: +9 [+7,+11] (2.42x)  answer_chars: +133 [-23,+295] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'aoci_get_entries': 17, 'terminal': 6, 'aoci_search': 21, '(none)': 4}}
+   steps (b−a): fewer/same/more = 17/10/21; hit cap: {'oh-1': 0, 'oh-aoci-6': 0}
+   -46  What is the dependency chain between the application loading helper, the Flask application instance, and the base Click 
+         oh-1           read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -27  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -19  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-6      read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=6 retried=None
+   +32  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-6      read=['tests/test_basic.py'] steps=3 retried=None
+   +24  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-aoci-6      read=['pyproject.toml', 'src/flask/sansio/scaffold.py', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=6 retried=None
+   +20  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-aoci-6      read=['src/flask/debughelpers.py'] steps=2 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=+0.9 95%CI=[-2.4,+4.4] median=+1.5 win/tie/loss=28/3/17 sign-test p=0.135 | n for 80% power at this Δ ≈ 1291
+   by category: what: +2.8 [-5.7,+12.9] (n=12)  how: -1.2 [-7.0,+3.6] (n=12)  why: +0.4 [-4.3,+4.8] (n=12)  where: +1.8 [-4.8,+8.3] (n=12)
+   paired efficiency (b−a): input_tokens: +145733 [+131160,+160802] (5.44x)  peak_input_tokens: +19497 [+18863,+20112] (3.13x)  output_tokens: +1018 [+878,+1187] (2.55x)  tool_calls: -1 [-2,-0] (0.72x)  wall_s: +7 [+6,+8] (2.16x)  answer_chars: +52 [-100,+215] (1.06x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'aoci_get_entries': 21, 'aoci_search': 18, 'terminal': 3, '(none)': 6}}
+   steps (b−a): fewer/same/more = 20/9/19; hit cap: {'oh-1': 0, 'oh-aoci-7': 0}
+   -22  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -21  Where in the serialization pipeline for the JSON tag class that handles Markup API objects are the lower-level helper fu
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-7      read=['src/flask/json/tag.py'] steps=3 retried=None
+   -20  How does the callback-based modification tracking in the session class that inherits from CallbackDict ensure consistenc
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-aoci-7      read=['src/flask/sessions.py'] steps=2 retried=None
+   +48  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-7      read=['src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=6 retried=None
+   +23  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-aoci-7      read=['src/flask/app.py', 'src/flask/sansio/app.py'] steps=5 retried=None
+   +19  Where in the request processing flow does the orchestration between the method that loads session data at request start 
+         oh-1           read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/sessions.py'] steps=3 retried=None
+         oh-aoci-7      read=['src/flask/app.py', 'src/flask/ctx.py'] steps=3 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=+0.1 95%CI=[-2.6,+2.9] median=+1.0 win/tie/loss=27/5/16 sign-test p=0.126 | n for 80% power at this Δ ≈ 35067
+   by category: what: +1.3 [-5.2,+7.6] (n=12)  how: +0.7 [-4.6,+5.4] (n=12)  why: -3.2 [-8.8,+1.1] (n=12)  where: +1.8 [-3.2,+6.9] (n=12)
+   paired efficiency (b−a): input_tokens: +150939 [+137942,+164993] (5.59x)  peak_input_tokens: +19568 [+19042,+20074] (3.13x)  output_tokens: +1000 [+921,+1081] (2.52x)  tool_calls: -1 [-2,-0] (0.73x)  wall_s: +7 [+6,+8] (2.15x)  answer_chars: +78 [-64,+237] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'aoci_get_entries': 21, 'aoci_search': 20, 'terminal': 2, '(none)': 5}}
+   steps (b−a): fewer/same/more = 20/13/15; hit cap: {'oh-1': 0, 'oh-aoci-8': 0}
+   -28  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -19  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-8      read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=5 retried=None
+   -16  How does the decorator that copies request contexts handle isolation of lightweight concurrent execution contexts while 
+         oh-1           read=['src/flask/ctx.py'] steps=4 retried=None
+         oh-aoci-8      read=['src/flask/ctx.py'] steps=3 retried=None
+   +20  Where does the list serialization tag's item conversion method interact with the serializer's type dispatcher to recursi
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-8      read=['src/flask/json/tag.py'] steps=2 retried=None
+   +20  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-aoci-8      read=['src/flask/debughelpers.py'] steps=3 retried=None
+   +18  How does the method that processes unhandled exceptions determine whether to re-raise them or convert them into HTTP 500
+         oh-1           read=['src/flask/app.py'] steps=2 retried=None
+         oh-aoci-8      read=['src/flask/app.py'] steps=2 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=+2.5 95%CI=[-0.6,+5.5] median=+2.0 win/tie/loss=27/7/14 sign-test p=0.060 | n for 80% power at this Δ ≈ 148
+   by category: what: +4.7 [-2.8,+12.8] (n=12)  how: +1.8 [-1.3,+5.2] (n=12)  why: +1.9 [-5.0,+7.3] (n=12)  where: +1.4 [-4.3,+6.8] (n=12)
+   paired efficiency (b−a): input_tokens: +146922 [+132976,+161374] (5.47x)  peak_input_tokens: +19391 [+18804,+19940] (3.11x)  output_tokens: +984 [+885,+1085] (2.50x)  tool_calls: -1 [-2,-1] (0.71x)  wall_s: +7 [+6,+8] (2.18x)  answer_chars: +39 [-105,+198] (1.05x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'aoci_get_entries': 20, 'aoci_search': 17, 'terminal': 5, '(none)': 6}}
+   steps (b−a): fewer/same/more = 19/13/16; hit cap: {'oh-1': 0, 'oh-aoci-9': 0}
+   -29  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   -22  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-aoci-9      read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py', 'src/flask/sansio/scaffold.py'] steps=3 retried=None
+   -19  Where in the serialization pipeline for the JSON tag class that handles Markup API objects are the lower-level helper fu
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-aoci-9      read=['src/flask/json/tag.py'] steps=3 retried=None
+   +36  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-aoci-9      read=['src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+   +20  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-aoci-9      read=['src/flask/debughelpers.py'] steps=7 retried=None
+   +18  Where does the route handler function that returns a list of dictionaries integrate with the framework's route decorator
+         oh-1           read=['pyproject.toml', 'tests/type_check/typing_route.py'] steps=4 retried=None
+         oh-aoci-9      read=['pyproject.toml', 'src/flask/sansio/scaffold.py', 'src/flask/typing.py', 'tests/type_check/typing_route.py'] steps=7 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+2.2 95%CI=[-0.2,+4.5] median=+2.0 win/tie/loss=31/6/11 sign-test p=0.003 | n for 80% power at this Δ ≈ 114
+   by category: what: +1.1 [-5.2,+6.9] (n=12)  how: +2.8 [+0.4,+5.2] (n=12)  why: +1.5 [-4.0,+6.1] (n=12)  where: +3.3 [-1.1,+8.0] (n=12)
+   paired efficiency (b−a): input_tokens: +1012 [-4497,+6778] (1.03x)  peak_input_tokens: +3978 [+3262,+4725] (1.43x)  output_tokens: -144 [-238,-42] (0.78x)  tool_calls: -2 [-2,-1] (0.64x)  wall_s: -1 [-2,-0] (0.79x)  answer_chars: +56 [-56,+168] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/8/9; hit cap: {'oh-1': 0, 'oh-cg-1': 0}
+   -26  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-1        read=['src/flask/sansio/app.py'] steps=3 retried=None
+   -19  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-cg-1        read=['tests/test_blueprints.py'] steps=8 retried=None
+   -13  Why does the test that validates blueprint names cannot contain dots ensure that creating a modular route component with
+         oh-1           read=['src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=2 retried=None
+         oh-cg-1        read=['src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=2 retried=None
+   +22  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-1        read=[] steps=3 retried=None
+   +20  Where in the request processing flow does the orchestration between the method that loads session data at request start 
+         oh-1           read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/sessions.py'] steps=3 retried=None
+         oh-cg-1        read=['src/flask/ctx.py'] steps=4 retried=None
+   +15  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-cg-1        read=[] steps=2 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+0.9 95%CI=[-2.1,+3.7] median=+2.0 win/tie/loss=27/6/15 sign-test p=0.088 | n for 80% power at this Δ ≈ 949
+   by category: what: +0.1 [-8.7,+7.4] (n=12)  how: +3.9 [+0.1,+7.8] (n=12)  why: -0.2 [-5.5,+3.8] (n=12)  where: -0.1 [-5.6,+5.2] (n=12)
+   paired efficiency (b−a): input_tokens: +4516 [-1524,+10755] (1.14x)  peak_input_tokens: +3814 [+3140,+4522] (1.42x)  output_tokens: -144 [-226,-60] (0.78x)  tool_calls: -1 [-2,-1] (0.69x)  wall_s: -0 [-2,+2] (0.98x)  answer_chars: +30 [-114,+171] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 27/12/9; hit cap: {'oh-1': 0, 'oh-cg-10': 0}
+   -35  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-10       read=['src/flask/sansio/app.py', 'src/flask/sansio/scaffold.py'] steps=6 retried=None
+   -25  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-cg-10       read=['src/flask/views.py', 'tests/test_async.py'] steps=8 retried=None
+   -19  What mechanisms ensure that template processing functions registered during modular component registration are accessibl
+         oh-1           read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=8 retried=None
+         oh-cg-10       read=[] steps=2 retried=None
+   +21  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-10       read=[] steps=2 retried=None
+   +20  Where in the request processing flow does the orchestration between the method that loads session data at request start 
+         oh-1           read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/sessions.py'] steps=3 retried=None
+         oh-cg-10       read=[] steps=2 retried=None
+   +20  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-cg-10       read=['src/flask/app.py', 'src/flask/typing.py'] steps=6 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+0.4 95%CI=[-2.1,+3.1] median=+0.5 win/tie/loss=24/3/21 sign-test p=0.766 | n for 80% power at this Δ ≈ 3331
+   by category: what: +0.1 [-6.2,+6.6] (n=12)  how: +0.7 [-1.7,+2.8] (n=12)  why: +3.7 [+0.4,+7.0] (n=12)  where: -2.7 [-8.6,+4.1] (n=12)
+   paired efficiency (b−a): input_tokens: +1157 [-3914,+6733] (1.04x)  peak_input_tokens: +4111 [+3373,+4983] (1.45x)  output_tokens: -200 [-263,-136] (0.69x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: -2 [-2,-1] (0.73x)  answer_chars: +68 [-51,+190] (1.08x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 32/10/6; hit cap: {'oh-1': 0, 'oh-cg-2': 0}
+   -26  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-2        read=['src/flask/app.py', 'src/flask/sansio/scaffold.py'] steps=7 retried=None
+   -17  Where is the control flow determining whether a routing rule receives OPTIONS, including branches evaluating the automat
+         oh-1           read=['src/flask/app.py', 'src/flask/sansio/app.py'] steps=2 retried=None
+         oh-cg-2        read=['src/flask/sansio/app.py'] steps=3 retried=None
+   -16  Where does the control flow in the CLI group class's command retrieval method determine whether to return a directly reg
+         oh-1           read=['src/flask/cli.py'] steps=3 retried=None
+         oh-cg-2        read=[] steps=2 retried=None
+   +25  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-2        read=['src/flask/app.py', 'src/flask/sansio/app.py'] steps=4 retried=None
+   +24  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+   +12  Why does the method that opens application package resources relative to the root path restrict file opening to read-onl
+         oh-1           read=['src/flask/app.py'] steps=2 retried=None
+         oh-cg-2        read=[] steps=1 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+3.7 95%CI=[+1.7,+5.7] median=+3.0 win/tie/loss=35/3/10 sign-test p=0.000 | n for 80% power at this Δ ≈ 28
+   by category: what: +4.2 [+0.6,+8.9] (n=12)  how: +3.5 [+0.2,+6.6] (n=12)  why: +5.5 [+2.1,+9.8] (n=12)  where: +1.4 [-2.8,+5.4] (n=12)
+   paired efficiency (b−a): input_tokens: +1635 [-2735,+6223] (1.05x)  peak_input_tokens: +3497 [+2966,+4029] (1.38x)  output_tokens: -160 [-222,-99] (0.76x)  tool_calls: -2 [-2,-1] (0.65x)  wall_s: -1 [-2,-0] (0.83x)  answer_chars: +75 [-45,+190] (1.09x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 29/12/7; hit cap: {'oh-1': 0, 'oh-cg-3': 0}
+   -10  Where is the test class that validates URL generation with anchors, schemes, and HTTP methods defined?
+         oh-1           read=['tests/test_helpers.py'] steps=3 retried=None
+         oh-cg-3        read=[] steps=1 retried=too_short
+   -9  Where does the base64-decoding method for byte sequence tags get invoked during the recursive untagging process after JS
+         oh-1           read=['src/flask/json/tag.py'] steps=2 retried=None
+         oh-cg-3        read=[] steps=1 retried=None
+   -9  Where does the inheritance chain between parent and child configuration classes affect configuration resolution when loa
+         oh-1           read=['src/flask/config.py'] steps=2 retried=None
+         oh-cg-3        read=['src/flask/config.py'] steps=2 retried=None
+   +25  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-3        read=[] steps=2 retried=None
+   +24  Why does unconditionally setting the session access tracking attribute in dictionary access methods impact signed cookie
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-cg-3        read=['src/flask/sessions.py'] steps=6 retried=None
+   +13  How does the type-safe dictionary structure used as a view function return type annotation decouple JSON response serial
+         oh-1           read=['src/flask/app.py', 'src/flask/typing.py'] steps=5 retried=None
+         oh-cg-3        read=['src/flask/typing.py'] steps=2 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+2.2 95%CI=[-0.1,+5.0] median=+1.5 win/tie/loss=28/4/16 sign-test p=0.096 | n for 80% power at this Δ ≈ 134
+   by category: what: +3.8 [-3.5,+12.7] (n=12)  how: +2.2 [-0.4,+4.8] (n=12)  why: +2.2 [-2.0,+6.1] (n=12)  where: +0.6 [-3.1,+4.7] (n=12)
+   paired efficiency (b−a): input_tokens: +3823 [-2110,+10245] (1.12x)  peak_input_tokens: +3705 [+3070,+4411] (1.40x)  output_tokens: -136 [-209,-59] (0.79x)  tool_calls: -1 [-2,-1] (0.67x)  wall_s: -1 [-2,-0] (0.84x)  answer_chars: +218 [+63,+389] (1.27x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 24/16/8; hit cap: {'oh-1': 0, 'oh-cg-4': 0}
+   -18  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-4        read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/sansio/app.py', 'src/flask/sansio/scaffold.py'] steps=8 retried=None
+   -12  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-cg-4        read=['src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+   -8  Where is the test class that validates URL generation with anchors, schemes, and HTTP methods defined?
+         oh-1           read=['tests/test_helpers.py'] steps=3 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+   +44  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=3 retried=None
+   +19  Where in the request processing flow does the orchestration between the method that loads session data at request start 
+         oh-1           read=['src/flask/app.py', 'src/flask/ctx.py', 'src/flask/sessions.py'] steps=3 retried=None
+         oh-cg-4        read=['src/flask/ctx.py'] steps=4 retried=None
+   +12  Why does the pass-through dictionary tag class's JSON conversion method apply recursive tagging only to dictionary value
+         oh-1           read=['src/flask/json/tag.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=1 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+2.3 95%CI=[+0.1,+4.5] median=+2.5 win/tie/loss=30/2/16 sign-test p=0.054 | n for 80% power at this Δ ≈ 94
+   by category: what: +2.8 [-4.4,+9.6] (n=12)  how: -0.2 [-2.9,+2.6] (n=12)  why: +4.9 [+2.5,+7.2] (n=12)  where: +1.7 [-2.0,+5.2] (n=12)
+   paired efficiency (b−a): input_tokens: +90 [-4660,+5280] (1.00x)  peak_input_tokens: +3737 [+3112,+4419] (1.41x)  output_tokens: -142 [-236,-23] (0.78x)  tool_calls: -2 [-2,-1] (0.63x)  wall_s: -1 [-2,+1] (0.88x)  answer_chars: +158 [+0,+330] (1.20x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/11/6; hit cap: {'oh-1': 0, 'oh-cg-5': 0}
+   -26  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-5        read=[] steps=3 retried=None
+   -10  Where is the test class that validates URL generation with anchors, schemes, and HTTP methods defined?
+         oh-1           read=['tests/test_helpers.py'] steps=3 retried=None
+         oh-cg-5        read=[] steps=1 retried=too_short
+   -8  How does the callback-based modification tracking in the session class that inherits from CallbackDict ensure consistenc
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-cg-5        read=[] steps=1 retried=None
+   +30  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-5        read=[] steps=3 retried=None
+   +12  Why does the CLI helper class that manages Flask application loading provide both a direct callable factory parameter an
+         oh-1           read=['src/flask/cli.py'] steps=2 retried=None
+         oh-cg-5        read=['src/flask/cli.py', 'src/flask/testing.py'] steps=3 retried=None
+   +12  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-cg-5        read=[] steps=2 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+1.1 95%CI=[-1.5,+3.8] median=+1.5 win/tie/loss=25/7/16 sign-test p=0.211 | n for 80% power at this Δ ≈ 566
+   by category: what: +1.8 [-4.8,+8.3] (n=12)  how: +1.6 [-2.2,+4.8] (n=12)  why: -0.8 [-6.6,+4.4] (n=12)  where: +1.8 [-3.4,+7.4] (n=12)
+   paired efficiency (b−a): input_tokens: +967 [-3871,+5795] (1.03x)  peak_input_tokens: +3775 [+3157,+4405] (1.41x)  output_tokens: -152 [-242,-60] (0.77x)  tool_calls: -2 [-2,-1] (0.62x)  wall_s: -1 [-2,-0] (0.82x)  answer_chars: +124 [-15,+270] (1.15x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 32/10/6; hit cap: {'oh-1': 0, 'oh-cg-6': 0}
+   -26  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-6        read=[] steps=3 retried=None
+   -19  Why does the asynchronous HTTP method view class inherit from the synchronous HTTP method dispatch base class rather tha
+         oh-1           read=['docs/async-await.rst', 'docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=5 retried=None
+         oh-cg-6        read=['docs/views.rst', 'pyproject.toml', 'src/flask/__init__.py', 'src/flask/views.py'] steps=7 retried=None
+   -18  Why would performance degradation occur if the custom template filter registration mechanism used in blueprint test case
+         oh-1           read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=5 retried=None
+         oh-cg-6        read=['src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=4 retried=None
+   +26  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-6        read=[] steps=2 retried=None
+   +23  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+   +12  Why does the pass-through dictionary tag class's JSON conversion method apply recursive tagging only to dictionary value
+         oh-1           read=['src/flask/json/tag.py'] steps=2 retried=None
+         oh-cg-6        read=[] steps=1 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+1.9 95%CI=[-1.1,+4.9] median=+1.0 win/tie/loss=26/3/19 sign-test p=0.371 | n for 80% power at this Δ ≈ 249
+   by category: what: +3.2 [-6.3,+12.0] (n=12)  how: +1.1 [-3.6,+5.6] (n=12)  why: +3.7 [+0.5,+6.8] (n=12)  where: -0.3 [-5.7,+5.2] (n=12)
+   paired efficiency (b−a): input_tokens: +931 [-3965,+5847] (1.03x)  peak_input_tokens: +3599 [+3018,+4256] (1.39x)  output_tokens: -194 [-279,-112] (0.70x)  tool_calls: -2 [-2,-1] (0.62x)  wall_s: -1 [-2,-1] (0.76x)  answer_chars: +9 [-117,+136] (1.01x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/9/8; hit cap: {'oh-1': 0, 'oh-cg-7': 0}
+   -34  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-7        read=['src/flask/app.py'] steps=4 retried=None
+   -15  How does the certificate parameter conversion method for the CLI certificate option implement a fallback chain to handle
+         oh-1           read=['src/flask/cli.py'] steps=2 retried=None
+         oh-cg-7        read=['src/flask/cli.py'] steps=3 retried=None
+   -15  What mechanisms ensure that template processing functions registered during modular component registration are accessibl
+         oh-1           read=['src/flask/app.py', 'src/flask/sansio/app.py', 'src/flask/sansio/blueprints.py'] steps=8 retried=None
+         oh-cg-7        read=[] steps=2 retried=None
+   +30  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-7        read=[] steps=3 retried=None
+   +18  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-cg-7        read=['src/flask/debughelpers.py'] steps=3 retried=None
+   +17  Where in the serialization pipeline for the JSON tag class that handles Markup API objects are the lower-level helper fu
+         oh-1           read=['src/flask/json/tag.py'] steps=3 retried=None
+         oh-cg-7        read=['src/flask/json/tag.py'] steps=3 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+0.8 95%CI=[-1.8,+3.4] median=+0.0 win/tie/loss=23/5/20 sign-test p=0.761 | n for 80% power at this Δ ≈ 917
+   by category: what: +0.6 [-7.1,+7.3] (n=12)  how: -0.4 [-3.8,+2.2] (n=12)  why: +3.8 [+0.2,+7.3] (n=12)  where: -0.6 [-5.3,+5.1] (n=12)
+   paired efficiency (b−a): input_tokens: +1504 [-3777,+6663] (1.05x)  peak_input_tokens: +3614 [+2988,+4351] (1.39x)  output_tokens: -196 [-263,-129] (0.70x)  tool_calls: -2 [-2,-1] (0.65x)  wall_s: -1 [-2,-1] (0.76x)  answer_chars: +42 [-100,+180] (1.05x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 29/11/8; hit cap: {'oh-1': 0, 'oh-cg-8': 0}
+   -32  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-8        read=[] steps=4 retried=None
+   -15  Where does the base64-decoding method for byte sequence tags get invoked during the recursive untagging process after JS
+         oh-1           read=['src/flask/json/tag.py'] steps=2 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   -14  How does the error handling strategy in the application context globals namespace class's attribute access, deletion, an
+         oh-1           read=['src/flask/ctx.py'] steps=3 retried=None
+         oh-cg-8        read=[] steps=1 retried=None
+   +23  Where in the error handler resolution method does the lookup sequence traverse blueprint scopes then HTTP status codes t
+         oh-1           read=['src/flask/sansio/app.py'] steps=2 retried=None
+         oh-cg-8        read=[] steps=2 retried=None
+   +21  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-8        read=['tests/test_testing.py'] steps=3 retried=None
+   +18  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-cg-8        read=['src/flask/debughelpers.py'] steps=3 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+2.6 95%CI=[+0.2,+5.2] median=+3.0 win/tie/loss=30/2/16 sign-test p=0.054 | n for 80% power at this Δ ≈ 88
+   by category: what: +1.3 [-5.8,+8.5] (n=12)  how: +1.8 [-0.9,+4.3] (n=12)  why: +5.8 [+1.1,+10.4] (n=12)  where: +1.7 [-2.8,+5.7] (n=12)
+   paired efficiency (b−a): input_tokens: -89 [-5606,+5490] (1.00x)  peak_input_tokens: +3559 [+2983,+4184] (1.39x)  output_tokens: -182 [-260,-108] (0.72x)  tool_calls: -2 [-2,-1] (0.61x)  wall_s: -2 [-2,-1] (0.74x)  answer_chars: +173 [+40,+315] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 48}}
+   steps (b−a): fewer/same/more = 31/9/8; hit cap: {'oh-1': 0, 'oh-cg-9': 0}
+   -25  What hidden coupling exists between the decorator's state management and response lifecycle that causes issues with nest
+         oh-1           read=['docs/lifecycle.rst', 'docs/patterns/deferredcallbacks.rst', 'src/flask/app.py', 'src/flask/ctx.py', 'tests/test_basic.py'] steps=7 retried=None
+         oh-cg-9        read=[] steps=2 retried=None
+   -14  Where does the control flow in the CLI group class's command retrieval method determine whether to return a directly reg
+         oh-1           read=['src/flask/cli.py'] steps=3 retried=None
+         oh-cg-9        read=[] steps=2 retried=None
+   -12  Why does the test that validates blueprint names cannot contain dots ensure that creating a modular route component with
+         oh-1           read=['src/flask/blueprints.py', 'src/flask/sansio/blueprints.py', 'tests/test_blueprints.py'] steps=2 retried=None
+         oh-cg-9        read=['tests/test_blueprints.py'] steps=2 retried=None
+   +30  What is the dependency chain in the test function that verifies subdomain routing through configuration, route registrat
+         oh-1           read=['tests/test_basic.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=3 retried=None
+   +22  Why does unconditionally setting the session access tracking attribute in dictionary access methods impact signed cookie
+         oh-1           read=['src/flask/sessions.py'] steps=4 retried=None
+         oh-cg-9        read=['CHANGES.rst', 'src/flask/sessions.py'] steps=5 retried=None
+   +14  What architectural decisions are reflected by the dual inheritance from both AssertionError and UnicodeError in the debu
+         oh-1           read=['src/flask/debughelpers.py'] steps=2 retried=None
+         oh-cg-9        read=['src/flask/debughelpers.py'] steps=3 retried=None
+
+wrote runs/sweqa-r5-flask-k10/analysis.json

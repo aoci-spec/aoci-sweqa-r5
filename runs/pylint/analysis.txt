@@ -1,0 +1,797 @@
+run: runs/sweqa-r5-pylint-k10
+manifest: harness=None created=2026-10-15T22:52:21Z repo=pylint commit=44740e5e5cdd index_entries=2215
+  arm oh-aoci-1: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-1: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-cg-1: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-2: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-2: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-2: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-3: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-3: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-3: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-4: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-4: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-4: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-5: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-5: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-5: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-6: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-6: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-6: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-7: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-7: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-7: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-8: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-8: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-8: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-9: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-9: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-9: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  arm oh-10: kind=oh model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think'], 'sdk_text_limit': 400000, 'cognition_turn': None}
+  arm oh-aoci-10: kind=oh-aoci model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:aoci'], 'sdk_text_limit': 400000, 'cognition_turn': {'arms': ['oh-aoci', 'oh-aoci-cg'], 'iters': 30, 'enabled': True}, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)'}
+  arm oh-cg-10: kind=oh-cg model=deepseek-flash params={'max_iterations': 10, 'temperature': 0.0, 'max_output_tokens': 12288, 'sdk': '1.1.0', 'workspace': 'plain export of the pinned commit (no VCS metadata)', 'terminal': 'subprocess terminal (tmux disabled) + sanitized env (no secrets, dead proxy, no venv/harness paths) (bwrap NOT found: no jail)', 'file_editor': 'file_editor confined to the workspace', 'tools': ['terminal', 'file_editor', 'task_tracker', 'finish', 'think', 'mcp:codegraph'], 'sdk_text_limit': 400000, 'cognition_turn': None, 'sdk_patch': 'backported union-type normalisation from openhands-sdk 1.42.1 into py_type (1.1.0 raises TypeError on MCP union types)', 'codegraph_version': '1.5.0'}
+  judge oh-1: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-1: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-1: model=claude-sonnet-4-5 votes=5
+  judge oh-2: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-2: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-2: model=claude-sonnet-4-5 votes=5
+  judge oh-3: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-3: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-3: model=claude-sonnet-4-5 votes=5
+  judge oh-4: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-4: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-4: model=claude-sonnet-4-5 votes=5
+  judge oh-5: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-5: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-5: model=claude-sonnet-4-5 votes=5
+  judge oh-6: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-6: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-6: model=claude-sonnet-4-5 votes=5
+  judge oh-7: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-7: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-7: model=claude-sonnet-4-5 votes=5
+  judge oh-8: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-8: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-8: model=claude-sonnet-4-5 votes=5
+  judge oh-9: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-9: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-9: model=claude-sonnet-4-5 votes=5
+  judge oh-10: model=claude-sonnet-4-5 votes=5
+  judge oh-aoci-10: model=claude-sonnet-4-5 votes=5
+  judge oh-cg-10: model=claude-sonnet-4-5 votes=5
+
+arm              n err rty |  score    sd   what    how    why  where | steps calls files  +map |   in_tok  peak_in out_tok  ans_ch    $/q   wall | rec_rd rec_mp rec_an
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oh-1            48   0   0 |   67.2  14.9   61.8   72.0   73.4   61.4 |   6.4   9.9   2.9   0.0 |    73956    12573    1357     651    n/a   13.2 |   0.62   0.00   0.23
+oh-10           48   0   0 |   69.7  14.3   65.4   73.6   74.8   65.2 |   6.6  10.0   3.2   0.0 |    74434    12416    1379     739    n/a   13.3 |   0.67   0.00   0.22
+oh-2            48   0   0 |   68.2  14.6   63.2   72.2   72.4   65.4 |   6.4   9.9   3.2   0.0 |    74912    12593    1376     630    n/a   14.1 |   0.66   0.00   0.22
+oh-3            48   0   0 |   67.3  13.8   63.3   67.3   73.8   65.2 |   6.6   9.5   2.9   0.0 |    77536    12558    1324     667    n/a   15.2 |   0.63   0.00   0.18
+oh-4            48   0   0 |   67.8  14.9   63.2   71.5   73.0   63.6 |   6.4   9.1   2.8   0.0 |    70866    12022    1250     702    n/a   16.5 |   0.65   0.00   0.22
+oh-5            48   0   0 |   64.3  16.3   61.4   65.5   70.8   59.1 |   6.5   9.8   3.0   0.0 |    75189    12293    1347     696    n/a   14.2 |   0.68   0.00   0.20
+oh-6            48   0   0 |   69.9  12.8   67.5   74.0   73.2   64.1 |   6.6  10.6   3.4   0.0 |    77123    12605    1392     717    n/a   14.3 |   0.66   0.00   0.18
+oh-7            48   0   0 |   67.0  15.0   66.9   66.8   69.2   64.8 |   6.6   9.8   2.8   0.0 |    75723    12587    1329     681    n/a   12.2 |   0.70   0.00   0.23
+oh-8            48   0   0 |   67.7  13.5   65.1   70.5   72.2   62.3 |   6.5  10.0   2.9   0.0 |    73982    12231    1348     677    n/a   15.1 |   0.65   0.00   0.21
+oh-9            48   0   0 |   66.8  15.5   64.8   69.1   73.0   59.2 |   6.0   9.1   2.7   0.0 |    67638    11923    1291     765    n/a   11.0 |   0.65   0.00   0.23
+oh-aoci-1       48   0   0 |   65.9  21.3   64.6   62.6   78.8   56.0 |   3.6   4.2   1.8   8.0 |  1865640   177091    2887     989    n/a   39.5 |   0.43   0.33   0.36
+oh-aoci-10      48   0   0 |   64.0  19.1   65.5   55.8   77.0   56.3 |   3.4   4.0   1.8   6.1 |  1831153   176813    2870    1022    n/a   38.2 |   0.35   0.23   0.34
+oh-aoci-2       48   0   0 |   64.2  20.9   62.7   61.1   74.6   57.5 |   3.6   4.1   2.0   6.6 |  1858212   176894    2896    1039    n/a   39.8 |   0.38   0.22   0.41
+oh-aoci-3       48   0   1 |   64.4  21.2   58.8   64.4   71.8   63.1 |   3.6   4.2   1.5   7.0 |  1884065   178985    3732     911    n/a   52.7 |   0.35   0.22   0.35
+oh-aoci-4       48   0   1 |   66.6  20.4   63.8   65.7   79.0   56.6 |   3.9   4.8   1.9   6.3 |  1924836   177199    2940     996    n/a   40.6 |   0.46   0.34   0.36
+oh-aoci-5       48   0   1 |   66.8  19.7   62.8   69.2   77.2   56.8 |   4.0   4.9   1.8  10.5 |  1946065   179085    3633     994    n/a   41.5 |   0.41   0.33   0.31
+oh-aoci-6       48   0   0 |   67.8  19.4   68.8   61.6   77.4   62.4 |   4.0   4.8   2.0   8.2 |  1943740   177352    2970     994    n/a   40.3 |   0.42   0.29   0.30
+oh-aoci-7       48   0   0 |   62.2  20.5   60.1   61.9   70.2   56.0 |   3.5   4.2   1.5   7.9 |  1852218   177323    3031     958    n/a   39.3 |   0.35   0.30   0.32
+oh-aoci-8       48   0   0 |   66.9  20.5   57.5   71.7   76.9   62.1 |   3.5   4.1   1.5   8.6 |  1862143   176986    2839     975    n/a   38.5 |   0.37   0.29   0.27
+oh-aoci-9       48   0   0 |   65.9  20.5   60.1   66.6   76.0   61.2 |   3.8   4.1   1.5   6.6 |  1897660   176974    2858     903    n/a   39.2 |   0.37   0.26   0.27
+oh-cg-1         48   0   0 |   67.4  17.7   65.7   69.3   71.4   62.4 |   5.1   7.5   2.3  13.0 |    88259    17518    1161     814    n/a   11.3 |   0.43   0.44   0.27
+oh-cg-10        48   0   0 |   70.8  14.6   67.4   69.7   77.8   68.5 |   4.9   6.8   1.9  14.3 |    84754    17207    1061     876    n/a   10.4 |   0.40   0.45   0.26
+oh-cg-2         48   0   0 |   72.3  14.9   67.5   72.5   78.8   71.1 |   5.0   6.9   2.1  14.2 |    87243    17247    1112     837    n/a   12.1 |   0.49   0.43   0.33
+oh-cg-3         48   0   0 |   69.9  15.7   67.5   69.2   77.2   65.1 |   5.7   8.1   2.0  13.6 |    97228    17389    1183     796    n/a   14.6 |   0.45   0.42   0.26
+oh-cg-4         48   0   0 |   68.1  16.8   66.2   64.9   74.6   66.8 |   5.0   7.1   1.9  15.2 |    87128    17923    1111     897    n/a   11.5 |   0.33   0.44   0.28
+oh-cg-5         48   0   0 |   70.2  14.8   66.6   72.1   77.8   63.9 |   5.2   7.2   2.0  13.7 |    88452    17343    1049     764    n/a   10.8 |   0.41   0.44   0.24
+oh-cg-6         48   0   0 |   68.9  14.9   67.4   66.2   77.6   63.9 |   4.9   7.2   2.1  12.8 |    82267    16870    1100     892    n/a    9.9 |   0.47   0.42   0.25
+oh-cg-7         48   0   0 |   68.3  17.0   67.4   67.6   74.1   63.5 |   5.3   7.5   2.7  14.1 |    89330    17736    1135     841    n/a   10.4 |   0.50   0.45   0.31
+oh-cg-8         48   0   0 |   69.1  16.1   66.9   69.2   74.8   65.1 |   5.1   7.4   2.1  13.4 |    84936    17286    1093     817    n/a    9.6 |   0.39   0.45   0.28
+oh-cg-9         48   0   0 |   68.8  15.3   67.1   68.2   76.6   62.5 |   5.1   7.2   2.1  13.2 |    89350    17482    1085     814    n/a   10.6 |   0.39   0.46   0.29
+dims: oh-1=13.1/10.6/16.7/14.8/12.0  oh-10=13.6/11.0/17.3/15.4/12.4  oh-2=13.5/10.6/17.1/15.1/11.9  oh-3=13.0/10.3/17.2/15.3/11.6  oh-4=13.2/10.4/17.1/15.2/11.9  oh-5=12.1/9.8/16.4/14.8/11.2  oh-6=13.6/11.2/17.4/15.2/12.5  oh-7=12.9/10.4/16.8/14.9/11.9  oh-8=13.2/10.6/17.1/15.0/11.8  oh-9=12.9/10.5/16.7/14.9/11.8  oh-aoci-1=12.6/10.6/15.8/14.9/12.0  oh-aoci-10=11.8/10.1/15.9/14.8/11.4  oh-aoci-2=11.9/10.3/15.5/15.0/11.6  oh-aoci-3=12.4/10.1/15.2/15.0/11.7  oh-aoci-4=12.6/10.7/16.3/15.1/11.8  oh-aoci-5=12.7/10.9/16.1/14.8/12.2  oh-aoci-6=13.0/10.9/16.2/15.4/12.2  oh-aoci-7=11.6/9.9/15.1/14.6/11.0  oh-aoci-8=12.8/10.7/16.1/15.0/12.3  oh-aoci-9=12.5/10.4/15.9/15.2/11.9  oh-cg-1=13.1/10.7/16.6/14.9/12.0  oh-cg-10=14.0/11.4/17.3/15.4/12.6  oh-cg-2=14.2/11.8/17.6/15.5/13.2  oh-cg-3=13.6/11.2/17.0/15.4/12.7  oh-cg-4=13.1/10.9/16.8/15.1/12.1  oh-cg-5=13.8/11.4/17.3/15.1/12.7  oh-cg-6=13.3/11.0/16.9/15.2/12.4  oh-cg-7=13.4/11.1/16.7/14.9/12.2  oh-cg-8=13.5/11.2/16.9/15.1/12.5  oh-cg-9=13.3/11.1/17.0/15.1/12.3
+judge vote SD (mean over questions): oh-1=0.7  oh-10=1.1  oh-2=1.0  oh-3=1.0  oh-4=1.1  oh-5=1.3  oh-6=1.0  oh-7=1.1  oh-8=0.9  oh-9=1.1  oh-aoci-1=1.4  oh-aoci-10=1.4  oh-aoci-2=1.2  oh-aoci-3=1.3  oh-aoci-4=1.3  oh-aoci-5=1.4  oh-aoci-6=1.2  oh-aoci-7=1.3  oh-aoci-8=1.3  oh-aoci-9=0.8  oh-cg-1=0.9  oh-cg-10=0.7  oh-cg-2=1.2  oh-cg-3=1.1  oh-cg-4=1.1  oh-cg-5=0.8  oh-cg-6=0.8  oh-cg-7=1.0  oh-cg-8=0.8  oh-cg-9=1.2
+map tools: oh-1=0.0 calls/0ch (used on 0% of questions)  oh-10=0.0 calls/0ch (used on 0% of questions)  oh-2=0.0 calls/0ch (used on 0% of questions)  oh-3=0.0 calls/0ch (used on 0% of questions)  oh-4=0.0 calls/0ch (used on 0% of questions)  oh-5=0.0 calls/0ch (used on 0% of questions)  oh-6=0.0 calls/0ch (used on 0% of questions)  oh-7=0.0 calls/0ch (used on 0% of questions)  oh-8=0.0 calls/0ch (used on 0% of questions)  oh-9=0.0 calls/0ch (used on 0% of questions)  oh-aoci-1=0.8 calls/2309ch (used on 52% of questions)  oh-aoci-10=0.8 calls/1739ch (used on 50% of questions)  oh-aoci-2=0.7 calls/1830ch (used on 46% of questions)  oh-aoci-3=0.8 calls/1993ch (used on 46% of questions)  oh-aoci-4=0.9 calls/1817ch (used on 60% of questions)  oh-aoci-5=1.0 calls/2843ch (used on 60% of questions)  oh-aoci-6=1.0 calls/2404ch (used on 58% of questions)  oh-aoci-7=0.9 calls/2224ch (used on 54% of questions)  oh-aoci-8=1.0 calls/2355ch (used on 54% of questions)  oh-aoci-9=0.8 calls/1786ch (used on 54% of questions)  oh-cg-1=1.2 calls/24063ch (used on 98% of questions)  oh-cg-10=1.3 calls/25739ch (used on 98% of questions)  oh-cg-2=1.2 calls/24499ch (used on 98% of questions)  oh-cg-3=1.2 calls/24709ch (used on 98% of questions)  oh-cg-4=1.4 calls/28042ch (used on 98% of questions)  oh-cg-5=1.2 calls/25722ch (used on 98% of questions)  oh-cg-6=1.2 calls/23169ch (used on 98% of questions)  oh-cg-7=1.2 calls/25088ch (used on 98% of questions)  oh-cg-8=1.2 calls/24897ch (used on 98% of questions)  oh-cg-9=1.2 calls/24706ch (used on 98% of questions)
+totals: oh-1: in=3,549,895 out=65,157  oh-10: in=3,572,851 out=66,196  oh-2: in=3,595,796 out=66,068  oh-3: in=3,721,748 out=63,547  oh-4: in=3,401,584 out=60,003  oh-5: in=3,609,081 out=64,663  oh-6: in=3,701,887 out=66,832  oh-7: in=3,634,683 out=63,804  oh-8: in=3,551,142 out=64,704  oh-9: in=3,246,633 out=61,981  oh-aoci-1: in=89,550,722 out=138,563  oh-aoci-10: in=87,895,360 out=137,754  oh-aoci-2: in=89,194,155 out=138,986  oh-aoci-3: in=90,435,127 out=179,144  oh-aoci-4: in=92,392,151 out=141,113  oh-aoci-5: in=93,411,138 out=174,368  oh-aoci-6: in=93,299,512 out=142,547  oh-aoci-7: in=88,906,482 out=145,472  oh-aoci-8: in=89,382,868 out=136,257  oh-aoci-9: in=91,087,693 out=137,187  oh-cg-1: in=4,236,422 out=55,751  oh-cg-10: in=4,068,215 out=50,923  oh-cg-2: in=4,187,672 out=53,375  oh-cg-3: in=4,666,926 out=56,772  oh-cg-4: in=4,182,149 out=53,332  oh-cg-5: in=4,245,714 out=50,337  oh-cg-6: in=3,948,807 out=52,822  oh-cg-7: in=4,287,847 out=54,464  oh-cg-8: in=4,076,905 out=52,451  oh-cg-9: in=4,288,815 out=52,091
+
+== oh-10 - oh-1: n=48 Δ=+2.6 95%CI=[-0.7,+5.8] median=+0.5 win/tie/loss=24/9/15 sign-test p=0.200 | n for 80% power at this Δ ≈ 159
+   by category: what: +3.6 [+0.1,+7.8] (n=14)  how: +1.6 [-4.2,+9.3] (n=12)  why: +1.3 [-2.7,+6.9] (n=12)  where: +3.8 [-8.0,+13.0] (n=10)
+   paired efficiency (b−a): input_tokens: +478 [-7324,+8600] (1.01x)  peak_input_tokens: -157 [-972,+669] (0.99x)  output_tokens: +22 [-114,+166] (1.02x)  tool_calls: +0 [-1,+1] (1.02x)  wall_s: +0 [-2,+2] (1.01x)  answer_chars: +88 [-26,+203] (1.14x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-10': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/25/13; hit cap: {'oh-1': 15, 'oh-10': 18}
+   -40  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-10          read=['pylint/checkers/base/function_checker.py', 'pylint/checkers/utils.py', 'pylint/lint/pylinter.py', 'pylint/lint/utils.py', 'pylint/testutils/checker_test_case.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=10 retried=None
+   -17  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-10          read=['pylint/checkers/strings.py', 'pylint/message/message.py', 'pylint/reporters/text.py'] steps=10 retried=None
+   -8  How should a class-creating type design iteration protocol methods to separate construction logic from iteration behavio
+         oh-1           read=['doc/whatsnew/3/3.0/index.rst', 'pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/typecheck.py'] steps=10 retried=None
+         oh-10          read=['pylint/checkers/classes/special_methods_checker.py', 'pylint/config/argument.py', 'pylint/pyreverse/inspector.py'] steps=10 retried=None
+   +38  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-10          read=['pylint/checkers/modified_iterating_checker.py', 'pylint/checkers/nested_min_max.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/strings.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +27  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-10          read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +25  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-10          read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py'] steps=7 retried=None
+
+== oh-2 - oh-1: n=48 Δ=+1.1 95%CI=[-1.6,+3.9] median=+0.0 win/tie/loss=19/13/16 sign-test p=0.736 | n for 80% power at this Δ ≈ 670
+   by category: what: +1.4 [-1.9,+5.0] (n=14)  how: +0.2 [-6.5,+7.8] (n=12)  why: -1.0 [-6.2,+3.9] (n=12)  where: +4.0 [-1.5,+10.0] (n=10)
+   paired efficiency (b−a): input_tokens: +956 [-7187,+9356] (1.01x)  peak_input_tokens: +20 [-834,+877] (1.00x)  output_tokens: +19 [-140,+174] (1.01x)  tool_calls: +0 [-1,+1] (1.00x)  wall_s: +1 [-2,+4] (1.07x)  answer_chars: -21 [-112,+62] (0.97x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-2': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/22/14; hit cap: {'oh-1': 15, 'oh-2': 18}
+   -19  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-2           read=['pylint/checkers/variables.py'] steps=10 retried=None
+   -18  Why does the function that yields values in the assignment-from-no-return test use yield instead of return to validate e
+         oh-1           read=['pylint/checkers/typecheck.py', 'tests/functional/a/assignment/assignment_from_no_return.py', 'tests/functional/a/assignment/assignment_from_no_return_2.py'] steps=6 retried=None
+         oh-2           read=['pylint/checkers/typecheck.py', 'tests/functional/a/assignment/assignment_from_no_return.py', 'tests/functional/a/assignment/assignment_from_no_return_2.py'] steps=3 retried=None
+   -17  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-2           read=['pylint/checkers/strings.py', 'pylint/checkers/utils.py'] steps=10 retried=None
+   +32  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-2           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/exceptions.py', 'pylint/checkers/refactoring/recommendation_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/strings.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/unicode.py', 'pylint/checkers/utils.py'] steps=10 retried=None
+   +19  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-2           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+   +16  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-2           read=['pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py', 'tests/functional/u/used/used_before_assignment_typing.txt'] steps=10 retried=None
+
+== oh-3 - oh-1: n=48 Δ=+0.2 95%CI=[-2.8,+3.1] median=+0.0 win/tie/loss=17/9/22 sign-test p=0.522 | n for 80% power at this Δ ≈ 31121
+   by category: what: +1.5 [-3.1,+6.9] (n=14)  how: -4.7 [-12.4,+1.8] (n=12)  why: +0.4 [-3.2,+5.3] (n=12)  where: +3.8 [-2.2,+10.6] (n=10)
+   paired efficiency (b−a): input_tokens: +3580 [-3892,+11034] (1.05x)  peak_input_tokens: -15 [-664,+676] (1.00x)  output_tokens: -34 [-168,+91] (0.98x)  tool_calls: -0 [-1,+1] (0.97x)  wall_s: +2 [-1,+7] (1.15x)  answer_chars: +15 [-81,+115] (1.02x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-3': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/24/14; hit cap: {'oh-1': 15, 'oh-3': 20}
+   -33  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-3           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/a/assigning/assigning_non_slot.txt', 'tests/functional/n/not_callable.py'] steps=6 retried=None
+   -17  How does the test class that extends parent slots using augmentation assignment interact with ancestor slot definitions 
+         oh-1           read=['doc/whatsnew/3/3.2/index.rst', 'pylint/checkers/classes/class_checker.py', 'tests/functional/s/slots_checks.py', 'tests/functional/s/slots_checks.txt'] steps=10 retried=None
+         oh-3           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/s/slots_checks.py', 'tests/functional/s/slots_checks.txt'] steps=10 retried=None
+   -17  What are the semantic implications of a concrete class implementing a typing protocol having an empty __init__ method bo
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called_py38.py', 'tests/functional/s/super/super_init_not_called_py38.txt'] steps=8 retried=None
+         oh-3           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/functional/p/protocol_classes_abstract.txt', 'tests/functional/s/super/super_init_not_called.py'] steps=10 retried=None
+   +28  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-3           read=['pylint/checkers/base/docstring_checker.py', 'pyproject.toml'] steps=10 retried=None
+   +26  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-3           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +23  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-3           read=['pylint/checkers/classes/special_methods_checker.py'] steps=7 retried=None
+
+== oh-4 - oh-1: n=48 Δ=+0.6 95%CI=[-2.4,+3.8] median=-0.5 win/tie/loss=17/7/24 sign-test p=0.349 | n for 80% power at this Δ ≈ 2264
+   by category: what: +1.4 [-2.2,+6.9] (n=14)  how: -0.5 [-8.2,+7.0] (n=12)  why: -0.4 [-4.2,+3.5] (n=12)  where: +2.2 [-6.3,+11.1] (n=10)
+   paired efficiency (b−a): input_tokens: -3090 [-11252,+5719] (0.96x)  peak_input_tokens: -551 [-1248,+195] (0.96x)  output_tokens: -107 [-242,+30] (0.92x)  tool_calls: -1 [-2,+0] (0.93x)  wall_s: +3 [+0,+7] (1.25x)  answer_chars: +51 [-57,+167] (1.08x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-4': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 12/23/13; hit cap: {'oh-1': 15, 'oh-4': 18}
+   -32  How should a class-creating type design iteration protocol methods to separate construction logic from iteration behavio
+         oh-1           read=['doc/whatsnew/3/3.0/index.rst', 'pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/typecheck.py'] steps=10 retried=None
+         oh-4           read=['doc/data/messages/n/non-iterator-returned/bad.py', 'doc/data/messages/n/non-iterator-returned/details.rst', 'doc/data/messages/n/non-iterator-returned/good.py', 'pylint/checkers/classes/special_methods_checker.py'] steps=9 retried=None
+   -21  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-4           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=5 retried=None
+   -14  Where in the no-member validation function is the mechanism that enables modules with dynamic attribute handlers to bypa
+         oh-1           read=['pylint/checkers/typecheck.py'] steps=2 retried=None
+         oh-4           read=['pylint/checkers/typecheck.py'] steps=3 retried=None
+   +30  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-4           read=['pylint/checkers/base/docstring_checker.py'] steps=10 retried=None
+   +29  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-4           read=['pylint/checkers/refactoring/refactoring_checker.py'] steps=10 retried=None
+   +27  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-4           read=['pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+
+== oh-5 - oh-1: n=48 Δ=-2.9 95%CI=[-6.7,+0.6] median=-0.5 win/tie/loss=19/5/24 sign-test p=0.542 | n for 80% power at this Δ ≈ 157
+   by category: what: -0.4 [-5.3,+3.8] (n=14)  how: -6.5 [-17.8,+3.2] (n=12)  why: -2.6 [-8.2,+2.4] (n=12)  where: -2.3 [-10.2,+4.6] (n=10)
+   paired efficiency (b−a): input_tokens: +1233 [-5703,+8336] (1.02x)  peak_input_tokens: -280 [-915,+351] (0.98x)  output_tokens: -10 [-150,+131] (0.99x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: +1 [-2,+4] (1.07x)  answer_chars: +45 [-63,+153] (1.07x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-5': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/24/14; hit cap: {'oh-1': 15, 'oh-5': 19}
+   -43  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-5           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/a/assigning/assigning_non_slot.txt', 'tests/functional/n/not_callable.py'] steps=8 retried=None
+   -41  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-5           read=['pylint/config/_pylint_config/utils.py', 'pylint/config/argument.py', 'pylint/config/arguments_manager.py', 'pylint/config/arguments_provider.py', 'pylint/message/message.py'] steps=10 retried=None
+   -29  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-5           read=['pylint/checkers/base/function_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=10 retried=None
+   +20  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-5           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/modified_iterating_checker.py'] steps=10 retried=None
+   +19  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-5           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=3 retried=None
+   +14  Why does the test class that intentionally violates the protocol by returning a three-element tuple instead of the requi
+         oh-1           read=['tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+         oh-5           read=['pylint/checkers/classes/special_methods_checker.py', 'tests/functional/i/invalid/invalid_getnewargs/invalid_getnewargs_ex_returned.py'] steps=5 retried=None
+
+== oh-6 - oh-1: n=48 Δ=+2.7 95%CI=[-0.1,+5.7] median=+0.0 win/tie/loss=22/9/17 sign-test p=0.522 | n for 80% power at this Δ ≈ 118
+   by category: what: +5.7 [+1.6,+11.1] (n=14)  how: +2.0 [-3.9,+9.8] (n=12)  why: -0.2 [-4.0,+3.2] (n=12)  where: +2.7 [-5.0,+10.8] (n=10)
+   paired efficiency (b−a): input_tokens: +3166 [-4482,+11095] (1.04x)  peak_input_tokens: +32 [-758,+829] (1.00x)  output_tokens: +35 [-97,+175] (1.03x)  tool_calls: +1 [-0,+2] (1.07x)  wall_s: +1 [-1,+4] (1.08x)  answer_chars: +66 [-28,+158] (1.10x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-6': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/21/16; hit cap: {'oh-1': 15, 'oh-6': 18}
+   -16  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-6           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=6 retried=None
+   -14  How does a base class without a slot restriction declaration interact with the attribute assignment validation checker w
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py'] steps=7 retried=None
+         oh-6           read=['doc/data/messages/d/declare-non-slot/details.rst', 'pylint/checkers/classes/class_checker.py'] steps=10 retried=None
+   -13  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-6           read=['pylint/checkers/base/name_checker/checker.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +38  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-6           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/modified_iterating_checker.py', 'pylint/checkers/refactoring/recommendation_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py'] steps=10 retried=None
+   +33  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-6           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+   +26  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-6           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+
+== oh-7 - oh-1: n=48 Δ=-0.1 95%CI=[-4.0,+3.6] median=+0.0 win/tie/loss=23/8/17 sign-test p=0.430 | n for 80% power at this Δ ≈ 67184
+   by category: what: +5.1 [+0.1,+11.9] (n=14)  how: -5.2 [-14.4,+2.1] (n=12)  why: -4.2 [-12.4,+2.5] (n=12)  where: +3.4 [-4.3,+10.7] (n=10)
+   paired efficiency (b−a): input_tokens: +1766 [-5416,+9033] (1.02x)  peak_input_tokens: +14 [-637,+704] (1.00x)  output_tokens: -28 [-190,+130] (0.98x)  tool_calls: -0 [-1,+1] (0.99x)  wall_s: -1 [-3,+1] (0.92x)  answer_chars: +30 [-62,+122] (1.05x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-7': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 10/20/18; hit cap: {'oh-1': 15, 'oh-7': 18}
+   -42  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-7           read=['tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=4 retried=None
+   -32  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-7           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   -30  Why does the test class that intentionally violates the protocol by returning a three-element tuple instead of the requi
+         oh-1           read=['tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+         oh-7           read=['pylint/lint/pylinter.py', 'pylint/typing.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/pyreverse/conftest.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+   +38  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-7           read=['pylint/checkers/base/docstring_checker.py'] steps=2 retried=None
+   +25  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-7           read=['pylint/checkers/typecheck.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +19  What is the scope resolution chain for the namedtuple class attribute used as return type annotation in the nested class
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/n/namedtuple_member_inference.py'] steps=10 retried=None
+         oh-7           read=['doc/whatsnew/2/2.13/full.rst', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'tests/functional/u/undefined/undefined_variable_classes.py', 'tests/functional/u/used/used_before_assignment_type_annotations.py', 'tests/functional/u/used/used_before_assignment_type_annotations.txt'] steps=10 retried=None
+
+== oh-8 - oh-1: n=48 Δ=+0.5 95%CI=[-2.7,+3.9] median=+0.0 win/tie/loss=18/12/18 sign-test p=1.000 | n for 80% power at this Δ ≈ 4419
+   by category: what: +3.4 [-2.9,+10.9] (n=14)  how: -1.5 [-7.9,+6.7] (n=12)  why: -1.2 [-3.6,+1.3] (n=12)  where: +0.9 [-8.3,+9.6] (n=10)
+   paired efficiency (b−a): input_tokens: +26 [-6756,+7555] (1.00x)  peak_input_tokens: -342 [-976,+355] (0.97x)  output_tokens: -9 [-159,+139] (0.99x)  tool_calls: +0 [-1,+1] (1.01x)  wall_s: +2 [-0,+5] (1.15x)  answer_chars: +26 [-76,+137] (1.04x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-8': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 11/23/14; hit cap: {'oh-1': 15, 'oh-8': 18}
+   -29  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-8           read=['pylint/checkers/base/function_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'pylint/lint/pylinter.py', 'pylint/lint/utils.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=10 retried=None
+   -22  What are the semantic implications of a concrete class implementing a typing protocol having an empty __init__ method bo
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called_py38.py', 'tests/functional/s/super/super_init_not_called_py38.txt'] steps=8 retried=None
+         oh-8           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/s/super/super_init_not_called.py'] steps=9 retried=None
+   -16  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-8           read=['pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/message/message_definition.py'] steps=10 retried=None
+   +40  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-8           read=['pylint/checkers/base/docstring_checker.py'] steps=4 retried=None
+   +34  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-8           read=['pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +25  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-8           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+
+== oh-9 - oh-1: n=48 Δ=-0.4 95%CI=[-3.9,+2.9] median=+0.0 win/tie/loss=21/7/20 sign-test p=1.000 | n for 80% power at this Δ ≈ 6536
+   by category: what: +3.0 [-1.1,+7.1] (n=14)  how: -2.9 [-10.2,+4.7] (n=12)  why: -0.4 [-8.7,+6.8] (n=12)  where: -2.2 [-10.6,+4.7] (n=10)
+   paired efficiency (b−a): input_tokens: -6318 [-13130,+16] (0.91x)  peak_input_tokens: -650 [-1227,-106] (0.95x)  output_tokens: -66 [-199,+66] (0.95x)  tool_calls: -1 [-2,+0] (0.92x)  wall_s: -2 [-5,-0] (0.83x)  answer_chars: +114 [-26,+265] (1.18x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-9': {'terminal': 48}}
+   steps (b−a): fewer/same/more = 13/22/13; hit cap: {'oh-1': 15, 'oh-9': 15}
+   -36  Why does the test class that intentionally violates the protocol by returning a three-element tuple instead of the requi
+         oh-1           read=['tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+         oh-9           read=['pylint/lint/pylinter.py', 'pylint/typing.py', 'tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/c/class_protocol_ellipsis.txt', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+   -32  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-9           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=6 retried=None
+   -30  How should a class-creating type design iteration protocol methods to separate construction logic from iteration behavio
+         oh-1           read=['doc/whatsnew/3/3.0/index.rst', 'pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/typecheck.py'] steps=10 retried=None
+         oh-9           read=['doc/data/messages/n/non-iterator-returned/good.py', 'doc/whatsnew/1/1.5.rst', 'pylint/checkers/classes/special_methods_checker.py', 'tests/functional/n/non/non_iterator_returned.py'] steps=10 retried=None
+   +27  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-9           read=['pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=6 retried=None
+   +23  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-9           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/refactoring/recommendation_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py'] steps=10 retried=None
+   +19  What is the scope resolution chain for the namedtuple class attribute used as return type annotation in the nested class
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/n/namedtuple_member_inference.py'] steps=10 retried=None
+         oh-9           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_type_annotations.py'] steps=10 retried=None
+
+== oh-aoci-1 - oh-1: n=48 Δ=-1.3 95%CI=[-6.8,+4.1] median=+1.0 win/tie/loss=25/1/22 sign-test p=0.771 | n for 80% power at this Δ ≈ 1801
+   by category: what: +2.9 [-3.5,+8.8] (n=14)  how: -9.4 [-17.7,-1.8] (n=12)  why: +5.4 [-6.3,+14.2] (n=12)  where: -5.4 [-23.5,+12.0] (n=10)
+   paired efficiency (b−a): input_tokens: +1791684 [+1610071,+1980523] (25.23x)  peak_input_tokens: +164517 [+163208,+165819] (14.08x)  output_tokens: +1529 [+1274,+1773] (2.13x)  tool_calls: -6 [-7,-4] (0.42x)  wall_s: +26 [+23,+29] (2.99x)  answer_chars: +337 [+123,+574] (1.52x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-1': {'(none)': 17, 'terminal': 6, 'aoci_get_entries': 7, 'aoci_search': 18}}
+   steps (b−a): fewer/same/more = 28/11/9; hit cap: {'oh-1': 15, 'oh-aoci-1': 7}
+   -50  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-aoci-1      read=['pylint/checkers/variables.py'] steps=10 retried=None
+   -47  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-1      read=['tests/functional/u/undefined/undefined_variable_typing.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=3 retried=None
+   -45  Where does the descriptor protocol implementation that provides __get__ and __set__ methods interact with the slot assig
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py'] steps=5 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+   +38  Where does the control flow in the method that checks ellipsis constants branch differently when the grandparent node is
+         oh-1           read=['pylint/checkers/ellipsis_checker.py'] steps=2 retried=None
+         oh-aoci-1      read=['pylint/checkers/ellipsis_checker.py'] steps=3 retried=None
+   +33  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-aoci-1      read=[] steps=1 retried=None
+   +29  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-1      read=[] steps=0 retried=None
+
+== oh-aoci-10 - oh-1: n=48 Δ=-3.1 95%CI=[-9.0,+2.8] median=+1.0 win/tie/loss=25/2/21 sign-test p=0.659 | n for 80% power at this Δ ≈ 362
+   by category: what: +3.7 [-4.2,+10.5] (n=14)  how: -16.2 [-25.7,-7.0] (n=12)  why: +3.6 [-7.4,+14.2] (n=12)  where: -5.1 [-22.1,+12.6] (n=10)
+   paired efficiency (b−a): input_tokens: +1757197 [+1572829,+1942054] (24.76x)  peak_input_tokens: +164240 [+163040,+165349] (14.06x)  output_tokens: +1512 [+1284,+1735] (2.11x)  tool_calls: -6 [-7,-4] (0.41x)  wall_s: +25 [+22,+28] (2.90x)  answer_chars: +371 [+154,+623] (1.57x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-10': {'(none)': 17, 'aoci_search': 19, 'finish': 1, 'aoci_get_entries': 5, 'terminal': 6}}
+   steps (b−a): fewer/same/more = 34/7/7; hit cap: {'oh-1': 15, 'oh-aoci-10': 8}
+   -50  How does the filter class that skips Sphinx documentation directive patterns inherit its pattern-based filtering mechani
+         oh-1           read=['pylint/checkers/spelling.py'] steps=4 retried=None
+         oh-aoci-10     read=[] steps=1 retried=None
+   -43  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-10     read=['tests/functional/u/used/used_before_assignment_typing.py'] steps=3 retried=None
+   -37  What determines whether the function call assignment validator or the dunder name string validator executes first in the
+         oh-1           read=['pylint/checkers/typecheck.py'] steps=3 retried=None
+         oh-aoci-10     read=[] steps=0 retried=None
+   +45  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-aoci-10     read=['pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'pylint/utils/ast_walker.py'] steps=10 retried=None
+   +43  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-10     read=['pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/clear_lru_cache.py', 'pylint/checkers/utils.py', 'pylint/lint/run.py'] steps=10 retried=None
+   +28  What are the semantic implications of a concrete class implementing a typing protocol having an empty __init__ method bo
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called_py38.py', 'tests/functional/s/super/super_init_not_called_py38.txt'] steps=8 retried=None
+         oh-aoci-10     read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/functional/s/super/super_init_not_called.py', 'tests/functional/s/super/super_init_not_called_extensions_py310.py', 'tests/functional/s/super/super_init_not_called_py38.py'] steps=5 retried=None
+
+== oh-aoci-2 - oh-1: n=48 Δ=-3.0 95%CI=[-8.2,+2.2] median=+1.0 win/tie/loss=25/2/21 sign-test p=0.659 | n for 80% power at this Δ ≈ 295
+   by category: what: +0.9 [-6.4,+7.7] (n=14)  how: -10.9 [-21.1,-1.2] (n=12)  why: +1.2 [-11.0,+12.2] (n=12)  where: -3.9 [-16.3,+6.9] (n=10)
+   paired efficiency (b−a): input_tokens: +1784255 [+1586034,+1981977] (25.13x)  peak_input_tokens: +164321 [+162910,+165681] (14.07x)  output_tokens: +1538 [+1283,+1786] (2.13x)  tool_calls: -6 [-8,-4] (0.42x)  wall_s: +27 [+24,+29] (3.02x)  answer_chars: +388 [+180,+635] (1.60x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-2': {'(none)': 19, 'aoci_search': 19, 'terminal': 7, 'aoci_get_entries': 3}}
+   steps (b−a): fewer/same/more = 34/7/7; hit cap: {'oh-1': 15, 'oh-aoci-2': 9}
+   -50  How does the filter class that skips Sphinx documentation directive patterns inherit its pattern-based filtering mechani
+         oh-1           read=['pylint/checkers/spelling.py'] steps=4 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   -48  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-aoci-2      read=['pylint/checkers/variables.py'] steps=10 retried=None
+   -41  Where is the abstract method checking implementation that handles assignments connecting abstract methods to protocol me
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py'] steps=3 retried=None
+         oh-aoci-2      read=[] steps=0 retried=None
+   +40  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-2      read=['pylint/checkers/classes/special_methods_checker.py'] steps=5 retried=None
+   +23  Why does repeatedly instantiating the mock linter, AST walker, and test checker in the message filtering decorator test 
+         oh-1           read=['tests/lint/test_pylinter.py', 'tests/lint/unittest_lint.py', 'tests/utils/unittest_ast_walker.py'] steps=10 retried=None
+         oh-aoci-2      read=['pylint/checkers/base_checker.py', 'pylint/checkers/utils.py', 'pylint/config/arguments_manager.py', 'pylint/config/arguments_provider.py', 'pylint/lint/message_state_handler.py', 'pylint/utils/ast_walker.py', 'tests/utils/unittest_ast_walker.py'] steps=9 retried=None
+   +22  What is the scope resolution chain for the namedtuple class attribute used as return type annotation in the nested class
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/n/namedtuple_member_inference.py'] steps=10 retried=None
+         oh-aoci-2      read=['pylint/checkers/variables.py', 'tests/functional/n/namedtuple_member_inference.py', 'tests/functional/n/no/no_member_nested_namedtuple.py', 'tests/functional/u/undefined/undefined_variable_classes.py', 'tests/functional/u/used/used_before_assignment_type_annotations.py'] steps=10 retried=None
+
+== oh-aoci-3 - oh-1: n=48 Δ=-2.8 95%CI=[-8.6,+3.1] median=+0.5 win/tie/loss=24/2/22 sign-test p=0.883 | n for 80% power at this Δ ≈ 431
+   by category: what: -3.0 [-10.2,+4.3] (n=14)  how: -7.6 [-18.9,+2.8] (n=12)  why: -1.6 [-14.7,+10.2] (n=12)  where: +1.7 [-15.7,+17.9] (n=10)
+   paired efficiency (b−a): input_tokens: +1810109 [+1618084,+2010669] (25.48x)  peak_input_tokens: +166412 [+163522,+171038] (14.24x)  output_tokens: +2375 [+1345,+4231] (2.75x)  tool_calls: -6 [-7,-4] (0.42x)  wall_s: +40 [+34,+46] (3.99x)  answer_chars: +259 [+73,+452] (1.40x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-3': {'terminal': 7, 'aoci_search': 19, '(none)': 19, 'aoci_get_entries': 3}}
+   steps (b−a): fewer/same/more = 32/7/9; hit cap: {'oh-1': 15, 'oh-aoci-3': 8}
+   -50  How does the filter class that skips Sphinx documentation directive patterns inherit its pattern-based filtering mechani
+         oh-1           read=['pylint/checkers/spelling.py'] steps=4 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -46  Why does the inheritance chain from the base role class through the statement role class impact method resolution order 
+         oh-1           read=['pylint/lint/pylinter.py', 'tests/regrtest_data/max_inferable_limit_for_classes/main.py', 'tests/regrtest_data/max_inferable_limit_for_classes/nodes/roles.py', 'tests/regrtest_data/max_inferable_limit_for_classes/other_funcs.py', 'tests/test_self.py'] steps=10 retried=None
+         oh-aoci-3      read=[] steps=0 retried=None
+   -41  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-3      read=['tests/functional/u/undefined/undefined_variable.py', 'tests/functional/u/undefined/undefined_variable_typing.py', 'tests/functional/u/used/used_before_assignment_typing.py', 'tests/functional/u/used/used_before_assignment_typing.txt'] steps=9 retried=None
+   +40  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-3      read=['pylint/checkers/classes/special_methods_checker.py'] steps=4 retried=None
+   +40  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-aoci-3      read=['pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +33  Where does the control flow in the method that checks ellipsis constants branch differently when the grandparent node is
+         oh-1           read=['pylint/checkers/ellipsis_checker.py'] steps=2 retried=None
+         oh-aoci-3      read=['pylint/checkers/ellipsis_checker.py', 'pylint/checkers/format.py', 'tests/functional/u/unnecessary/unnecessary_ellipsis.py'] steps=10 retried=None
+
+== oh-aoci-4 - oh-1: n=48 Δ=-0.6 95%CI=[-5.5,+3.9] median=+2.5 win/tie/loss=29/0/19 sign-test p=0.193 | n for 80% power at this Δ ≈ 6048
+   by category: what: +2.0 [-5.9,+9.6] (n=14)  how: -6.3 [-16.4,+2.8] (n=12)  why: +5.6 [+0.1,+10.7] (n=12)  where: -4.8 [-19.4,+8.6] (n=10)
+   paired efficiency (b−a): input_tokens: +1850880 [+1662648,+2051667] (26.03x)  peak_input_tokens: +164625 [+163294,+165906] (14.09x)  output_tokens: +1582 [+1306,+1850] (2.17x)  tool_calls: -5 [-7,-3] (0.49x)  wall_s: +27 [+25,+30] (3.07x)  answer_chars: +345 [+130,+581] (1.53x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-4': {'aoci_search': 20, '(none)': 16, 'aoci_get_entries': 9, 'terminal': 3}}
+   steps (b−a): fewer/same/more = 28/10/10; hit cap: {'oh-1': 15, 'oh-aoci-4': 7}
+   -41  How would you refactor the configuration option value formatter to implement parameter validation and type checking whil
+         oh-1           read=['pylint/typing.py', 'pylint/utils/utils.py'] steps=6 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   -41  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-4      read=['tests/functional/u/undefined/undefined_variable_typing.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=3 retried=None
+   -37  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +28  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-aoci-4      read=[] steps=0 retried=None
+   +24  How does a base class without a slot restriction declaration interact with the attribute assignment validation checker w
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py'] steps=7 retried=None
+         oh-aoci-4      read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py'] steps=8 retried=None
+   +20  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-aoci-4      read=[] steps=1 retried=None
+
+== oh-aoci-5 - oh-1: n=48 Δ=-0.4 95%CI=[-5.2,+4.1] median=+1.0 win/tie/loss=29/3/16 sign-test p=0.072 | n for 80% power at this Δ ≈ 12253
+   by category: what: +1.0 [-3.6,+5.6] (n=14)  how: -2.8 [-12.5,+5.6] (n=12)  why: +3.8 [-8.2,+14.2] (n=12)  where: -4.6 [-16.5,+6.6] (n=10)
+   paired efficiency (b−a): input_tokens: +1872109 [+1689967,+2057702] (26.31x)  peak_input_tokens: +166512 [+164042,+170208] (14.24x)  output_tokens: +2275 [+1435,+3758] (2.68x)  tool_calls: -5 [-7,-3] (0.50x)  wall_s: +28 [+24,+33] (3.14x)  answer_chars: +343 [+187,+503] (1.53x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-5': {'(none)': 13, 'aoci_search': 23, 'terminal': 6, 'aoci_get_entries': 6}}
+   steps (b−a): fewer/same/more = 26/16/6; hit cap: {'oh-1': 15, 'oh-aoci-5': 9}
+   -50  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-aoci-5      read=['pylint/checkers/variables.py'] steps=10 retried=None
+   -43  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-5      read=['tests/functional/u/used/used_before_assignment_typing.py'] steps=4 retried=None
+   -35  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-aoci-5      read=['pylint/checkers/strings.py'] steps=5 retried=None
+   +40  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-5      read=[] steps=3 retried=None
+   +25  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-aoci-5      read=[] steps=1 retried=cut_off
+   +23  Why does repeatedly instantiating the mock linter, AST walker, and test checker in the message filtering decorator test 
+         oh-1           read=['tests/lint/test_pylinter.py', 'tests/lint/unittest_lint.py', 'tests/utils/unittest_ast_walker.py'] steps=10 retried=None
+         oh-aoci-5      read=['pylint/checkers/base_checker.py', 'pylint/checkers/utils.py', 'pylint/lint/message_state_handler.py', 'pylint/message/message_id_store.py', 'pylint/utils/ast_walker.py', 'tests/utils/unittest_ast_walker.py'] steps=8 retried=None
+
+== oh-aoci-6 - oh-1: n=48 Δ=+0.6 95%CI=[-4.9,+6.1] median=+1.5 win/tie/loss=26/2/20 sign-test p=0.461 | n for 80% power at this Δ ≈ 7192
+   by category: what: +7.0 [-0.5,+14.1] (n=14)  how: -10.4 [-24.3,+2.9] (n=12)  why: +4.0 [-5.9,+14.0] (n=12)  where: +1.0 [-10.0,+10.7] (n=10)
+   paired efficiency (b−a): input_tokens: +1869784 [+1670329,+2063818] (26.28x)  peak_input_tokens: +164779 [+163375,+166113] (14.11x)  output_tokens: +1612 [+1346,+1872] (2.19x)  tool_calls: -5 [-7,-3] (0.49x)  wall_s: +27 [+24,+30] (3.05x)  answer_chars: +343 [+158,+546] (1.53x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-6': {'(none)': 16, 'aoci_search': 21, 'aoci_get_entries': 7, 'terminal': 4}}
+   steps (b−a): fewer/same/more = 26/13/9; hit cap: {'oh-1': 15, 'oh-aoci-6': 11}
+   -55  How does the filter class that skips Sphinx documentation directive patterns inherit its pattern-based filtering mechani
+         oh-1           read=['pylint/checkers/spelling.py'] steps=4 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   -43  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-aoci-6      read=['tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/m/method_hidden.txt', 'tests/functional/n/not_callable.py', 'tests/regrtest_data/descriptor_crash.py', 'tests/test_regr.py'] steps=10 retried=None
+   -38  Where is the abstract method checking implementation that handles assignments connecting abstract methods to protocol me
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py'] steps=3 retried=None
+         oh-aoci-6      read=[] steps=0 retried=None
+   +44  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-6      read=['pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/clear_lru_cache.py', 'pylint/checkers/utils.py', 'pylint/lint/pylinter.py', 'pylint/lint/run.py'] steps=10 retried=None
+   +38  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-aoci-6      read=['doc/data/messages/s/stop-iteration-return/bad/two_fruit_generator.py', 'doc/data/messages/s/stop-iteration-return/good/two_fruit_generator.py', 'pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/symilar.py', 'pylint/extensions/consider_refactoring_into_while_condition.py'] steps=10 retried=None
+   +29  What are the semantic implications of a concrete class implementing a typing protocol having an empty __init__ method bo
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called_py38.py', 'tests/functional/s/super/super_init_not_called_py38.txt'] steps=8 retried=None
+         oh-aoci-6      read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'pylint/extensions/no_self_use.py', 'tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/functional/s/super/super_init_not_called.py', 'tests/functional/s/super/super_init_not_called_extensions_py310.py', 'tests/functional/s/super/super_init_not_called_extensions_py310.txt', 'tests/functional/s/super/super_init_not_called_py38.py'] steps=8 retried=None
+
+== oh-aoci-7 - oh-1: n=48 Δ=-4.9 95%CI=[-10.4,+0.4] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 117
+   by category: what: -1.7 [-10.9,+7.1] (n=14)  how: -10.1 [-20.2,-0.6] (n=12)  why: -3.2 [-14.8,+6.9] (n=12)  where: -5.4 [-19.2,+6.9] (n=10)
+   paired efficiency (b−a): input_tokens: +1778262 [+1597974,+1963828] (25.04x)  peak_input_tokens: +164750 [+163231,+166333] (14.10x)  output_tokens: +1673 [+1302,+2156] (2.23x)  tool_calls: -6 [-7,-4] (0.42x)  wall_s: +26 [+23,+29] (2.98x)  answer_chars: +307 [+149,+472] (1.47x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-7': {'(none)': 18, 'aoci_search': 20, 'aoci_get_entries': 6, 'terminal': 4}}
+   steps (b−a): fewer/same/more = 31/11/6; hit cap: {'oh-1': 15, 'oh-aoci-7': 6}
+   -52  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-aoci-7      read=['pylint/checkers/variables.py'] steps=10 retried=None
+   -48  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   -47  What determines whether the function call assignment validator or the dunder name string validator executes first in the
+         oh-1           read=['pylint/checkers/typecheck.py'] steps=3 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +27  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-aoci-7      read=[] steps=0 retried=None
+   +26  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-7      read=['pylint/checkers/classes/special_methods_checker.py'] steps=3 retried=None
+   +25  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-aoci-7      read=[] steps=1 retried=None
+
+== oh-aoci-8 - oh-1: n=48 Δ=-0.3 95%CI=[-5.6,+4.8] median=+0.5 win/tie/loss=24/3/21 sign-test p=0.766 | n for 80% power at this Δ ≈ 27022
+   by category: what: -4.3 [-10.5,+2.1] (n=14)  how: -0.3 [-8.9,+7.6] (n=12)  why: +3.5 [-9.2,+14.3] (n=12)  where: +0.7 [-14.9,+14.9] (n=10)
+   paired efficiency (b−a): input_tokens: +1788187 [+1608438,+1978431] (25.18x)  peak_input_tokens: +164413 [+163123,+165621] (14.08x)  output_tokens: +1481 [+1253,+1712] (2.09x)  tool_calls: -6 [-7,-4] (0.42x)  wall_s: +25 [+22,+28] (2.92x)  answer_chars: +324 [+147,+512] (1.50x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-8': {'(none)': 18, 'aoci_search': 19, 'aoci_get_entries': 7, 'terminal': 4}}
+   steps (b−a): fewer/same/more = 33/10/5; hit cap: {'oh-1': 15, 'oh-aoci-8': 8}
+   -52  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-aoci-8      read=['pylint/checkers/variables.py'] steps=6 retried=None
+   -48  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-8      read=[] steps=0 retried=None
+   -30  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-aoci-8      read=['pylint/checkers/strings.py'] steps=7 retried=None
+   +40  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-8      read=['pylint/checkers/classes/special_methods_checker.py'] steps=7 retried=None
+   +33  Where does the control flow in the method that checks ellipsis constants branch differently when the grandparent node is
+         oh-1           read=['pylint/checkers/ellipsis_checker.py'] steps=2 retried=None
+         oh-aoci-8      read=['pylint/checkers/base/pass_checker.py', 'pylint/checkers/ellipsis_checker.py', 'pylint/checkers/format.py'] steps=10 retried=None
+   +28  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-aoci-8      read=[] steps=1 retried=None
+
+== oh-aoci-9 - oh-1: n=48 Δ=-1.2 95%CI=[-6.1,+3.5] median=+1.5 win/tie/loss=26/0/22 sign-test p=0.665 | n for 80% power at this Δ ≈ 1513
+   by category: what: -1.6 [-7.6,+3.6] (n=14)  how: -5.4 [-13.1,+1.3] (n=12)  why: +2.6 [-10.9,+14.8] (n=12)  where: -0.2 [-13.4,+11.7] (n=10)
+   paired efficiency (b−a): input_tokens: +1823704 [+1633443,+2013019] (25.66x)  peak_input_tokens: +164400 [+163110,+165643] (14.08x)  output_tokens: +1501 [+1256,+1741] (2.11x)  tool_calls: -6 [-7,-4] (0.42x)  wall_s: +26 [+23,+29] (2.97x)  answer_chars: +252 [+86,+438] (1.39x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-aoci-9': {'(none)': 17, 'aoci_search': 21, 'aoci_get_entries': 5, 'terminal': 5}}
+   steps (b−a): fewer/same/more = 27/14/7; hit cap: {'oh-1': 15, 'oh-aoci-9': 8}
+   -44  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-aoci-9      read=['pylint/checkers/variables.py'] steps=10 retried=None
+   -43  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-aoci-9      read=['tests/functional/u/used/used_before_assignment_typing.py'] steps=3 retried=None
+   -37  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +44  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-aoci-9      read=['pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/clear_lru_cache.py', 'pylint/checkers/utils.py'] steps=10 retried=None
+   +31  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+   +22  Where is the initialization logic that the child class's initialization method delegates to through the parent class del
+         oh-1           read=['pylint/checkers/base_checker.py', 'pylint/config/arguments_provider.py'] steps=8 retried=None
+         oh-aoci-9      read=[] steps=0 retried=None
+
+== oh-cg-1 - oh-1: n=48 Δ=+0.2 95%CI=[-3.9,+4.0] median=+0.0 win/tie/loss=22/9/17 sign-test p=0.522 | n for 80% power at this Δ ≈ 43892
+   by category: what: +3.9 [-1.1,+8.5] (n=14)  how: -2.7 [-12.9,+5.4] (n=12)  why: -2.0 [-11.5,+5.8] (n=12)  where: +1.0 [-7.9,+8.8] (n=10)
+   paired efficiency (b−a): input_tokens: +14303 [+165,+28665] (1.19x)  peak_input_tokens: +4945 [+3559,+6367] (1.39x)  output_tokens: -196 [-388,-4] (0.86x)  tool_calls: -2 [-4,-1] (0.76x)  wall_s: -2 [-5,+0] (0.85x)  answer_chars: +163 [+36,+309] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-1': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 23/13/12; hit cap: {'oh-1': 15, 'oh-cg-1': 10}
+   -46  Why does the assignment name processing method defer frame node visitation until the local variable type attribute is ac
+         oh-1           read=['pylint/pyreverse/inspector.py', 'pylint/pyreverse/utils.py'] steps=9 retried=None
+         oh-cg-1        read=['pylint/checkers/variables.py', 'pylint/extensions/redefined_loop_name.py'] steps=10 retried=None
+   -43  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-1        read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/new_style_class_py_30.py', 'tests/functional/n/not_callable.py', 'tests/regrtest_data/descriptor_crash.py', 'tests/test_regr.py'] steps=10 retried=None
+   -29  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-cg-1        read=['tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=3 retried=None
+   +22  How would you refactor the configuration option value formatter to implement parameter validation and type checking whil
+         oh-1           read=['pylint/typing.py', 'pylint/utils/utils.py'] steps=6 retried=None
+         oh-cg-1        read=['pylint/typing.py'] steps=4 retried=None
+   +19  Why does the test class that intentionally violates the protocol by returning a three-element tuple instead of the requi
+         oh-1           read=['tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+         oh-cg-1        read=['pylint/checkers/classes/special_methods_checker.py', 'tests/functional/i/invalid/invalid_getnewargs/invalid_getnewargs_ex_returned.py'] steps=5 retried=None
+   +19  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-cg-1        read=[] steps=3 retried=None
+
+== oh-cg-10 - oh-1: n=48 Δ=+3.6 95%CI=[+0.7,+6.5] median=+1.5 win/tie/loss=27/8/13 sign-test p=0.038 | n for 80% power at this Δ ≈ 64
+   by category: what: +5.6 [+2.3,+9.0] (n=14)  how: -2.3 [-9.2,+2.8] (n=12)  why: +4.3 [+0.3,+9.3] (n=12)  where: +7.1 [-0.6,+16.1] (n=10)
+   paired efficiency (b−a): input_tokens: +10798 [-1376,+22470] (1.15x)  peak_input_tokens: +4634 [+3414,+5894] (1.37x)  output_tokens: -297 [-467,-136] (0.78x)  tool_calls: -3 [-4,-2] (0.69x)  wall_s: -3 [-4,-1] (0.79x)  answer_chars: +225 [+98,+353] (1.34x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-10': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 24/13/11; hit cap: {'oh-1': 15, 'oh-cg-10': 8}
+   -31  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-10       read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=4 retried=None
+   -13  Where in the no-member validation function is the mechanism that enables modules with dynamic attribute handlers to bypa
+         oh-1           read=['pylint/checkers/typecheck.py'] steps=2 retried=None
+         oh-cg-10       read=['pylint/checkers/typecheck.py'] steps=3 retried=None
+   -12  How does explicitly calling a parent constructor via a dotted module path handle method resolution order in multi-level 
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/n/non/non_init_parent_called.py', 'tests/functional/n/non/non_parent_init_called.py'] steps=10 retried=None
+         oh-cg-10       read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/n/non/non_init_parent_called.py', 'tests/functional/n/non/non_parent_init_called.py', 'tests/functional/s/super/super_init_not_called.py'] steps=9 retried=None
+   +35  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-cg-10       read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +25  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-cg-10       read=['pylint/checkers/classes/special_methods_checker.py'] steps=3 retried=None
+   +19  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-cg-10       read=['pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=8 retried=None
+
+== oh-cg-2 - oh-1: n=48 Δ=+5.2 95%CI=[+1.5,+8.7] median=+3.5 win/tie/loss=31/7/10 sign-test p=0.001 | n for 80% power at this Δ ≈ 48
+   by category: what: +5.7 [+2.5,+9.0] (n=14)  how: +0.5 [-9.9,+10.1] (n=12)  why: +5.4 [+0.7,+10.8] (n=12)  where: +9.7 [+1.2,+18.5] (n=10)
+   paired efficiency (b−a): input_tokens: +13287 [-344,+28300] (1.18x)  peak_input_tokens: +4674 [+3369,+6036] (1.37x)  output_tokens: -245 [-442,-45] (0.82x)  tool_calls: -3 [-4,-2] (0.70x)  wall_s: -1 [-4,+2] (0.92x)  answer_chars: +186 [+75,+297] (1.28x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-2': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 24/16/8; hit cap: {'oh-1': 15, 'oh-cg-2': 9}
+   -35  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-2        read=['pylint/checkers/classes/class_checker.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=4 retried=None
+   -33  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-cg-2        read=['pylint/checkers/strings.py', 'pylint/config/argument.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+   -16  Where in the no-member validation function is the mechanism that enables modules with dynamic attribute handlers to bypa
+         oh-1           read=['pylint/checkers/typecheck.py'] steps=2 retried=None
+         oh-cg-2        read=['pylint/checkers/typecheck.py'] steps=3 retried=None
+   +39  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-cg-2        read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +34  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-cg-2        read=['pylint/checkers/refactoring/recommendation_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +25  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-cg-2        read=['pylint/checkers/classes/special_methods_checker.py'] steps=3 retried=None
+
+== oh-cg-3 - oh-1: n=48 Δ=+2.7 95%CI=[-0.5,+5.8] median=+2.0 win/tie/loss=29/8/11 sign-test p=0.006 | n for 80% power at this Δ ≈ 128
+   by category: what: +5.7 [+0.3,+11.1] (n=14)  how: -2.8 [-11.3,+5.2] (n=12)  why: +3.8 [+0.4,+7.8] (n=12)  where: +3.7 [-1.1,+8.5] (n=10)
+   paired efficiency (b−a): input_tokens: +23271 [+9333,+37846] (1.31x)  peak_input_tokens: +4815 [+3533,+6215] (1.38x)  output_tokens: -175 [-351,-3] (0.87x)  tool_calls: -2 [-3,-0] (0.82x)  wall_s: +1 [-1,+4] (1.11x)  answer_chars: +145 [+29,+262] (1.22x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-3': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 19/16/13; hit cap: {'oh-1': 15, 'oh-cg-3': 12}
+   -30  How should a class-creating type design iteration protocol methods to separate construction logic from iteration behavio
+         oh-1           read=['doc/whatsnew/3/3.0/index.rst', 'pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/typecheck.py'] steps=10 retried=None
+         oh-cg-3        read=['doc/data/messages/n/non-iterator-returned/details.rst', 'pylint/checkers/classes/special_methods_checker.py', 'tests/functional/n/non/non_iterator_returned.txt'] steps=7 retried=None
+   -24  How does explicitly calling a parent constructor via a dotted module path handle method resolution order in multi-level 
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/n/non/non_init_parent_called.py', 'tests/functional/n/non/non_parent_init_called.py'] steps=10 retried=None
+         oh-cg-3        read=['pylint/checkers/classes/class_checker.py'] steps=5 retried=None
+   -21  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-3        read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=4 retried=None
+   +26  What are the semantic implications of a concrete class implementing a typing protocol having an empty __init__ method bo
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called_py38.py', 'tests/functional/s/super/super_init_not_called_py38.txt'] steps=8 retried=None
+         oh-cg-3        read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/s/super/super_init_not_called_extensions_py310.py', 'tests/functional/s/super/super_init_not_called_extensions_py310.txt'] steps=10 retried=None
+   +18  Why does repeatedly instantiating the mock linter, AST walker, and test checker in the message filtering decorator test 
+         oh-1           read=['tests/lint/test_pylinter.py', 'tests/lint/unittest_lint.py', 'tests/utils/unittest_ast_walker.py'] steps=10 retried=None
+         oh-cg-3        read=['pylint/checkers/utils.py'] steps=3 retried=None
+   +17  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-cg-3        read=['pylint/checkers/variables.py'] steps=7 retried=None
+
+== oh-cg-4 - oh-1: n=48 Δ=+0.9 95%CI=[-2.9,+4.5] median=+1.0 win/tie/loss=25/8/15 sign-test p=0.154 | n for 80% power at this Δ ≈ 1592
+   by category: what: +4.4 [-1.2,+9.4] (n=14)  how: -7.1 [-17.5,+1.8] (n=12)  why: +1.2 [-5.4,+7.2] (n=12)  where: +5.4 [-1.3,+11.7] (n=10)
+   paired efficiency (b−a): input_tokens: +13172 [-1099,+27342] (1.18x)  peak_input_tokens: +5349 [+3865,+6908] (1.43x)  output_tokens: -246 [-429,-69] (0.82x)  tool_calls: -3 [-4,-1] (0.73x)  wall_s: -2 [-3,-0] (0.87x)  answer_chars: +246 [+92,+405] (1.38x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-4': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 24/14/10; hit cap: {'oh-1': 15, 'oh-cg-4': 7}
+   -43  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-4        read=['tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/m/method_hidden.txt', 'tests/functional/n/not_callable.py'] steps=4 retried=None
+   -30  How should a class-creating type design iteration protocol methods to separate construction logic from iteration behavio
+         oh-1           read=['doc/whatsnew/3/3.0/index.rst', 'pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/typecheck.py'] steps=10 retried=None
+         oh-cg-4        read=['doc/data/messages/n/non-iterator-returned/details.rst'] steps=6 retried=None
+   -26  How does explicitly calling a parent constructor via a dotted module path handle method resolution order in multi-level 
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/n/non/non_init_parent_called.py', 'tests/functional/n/non/non_parent_init_called.py'] steps=10 retried=None
+         oh-cg-4        read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called.py'] steps=4 retried=None
+   +20  Why does repeatedly instantiating the mock linter, AST walker, and test checker in the message filtering decorator test 
+         oh-1           read=['tests/lint/test_pylinter.py', 'tests/lint/unittest_lint.py', 'tests/utils/unittest_ast_walker.py'] steps=10 retried=None
+         oh-cg-4        read=['pylint/config/arguments_provider.py'] steps=9 retried=None
+   +19  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-cg-4        read=[] steps=3 retried=None
+   +19  What is the scope resolution chain for the namedtuple class attribute used as return type annotation in the nested class
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/n/namedtuple_member_inference.py'] steps=10 retried=None
+         oh-cg-4        read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_type_annotations.py', 'tests/functional/u/used/used_before_assignment_type_annotations.txt'] steps=10 retried=None
+
+== oh-cg-5 - oh-1: n=48 Δ=+3.0 95%CI=[-0.8,+6.8] median=+2.0 win/tie/loss=27/6/15 sign-test p=0.088 | n for 80% power at this Δ ≈ 155
+   by category: what: +4.8 [+0.1,+9.8] (n=14)  how: +0.1 [-9.6,+9.5] (n=12)  why: +4.4 [-1.3,+10.6] (n=12)  where: +2.5 [-7.4,+12.2] (n=10)
+   paired efficiency (b−a): input_tokens: +14496 [-3,+29254] (1.20x)  peak_input_tokens: +4769 [+3393,+6180] (1.38x)  output_tokens: -309 [-473,-142] (0.77x)  tool_calls: -3 [-4,-1] (0.74x)  wall_s: -2 [-4,-1] (0.82x)  answer_chars: +113 [+8,+219] (1.17x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-5': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 24/14/10; hit cap: {'oh-1': 15, 'oh-cg-5': 11}
+   -31  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-5        read=['pylint/checkers/classes/class_checker.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=5 retried=None
+   -28  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-cg-5        read=['doc/data/messages/c/contextmanager-generator-missing-cleanup/bad.py', 'pylint/checkers/base/function_checker.py', 'pylint/testutils/utils.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=6 retried=None
+   -25  How should a class-creating type design iteration protocol methods to separate construction logic from iteration behavio
+         oh-1           read=['doc/whatsnew/3/3.0/index.rst', 'pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/typecheck.py'] steps=10 retried=None
+         oh-cg-5        read=['doc/data/messages/n/non-iterator-returned/details.rst', 'doc/data/messages/n/non-iterator-returned/related.rst', 'doc/whatsnew/1/1.5.rst', 'pylint/checkers/classes/special_methods_checker.py', 'tests/functional/n/non/non_iterator_returned.py'] steps=10 retried=None
+   +32  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-cg-5        read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +32  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-cg-5        read=['pylint/checkers/modified_iterating_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +25  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-cg-5        read=['pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=7 retried=None
+
+== oh-cg-6 - oh-1: n=48 Δ=+1.8 95%CI=[-2.2,+5.8] median=+0.0 win/tie/loss=22/7/19 sign-test p=0.755 | n for 80% power at this Δ ≈ 522
+   by category: what: +5.6 [+0.4,+12.3] (n=14)  how: -5.8 [-14.9,+2.7] (n=12)  why: +4.2 [-2.2,+12.5] (n=12)  where: +2.5 [-6.4,+11.6] (n=10)
+   paired efficiency (b−a): input_tokens: +8311 [-3724,+20894] (1.11x)  peak_input_tokens: +4297 [+3238,+5415] (1.34x)  output_tokens: -257 [-436,-75] (0.81x)  tool_calls: -3 [-4,-1] (0.73x)  wall_s: -3 [-6,-1] (0.75x)  answer_chars: +241 [+102,+381] (1.37x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-6': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 29/6/13; hit cap: {'oh-1': 15, 'oh-cg-6': 5}
+   -34  How should the custom string class architecture be redesigned to separate parameter validation from formatting operation
+         oh-1           read=['pylint/config/argument.py', 'pylint/extensions/_check_docs_utils.py', 'pylint/message/message.py', 'pylint/reporters/ureports/nodes.py'] steps=10 retried=None
+         oh-cg-6        read=['pylint/checkers/strings.py', 'pylint/checkers/utils.py'] steps=9 retried=None
+   -33  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-6        read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=5 retried=None
+   -21  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-cg-6        read=['tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=3 retried=None
+   +40  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-cg-6        read=['pylint/checkers/classes/special_methods_checker.py'] steps=5 retried=None
+   +36  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-cg-6        read=['pylint/checkers/base/docstring_checker.py'] steps=7 retried=None
+   +27  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-cg-6        read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+
+== oh-cg-7 - oh-1: n=48 Δ=+1.1 95%CI=[-3.6,+6.0] median=+0.0 win/tie/loss=21/4/23 sign-test p=0.880 | n for 80% power at this Δ ≈ 1781
+   by category: what: +5.6 [-0.6,+13.8] (n=14)  how: -4.4 [-14.4,+4.5] (n=12)  why: +0.7 [-10.6,+11.1] (n=12)  where: +2.1 [-9.4,+13.2] (n=10)
+   paired efficiency (b−a): input_tokens: +15374 [+3049,+28023] (1.21x)  peak_input_tokens: +5162 [+3960,+6376] (1.41x)  output_tokens: -223 [-411,-41] (0.84x)  tool_calls: -2 [-4,-1] (0.77x)  wall_s: -3 [-5,-1] (0.78x)  answer_chars: +190 [+59,+325] (1.29x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-7': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 25/11/12; hit cap: {'oh-1': 15, 'oh-cg-7': 8}
+   -46  Why does the test class that intentionally violates the protocol by returning a three-element tuple instead of the requi
+         oh-1           read=['tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+         oh-cg-7        read=['pylint/lint/pylinter.py', 'pylint/typing.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+   -38  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-7        read=['pylint/checkers/classes/class_checker.py', 'tests/functional/m/method_hidden.py', 'tests/functional/n/not_callable.py'] steps=4 retried=None
+   -35  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-cg-7        read=['doc/data/messages/c/contextmanager-generator-missing-cleanup/bad.py', 'doc/data/messages/c/contextmanager-generator-missing-cleanup/good.py', 'pylint/checkers/base/function_checker.py', 'pylint/testutils/utils.py'] steps=7 retried=None
+   +45  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-cg-7        read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+   +41  Why does the memory overhead of the pickle protocol reconstruction method validated by the classes checker during repeat
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/classes/special_methods_checker.py', 'pylint/checkers/utils.py', 'pylint/constants.py'] steps=10 retried=None
+         oh-cg-7        read=['pylint/checkers/classes/special_methods_checker.py'] steps=3 retried=None
+   +37  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-cg-7        read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=9 retried=None
+
+== oh-cg-8 - oh-1: n=48 Δ=+1.9 95%CI=[-3.0,+6.6] median=+1.0 win/tie/loss=26/6/16 sign-test p=0.164 | n for 80% power at this Δ ≈ 617
+   by category: what: +5.1 [+0.4,+11.6] (n=14)  how: -2.8 [-14.8,+7.5] (n=12)  why: +1.4 [-8.8,+9.6] (n=12)  where: +3.7 [-9.1,+16.6] (n=10)
+   paired efficiency (b−a): input_tokens: +10979 [-1766,+24151] (1.15x)  peak_input_tokens: +4713 [+3645,+5799] (1.37x)  output_tokens: -265 [-431,-103] (0.80x)  tool_calls: -2 [-4,-1] (0.75x)  wall_s: -4 [-6,-2] (0.73x)  answer_chars: +166 [+35,+298] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-8': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 24/16/8; hit cap: {'oh-1': 15, 'oh-cg-8': 9}
+   -49  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-8        read=['pylint/checkers/classes/class_checker.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/a/assigning/assigning_non_slot.txt', 'tests/functional/n/new_style_class_py_30.py', 'tests/functional/n/not_callable.py', 'tests/test_regr.py'] steps=7 retried=None
+   -46  Why does the test class that intentionally violates the protocol by returning a three-element tuple instead of the requi
+         oh-1           read=['tests/functional/c/class_protocol_ellipsis.py', 'tests/functional/p/protocol_classes.py', 'tests/functional/p/protocol_classes_abstract.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+         oh-cg-8        read=['pylint/lint/pylinter.py', 'pylint/typing.py', 'tests/functional/g/generic_alias/generic_alias_side_effects.py', 'tests/functional/p/protocol_classes.py', 'tests/test_pylint_runners.py', 'tests/testutils/test_output_line.py'] steps=10 retried=None
+   -32  Where does the yield statement in the context manager function that assigns a context variable and yields it without cle
+         oh-1           read=['pylint/checkers/base/function_checker.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.py', 'tests/functional/c/contextmanager_generator_missing_cleanup.txt'] steps=8 retried=None
+         oh-cg-8        read=['tests/functional/c/contextmanager_generator_missing_cleanup.py'] steps=4 retried=None
+   +43  Where is the call chain through which the forward reference resolution for string literal type annotations in function r
+         oh-1           read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+         oh-cg-8        read=['pylint/checkers/base/basic_error_checker.py', 'pylint/checkers/typecheck.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+   +36  What control path determines whether the docstring of a class definition node is accessible to the docstring checking me
+         oh-1           read=['pylint/checkers/base/docstring_checker.py'] steps=3 retried=None
+         oh-cg-8        read=[] steps=3 retried=None
+   +32  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-cg-8        read=['pylint/checkers/refactoring/recommendation_checker.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'pylint/checkers/variables.py'] steps=10 retried=None
+
+== oh-cg-9 - oh-1: n=48 Δ=+1.6 95%CI=[-2.1,+5.3] median=+2.5 win/tie/loss=26/8/14 sign-test p=0.081 | n for 80% power at this Δ ≈ 500
+   by category: what: +5.4 [+0.9,+9.4] (n=14)  how: -3.8 [-14.0,+6.7] (n=12)  why: +3.2 [-1.4,+7.6] (n=12)  where: +1.1 [-7.9,+9.5] (n=10)
+   paired efficiency (b−a): input_tokens: +15394 [+391,+30441] (1.21x)  peak_input_tokens: +4909 [+3543,+6241] (1.39x)  output_tokens: -272 [-449,-103] (0.80x)  tool_calls: -3 [-4,-1] (0.73x)  wall_s: -3 [-5,-1] (0.80x)  answer_chars: +163 [+36,+293] (1.25x)
+   first tool: {'oh-1': {'terminal': 48}, 'oh-cg-9': {'codegraph_explore': 47, 'terminal': 1}}
+   steps (b−a): fewer/same/more = 26/12/10; hit cap: {'oh-1': 15, 'oh-cg-9': 9}
+   -34  How does the descriptor protocol implementation in the test descriptor class's get method interact with Python's attribu
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/typecheck.py', 'tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/n/not_callable.py', 'tests/functional/n/not_callable.txt', 'tests/test_regr.py'] steps=8 retried=None
+         oh-cg-9        read=['tests/functional/a/assigning/assigning_non_slot.py', 'tests/functional/m/method_hidden.py', 'tests/functional/m/method_hidden.txt', 'tests/functional/n/not_callable.py', 'tests/regrtest_data/descriptor_crash.py', 'tests/test_regr.py'] steps=10 retried=None
+   -31  How does explicitly calling a parent constructor via a dotted module path handle method resolution order in multi-level 
+         oh-1           read=['pylint/checkers/classes/class_checker.py', 'tests/functional/n/non/non_init_parent_called.py', 'tests/functional/n/non/non_parent_init_called.py'] steps=10 retried=None
+         oh-cg-9        read=['pylint/checkers/classes/class_checker.py', 'pylint/checkers/utils.py', 'tests/functional/s/super/super_init_not_called.py', 'tests/functional/s/super/super_init_not_called.txt', 'tests/functional/s/super/super_init_not_called_py38.py', 'tests/functional/s/super_init_not_called.py'] steps=8 retried=None
+   -23  Where in the no-member validation function is the mechanism that enables modules with dynamic attribute handlers to bypa
+         oh-1           read=['pylint/checkers/typecheck.py'] steps=2 retried=None
+         oh-cg-9        read=['pylint/checkers/typecheck.py'] steps=3 retried=None
+   +36  How should the termination predicate evaluation within the iteration loop be decoupled from the iterable consumption mec
+         oh-1           read=['pylint/checkers/design_analysis.py', 'pylint/checkers/refactoring/refactoring_checker.py', 'tests/checkers/unittest_design.py'] steps=10 retried=None
+         oh-cg-9        read=['pylint/checkers/modified_iterating_checker.py', 'pylint/checkers/utils.py', 'pylint/checkers/variables.py', 'pylint/extensions/consider_refactoring_into_while_condition.py'] steps=10 retried=None
+   +19  Where is the undefined-variable error triggered for the type annotation parameter in the first-level method that incorre
+         oh-1           read=['pylint/checkers/variables.py', 'tests/functional/u/used/used_before_assignment_typing.py'] steps=10 retried=None
+         oh-cg-9        read=['pylint/checkers/utils.py', 'pylint/checkers/variables.py'] steps=7 retried=None
+   +19  Where is the example function that searches for even numbers using a loop with an else clause defined in the documentati
+         oh-1           read=['doc/data/messages/u/useless-else-on-loop/bad.py', 'doc/data/messages/u/useless-else-on-loop/details.rst', 'doc/data/messages/u/useless-else-on-loop/good.py'] steps=2 retried=None
+         oh-cg-9        read=[] steps=3 retried=None
+
+wrote runs/sweqa-r5-pylint-k10/analysis.json
