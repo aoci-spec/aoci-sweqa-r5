@@ -102,7 +102,7 @@ has p = 0.054.
 
 Across the 15 repositories the AOCI arm reads fewer source files than the bare arm and answers without opening any
 source file in 20–40 % of questions (pylint 38 %, the one repository where it loses); its answers are 1.3–1.5× longer. The
-cognition turn delivers the complete index on every question (100 % `completed`, 100 % attestation submitted) but the
+cognition turn delivers the complete index on every question (100 % `completed`; attestation submitted on 7,196 of 7,200, see Deviations) but the
 model almost never passes the product's attestation challenge (final state `delivery_verified` on 99 % of questions):
 with this answer model the protocol is a delivery mechanism, not verified understanding. Full panels per repository and
 arm are in `tables/SWEQA-R5-REPORT.md`.
